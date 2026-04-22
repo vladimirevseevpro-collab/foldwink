@@ -2,11 +2,11 @@
   "id": "ru-0271",
   "title": "Операционные системы",
   "difficulty": "medium",
-  "meta": { "theme": "Операционные системы и платформы", "batch": "ru-batch-10" },
+  "meta": {"theme":"Операционные системы и платформы","batch":"ru-batch-10"},
   "groups": [
-    { "id": "desktop_os", "label": "Десктопные ОС", "revealHint": "ДЕСКТОП", "items": ["Windows 11", "macOS", "Ubuntu", "Fedora"] },
-    { "id": "mobile_os", "label": "Мобильные ОС", "revealHint": "МОБАЙЛ", "items": ["Android", "iOS", "HarmonyOS", "Sailfish"] },
-    { "id": "server_os", "label": "Серверные", "revealHint": "СЕРВЕРЫ", "items": ["Debian", "CentOS", "Red Hat", "FreeBSD"] },
-    { "id": "embedded_os", "label": "Встраиваемые", "revealHint": "ВСТРАИВАЕМЫЕ", "items": ["FreeRTOS", "VxWorks", "QNX", "Zephyr"] }
+    { "id": "desktop_os", "label": "Десктопные ОС", "items": ["Windows 11","macOS","Linux Mint","Ubuntu"] },
+    { "id": "mobile_os", "label": "Мобильные ОС", "items": ["Android","iOS","HarmonyOS","Sailfish"] },
+    { "id": "server_os", "label": "Серверные", "items": ["Windows Server","RHEL","Ubuntu Server","VMware ESXi"] },
+    { "id": "embedded_os", "label": "Встраиваемые", "items": ["FreeRTOS","VxWorks","QNX","Zephyr"] }
   ]
 }

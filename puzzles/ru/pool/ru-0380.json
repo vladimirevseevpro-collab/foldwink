@@ -35,13 +35,13 @@
     },
     {
       "id": "craft_beers",
-      "label": "Крафт",
-      "revealHint": "КРАФТ",
+      "label": "Бельгийские",
+      "revealHint": "БЕЛЬГИЯ",
       "items": [
-        "IPA",
-        "Стаут",
-        "Портер",
-        "Вит-бир"
+        "Chimay",
+        "Duvel",
+        "Leffe",
+        "Stella Artois"
       ]
     },
     {

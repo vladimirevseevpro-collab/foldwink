@@ -12,43 +12,43 @@
   },
   "groups": [
     {
-      "id": "british_bands",
-      "label": "Британские",
+      "id": "classic_60_70",
+      "label": "Классика 60-70-х",
       "items": [
         "The Beatles",
+        "Pink Floyd",
         "Led Zeppelin",
-        "Queen",
-        "Pink Floyd"
-      ]
-    },
-    {
-      "id": "american_bands",
-      "label": "Американские",
-      "items": [
-        "Nirvana",
-        "Metallica",
-        "Red Hot Chili Peppers",
-        "Foo Fighters"
+        "Queen"
       ]
     },
     {
       "id": "hard_rock",
-      "label": "Хард-рок классика",
+      "label": "Хард-рок",
       "items": [
         "AC/DC",
-        "Deep Purple",
+        "Aerosmith",
         "Black Sabbath",
-        "Aerosmith"
+        "Van Halen"
       ]
     },
     {
-      "id": "alternative",
-      "label": "Альтернатива 90-х",
+      "id": "grunge_90s",
+      "label": "Гранж 90-х",
       "items": [
-        "Radiohead",
+        "Nirvana",
         "Pearl Jam",
         "Soundgarden",
         "Alice in Chains"
+      ]
+    },
+    {
+      "id": "alt_rock",
+      "label": "Альт-рок",
+      "items": [
+        "Radiohead",
+        "Red Hot Chili Peppers",
+        "Foo Fighters",
+        "Metallica"
       ]
     }
   ]

@@ -2,11 +2,11 @@
   "id": "ru-0203",
   "title": "Зарубежные рок-группы",
   "difficulty": "easy",
-  "meta": { "theme": "Зарубежные рок-группы", "batch": "ru-batch-07" },
+  "meta": {"theme":"Зарубежные рок-группы","batch":"ru-batch-07"},
   "groups": [
-    { "id": "british_bands", "label": "Британские", "items": ["The Beatles", "Led Zeppelin", "Queen", "Pink Floyd"] },
-    { "id": "american_bands", "label": "Американские", "items": ["Nirvana", "Metallica", "Red Hot Chili Peppers", "Foo Fighters"] },
-    { "id": "hard_rock", "label": "Хард-рок классика", "items": ["AC/DC", "Deep Purple", "Black Sabbath", "Aerosmith"] },
-    { "id": "alternative", "label": "Альтернатива 90-х", "items": ["Radiohead", "Pearl Jam", "Soundgarden", "Alice in Chains"] }
+    { "id": "classic_60_70", "label": "Классика 60-70-х", "items": ["The Beatles","Pink Floyd","Led Zeppelin","Queen"] },
+    { "id": "hard_rock", "label": "Хард-рок", "items": ["AC/DC","Aerosmith","Black Sabbath","Van Halen"] },
+    { "id": "grunge_90s", "label": "Гранж 90-х", "items": ["Nirvana","Pearl Jam","Soundgarden","Alice in Chains"] },
+    { "id": "alt_rock", "label": "Альт-рок", "items": ["Radiohead","Red Hot Chili Peppers","Foo Fighters","Metallica"] }
   ]
 }

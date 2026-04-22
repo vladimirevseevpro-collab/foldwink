@@ -2,11 +2,11 @@
   "id": "ru-0308",
   "title": "Виды энергии",
   "difficulty": "medium",
-  "meta": { "theme": "Виды и источники энергии", "batch": "ru-batch-12" },
+  "meta": {"theme":"Виды и источники энергии","batch":"ru-batch-12"},
   "groups": [
-    { "id": "renewable_energy", "label": "Возобновляемые", "revealHint": "ВОЗОБНОВ.", "items": ["Солнечная", "Ветровая", "Гидро", "Геотермальная"] },
-    { "id": "fossil_energy", "label": "Ископаемые", "revealHint": "ИСКОПАЕМЫЕ", "items": ["Нефть", "Газ", "Уголь", "Торф"] },
-    { "id": "nuclear_energy", "label": "Ядерная", "revealHint": "ЯДЕРНАЯ", "items": ["Деление", "Синтез", "Уран", "Плутоний"] },
-    { "id": "alternative_energy", "label": "Альтернативные", "revealHint": "АЛЬТЕРНАТ.", "items": ["Водород", "Приливная", "Биогаз", "Волновая"] }
+    { "id": "renewable_energy", "label": "Возобновляемые", "revealHint": "ВОЗОБНОВ.", "items": ["Солнечная","Ветровая","Гидро","Геотермальная"] },
+    { "id": "fossil_energy", "label": "Ископаемые", "revealHint": "ИСКОПАЕМЫЕ", "items": ["Нефть","Газ","Уголь","Торф"] },
+    { "id": "nuclear_energy", "label": "Ядерная", "revealHint": "ЯДЕРНАЯ", "items": ["Деление","Синтез","Уран","Плутоний"] },
+    { "id": "alternative_energy", "label": "Экспериментальные и новые", "revealHint": "АЛЬТЕРНАТ.", "items": ["Водород","Приливная","Биогаз","Волновая"] }
   ]
 }

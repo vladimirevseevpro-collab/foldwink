@@ -13,7 +13,7 @@
   "groups": [
     {
       "id": "empirical_methods",
-      "label": "Эмпирические",
+      "label": "Общенаучные эмпирические",
       "revealHint": "ЭМПИРИКА",
       "items": [
         "Наблюдение",

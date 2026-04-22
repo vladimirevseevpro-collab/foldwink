@@ -2,11 +2,11 @@
   "id": "ru-0369",
   "title": "Знаменитые учёные",
   "difficulty": "easy",
-  "meta": { "theme": "Великие учёные по дисциплинам", "batch": "ru-batch-15" },
+  "meta": {"theme":"Великие учёные по дисциплинам","batch":"ru-batch-15"},
   "groups": [
-    { "id": "physics_scientists", "label": "Физики", "items": ["Эйнштейн", "Ньютон", "Мари Кюри", "Фарадей"] },
-    { "id": "biology_scientists", "label": "Биологи", "items": ["Дарвин", "Мендель", "Пастер", "Павлов"] },
-    { "id": "chemistry_scientists", "label": "Химики", "items": ["Менделеев", "Лавуазье", "Берцелиус", "Ломоносов"] },
-    { "id": "math_scientists", "label": "Математики", "items": ["Гаусс", "Эйлер", "Риман", "Гильберт"] }
+    { "id": "physics_scientists", "label": "Физики", "items": ["Эйнштейн","Ньютон","Максвелл","Фарадей"] },
+    { "id": "biology_scientists", "label": "Биологи", "items": ["Дарвин","Мендель","Пастер","Павлов"] },
+    { "id": "chemistry_scientists", "label": "Химики", "items": ["Менделеев","Лавуазье","Берцелиус","Ломоносов"] },
+    { "id": "math_scientists", "label": "Математики", "items": ["Гаусс","Эйлер","Риман","Гильберт"] }
   ]
 }

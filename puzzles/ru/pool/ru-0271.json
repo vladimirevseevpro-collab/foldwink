@@ -18,8 +18,8 @@
       "items": [
         "Windows 11",
         "macOS",
-        "Ubuntu",
-        "Fedora"
+        "Linux Mint",
+        "Ubuntu"
       ]
     },
     {
@@ -38,10 +38,10 @@
       "label": "Серверные",
       "revealHint": "СЕРВЕРЫ",
       "items": [
-        "Debian",
-        "CentOS",
-        "Red Hat",
-        "FreeBSD"
+        "Windows Server",
+        "RHEL",
+        "Ubuntu Server",
+        "VMware ESXi"
       ]
     },
     {

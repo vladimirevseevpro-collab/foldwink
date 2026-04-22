@@ -13,7 +13,7 @@
   "groups": [
     {
       "id": "aircraft_parts",
-      "label": "Части самолёта",
+      "label": "Корпусные агрегаты",
       "revealHint": "САМОЛЁТ",
       "items": [
         "Фюзеляж",

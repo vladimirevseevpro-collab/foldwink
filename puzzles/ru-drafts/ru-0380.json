@@ -2,11 +2,11 @@
   "id": "ru-0380",
   "title": "Марки пива",
   "difficulty": "medium",
-  "meta": { "theme": "Сорта и марки пива", "batch": "ru-batch-15" },
+  "meta": {"theme":"Сорта и марки пива","batch":"ru-batch-15"},
   "groups": [
-    { "id": "lager_types", "label": "Лагеры", "revealHint": "ЛАГЕР", "items": ["Балтика", "Жигулёвское", "Heineken", "Budweiser"] },
-    { "id": "ale_types", "label": "Эли", "revealHint": "ЭЛЬ", "items": ["Guinness", "Newcastle Brown", "Bass Ale", "London Pride"] },
-    { "id": "craft_beers", "label": "Крафт", "revealHint": "КРАФТ", "items": ["IPA", "Стаут", "Портер", "Вит-бир"] },
-    { "id": "german_beers", "label": "Немецкие", "revealHint": "ГЕРМАНИЯ", "items": ["Weizen", "Märzen", "Dunkel", "Bock"] }
+    { "id": "lager_types", "label": "Лагеры", "items": ["Балтика","Жигулёвское","Heineken","Budweiser"] },
+    { "id": "ale_types", "label": "Эли", "items": ["Guinness","Newcastle Brown","Bass Ale","London Pride"] },
+    { "id": "craft_beers", "label": "Бельгийские", "items": ["Chimay","Duvel","Leffe","Stella Artois"] },
+    { "id": "german_beers", "label": "Немецкие", "items": ["Weizen","Märzen","Dunkel","Bock"] }
   ]
 }

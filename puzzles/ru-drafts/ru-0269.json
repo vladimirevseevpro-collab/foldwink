@@ -2,11 +2,11 @@
   "id": "ru-0269",
   "title": "Спортивные трофеи",
   "difficulty": "medium",
-  "meta": { "theme": "Главные трофеи мирового спорта", "batch": "ru-batch-10" },
+  "meta": {"theme":"Главные трофеи мирового спорта","batch":"ru-batch-10"},
   "groups": [
-    { "id": "football_trophies", "label": "Футбол", "revealHint": "ФУТБОЛ", "items": ["Кубок мира", "Кубок Лиги чемпионов", "Кубок Европы", "Кубок Америки"] },
-    { "id": "tennis_trophies", "label": "Теннис", "revealHint": "ТЕННИС", "items": ["Уимблдон", "Ролан Гаррос", "Открытый Австралии", "US Open"] },
-    { "id": "golf_trophies", "label": "Гольф", "revealHint": "ГОЛЬФ", "items": ["Мастерс", "Открытый Британии", "US Open Golf", "PGA Championship"] },
-    { "id": "motorsport_trophies", "label": "Автоспорт", "revealHint": "АВТОСПОРТ", "items": ["Формула 1", "Индикар", "Ралли Дакар", "24 часа Ле-Мана"] }
+    { "id": "football_trophies", "label": "Футбол", "revealHint": "ФУТБОЛ", "items": ["Кубок мира","Кубок Лиги чемпионов","Кубок Европы","Кубок Америки"] },
+    { "id": "tennis_trophies", "label": "Теннис", "revealHint": "ТЕННИС", "items": ["Уимблдон","Ролан Гаррос","Открытый Австралии","ATP Finals"] },
+    { "id": "golf_trophies", "label": "Гольф", "revealHint": "ГОЛЬФ", "items": ["Мастерс","Открытый Британии","US Open Golf","PGA Championship"] },
+    { "id": "motorsport_trophies", "label": "Автоспорт", "revealHint": "АВТОСПОРТ", "items": ["Формула 1","Индикар","Ралли Дакар","24 часа Ле-Мана"] }
   ]
 }
