@@ -31,12 +31,24 @@ HTML
 
 ### Embed options
 
-| Setting                       | Value                                     |
-| ----------------------------- | ----------------------------------------- |
-| Viewport dimensions           | **800 × 600** (minimum)                   |
-| Fullscreen button             | **Enabled** (recommended)                 |
-| Mobile friendly               | **Yes**                                   |
-| Click to launch in fullscreen | **Yes** (recommended for best experience) |
+| Setting                          | Value                                |
+| -------------------------------- | ------------------------------------ |
+| Viewport dimensions              | **400 × 720** (portrait, mobile-first) |
+| Orientation                      | **Portrait**                         |
+| Mobile friendly                  | **Yes** ← critical                   |
+| Automatically start on page load | **Yes**                              |
+| Fullscreen button                | **Enabled**                          |
+| Click to launch in fullscreen    | **Yes**                              |
+
+**Why portrait + Mobile friendly is critical.** Foldwink's layout is fully
+responsive — the bug is itch.io's iframe wrapper, not our CSS. With
+landscape dimensions (e.g. 800 × 600) and `Mobile friendly = No`, itch
+renders an inline iframe locked to that aspect ratio. On an iPhone (≈390
+CSS px wide) the iframe gets shrunk to ~390 × 293 — about a quarter of
+the screen. With `Mobile friendly = Yes`, itch on mobile replaces the
+inline iframe with a **▶ Run game** button that opens the game
+fullscreen on tap. Both settings together (portrait viewport + Mobile
+friendly) are what produces a usable phone experience.
 
 ### Pricing
 
