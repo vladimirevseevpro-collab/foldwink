@@ -1,0 +1,55 @@
+{
+  "id": "de-0372",
+  "title": "Politiksysteme vergleich",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Vergleichende Politik",
+    "batch": "de-batch-04",
+    "difficultyScore": 37,
+    "editorialRank": 39,
+    "gptDifficulty": 41,
+    "gptRationale": "Die Staatensysteme sind bekannt, doch einzelne Institutionen wie Élysée oder Electoral College erhöhen die Präzisionsanforderung etwas."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Deutsches Politiksystem",
+      "items": [
+        "Bundestag",
+        "Bundesrat",
+        "Bundeskanzler",
+        "Bundespräsident"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "US-Politiksystem",
+      "items": [
+        "Kongress",
+        "Senat",
+        "Repräsentantenhaus",
+        "Electoral College"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Französisches Politiksyst.",
+      "items": [
+        "Assemblée nationale",
+        "Sénat",
+        "Premier ministre",
+        "Élysée"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Britisches Politiksystem",
+      "items": [
+        "House of Commons",
+        "House of Lords",
+        "Prime Minister",
+        "Monarch"
+      ]
+    }
+  ]
+}

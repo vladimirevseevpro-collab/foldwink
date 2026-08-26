@@ -1,0 +1,55 @@
+{
+  "id": "de-0427",
+  "title": "Grundgesetz-Artikel Themen",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "recht",
+    "batch": "de-batch-05",
+    "difficultyScore": 72,
+    "editorialRank": 64,
+    "gptDifficulty": 58,
+    "gptRationale": "Die Artikelblöcke des Grundgesetzes sind nur mit genauer verfassungsrechtlicher Verortung sauber zu lösen und nicht bloß über Alltagsverständnis."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Art. 1–5 GG",
+      "items": [
+        "Menschenwürde",
+        "Handlungsfreiheit",
+        "Gleichheit",
+        "Meinungsfreiheit"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Art. 6–10 GG",
+      "items": [
+        "Ehe und Familie",
+        "Schulwesen",
+        "Versammlungsfreiheit",
+        "Briefgeheimnis"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Art. 11–15 GG",
+      "items": [
+        "Freizügigkeit",
+        "Berufsfreiheit",
+        "Eigentum",
+        "Enteignung"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Art. 20 GG",
+      "items": [
+        "Bundesstaat",
+        "Sozialstaat",
+        "Demokratieprinzip",
+        "Widerstandsrecht"
+      ]
+    }
+  ]
+}

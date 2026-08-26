@@ -1,54 +1,54 @@
 {
   "id": "de-0352",
-  "title": "Deutsche Filmgeschichte",
-  "difficulty": "medium",
+  "title": "Im Kino",
+  "difficulty": "easy",
   "meta": {
-    "theme": "Deutscher Film",
-    "batch": "de-batch-04",
-    "difficultyScore": 46,
-    "editorialRank": 62,
-    "gptDifficulty": 72,
-    "gptRationale": "Deutsche Filmgeschichte verlangt konkretes Werk- und Epochenwissen und enthält mehrere Titel, die nur cinephil gut verankert kennen."
+    "theme": "Kino",
+    "batch": "cq6-de-replacements-wave2",
+    "difficultyScore": 18,
+    "editorialRank": 18,
+    "gptDifficulty": 17,
+    "gptRationale": "Kinoerlebnis mit vier gewöhnlichen, klar abgrenzbaren Gruppen."
   },
   "groups": [
     {
-      "id": "group_a",
-      "label": "Stummfilme Meisterwerke",
+      "id": "genres",
+      "label": "Filmgenres",
       "items": [
-        "Nosferatu",
-        "Metropolis",
-        "Der Golem",
-        "Der letzte Mann"
+        "Komödie",
+        "Drama",
+        "Krimi",
+        "Horror"
       ]
     },
     {
-      "id": "group_b",
-      "label": "Expressionistisch",
+      "id": "before-film",
+      "label": "Auf dem Ticket",
       "items": [
-        "Caligari",
-        "Schatten",
-        "Wachsfigurenkab.",
-        "Der müde Tod"
+        "Saal",
+        "Reihe",
+        "Platz",
+        "Uhrzeit"
       ]
     },
     {
-      "id": "group_c",
-      "label": "Nachkriegsfilm",
+      "id": "snacks",
+      "label": "Kinosnacks",
       "items": [
-        "Die Mörder",
-        "Rosen für Pros.",
-        "Unter den Brücken",
-        "Irgendwo Berlin"
+        "Popcorn",
+        "Nachos",
+        "Cola",
+        "Gummibärchen"
       ]
     },
     {
-      "id": "group_d",
-      "label": "Neues Deutsches Kino",
+      "id": "auditorium",
+      "label": "Saalobjekte",
       "items": [
-        "Angst essen Seele",
-        "Die Ehe der Maria",
-        "Aguirre",
-        "Nosferatu 1979"
+        "Leinwand",
+        "Sessel",
+        "Notausgang",
+        "Vorhang"
       ]
     }
   ]

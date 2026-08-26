@@ -1,0 +1,55 @@
+{
+  "id": "de-0390",
+  "title": "Ozeanografie",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Ozeanografie",
+    "batch": "de-batch-04",
+    "difficultyScore": 31,
+    "editorialRank": 56,
+    "gptDifficulty": 73,
+    "gptRationale": "Ozeanografische Zonen, Strömungen und Forschungstechnik sind fachnah und enthalten mehrere wenig vertraute Fremdwörter mit hoher Verwechslungsgefahr."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Meeresströmungen",
+      "items": [
+        "Golfstrom",
+        "Humboldtstrom",
+        "Kuroshio",
+        "Labradorstrom"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Tiefsee-Zonen",
+      "items": [
+        "Hadal",
+        "Abyssal",
+        "Bathyal",
+        "Mesopelagial"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Meeresökosysteme",
+      "items": [
+        "Korallenriff",
+        "Mangrovenwälder",
+        "Tiefseehydrother.",
+        "Sargas someer"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Meeresforschung",
+      "items": [
+        "ROV",
+        "Bathyscaph",
+        "Argo-Floats",
+        "Seekabel"
+      ]
+    }
+  ]
+}

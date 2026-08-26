@@ -1,56 +1,59 @@
 {
   "id": "puzzle-0001",
-  "title": "Starter Pack",
+  "title": "Morning Ritual",
   "difficulty": "easy",
   "tags": [
-    "general"
+    "lifestyle",
+    "cozy",
+    "food"
   ],
   "groups": [
     {
-      "id": "planets",
-      "label": "Planets",
+      "id": "coffee_brew",
+      "label": "Coffee brewing methods",
       "items": [
-        "Mars",
-        "Venus",
-        "Earth",
-        "Jupiter"
+        "French Press",
+        "Pour Over",
+        "Espresso",
+        "Cold Brew"
       ]
     },
     {
-      "id": "colors",
-      "label": "Colors",
+      "id": "bakery",
+      "label": "Artisan bakery pastries",
       "items": [
-        "Red",
-        "Blue",
-        "Green",
-        "Yellow"
+        "Croissant",
+        "Sourdough",
+        "Brioche",
+        "Baguette"
       ]
     },
     {
-      "id": "pets",
-      "label": "Pets",
+      "id": "alarm_sounds",
+      "label": "Morning sounds",
       "items": [
-        "Dog",
-        "Cat",
-        "Hamster",
-        "Rabbit"
+        "Chime",
+        "Rooster",
+        "Buzzer",
+        "Birds"
       ]
     },
     {
-      "id": "sports",
-      "label": "Sports",
+      "id": "breakfast_spreads",
+      "label": "Breakfast spreads",
       "items": [
-        "Tennis",
-        "Boxing",
-        "Football",
-        "Golf"
+        "Butter",
+        "Jam",
+        "Honey",
+        "Marmalade"
       ]
     }
   ],
   "meta": {
-    "difficultyScore": 11,
-    "editorialRank": 8,
-    "gptDifficulty": 6,
-    "gptRationale": "These are extremely familiar everyday categories with clean boundaries and almost no plausible cross-category confusion."
+    "theme": "morning_ritual",
+    "categoryType": "classification",
+    "difficultyScore": 10,
+    "editorialRank": 10,
+    "gptRationale": "Warm cozy morning aesthetic with clean single-category boundaries and immediate recognition."
   }
 }

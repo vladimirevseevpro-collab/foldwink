@@ -1,0 +1,55 @@
+{
+    "id":  "ru-0503",
+    "title":  "Домашняя мастерская",
+    "difficulty":  "easy",
+    "meta":  {
+                 "theme":  "Ремонт",
+                 "batch":  "ru-backfill-r4",
+                 "difficultyScore":  26,
+                 "editorialRank":  26,
+                 "gptDifficulty":  25,
+                 "gptRationale":  "The board uses everyday workshop objects separated by stable purpose: fastening, measuring, hand tools and protection."
+             },
+    "groups":  [
+                   {
+                       "id":  "fasteners",
+                       "label":  "Крепёж",
+                       "items":  [
+                                     "Гвоздь",
+                                     "Винт",
+                                     "Гайка",
+                                     "Дюбель"
+                                 ]
+                   },
+                   {
+                       "id":  "measure",
+                       "label":  "Для измерений",
+                       "items":  [
+                                     "Рулетка",
+                                     "Уровень",
+                                     "Угольник",
+                                     "Линейка"
+                                 ]
+                   },
+                   {
+                       "id":  "hand_tools",
+                       "label":  "Ручной инструмент",
+                       "items":  [
+                                     "Молоток",
+                                     "Плоскогубцы",
+                                     "Стамеска",
+                                     "Ножовка"
+                                 ]
+                   },
+                   {
+                       "id":  "protection",
+                       "label":  "Защита",
+                       "items":  [
+                                     "Очки",
+                                     "Перчатки",
+                                     "Респиратор",
+                                     "Каска"
+                                 ]
+                   }
+               ]
+}

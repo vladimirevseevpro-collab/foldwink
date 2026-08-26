@@ -1,0 +1,67 @@
+{
+  "id": "hard-024",
+  "title": "Garden Shed",
+  "difficulty": "hard",
+  "editorialSummary": "Four practical garden-shed clusters divide working tools, planting supplies, watering equipment and protective outdoor wear.",
+  "meta": {
+    "theme": "everyday",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "batch": "cq6-en-replacements-wave6",
+    "status": "draft",
+    "difficultyScore": 15,
+    "tags": [
+      "garden",
+      "everyday",
+      "hard"
+    ]
+  },
+  "groups": [
+    {
+      "id": "supports",
+      "label": "Garden Supports",
+      "items": [
+        "Trellis",
+        "Stake",
+        "Plant Tie",
+        "Tomato Cage"
+      ],
+      "revealHint": "STAND"
+    },
+    {
+      "id": "planting",
+      "label": "Planting Supplies",
+      "items": [
+        "Seeds",
+        "Soil",
+        "Fertilizer",
+        "Pots"
+      ],
+      "revealHint": "GROW"
+    },
+    {
+      "id": "protection",
+      "label": "Plant Protection",
+      "items": [
+        "Mulch",
+        "Plant Cover",
+        "Shade Cloth",
+        "Netting"
+      ],
+      "revealHint": "GUARD"
+    },
+    {
+      "id": "wear",
+      "label": "Outdoor Workwear",
+      "items": [
+        "Gloves",
+        "Boots",
+        "Sun Hat",
+        "Raincoat"
+      ],
+      "revealHint": "WEAR"
+    }
+  ]
+}

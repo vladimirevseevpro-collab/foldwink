@@ -1,0 +1,63 @@
+{
+    "id":  "puzzle-0511",
+    "title":  "Market Mix",
+    "difficulty":  "easy",
+    "editorialSummary":  "Common fruits, vegetables, baked treats, and salty snacks create an accessible market-themed sort. The food theme is an intentional light false trail; the produce and snack groups remain distinct by the familiar role and form of every item.",
+    "meta":  {
+                 "theme":  "food market",
+                 "categoryType":  "classification",
+                 "falseTrail":  "All items are foods, with baked treats and salty snacks providing the closest surface pairing.",
+                 "fairnessRisk":  1,
+                 "repetitionRisk":  1,
+                 "tags":  [
+                              "food",
+                              "market",
+                              "easy"
+                          ],
+                 "batch":  "r3-backfill-en",
+                 "status":  "needs-review",
+                 "difficultyScore":  15
+             },
+    "groups":  [
+                   {
+                       "id":  "fruits",
+                       "label":  "Fruits",
+                       "items":  [
+                                     "Apple",
+                                     "Banana",
+                                     "Peach",
+                                     "Pear"
+                                 ]
+                   },
+                   {
+                       "id":  "vegetables",
+                       "label":  "Vegetables",
+                       "items":  [
+                                     "Carrot",
+                                     "Celery",
+                                     "Onion",
+                                     "Pepper"
+                                 ]
+                   },
+                   {
+                       "id":  "baked-treats",
+                       "label":  "Baked Treats",
+                       "items":  [
+                                     "Cookie",
+                                     "Muffin",
+                                     "Brownie",
+                                     "Donut"
+                                 ]
+                   },
+                   {
+                       "id":  "salty-snacks",
+                       "label":  "Salty Snacks",
+                       "items":  [
+                                     "Chips",
+                                     "Pretzel",
+                                     "Popcorn",
+                                     "Crackers"
+                                 ]
+                   }
+               ]
+}

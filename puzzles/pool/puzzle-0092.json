@@ -1,54 +1,68 @@
 {
   "id": "puzzle-0092",
-  "title": "Period piece",
+  "title": "Word Connections",
   "difficulty": "medium",
-  "editorialSummary": "Four literary movements grouped by their most characteristic traits. Anchor reveals each movement's keyword through Foldwink Tabs.",
+  "editorialSummary": "Four familiar English compound-word families. Each card has one intended, standard completion in the grid, while the families are chosen to avoid the cross-connections that made the earlier wordplay draft ambiguous.",
+  "meta": {
+    "theme": "compound words",
+    "categoryType": "wordplay",
+    "wordplay": true,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "tags": [
+      "wordplay",
+      "language",
+      "compounds",
+      "medium"
+    ],
+    "batch": "cq6-en-replacements-wave1",
+    "status": "approved",
+    "difficultyScore": 9
+  },
   "groups": [
     {
-      "id": "romantic",
-      "label": "Romantic Period",
+      "id": "before-room",
+      "label": "Words Before ROOM",
       "items": [
-        "Sublime",
-        "Passion",
-        "Nature",
-        "Solitude"
-      ]
+        "Bed",
+        "Bath",
+        "Court",
+        "Dining"
+      ],
+      "revealHint": "Indoors"
     },
     {
-      "id": "realist",
-      "label": "Realist Period",
+      "id": "before-light",
+      "label": "Words Before LIGHT",
       "items": [
-        "Ordinary",
-        "Social",
-        "Everyday",
-        "Portrait"
-      ]
+        "Candle",
+        "Gas",
+        "Moon",
+        "Star"
+      ],
+      "revealHint": "Glow"
     },
     {
-      "id": "modernist",
-      "label": "Modernist Period",
+      "id": "before-work",
+      "label": "Words Before WORK",
       "items": [
-        "Fragment",
-        "Stream",
-        "Alienation",
-        "Collage"
-      ]
+        "Clock",
+        "Needle",
+        "Patch",
+        "Wood"
+      ],
+      "revealHint": "Craft"
     },
     {
-      "id": "postmodern",
-      "label": "Postmodern Period",
+      "id": "before-way",
+      "label": "Words Before WAY",
       "items": [
-        "Irony",
-        "Pastiche",
-        "Metafiction",
-        "Parody"
-      ]
+        "Door",
+        "Drive",
+        "Hall",
+        "Park"
+      ],
+      "revealHint": "Passage"
     }
-  ],
-  "meta": {
-    "difficultyScore": 31,
-    "editorialRank": 62,
-    "gptDifficulty": 82,
-    "gptRationale": "Literary-period abstraction and theory-heavy vocabulary make this notably hard unless the player already knows the historical schools."
-  }
+  ]
 }

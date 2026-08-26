@@ -1,0 +1,55 @@
+{
+  "id": "de-0331",
+  "title": "Physikalische Gesetze",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Physikgesetze",
+    "batch": "de-batch-04",
+    "difficultyScore": 44,
+    "editorialRank": 49,
+    "gptDifficulty": 53,
+    "gptRationale": "Naturwissenschaftliche Namen sind bekannt, doch hier stehen Gesetze, Formeln und Konzepte nebeneinander, was die Kanten unschärfer macht."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Newtonsche Physik",
+      "items": [
+        "Trägheitsgesetz",
+        "Actio-reactio",
+        "F=ma",
+        "Gravitationsgesetz"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Einsteins Konzepte",
+      "items": [
+        "E=mc²",
+        "Zeitdilatation",
+        "Raumkrümmung",
+        "Photoeffekt"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Elektrische Grundbegriffe",
+      "items": [
+        "Ohmsches Gesetz",
+        "Widerstand",
+        "Spannung",
+        "Stromstärke"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Gasgesetze",
+      "items": [
+        "Boyle-Mariotte",
+        "Gay-Lussac",
+        "Charles",
+        "Avogadro"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+    "id":  "de-0502",
+    "title":  "Im Garten",
+    "difficulty":  "easy",
+    "meta":  {
+                 "theme":  "Garten",
+                 "batch":  "de-backfill-r3",
+                 "difficultyScore":  20,
+                 "editorialRank":  20,
+                 "gptDifficulty":  19,
+                 "gptRationale":  "Common garden vocabulary is grouped by stable purpose and object type without specialist taxonomy."
+             },
+    "groups":  [
+                   {
+                       "id":  "tools",
+                       "label":  "Gartengeräte",
+                       "items":  [
+                                     "Harke",
+                                     "Schaufel",
+                                     "Gießkanne",
+                                     "Gartenschere"
+                                 ]
+                   },
+                   {
+                       "id":  "flowers",
+                       "label":  "Blumen",
+                       "items":  [
+                                     "Dahlie",
+                                     "Nelke",
+                                     "Iris",
+                                     "Tulpe"
+                                 ]
+                   },
+                   {
+                       "id":  "vegetables",
+                       "label":  "Gemüse",
+                       "items":  [
+                                     "Bohne",
+                                     "Radieschen",
+                                     "Kürbis",
+                                     "Lauch"
+                                 ]
+                   },
+                   {
+                       "id":  "planting",
+                       "label":  "Zum Pflanzen",
+                       "items":  [
+                                     "Saatgut",
+                                     "Blumenerde",
+                                     "Blumentopf",
+                                     "Pflanzschild"
+                                 ]
+                   }
+               ]
+}

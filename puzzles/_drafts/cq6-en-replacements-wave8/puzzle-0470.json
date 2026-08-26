@@ -1,0 +1,43 @@
+{
+  "id": "puzzle-0470",
+  "title": "At the Ice Cream Shop",
+  "difficulty": "medium",
+  "editorialSummary": "Four familiar ice-cream-shop clusters separate flavors, toppings, serving containers, and shop equipment. The shared treat setting supplies the intended false trail without specialist knowledge.",
+  "meta": {
+    "theme": "everyday errands",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "batch": "cq6-en-replacements-wave8",
+    "status": "draft",
+    "difficultyScore": 18,
+    "tags": ["ice-cream", "errands", "medium"]
+  },
+  "groups": [
+    {
+      "id": "flavors",
+      "label": "Ice Cream Flavors",
+      "items": ["Vanilla", "Chocolate", "Strawberry", "Mint"],
+      "revealHint": "SCOOP"
+    },
+    {
+      "id": "toppings",
+      "label": "Ice Cream Toppings",
+      "items": ["Sprinkles", "Nuts", "Cherries", "Whipped Cream"],
+      "revealHint": "TOP"
+    },
+    {
+      "id": "containers",
+      "label": "Serving Containers",
+      "items": ["Cone", "Cup", "Waffle Bowl", "Sundae Glass"],
+      "revealHint": "SERVE"
+    },
+    {
+      "id": "equipment",
+      "label": "Shop Equipment",
+      "items": ["Scoop", "Freezer", "Blender", "Cash Register"],
+      "revealHint": "SHOP"
+    }
+  ]
+}

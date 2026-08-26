@@ -1,0 +1,55 @@
+{
+  "id": "ru-0362",
+  "title": "Типы ПК-игр",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Компьютерные игры по механике",
+    "batch": "ru-batch-15",
+    "difficultyScore": 28,
+    "editorialRank": 23,
+    "gptDifficulty": 19,
+    "gptRationale": "Популярные игровые жанры и их флагманские тайтлы считываются почти мгновенно для массовой аудитории."
+  },
+  "groups": [
+    {
+      "id": "open_world_games",
+      "label": "Открытый мир",
+      "items": [
+        "GTA V",
+        "Skyrim",
+        "Red Dead 2",
+        "Witcher 3"
+      ]
+    },
+    {
+      "id": "battle_royale",
+      "label": "Батл-рояль",
+      "items": [
+        "Fortnite",
+        "PUBG",
+        "Apex Legends",
+        "Warzone"
+      ]
+    },
+    {
+      "id": "moba_games",
+      "label": "MOBA",
+      "items": [
+        "Dota 2",
+        "League of Legends",
+        "Heroes of Storm",
+        "Smite"
+      ]
+    },
+    {
+      "id": "survival_games",
+      "label": "Выживание",
+      "items": [
+        "Subnautica",
+        "Valheim",
+        "The Forest",
+        "Rust"
+      ]
+    }
+  ]
+}

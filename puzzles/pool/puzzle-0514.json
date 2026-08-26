@@ -1,0 +1,67 @@
+{
+    "id":  "puzzle-0514",
+    "title":  "Out and About",
+    "difficulty":  "medium",
+    "editorialSummary":  "Cycling gear, camping gear, gardening tools, and painting supplies form four practical activity sets. Tabs now give concise, category-specific nudges while remaining optional; the item sets have no rival four-card partition.",
+    "meta":  {
+                 "theme":  "practical activities",
+                 "categoryType":  "classification",
+                 "falseTrail":  "Several objects are broadly described as gear or tools before their activity-specific companions resolve the sets.",
+                 "fairnessRisk":  1,
+                 "repetitionRisk":  1,
+                 "tags":  [
+                              "outdoors",
+                              "hobbies",
+                              "medium"
+                          ],
+                 "batch":  "r3-backfill-en",
+                 "status":  "needs-review",
+                 "difficultyScore":  33
+             },
+    "groups":  [
+                   {
+                       "id":  "cycling-gear",
+                       "label":  "Cycling Gear",
+                       "revealHint":  "Cycle",
+                       "items":  [
+                                     "Helmet",
+                                     "Pedal",
+                                     "Chain",
+                                     "Saddle"
+                                 ]
+                   },
+                   {
+                       "id":  "camping-gear",
+                       "label":  "Camping Gear",
+                       "revealHint":  "Camp",
+                       "items":  [
+                                     "Tent",
+                                     "Lantern",
+                                     "Compass",
+                                     "Canteen"
+                                 ]
+                   },
+                   {
+                       "id":  "gardening-tools",
+                       "label":  "Gardening Tools",
+                       "revealHint":  "Garden",
+                       "items":  [
+                                     "Rake",
+                                     "Shovel",
+                                     "Trowel",
+                                     "Pruner"
+                                 ]
+                   },
+                   {
+                       "id":  "painting-supplies",
+                       "label":  "Painting Supplies",
+                       "revealHint":  "Paint",
+                       "items":  [
+                                     "Brush",
+                                     "Roller",
+                                     "Palette",
+                                     "Easel"
+                                 ]
+                   }
+               ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-0339",
+  "title": "Algorithmen",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Algorithmen",
+    "batch": "de-batch-04",
+    "difficultyScore": 23,
+    "editorialRank": 38,
+    "gptDifficulty": 48,
+    "gptRationale": "Algorithmen sind für technikaffine Spielende gut machbar, aber die Mischung aus Suche, Graphen und Kryptografie ist nicht universell geläufig."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Sortieralgorithmen",
+      "items": [
+        "Quicksort",
+        "Mergesort",
+        "Bubblesort",
+        "Heapsort"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Graphsuchalgorithmen",
+      "items": [
+        "Bidirektionale Suche",
+        "Breitensuche",
+        "Tiefensuche",
+        "A-Stern"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Graphenalgorithmen",
+      "items": [
+        "Dijkstra",
+        "Bellman-Ford",
+        "Floyd-Warshall",
+        "Prim"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Kryptographische Verfahren",
+      "items": [
+        "AES",
+        "RSA",
+        "SHA-256",
+        "Diffie-Hellman"
+      ]
+    }
+  ]
+}

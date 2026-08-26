@@ -1,0 +1,43 @@
+{
+  "id": "puzzle-0488",
+  "title": "At the Train Station",
+  "difficulty": "medium",
+  "editorialSummary": "Four familiar station clusters separate travel documents, platform fixtures, luggage types, and train-interior fixtures. The groups are concrete and naturally named.",
+  "meta": {
+    "theme": "everyday travel",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "batch": "cq6-en-replacements-wave9",
+    "status": "draft",
+    "difficultyScore": 21,
+    "tags": ["train", "travel", "medium"]
+  },
+  "groups": [
+    {
+      "id": "documents",
+      "label": "Travel Documents",
+      "items": ["Ticket", "Timetable", "Map", "ID Card"],
+      "revealHint": "TRAVEL"
+    },
+    {
+      "id": "platform",
+      "label": "Platform Fixtures",
+      "items": ["Bench", "Clock", "Sign", "Trash Bin"],
+      "revealHint": "PLATFORM"
+    },
+    {
+      "id": "luggage",
+      "label": "Luggage Types",
+      "items": ["Suitcase", "Backpack", "Duffel Bag", "Garment Bag"],
+      "revealHint": "PACK"
+    },
+    {
+      "id": "interior",
+      "label": "Train Interior Fixtures",
+      "items": ["Seat", "Handrail", "Luggage Rack", "Emergency Button"],
+      "revealHint": "TRAIN"
+    }
+  ]
+}

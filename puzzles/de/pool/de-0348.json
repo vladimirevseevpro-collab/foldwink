@@ -1,55 +1,35 @@
 {
   "id": "de-0348",
-  "title": "Kosmologie",
-  "difficulty": "medium",
+  "title": "Im Wohnzimmer",
+  "difficulty": "easy",
   "meta": {
-    "theme": "Kosmologie",
-    "batch": "de-batch-04",
-    "difficultyScore": 36,
-    "editorialRank": 52,
-    "gptDifficulty": 63,
-    "gptRationale": "Kosmologie ist begrifflich abstrakt und mehrere Konzepte liegen für Laien nah beieinander, besonders bei dunkler Materie und Multiversum."
+    "theme": "Wohnzimmer",
+    "batch": "cq6-de-replacements-wave2",
+    "difficultyScore": 17,
+    "editorialRank": 17,
+    "gptDifficulty": 16,
+    "gptRationale": "Vier konkrete und vertraute Gruppen aus dem Wohnzimmer."
   },
   "groups": [
     {
-      "id": "group_a",
-      "label": "Universum-Konzepte",
-      "items": [
-        "Urknall",
-        "Inflation",
-        "Kosmische Expansion",
-        "Singularität"
-      ]
+      "id": "seating",
+      "label": "Sitzmöbel",
+      "items": ["Sofa", "Sessel", "Hocker", "Stuhl"]
     },
     {
-      "id": "group_b",
-      "label": "Dunkle Materie Konzepte",
-      "items": [
-        "WIMP",
-        "Axion",
-        "MACHO",
-        "Steriles Neutrino"
-      ]
+      "id": "lighting",
+      "label": "Lichtquellen",
+      "items": ["Stehlampe", "Tischlampe", "Deckenlampe", "Kerze"]
     },
     {
-      "id": "group_c",
-      "label": "Schwarze Löcher",
-      "items": [
-        "Ereignishorizont",
-        "Gezeiteneffekt",
-        "Hawking-Strahlung",
-        "Ergosphäre"
-      ]
+      "id": "media",
+      "label": "Für Medien",
+      "items": ["Fernseher", "Radio", "Lautsprecher", "Fernbedienung"]
     },
     {
-      "id": "group_d",
-      "label": "Multiversum-Konzepte",
-      "items": [
-        "Paralleluniversum",
-        "Blasenuniversum",
-        "Viele Welten",
-        "Branen"
-      ]
+      "id": "decor",
+      "label": "Dekoration",
+      "items": ["Vase", "Bild", "Kissen", "Teppich"]
     }
   ]
 }

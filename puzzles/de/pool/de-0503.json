@@ -1,0 +1,55 @@
+{
+    "id":  "de-0503",
+    "title":  "Reise mit dem Zug",
+    "difficulty":  "easy",
+    "meta":  {
+                 "theme":  "Bahnreise",
+                 "batch":  "de-backfill-r3",
+                 "difficultyScore":  24,
+                 "editorialRank":  24,
+                 "gptDifficulty":  23,
+                 "gptRationale":  "Rail-travel vocabulary now separates train types, platform fixtures, carriage features and ticket types. No information card can migrate into another complete four-card group."
+             },
+    "groups":  [
+                   {
+                       "id":  "train_types",
+                       "label":  "Zugarten",
+                       "items":  [
+                                     "Regionalbahn",
+                                     "Intercity",
+                                     "Nachtzug",
+                                     "S-Bahn"
+                                 ]
+                   },
+                   {
+                       "id":  "platform",
+                       "label":  "Am Bahnsteig",
+                       "items":  [
+                                     "Gleis",
+                                     "Wartebank",
+                                     "Kiosk",
+                                     "Unterführung"
+                                 ]
+                   },
+                   {
+                       "id":  "carriage",
+                       "label":  "Im Zug",
+                       "items":  [
+                                     "Abteil",
+                                     "Fenster",
+                                     "Gepäcknetz",
+                                     "Sitzplatz"
+                                 ]
+                   },
+                   {
+                       "id":  "tickets",
+                       "label":  "Fahrkarten",
+                       "items":  [
+                                     "Einzelfahrt",
+                                     "Tageskarte",
+                                     "Wochenkarte",
+                                     "Monatskarte"
+                                 ]
+                   }
+               ]
+}

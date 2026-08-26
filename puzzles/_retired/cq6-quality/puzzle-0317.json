@@ -1,0 +1,58 @@
+{
+  "id": "puzzle-0317",
+  "title": "20th Century Turning Points",
+  "difficulty": "medium",
+  "editorialSummary": "Four decades of 20th-century turning points. False trail: the Russian Revolution (1917) belongs to the 1910s, not the 1920s — solvers anchored to the inter-war chaos often misplace it by one decade.",
+  "meta": {
+    "theme": "history",
+    "categoryType": "attribute",
+    "batch": "batch-08",
+    "status": "approved",
+    "difficultyScore": 53,
+    "editorialRank": 56,
+    "gptDifficulty": 58,
+    "gptRationale": "The decade buckets are sensible, but accurate placement of twentieth-century events still requires solid history recall."
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "World Events of the 1910s",
+      "items": [
+        "Assassination of Archduke Franz Ferdinand",
+        "Battle of the Marne",
+        "Russian Revolution",
+        "Treaty of Versailles"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "World Events of the 1930s",
+      "items": [
+        "Great Depression",
+        "Spanish Civil War",
+        "Kristallnacht",
+        "Molotov-Ribbentrop Pact"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "World Events of the 1940s",
+      "items": [
+        "D-Day Landings",
+        "Hiroshima Bombing",
+        "Nuremberg Trials",
+        "Berlin Airlift"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "World Events of the 1960s",
+      "items": [
+        "Bay of Pigs Invasion",
+        "Cuban Missile Crisis",
+        "Moon Landing",
+        "Prague Spring"
+      ]
+    }
+  ]
+}

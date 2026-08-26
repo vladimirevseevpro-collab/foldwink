@@ -1,0 +1,68 @@
+{
+  "id": "puzzle-0169",
+  "title": "Market Street",
+  "difficulty": "medium",
+  "editorialSummary": "Four concrete everyday clusters from a busy street. The surface is lively and mixed, while every card has one clear home and the groups lock in without specialist knowledge.",
+  "meta": {
+    "theme": "everyday",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "tags": [
+      "everyday",
+      "market",
+      "objects",
+      "medium"
+    ],
+    "batch": "cq6-en-replacements-wave2",
+    "status": "draft",
+    "difficultyScore": 11
+  },
+  "groups": [
+    {
+      "id": "bakery-case",
+      "label": "Bakery Case",
+      "items": [
+        "Bagel",
+        "Donut",
+        "Muffin",
+        "Tart"
+      ],
+      "revealHint": "Sweet"
+    },
+    {
+      "id": "flower-stall",
+      "label": "Flower Stall",
+      "items": [
+        "Tulip",
+        "Daisy",
+        "Rose",
+        "Lily"
+      ],
+      "revealHint": "Bloom"
+    },
+    {
+      "id": "hardware-fasteners",
+      "label": "Hardware Fasteners",
+      "items": [
+        "Screw",
+        "Nail",
+        "Bolt",
+        "Rivet"
+      ],
+      "revealHint": "Fix"
+    },
+    {
+      "id": "dog-walk-gear",
+      "label": "Dog Walk Gear",
+      "items": [
+        "Leash",
+        "Collar",
+        "Harness",
+        "Muzzle"
+      ],
+      "revealHint": "Stroll"
+    }
+  ]
+}

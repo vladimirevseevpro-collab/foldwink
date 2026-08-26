@@ -1,58 +1,68 @@
 {
   "id": "puzzle-0197",
-  "title": "Listen to the bark",
+  "title": "Rainy-Day Plans",
   "difficulty": "medium",
-  "editorialSummary": "Four meanings of bark — a dog's sound, tree covering, old sailing ship, sharp command. Sound/Tree false trail.",
+  "editorialSummary": "A rainy-day mix of practical gear and familiar outings. Every card has one ordinary home; the challenge comes from scanning the mixed scene rather than decoding an obscure term.",
   "meta": {
-    "theme": "abstract",
-    "categoryType": "attribute",
-    "batch": "batch-03",
+    "theme": "everyday",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "tags": [
+      "everyday",
+      "outdoors",
+      "objects",
+      "medium"
+    ],
+    "batch": "cq6-en-replacements-wave3",
     "status": "approved",
-    "difficultyScore": 22,
-    "editorialRank": 48,
-    "gptDifficulty": 66,
-    "gptRationale": "The sailing sense of 'bark' is relatively obscure and competes with three much more familiar meanings, making this one notably trickier."
+    "difficultyScore": 11
   },
   "groups": [
     {
-      "id": "dog",
-      "label": "Dog's bark",
+      "id": "rain-gear",
+      "label": "Rain Gear",
       "items": [
-        "Woof",
-        "Growl",
-        "Yip",
-        "Howl"
-      ]
+        "Umbrella",
+        "Poncho",
+        "Boots",
+        "Raincoat"
+      ],
+      "revealHint": "Wet"
     },
     {
-      "id": "tree",
-      "label": "Tree bark",
+      "id": "camping-light",
+      "label": "Camping Light",
       "items": [
-        "Cork",
-        "Cambium",
-        "Birch",
-        "Peeling"
-      ]
+        "Lantern",
+        "Headlamp",
+        "Torch",
+        "Campfire"
+      ],
+      "revealHint": "Glow"
     },
     {
-      "id": "ship",
-      "label": "Barque Ship Terms",
+      "id": "railway-station",
+      "label": "Railway Station",
       "items": [
-        "Barque",
-        "Rigging",
-        "Mast",
-        "Mizzenmast"
-      ]
+        "Platform",
+        "Timetable",
+        "Turnstile",
+        "Ticket Machine"
+      ],
+      "revealHint": "Depart"
     },
     {
-      "id": "shout",
-      "label": "Bark a command",
+      "id": "picnic-gear",
+      "label": "Picnic Gear",
       "items": [
-        "Snap",
-        "Bellow",
-        "Scold",
-        "Drill Sergeant"
-      ]
+        "Napkin",
+        "Thermos",
+        "Blanket",
+        "Cooler"
+      ],
+      "revealHint": "Outdoors"
     }
   ]
 }

@@ -1,0 +1,55 @@
+{
+  "id": "de-0348",
+  "title": "Kosmologie",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Kosmologie",
+    "batch": "de-batch-04",
+    "difficultyScore": 36,
+    "editorialRank": 52,
+    "gptDifficulty": 63,
+    "gptRationale": "Kosmologie ist begrifflich abstrakt und mehrere Konzepte liegen für Laien nah beieinander, besonders bei dunkler Materie und Multiversum."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Universum-Konzepte",
+      "items": [
+        "Urknall",
+        "Inflation",
+        "Kosmische Expansion",
+        "Singularität"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Dunkle Materie Konzepte",
+      "items": [
+        "WIMP",
+        "Axion",
+        "MACHO",
+        "Steriles Neutrino"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Schwarze Löcher",
+      "items": [
+        "Ereignishorizont",
+        "Gezeiteneffekt",
+        "Hawking-Strahlung",
+        "Ergosphäre"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Multiversum-Konzepte",
+      "items": [
+        "Paralleluniversum",
+        "Blasenuniversum",
+        "Viele Welten",
+        "Branen"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+    "id":  "puzzle-0505",
+    "title":  "Everyday Sets",
+    "difficulty":  "easy",
+    "editorialSummary":  "Four familiar everyday sets: writing tools, footwear, flowers, and eating utensils. The only light false trail is that the first and last sets are both small hand-held objects; their uses and names keep the intended groups immediate and exclusive.",
+    "meta":  {
+                 "theme":  "everyday objects",
+                 "categoryType":  "classification",
+                 "falseTrail":  "Writing tools and eating utensils are both compact hand-held items.",
+                 "fairnessRisk":  0,
+                 "repetitionRisk":  1,
+                 "tags":  [
+                              "everyday",
+                              "objects",
+                              "easy"
+                          ],
+                 "batch":  "r3-backfill-en",
+                 "status":  "needs-review",
+                 "difficultyScore":  8
+             },
+    "groups":  [
+                   {
+                       "id":  "writing-tools",
+                       "label":  "Writing Tools",
+                       "items":  [
+                                     "Pen",
+                                     "Pencil",
+                                     "Marker",
+                                     "Crayon"
+                                 ]
+                   },
+                   {
+                       "id":  "footwear",
+                       "label":  "Footwear",
+                       "items":  [
+                                     "Boot",
+                                     "Sandal",
+                                     "Slipper",
+                                     "Sneaker"
+                                 ]
+                   },
+                   {
+                       "id":  "flowers",
+                       "label":  "Flowers",
+                       "items":  [
+                                     "Daisy",
+                                     "Lily",
+                                     "Rose",
+                                     "Tulip"
+                                 ]
+                   },
+                   {
+                       "id":  "eating-utensils",
+                       "label":  "Eating Utensils",
+                       "items":  [
+                                     "Fork",
+                                     "Knife",
+                                     "Spoon",
+                                     "Chopsticks"
+                                 ]
+                   }
+               ]
+}

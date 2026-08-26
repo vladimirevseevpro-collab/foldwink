@@ -1,0 +1,59 @@
+{
+    "id":  "ru-0504",
+    "title":  "На почте",
+    "difficulty":  "medium",
+    "meta":  {
+                 "theme":  "Почта",
+                 "batch":  "ru-backfill-r4",
+                 "difficultyScore":  42,
+                 "editorialRank":  42,
+                 "gptDifficulty":  40,
+                 "gptRationale":  "Postal vocabulary is everyday and each group now names one distinct workflow stage: address, shipment type, packing, and tracking. The Tabs are accurate, concise cues rather than generic words."
+             },
+    "groups":  [
+                   {
+                       "id":  "address",
+                       "label":  "Части адреса",
+                       "revealHint":  "АДРЕС",
+                       "items":  [
+                                     "Индекс",
+                                     "Улица",
+                                     "Дом",
+                                     "Квартира"
+                                 ]
+                   },
+                   {
+                       "id":  "mail_types",
+                       "label":  "Виды отправлений",
+                       "revealHint":  "ОТПРАВКА",
+                       "items":  [
+                                     "Письмо",
+                                     "Открытка",
+                                     "Посылка",
+                                     "Бандероль"
+                                 ]
+                   },
+                   {
+                       "id":  "packing",
+                       "label":  "Для упаковки",
+                       "revealHint":  "УПАКОВКА",
+                       "items":  [
+                                     "Коробка",
+                                     "Скотч",
+                                     "Наполнитель",
+                                     "Наклейка"
+                                 ]
+                   },
+                   {
+                       "id":  "receipt",
+                       "label":  "Для отслеживания",
+                       "revealHint":  "ОТСЛЕЖИВАНИЕ",
+                       "items":  [
+                                     "Трек-номер",
+                                     "Статус",
+                                     "Дата",
+                                     "Маршрут"
+                                 ]
+                   }
+               ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-0382",
+  "title": "Ernährungswissenschaft",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Ernährung",
+    "batch": "de-batch-04",
+    "difficultyScore": 21,
+    "editorialRank": 28,
+    "gptDifficulty": 33,
+    "gptRationale": "Ernährungswissen ist verbreitet und die Kategorien sind intuitiv, nur Stoffwechselbegriffe ziehen die Schwierigkeit leicht nach oben."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Hauptnährstoffe und Wasser",
+      "items": [
+        "Kohlenhydrate",
+        "Protein",
+        "Fett",
+        "Wasser"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Stoffwechsel-Begriffe",
+      "items": [
+        "Glykolyse",
+        "Ketose",
+        "Anabolismus",
+        "Katabolismus"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Diätformen",
+      "items": [
+        "Vegan",
+        "Ketogen",
+        "Mediterran",
+        "Paleo"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Nahrungsinhaltsstoffe",
+      "items": [
+        "Vitamin C",
+        "Eisen",
+        "Omega-3",
+        "Folsäure"
+      ]
+    }
+  ]
+}

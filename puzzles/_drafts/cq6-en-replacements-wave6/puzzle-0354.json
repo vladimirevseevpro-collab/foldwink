@@ -1,0 +1,43 @@
+{
+  "id": "hard-023",
+  "title": "At a Concert",
+  "difficulty": "hard",
+  "editorialSummary": "Four familiar concert clusters separate instruments, sound equipment, venue-access credentials, and merchandise. The two technical-looking onstage groups create a fair false trail without demanding music expertise.",
+  "meta": {
+    "theme": "everyday events",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "batch": "cq6-en-replacements-wave6",
+    "status": "draft",
+    "difficultyScore": 24,
+    "tags": ["concert", "everyday", "hard"]
+  },
+  "groups": [
+    {
+      "id": "instruments",
+      "label": "Onstage Instruments",
+      "items": ["Guitar", "Bass Guitar", "Keyboard", "Drum Kit"],
+      "revealHint": "PLAY"
+    },
+    {
+      "id": "sound",
+      "label": "Sound Equipment",
+      "items": ["Microphone", "Speaker", "Amplifier", "Mixer"],
+      "revealHint": "HEAR"
+    },
+    {
+      "id": "access",
+      "label": "Venue Access",
+      "items": ["Ticket", "Wristband", "Lanyard", "Backstage Pass"],
+      "revealHint": "ENTER"
+    },
+    {
+      "id": "merch",
+      "label": "Concert Merchandise",
+      "items": ["T-shirt", "Hoodie", "Poster", "Tote Bag"],
+      "revealHint": "TAKE"
+    }
+  ]
+}

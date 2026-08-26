@@ -1,0 +1,55 @@
+{
+  "id": "de-0445",
+  "title": "Expressionismus",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "kunst",
+    "batch": "de-batch-05",
+    "difficultyScore": 32,
+    "editorialRank": 54,
+    "gptDifficulty": 69,
+    "gptRationale": "Expressionismus ist stilistisch erkennbar, doch Werke und Personen sind deutlich spezieller und laden zu kunsthistorischen Verwechslungen ein."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Expressionis.-Maler",
+      "items": [
+        "Kirchner",
+        "Nolde",
+        "Beckmann",
+        "Kokoschka"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Expressionis.-Autoren",
+      "items": [
+        "Trakl",
+        "Heym",
+        "Benn",
+        "Toller"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Expressionis.-Merkmale",
+      "items": [
+        "Verzerrung",
+        "Leuchtende Farben",
+        "Innenleben sichtbar",
+        "Städtische Angst"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Expressionis.-Werke",
+      "items": [
+        "Potsdamer Platz",
+        "Brücke Straßenszene",
+        "Tierschicksale",
+        "Mann und Frau"
+      ]
+    }
+  ]
+}

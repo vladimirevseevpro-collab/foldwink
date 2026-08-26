@@ -1,54 +1,69 @@
 {
   "id": "puzzle-0097",
-  "title": "Festival schedule",
+  "title": "Under One Roof",
   "difficulty": "medium",
-  "editorialSummary": "Real festivals grouped by their defining element. False trail: several festivals share a color or a food motif.",
+  "editorialSummary": "Every item is a familiar household noun. The medium tension comes from broad home-based overlap, but window treatments, bathroom fixtures, storage and flooring resolve at distinct practical levels.",
+  "meta": {
+    "theme": "home interior",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "tags": [
+      "home",
+      "everyday",
+      "household",
+      "classification",
+      "medium"
+    ],
+    "batch": "cq6-en-replacements-wave1",
+    "status": "approved",
+    "difficultyScore": 8
+  },
   "groups": [
     {
-      "id": "festivals-of-light",
-      "label": "Festivals of Light",
+      "id": "window-coverings",
+      "label": "Window Coverings",
       "items": [
-        "Diwali",
-        "Hanukkah",
-        "Loi Krathong",
-        "St Lucia Day"
-      ]
+        "Blinds",
+        "Curtains",
+        "Drapes",
+        "Shutters"
+      ],
+      "revealHint": "Treatments"
     },
     {
-      "id": "festivals-of-water",
-      "label": "Festivals of Water",
+      "id": "bathroom-fixtures",
+      "label": "Bathroom Fixtures",
       "items": [
-        "Songkran",
-        "Thingyan",
-        "Bon Om Touk",
-        "Water Splashing"
-      ]
+        "Sink",
+        "Shower",
+        "Toilet",
+        "Tub"
+      ],
+      "revealHint": "Refresh"
     },
     {
-      "id": "festivals-of-music",
-      "label": "Music Festivals",
+      "id": "storage-furniture",
+      "label": "Storage Furniture",
       "items": [
-        "Glastonbury",
-        "Montreux",
-        "Fuji Rock",
-        "Roskilde"
-      ]
+        "Bookcase",
+        "Sideboard",
+        "Dresser",
+        "Wardrobe"
+      ],
+      "revealHint": "Tidy"
     },
     {
-      "id": "festivals-of-food",
-      "label": "Food Festivals",
+      "id": "flooring-types",
+      "label": "Flooring Types",
       "items": [
-        "Oktoberfest",
-        "La Mercè",
-        "Pizzafest",
-        "Mooncake"
-      ]
+        "Carpet",
+        "Tile",
+        "Hardwood",
+        "Laminate"
+      ],
+      "revealHint": "Step"
     }
-  ],
-  "meta": {
-    "difficultyScore": 39,
-    "editorialRank": 59,
-    "gptDifficulty": 73,
-    "gptRationale": "Festival categories are interesting but culturally wide-ranging, with several names likely unfamiliar to a typical player."
-  }
+  ]
 }

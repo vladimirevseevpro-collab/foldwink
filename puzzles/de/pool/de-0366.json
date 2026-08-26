@@ -1,54 +1,54 @@
 {
   "id": "de-0366",
-  "title": "Weinbau",
-  "difficulty": "medium",
+  "title": "Im Badezimmer",
+  "difficulty": "easy",
   "meta": {
-    "theme": "Weinbau",
-    "batch": "de-batch-04",
-    "difficultyScore": 36,
-    "editorialRank": 36,
-    "gptDifficulty": 36,
-    "gptRationale": "Weinbegriffe sind thematisch sauber trennbar, aber Rebsorten- und Verkostungsvokabular verlangt etwas Vorwissen."
+    "theme": "Badezimmer",
+    "batch": "cq6-de-replacements-wave5",
+    "difficultyScore": 10,
+    "editorialRank": 10,
+    "gptDifficulty": 10,
+    "gptRationale": "Alltägliche Badartikel bilden vier klar getrennte, vertraute Produktgruppen ohne Fachwissen oder mehrdeutige Zuordnung."
   },
   "groups": [
     {
       "id": "group_a",
-      "label": "Weiße Rebsorten",
+      "label": "Zahnpflegeprodukte",
       "items": [
-        "Riesling",
-        "Chardonnay",
-        "Sauvignon Blanc",
-        "Grauburgunder"
+        "Zahnbürste",
+        "Zahnpasta",
+        "Zahnseide",
+        "Mundspülung"
       ]
     },
     {
       "id": "group_b",
-      "label": "Rote Rebsorten",
+      "label": "Haarpflegeprodukte",
       "items": [
-        "Cabernet",
-        "Merlot",
-        "Syrah",
-        "Spätburgunder"
+        "Shampoo",
+        "Spülung",
+        "Haarkur",
+        "Haaröl"
       ]
     },
     {
       "id": "group_c",
-      "label": "Weinproduktion Begriffe",
+      "label": "Duschprodukte",
       "items": [
-        "Gärung",
-        "Maische",
-        "Ausbau",
-        "Füllung"
+        "Duschgel",
+        "Duschschaum",
+        "Duschöl",
+        "Körperpeeling"
       ]
     },
     {
       "id": "group_d",
-      "label": "Weinverkostung Begriffe",
+      "label": "Nagelpflegewerkzeuge",
       "items": [
-        "Bouquet",
-        "Abgang",
-        "Tannin",
-        "Restsüße"
+        "Nagelfeile",
+        "Nagelschere",
+        "Nagelknipser",
+        "Nagelbürste"
       ]
     }
   ]

@@ -1,55 +1,55 @@
 {
-  "id": "ru-0028",
-  "title": "Одежда",
-  "difficulty": "easy",
-  "meta": {
-    "theme": "Одежда",
-    "batch": "ru-batch-01",
-    "difficultyScore": 29,
-    "editorialRank": 19,
-    "gptDifficulty": 12,
-    "gptRationale": "Basic clothing vocabulary and body-location groupings make this one very easy inside the tier."
-  },
-  "groups": [
-    {
-      "id": "group_a",
-      "label": "Верхняя одежда",
-      "items": [
-        "Пальто",
-        "Куртка",
-        "Шуба",
-        "Плащ"
-      ]
-    },
-    {
-      "id": "group_b",
-      "label": "Одежда для низа тела",
-      "items": [
-        "Брюки",
-        "Юбка",
-        "Джинсы",
-        "Шорты"
-      ]
-    },
-    {
-      "id": "group_c",
-      "label": "Одежда для верха тела",
-      "items": [
-        "Рубашка",
-        "Свитер",
-        "Блузка",
-        "Водолазка"
-      ]
-    },
-    {
-      "id": "group_d",
-      "label": "Домашняя одежда",
-      "items": [
-        "Халат",
-        "Пижама",
-        "Сорочка",
-        "Тапочки"
-      ]
-    }
-  ]
+    "id":  "ru-0028",
+    "title":  "Одежда",
+    "difficulty":  "easy",
+    "meta":  {
+                 "theme":  "Одежда",
+                 "batch":  "ru-batch-01",
+                 "difficultyScore":  29,
+                 "editorialRank":  19,
+                 "gptDifficulty":  12,
+                 "gptRationale":  "Everyday clothing vocabulary and clear use contexts make this a natural easy puzzle without overlap between the home and upper-body groups."
+             },
+    "groups":  [
+                   {
+                       "id":  "group_a",
+                       "label":  "Верхняя одежда",
+                       "items":  [
+                                     "Пальто",
+                                     "Куртка",
+                                     "Шуба",
+                                     "Плащ"
+                                 ]
+                   },
+                   {
+                       "id":  "group_b",
+                       "label":  "Одежда для низа тела",
+                       "items":  [
+                                     "Брюки",
+                                     "Юбка",
+                                     "Джинсы",
+                                     "Шорты"
+                                 ]
+                   },
+                   {
+                       "id":  "group_c",
+                       "label":  "Одежда для верха тела",
+                       "items":  [
+                                     "Рубашка",
+                                     "Свитер",
+                                     "Блузка",
+                                     "Водолазка"
+                                 ]
+                   },
+                   {
+                       "id":  "group_d",
+                       "label":  "Одежда для дома и сна",
+                       "items":  [
+                                     "Халат",
+                                     "Пижама",
+                                     "Ночная сорочка",
+                                     "Тапочки"
+                                 ]
+                   }
+               ]
 }

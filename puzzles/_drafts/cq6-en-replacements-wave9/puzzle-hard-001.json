@@ -1,0 +1,43 @@
+{
+  "id": "hard-001",
+  "title": "At the Theater",
+  "difficulty": "hard",
+  "editorialSummary": "Four familiar theater clusters separate costume pieces, stage props, lighting equipment, and sound equipment. The shared backstage setting creates fair false trails without idiom trivia.",
+  "meta": {
+    "theme": "everyday outings",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "batch": "cq6-en-replacements-wave9",
+    "status": "draft",
+    "difficultyScore": 27,
+    "tags": ["theater", "outings", "hard"]
+  },
+  "groups": [
+    {
+      "id": "costume",
+      "label": "Costume Pieces",
+      "items": ["Cape", "Hat", "Wig", "Scarf"],
+      "revealHint": "COSTUME"
+    },
+    {
+      "id": "props",
+      "label": "Stage Props",
+      "items": ["Chair", "Lamp", "Umbrella", "Book"],
+      "revealHint": "PROP"
+    },
+    {
+      "id": "lighting",
+      "label": "Lighting Equipment",
+      "items": ["Spotlight", "Dimmer", "Light Stand", "Color Gel"],
+      "revealHint": "LIGHT"
+    },
+    {
+      "id": "sound",
+      "label": "Sound Equipment",
+      "items": ["Microphone", "Speaker", "Cable", "Headset"],
+      "revealHint": "SOUND"
+    }
+  ]
+}

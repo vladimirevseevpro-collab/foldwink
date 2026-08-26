@@ -1,0 +1,43 @@
+{
+  "id": "puzzle-0405",
+  "title": "At the Bike Shop",
+  "difficulty": "hard",
+  "editorialSummary": "Four familiar bicycle-shop clusters separate parts, repair tools, safety equipment, and carrying accessories. The shared shop context creates fair false trails without technical cycling knowledge.",
+  "meta": {
+    "theme": "everyday errands",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "batch": "cq6-en-replacements-wave7",
+    "status": "draft",
+    "difficultyScore": 25,
+    "tags": ["bicycle", "errands", "hard"]
+  },
+  "groups": [
+    {
+      "id": "parts",
+      "label": "Bicycle Parts",
+      "items": ["Chain", "Pedal", "Wheel", "Handlebar"],
+      "revealHint": "RIDE"
+    },
+    {
+      "id": "repair",
+      "label": "Repair Tools",
+      "items": ["Wrench", "Pump", "Tire Lever", "Patch Kit"],
+      "revealHint": "FIX"
+    },
+    {
+      "id": "safety",
+      "label": "Safety Equipment",
+      "items": ["Helmet", "Bell", "Light", "Reflector"],
+      "revealHint": "SAFE"
+    },
+    {
+      "id": "carry",
+      "label": "Carrying Accessories",
+      "items": ["Basket", "Pannier", "Water Bottle Holder", "Phone Mount"],
+      "revealHint": "PACK"
+    }
+  ]
+}

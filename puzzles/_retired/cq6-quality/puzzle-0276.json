@@ -1,0 +1,58 @@
+{
+  "id": "puzzle-0276",
+  "title": "Dessert course",
+  "difficulty": "medium",
+  "editorialSummary": "Four kinds of dessert by form — pie, cake, custard, frozen. Cream/Fruit false trail.",
+  "meta": {
+    "theme": "food",
+    "categoryType": "classification",
+    "batch": "batch-06",
+    "status": "approved",
+    "difficultyScore": 29,
+    "editorialRank": 43,
+    "gptDifficulty": 52,
+    "gptRationale": "Dessert categories are appealingly clear, but several named desserts are culturally specific and not equally familiar to all solvers."
+  },
+  "groups": [
+    {
+      "id": "pies",
+      "label": "Pie Desserts",
+      "items": [
+        "Apple Pie",
+        "Key Lime",
+        "Pecan Pie",
+        "Banoffee"
+      ]
+    },
+    {
+      "id": "cakes",
+      "label": "Cake Desserts",
+      "items": [
+        "Black Forest",
+        "Tiramisu",
+        "Victoria Sponge",
+        "Opera"
+      ]
+    },
+    {
+      "id": "custards",
+      "label": "Custard Desserts",
+      "items": [
+        "Creme Brulee",
+        "Flan",
+        "Panna Cotta",
+        "Pots de Creme"
+      ]
+    },
+    {
+      "id": "frozen",
+      "label": "Frozen Desserts",
+      "items": [
+        "Gelato",
+        "Affogato",
+        "Granita",
+        "Sorbet"
+      ]
+    }
+  ]
+}

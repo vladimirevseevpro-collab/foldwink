@@ -19,7 +19,8 @@
         "Google",
         "Microsoft",
         "Meta"
-      ]
+      ],
+      "revealHint": "экран и облако"
     },
     {
       "id": "oil_companies",
@@ -29,7 +30,8 @@
         "Роснефть",
         "Saudi Aramco",
         "ExxonMobil"
-      ]
+      ],
+      "revealHint": "скважина и труба"
     },
     {
       "id": "retail_companies",
@@ -39,7 +41,8 @@
         "Walmart",
         "Target",
         "IKEA"
-      ]
+      ],
+      "revealHint": "тележка и касса"
     },
     {
       "id": "bank_companies",
@@ -49,7 +52,8 @@
         "HSBC",
         "Сбербанк",
         "Deutsche Bank"
-      ]
+      ],
+      "revealHint": "счёт и процент"
     }
   ]
 }

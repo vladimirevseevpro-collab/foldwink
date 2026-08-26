@@ -1,0 +1,55 @@
+{
+  "id": "de-0313",
+  "title": "Kant und sein Werk",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Kant",
+    "batch": "de-batch-04",
+    "difficultyScore": 37,
+    "editorialRank": 59,
+    "gptDifficulty": 74,
+    "gptRationale": "Hier mischen sich Werktitel, Fachbegriffe und Kategorien aus der Kant-Rezeption, was hohe begriffliche Genauigkeit verlangt."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Kants Hauptwerke",
+      "items": [
+        "Reine Vernunft",
+        "Praktische Vernunft",
+        "Urteilskraft",
+        "Prolegomena"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Kants Kernbegriffe",
+      "items": [
+        "Kateg. Imperativ",
+        "Ding an sich",
+        "Noumenon",
+        "Transzendental"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Kants Schriften",
+      "items": [
+        "Zum ewigen Frieden",
+        "Anthropologie",
+        "Grundlegung",
+        "Metaphysik"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Kants Kategorien",
+      "items": [
+        "Kausalität",
+        "Substanz",
+        "Wechselwirkung",
+        "Modalität"
+      ]
+    }
+  ]
+}

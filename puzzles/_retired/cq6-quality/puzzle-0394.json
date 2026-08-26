@@ -1,0 +1,58 @@
+{
+  "id": "puzzle-0394",
+  "title": "Board Game Families",
+  "difficulty": "medium",
+  "editorialSummary": "Board games by design family. False trail: Pandemic Legacy is cooperative (placed there). Carcassonne is territory/worker, not abstract despite clean components.",
+  "meta": {
+    "theme": "games",
+    "categoryType": "classification",
+    "batch": "batch-11",
+    "status": "approved",
+    "difficultyScore": 30,
+    "editorialRank": 34,
+    "gptDifficulty": 36,
+    "gptRationale": "Most titles are well-known to hobby gamers, though a couple of intentionally mismatched-seeming inclusions can slow confident sorting."
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "WORKER PLACEMENT",
+      "items": [
+        "Agricola",
+        "Stone Age",
+        "Viticulture",
+        "Lords of Waterdeep"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "DECK-BUILDING GAMES",
+      "items": [
+        "Dominion",
+        "Ascension",
+        "Star Realms",
+        "Thunderstone"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "COOPERATIVE GAMES",
+      "items": [
+        "Pandemic",
+        "Pandemic Legacy",
+        "Spirit Island",
+        "Arkham Horror"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "ABSTRACT STRATEGY",
+      "items": [
+        "Go",
+        "Othello",
+        "Hive",
+        "Azul"
+      ]
+    }
+  ]
+}

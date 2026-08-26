@@ -1,0 +1,55 @@
+{
+  "id": "de-0420",
+  "title": "Architekten und Bauwerke",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "architektur",
+    "batch": "de-batch-05",
+    "difficultyScore": 39,
+    "editorialRank": 63,
+    "gptDifficulty": 79,
+    "gptRationale": "Architekten und Bauwerke erfordern ziemlich spezialisiertes Kulturwissen, und internationale Projekte erschweren die sichere Zuordnung zusätzlich."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Schinkel-Bauten",
+      "items": [
+        "Altes Museum",
+        "Neue Wache",
+        "Schauspielhaus",
+        "Schloss Glienicke"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Gropius-Bauten",
+      "items": [
+        "Bauhaus Dessau",
+        "Fagus-Werk",
+        "Harvard Gebäude",
+        "Gropius House"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Mies van der Rohe",
+      "items": [
+        "Neue Nationalgalerie",
+        "Seagram Building",
+        "Barcelona Pavillon",
+        "Farnsworth House"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Renzo Piano",
+      "items": [
+        "Pompidou Centre",
+        "Potsdamer Platz",
+        "Whitney Museum",
+        "The Shard"
+      ]
+    }
+  ]
+}

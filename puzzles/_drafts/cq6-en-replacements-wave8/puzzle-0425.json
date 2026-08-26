@@ -1,0 +1,43 @@
+{
+  "id": "puzzle-0425",
+  "title": "At the Playroom",
+  "difficulty": "medium",
+  "editorialSummary": "Four familiar playroom clusters separate building toys, dress-up items, soft toys, and table games. The shared room creates gentle false trails while categories remain concrete.",
+  "meta": {
+    "theme": "everyday home",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "batch": "cq6-en-replacements-wave8",
+    "status": "draft",
+    "difficultyScore": 20,
+    "tags": ["playroom", "everyday", "medium"]
+  },
+  "groups": [
+    {
+      "id": "building",
+      "label": "Building Toys",
+      "items": ["Blocks", "Bricks", "Magnetic Tiles", "Building Set"],
+      "revealHint": "BUILD"
+    },
+    {
+      "id": "dress-up",
+      "label": "Dress-up Items",
+      "items": ["Cape", "Crown", "Mask", "Costume Hat"],
+      "revealHint": "PRETEND"
+    },
+    {
+      "id": "soft",
+      "label": "Soft Toys",
+      "items": ["Teddy Bear", "Rag Doll", "Plush Dog", "Stuffed Rabbit"],
+      "revealHint": "CUDDLE"
+    },
+    {
+      "id": "games",
+      "label": "Table Games",
+      "items": ["Playing Cards", "Dice", "Dominoes", "Jigsaw Puzzle"],
+      "revealHint": "PLAY"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-0317",
+  "title": "Freud und Psychoanalyse",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Psychoanalyse",
+    "batch": "de-batch-04",
+    "difficultyScore": 39,
+    "editorialRank": 43,
+    "gptDifficulty": 45,
+    "gptRationale": "Viele psychoanalytische Begriffe sind populärkulturell verankert, wodurch die Gruppen trotz etwas Fachsprache meist gut greifbar bleiben."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Freuds Triebe",
+      "items": [
+        "Eros",
+        "Thanatos",
+        "Sexualtrieb",
+        "Aggressionstrieb"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Freuds Psyche",
+      "items": [
+        "Es",
+        "Ich",
+        "Über-Ich",
+        "Unbewusstes"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Freuds Konzepte",
+      "items": [
+        "Verdrängung",
+        "Übertragung",
+        "Komplex",
+        "Projektion"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Freuds Methoden",
+      "items": [
+        "Freie Assoziation",
+        "Traumdeutung",
+        "Analyse",
+        "Katharsis"
+      ]
+    }
+  ]
+}

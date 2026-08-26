@@ -1,0 +1,43 @@
+{
+  "id": "puzzle-0478",
+  "title": "At the Zoo",
+  "difficulty": "medium",
+  "editorialSummary": "Four familiar zoo-animal clusters separate big cats, primates, aquarium animals, and birds of prey. The taxonomy stays broad and everyday rather than specialist.",
+  "meta": {
+    "theme": "everyday outings",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "batch": "cq6-en-replacements-wave9",
+    "status": "draft",
+    "difficultyScore": 21,
+    "tags": ["zoo", "animals", "medium"]
+  },
+  "groups": [
+    {
+      "id": "cats",
+      "label": "Big Cats",
+      "items": ["Lion", "Tiger", "Leopard", "Cheetah"],
+      "revealHint": "PROWL"
+    },
+    {
+      "id": "primates",
+      "label": "Primates",
+      "items": ["Gorilla", "Chimpanzee", "Orangutan", "Baboon"],
+      "revealHint": "CLIMB"
+    },
+    {
+      "id": "aquarium",
+      "label": "Aquarium Animals",
+      "items": ["Shark", "Ray", "Jellyfish", "Octopus"],
+      "revealHint": "TANK"
+    },
+    {
+      "id": "raptors",
+      "label": "Birds of Prey",
+      "items": ["Eagle", "Hawk", "Owl", "Falcon"],
+      "revealHint": "SOAR"
+    }
+  ]
+}

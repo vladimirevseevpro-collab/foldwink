@@ -1,54 +1,54 @@
 {
   "id": "de-0378",
-  "title": "Biotechnologie",
-  "difficulty": "medium",
+  "title": "Im Büro",
+  "difficulty": "easy",
   "meta": {
-    "theme": "Biotechnologie",
-    "batch": "de-batch-04",
-    "difficultyScore": 23,
-    "editorialRank": 46,
-    "gptDifficulty": 61,
-    "gptRationale": "Biotechnologie mischt Fachwörter und Anwendungen aus verschiedenen Teilgebieten, was ohne naturwissenschaftlichen Hintergrund spürbar anspruchsvoll wird."
+    "theme": "Büroalltag",
+    "batch": "cq6-de-replacements-wave5",
+    "difficultyScore": 12,
+    "editorialRank": 12,
+    "gptDifficulty": 12,
+    "gptRationale": "Geläufige Bürogegenstände lassen sich eindeutig nach ihrer konkreten Verwendung ordnen; die Gruppen überlappen nicht."
   },
   "groups": [
     {
       "id": "group_a",
-      "label": "Gentechnik-Begriffe",
+      "label": "Schreibgeräte",
       "items": [
-        "CRISPR",
-        "GMO",
-        "Genfarm",
-        "Transgen"
+        "Bleistift",
+        "Kugelschreiber",
+        "Füller",
+        "Textmarker"
       ]
     },
     {
       "id": "group_b",
-      "label": "Stammzellen-Forschung",
+      "label": "Büromöbel",
       "items": [
-        "Pluripotent",
-        "Embryonal",
-        "Induzierte iPSC",
-        "Mesenchymal"
+        "Schreibtisch",
+        "Bürostuhl",
+        "Aktenschrank",
+        "Regal"
       ]
     },
     {
       "id": "group_c",
-      "label": "Enzym-Anwendungen",
+      "label": "Befestigungsmittel",
       "items": [
-        "Waschmittel",
-        "Käseherstellung",
-        "Biokraftstoff",
-        "Diagnostik"
+        "Heftklammer",
+        "Büroklammer",
+        "Reißzwecke",
+        "Gummiband"
       ]
     },
     {
       "id": "group_d",
-      "label": "Fermentation-Anwendungen",
+      "label": "Papierwaren",
       "items": [
-        "Bierbrauerei",
-        "Joghurt",
-        "Antibiotika",
-        "Biogas"
+        "Notizblock",
+        "Briefumschlag",
+        "Karteikarte",
+        "Klebezettel"
       ]
     }
   ]

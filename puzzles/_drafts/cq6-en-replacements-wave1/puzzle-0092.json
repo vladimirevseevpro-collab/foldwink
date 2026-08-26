@@ -1,0 +1,68 @@
+{
+  "id": "puzzle-0092",
+  "title": "Word Connections",
+  "difficulty": "medium",
+  "editorialSummary": "Four familiar English compound-word families. Each card has one intended, standard completion in the grid, while the families are chosen to avoid the cross-connections that made the earlier wordplay draft ambiguous.",
+  "meta": {
+    "theme": "compound words",
+    "categoryType": "wordplay",
+    "wordplay": true,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "tags": [
+      "wordplay",
+      "language",
+      "compounds",
+      "medium"
+    ],
+    "batch": "cq6-en-replacements-wave1",
+    "status": "draft",
+    "difficultyScore": 9
+  },
+  "groups": [
+    {
+      "id": "before-room",
+      "label": "Words Before ROOM",
+      "items": [
+        "Bed",
+        "Bath",
+        "Court",
+        "Dining"
+      ],
+      "revealHint": "Indoors"
+    },
+    {
+      "id": "before-light",
+      "label": "Words Before LIGHT",
+      "items": [
+        "Candle",
+        "Gas",
+        "Moon",
+        "Star"
+      ],
+      "revealHint": "Glow"
+    },
+    {
+      "id": "before-work",
+      "label": "Words Before WORK",
+      "items": [
+        "Clock",
+        "Needle",
+        "Patch",
+        "Wood"
+      ],
+      "revealHint": "Craft"
+    },
+    {
+      "id": "before-way",
+      "label": "Words Before WAY",
+      "items": [
+        "Door",
+        "Drive",
+        "Hall",
+        "Park"
+      ],
+      "revealHint": "Passage"
+    }
+  ]
+}

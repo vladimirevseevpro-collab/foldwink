@@ -19,7 +19,8 @@
         "Dünne Atmosphäre",
         "Geringe Schwerkraft",
         "Isolation"
-      ]
+      ],
+      "revealHint": "Probleme"
     },
     {
       "id": "group_b",
@@ -29,7 +30,8 @@
         "Unterirdische Basis",
         "Wassergewinnung",
         "ISRU"
-      ]
+      ],
+      "revealHint": "Lösungen"
     },
     {
       "id": "group_c",
@@ -39,7 +41,8 @@
         "Perseverance",
         "InSight Lander",
         "Mars Odyssey"
-      ]
+      ],
+      "revealHint": "Missionen"
     },
     {
       "id": "group_d",
@@ -49,7 +52,8 @@
         "Robert Zubrin",
         "Buzz Aldrin",
         "Wernher von Braun"
-      ]
+      ],
+      "revealHint": "Personen"
     }
   ]
 }

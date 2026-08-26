@@ -1,58 +1,43 @@
 {
   "id": "puzzle-0276",
-  "title": "Dessert course",
+  "title": "On the Move",
   "difficulty": "medium",
-  "editorialSummary": "Four kinds of dessert by form — pie, cake, custard, frozen. Cream/Fruit false trail.",
+  "editorialSummary": "Four everyday travel clusters separate what carries belongings, what people ride, what is taken from home and what runs on a public route.",
   "meta": {
-    "theme": "food",
+    "theme": "everyday",
     "categoryType": "classification",
-    "batch": "batch-06",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "batch": "cq6-en-replacements-wave4",
     "status": "approved",
-    "difficultyScore": 29,
-    "editorialRank": 43,
-    "gptDifficulty": 52,
-    "gptRationale": "Dessert categories are appealingly clear, but several named desserts are culturally specific and not equally familiar to all solvers."
+    "difficultyScore": 11,
+    "tags": ["travel", "everyday", "medium"]
   },
   "groups": [
     {
-      "id": "pies",
-      "label": "Pie Desserts",
-      "items": [
-        "Apple Pie",
-        "Key Lime",
-        "Pecan Pie",
-        "Banoffee"
-      ]
+      "id": "bags",
+      "label": "Everyday Carry Bags",
+      "items": ["Backpack", "Briefcase", "Tote", "Messenger Bag"],
+      "revealHint": "STRAP"
     },
     {
-      "id": "cakes",
-      "label": "Cake Desserts",
-      "items": [
-        "Black Forest",
-        "Tiramisu",
-        "Victoria Sponge",
-        "Opera"
-      ]
+      "id": "rides",
+      "label": "Personal Transport",
+      "items": ["Bicycle", "Scooter", "Skateboard", "Moped"],
+      "revealHint": "ROLL"
     },
     {
-      "id": "custards",
-      "label": "Custard Desserts",
-      "items": [
-        "Creme Brulee",
-        "Flan",
-        "Panna Cotta",
-        "Pots de Creme"
-      ]
+      "id": "navigation",
+      "label": "Navigation Tools",
+      "items": ["Map", "Compass", "GPS", "Road Atlas"],
+      "revealHint": "NORTH"
     },
     {
-      "id": "frozen",
-      "label": "Frozen Desserts",
-      "items": [
-        "Gelato",
-        "Affogato",
-        "Granita",
-        "Sorbet"
-      ]
+      "id": "transit",
+      "label": "Public Transit",
+      "items": ["Bus", "Train", "Tram", "Subway"],
+      "revealHint": "STOPS"
     }
   ]
 }

@@ -1,0 +1,67 @@
+{
+  "id": "puzzle-0276",
+  "title": "On the Move",
+  "difficulty": "medium",
+  "editorialSummary": "Four everyday travel clusters separate what carries belongings, what people ride, what is taken from home and what runs on a public route.",
+  "meta": {
+    "theme": "everyday",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "batch": "cq6-en-replacements-wave4",
+    "status": "draft",
+    "difficultyScore": 11,
+    "tags": [
+      "travel",
+      "everyday",
+      "medium"
+    ]
+  },
+  "groups": [
+    {
+      "id": "bags",
+      "label": "Everyday Carry Bags",
+      "items": [
+        "Backpack",
+        "Briefcase",
+        "Tote",
+        "Messenger Bag"
+      ],
+      "revealHint": "STRAP"
+    },
+    {
+      "id": "rides",
+      "label": "Personal Transport",
+      "items": [
+        "Bicycle",
+        "Scooter",
+        "Skateboard",
+        "Moped"
+      ],
+      "revealHint": "ROLL"
+    },
+    {
+      "id": "navigation",
+      "label": "Navigation Tools",
+      "items": [
+        "Map",
+        "Compass",
+        "GPS",
+        "Road Atlas"
+      ],
+      "revealHint": "NORTH"
+    },
+    {
+      "id": "transit",
+      "label": "Public Transit",
+      "items": [
+        "Bus",
+        "Train",
+        "Tram",
+        "Subway"
+      ],
+      "revealHint": "STOPS"
+    }
+  ]
+}

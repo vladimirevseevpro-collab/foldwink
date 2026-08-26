@@ -17,6 +17,7 @@
     {
       "id": "g1",
       "label": "OVER + ___",
+      "revealHint": "Over",
       "items": [
         "Time",
         "Bearing",
@@ -27,6 +28,7 @@
     {
       "id": "g2",
       "label": "UNDER + ___",
+      "revealHint": "Under",
       "items": [
         "Belly",
         "Pinning",
@@ -37,6 +39,7 @@
     {
       "id": "g3",
       "label": "CROSS + ___",
+      "revealHint": "Cross",
       "items": [
         "Roads",
         "Bow",
@@ -47,6 +50,7 @@
     {
       "id": "g4",
       "label": "OUT + ___",
+      "revealHint": "Out",
       "items": [
         "Rage",
         "Skirts",

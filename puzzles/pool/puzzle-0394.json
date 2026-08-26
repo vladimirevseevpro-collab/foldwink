@@ -1,58 +1,67 @@
 {
   "id": "puzzle-0394",
-  "title": "Board Game Families",
+  "title": "Car Care",
   "difficulty": "medium",
-  "editorialSummary": "Board games by design family. False trail: Pandemic Legacy is cooperative (placed there). Carcassonne is territory/worker, not abstract despite clean components.",
+  "editorialSummary": "Four familiar car-care clusters separate what a driver sees inside, what sits under the hood, what helps at the roadside and what is used for washing.",
   "meta": {
-    "theme": "games",
+    "theme": "everyday",
     "categoryType": "classification",
-    "batch": "batch-11",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "batch": "cq6-en-replacements-wave6",
     "status": "approved",
-    "difficultyScore": 30,
-    "editorialRank": 34,
-    "gptDifficulty": 36,
-    "gptRationale": "Most titles are well-known to hobby gamers, though a couple of intentionally mismatched-seeming inclusions can slow confident sorting."
+    "difficultyScore": 13,
+    "tags": [
+      "car",
+      "everyday",
+      "medium"
+    ]
   },
   "groups": [
     {
-      "id": "g1",
-      "label": "WORKER PLACEMENT",
+      "id": "cabin",
+      "label": "Car Interior Features",
       "items": [
-        "Agricola",
-        "Stone Age",
-        "Viticulture",
-        "Lords of Waterdeep"
-      ]
+        "Steering Wheel",
+        "Dashboard",
+        "Seatbelt",
+        "Rearview Mirror"
+      ],
+      "revealHint": "INSIDE"
     },
     {
-      "id": "g2",
-      "label": "DECK-BUILDING GAMES",
+      "id": "engine",
+      "label": "Engine Bay Parts",
       "items": [
-        "Dominion",
-        "Ascension",
-        "Star Realms",
-        "Thunderstone"
-      ]
+        "Battery",
+        "Radiator",
+        "Spark Plug",
+        "Oil Filter"
+      ],
+      "revealHint": "MOTOR"
     },
     {
-      "id": "g3",
-      "label": "COOPERATIVE GAMES",
+      "id": "roadside",
+      "label": "Roadside Kit",
       "items": [
-        "Pandemic",
-        "Pandemic Legacy",
-        "Spirit Island",
-        "Arkham Horror"
-      ]
+        "Jack",
+        "Jumper Cables",
+        "Warning Triangle",
+        "Tire Gauge"
+      ],
+      "revealHint": "HELP"
     },
     {
-      "id": "g4",
-      "label": "ABSTRACT STRATEGY",
+      "id": "wash",
+      "label": "Car Wash Supplies",
       "items": [
-        "Go",
-        "Othello",
-        "Hive",
-        "Azul"
-      ]
+        "Car Shampoo",
+        "Sponge",
+        "Wax",
+        "Microfiber Cloth"
+      ],
+      "revealHint": "SHINE"
     }
   ]
 }

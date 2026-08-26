@@ -1,0 +1,43 @@
+{
+  "id": "puzzle-0430",
+  "title": "Home Office",
+  "difficulty": "hard",
+  "editorialSummary": "Four ordinary home-office clusters separate computer accessories, writing supplies, desk organization, and mailing supplies. Shared paper and desk context creates a fair false trail.",
+  "meta": {
+    "theme": "everyday work",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "batch": "cq6-en-replacements-wave8",
+    "status": "draft",
+    "difficultyScore": 25,
+    "tags": ["office", "everyday", "hard"]
+  },
+  "groups": [
+    {
+      "id": "computer",
+      "label": "Computer Accessories",
+      "items": ["Mouse", "Keyboard", "Webcam", "Headphones"],
+      "revealHint": "SCREEN"
+    },
+    {
+      "id": "writing",
+      "label": "Writing Supplies",
+      "items": ["Pen", "Pencil", "Notebook", "Highlighter"],
+      "revealHint": "WRITE"
+    },
+    {
+      "id": "organize",
+      "label": "Desk Organization",
+      "items": ["Paper Clip", "Stapler", "Folder", "Binder"],
+      "revealHint": "ORDER"
+    },
+    {
+      "id": "mail",
+      "label": "Mailing Supplies",
+      "items": ["Envelope", "Stamp", "Address Label", "Packing Tape"],
+      "revealHint": "SEND"
+    }
+  ]
+}

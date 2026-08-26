@@ -1,0 +1,55 @@
+{
+  "id": "de-0471",
+  "title": "Ökologische Nischen",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "natur",
+    "batch": "de-batch-05",
+    "difficultyScore": 23,
+    "editorialRank": 49,
+    "gptDifficulty": 66,
+    "gptRationale": "Ökologische Begriffe, Nischenarten und Beziehungsformen verlangen Fachwissen, und nicht alle Beispiele tragen ihre Kategorie offen im Namen."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Nahrungsebenen",
+      "items": [
+        "Produzenten",
+        "Herbivore",
+        "Karnivore",
+        "Destruenten"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Beispiele für Nischen-Spezialisten",
+      "items": [
+        "Kletterspecht",
+        "Bartgeier",
+        "Blattschneider-Ameise",
+        "Koala"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Artenbeziehungen",
+      "items": [
+        "Mutualismus",
+        "Kommensalismus",
+        "Parasitismus",
+        "Konkurrenz"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Ökologie-Begriffe",
+      "items": [
+        "Habitat",
+        "Nische",
+        "Biogeozönose",
+        "Sukzession"
+      ]
+    }
+  ]
+}

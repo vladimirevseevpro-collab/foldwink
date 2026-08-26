@@ -1,55 +1,38 @@
 {
   "id": "ru-0362",
-  "title": "Типы ПК-игр",
-  "difficulty": "medium",
+  "title": "Простые совпадения",
+  "difficulty": "easy",
+  "editorialSummary": "Лёгкая доска с бытовой, природной, спортивной и танцевальной категориями; группы различаются по смыслу и легко считываются.",
   "meta": {
-    "theme": "Компьютерные игры по механике",
-    "batch": "ru-batch-15",
-    "difficultyScore": 28,
-    "editorialRank": 23,
-    "gptDifficulty": 19,
-    "gptRationale": "Популярные игровые жанры и их флагманские тайтлы считываются почти мгновенно для массовой аудитории."
+    "theme": "повседневные знания",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 1,
+    "tags": ["easy", "everyday", "general-knowledge"],
+    "batch": "cq6-ru-replacements-wave2",
+    "status": "draft"
   },
   "groups": [
     {
-      "id": "open_world_games",
-      "label": "Открытый мир",
-      "items": [
-        "GTA V",
-        "Skyrim",
-        "Red Dead 2",
-        "Witcher 3"
-      ]
+      "id": "kitchen_utensils",
+      "label": "Кухонная утварь",
+      "items": ["Кастрюля", "Сковорода", "Чайник", "Дуршлаг"]
     },
     {
-      "id": "battle_royale",
-      "label": "Батл-рояль",
-      "items": [
-        "Fortnite",
-        "PUBG",
-        "Apex Legends",
-        "Warzone"
-      ]
+      "id": "domestic_birds",
+      "label": "Домашние птицы",
+      "items": ["Курица", "Утка", "Гусь", "Индейка"]
     },
     {
-      "id": "moba_games",
-      "label": "MOBA",
-      "items": [
-        "Dota 2",
-        "League of Legends",
-        "Heroes of Storm",
-        "Smite"
-      ]
+      "id": "ball_sports",
+      "label": "Игры с мячом",
+      "items": ["Футбол", "Баскетбол", "Волейбол", "Гандбол"]
     },
     {
-      "id": "survival_games",
-      "label": "Выживание",
-      "items": [
-        "Subnautica",
-        "Valheim",
-        "The Forest",
-        "Rust"
-      ]
+      "id": "ballroom_dances",
+      "label": "Бальные танцы",
+      "items": ["Вальс", "Танго", "Фокстрот", "Ча-ча-ча"]
     }
   ]
 }

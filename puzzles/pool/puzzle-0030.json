@@ -1,58 +1,54 @@
 {
-  "id": "puzzle-0030",
-  "title": "Sound off",
-  "difficulty": "medium",
-  "editorialSummary": "Sound-making verbs grouped by source.",
-  "groups": [
-    {
-      "id": "dogs",
-      "label": "Sounds a DOG makes",
-      "revealHint": "DOG",
-      "items": [
-        "Bark",
-        "Growl",
-        "Whine",
-        "Yelp"
-      ]
-    },
-    {
-      "id": "cats",
-      "label": "Sounds a CAT makes",
-      "revealHint": "CAT",
-      "items": [
-        "Meow",
-        "Purr",
-        "Hiss",
-        "Yowl"
-      ]
-    },
-    {
-      "id": "cows",
-      "label": "Sounds a COW makes",
-      "revealHint": "COW",
-      "items": [
-        "Moo",
-        "Low",
-        "Bellow",
-        "Snort"
-      ]
-    },
-    {
-      "id": "birds",
-      "label": "Sounds a BIRD makes",
-      "revealHint": "BIRD",
-      "items": [
-        "Tweet",
-        "Chirp",
-        "Squawk",
-        "Caw"
-      ]
-    }
-  ],
-  "meta": {
-    "difficultyScore": 31,
-    "editorialRank": 20,
-    "gptDifficulty": 12,
-    "gptRationale": "Animal sounds are highly familiar and the categories are distinct enough to sort almost on sight."
-  }
+    "id":  "puzzle-0030",
+    "title":  "Sound off",
+    "difficulty":  "easy",
+    "editorialSummary":  "Everyday animal sounds grouped by source. Reclassified from medium because the groups are immediately recognizable.",
+    "groups":  [
+                   {
+                       "id":  "dogs",
+                       "label":  "Sounds a DOG makes",
+                       "items":  [
+                                     "Bark",
+                                     "Growl",
+                                     "Whine",
+                                     "Yelp"
+                                 ]
+                   },
+                   {
+                       "id":  "cats",
+                       "label":  "Sounds a CAT makes",
+                       "items":  [
+                                     "Meow",
+                                     "Purr",
+                                     "Hiss",
+                                     "Yowl"
+                                 ]
+                   },
+                   {
+                       "id":  "cows",
+                       "label":  "Sounds a COW makes",
+                       "items":  [
+                                     "Moo",
+                                     "Low",
+                                     "Bellow",
+                                     "Snort"
+                                 ]
+                   },
+                   {
+                       "id":  "birds",
+                       "label":  "Sounds a BIRD makes",
+                       "items":  [
+                                     "Tweet",
+                                     "Chirp",
+                                     "Squawk",
+                                     "Caw"
+                                 ]
+                   }
+               ],
+    "meta":  {
+                 "difficultyScore":  18,
+                 "editorialRank":  12,
+                 "gptDifficulty":  10,
+                 "gptRationale":  "Everyday animal sounds form four distinct, familiar groups and fit the easy tier."
+             }
 }

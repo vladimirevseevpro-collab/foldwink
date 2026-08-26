@@ -1,0 +1,58 @@
+{
+  "id": "puzzle-0325",
+  "title": "Gadget Generations",
+  "difficulty": "medium",
+  "editorialSummary": "Consumer gadgets grouped by the decade they were first sold to mass-market consumers; the false trail is that the Walkman (1979) and the CD player (1982) are both Sony portable audio devices and solvers may group them together, but the Walkman belongs to the 1970s launch cohort and the CD player firmly belongs to the 1980s.",
+  "meta": {
+    "theme": "technology",
+    "categoryType": "attribute",
+    "batch": "batch-08",
+    "status": "approved",
+    "difficultyScore": 67,
+    "editorialRank": 44,
+    "gptDifficulty": 29,
+    "gptRationale": "The gadgets are recognizable, but exact first-sale decade knowledge is fuzzier than the surface familiarity suggests."
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Consumer Gadgets Popularized in the 1970s",
+      "items": [
+        "Pocket Calculator",
+        "VHS Recorder",
+        "Walkman",
+        "Digital Watch"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Consumer Gadgets Popularized in the 1980s",
+      "items": [
+        "CD Player",
+        "Camcorder",
+        "Mobile Phone",
+        "Fax Machine"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Consumer Gadgets Popularized in the 1990s",
+      "items": [
+        "Digital Camera",
+        "DVD Player",
+        "MP3 Player",
+        "GPS Device"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Consumer Gadgets Popularized in the 2000s",
+      "items": [
+        "iPod",
+        "Flat-Screen TV",
+        "e-Reader",
+        "Bluetooth Headset"
+      ]
+    }
+  ]
+}

@@ -1,55 +1,35 @@
 {
   "id": "de-9020",
-  "title": "Revolutionen ohne Waffe",
-  "difficulty": "medium",
+  "title": "Am Schreibtisch",
+  "difficulty": "easy",
   "meta": {
-    "theme": "Friedliche Umbrüche in der Geschichte",
-    "batch": "de-batch-11",
-    "difficultyScore": 34,
-    "editorialRank": 42,
-    "gptDifficulty": 48,
-    "gptRationale": "The categories are recognizable historical shifts, but solving depends on some German and European history knowledge across several eras."
+    "theme": "Schreibtisch",
+    "batch": "cq6-de-replacements-wave7",
+    "difficultyScore": 10,
+    "editorialRank": 1,
+    "gptDifficulty": 14,
+    "gptRationale": "Typische Bürogegenstände sind nach ihrer konkreten Art gruppiert; die Gruppen überschneiden sich nicht."
   },
   "groups": [
     {
       "id": "group_a",
-      "label": "Reformation",
-      "items": [
-        "Thesen ans Tor",
-        "Ablassbrief verbrannt",
-        "Bibel fürs Volk",
-        "Zwei Konfessionen"
-      ]
+      "label": "Schreibgeräte",
+      "items": ["Bleistift", "Kugelschreiber", "Füller", "Textmarker"]
     },
     {
       "id": "group_b",
-      "label": "Aufklärung",
-      "items": [
-        "Kant über Pflicht",
-        "Enzyklopädie erscheint",
-        "Toleranzedikt erlassen",
-        "Lessing und Licht"
-      ]
+      "label": "Papierwaren",
+      "items": ["Notizblock", "Heft", "Briefumschlag", "Karteikarte"]
     },
     {
       "id": "group_c",
-      "label": "Wiedervereinigung",
-      "items": [
-        "Grenzpfahl umgefallen",
-        "Verwandte umarmt",
-        "Zwei Währungen eine",
-        "Volkskammer löst auf"
-      ]
+      "label": "Computergeräte",
+      "items": ["Tastatur", "Maus", "Bildschirm", "Drucker"]
     },
     {
       "id": "group_d",
-      "label": "Frauenwahlrecht",
-      "items": [
-        "1919 erste Wahl",
-        "Langer Kampf davor",
-        "Zettel wie der Mann",
-        "Recht erkämpft"
-      ]
+      "label": "Befestigungsmittel",
+      "items": ["Büroklammer", "Heftklammer", "Reißzwecke", "Klebeband"]
     }
   ]
 }

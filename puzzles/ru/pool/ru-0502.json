@@ -1,0 +1,55 @@
+{
+    "id":  "ru-0502",
+    "title":  "День в парке",
+    "difficulty":  "easy",
+    "meta":  {
+                 "theme":  "Парк",
+                 "batch":  "ru-backfill-r4",
+                 "difficultyScore":  18,
+                 "editorialRank":  18,
+                 "gptDifficulty":  17,
+                 "gptRationale":  "Four familiar park-day categories are concrete natural kinds. The groups do not depend on food use or another situational association, so no card has a competing ordinary placement."
+             },
+    "groups":  [
+                   {
+                       "id":  "playground",
+                       "label":  "На площадке",
+                       "items":  [
+                                     "Качели",
+                                     "Горка",
+                                     "Карусель",
+                                     "Песочница"
+                                 ]
+                   },
+                   {
+                       "id":  "picnic",
+                       "label":  "На пикнике",
+                       "items":  [
+                                     "Плед",
+                                     "Корзина",
+                                     "Термос",
+                                     "Салфетки"
+                                 ]
+                   },
+                   {
+                       "id":  "trees",
+                       "label":  "Деревья",
+                       "items":  [
+                                     "Дуб",
+                                     "Клён",
+                                     "Берёза",
+                                     "Ель"
+                                 ]
+                   },
+                   {
+                       "id":  "birds",
+                       "label":  "Птицы",
+                       "items":  [
+                                     "Воробей",
+                                     "Голубь",
+                                     "Синица",
+                                     "Сорока"
+                                 ]
+                   }
+               ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-0433",
+  "title": "Werbesprüche erraten",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "werbung",
+    "batch": "de-batch-05",
+    "difficultyScore": 27,
+    "editorialRank": 49,
+    "gptDifficulty": 63,
+    "gptRationale": "Slogans sind oft wiedererkennbar, aber Markenwissen und die Ähnlichkeit werblicher Formulierungen erzeugen deutliche False Trails."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Autoslogans",
+      "items": [
+        "Freude am Fahren",
+        "Das Auto",
+        "Vorsprung d. Technik",
+        "Aus Liebe zum Auto"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Lebensmittelslogans",
+      "items": [
+        "Haribo macht froh",
+        "Wahre Liebe",
+        "Nicht immer aber oft",
+        "Quadratisch.Praktisch"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Elektronikslogans",
+      "items": [
+        "Connecting People",
+        "Ideas for life",
+        "Hello Moto",
+        "Life's Good"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Kleidungsslogans",
+      "items": [
+        "Just do it",
+        "Impossible is nothing",
+        "Never Stop Exploring",
+        "Forever Faster"
+      ]
+    }
+  ]
+}

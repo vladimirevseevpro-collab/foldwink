@@ -1,55 +1,35 @@
 {
   "id": "de-0435",
-  "title": "Kaiserreich-Symbole",
-  "difficulty": "medium",
+  "title": "Auf dem Schreibtisch",
+  "difficulty": "easy",
   "meta": {
-    "theme": "geschichte",
-    "batch": "de-batch-05",
-    "difficultyScore": 28,
-    "editorialRank": 54,
-    "gptDifficulty": 72,
-    "gptRationale": "Hier mischen sich historische, kulturelle und symbolische Ebenen, wodurch einige Begriffe ohne Kaiserreich-Kontext recht abstrakt wirken."
+    "theme": "alltag",
+    "batch": "cq6-de-replacements-wave6",
+    "difficultyScore": 11,
+    "editorialRank": 0,
+    "gptDifficulty": 11,
+    "gptRationale": "Schreibgeräte, Befestigungsmittel, Papierwaren und Computergeräte bilden vier alltägliche, eindeutige Gruppen."
   },
   "groups": [
     {
       "id": "group_a",
-      "label": "Militär-Symbole",
-      "items": [
-        "Pickelhaube",
-        "Eisernes Kreuz",
-        "Feldgrau",
-        "Ulanenmütze"
-      ]
+      "label": "Schreibgeräte",
+      "items": ["Bleistift", "Kugelschreiber", "Füller", "Textmarker"]
     },
     {
       "id": "group_b",
-      "label": "Herrschafts-Symbole",
-      "items": [
-        "Kaiserkrone",
-        "Reichsadler",
-        "Zepter",
-        "Kaisermantel"
-      ]
+      "label": "Befestigungsmittel",
+      "items": ["Büroklammer", "Heftklammer", "Reißzwecke", "Gummiband"]
     },
     {
       "id": "group_c",
-      "label": "Industrie-Symbole",
-      "items": [
-        "Stahlwerk",
-        "Zeche",
-        "Lokomotive",
-        "Fabrikschlot"
-      ]
+      "label": "Papierwaren",
+      "items": ["Briefpapier", "Briefumschlag", "Karteikarte", "Notizblock"]
     },
     {
       "id": "group_d",
-      "label": "Kulturelle Symbole",
-      "items": [
-        "Gründerzeit-Villa",
-        "Jugendstilfassade",
-        "Kaiserdenkmal",
-        "Promenade"
-      ]
+      "label": "Computergeräte",
+      "items": ["Tastatur", "Maus", "Bildschirm", "Drucker"]
     }
   ]
 }

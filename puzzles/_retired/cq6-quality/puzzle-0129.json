@@ -1,0 +1,59 @@
+{
+  "id": "puzzle-0129",
+  "title": "Root cause",
+  "difficulty": "medium",
+  "editorialSummary": "Four meanings of root.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "attribute",
+    "wordplay": true,
+    "batch": "batch-01",
+    "status": "approved",
+    "difficultyScore": 50,
+    "editorialRank": 63,
+    "gptDifficulty": 72,
+    "gptRationale": "Root has four distinct senses, but several groups include adjacent concepts rather than pure examples, which muddies the solve path."
+  },
+  "groups": [
+    {
+      "id": "plant",
+      "label": "Underground Plant Parts",
+      "items": [
+        "Taproot",
+        "Tuber",
+        "Bulb",
+        "Rhizome"
+      ]
+    },
+    {
+      "id": "math",
+      "label": "Math roots",
+      "items": [
+        "Square Root",
+        "Cube Root",
+        "Radical",
+        "Surd"
+      ]
+    },
+    {
+      "id": "word",
+      "label": "Word roots",
+      "items": [
+        "Etymology",
+        "Prefix",
+        "Suffix",
+        "Morpheme"
+      ]
+    },
+    {
+      "id": "tooth",
+      "label": "Tooth root",
+      "items": [
+        "Canal",
+        "Pulp",
+        "Enamel",
+        "Dentin"
+      ]
+    }
+  ]
+}

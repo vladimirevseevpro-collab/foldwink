@@ -1,54 +1,54 @@
 {
   "id": "de-0368",
-  "title": "Gastronomie-Begriffe",
-  "difficulty": "medium",
+  "title": "Beim Backen",
+  "difficulty": "easy",
   "meta": {
-    "theme": "Gastronomie",
-    "batch": "de-batch-04",
-    "difficultyScore": 45,
-    "editorialRank": 58,
-    "gptDifficulty": 67,
-    "gptRationale": "Viele französische Fachbegriffe wirken ähnlich elitär und erzeugen starke Verwechslungsgefahr zwischen Technik, Service und Brigade."
+    "theme": "Backen",
+    "batch": "cq6-de-replacements-wave5",
+    "difficultyScore": 11,
+    "editorialRank": 11,
+    "gptDifficulty": 11,
+    "gptRationale": "Die Zutaten, Formen und Dekorationen sind im Alltag geläufig und jeweils eindeutig einer konkreten Backkategorie zuzuordnen."
   },
   "groups": [
     {
       "id": "group_a",
-      "label": "Schneidetechniken",
+      "label": "Teigzutaten",
       "items": [
-        "Taillieren",
-        "Brunoise",
-        "Julienne",
-        "Chiffonade"
+        "Mehl",
+        "Zucker",
+        "Butter",
+        "Eier"
       ]
     },
     {
       "id": "group_b",
-      "label": "Service-Begriffe",
+      "label": "Triebmittel",
       "items": [
-        "À la carte",
-        "Amuse-Bouche",
-        "Sommelier",
-        "Degustation"
+        "Backpulver",
+        "Hefe",
+        "Natron",
+        "Sauerteig"
       ]
     },
     {
       "id": "group_c",
-      "label": "Küchenbrigade-Titel",
+      "label": "Backformen",
       "items": [
-        "Chef de cuisine",
-        "Sous-chef",
-        "Saucier",
-        "Garde-manger"
+        "Kastenform",
+        "Springform",
+        "Gugelhupfform",
+        "Muffinblech"
       ]
     },
     {
       "id": "group_d",
-      "label": "Garmethoden",
+      "label": "Kuchendekorationen",
       "items": [
-        "Sautieren",
-        "Flambieren",
-        "Blanchieren",
-        "Pochieren"
+        "Streusel",
+        "Zuckerguss",
+        "Schokoglasur",
+        "Marzipan"
       ]
     }
   ]

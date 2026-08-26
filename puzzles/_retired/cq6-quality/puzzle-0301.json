@@ -1,0 +1,58 @@
+{
+  "id": "puzzle-0301",
+  "title": "Narrative Devices",
+  "difficulty": "medium",
+  "editorialSummary": "Literary narrative techniques grouped by their function in a story; the false trail is that flashback and in medias res both involve non-linear time, making them easy to conflate — but flashback interrupts the present while in medias res is a story's opening strategy.",
+  "meta": {
+    "theme": "literature",
+    "categoryType": "attribute",
+    "batch": "batch-07",
+    "status": "approved",
+    "difficultyScore": 39,
+    "editorialRank": 65,
+    "gptDifficulty": 82,
+    "gptRationale": "This is the hardest kind of medium-theme puzzle here because it mixes several layers of literary terminology with genuinely specialized rhetorical figures."
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Narrative Time Techniques",
+      "items": [
+        "Flashback",
+        "Flash-Forward",
+        "In Medias Res",
+        "Anachrony"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Point of View Types",
+      "items": [
+        "First Person",
+        "Third Limited",
+        "Third Omniscient",
+        "Second Person"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Structural Story Devices",
+      "items": [
+        "Frame Narrative",
+        "Circular Narrative",
+        "Epistolary",
+        "Parallel Narrative"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Rhetorical Figures",
+      "items": [
+        "Anaphora",
+        "Chiasmus",
+        "Antithesis",
+        "Aposiopesis"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "puzzle-0255",
+  "title": "Whodunit",
+  "difficulty": "medium",
+  "editorialSummary": "Four familiar corners of a classic mystery. Trace evidence, investigator roles, story turns, and the secured scene form clean groups; Evidence Bag replaces the overly generic Flashlight to keep the scene set specific.",
+  "meta": {
+    "theme": "mystery",
+    "categoryType": "classification",
+    "batch": "cq6-en-tabs-wave1",
+    "status": "draft",
+    "difficultyScore": 40,
+    "editorialRank": 32,
+    "gptDifficulty": 26,
+    "gptRationale": "Murder-mystery conventions are widely known and the categories are strongly signposted by genre."
+  },
+  "groups": [
+    {
+      "id": "clues",
+      "label": "Physical Clues",
+      "items": [
+        "Fingerprint",
+        "Blood Stain",
+        "Hair Fiber",
+        "DNA Sample"
+      ],
+      "revealHint": "TRACE"
+    },
+    {
+      "id": "sleuths",
+      "label": "Detective Types",
+      "items": [
+        "Private Eye",
+        "Inspector",
+        "Consulting Detective",
+        "Amateur Sleuth"
+      ],
+      "revealHint": "SLEUTH"
+    },
+    {
+      "id": "elements",
+      "label": "Mystery Story Beats",
+      "items": [
+        "Red Herring",
+        "Plot Twist",
+        "Reveal",
+        "Confession"
+      ],
+      "revealHint": "TURN"
+    },
+    {
+      "id": "evidence",
+      "label": "Crime Scene",
+      "items": [
+        "Chalk Outline",
+        "Yellow Tape",
+        "Evidence Bag",
+        "Forensics Marker"
+      ],
+      "revealHint": "CORDON"
+    }
+  ]
+}

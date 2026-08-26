@@ -1,0 +1,59 @@
+{
+    "id":  "de-0504",
+    "title":  "Im Kino",
+    "difficulty":  "medium",
+    "meta":  {
+                 "theme":  "Kino",
+                 "batch":  "de-backfill-r3",
+                 "difficultyScore":  39,
+                 "editorialRank":  39,
+                 "gptDifficulty":  37,
+                 "gptRationale":  "Familiar cinema vocabulary forms four clear domains. Tabs now identify the process row specifically while preserving a fair medium-level shared-venue false trail."
+             },
+    "groups":  [
+                   {
+                       "id":  "film_types",
+                       "label":  "Filmarten",
+                       "revealHint":  "GENRE",
+                       "items":  [
+                                     "Komödie",
+                                     "Drama",
+                                     "Krimi",
+                                     "Animationsfilm"
+                                 ]
+                   },
+                   {
+                       "id":  "auditorium",
+                       "label":  "Im Saal",
+                       "revealHint":  "SAAL",
+                       "items":  [
+                                     "Leinwand",
+                                     "Sessel",
+                                     "Reihe",
+                                     "Notausgang"
+                                 ]
+                   },
+                   {
+                       "id":  "screening",
+                       "label":  "Ablauf",
+                       "revealHint":  "ABLAUF",
+                       "items":  [
+                                     "Trailer",
+                                     "Pause",
+                                     "Abspann",
+                                     "Werbung"
+                                 ]
+                   },
+                   {
+                       "id":  "snacks",
+                       "label":  "Snacks",
+                       "revealHint":  "SNACK",
+                       "items":  [
+                                     "Popcorn",
+                                     "Nachos",
+                                     "Limo",
+                                     "Bonbons"
+                                 ]
+                   }
+               ]
+}

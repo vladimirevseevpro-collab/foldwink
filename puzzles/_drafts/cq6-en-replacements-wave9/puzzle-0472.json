@@ -1,0 +1,43 @@
+{
+  "id": "puzzle-0472",
+  "title": "At the Fire Station",
+  "difficulty": "medium",
+  "editorialSummary": "Four familiar fire-station clusters separate firefighter gear, rescue tools, engine equipment, and station fixtures. The shared emergency setting creates a fair false trail without legal knowledge.",
+  "meta": {
+    "theme": "everyday services",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "batch": "cq6-en-replacements-wave9",
+    "status": "draft",
+    "difficultyScore": 22,
+    "tags": ["fire-station", "services", "medium"]
+  },
+  "groups": [
+    {
+      "id": "gear",
+      "label": "Firefighter Gear",
+      "items": ["Helmet", "Jacket", "Boots", "Gloves"],
+      "revealHint": "WEAR"
+    },
+    {
+      "id": "rescue",
+      "label": "Rescue Tools",
+      "items": ["Axe", "Crowbar", "Rope", "Ladder"],
+      "revealHint": "RESCUE"
+    },
+    {
+      "id": "engine",
+      "label": "Fire Engine Equipment",
+      "items": ["Hose", "Nozzle", "Water Tank", "Siren"],
+      "revealHint": "ENGINE"
+    },
+    {
+      "id": "station",
+      "label": "Station Fixtures",
+      "items": ["Locker", "Bunk", "Fire Pole", "Alarm Panel"],
+      "revealHint": "STATION"
+    }
+  ]
+}

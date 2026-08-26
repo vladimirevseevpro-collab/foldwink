@@ -1,0 +1,43 @@
+{
+  "id": "puzzle-0424",
+  "title": "At the Pet Shop",
+  "difficulty": "medium",
+  "editorialSummary": "Four pet-shop clusters separate familiar supplies for dogs, cats, fish, and birds. Every item has a clear everyday association with one animal group.",
+  "meta": {
+    "theme": "everyday errands",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "batch": "cq6-en-replacements-wave7",
+    "status": "draft",
+    "difficultyScore": 20,
+    "tags": ["pets", "errands", "medium"]
+  },
+  "groups": [
+    {
+      "id": "dog",
+      "label": "Dog Supplies",
+      "items": ["Leash", "Collar", "Chew Toy", "Dog Treats"],
+      "revealHint": "WOOF"
+    },
+    {
+      "id": "cat",
+      "label": "Cat Supplies",
+      "items": ["Litter Box", "Scratching Post", "Catnip", "Toy Mouse"],
+      "revealHint": "MEOW"
+    },
+    {
+      "id": "fish",
+      "label": "Fish Tank Supplies",
+      "items": ["Fish Food", "Net", "Filter", "Gravel"],
+      "revealHint": "SWIM"
+    },
+    {
+      "id": "bird",
+      "label": "Bird Supplies",
+      "items": ["Cage", "Perch", "Seed", "Water Dish"],
+      "revealHint": "CHIRP"
+    }
+  ]
+}

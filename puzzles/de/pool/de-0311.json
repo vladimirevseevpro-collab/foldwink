@@ -1,55 +1,38 @@
 {
   "id": "de-0311",
-  "title": "Nobelpreisträger Deutschland",
-  "difficulty": "medium",
+  "title": "Frühstück daheim",
+  "difficulty": "easy",
   "meta": {
-    "theme": "Nobelpreis",
-    "batch": "de-batch-04",
-    "difficultyScore": 27,
-    "editorialRank": 48,
-    "gptDifficulty": 62,
-    "gptRationale": "Nobelpreisträger sind spezielleres Faktenwissen und gerade die Friedensnobel-Gruppe bietet deutliche Unsicherheit und Verwechslungsgefahr."
+    "theme": "Frühstück daheim",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 1,
+    "tags": ["frühstück", "alltag", "essen"],
+    "batch": "cq6-de-replacements",
+    "status": "needs-review",
+    "difficultyScore": 10
   },
   "groups": [
     {
-      "id": "group_a",
-      "label": "Nobelpreis Physik",
-      "items": [
-        "Röntgen",
-        "Planck",
-        "Heisenberg",
-        "Born"
-      ]
+      "id": "breakfast_drinks",
+      "label": "Frühstücksgetränke",
+      "items": ["Kaffee", "Tee", "Milch", "Saft"]
     },
     {
-      "id": "group_b",
-      "label": "Nobelpreis Chemie",
-      "items": [
-        "Haber",
-        "Fischer",
-        "Nernst",
-        "Staudinger"
-      ]
+      "id": "breakfast_baked_goods",
+      "label": "Backwaren",
+      "items": ["Brötchen", "Croissant", "Brezel", "Toast"]
     },
     {
-      "id": "group_c",
-      "label": "Nobelpreis Medizin",
-      "items": [
-        "Koch",
-        "Ehrlich",
-        "Domagk",
-        "Spemann"
-      ]
+      "id": "breakfast_spreads",
+      "label": "Brotaufstriche",
+      "items": ["Butter", "Marmelade", "Honig", "Frischkäse"]
     },
     {
-      "id": "group_d",
-      "label": "Nobelpreis Frieden",
-      "items": [
-        "Brandt",
-        "Schweitzer",
-        "Ossietzky",
-        "Stresemann"
-      ]
+      "id": "breakfast_tableware",
+      "label": "Auf dem Tisch",
+      "items": ["Tasse", "Teller", "Löffel", "Serviette"]
     }
   ]
 }

@@ -17,6 +17,7 @@
     {
       "id": "theatre",
       "label": "Theatre stage",
+      "revealHint": "Theatre",
       "items": [
         "Curtain",
         "Spotlight",
@@ -27,6 +28,7 @@
     {
       "id": "rocket",
       "label": "Rocket stage",
+      "revealHint": "Rocket",
       "items": [
         "Booster",
         "Separation",
@@ -37,6 +39,7 @@
     {
       "id": "develop",
       "label": "Development stage",
+      "revealHint": "Software",
       "items": [
         "Prototype",
         "Beta",
@@ -47,6 +50,7 @@
     {
       "id": "cycling",
       "label": "Cycling stage",
+      "revealHint": "Cycling",
       "items": [
         "Peloton",
         "Sprint",

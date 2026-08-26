@@ -1,0 +1,55 @@
+{
+    "id":  "ru-0501",
+    "title":  "Собираем рюкзак",
+    "difficulty":  "easy",
+    "meta":  {
+                 "theme":  "Поездка",
+                 "batch":  "ru-backfill-r4",
+                 "difficultyScore":  20,
+                 "editorialRank":  20,
+                 "gptDifficulty":  18,
+                 "gptRationale":  "Every group uses familiar travel or comfort items with a single practical purpose and no life-stage, technical, or factual classification."
+             },
+    "groups":  [
+                   {
+                       "id":  "documents",
+                       "label":  "Документы в путь",
+                       "items":  [
+                                     "Билет",
+                                     "Паспорт",
+                                     "Карта",
+                                     "Путеводитель"
+                                 ]
+                   },
+                   {
+                       "id":  "electronics",
+                       "label":  "Электроника",
+                       "items":  [
+                                     "Телефон",
+                                     "Зарядка",
+                                     "Пауэрбанк",
+                                     "Фотоаппарат"
+                                 ]
+                   },
+                   {
+                       "id":  "snack",
+                       "label":  "Перекус",
+                       "items":  [
+                                     "Яблоко",
+                                     "Крекеры",
+                                     "Сухофрукты",
+                                     "Бутерброд"
+                                 ]
+                   },
+                   {
+                       "id":  "cool_weather",
+                       "label":  "В прохладу",
+                       "items":  [
+                                     "Свитер",
+                                     "Шарф",
+                                     "Шапка",
+                                     "Тёплые носки"
+                                 ]
+                   }
+               ]
+}

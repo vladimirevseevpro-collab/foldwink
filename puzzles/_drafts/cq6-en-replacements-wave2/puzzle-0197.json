@@ -1,0 +1,68 @@
+{
+  "id": "puzzle-0197",
+  "title": "After the Rain",
+  "difficulty": "medium",
+  "editorialSummary": "Four familiar visual clusters mix outdoor weather, a household craft, birds and fruit. Each card has a single natural category, so the challenge is sorting rather than decoding an obscure word sense.",
+  "meta": {
+    "theme": "everyday",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "tags": [
+      "everyday",
+      "outdoors",
+      "objects",
+      "medium"
+    ],
+    "batch": "cq6-en-replacements-wave2",
+    "status": "draft",
+    "difficultyScore": 11
+  },
+  "groups": [
+    {
+      "id": "rain-gear",
+      "label": "Rain Gear",
+      "items": [
+        "Umbrella",
+        "Poncho",
+        "Boots",
+        "Raincoat"
+      ],
+      "revealHint": "Wet"
+    },
+    {
+      "id": "sewing-kit",
+      "label": "Sewing Kit",
+      "items": [
+        "Needle",
+        "Thread",
+        "Thimble",
+        "Spool"
+      ],
+      "revealHint": "Stitch"
+    },
+    {
+      "id": "pond-birds",
+      "label": "Pond Birds",
+      "items": [
+        "Duck",
+        "Goose",
+        "Swan",
+        "Heron"
+      ],
+      "revealHint": "Water"
+    },
+    {
+      "id": "stone-fruits",
+      "label": "Stone Fruits",
+      "items": [
+        "Peach",
+        "Plum",
+        "Cherry",
+        "Apricot"
+      ],
+      "revealHint": "Orchard"
+    }
+  ]
+}

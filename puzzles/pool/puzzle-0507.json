@@ -1,0 +1,63 @@
+{
+    "id":  "puzzle-0507",
+    "title":  "Tools and Topics",
+    "difficulty":  "easy",
+    "editorialSummary":  "Four widely known sets pair a sewing kit, car parts, school subjects, and kitchen appliances. Button and mirror have other everyday meanings, but no competing four-item category is available, so the solution stays canonical.",
+    "meta":  {
+                 "theme":  "everyday knowledge",
+                 "categoryType":  "classification",
+                 "falseTrail":  "Button and mirror have broad everyday associations outside their intended sets.",
+                 "fairnessRisk":  1,
+                 "repetitionRisk":  1,
+                 "tags":  [
+                              "home",
+                              "school",
+                              "easy"
+                          ],
+                 "batch":  "r3-backfill-en",
+                 "status":  "needs-review",
+                 "difficultyScore":  12
+             },
+    "groups":  [
+                   {
+                       "id":  "sewing-kit",
+                       "label":  "Sewing Kit",
+                       "items":  [
+                                     "Needle",
+                                     "Thread",
+                                     "Button",
+                                     "Thimble"
+                                 ]
+                   },
+                   {
+                       "id":  "car-parts",
+                       "label":  "Car Parts",
+                       "items":  [
+                                     "Tire",
+                                     "Wiper",
+                                     "Horn",
+                                     "Mirror"
+                                 ]
+                   },
+                   {
+                       "id":  "school-subjects",
+                       "label":  "School Subjects",
+                       "items":  [
+                                     "Math",
+                                     "History",
+                                     "Music",
+                                     "Art"
+                                 ]
+                   },
+                   {
+                       "id":  "kitchen-appliances",
+                       "label":  "Kitchen Appliances",
+                       "items":  [
+                                     "Toaster",
+                                     "Blender",
+                                     "Kettle",
+                                     "Microwave"
+                                 ]
+                   }
+               ]
+}

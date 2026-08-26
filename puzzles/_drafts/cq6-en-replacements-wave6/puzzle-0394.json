@@ -1,0 +1,67 @@
+{
+  "id": "puzzle-0394",
+  "title": "Car Care",
+  "difficulty": "medium",
+  "editorialSummary": "Four familiar car-care clusters separate what a driver sees inside, what sits under the hood, what helps at the roadside and what is used for washing.",
+  "meta": {
+    "theme": "everyday",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "batch": "cq6-en-replacements-wave6",
+    "status": "draft",
+    "difficultyScore": 13,
+    "tags": [
+      "car",
+      "everyday",
+      "medium"
+    ]
+  },
+  "groups": [
+    {
+      "id": "cabin",
+      "label": "Car Interior Features",
+      "items": [
+        "Steering Wheel",
+        "Dashboard",
+        "Seatbelt",
+        "Rearview Mirror"
+      ],
+      "revealHint": "INSIDE"
+    },
+    {
+      "id": "engine",
+      "label": "Engine Bay Parts",
+      "items": [
+        "Battery",
+        "Radiator",
+        "Spark Plug",
+        "Oil Filter"
+      ],
+      "revealHint": "MOTOR"
+    },
+    {
+      "id": "roadside",
+      "label": "Roadside Kit",
+      "items": [
+        "Jack",
+        "Jumper Cables",
+        "Warning Triangle",
+        "Tire Gauge"
+      ],
+      "revealHint": "HELP"
+    },
+    {
+      "id": "wash",
+      "label": "Car Wash Supplies",
+      "items": [
+        "Car Shampoo",
+        "Sponge",
+        "Wax",
+        "Microfiber Cloth"
+      ],
+      "revealHint": "SHINE"
+    }
+  ]
+}

@@ -1,54 +1,54 @@
 {
   "id": "de-0340",
-  "title": "Datenbanken",
-  "difficulty": "medium",
+  "title": "Im Badezimmer",
+  "difficulty": "easy",
   "meta": {
-    "theme": "Datenbanken",
-    "batch": "de-batch-04",
-    "difficultyScore": 29,
-    "editorialRank": 31,
-    "gptDifficulty": 33,
-    "gptRationale": "Datenbankbegriffe sind thematisch klar und viele Beispiele sind Standardvokabular, trotz etwas Fachsprache."
+    "theme": "Badezimmer",
+    "batch": "cq6-de-replacements-wave2",
+    "difficultyScore": 18,
+    "editorialRank": 18,
+    "gptDifficulty": 17,
+    "gptRationale": "Alltagsgegenstände aus klar getrennten Bereichen des Badezimmers."
   },
   "groups": [
     {
-      "id": "group_a",
-      "label": "Datenbankmodelle",
+      "id": "fixtures",
+      "label": "Feste Einrichtung",
       "items": [
-        "Relational",
-        "Dokumenten-DB",
-        "Graph-DB",
-        "Schlüssel-Wert"
+        "Waschbecken",
+        "Badewanne",
+        "Dusche",
+        "Spiegel"
       ]
     },
     {
-      "id": "group_b",
-      "label": "Datenbanksprachen",
+      "id": "teeth",
+      "label": "Zur Zahnpflege",
       "items": [
-        "SQL",
-        "Cypher",
-        "XQuery",
-        "SPARQL"
+        "Zahnbürste",
+        "Zahnpasta",
+        "Zahnseide",
+        "Mundspülung"
       ]
     },
     {
-      "id": "group_c",
-      "label": "Datenbankkonzepte",
+      "id": "shower",
+      "label": "Duschzubehör",
       "items": [
-        "Transaktion",
-        "ACID",
-        "Index",
-        "Normalisierung"
+        "Shampoo",
+        "Duschgel",
+        "Seife",
+        "Handtuch"
       ]
     },
     {
-      "id": "group_d",
-      "label": "Datenbankprodukte",
+      "id": "grooming",
+      "label": "Pflegewerkzeuge",
       "items": [
-        "MySQL",
-        "PostgreSQL",
-        "MongoDB",
-        "Redis"
+        "Kamm",
+        "Haarbürste",
+        "Nagelschere",
+        "Pinzette"
       ]
     }
   ]

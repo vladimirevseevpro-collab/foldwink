@@ -1,58 +1,43 @@
 {
   "id": "puzzle-0317",
-  "title": "20th Century Turning Points",
+  "title": "At the Beach",
   "difficulty": "medium",
-  "editorialSummary": "Four decades of 20th-century turning points. False trail: the Russian Revolution (1917) belongs to the 1910s, not the 1920s — solvers anchored to the inter-war chaos often misplace it by one decade.",
+  "editorialSummary": "Four familiar beach clusters share one setting but resolve by a distinct job: shade, sand play, water gear, and finds along the shore.",
   "meta": {
-    "theme": "history",
-    "categoryType": "attribute",
-    "batch": "batch-08",
+    "theme": "everyday",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "batch": "cq6-en-replacements-wave5",
     "status": "approved",
-    "difficultyScore": 53,
-    "editorialRank": 56,
-    "gptDifficulty": 58,
-    "gptRationale": "The decade buckets are sensible, but accurate placement of twentieth-century events still requires solid history recall."
+    "difficultyScore": 12,
+    "tags": ["beach", "everyday", "medium"]
   },
   "groups": [
     {
-      "id": "g1",
-      "label": "World Events of the 1910s",
-      "items": [
-        "Assassination of Archduke Franz Ferdinand",
-        "Battle of the Marne",
-        "Russian Revolution",
-        "Treaty of Versailles"
-      ]
+      "id": "shade",
+      "label": "Sun Protection",
+      "items": ["Sunscreen", "Sun Hat", "Beach Umbrella", "Cover-up"],
+      "revealHint": "SHADE"
     },
     {
-      "id": "g2",
-      "label": "World Events of the 1930s",
-      "items": [
-        "Great Depression",
-        "Spanish Civil War",
-        "Kristallnacht",
-        "Molotov-Ribbentrop Pact"
-      ]
+      "id": "sand",
+      "label": "Sand Toys",
+      "items": ["Bucket", "Spade", "Sieve", "Sand Mold"],
+      "revealHint": "PLAY"
     },
     {
-      "id": "g3",
-      "label": "World Events of the 1940s",
-      "items": [
-        "D-Day Landings",
-        "Hiroshima Bombing",
-        "Nuremberg Trials",
-        "Berlin Airlift"
-      ]
+      "id": "water",
+      "label": "Water Gear",
+      "items": ["Swim Goggles", "Snorkel", "Swim Fins", "Kickboard"],
+      "revealHint": "SPLASH"
     },
     {
-      "id": "g4",
-      "label": "World Events of the 1960s",
-      "items": [
-        "Bay of Pigs Invasion",
-        "Cuban Missile Crisis",
-        "Moon Landing",
-        "Prague Spring"
-      ]
+      "id": "finds",
+      "label": "Beach Finds",
+      "items": ["Shell", "Pebble", "Sea Glass", "Driftwood"],
+      "revealHint": "SHORE"
     }
   ]
 }

@@ -1,55 +1,38 @@
 {
   "id": "de-0313",
-  "title": "Kant und sein Werk",
-  "difficulty": "medium",
+  "title": "Kochen zu Hause",
+  "difficulty": "easy",
   "meta": {
-    "theme": "Kant",
-    "batch": "de-batch-04",
-    "difficultyScore": 37,
-    "editorialRank": 59,
-    "gptDifficulty": 74,
-    "gptRationale": "Hier mischen sich Werktitel, Fachbegriffe und Kategorien aus der Kant-Rezeption, was hohe begriffliche Genauigkeit verlangt."
+    "theme": "Kochen zu Hause",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 1,
+    "tags": ["küche", "alltag", "kochen"],
+    "batch": "cq6-de-replacements",
+    "status": "needs-review",
+    "difficultyScore": 13
   },
   "groups": [
     {
-      "id": "group_a",
-      "label": "Kants Hauptwerke",
-      "items": [
-        "Reine Vernunft",
-        "Praktische Vernunft",
-        "Urteilskraft",
-        "Prolegomena"
-      ]
+      "id": "cookware",
+      "label": "Kochgeschirr",
+      "items": ["Topf", "Pfanne", "Auflaufform", "Backblech"]
     },
     {
-      "id": "group_b",
-      "label": "Kants Kernbegriffe",
-      "items": [
-        "Kateg. Imperativ",
-        "Ding an sich",
-        "Noumenon",
-        "Transzendental"
-      ]
+      "id": "cooking_tools",
+      "label": "Kochwerkzeuge",
+      "items": ["Kochlöffel", "Schneebesen", "Pfannenwender", "Sieb"]
     },
     {
-      "id": "group_c",
-      "label": "Kants Schriften",
-      "items": [
-        "Zum ewigen Frieden",
-        "Anthropologie",
-        "Grundlegung",
-        "Metaphysik"
-      ]
+      "id": "spices",
+      "label": "Gewürze",
+      "items": ["Salz", "Pfeffer", "Curry", "Zimt"]
     },
     {
-      "id": "group_d",
-      "label": "Kants Kategorien",
-      "items": [
-        "Kausalität",
-        "Substanz",
-        "Wechselwirkung",
-        "Modalität"
-      ]
+      "id": "baking_ingredients",
+      "label": "Backzutaten",
+      "items": ["Mehl", "Zucker", "Eier", "Backpulver"]
     }
   ]
 }

@@ -1,54 +1,54 @@
 {
   "id": "ru-0001",
-  "title": "Новый год и зима",
+  "title": "Омонимы и двойные агенты",
   "difficulty": "easy",
   "meta": {
-    "theme": "Новый год и зима",
+    "theme": "омонимы_и_быт",
+    "categoryType": "polysemy_subversion",
     "batch": "ru-batch-01",
-    "difficultyScore": 23,
-    "editorialRank": 13,
-    "gptDifficulty": 6,
-    "gptRationale": "Extremely familiar holiday imagery with four clean, everyday categories and almost no overlap or ambiguity."
+    "difficultyScore": 18,
+    "editorialRank": 10,
+    "gptRationale": "Лук, Шашка и Вилка создают изящные перекрёстные ловушки между кухней, играми и арсеналом."
   },
   "groups": [
     {
-      "id": "group_a",
-      "label": "Украшения ёлки",
+      "id": "weapons",
+      "label": "Холодное и метательное оружие",
       "items": [
-        "Шары",
-        "Мишура",
-        "Гирлянды",
-        "Звезда"
+        "Меч",
+        "Сабля",
+        "Шашка",
+        "Лук"
       ]
     },
     {
-      "id": "group_b",
-      "label": "Персонажи праздника",
+      "id": "garden_veg",
+      "label": "Овощи и зелень на грядке",
       "items": [
-        "Дед Мороз",
-        "Снегурочка",
-        "Снеговик",
-        "Зайчик"
+        "Свекла",
+        "Чеснок",
+        "Редис",
+        "Укроп"
       ]
     },
     {
-      "id": "group_c",
-      "label": "Зимние забавы",
+      "id": "board_games",
+      "label": "Классические настольные игры",
       "items": [
-        "Лыжи",
-        "Коньки",
-        "Санки",
-        "Снежки"
+        "Нарды",
+        "Домино",
+        "Шахматы",
+        "Лото"
       ]
     },
     {
-      "id": "group_d",
-      "label": "Новогодний стол",
+      "id": "cutlery",
+      "label": "Столовые приборы повара",
       "items": [
-        "Мандарины",
-        "Оливье",
-        "Шампанское",
-        "Конфеты"
+        "Ложка",
+        "Нож",
+        "Половник",
+        "Вилка"
       ]
     }
   ]

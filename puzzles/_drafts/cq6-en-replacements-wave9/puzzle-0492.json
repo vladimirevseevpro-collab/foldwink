@@ -1,0 +1,43 @@
+{
+  "id": "puzzle-0492",
+  "title": "At the Museum",
+  "difficulty": "hard",
+  "editorialSummary": "Four familiar museum clusters separate exhibits, visitor items, security fixtures, and cafe items. The hard tier is the shared venue context, not science or mathematics trivia.",
+  "meta": {
+    "theme": "everyday outings",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "batch": "cq6-en-replacements-wave9",
+    "status": "draft",
+    "difficultyScore": 24,
+    "tags": ["museum", "outings", "hard"]
+  },
+  "groups": [
+    {
+      "id": "exhibits",
+      "label": "Museum Exhibits",
+      "items": ["Painting", "Sculpture", "Ancient Coin", "Fossil"],
+      "revealHint": "EXHIBIT"
+    },
+    {
+      "id": "visitor",
+      "label": "Visitor Items",
+      "items": ["Guidebook", "Audio Guide", "Brochure", "Floor Plan"],
+      "revealHint": "VISIT"
+    },
+    {
+      "id": "security",
+      "label": "Security Fixtures",
+      "items": ["Rope Barrier", "Camera", "Alarm", "Glass Case"],
+      "revealHint": "GUARD"
+    },
+    {
+      "id": "cafe",
+      "label": "Museum Cafe Items",
+      "items": ["Coffee", "Sandwich", "Pastry", "Water Bottle"],
+      "revealHint": "CAFE"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "puzzle-0448",
+  "title": "At the Photo Studio",
+  "difficulty": "medium",
+  "editorialSummary": "Four recognizable photo-studio clusters separate camera equipment, lighting equipment, posing furniture, and printing materials. The shared studio context creates a fair false trail without art-history knowledge.",
+  "meta": {
+    "theme": "everyday services",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "batch": "cq6-en-replacements-wave8",
+    "status": "draft",
+    "difficultyScore": 21,
+    "tags": ["photography", "studio", "medium"]
+  },
+  "groups": [
+    {
+      "id": "camera",
+      "label": "Camera Equipment",
+      "items": ["Camera", "Tripod", "Lens", "Memory Card"],
+      "revealHint": "FRAME"
+    },
+    {
+      "id": "lighting",
+      "label": "Lighting Equipment",
+      "items": ["Softbox", "Ring Light", "Reflector", "Light Stand"],
+      "revealHint": "LIGHT"
+    },
+    {
+      "id": "pose",
+      "label": "Posing Furniture",
+      "items": ["Stool", "Chair", "Bench", "Backdrop"],
+      "revealHint": "POSE"
+    },
+    {
+      "id": "print",
+      "label": "Printing Materials",
+      "items": ["Printer", "Photo Paper", "Ink", "Frame"],
+      "revealHint": "PRINT"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "id": "puzzle-0097",
+  "title": "Under One Roof",
+  "difficulty": "medium",
+  "editorialSummary": "Every item is a familiar household noun. The medium tension comes from broad home-based overlap, but window treatments, bathroom fixtures, storage and flooring resolve at distinct practical levels.",
+  "meta": {
+    "theme": "home interior",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "tags": [
+      "home",
+      "everyday",
+      "household",
+      "classification",
+      "medium"
+    ],
+    "batch": "cq6-en-replacements-wave1",
+    "status": "draft",
+    "difficultyScore": 8
+  },
+  "groups": [
+    {
+      "id": "window-coverings",
+      "label": "Window Coverings",
+      "items": [
+        "Blinds",
+        "Curtains",
+        "Drapes",
+        "Shutters"
+      ],
+      "revealHint": "Treatments"
+    },
+    {
+      "id": "bathroom-fixtures",
+      "label": "Bathroom Fixtures",
+      "items": [
+        "Sink",
+        "Shower",
+        "Toilet",
+        "Tub"
+      ],
+      "revealHint": "Refresh"
+    },
+    {
+      "id": "storage-furniture",
+      "label": "Storage Furniture",
+      "items": [
+        "Bookcase",
+        "Sideboard",
+        "Dresser",
+        "Wardrobe"
+      ],
+      "revealHint": "Tidy"
+    },
+    {
+      "id": "flooring-types",
+      "label": "Flooring Types",
+      "items": [
+        "Carpet",
+        "Tile",
+        "Hardwood",
+        "Laminate"
+      ],
+      "revealHint": "Step"
+    }
+  ]
+}

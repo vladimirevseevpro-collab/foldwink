@@ -1,0 +1,43 @@
+{
+  "id": "puzzle-0479",
+  "title": "At the Flower Shop",
+  "difficulty": "hard",
+  "editorialSummary": "Four familiar flower-shop clusters separate potted plants, bouquet greenery, bouquet wrapping, and florist tools. The hard tier comes from shared shop context, not language-history trivia.",
+  "meta": {
+    "theme": "everyday errands",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "batch": "cq6-en-replacements-wave9",
+    "status": "draft",
+    "difficultyScore": 25,
+    "tags": ["florist", "errands", "hard"]
+  },
+  "groups": [
+    {
+      "id": "plants",
+      "label": "Potted Plants",
+      "items": ["Orchid", "Cactus", "Succulent", "Bonsai"],
+      "revealHint": "POT"
+    },
+    {
+      "id": "greenery",
+      "label": "Bouquet Greenery",
+      "items": ["Fern", "Ivy", "Eucalyptus", "Palm Leaf"],
+      "revealHint": "LEAF"
+    },
+    {
+      "id": "wrapping",
+      "label": "Bouquet Wrapping",
+      "items": ["Tissue Paper", "Ribbon", "Cellophane", "Gift Tag"],
+      "revealHint": "WRAP"
+    },
+    {
+      "id": "tools",
+      "label": "Florist Tools",
+      "items": ["Shears", "Floral Tape", "Vase", "Watering Can"],
+      "revealHint": "ARRANGE"
+    }
+  ]
+}

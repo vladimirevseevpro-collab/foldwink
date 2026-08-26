@@ -1,0 +1,43 @@
+{
+  "id": "puzzle-0376",
+  "title": "At the Campsite",
+  "difficulty": "hard",
+  "editorialSummary": "Four ordinary campsite clusters separate sleeping gear, fire supplies, trail gear and food or drink containers without outdoors-specialist knowledge.",
+  "meta": {
+    "theme": "everyday",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "batch": "cq6-en-replacements-wave6",
+    "status": "draft",
+    "difficultyScore": 19,
+    "tags": ["outdoors", "everyday", "hard"]
+  },
+  "groups": [
+    {
+      "id": "sleep",
+      "label": "Sleeping Gear",
+      "items": ["Sleeping Bag", "Camping Pillow", "Sleeping Pad", "Blanket"],
+      "revealHint": "REST"
+    },
+    {
+      "id": "fire",
+      "label": "Fire Supplies",
+      "items": ["Matches", "Lighter", "Kindling", "Firewood"],
+      "revealHint": "FLAME"
+    },
+    {
+      "id": "trail",
+      "label": "Trail Gear",
+      "items": ["Compass", "Map", "Hiking Boots", "Hiking Pole"],
+      "revealHint": "ROUTE"
+    },
+    {
+      "id": "food",
+      "label": "Food and Drink Containers",
+      "items": ["Cooler", "Thermos", "Lunchbox", "Water Bottle"],
+      "revealHint": "STORE"
+    }
+  ]
+}

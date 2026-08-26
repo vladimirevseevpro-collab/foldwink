@@ -1,0 +1,55 @@
+{
+  "id": "de-0446",
+  "title": "Dada und Surrealismus",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "kunst",
+    "batch": "de-batch-05",
+    "difficultyScore": 31,
+    "editorialRank": 57,
+    "gptDifficulty": 74,
+    "gptRationale": "Dada und Surrealismus stehen kulturell nahe beieinander, sodass Techniken und Personen ohne präzises Kunstwissen leicht kreuzen."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Dada-Künstler",
+      "items": [
+        "Hugo Ball",
+        "Marcel Duchamp",
+        "Hannah Höch",
+        "Richard Huelsenbeck"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Surrealisten",
+      "items": [
+        "Salvador Dalí",
+        "Magritte",
+        "Max Ernst",
+        "Yves Tanguy"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Dada-Techniken",
+      "items": [
+        "Fotomontage",
+        "Readymade",
+        "Lautgedicht",
+        "Zufallscollage"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Surrealist.-Techniken",
+      "items": [
+        "Cadavre exquis",
+        "Écriture automatique",
+        "Traumprotokoll",
+        "Grattage"
+      ]
+    }
+  ]
+}

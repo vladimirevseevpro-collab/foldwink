@@ -1,54 +1,54 @@
 {
   "id": "de-0433",
-  "title": "Werbesprüche erraten",
-  "difficulty": "medium",
+  "title": "Im Badezimmer",
+  "difficulty": "easy",
   "meta": {
-    "theme": "werbung",
-    "batch": "de-batch-05",
-    "difficultyScore": 27,
-    "editorialRank": 49,
-    "gptDifficulty": 63,
-    "gptRationale": "Slogans sind oft wiedererkennbar, aber Markenwissen und die Ähnlichkeit werblicher Formulierungen erzeugen deutliche False Trails."
+    "theme": "alltag",
+    "batch": "cq6-de-replacements-wave6",
+    "difficultyScore": 10,
+    "editorialRank": 0,
+    "gptDifficulty": 10,
+    "gptRationale": "Die vier Gruppen benennen jeweils eine konkrete Art von Badartikel und sind im Alltag klar unterscheidbar."
   },
   "groups": [
     {
       "id": "group_a",
-      "label": "Autoslogans",
+      "label": "Haarpflege",
       "items": [
-        "Freude am Fahren",
-        "Das Auto",
-        "Vorsprung d. Technik",
-        "Aus Liebe zum Auto"
+        "Shampoo",
+        "Spülung",
+        "Haarkur",
+        "Haaröl"
       ]
     },
     {
       "id": "group_b",
-      "label": "Lebensmittelslogans",
+      "label": "Zahnpflege",
       "items": [
-        "Haribo macht froh",
-        "Wahre Liebe",
-        "Nicht immer aber oft",
-        "Quadratisch.Praktisch"
+        "Zahnbürste",
+        "Zahnpasta",
+        "Zahnseide",
+        "Mundspülung"
       ]
     },
     {
       "id": "group_c",
-      "label": "Elektronikslogans",
+      "label": "Duschprodukte",
       "items": [
-        "Connecting People",
-        "Ideas for life",
-        "Hello Moto",
-        "Life's Good"
+        "Duschgel",
+        "Seife",
+        "Duschöl",
+        "Duschschaum"
       ]
     },
     {
       "id": "group_d",
-      "label": "Kleidungsslogans",
+      "label": "Badtextilien",
       "items": [
-        "Just do it",
-        "Impossible is nothing",
-        "Never Stop Exploring",
-        "Forever Faster"
+        "Handtuch",
+        "Waschlappen",
+        "Bademantel",
+        "Badematte"
       ]
     }
   ]

@@ -1,55 +1,35 @@
 {
   "id": "de-0471",
-  "title": "Ökologische Nischen",
-  "difficulty": "medium",
+  "title": "Frühstückstisch",
+  "difficulty": "easy",
   "meta": {
-    "theme": "natur",
-    "batch": "de-batch-05",
-    "difficultyScore": 23,
-    "editorialRank": 49,
-    "gptDifficulty": 66,
-    "gptRationale": "Ökologische Begriffe, Nischenarten und Beziehungsformen verlangen Fachwissen, und nicht alle Beispiele tragen ihre Kategorie offen im Namen."
+    "theme": "Frühstück",
+    "batch": "cq6-de-replacements-wave7",
+    "difficultyScore": 9,
+    "editorialRank": 1,
+    "gptDifficulty": 13,
+    "gptRationale": "Die Gegenstände und Lebensmittel eines alltäglichen Frühstücks bilden vier klar getrennte, leicht erkennbare Gruppen."
   },
   "groups": [
     {
       "id": "group_a",
-      "label": "Nahrungsebenen",
-      "items": [
-        "Produzenten",
-        "Herbivore",
-        "Karnivore",
-        "Destruenten"
-      ]
+      "label": "Besteck",
+      "items": ["Gabel", "Messer", "Löffel", "Teelöffel"]
     },
     {
       "id": "group_b",
-      "label": "Beispiele für Nischen-Spezialisten",
-      "items": [
-        "Kletterspecht",
-        "Bartgeier",
-        "Blattschneider-Ameise",
-        "Koala"
-      ]
+      "label": "Geschirr",
+      "items": ["Teller", "Tasse", "Schüssel", "Becher"]
     },
     {
       "id": "group_c",
-      "label": "Artenbeziehungen",
-      "items": [
-        "Mutualismus",
-        "Kommensalismus",
-        "Parasitismus",
-        "Konkurrenz"
-      ]
+      "label": "Aufstriche",
+      "items": ["Butter", "Marmelade", "Honig", "Frischkäse"]
     },
     {
       "id": "group_d",
-      "label": "Ökologie-Begriffe",
-      "items": [
-        "Habitat",
-        "Nische",
-        "Biogeozönose",
-        "Sukzession"
-      ]
+      "label": "Backwaren",
+      "items": ["Toast", "Brötchen", "Brezel", "Croissant"]
     }
   ]
 }

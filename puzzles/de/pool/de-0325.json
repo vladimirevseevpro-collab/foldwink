@@ -1,55 +1,38 @@
 {
   "id": "de-0325",
-  "title": "Kirchliche Begriffe",
-  "difficulty": "medium",
+  "title": "Auf dem Wochenmarkt",
+  "difficulty": "easy",
   "meta": {
-    "theme": "Kirche Begriffe",
-    "batch": "de-batch-04",
-    "difficultyScore": 34,
-    "editorialRank": 50,
-    "gptDifficulty": 61,
-    "gptRationale": "Konfessionelle Spezialbegriffe verlangen präzises Religionswissen, besonders bei orthodoxen und evangelischen Unterscheidungen."
+    "theme": "Auf dem Wochenmarkt",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 1,
+    "tags": ["markt", "alltag", "lebensmittel"],
+    "batch": "cq6-de-replacements",
+    "status": "needs-review",
+    "difficultyScore": 12
   },
   "groups": [
     {
-      "id": "group_a",
-      "label": "Katholische Begriffe",
-      "items": [
-        "Papst",
-        "Beichte",
-        "Ablass",
-        "Purgatorium"
-      ]
+      "id": "market_vegetables",
+      "label": "Gemüse",
+      "items": ["Karotte", "Gurke", "Zucchini", "Kartoffel"]
     },
     {
-      "id": "group_b",
-      "label": "Evangelische Begriffe",
-      "items": [
-        "Synode",
-        "Presbyterium",
-        "Sola Scriptura",
-        "Landeskirche"
-      ]
+      "id": "market_fruit",
+      "label": "Obst",
+      "items": ["Banane", "Orange", "Traube", "Erdbeere"]
     },
     {
-      "id": "group_c",
-      "label": "Orthodoxe Begriffe",
-      "items": [
-        "Patriarch",
-        "Ikonostase",
-        "Hesychasmus",
-        "Tomos"
-      ]
+      "id": "market_herbs",
+      "label": "Küchenkräuter",
+      "items": ["Petersilie", "Schnittlauch", "Basilikum", "Dill"]
     },
     {
-      "id": "group_d",
-      "label": "Allgemein christlich",
-      "items": [
-        "Taufe",
-        "Eucharistie",
-        "Gebet",
-        "Evangelium"
-      ]
+      "id": "market_flowers",
+      "label": "Blumen",
+      "items": ["Geranie", "Begonie", "Nelke", "Sonnenblume"]
     }
   ]
 }

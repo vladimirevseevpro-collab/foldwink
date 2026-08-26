@@ -1,0 +1,55 @@
+{
+  "id": "de-0352",
+  "title": "Deutsche Filmgeschichte",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Deutscher Film",
+    "batch": "de-batch-04",
+    "difficultyScore": 46,
+    "editorialRank": 62,
+    "gptDifficulty": 72,
+    "gptRationale": "Deutsche Filmgeschichte verlangt konkretes Werk- und Epochenwissen und enthält mehrere Titel, die nur cinephil gut verankert kennen."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Stummfilme Meisterwerke",
+      "items": [
+        "Nosferatu",
+        "Metropolis",
+        "Der Golem",
+        "Der letzte Mann"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Expressionistisch",
+      "items": [
+        "Caligari",
+        "Schatten",
+        "Wachsfigurenkab.",
+        "Der müde Tod"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Nachkriegsfilm",
+      "items": [
+        "Die Mörder",
+        "Rosen für Pros.",
+        "Unter den Brücken",
+        "Irgendwo Berlin"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Neues Deutsches Kino",
+      "items": [
+        "Angst essen Seele",
+        "Die Ehe der Maria",
+        "Aguirre",
+        "Nosferatu 1979"
+      ]
+    }
+  ]
+}

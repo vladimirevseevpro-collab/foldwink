@@ -1,0 +1,67 @@
+{
+  "id": "puzzle-0255",
+  "title": "Hardware Store",
+  "difficulty": "medium",
+  "editorialSummary": "Four practical hardware-store clusters share a workbench context while resolving by a precise job: fastening, measuring, protection, and painting.",
+  "meta": {
+    "theme": "everyday",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "batch": "cq6-en-replacements-wave5",
+    "status": "draft",
+    "difficultyScore": 12,
+    "tags": [
+      "home",
+      "everyday",
+      "medium"
+    ]
+  },
+  "groups": [
+    {
+      "id": "electrical",
+      "label": "Electrical Supplies",
+      "items": [
+        "Light Bulb",
+        "Extension Cord",
+        "Plug",
+        "Switch"
+      ],
+      "revealHint": "POWER"
+    },
+    {
+      "id": "adhesives",
+      "label": "Adhesives",
+      "items": [
+        "Glue",
+        "Tape",
+        "Epoxy",
+        "Rubber Cement"
+      ],
+      "revealHint": "BOND"
+    },
+    {
+      "id": "safety",
+      "label": "Safety Gear",
+      "items": [
+        "Goggles",
+        "Hard Hat",
+        "Earplugs",
+        "Work Gloves"
+      ],
+      "revealHint": "GUARD"
+    },
+    {
+      "id": "paint",
+      "label": "Painting Supplies",
+      "items": [
+        "Roller",
+        "Brush",
+        "Tray",
+        "Drop Cloth"
+      ],
+      "revealHint": "COAT"
+    }
+  ]
+}

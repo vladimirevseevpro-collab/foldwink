@@ -1,0 +1,55 @@
+{
+  "id": "de-0368",
+  "title": "Gastronomie-Begriffe",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Gastronomie",
+    "batch": "de-batch-04",
+    "difficultyScore": 45,
+    "editorialRank": 58,
+    "gptDifficulty": 67,
+    "gptRationale": "Viele französische Fachbegriffe wirken ähnlich elitär und erzeugen starke Verwechslungsgefahr zwischen Technik, Service und Brigade."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Schneidetechniken",
+      "items": [
+        "Taillieren",
+        "Brunoise",
+        "Julienne",
+        "Chiffonade"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Service-Begriffe",
+      "items": [
+        "À la carte",
+        "Amuse-Bouche",
+        "Sommelier",
+        "Degustation"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Küchenbrigade-Titel",
+      "items": [
+        "Chef de cuisine",
+        "Sous-chef",
+        "Saucier",
+        "Garde-manger"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Garmethoden",
+      "items": [
+        "Sautieren",
+        "Flambieren",
+        "Blanchieren",
+        "Pochieren"
+      ]
+    }
+  ]
+}

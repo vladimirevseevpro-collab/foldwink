@@ -1,0 +1,55 @@
+{
+  "id": "de-0361",
+  "title": "Kunstwerke nach Technik",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Kunsttechniken",
+    "batch": "de-batch-04",
+    "difficultyScore": 27,
+    "editorialRank": 50,
+    "gptDifficulty": 65,
+    "gptRationale": "Techniken von Kunstwerken zu trennen ist merklich trickreicher, weil manche Werke oder Künstlersignale nur mit konkreter Kunstkenntnis sitzen."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Öl auf Leinwand",
+      "items": [
+        "Mona Lisa",
+        "Sternennacht",
+        "Guernica",
+        "Die Nachtwache"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Aquarell-Werke",
+      "items": [
+        "Turner Seestücke",
+        "Dürer Feldhasen",
+        "Paul Klee",
+        "Cézanne Skizz."
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Fresco-Werke",
+      "items": [
+        "Sixtinische Kapelle",
+        "Letztes Abendmahl",
+        "Schule Athen",
+        "Arena-Kapelle"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Skulpturen",
+      "items": [
+        "Pietà",
+        "David",
+        "Venus von Milo",
+        "Denker Rodin"
+      ]
+    }
+  ]
+}

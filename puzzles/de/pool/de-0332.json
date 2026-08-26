@@ -1,55 +1,38 @@
 {
   "id": "de-0332",
-  "title": "Chemische Reaktionstypen",
-  "difficulty": "medium",
+  "title": "Im Klassenzimmer",
+  "difficulty": "easy",
   "meta": {
-    "theme": "Chemie Reaktionen",
-    "batch": "de-batch-04",
-    "difficultyScore": 52,
-    "editorialRank": 54,
-    "gptDifficulty": 55,
-    "gptRationale": "Die Chemie-Gruppen sind fachlich logisch, aber viele Begriffe sind eher schulisch-akademisch als alltagssprachlich verankert."
+    "theme": "Im Klassenzimmer",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 1,
+    "tags": ["schule", "alltag", "lernen"],
+    "batch": "cq6-de-replacements",
+    "status": "needs-review",
+    "difficultyScore": 12
   },
   "groups": [
     {
-      "id": "group_a",
-      "label": "Verbrennungsbegriffe",
-      "items": [
-        "Zündtemperatur",
-        "Exotherm",
-        "Flammpunkt",
-        "Rauchgase"
-      ]
+      "id": "writing_tools",
+      "label": "Schreibgeräte",
+      "items": ["Bleistift", "Füller", "Kreide", "Filzstift"]
     },
     {
-      "id": "group_b",
-      "label": "Säure-Base-Reaktion",
-      "items": [
-        "Neutralisation",
-        "Protonentransfer",
-        "Puffer",
-        "Titration"
-      ]
+      "id": "learning_materials",
+      "label": "Lernmaterialien",
+      "items": ["Heft", "Schulbuch", "Atlas", "Wörterbuch"]
     },
     {
-      "id": "group_c",
-      "label": "Redoxreaktion",
-      "items": [
-        "Reduktion",
-        "Oxidationsmittel",
-        "Galvanisch",
-        "Elektrolyse"
-      ]
+      "id": "classroom_furniture",
+      "label": "Einrichtung",
+      "items": ["Tisch", "Stuhl", "Schrank", "Garderobe"]
     },
     {
-      "id": "group_d",
-      "label": "Fällungsreaktion",
-      "items": [
-        "Präzipitat",
-        "Löslichkeit",
-        "Ionenverbindung",
-        "Kristallisation"
-      ]
+      "id": "school_subjects",
+      "label": "Unterrichtsfächer",
+      "items": ["Deutsch", "Mathematik", "Kunst", "Sport"]
     }
   ]
 }

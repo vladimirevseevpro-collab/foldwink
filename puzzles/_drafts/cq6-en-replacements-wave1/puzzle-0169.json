@@ -1,0 +1,65 @@
+{
+  "id": "puzzle-0169",
+  "title": "Birthday Table",
+  "difficulty": "easy",
+  "editorialSummary": "Four familiar parts of a birthday celebration. The shared occasion creates a pleasant surface connection, while each set has concrete, exact membership and no specialist vocabulary.",
+  "meta": {
+    "theme": "birthday celebration",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "tags": [
+      "celebration",
+      "birthday",
+      "everyday",
+      "classification",
+      "easy"
+    ],
+    "batch": "cq6-en-replacements-wave1",
+    "status": "draft",
+    "difficultyScore": 5
+  },
+  "groups": [
+    {
+      "id": "gift-presentation",
+      "label": "Gift Presentation",
+      "items": [
+        "Bow",
+        "Gift Bag",
+        "Ribbon",
+        "Tissue Paper"
+      ]
+    },
+    {
+      "id": "party-decorations",
+      "label": "Party Decorations",
+      "items": [
+        "Balloon",
+        "Banner",
+        "Confetti",
+        "Streamer"
+      ]
+    },
+    {
+      "id": "cake-decorations",
+      "label": "Cake Decorations",
+      "items": [
+        "Cake Topper",
+        "Candles",
+        "Icing",
+        "Sprinkles"
+      ]
+    },
+    {
+      "id": "table-setting",
+      "label": "Table Setting",
+      "items": [
+        "Cup",
+        "Fork",
+        "Napkin",
+        "Plate"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "id": "puzzle-0126",
+  "title": "Heavy metal",
+  "difficulty": "medium",
+  "editorialSummary": "Four groupings around metals.",
+  "meta": {
+    "theme": "science",
+    "categoryType": "thematic",
+    "batch": "batch-01",
+    "status": "approved",
+    "difficultyScore": 30,
+    "editorialRank": 46,
+    "gptDifficulty": 56,
+    "gptRationale": "Metal-based groupings are gettable, but overlap between chemistry and everyday material terms adds some misleading surface similarity."
+  },
+  "groups": [
+    {
+      "id": "precious",
+      "label": "Platinum-group metals",
+      "items": [
+        "Platinum",
+        "Palladium",
+        "Rhodium",
+        "Iridium"
+      ]
+    },
+    {
+      "id": "industrial",
+      "label": "Base/utility metals",
+      "items": [
+        "Steel",
+        "Aluminium",
+        "Copper",
+        "Zinc"
+      ]
+    },
+    {
+      "id": "music",
+      "label": "Metal subgenres",
+      "items": [
+        "Thrash",
+        "Doom",
+        "Black",
+        "Prog"
+      ]
+    },
+    {
+      "id": "alkali",
+      "label": "Alkali metals",
+      "items": [
+        "Lithium",
+        "Sodium",
+        "Potassium",
+        "Rubidium"
+      ]
+    }
+  ]
+}

@@ -1,54 +1,54 @@
 {
   "id": "de-9049",
-  "title": "Sportlicher Ehrgeiz",
-  "difficulty": "medium",
+  "title": "In der Küche",
+  "difficulty": "easy",
   "meta": {
-    "theme": "Charaktertypen im Sport",
-    "batch": "de-batch-12",
-    "difficultyScore": 35,
-    "editorialRank": 27,
-    "gptDifficulty": 21,
-    "gptRationale": "The social attitudes in sport are intuitive and the examples are plain behavioral cues rather than tricky wordplay."
+    "theme": "Küchenausstattung",
+    "batch": "cq6-de-replacements-wave7",
+    "difficultyScore": 10,
+    "editorialRank": 1,
+    "gptDifficulty": 14,
+    "gptRationale": "Geläufige Küchensachen sind nach klaren, funktionalen Gerätegruppen geordnet und ohne Nebenpfade angelegt."
   },
   "groups": [
     {
       "id": "group_a",
-      "label": "Fairness",
+      "label": "Kochgeschirr",
       "items": [
-        "Gegner aufhelfen",
-        "Vorteil ablehnen",
-        "Foul zugeben",
-        "Handgeben nachher"
+        "Topf",
+        "Pfanne",
+        "Auflaufform",
+        "Backblech"
       ]
     },
     {
       "id": "group_b",
-      "label": "Ehrgeiz",
+      "label": "Küchengeräte",
       "items": [
-        "Training bei 38 Grad",
-        "Schmerz ignorieren",
-        "Zweiter = Verlierer",
-        "Diät streng gehalten"
+        "Mixer",
+        "Toaster",
+        "Wasserkocher",
+        "Kaffeemaschine"
       ]
     },
     {
       "id": "group_c",
-      "label": "Angeben",
+      "label": "Schneidewerkzeuge",
       "items": [
-        "Aufwärmen mit Show",
-        "Jubel ohne Tor",
-        "Shirt heben",
-        "Blick auf Tribüne"
+        "Kochmesser",
+        "Küchenschere",
+        "Sparschäler",
+        "Pizzaschneider"
       ]
     },
     {
       "id": "group_d",
-      "label": "Teamgeist",
+      "label": "Messwerkzeuge",
       "items": [
-        "Mitspieler freistellen",
-        "Pass statt Alleingang",
-        "Aufbauen nach Fehler",
-        "Kreis vor Spiel bilden"
+        "Messbecher",
+        "Küchenwaage",
+        "Messlöffel",
+        "Küchenthermometer"
       ]
     }
   ]

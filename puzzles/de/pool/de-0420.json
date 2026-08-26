@@ -1,55 +1,31 @@
 {
   "id": "de-0420",
-  "title": "Architekten und Bauwerke",
-  "difficulty": "medium",
+  "title": "Gemüsearten",
+  "difficulty": "easy",
   "meta": {
-    "theme": "architektur",
-    "batch": "de-batch-05",
-    "difficultyScore": 39,
-    "editorialRank": 63,
-    "gptDifficulty": 79,
-    "gptRationale": "Architekten und Bauwerke erfordern ziemlich spezialisiertes Kulturwissen, und internationale Projekte erschweren die sichere Zuordnung zusätzlich."
+    "theme": "Gemüse",
+    "batch": "cq6-de-replacements-wave4"
   },
   "groups": [
     {
       "id": "group_a",
-      "label": "Schinkel-Bauten",
-      "items": [
-        "Altes Museum",
-        "Neue Wache",
-        "Schauspielhaus",
-        "Schloss Glienicke"
-      ]
+      "label": "Kohlsorten",
+      "items": ["Brokkoli", "Blumenkohl", "Rosenkohl", "Wirsing"]
     },
     {
       "id": "group_b",
-      "label": "Gropius-Bauten",
-      "items": [
-        "Bauhaus Dessau",
-        "Fagus-Werk",
-        "Harvard Gebäude",
-        "Gropius House"
-      ]
+      "label": "Wurzelgemüse",
+      "items": ["Karotte", "Pastinake", "Rote Bete", "Rettich"]
     },
     {
       "id": "group_c",
-      "label": "Mies van der Rohe",
-      "items": [
-        "Neue Nationalgalerie",
-        "Seagram Building",
-        "Barcelona Pavillon",
-        "Farnsworth House"
-      ]
+      "label": "Hülsenfrüchte",
+      "items": ["Erbsen", "Bohnen", "Linsen", "Kichererbsen"]
     },
     {
       "id": "group_d",
-      "label": "Renzo Piano",
-      "items": [
-        "Pompidou Centre",
-        "Potsdamer Platz",
-        "Whitney Museum",
-        "The Shard"
-      ]
+      "label": "Salatsorten",
+      "items": ["Kopfsalat", "Eisbergsalat", "Feldsalat", "Rucola"]
     }
   ]
 }

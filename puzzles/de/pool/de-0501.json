@@ -1,0 +1,55 @@
+{
+    "id":  "de-0501",
+    "title":  "In der Bäckerei",
+    "difficulty":  "easy",
+    "meta":  {
+                 "theme":  "Bäckerei",
+                 "batch":  "de-backfill-r3",
+                 "difficultyScore":  20,
+                 "editorialRank":  20,
+                 "gptDifficulty":  18,
+                 "gptRationale":  "All groups are familiar bakery concepts with concrete, non-overlapping labels. The pastry names are now unambiguous across German regions."
+             },
+    "groups":  [
+                   {
+                       "id":  "bread",
+                       "label":  "Brotsorten",
+                       "items":  [
+                                     "Baguette",
+                                     "Vollkornbrot",
+                                     "Roggenbrot",
+                                     "Toastbrot"
+                                 ]
+                   },
+                   {
+                       "id":  "sweet",
+                       "label":  "Süßes Gebäck",
+                       "items":  [
+                                     "Croissant",
+                                     "Muffin",
+                                     "Zimtschnecke",
+                                     "Windbeutel"
+                                 ]
+                   },
+                   {
+                       "id":  "ingredients",
+                       "label":  "Backzutaten",
+                       "items":  [
+                                     "Mehl",
+                                     "Hefe",
+                                     "Butter",
+                                     "Salz"
+                                 ]
+                   },
+                   {
+                       "id":  "shop",
+                       "label":  "Im Verkauf",
+                       "items":  [
+                                     "Theke",
+                                     "Auslage",
+                                     "Kasse",
+                                     "Tüte"
+                                 ]
+                   }
+               ]
+}

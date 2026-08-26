@@ -1,54 +1,50 @@
 {
   "id": "de-0413",
-  "title": "Historische Personen nach Epoche",
-  "difficulty": "medium",
+  "title": "Obstsorten",
+  "difficulty": "easy",
   "meta": {
-    "theme": "geschichte",
-    "batch": "de-batch-05",
-    "difficultyScore": 55,
-    "editorialRank": 56,
-    "gptDifficulty": 56,
-    "gptRationale": "Historische Personen sind bekannt, aber Epochenabgrenzungen wie Aufklärung versus Romantik-Ära erfordern kulturelle Einordnung statt bloßes Namenserkennen."
+    "theme": "Obst",
+    "batch": "cq6-de-replacements-wave4"
   },
   "groups": [
     {
       "id": "group_a",
-      "label": "Mittelalter",
+      "label": "Zitrusfrüchte",
       "items": [
-        "Karl der Große",
-        "Hildegard v. Bingen",
-        "Friedrich Barbarossa",
-        "Walther Vogelweide"
+        "Orange",
+        "Zitrone",
+        "Mandarine",
+        "Grapefruit"
       ]
     },
     {
       "id": "group_b",
-      "label": "Reformation",
+      "label": "Melonen",
       "items": [
-        "Martin Luther",
-        "Thomas Müntzer",
-        "Melanchthon",
-        "Zwingli"
+        "Wassermelone",
+        "Honigmelone",
+        "Cantaloupe",
+        "Galiamelone"
       ]
     },
     {
       "id": "group_c",
-      "label": "18. Jahrhundert",
+      "label": "Steinobst",
       "items": [
-        "Kant",
-        "Lessing",
-        "Friedrich der Große",
-        "Leibniz"
+        "Kirsche",
+        "Pfirsich",
+        "Aprikose",
+        "Pflaume"
       ]
     },
     {
       "id": "group_d",
-      "label": "19. Jahrhundert",
+      "label": "Beeren",
       "items": [
-        "Beethoven",
-        "C. D. Friedrich",
-        "Kleist",
-        "Schopenhauer"
+        "Erdbeere",
+        "Himbeere",
+        "Blaubeere",
+        "Brombeere"
       ]
     }
   ]

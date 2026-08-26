@@ -1,56 +1,58 @@
 {
   "id": "puzzle-0003",
-  "title": "Moving Around",
-  "difficulty": "easy",
-  "tags": [
-    "travel"
-  ],
+  "title": "Folding Pressure",
+  "difficulty": "medium",
   "groups": [
     {
-      "id": "transport",
-      "label": "Transport",
+      "id": "things_that_fold",
+      "label": "Things that fold",
+      "revealHint": "FOLD",
       "items": [
-        "Train",
-        "Bus",
-        "Plane",
-        "Ferry"
+        "Origami",
+        "Lawn Chair",
+        "Poker Hand",
+        "Laundry"
       ]
     },
     {
-      "id": "directions",
-      "label": "Directions",
+      "id": "board_games",
+      "label": "Classic tabletop board games",
+      "revealHint": "GAMES",
       "items": [
-        "North",
-        "South",
-        "East",
-        "West"
+        "Chess",
+        "Checkers",
+        "Monopoly",
+        "Scrabble"
       ]
     },
     {
-      "id": "luggage",
-      "label": "Travel Items",
+      "id": "poker_terms",
+      "label": "Poker actions",
+      "revealHint": "POKER",
       "items": [
-        "Suitcase",
-        "Backpack",
-        "Passport",
-        "Ticket"
+        "Call",
+        "Raise",
+        "Check",
+        "Bluff"
       ]
     },
     {
-      "id": "weather",
-      "label": "Weather",
+      "id": "paper_crafts",
+      "label": "Paper craft techniques",
+      "revealHint": "PAPER",
       "items": [
-        "Rain",
-        "Wind",
-        "Fog",
-        "Snow"
+        "Quilling",
+        "Collage",
+        "Papier-mache",
+        "Decoupage"
       ]
     }
   ],
   "meta": {
-    "difficultyScore": 21,
-    "editorialRank": 17,
-    "gptDifficulty": 14,
-    "gptRationale": "The travel theme creates some surface overlap, yet the category labels remain concrete and the answers are widely known."
+    "theme": "craft_and_play",
+    "categoryType": "wordplay_attribute",
+    "difficultyScore": 24,
+    "editorialRank": 30,
+    "gptRationale": "Check/Fold/Origami/Lawn Chair create seamless thematic misdirection between casino, craft, and backyard."
   }
 }

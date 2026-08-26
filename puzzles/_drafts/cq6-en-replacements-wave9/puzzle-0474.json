@@ -1,0 +1,43 @@
+{
+  "id": "puzzle-0474",
+  "title": "At the Restaurant",
+  "difficulty": "medium",
+  "editorialSummary": "Four ordinary restaurant clusters separate table service, kitchen cookware, pantry ingredients, and staff roles. The common setting supplies gentle false trails while categories remain concrete.",
+  "meta": {
+    "theme": "everyday services",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "batch": "cq6-en-replacements-wave9",
+    "status": "draft",
+    "difficultyScore": 20,
+    "tags": ["restaurant", "services", "medium"]
+  },
+  "groups": [
+    {
+      "id": "table",
+      "label": "Table Service Items",
+      "items": ["Menu", "Napkin", "Water Glass", "Cutlery"],
+      "revealHint": "TABLE"
+    },
+    {
+      "id": "cookware",
+      "label": "Kitchen Cookware",
+      "items": ["Pot", "Pan", "Whisk", "Cutting Board"],
+      "revealHint": "COOK"
+    },
+    {
+      "id": "pantry",
+      "label": "Pantry Ingredients",
+      "items": ["Salt", "Oil", "Vinegar", "Flour"],
+      "revealHint": "SEASON"
+    },
+    {
+      "id": "staff",
+      "label": "Restaurant Staff",
+      "items": ["Chef", "Waiter", "Host", "Dishwasher"],
+      "revealHint": "STAFF"
+    }
+  ]
+}

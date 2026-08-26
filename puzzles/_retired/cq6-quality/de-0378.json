@@ -1,0 +1,55 @@
+{
+  "id": "de-0378",
+  "title": "Biotechnologie",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Biotechnologie",
+    "batch": "de-batch-04",
+    "difficultyScore": 23,
+    "editorialRank": 46,
+    "gptDifficulty": 61,
+    "gptRationale": "Biotechnologie mischt Fachwörter und Anwendungen aus verschiedenen Teilgebieten, was ohne naturwissenschaftlichen Hintergrund spürbar anspruchsvoll wird."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Gentechnik-Begriffe",
+      "items": [
+        "CRISPR",
+        "GMO",
+        "Genfarm",
+        "Transgen"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Stammzellen-Forschung",
+      "items": [
+        "Pluripotent",
+        "Embryonal",
+        "Induzierte iPSC",
+        "Mesenchymal"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Enzym-Anwendungen",
+      "items": [
+        "Waschmittel",
+        "Käseherstellung",
+        "Biokraftstoff",
+        "Diagnostik"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Fermentation-Anwendungen",
+      "items": [
+        "Bierbrauerei",
+        "Joghurt",
+        "Antibiotika",
+        "Biogas"
+      ]
+    }
+  ]
+}

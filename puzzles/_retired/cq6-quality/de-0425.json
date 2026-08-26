@@ -1,0 +1,55 @@
+{
+  "id": "de-0425",
+  "title": "Steuerarten in Deutschland",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "steuern",
+    "batch": "de-batch-05",
+    "difficultyScore": 54,
+    "editorialRank": 55,
+    "gptDifficulty": 55,
+    "gptRationale": "Deutsche Steuerarten sind systematisch, aber die Fachbegriffe sind trocken und für viele außerhalb von Schule oder Beruf wenig präsent."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Begriffe zur Einkommensteuer",
+      "items": [
+        "Grundfreibetrag",
+        "Steuertarif",
+        "Lohnsteuer",
+        "Kapitalertragsteuer"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Begriffe zur Umsatzsteuer",
+      "items": [
+        "Regelsteuersatz",
+        "Ermäßigter Satz",
+        "Vorsteuer",
+        "USt-Voranmeldung"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Begriffe zur Gewerbesteuer",
+      "items": [
+        "Hebesatz",
+        "Gewerbeertrag",
+        "Hinzurechnungen",
+        "Kürzungen"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Begriffe zur Erbschaft- und Schenkungsteuer",
+      "items": [
+        "Freibetrag",
+        "Steuerklasse",
+        "Schenkungsteuer",
+        "Bewertung"
+      ]
+    }
+  ]
+}

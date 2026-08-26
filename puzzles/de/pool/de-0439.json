@@ -19,7 +19,8 @@
         "Ostern",
         "Pfingsten",
         "Erntedankfest"
-      ]
+      ],
+      "revealHint": "Christlich"
     },
     {
       "id": "group_b",
@@ -29,7 +30,8 @@
         "Rosch ha-Schana",
         "Chanukka",
         "Pessach"
-      ]
+      ],
+      "revealHint": "Jüdisch"
     },
     {
       "id": "group_c",
@@ -39,7 +41,8 @@
         "Eid al-Adha",
         "Islamisches Neujahr",
         "Mawlid an-Nabi"
-      ]
+      ],
+      "revealHint": "Islamisch"
     },
     {
       "id": "group_d",
@@ -49,7 +52,8 @@
         "Kathina",
         "Asalha Puja",
         "Losar"
-      ]
+      ],
+      "revealHint": "Buddhistisch"
     }
   ]
 }

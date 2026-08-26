@@ -1,0 +1,55 @@
+{
+  "id": "de-0311",
+  "title": "Nobelpreisträger Deutschland",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Nobelpreis",
+    "batch": "de-batch-04",
+    "difficultyScore": 27,
+    "editorialRank": 48,
+    "gptDifficulty": 62,
+    "gptRationale": "Nobelpreisträger sind spezielleres Faktenwissen und gerade die Friedensnobel-Gruppe bietet deutliche Unsicherheit und Verwechslungsgefahr."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Nobelpreis Physik",
+      "items": [
+        "Röntgen",
+        "Planck",
+        "Heisenberg",
+        "Born"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Nobelpreis Chemie",
+      "items": [
+        "Haber",
+        "Fischer",
+        "Nernst",
+        "Staudinger"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Nobelpreis Medizin",
+      "items": [
+        "Koch",
+        "Ehrlich",
+        "Domagk",
+        "Spemann"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Nobelpreis Frieden",
+      "items": [
+        "Brandt",
+        "Schweitzer",
+        "Ossietzky",
+        "Stresemann"
+      ]
+    }
+  ]
+}

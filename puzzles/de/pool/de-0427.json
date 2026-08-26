@@ -1,55 +1,31 @@
 {
   "id": "de-0427",
-  "title": "Grundgesetz-Artikel Themen",
-  "difficulty": "medium",
+  "title": "Am Esstisch",
+  "difficulty": "easy",
   "meta": {
-    "theme": "recht",
-    "batch": "de-batch-05",
-    "difficultyScore": 72,
-    "editorialRank": 64,
-    "gptDifficulty": 58,
-    "gptRationale": "Die Artikelblöcke des Grundgesetzes sind nur mit genauer verfassungsrechtlicher Verortung sauber zu lösen und nicht bloß über Alltagsverständnis."
+    "theme": "Esstisch",
+    "batch": "cq6-de-replacements-wave4"
   },
   "groups": [
     {
       "id": "group_a",
-      "label": "Art. 1–5 GG",
-      "items": [
-        "Menschenwürde",
-        "Handlungsfreiheit",
-        "Gleichheit",
-        "Meinungsfreiheit"
-      ]
+      "label": "Besteckteile",
+      "items": ["Gabel", "Messer", "Esslöffel", "Teelöffel"]
     },
     {
       "id": "group_b",
-      "label": "Art. 6–10 GG",
-      "items": [
-        "Ehe und Familie",
-        "Schulwesen",
-        "Versammlungsfreiheit",
-        "Briefgeheimnis"
-      ]
+      "label": "Trinkgefäße",
+      "items": ["Trinkglas", "Tasse", "Becher", "Weinglas"]
     },
     {
       "id": "group_c",
-      "label": "Art. 11–15 GG",
-      "items": [
-        "Freizügigkeit",
-        "Berufsfreiheit",
-        "Eigentum",
-        "Enteignung"
-      ]
+      "label": "Tischwäsche",
+      "items": ["Tischdecke", "Tischläufer", "Platzset", "Stoffserviette"]
     },
     {
       "id": "group_d",
-      "label": "Art. 20 GG",
-      "items": [
-        "Bundesstaat",
-        "Sozialstaat",
-        "Demokratieprinzip",
-        "Widerstandsrecht"
-      ]
+      "label": "Würzgefäße",
+      "items": ["Salzstreuer", "Pfeffermühle", "Ölflasche", "Essigflasche"]
     }
   ]
 }

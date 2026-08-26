@@ -1,0 +1,67 @@
+{
+  "id": "puzzle-0199",
+  "title": "Kitchen Clues",
+  "difficulty": "medium",
+  "editorialSummary": "Four familiar kitchen clusters share one room but resolve by a precise job: baking, raw crunch, pouring and stirring.",
+  "meta": {
+    "theme": "everyday",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "batch": "cq6-en-replacements-wave4",
+    "status": "draft",
+    "difficultyScore": 11,
+    "tags": [
+      "kitchen",
+      "everyday",
+      "medium"
+    ]
+  },
+  "groups": [
+    {
+      "id": "baking",
+      "label": "Baking Ingredients",
+      "items": [
+        "Flour",
+        "Sugar",
+        "Baking Soda",
+        "Vanilla Extract"
+      ],
+      "revealHint": "MIX"
+    },
+    {
+      "id": "roots",
+      "label": "Root Vegetables",
+      "items": [
+        "Carrot",
+        "Radish",
+        "Beet",
+        "Turnip"
+      ],
+      "revealHint": "BURY"
+    },
+    {
+      "id": "condiments",
+      "label": "Table Condiments",
+      "items": [
+        "Ketchup",
+        "Mustard",
+        "Relish",
+        "Hot Sauce"
+      ],
+      "revealHint": "DAB"
+    },
+    {
+      "id": "herbs",
+      "label": "Fresh Herbs",
+      "items": [
+        "Basil",
+        "Parsley",
+        "Cilantro",
+        "Dill"
+      ],
+      "revealHint": "STEM"
+    }
+  ]
+}

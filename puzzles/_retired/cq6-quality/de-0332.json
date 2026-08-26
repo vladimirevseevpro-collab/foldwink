@@ -1,0 +1,55 @@
+{
+  "id": "de-0332",
+  "title": "Chemische Reaktionstypen",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Chemie Reaktionen",
+    "batch": "de-batch-04",
+    "difficultyScore": 52,
+    "editorialRank": 54,
+    "gptDifficulty": 55,
+    "gptRationale": "Die Chemie-Gruppen sind fachlich logisch, aber viele Begriffe sind eher schulisch-akademisch als alltagssprachlich verankert."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Verbrennungsbegriffe",
+      "items": [
+        "Zündtemperatur",
+        "Exotherm",
+        "Flammpunkt",
+        "Rauchgase"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Säure-Base-Reaktion",
+      "items": [
+        "Neutralisation",
+        "Protonentransfer",
+        "Puffer",
+        "Titration"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Redoxreaktion",
+      "items": [
+        "Reduktion",
+        "Oxidationsmittel",
+        "Galvanisch",
+        "Elektrolyse"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Fällungsreaktion",
+      "items": [
+        "Präzipitat",
+        "Löslichkeit",
+        "Ionenverbindung",
+        "Kristallisation"
+      ]
+    }
+  ]
+}

@@ -1,58 +1,68 @@
 {
   "id": "puzzle-0126",
-  "title": "Heavy metal",
+  "title": "Styles and Strategy",
   "difficulty": "medium",
-  "editorialSummary": "Four groupings around metals.",
+  "editorialSummary": "Built as a clean medium board with two deliberate false trails: head-related words split into Headwear and Salon cuts, while play-related words split into Classic board games and Chess pieces. Internal critique rejected broader or weaker variants, including synonym-paired hat options and dance-based sets that created cleaner alternate labels.",
   "meta": {
-    "theme": "science",
-    "categoryType": "thematic",
-    "batch": "batch-01",
-    "status": "approved",
-    "difficultyScore": 30,
-    "editorialRank": 46,
-    "gptDifficulty": 56,
-    "gptRationale": "Metal-based groupings are gettable, but overlap between chemistry and everyday material terms adds some misleading surface similarity."
+    "theme": "style and play",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "tags": [
+      "general",
+      "medium",
+      "style",
+      "games"
+    ],
+    "batch": "cq6-en-replacements-wave1",
+    "status": "draft",
+    "difficultyScore": 9
   },
   "groups": [
     {
-      "id": "precious",
-      "label": "Platinum-group metals",
+      "id": "headwear",
+      "label": "Headwear",
       "items": [
-        "Platinum",
-        "Palladium",
-        "Rhodium",
-        "Iridium"
-      ]
+        "Beret",
+        "Bonnet",
+        "Fedora",
+        "Turban"
+      ],
+      "revealHint": "Dress code"
     },
     {
-      "id": "industrial",
-      "label": "Base/utility metals",
+      "id": "cuts",
+      "label": "Haircuts",
       "items": [
-        "Steel",
-        "Aluminium",
-        "Copper",
-        "Zinc"
-      ]
+        "Bob",
+        "Mullet",
+        "Pixie",
+        "Shag"
+      ],
+      "revealHint": "New look"
     },
     {
-      "id": "music",
-      "label": "Metal subgenres",
+      "id": "board",
+      "label": "Classic board games",
       "items": [
-        "Thrash",
-        "Doom",
-        "Black",
-        "Prog"
-      ]
+        "Monopoly",
+        "Scrabble",
+        "Clue",
+        "Risk"
+      ],
+      "revealHint": "Boxed staples of family game night"
     },
     {
-      "id": "alkali",
-      "label": "Alkali metals",
+      "id": "chess",
+      "label": "Chess pieces",
       "items": [
-        "Lithium",
-        "Sodium",
-        "Potassium",
-        "Rubidium"
-      ]
+        "Bishop",
+        "Knight",
+        "Pawn",
+        "Rook"
+      ],
+      "revealHint": "Roles in a 64-square battle"
     }
   ]
 }

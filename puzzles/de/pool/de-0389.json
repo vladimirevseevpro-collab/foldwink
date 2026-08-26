@@ -1,54 +1,50 @@
 {
   "id": "de-0389",
-  "title": "Geologie Deutschland",
-  "difficulty": "medium",
+  "title": "Kaffeepause",
+  "difficulty": "easy",
   "meta": {
-    "theme": "Geologie Deutschland",
-    "batch": "de-batch-04",
-    "difficultyScore": 51,
-    "editorialRank": 63,
-    "gptDifficulty": 71,
-    "gptRationale": "Deutsche Geologie ist relativ nischig und mehrere Eigennamen sowie Fachbegriffe verlangen genaue Sachkenntnis statt grober Intuition."
+    "theme": "Kaffeepause",
+    "batch": "cq6-de-replacements-wave3"
   },
   "groups": [
     {
       "id": "group_a",
-      "label": "Geologische Regionen",
+      "label": "Kaffeevarianten",
       "items": [
-        "Mittelgebirge",
-        "Norddeutsches Tief.",
-        "Alpenvorland",
-        "Rheinisches Schild"
+        "Espresso",
+        "Cappuccino",
+        "Latte Macchiato",
+        "Filterkaffee"
       ]
     },
     {
       "id": "group_b",
-      "label": "Gesteinsarten Deutschl.",
+      "label": "Teesorten",
       "items": [
-        "Buntsandstein",
-        "Muschelkalk",
-        "Basalt",
-        "Granit"
+        "Schwarztee",
+        "Grüntee",
+        "Früchtetee",
+        "Pfefferminztee"
       ]
     },
     {
       "id": "group_c",
-      "label": "Vulkane in Deutschland",
+      "label": "Kleingebäck",
       "items": [
-        "Laacher See",
-        "Vogelsberg",
-        "Kaiserstuhl",
-        "Eifelmaare"
+        "Keks",
+        "Muffin",
+        "Zimtschnecke",
+        "Donut"
       ]
     },
     {
       "id": "group_d",
-      "label": "Geologische Ereignisse",
+      "label": "Kaffeegeschirr",
       "items": [
-        "Variskische Faltung",
-        "Alpenhebung",
-        "Elster-Vergletscherung",
-        "Saale-Vergletscherung"
+        "Tasse",
+        "Untertasse",
+        "Löffel",
+        "Milchkännchen"
       ]
     }
   ]

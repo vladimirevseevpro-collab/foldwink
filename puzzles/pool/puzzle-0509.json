@@ -1,0 +1,63 @@
+{
+    "id":  "puzzle-0509",
+    "title":  "Under One Roof",
+    "difficulty":  "easy",
+    "editorialSummary":  "Furniture, fabrics, musical instruments, and familiar farm animals are four highly legible everyday categories. Furniture and fabrics share a home context, but their words name clearly different kinds of things and cannot form an alternative group of four.",
+    "meta":  {
+                 "theme":  "everyday life",
+                 "categoryType":  "classification",
+                 "falseTrail":  "Furniture and fabrics share a home context.",
+                 "fairnessRisk":  0,
+                 "repetitionRisk":  1,
+                 "tags":  [
+                              "home",
+                              "music",
+                              "easy"
+                          ],
+                 "batch":  "r3-backfill-en",
+                 "status":  "needs-review",
+                 "difficultyScore":  13
+             },
+    "groups":  [
+                   {
+                       "id":  "furniture",
+                       "label":  "Furniture",
+                       "items":  [
+                                     "Sofa",
+                                     "Cabinet",
+                                     "Bench",
+                                     "Ottoman"
+                                 ]
+                   },
+                   {
+                       "id":  "fabrics",
+                       "label":  "Fabrics",
+                       "items":  [
+                                     "Cotton",
+                                     "Wool",
+                                     "Silk",
+                                     "Linen"
+                                 ]
+                   },
+                   {
+                       "id":  "musical-instruments",
+                       "label":  "Musical Instruments",
+                       "items":  [
+                                     "Guitar",
+                                     "Piano",
+                                     "Violin",
+                                     "Drum"
+                                 ]
+                   },
+                   {
+                       "id":  "farm-animals",
+                       "label":  "Farm Animals",
+                       "items":  [
+                                     "Cow",
+                                     "Horse",
+                                     "Sheep",
+                                     "Goat"
+                                 ]
+                   }
+               ]
+}

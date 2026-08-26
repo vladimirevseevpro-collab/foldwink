@@ -1,0 +1,55 @@
+{
+  "id": "de-0413",
+  "title": "Historische Personen nach Epoche",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "geschichte",
+    "batch": "de-batch-05",
+    "difficultyScore": 55,
+    "editorialRank": 56,
+    "gptDifficulty": 56,
+    "gptRationale": "Historische Personen sind bekannt, aber Epochenabgrenzungen wie Aufklärung versus Romantik-Ära erfordern kulturelle Einordnung statt bloßes Namenserkennen."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Mittelalter",
+      "items": [
+        "Karl der Große",
+        "Hildegard v. Bingen",
+        "Friedrich Barbarossa",
+        "Walther Vogelweide"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Reformation",
+      "items": [
+        "Martin Luther",
+        "Thomas Müntzer",
+        "Melanchthon",
+        "Zwingli"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "18. Jahrhundert",
+      "items": [
+        "Kant",
+        "Lessing",
+        "Friedrich der Große",
+        "Leibniz"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "19. Jahrhundert",
+      "items": [
+        "Beethoven",
+        "C. D. Friedrich",
+        "Kleist",
+        "Schopenhauer"
+      ]
+    }
+  ]
+}

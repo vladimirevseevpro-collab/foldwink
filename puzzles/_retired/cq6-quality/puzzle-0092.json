@@ -1,0 +1,54 @@
+{
+  "id": "puzzle-0092",
+  "title": "Period piece",
+  "difficulty": "medium",
+  "editorialSummary": "Four literary movements grouped by their most characteristic traits. Anchor reveals each movement's keyword through Foldwink Tabs.",
+  "groups": [
+    {
+      "id": "romantic",
+      "label": "Romantic Period",
+      "items": [
+        "Sublime",
+        "Passion",
+        "Nature",
+        "Solitude"
+      ]
+    },
+    {
+      "id": "realist",
+      "label": "Realist Period",
+      "items": [
+        "Ordinary",
+        "Social",
+        "Everyday",
+        "Portrait"
+      ]
+    },
+    {
+      "id": "modernist",
+      "label": "Modernist Period",
+      "items": [
+        "Fragment",
+        "Stream",
+        "Alienation",
+        "Collage"
+      ]
+    },
+    {
+      "id": "postmodern",
+      "label": "Postmodern Period",
+      "items": [
+        "Irony",
+        "Pastiche",
+        "Metafiction",
+        "Parody"
+      ]
+    }
+  ],
+  "meta": {
+    "difficultyScore": 31,
+    "editorialRank": 62,
+    "gptDifficulty": 82,
+    "gptRationale": "Literary-period abstraction and theory-heavy vocabulary make this notably hard unless the player already knows the historical schools."
+  }
+}

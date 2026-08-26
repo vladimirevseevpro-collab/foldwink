@@ -19,7 +19,8 @@
         "Pad Thai",
         "Sushi",
         "Biryani"
-      ]
+      ],
+      "revealHint": "Asien"
     },
     {
       "id": "group_b",
@@ -29,7 +30,8 @@
         "Moussaka",
         "Risotto",
         "Pizza"
-      ]
+      ],
+      "revealHint": "Südeuropa"
     },
     {
       "id": "group_c",
@@ -39,7 +41,8 @@
         "Ceviche",
         "Empanadas",
         "Feijoada"
-      ]
+      ],
+      "revealHint": "LatAm"
     },
     {
       "id": "group_d",
@@ -49,7 +52,8 @@
         "Shawarma",
         "Tabouleh",
         "Mansaf"
-      ]
+      ],
+      "revealHint": "Arabisch"
     }
   ]
 }

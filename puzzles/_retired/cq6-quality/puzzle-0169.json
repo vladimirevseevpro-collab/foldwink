@@ -1,0 +1,58 @@
+{
+  "id": "puzzle-0169",
+  "title": "Iron will",
+  "difficulty": "medium",
+  "editorialSummary": "Four meanings of iron — metal, clothes, golf, health. Press/Club overlap.",
+  "meta": {
+    "theme": "abstract",
+    "categoryType": "attribute",
+    "batch": "batch-02",
+    "status": "approved",
+    "difficultyScore": 24,
+    "editorialRank": 43,
+    "gptDifficulty": 55,
+    "gptRationale": "The golf and nutrient groups introduce enough domain knowledge and false trails to push this above a comfortable medium solve."
+  },
+  "groups": [
+    {
+      "id": "metal",
+      "label": "Iron metal",
+      "items": [
+        "Wrought",
+        "Cast Iron",
+        "Forge",
+        "Anvil"
+      ]
+    },
+    {
+      "id": "clothes",
+      "label": "Ironing clothes",
+      "items": [
+        "Steam",
+        "Crease",
+        "Pressing",
+        "Collar"
+      ]
+    },
+    {
+      "id": "golf",
+      "label": "Golf irons",
+      "items": [
+        "Wedge",
+        "Pitching",
+        "3-Iron",
+        "7-Iron"
+      ]
+    },
+    {
+      "id": "health",
+      "label": "Iron nutrient",
+      "items": [
+        "Spinach",
+        "Anaemia",
+        "Supplement",
+        "Haemoglobin"
+      ]
+    }
+  ]
+}

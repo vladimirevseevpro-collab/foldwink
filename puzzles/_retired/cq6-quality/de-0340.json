@@ -1,0 +1,55 @@
+{
+  "id": "de-0340",
+  "title": "Datenbanken",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Datenbanken",
+    "batch": "de-batch-04",
+    "difficultyScore": 29,
+    "editorialRank": 31,
+    "gptDifficulty": 33,
+    "gptRationale": "Datenbankbegriffe sind thematisch klar und viele Beispiele sind Standardvokabular, trotz etwas Fachsprache."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Datenbankmodelle",
+      "items": [
+        "Relational",
+        "Dokumenten-DB",
+        "Graph-DB",
+        "Schlüssel-Wert"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Datenbanksprachen",
+      "items": [
+        "SQL",
+        "Cypher",
+        "XQuery",
+        "SPARQL"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Datenbankkonzepte",
+      "items": [
+        "Transaktion",
+        "ACID",
+        "Index",
+        "Normalisierung"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Datenbankprodukte",
+      "items": [
+        "MySQL",
+        "PostgreSQL",
+        "MongoDB",
+        "Redis"
+      ]
+    }
+  ]
+}

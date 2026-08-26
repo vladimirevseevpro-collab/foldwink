@@ -19,7 +19,8 @@
         "kalt",
         "glühend",
         "eisig"
-      ]
+      ],
+      "revealHint": "Temp"
     },
     {
       "id": "group_b",
@@ -29,7 +30,8 @@
         "winzig",
         "gewaltig",
         "zwergenhaft"
-      ]
+      ],
+      "revealHint": "Größe"
     },
     {
       "id": "group_c",
@@ -39,7 +41,8 @@
         "gemächlich",
         "blitzschnell",
         "schleppend"
-      ]
+      ],
+      "revealHint": "Tempo"
     },
     {
       "id": "group_d",
@@ -49,7 +52,8 @@
         "trübsinnig",
         "begeistert",
         "niedergeschlagen"
-      ]
+      ],
+      "revealHint": "Gefühl"
     }
   ]
 }

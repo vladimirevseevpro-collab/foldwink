@@ -7,6 +7,7 @@
     {
       "id": "europe",
       "label": "European Capitals",
+      "revealHint": "Europe",
       "items": [
         "Lisbon",
         "Vienna",
@@ -17,6 +18,7 @@
     {
       "id": "asia",
       "label": "Asian Capitals",
+      "revealHint": "Asia",
       "items": [
         "Seoul",
         "Bangkok",
@@ -27,6 +29,7 @@
     {
       "id": "africa",
       "label": "African Capitals",
+      "revealHint": "Africa",
       "items": [
         "Nairobi",
         "Abuja",
@@ -37,6 +40,7 @@
     {
       "id": "americas",
       "label": "American Capitals",
+      "revealHint": "Americas",
       "items": [
         "Ottawa",
         "Lima",

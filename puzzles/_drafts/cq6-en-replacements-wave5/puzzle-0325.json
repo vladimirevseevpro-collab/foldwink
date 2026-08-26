@@ -1,0 +1,67 @@
+{
+  "id": "puzzle-0325",
+  "title": "Cafe Counter",
+  "difficulty": "medium",
+  "editorialSummary": "A cafe board separates coffee drinks, tea drinks, fresh fruit and savoury cafe snacks without relying on product-history knowledge.",
+  "meta": {
+    "theme": "everyday",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "batch": "cq6-en-replacements-wave5",
+    "status": "draft",
+    "difficultyScore": 11,
+    "tags": [
+      "food",
+      "everyday",
+      "medium"
+    ]
+  },
+  "groups": [
+    {
+      "id": "coffee",
+      "label": "Coffee Drinks",
+      "items": [
+        "Americano",
+        "Latte",
+        "Cappuccino",
+        "Espresso"
+      ],
+      "revealHint": "ROAST"
+    },
+    {
+      "id": "tea",
+      "label": "Tea Drinks",
+      "items": [
+        "Black Tea",
+        "Green Tea",
+        "Chai",
+        "Herbal Tea"
+      ],
+      "revealHint": "STEEP"
+    },
+    {
+      "id": "fruit",
+      "label": "Fresh Fruit",
+      "items": [
+        "Apple",
+        "Orange",
+        "Banana",
+        "Grapes"
+      ],
+      "revealHint": "JUICY"
+    },
+    {
+      "id": "lunch",
+      "label": "Cafe Lunches",
+      "items": [
+        "Soup",
+        "Salad",
+        "Quiche",
+        "Grilled Cheese"
+      ],
+      "revealHint": "NOON"
+    }
+  ]
+}

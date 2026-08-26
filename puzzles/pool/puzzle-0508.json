@@ -1,0 +1,63 @@
+{
+    "id":  "puzzle-0508",
+    "title":  "On the Shelf",
+    "difficulty":  "easy",
+    "editorialSummary":  "Wallet contents, office supplies, cleaning tools, and light sources are all common things to recognize at a glance. The mixed practical-object theme offers a mild false trail, but the functions do not overlap at group level.",
+    "meta":  {
+                 "theme":  "practical objects",
+                 "categoryType":  "classification",
+                 "falseTrail":  "Every item is a common practical object, without a second complete functional set.",
+                 "fairnessRisk":  0,
+                 "repetitionRisk":  1,
+                 "tags":  [
+                              "everyday",
+                              "home",
+                              "easy"
+                          ],
+                 "batch":  "r3-backfill-en",
+                 "status":  "needs-review",
+                 "difficultyScore":  11
+             },
+    "groups":  [
+                   {
+                       "id":  "wallet-contents",
+                       "label":  "Wallet Contents",
+                       "items":  [
+                                     "Cash",
+                                     "Card",
+                                     "Receipt",
+                                     "Coupon"
+                                 ]
+                   },
+                   {
+                       "id":  "office-supplies",
+                       "label":  "Office Supplies",
+                       "items":  [
+                                     "Stapler",
+                                     "Ruler",
+                                     "Eraser",
+                                     "Paperclip"
+                                 ]
+                   },
+                   {
+                       "id":  "cleaning-tools",
+                       "label":  "Cleaning Tools",
+                       "items":  [
+                                     "Broom",
+                                     "Mop",
+                                     "Duster",
+                                     "Vacuum"
+                                 ]
+                   },
+                   {
+                       "id":  "light-sources",
+                       "label":  "Light Sources",
+                       "items":  [
+                                     "Bulb",
+                                     "Candle",
+                                     "Torch",
+                                     "Lamp"
+                                 ]
+                   }
+               ]
+}

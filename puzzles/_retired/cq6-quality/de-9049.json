@@ -1,0 +1,55 @@
+{
+  "id": "de-9049",
+  "title": "Sportlicher Ehrgeiz",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Charaktertypen im Sport",
+    "batch": "de-batch-12",
+    "difficultyScore": 35,
+    "editorialRank": 27,
+    "gptDifficulty": 21,
+    "gptRationale": "The social attitudes in sport are intuitive and the examples are plain behavioral cues rather than tricky wordplay."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Fairness",
+      "items": [
+        "Gegner aufhelfen",
+        "Vorteil ablehnen",
+        "Foul zugeben",
+        "Handgeben nachher"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Ehrgeiz",
+      "items": [
+        "Training bei 38 Grad",
+        "Schmerz ignorieren",
+        "Zweiter = Verlierer",
+        "Diät streng gehalten"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Angeben",
+      "items": [
+        "Aufwärmen mit Show",
+        "Jubel ohne Tor",
+        "Shirt heben",
+        "Blick auf Tribüne"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Teamgeist",
+      "items": [
+        "Mitspieler freistellen",
+        "Pass statt Alleingang",
+        "Aufbauen nach Fehler",
+        "Kreis vor Spiel bilden"
+      ]
+    }
+  ]
+}

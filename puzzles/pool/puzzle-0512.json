@@ -1,0 +1,67 @@
+{
+    "id":  "puzzle-0512",
+    "title":  "Getting Ready",
+    "difficulty":  "medium",
+    "editorialSummary":  "Hair care, dental care, nail care, and cosmetics are four ordinary getting-ready routines. Brush and polish can initially suggest more than one routine, but the surrounding three items in each set make one canonical partition; the short Tabs remain suggestive rather than naming a category.",
+    "meta":  {
+                 "theme":  "personal care",
+                 "categoryType":  "classification",
+                 "falseTrail":  "Brush and polish have broad grooming associations before their companion items settle the groups.",
+                 "fairnessRisk":  1,
+                 "repetitionRisk":  1,
+                 "tags":  [
+                              "everyday",
+                              "personal-care",
+                              "medium"
+                          ],
+                 "batch":  "r3-backfill-en",
+                 "status":  "needs-review",
+                 "difficultyScore":  29
+             },
+    "groups":  [
+                   {
+                       "id":  "hair-care",
+                       "label":  "Hair Care",
+                       "revealHint":  "Smooth",
+                       "items":  [
+                                     "Comb",
+                                     "Brush",
+                                     "Shampoo",
+                                     "Hairdryer"
+                                 ]
+                   },
+                   {
+                       "id":  "dental-care",
+                       "label":  "Dental Care",
+                       "revealHint":  "Fresh",
+                       "items":  [
+                                     "Toothbrush",
+                                     "Toothpaste",
+                                     "Floss",
+                                     "Mouthwash"
+                                 ]
+                   },
+                   {
+                       "id":  "nail-care",
+                       "label":  "Nail Care",
+                       "revealHint":  "Finish",
+                       "items":  [
+                                     "Nail File",
+                                     "Nail Clippers",
+                                     "Polish",
+                                     "Buffer"
+                                 ]
+                   },
+                   {
+                       "id":  "cosmetics",
+                       "label":  "Cosmetics",
+                       "revealHint":  "Glow",
+                       "items":  [
+                                     "Mascara",
+                                     "Lipstick",
+                                     "Blush",
+                                     "Concealer"
+                                 ]
+                   }
+               ]
+}

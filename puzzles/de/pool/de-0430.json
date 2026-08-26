@@ -1,55 +1,35 @@
 {
   "id": "de-0430",
-  "title": "Internationale Abkommen",
-  "difficulty": "medium",
+  "title": "Frühstück zu Hause",
+  "difficulty": "easy",
   "meta": {
-    "theme": "politik",
-    "batch": "de-batch-05",
-    "difficultyScore": 29,
-    "editorialRank": 44,
-    "gptDifficulty": 54,
-    "gptRationale": "Mehrere bekannte Abkommen helfen, doch die Nähe zwischen Völkerrecht, Menschenrechten und internationaler Politik erzeugt plausible Fehlzuordnungen."
+    "theme": "alltag",
+    "batch": "cq6-de-replacements-wave6",
+    "difficultyScore": 10,
+    "editorialRank": 0,
+    "gptDifficulty": 10,
+    "gptRationale": "Vier klar getrennte Dinge am Frühstückstisch: Aufstriche, Müslizutaten, Getränke und Obst."
   },
   "groups": [
     {
       "id": "group_a",
-      "label": "Klimaschutz",
-      "items": [
-        "Pariser Abkommen",
-        "Kyoto-Protokoll",
-        "Klimarahmenkonvention",
-        "Glasgow-Pakt"
-      ]
+      "label": "Brotaufstriche",
+      "items": ["Butter", "Marmelade", "Honig", "Nuss-Nougat-Creme"]
     },
     {
       "id": "group_b",
-      "label": "Abrüstung",
-      "items": [
-        "INF-Vertrag",
-        "START-Vertrag",
-        "NPT",
-        "Ottawa-Vertrag"
-      ]
+      "label": "Müslizutaten",
+      "items": ["Haferflocken", "Rosinen", "Mandeln", "Cornflakes"]
     },
     {
       "id": "group_c",
-      "label": "Menschenrechte",
-      "items": [
-        "UN-Charta",
-        "EMRK",
-        "Flüchtlingskonvention",
-        "Kinderrechtskonvention"
-      ]
+      "label": "Frühstücksgetränke",
+      "items": ["Kaffee", "Tee", "Kakao", "Orangensaft"]
     },
     {
       "id": "group_d",
-      "label": "Handel",
-      "items": [
-        "GATT",
-        "WTO-Abkommen",
-        "CETA",
-        "NAFTA"
-      ]
+      "label": "Obst",
+      "items": ["Apfel", "Banane", "Birne", "Traube"]
     }
   ]
 }

@@ -1,54 +1,69 @@
 {
   "id": "puzzle-0069",
-  "title": "Elements at play",
+  "title": "Around the house",
   "difficulty": "medium",
-  "editorialSummary": "Chemical element subgroups.",
+  "editorialSummary": "Everyday home board with three adjacent apparel-care domains and one pantry anchor. Stress-tested against overbroad clothing and verb-noun crossover traps; no alternate quartet resolves cleanly.",
+  "meta": {
+    "theme": "everyday-home",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "tags": [
+      "everyday",
+      "home",
+      "laundry",
+      "sewing",
+      "pantry"
+    ],
+    "batch": "cq6-en-replacements-wave1",
+    "status": "draft",
+    "difficultyScore": 8
+  },
   "groups": [
     {
-      "id": "noble",
-      "label": "Noble Gases",
+      "id": "laundry",
+      "label": "Laundry actions",
       "items": [
-        "Helium",
-        "Neon",
-        "Argon",
-        "Krypton"
-      ]
+        "Sort",
+        "Soak",
+        "Rinse",
+        "Wring"
+      ],
+      "revealHint": "Washday"
     },
     {
-      "id": "alkali",
-      "label": "Alkali Metals",
+      "id": "sewing",
+      "label": "Sewing kit items",
       "items": [
-        "Lithium",
-        "Sodium",
-        "Potassium",
-        "Rubidium"
-      ]
+        "Needle",
+        "Thimble",
+        "Spool",
+        "Shears"
+      ],
+      "revealHint": "Mending"
     },
     {
-      "id": "halogens",
-      "label": "Halogens",
+      "id": "closures",
+      "label": "Closures on clothing or bags",
       "items": [
-        "Fluorine",
-        "Chlorine",
-        "Bromine",
-        "Iodine"
-      ]
+        "Buckle",
+        "Clasp",
+        "Snap",
+        "Zipper"
+      ],
+      "revealHint": "Wardrobe"
     },
     {
-      "id": "coinage",
-      "label": "Coinage Metals",
+      "id": "pantry",
+      "label": "Dry pantry staples",
       "items": [
-        "Copper",
-        "Silver",
-        "Gold",
-        "Roentgenium"
-      ]
+        "Flour",
+        "Rice",
+        "Sugar",
+        "Oats"
+      ],
+      "revealHint": "Cupboard"
     }
-  ],
-  "meta": {
-    "difficultyScore": 19,
-    "editorialRank": 40,
-    "gptDifficulty": 54,
-    "gptRationale": "Chemistry groupings are orderly, yet they rely on remembering periodic-family labels rather than just surface familiarity."
-  }
+  ]
 }

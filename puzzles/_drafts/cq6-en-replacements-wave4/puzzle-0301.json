@@ -1,0 +1,67 @@
+{
+  "id": "puzzle-0301",
+  "title": "Movie Night",
+  "difficulty": "medium",
+  "editorialSummary": "A cinema board separates what is eaten, what appears on an admission ticket, whose names appear in credits and the spaces inside the venue.",
+  "meta": {
+    "theme": "everyday",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "batch": "cq6-en-replacements-wave4",
+    "status": "draft",
+    "difficultyScore": 12,
+    "tags": [
+      "cinema",
+      "everyday",
+      "medium"
+    ]
+  },
+  "groups": [
+    {
+      "id": "snacks",
+      "label": "Cinema Snacks",
+      "items": [
+        "Popcorn",
+        "Pretzel",
+        "Candy",
+        "Soda"
+      ],
+      "revealHint": "NIBBLE"
+    },
+    {
+      "id": "ticket",
+      "label": "Ticket Information",
+      "items": [
+        "Date",
+        "Showtime",
+        "Price",
+        "Barcode"
+      ],
+      "revealHint": "ENTRY"
+    },
+    {
+      "id": "credits",
+      "label": "Film Credits",
+      "items": [
+        "Director",
+        "Actor",
+        "Producer",
+        "Editor"
+      ],
+      "revealHint": "ROLL"
+    },
+    {
+      "id": "spaces",
+      "label": "Cinema Areas",
+      "items": [
+        "Lobby",
+        "Aisle",
+        "Balcony",
+        "Auditorium"
+      ],
+      "revealHint": "HOUSE"
+    }
+  ]
+}

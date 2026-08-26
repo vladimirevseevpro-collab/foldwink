@@ -1,57 +1,65 @@
 {
   "id": "puzzle-0164",
-  "title": "Plant kingdom",
-  "difficulty": "medium",
-  "editorialSummary": "Four plant classification categories that overlap in everyday perception. Herb/Succulent/Fern/Moss share visual confusion.",
+  "title": "Online and Overnight",
+  "difficulty": "easy",
+  "editorialSummary": "Four familiar everyday classifications. The digital groups use different functions, and the bedding set is a distinct, exact home category.",
   "meta": {
-    "theme": "nature",
+    "theme": "daily routines",
     "categoryType": "classification",
-    "batch": "batch-02",
-    "status": "approved",
-    "difficultyScore": 22,
-    "editorialRank": 55,
-    "gptDifficulty": 77,
-    "gptRationale": "Plant taxonomy and common names here are substantially more specialized than average, especially in the fern and moss-lichen groups."
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "tags": [
+      "everyday",
+      "digital",
+      "bedding",
+      "email",
+      "classification",
+      "easy"
+    ],
+    "batch": "cq6-en-replacements-wave1",
+    "status": "draft",
+    "difficultyScore": 5
   },
   "groups": [
     {
-      "id": "herb",
-      "label": "Culinary herbs",
+      "id": "email-folders",
+      "label": "Email Folders",
       "items": [
-        "Basil",
-        "Dill",
-        "Tarragon",
-        "Chives"
+        "Drafts",
+        "Inbox",
+        "Sent",
+        "Spam"
       ]
     },
     {
-      "id": "succulent",
-      "label": "Succulents",
+      "id": "signup-fields",
+      "label": "Sign-Up Fields",
       "items": [
-        "Aloe",
-        "Jade",
-        "Echeveria",
-        "Haworthia"
+        "Email",
+        "Name",
+        "Password",
+        "Username"
       ]
     },
     {
-      "id": "fern",
-      "label": "Ferns",
+      "id": "bedding",
+      "label": "Bedding",
       "items": [
-        "Maidenhair",
-        "Staghorn",
-        "Boston Fern",
-        "Bracken"
+        "Blanket",
+        "Duvet",
+        "Pillow",
+        "Sheet"
       ]
     },
     {
-      "id": "moss",
-      "label": "Mosses and lichens",
+      "id": "video-player-controls",
+      "label": "Video Player Controls",
       "items": [
-        "Sphagnum",
-        "Reindeer Lichen",
-        "Haircap Moss",
-        "Iceland Moss"
+        "Pause",
+        "Play",
+        "Rewind",
+        "Skip"
       ]
     }
   ]

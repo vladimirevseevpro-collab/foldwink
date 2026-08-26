@@ -1,0 +1,66 @@
+{
+  "id": "hard-024",
+  "title": "Stone Cold",
+  "difficulty": "hard",
+  "editorialSummary": "Gemstones that can plausibly be sorted by color, mineral family, OR birthstone month — all three sorting principles are simultaneously available, making every group feel unstable until you fix the correct axis (mineral family). False trail 1: Ruby, Garnet, and Red Spinel are all red — players will try to group them together, but Ruby is corundum, Garnet is a separate mineral group, and Red Spinel is magnesium aluminium oxide. False trail 2: Sapphire and Ruby are both corundum (aluminum oxide), so they must share the corundum group even though they are different colors and different months. False trail 3: Aquamarine and Emerald are both beryl — players who don't know mineralogy will separate them by color (blue vs. green). False trail 4: Topaz is often confused with quartz (citrine looks similar in color), but Topaz is aluminum silicate fluoride while Citrine is quartz — placed in separate mineral groups. Note: all mineral family assignments are verifiable in the Gemological Institute of America (GIA) standard references.",
+  "meta": {
+    "theme": "mineralogy",
+    "categoryType": "attribute",
+    "batch": "batch-09",
+    "status": "draft",
+    "difficultyScore": 42,
+    "editorialRank": 61,
+    "gptDifficulty": 74,
+    "gptRationale": "Gem families are specialized knowledge and several stones feel plausibly cross-grouped unless you already know mineral classification."
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Corundum Family",
+      "revealHint": "",
+      "items": [
+        "Ruby",
+        "Blue Sapphire",
+        "Yellow Sapphire",
+        "Padparadscha"
+      ],
+      "color": "yellow"
+    },
+    {
+      "id": "g2",
+      "label": "Beryl Family",
+      "revealHint": "",
+      "items": [
+        "Emerald",
+        "Aquamarine",
+        "Morganite",
+        "Heliodor"
+      ],
+      "color": "green"
+    },
+    {
+      "id": "g3",
+      "label": "Quartz Family",
+      "revealHint": "",
+      "items": [
+        "Amethyst",
+        "Citrine",
+        "Rose Quartz",
+        "Smoky Quartz"
+      ],
+      "color": "blue"
+    },
+    {
+      "id": "g4",
+      "label": "Garnet Family",
+      "revealHint": "",
+      "items": [
+        "Almandine",
+        "Tsavorite",
+        "Spessartite",
+        "Pyrope"
+      ],
+      "color": "purple"
+    }
+  ]
+}

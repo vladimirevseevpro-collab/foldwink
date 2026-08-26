@@ -1,0 +1,58 @@
+{
+  "id": "puzzle-0255",
+  "title": "Whodunit",
+  "difficulty": "medium",
+  "editorialSummary": "Four corners of a classic mystery — clue types, detective archetypes, crime-scene evidence, story beats. Clue/Suspect shared-vocabulary false trail.",
+  "meta": {
+    "theme": "mystery",
+    "categoryType": "classification",
+    "batch": "batch-05",
+    "status": "approved",
+    "difficultyScore": 40,
+    "editorialRank": 32,
+    "gptDifficulty": 26,
+    "gptRationale": "Murder-mystery conventions are widely known and the categories are strongly signposted by genre."
+  },
+  "groups": [
+    {
+      "id": "clues",
+      "label": "Physical Clues",
+      "items": [
+        "Fingerprint",
+        "Blood Stain",
+        "Hair Fiber",
+        "DNA Sample"
+      ]
+    },
+    {
+      "id": "sleuths",
+      "label": "Detective Types",
+      "items": [
+        "Private Eye",
+        "Inspector",
+        "Consulting Detective",
+        "Amateur Sleuth"
+      ]
+    },
+    {
+      "id": "elements",
+      "label": "Mystery Story Beats",
+      "items": [
+        "Red Herring",
+        "Plot Twist",
+        "Reveal",
+        "Confession"
+      ]
+    },
+    {
+      "id": "evidence",
+      "label": "Crime Scene",
+      "items": [
+        "Chalk Outline",
+        "Yellow Tape",
+        "Flashlight",
+        "Forensics Marker"
+      ]
+    }
+  ]
+}

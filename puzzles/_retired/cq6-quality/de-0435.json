@@ -1,0 +1,55 @@
+{
+  "id": "de-0435",
+  "title": "Kaiserreich-Symbole",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "geschichte",
+    "batch": "de-batch-05",
+    "difficultyScore": 28,
+    "editorialRank": 54,
+    "gptDifficulty": 72,
+    "gptRationale": "Hier mischen sich historische, kulturelle und symbolische Ebenen, wodurch einige Begriffe ohne Kaiserreich-Kontext recht abstrakt wirken."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Militär-Symbole",
+      "items": [
+        "Pickelhaube",
+        "Eisernes Kreuz",
+        "Feldgrau",
+        "Ulanenmütze"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Herrschafts-Symbole",
+      "items": [
+        "Kaiserkrone",
+        "Reichsadler",
+        "Zepter",
+        "Kaisermantel"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Industrie-Symbole",
+      "items": [
+        "Stahlwerk",
+        "Zeche",
+        "Lokomotive",
+        "Fabrikschlot"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Kulturelle Symbole",
+      "items": [
+        "Gründerzeit-Villa",
+        "Jugendstilfassade",
+        "Kaiserdenkmal",
+        "Promenade"
+      ]
+    }
+  ]
+}

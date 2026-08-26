@@ -1,0 +1,55 @@
+{
+  "id": "de-0389",
+  "title": "Geologie Deutschland",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Geologie Deutschland",
+    "batch": "de-batch-04",
+    "difficultyScore": 51,
+    "editorialRank": 63,
+    "gptDifficulty": 71,
+    "gptRationale": "Deutsche Geologie ist relativ nischig und mehrere Eigennamen sowie Fachbegriffe verlangen genaue Sachkenntnis statt grober Intuition."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Geologische Regionen",
+      "items": [
+        "Mittelgebirge",
+        "Norddeutsches Tief.",
+        "Alpenvorland",
+        "Rheinisches Schild"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Gesteinsarten Deutschl.",
+      "items": [
+        "Buntsandstein",
+        "Muschelkalk",
+        "Basalt",
+        "Granit"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Vulkane in Deutschland",
+      "items": [
+        "Laacher See",
+        "Vogelsberg",
+        "Kaiserstuhl",
+        "Eifelmaare"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Geologische Ereignisse",
+      "items": [
+        "Variskische Faltung",
+        "Alpenhebung",
+        "Elster-Vergletscherung",
+        "Saale-Vergletscherung"
+      ]
+    }
+  ]
+}

@@ -1,54 +1,54 @@
 {
   "id": "de-0372",
-  "title": "Politiksysteme vergleich",
-  "difficulty": "medium",
+  "title": "Am Frühstückstisch",
+  "difficulty": "easy",
   "meta": {
-    "theme": "Vergleichende Politik",
-    "batch": "de-batch-04",
-    "difficultyScore": 37,
-    "editorialRank": 39,
-    "gptDifficulty": 41,
-    "gptRationale": "Die Staatensysteme sind bekannt, doch einzelne Institutionen wie Élysée oder Electoral College erhöhen die Präzisionsanforderung etwas."
+    "theme": "Frühstück",
+    "batch": "cq6-de-replacements-wave5",
+    "difficultyScore": 9,
+    "editorialRank": 9,
+    "gptDifficulty": 9,
+    "gptRationale": "Die vier Frühstücksgruppen bestehen aus sehr bekannten Lebensmitteln und Zubereitungen mit klaren, voneinander getrennten Funktionen."
   },
   "groups": [
     {
       "id": "group_a",
-      "label": "Deutsches Politiksystem",
+      "label": "Brotaufstriche",
       "items": [
-        "Bundestag",
-        "Bundesrat",
-        "Bundeskanzler",
-        "Bundespräsident"
+        "Butter",
+        "Marmelade",
+        "Honig",
+        "Nuss-Nougat-Creme"
       ]
     },
     {
       "id": "group_b",
-      "label": "US-Politiksystem",
+      "label": "Müslizutaten",
       "items": [
-        "Kongress",
-        "Senat",
-        "Repräsentantenhaus",
-        "Electoral College"
+        "Haferflocken",
+        "Apfelstücke",
+        "Rosinen",
+        "Mandeln"
       ]
     },
     {
       "id": "group_c",
-      "label": "Französisches Politiksyst.",
+      "label": "Heißgetränke",
       "items": [
-        "Assemblée nationale",
-        "Sénat",
-        "Premier ministre",
-        "Élysée"
+        "Kaffee",
+        "Espresso",
+        "Tee",
+        "Kakao"
       ]
     },
     {
       "id": "group_d",
-      "label": "Britisches Politiksystem",
+      "label": "Eierspeisen",
       "items": [
-        "House of Commons",
-        "House of Lords",
-        "Prime Minister",
-        "Monarch"
+        "Rührei",
+        "Spiegelei",
+        "Omelett",
+        "gekochtes Ei"
       ]
     }
   ]

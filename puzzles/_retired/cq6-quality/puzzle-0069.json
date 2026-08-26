@@ -1,0 +1,54 @@
+{
+  "id": "puzzle-0069",
+  "title": "Elements at play",
+  "difficulty": "medium",
+  "editorialSummary": "Chemical element subgroups.",
+  "groups": [
+    {
+      "id": "noble",
+      "label": "Noble Gases",
+      "items": [
+        "Helium",
+        "Neon",
+        "Argon",
+        "Krypton"
+      ]
+    },
+    {
+      "id": "alkali",
+      "label": "Alkali Metals",
+      "items": [
+        "Lithium",
+        "Sodium",
+        "Potassium",
+        "Rubidium"
+      ]
+    },
+    {
+      "id": "halogens",
+      "label": "Halogens",
+      "items": [
+        "Fluorine",
+        "Chlorine",
+        "Bromine",
+        "Iodine"
+      ]
+    },
+    {
+      "id": "coinage",
+      "label": "Coinage Metals",
+      "items": [
+        "Copper",
+        "Silver",
+        "Gold",
+        "Roentgenium"
+      ]
+    }
+  ],
+  "meta": {
+    "difficultyScore": 19,
+    "editorialRank": 40,
+    "gptDifficulty": 54,
+    "gptRationale": "Chemistry groupings are orderly, yet they rely on remembering periodic-family labels rather than just surface familiarity."
+  }
+}

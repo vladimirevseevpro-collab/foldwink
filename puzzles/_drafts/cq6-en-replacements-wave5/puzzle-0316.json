@@ -1,0 +1,67 @@
+{
+  "id": "puzzle-0316",
+  "title": "At the Airport",
+  "difficulty": "medium",
+  "editorialSummary": "Four familiar travel clusters separate documents, luggage, airport areas, and fixtures seen after boarding.",
+  "meta": {
+    "theme": "everyday",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "batch": "cq6-en-replacements-wave5",
+    "status": "draft",
+    "difficultyScore": 13,
+    "tags": [
+      "travel",
+      "everyday",
+      "medium"
+    ]
+  },
+  "groups": [
+    {
+      "id": "documents",
+      "label": "Travel Documents",
+      "items": [
+        "Passport",
+        "Visa",
+        "Boarding Pass",
+        "ID Card"
+      ],
+      "revealHint": "PAPER"
+    },
+    {
+      "id": "luggage",
+      "label": "Luggage Types",
+      "items": [
+        "Carry-on",
+        "Suitcase",
+        "Duffel",
+        "Garment Bag"
+      ],
+      "revealHint": "PACK"
+    },
+    {
+      "id": "areas",
+      "label": "Airport Areas",
+      "items": [
+        "Gate",
+        "Lounge",
+        "Terminal",
+        "Baggage Claim"
+      ],
+      "revealHint": "WAIT"
+    },
+    {
+      "id": "cabin",
+      "label": "Cabin Fixtures",
+      "items": [
+        "Seatbelt",
+        "Overhead Bin",
+        "Tray Table",
+        "Call Button"
+      ],
+      "revealHint": "SEAT"
+    }
+  ]
+}

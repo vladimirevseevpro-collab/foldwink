@@ -1,54 +1,58 @@
 {
   "id": "ru-0002",
-  "title": "Масленица и блины",
-  "difficulty": "easy",
+  "title": "Что можно снять и включить",
+  "difficulty": "medium",
   "meta": {
-    "theme": "Масленица и блины",
+    "theme": "фразеологизмы_и_ирония",
+    "categoryType": "idiom_attribute",
     "batch": "ru-batch-01",
-    "difficultyScore": 24,
-    "editorialRank": 38,
-    "gptDifficulty": 48,
-    "gptRationale": "Still concrete, but Maslenitsa weekday names and some traditions are more culturally specific and easier to mix up than the food sets."
+    "difficultyScore": 22,
+    "editorialRank": 25,
+    "gptRationale": "Остроумные фразеологизмы русского языка, соединяющие быт, кино и сленг."
   },
   "groups": [
     {
-      "id": "group_a",
-      "label": "Начинки для блинов",
+      "id": "verbs_take_off",
+      "label": "Что можно «снять»",
+      "revealHint": "СНЯТЬ",
       "items": [
-        "Икра",
-        "Варенье",
-        "Сметана",
-        "Мёд"
+        "Фильм",
+        "Квартиру",
+        "Шляпу",
+        "Кассу"
       ]
     },
     {
-      "id": "group_b",
-      "label": "Традиции Масленицы",
+      "id": "verbs_hang",
+      "label": "Что можно «повесить»",
+      "revealHint": "ВЕСИТЬ",
       "items": [
-        "Чучело",
-        "Кулачки",
-        "Хороводы",
-        "Ярмарка"
+        "Нос",
+        "Уши",
+        "Ярлык",
+        "Трубку"
       ]
     },
     {
-      "id": "group_c",
-      "label": "Дни масленичной недели",
+      "id": "verbs_turn_on",
+      "label": "Что можно «включить»",
+      "revealHint": "ВКЛЮЧИТЬ",
       "items": [
-        "Встреча",
-        "Заигрыш",
-        "Лакомка",
-        "Разгул"
+        "Свет",
+        "Дурака",
+        "Заднюю",
+        "Логику"
       ]
     },
     {
-      "id": "group_d",
-      "label": "Для выпечки блинов",
+      "id": "verbs_brew_cook",
+      "label": "Что можно «варить»",
+      "revealHint": "ВАРИТЬ",
       "items": [
-        "Мука",
-        "Молоко",
-        "Яйца",
-        "Масло"
+        "Кашу",
+        "Кофе",
+        "Металл",
+        "Котелок"
       ]
     }
   ]

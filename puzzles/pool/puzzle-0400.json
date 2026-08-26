@@ -17,6 +17,7 @@
     {
       "id": "g1",
       "label": "MORSE ALL DOTS",
+      "revealHint": "Dots",
       "items": [
         "E",
         "I",
@@ -27,6 +28,7 @@
     {
       "id": "g2",
       "label": "MORSE ALL DASHES",
+      "revealHint": "Dashes",
       "items": [
         "T",
         "M",
@@ -37,6 +39,7 @@
     {
       "id": "g3",
       "label": "MORSE MIXED, STARTS WITH DOT",
+      "revealHint": "Dot first",
       "items": [
         "A",
         "R",
@@ -47,6 +50,7 @@
     {
       "id": "g4",
       "label": "MORSE MIXED, STARTS WITH DASH",
+      "revealHint": "Dash first",
       "items": [
         "N",
         "K",

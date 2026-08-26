@@ -1,0 +1,67 @@
+{
+    "id":  "puzzle-0513",
+    "title":  "Kitchen Counter",
+    "difficulty":  "medium",
+    "editorialSummary":  "Coffee setup, baking tools, dishwashing supplies, and table-setting accessories are all recognisable kitchen routines. The shared room creates the intended false trail, but each routine has a stable four-item cluster and the Tabs give only contextual nudges.",
+    "meta":  {
+                 "theme":  "kitchen routines",
+                 "categoryType":  "classification",
+                 "falseTrail":  "Every item belongs in or near a kitchen, but only one complete routine fits each quartet.",
+                 "fairnessRisk":  1,
+                 "repetitionRisk":  1,
+                 "tags":  [
+                              "home",
+                              "kitchen",
+                              "medium"
+                          ],
+                 "batch":  "r3-backfill-en",
+                 "status":  "needs-review",
+                 "difficultyScore":  31
+             },
+    "groups":  [
+                   {
+                       "id":  "coffee-setup",
+                       "label":  "Coffee Setup",
+                       "revealHint":  "Morning",
+                       "items":  [
+                                     "Kettle",
+                                     "Grinder",
+                                     "Filter",
+                                     "Carafe"
+                                 ]
+                   },
+                   {
+                       "id":  "baking-tools",
+                       "label":  "Baking Tools",
+                       "revealHint":  "Measure",
+                       "items":  [
+                                     "Whisk",
+                                     "Spatula",
+                                     "Rolling Pin",
+                                     "Measuring Cup"
+                                 ]
+                   },
+                   {
+                       "id":  "dishwashing-supplies",
+                       "label":  "Dishwashing Supplies",
+                       "revealHint":  "After",
+                       "items":  [
+                                     "Sponge",
+                                     "Dish Soap",
+                                     "Scrubber",
+                                     "Drying Rack"
+                                 ]
+                   },
+                   {
+                       "id":  "table-setting",
+                       "label":  "Table Setting",
+                       "revealHint":  "Gather",
+                       "items":  [
+                                     "Placemat",
+                                     "Napkin",
+                                     "Coaster",
+                                     "Tablecloth"
+                                 ]
+                   }
+               ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "puzzle-0197",
+  "title": "Rainy-Day Plans",
+  "difficulty": "medium",
+  "editorialSummary": "A rainy-day mix of practical gear and familiar outings. Every card has one ordinary home; the challenge comes from scanning the mixed scene rather than decoding an obscure term.",
+  "meta": {
+    "theme": "everyday",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "tags": [
+      "everyday",
+      "outdoors",
+      "objects",
+      "medium"
+    ],
+    "batch": "cq6-en-replacements-wave3",
+    "status": "draft",
+    "difficultyScore": 11
+  },
+  "groups": [
+    {
+      "id": "rain-gear",
+      "label": "Rain Gear",
+      "items": [
+        "Umbrella",
+        "Poncho",
+        "Boots",
+        "Raincoat"
+      ],
+      "revealHint": "Wet"
+    },
+    {
+      "id": "camping-light",
+      "label": "Camping Light",
+      "items": [
+        "Lantern",
+        "Headlamp",
+        "Torch",
+        "Campfire"
+      ],
+      "revealHint": "Glow"
+    },
+    {
+      "id": "railway-station",
+      "label": "Railway Station",
+      "items": [
+        "Platform",
+        "Timetable",
+        "Turnstile",
+        "Ticket Machine"
+      ],
+      "revealHint": "Depart"
+    },
+    {
+      "id": "picnic-gear",
+      "label": "Picnic Gear",
+      "items": [
+        "Napkin",
+        "Thermos",
+        "Blanket",
+        "Cooler"
+      ],
+      "revealHint": "Outdoors"
+    }
+  ]
+}

@@ -1,54 +1,61 @@
 {
   "id": "de-0339",
-  "title": "Algorithmen",
-  "difficulty": "medium",
+  "title": "Packen für die Reise",
+  "difficulty": "easy",
   "meta": {
-    "theme": "Algorithmen",
-    "batch": "de-batch-04",
-    "difficultyScore": 23,
-    "editorialRank": 38,
-    "gptDifficulty": 48,
-    "gptRationale": "Algorithmen sind für technikaffine Spielende gut machbar, aber die Mischung aus Suche, Graphen und Kryptografie ist nicht universell geläufig."
+    "theme": "Packen für die Reise",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 1,
+    "tags": [
+      "reise",
+      "alltag",
+      "gepäck"
+    ],
+    "batch": "cq6-de-replacements",
+    "status": "needs-review",
+    "difficultyScore": 13
   },
   "groups": [
     {
-      "id": "group_a",
-      "label": "Sortieralgorithmen",
+      "id": "travel_documents",
+      "label": "Reiseunterlagen",
       "items": [
-        "Quicksort",
-        "Mergesort",
-        "Bubblesort",
-        "Heapsort"
+        "Fahrkarte",
+        "Reisepass",
+        "Ausweis",
+        "Buchungsbestätigung"
       ]
     },
     {
-      "id": "group_b",
-      "label": "Graphsuchalgorithmen",
+      "id": "travel_clothes",
+      "label": "Kleidung im Koffer",
       "items": [
-        "Bidirektionale Suche",
-        "Breitensuche",
-        "Tiefensuche",
-        "A-Stern"
+        "Jeans",
+        "Kleid",
+        "Unterwäsche",
+        "Regenjacke"
       ]
     },
     {
-      "id": "group_c",
-      "label": "Graphenalgorithmen",
+      "id": "travel_hygiene",
+      "label": "Hygieneartikel",
       "items": [
-        "Dijkstra",
-        "Bellman-Ford",
-        "Floyd-Warshall",
-        "Prim"
+        "Zahnbürste",
+        "Zahnpasta",
+        "Shampoo",
+        "Kamm"
       ]
     },
     {
-      "id": "group_d",
-      "label": "Kryptographische Verfahren",
+      "id": "travel_bag_items",
+      "label": "Elektronik",
       "items": [
-        "AES",
-        "RSA",
-        "SHA-256",
-        "Diffie-Hellman"
+        "Smartphone",
+        "Ladekabel",
+        "Powerbank",
+        "Kopfh�rer"
       ]
     }
   ]

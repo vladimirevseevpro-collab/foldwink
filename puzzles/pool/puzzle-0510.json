@@ -1,0 +1,63 @@
+{
+    "id":  "puzzle-0510",
+    "title":  "Fresh Air",
+    "difficulty":  "easy",
+    "editorialSummary":  "Garden tools, weather words, common birds, and common trees make four immediate outdoor groups. Birds and trees share an outdoor setting, but they are different natural kinds and each set is complete without specialist knowledge.",
+    "meta":  {
+                 "theme":  "outdoors",
+                 "categoryType":  "classification",
+                 "falseTrail":  "Birds and trees are both outdoor nature words.",
+                 "fairnessRisk":  0,
+                 "repetitionRisk":  1,
+                 "tags":  [
+                              "outdoors",
+                              "nature",
+                              "easy"
+                          ],
+                 "batch":  "r3-backfill-en",
+                 "status":  "needs-review",
+                 "difficultyScore":  14
+             },
+    "groups":  [
+                   {
+                       "id":  "garden-tools",
+                       "label":  "Garden Tools",
+                       "items":  [
+                                     "Rake",
+                                     "Shovel",
+                                     "Hoe",
+                                     "Trowel"
+                                 ]
+                   },
+                   {
+                       "id":  "weather-words",
+                       "label":  "Weather Words",
+                       "items":  [
+                                     "Rain",
+                                     "Snow",
+                                     "Wind",
+                                     "Fog"
+                                 ]
+                   },
+                   {
+                       "id":  "birds",
+                       "label":  "Birds",
+                       "items":  [
+                                     "Robin",
+                                     "Sparrow",
+                                     "Pigeon",
+                                     "Seagull"
+                                 ]
+                   },
+                   {
+                       "id":  "trees",
+                       "label":  "Trees",
+                       "items":  [
+                                     "Oak",
+                                     "Maple",
+                                     "Pine",
+                                     "Birch"
+                                 ]
+                   }
+               ]
+}

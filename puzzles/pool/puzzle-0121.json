@@ -18,6 +18,7 @@
     {
       "id": "home",
       "label": "Flat as dwelling",
+      "revealHint": "Home",
       "items": [
         "Apartment",
         "Bedsit",
@@ -28,6 +29,7 @@
     {
       "id": "tire",
       "label": "Flat tire",
+      "revealHint": "Tire",
       "items": [
         "Puncture",
         "Blowout",
@@ -38,6 +40,7 @@
     {
       "id": "music",
       "label": "Flat in music",
+      "revealHint": "Music",
       "items": [
         "B-flat",
         "E-flat",
@@ -48,6 +51,7 @@
     {
       "id": "land",
       "label": "Flat terrain",
+      "revealHint": "Land",
       "items": [
         "Prairie",
         "Steppe",

@@ -1,0 +1,55 @@
+{
+  "id": "de-0410",
+  "title": "Literarische Epochen",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "literatur",
+    "batch": "de-batch-05",
+    "difficultyScore": 54,
+    "editorialRank": 58,
+    "gptDifficulty": 60,
+    "gptRationale": "Literaturepochen sind schulisch bekannt, aber Grenzfiguren wie Goethe und Schiller in verschiedenen Phasen machen die Sortierung deutlich trickreicher."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Sturm und Drang",
+      "items": [
+        "Wagner",
+        "Leisewitz",
+        "Klinger",
+        "Lenz"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Weimarer Klassik",
+      "items": [
+        "Wieland",
+        "Herder",
+        "Schiller (reif)",
+        "Goethe (reif)"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Romantik-Vertreter",
+      "items": [
+        "Novalis",
+        "Tieck",
+        "Eichendorff",
+        "Brentano"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Poetischer Realismus",
+      "items": [
+        "Fontane",
+        "Storm",
+        "Keller",
+        "Raabe"
+      ]
+    }
+  ]
+}

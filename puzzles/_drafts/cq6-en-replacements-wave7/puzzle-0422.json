@@ -1,0 +1,43 @@
+{
+  "id": "puzzle-0422",
+  "title": "At the Hair Salon",
+  "difficulty": "medium",
+  "editorialSummary": "Four ordinary salon clusters separate cutting tools, styling tools, styling products, and furnishings. The shared setting provides a fair contextual false trail.",
+  "meta": {
+    "theme": "everyday services",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "batch": "cq6-en-replacements-wave7",
+    "status": "draft",
+    "difficultyScore": 20,
+    "tags": ["salon", "everyday", "medium"]
+  },
+  "groups": [
+    {
+      "id": "cut",
+      "label": "Cutting Tools",
+      "items": ["Scissors", "Clippers", "Razor", "Comb"],
+      "revealHint": "CUT"
+    },
+    {
+      "id": "style-tools",
+      "label": "Styling Tools",
+      "items": ["Hair Dryer", "Curling Iron", "Straightener", "Round Brush"],
+      "revealHint": "STYLE"
+    },
+    {
+      "id": "products",
+      "label": "Styling Products",
+      "items": ["Gel", "Hairspray", "Mousse", "Hair Wax"],
+      "revealHint": "HOLD"
+    },
+    {
+      "id": "furniture",
+      "label": "Salon Furnishings",
+      "items": ["Chair", "Mirror", "Wash Basin", "Trolley"],
+      "revealHint": "SEAT"
+    }
+  ]
+}

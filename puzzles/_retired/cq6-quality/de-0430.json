@@ -1,0 +1,55 @@
+{
+  "id": "de-0430",
+  "title": "Internationale Abkommen",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "politik",
+    "batch": "de-batch-05",
+    "difficultyScore": 29,
+    "editorialRank": 44,
+    "gptDifficulty": 54,
+    "gptRationale": "Mehrere bekannte Abkommen helfen, doch die Nähe zwischen Völkerrecht, Menschenrechten und internationaler Politik erzeugt plausible Fehlzuordnungen."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Klimaschutz",
+      "items": [
+        "Pariser Abkommen",
+        "Kyoto-Protokoll",
+        "Klimarahmenkonvention",
+        "Glasgow-Pakt"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Abrüstung",
+      "items": [
+        "INF-Vertrag",
+        "START-Vertrag",
+        "NPT",
+        "Ottawa-Vertrag"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Menschenrechte",
+      "items": [
+        "UN-Charta",
+        "EMRK",
+        "Flüchtlingskonvention",
+        "Kinderrechtskonvention"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Handel",
+      "items": [
+        "GATT",
+        "WTO-Abkommen",
+        "CETA",
+        "NAFTA"
+      ]
+    }
+  ]
+}

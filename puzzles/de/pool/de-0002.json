@@ -1,54 +1,54 @@
 {
   "id": "de-0002",
-  "title": "Wetterkunde",
+  "title": "Typisch Feierabend",
   "difficulty": "easy",
   "meta": {
-    "theme": "Wetter",
+    "theme": "alltagsrituale_und_gemuetlichkeit",
+    "categoryType": "cultural_lifestyle",
     "batch": "de-batch-01",
-    "difficultyScore": 15,
-    "editorialRank": 31,
-    "gptDifficulty": 42,
-    "gptRationale": "Die Mischung aus Wetterphänomenen, Warnlagen und Messgeräten ist klar, aber Wolkentypen und Fachvokabular heben die Schwierigkeit etwas an."
+    "difficultyScore": 14,
+    "editorialRank": 12,
+    "gptRationale": "Deutsche Alltagsrituale, Gemütlichkeit im Biergarten und der berühmte Kabelsalat."
   },
   "groups": [
     {
-      "id": "group_a",
-      "label": "Niederschlagsarten",
+      "id": "german_rituals",
+      "label": "Deutsche Alltagsrituale",
       "items": [
-        "Regen",
-        "Schnee",
-        "Hagel",
-        "Nieselregen"
+        "Stoßlüften",
+        "Kehrwoche",
+        "Mülltrennung",
+        "Feierabend"
       ]
     },
     {
-      "id": "group_b",
-      "label": "Wolkentypen",
+      "id": "biergarten",
+      "label": "Im Biergarten",
       "items": [
-        "Cumulus",
-        "Stratus",
-        "Cirrus",
-        "Nimbus"
+        "Brezel",
+        "Radler",
+        "Senf",
+        "Weißwurst"
       ]
     },
     {
-      "id": "group_c",
-      "label": "Wetterwarnungen",
+      "id": "cozy_sofa",
+      "label": "Gemütlich auf dem Sofa",
       "items": [
-        "Sturm",
-        "Frost",
-        "Glatteis",
-        "Gewitter"
+        "Kissen",
+        "Decke",
+        "Fernbedienung",
+        "Buch"
       ]
     },
     {
-      "id": "group_d",
-      "label": "Messgeräte",
+      "id": "salat_compounds",
+      "label": "Wortsalat mit «-salat»",
       "items": [
-        "Thermometer",
-        "Barometer",
-        "Hygrometer",
-        "Anemometer"
+        "Kartoffelsalat",
+        "Nudelsalat",
+        "Kabelsalat",
+        "Wortsalat"
       ]
     }
   ]

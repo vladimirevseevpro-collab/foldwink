@@ -1,0 +1,43 @@
+{
+  "id": "puzzle-0423",
+  "title": "At the Hotel",
+  "difficulty": "medium",
+  "editorialSummary": "Four familiar hotel clusters separate room furniture, bathroom supplies, breakfast buffet items, and front-desk items. The categories are concrete and naturally named.",
+  "meta": {
+    "theme": "everyday travel",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "batch": "cq6-en-replacements-wave7",
+    "status": "draft",
+    "difficultyScore": 19,
+    "tags": ["hotel", "travel", "medium"]
+  },
+  "groups": [
+    {
+      "id": "room",
+      "label": "Room Furniture",
+      "items": ["Bed", "Desk", "Lamp", "Wardrobe"],
+      "revealHint": "STAY"
+    },
+    {
+      "id": "bathroom",
+      "label": "Bathroom Supplies",
+      "items": ["Towel", "Soap", "Shampoo", "Toilet Paper"],
+      "revealHint": "WASH"
+    },
+    {
+      "id": "breakfast",
+      "label": "Breakfast Buffet",
+      "items": ["Coffee", "Juice", "Cereal", "Toast"],
+      "revealHint": "MORNING"
+    },
+    {
+      "id": "desk",
+      "label": "Reception Desk Items",
+      "items": ["Keycard", "Check-in Form", "Reservation Book", "Brochure"],
+      "revealHint": "CHECK"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "id": "puzzle-0290",
+  "title": "Flag Colours",
+  "difficulty": "medium",
+  "editorialSummary": "Flags grouped by design feature rather than country region; the false trail is that several Nordic countries share red-and-white colours but only some have the distinctive off-centre Nordic cross pattern.",
+  "meta": {
+    "theme": "geography",
+    "categoryType": "attribute",
+    "batch": "batch-07",
+    "status": "approved",
+    "difficultyScore": 50,
+    "editorialRank": 66,
+    "gptDifficulty": 76,
+    "gptRationale": "Flag-design grouping demands precise vexillology knowledge, and several countries could plausibly fit multiple visual themes to a casual player."
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Flags: Horizontal Red, White and Blue Tricolour",
+      "items": [
+        "Netherlands",
+        "Luxembourg",
+        "Croatia",
+        "Slovakia"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Flags: Nordic Cross Design",
+      "items": [
+        "Denmark",
+        "Norway",
+        "Finland",
+        "Sweden"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Flags: Crescent and Star",
+      "items": [
+        "Pakistan",
+        "Algeria",
+        "Azerbaijan",
+        "Mauritania"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Flags: Eagle Emblem",
+      "items": [
+        "Germany",
+        "Mexico",
+        "Albania",
+        "Serbia"
+      ]
+    }
+  ]
+}

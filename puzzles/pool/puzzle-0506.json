@@ -1,0 +1,63 @@
+{
+    "id":  "puzzle-0506",
+    "title":  "Room to Room",
+    "difficulty":  "easy",
+    "editorialSummary":  "This puzzle sorts ordinary household and public-place objects into bathroom essentials, bedroom furniture, office machines, and playground equipment. All four groups have strong shared settings, while the broad household theme creates only a gentle initial false trail.",
+    "meta":  {
+                 "theme":  "places and objects",
+                 "categoryType":  "classification",
+                 "falseTrail":  "Most items are familiar fixtures or equipment, but only one complete group belongs to each setting.",
+                 "fairnessRisk":  0,
+                 "repetitionRisk":  1,
+                 "tags":  [
+                              "home",
+                              "places",
+                              "easy"
+                          ],
+                 "batch":  "r3-backfill-en",
+                 "status":  "needs-review",
+                 "difficultyScore":  10
+             },
+    "groups":  [
+                   {
+                       "id":  "bathroom-essentials",
+                       "label":  "Bathroom Essentials",
+                       "items":  [
+                                     "Towel",
+                                     "Soap",
+                                     "Toothbrush",
+                                     "Toothpaste"
+                                 ]
+                   },
+                   {
+                       "id":  "bedroom-furniture",
+                       "label":  "Bedroom Furniture",
+                       "items":  [
+                                     "Bed",
+                                     "Dresser",
+                                     "Wardrobe",
+                                     "Nightstand"
+                                 ]
+                   },
+                   {
+                       "id":  "office-machines",
+                       "label":  "Office Machines",
+                       "items":  [
+                                     "Printer",
+                                     "Scanner",
+                                     "Copier",
+                                     "Shredder"
+                                 ]
+                   },
+                   {
+                       "id":  "playground-equipment",
+                       "label":  "Playground Equipment",
+                       "items":  [
+                                     "Swing",
+                                     "Slide",
+                                     "Seesaw",
+                                     "Sandbox"
+                                 ]
+                   }
+               ]
+}

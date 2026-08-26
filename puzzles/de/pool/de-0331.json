@@ -1,55 +1,38 @@
 {
   "id": "de-0331",
-  "title": "Physikalische Gesetze",
-  "difficulty": "medium",
+  "title": "Sauber machen",
+  "difficulty": "easy",
   "meta": {
-    "theme": "Physikgesetze",
-    "batch": "de-batch-04",
-    "difficultyScore": 44,
-    "editorialRank": 49,
-    "gptDifficulty": 53,
-    "gptRationale": "Naturwissenschaftliche Namen sind bekannt, doch hier stehen Gesetze, Formeln und Konzepte nebeneinander, was die Kanten unschärfer macht."
+    "theme": "Sauber machen",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 1,
+    "tags": ["haushalt", "alltag", "putzen"],
+    "batch": "cq6-de-replacements",
+    "status": "needs-review",
+    "difficultyScore": 14
   },
   "groups": [
     {
-      "id": "group_a",
-      "label": "Newtonsche Physik",
-      "items": [
-        "Trägheitsgesetz",
-        "Actio-reactio",
-        "F=ma",
-        "Gravitationsgesetz"
-      ]
+      "id": "cleaning_tools",
+      "label": "Putzgeräte",
+      "items": ["Besen", "Staubsauger", "Wischmopp", "Kehrschaufel"]
     },
     {
-      "id": "group_b",
-      "label": "Einsteins Konzepte",
-      "items": [
-        "E=mc²",
-        "Zeitdilatation",
-        "Raumkrümmung",
-        "Photoeffekt"
-      ]
+      "id": "cleaning_products",
+      "label": "Reinigungsmittel",
+      "items": ["Spülmittel", "Waschmittel", "Glasreiniger", "Allzweckreiniger"]
     },
     {
-      "id": "group_c",
-      "label": "Elektrische Grundbegriffe",
-      "items": [
-        "Ohmsches Gesetz",
-        "Widerstand",
-        "Spannung",
-        "Stromstärke"
-      ]
+      "id": "laundry_care",
+      "label": "Für die Wäsche",
+      "items": ["Wäschekorb", "Wäscheständer", "Bügeleisen", "Wäscheklammer"]
     },
     {
-      "id": "group_d",
-      "label": "Gasgesetze",
-      "items": [
-        "Boyle-Mariotte",
-        "Gay-Lussac",
-        "Charles",
-        "Avogadro"
-      ]
+      "id": "waste_bins",
+      "label": "Abfallbehälter",
+      "items": ["Mülleimer", "Biotonne", "Papiertonne", "Glascontainer"]
     }
   ]
 }

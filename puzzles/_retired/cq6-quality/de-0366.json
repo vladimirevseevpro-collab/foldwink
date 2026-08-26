@@ -1,0 +1,55 @@
+{
+  "id": "de-0366",
+  "title": "Weinbau",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Weinbau",
+    "batch": "de-batch-04",
+    "difficultyScore": 36,
+    "editorialRank": 36,
+    "gptDifficulty": 36,
+    "gptRationale": "Weinbegriffe sind thematisch sauber trennbar, aber Rebsorten- und Verkostungsvokabular verlangt etwas Vorwissen."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Weiße Rebsorten",
+      "items": [
+        "Riesling",
+        "Chardonnay",
+        "Sauvignon Blanc",
+        "Grauburgunder"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Rote Rebsorten",
+      "items": [
+        "Cabernet",
+        "Merlot",
+        "Syrah",
+        "Spätburgunder"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Weinproduktion Begriffe",
+      "items": [
+        "Gärung",
+        "Maische",
+        "Ausbau",
+        "Füllung"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Weinverkostung Begriffe",
+      "items": [
+        "Bouquet",
+        "Abgang",
+        "Tannin",
+        "Restsüße"
+      ]
+    }
+  ]
+}

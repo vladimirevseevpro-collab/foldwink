@@ -1,0 +1,55 @@
+{
+  "id": "de-9020",
+  "title": "Revolutionen ohne Waffe",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Friedliche Umbrüche in der Geschichte",
+    "batch": "de-batch-11",
+    "difficultyScore": 34,
+    "editorialRank": 42,
+    "gptDifficulty": 48,
+    "gptRationale": "The categories are recognizable historical shifts, but solving depends on some German and European history knowledge across several eras."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Reformation",
+      "items": [
+        "Thesen ans Tor",
+        "Ablassbrief verbrannt",
+        "Bibel fürs Volk",
+        "Zwei Konfessionen"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Aufklärung",
+      "items": [
+        "Kant über Pflicht",
+        "Enzyklopädie erscheint",
+        "Toleranzedikt erlassen",
+        "Lessing und Licht"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Wiedervereinigung",
+      "items": [
+        "Grenzpfahl umgefallen",
+        "Verwandte umarmt",
+        "Zwei Währungen eine",
+        "Volkskammer löst auf"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Frauenwahlrecht",
+      "items": [
+        "1919 erste Wahl",
+        "Langer Kampf davor",
+        "Zettel wie der Mann",
+        "Recht erkämpft"
+      ]
+    }
+  ]
+}

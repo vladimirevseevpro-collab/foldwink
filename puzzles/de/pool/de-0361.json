@@ -1,54 +1,54 @@
 {
   "id": "de-0361",
-  "title": "Kunstwerke nach Technik",
-  "difficulty": "medium",
+  "title": "Am Strand",
+  "difficulty": "easy",
   "meta": {
-    "theme": "Kunsttechniken",
-    "batch": "de-batch-04",
-    "difficultyScore": 27,
-    "editorialRank": 50,
-    "gptDifficulty": 65,
-    "gptRationale": "Techniken von Kunstwerken zu trennen ist merklich trickreicher, weil manche Werke oder Künstlersignale nur mit konkreter Kunstkenntnis sitzen."
+    "theme": "Strand",
+    "batch": "cq6-de-replacements-wave2",
+    "difficultyScore": 18,
+    "editorialRank": 18,
+    "gptDifficulty": 17,
+    "gptRationale": "Bekannte Strandbegriffe in vier sichtbaren Alltagsgruppen."
   },
   "groups": [
     {
-      "id": "group_a",
-      "label": "Öl auf Leinwand",
+      "id": "beach-items",
+      "label": "Strandausrüstung",
       "items": [
-        "Mona Lisa",
-        "Sternennacht",
-        "Guernica",
-        "Die Nachtwache"
+        "Sonnenschirm",
+        "Liegestuhl",
+        "Strandtuch",
+        "Strandtasche"
       ]
     },
     {
-      "id": "group_b",
-      "label": "Aquarell-Werke",
+      "id": "swimwear",
+      "label": "Badebekleidung",
       "items": [
-        "Turner Seestücke",
-        "Dürer Feldhasen",
-        "Paul Klee",
-        "Cézanne Skizz."
+        "Badeanzug",
+        "Badehose",
+        "Bikini",
+        "Baderock"
       ]
     },
     {
-      "id": "group_c",
-      "label": "Fresco-Werke",
+      "id": "sea-life",
+      "label": "Meerestiere",
       "items": [
-        "Sixtinische Kapelle",
-        "Letztes Abendmahl",
-        "Schule Athen",
-        "Arena-Kapelle"
+        "Seestern",
+        "Krabbe",
+        "Qualle",
+        "Fisch"
       ]
     },
     {
-      "id": "group_d",
-      "label": "Skulpturen",
+      "id": "water-gear",
+      "label": "Schwimmzubehör",
       "items": [
-        "Pietà",
-        "David",
-        "Venus von Milo",
-        "Denker Rodin"
+        "Schwimmbrille",
+        "Schwimmring",
+        "Schwimmflügel",
+        "Schwimmbrett"
       ]
     }
   ]

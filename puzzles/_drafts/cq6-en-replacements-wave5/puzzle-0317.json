@@ -1,0 +1,67 @@
+{
+  "id": "puzzle-0317",
+  "title": "At the Beach",
+  "difficulty": "medium",
+  "editorialSummary": "Four familiar beach clusters share one setting but resolve by a distinct job: shade, sand play, water gear, and finds along the shore.",
+  "meta": {
+    "theme": "everyday",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "batch": "cq6-en-replacements-wave5",
+    "status": "draft",
+    "difficultyScore": 12,
+    "tags": [
+      "beach",
+      "everyday",
+      "medium"
+    ]
+  },
+  "groups": [
+    {
+      "id": "shade",
+      "label": "Sun Protection",
+      "items": [
+        "Sunscreen",
+        "Sun Hat",
+        "Beach Umbrella",
+        "Cover-up"
+      ],
+      "revealHint": "SHADE"
+    },
+    {
+      "id": "sand",
+      "label": "Sand Toys",
+      "items": [
+        "Bucket",
+        "Spade",
+        "Sieve",
+        "Sand Mold"
+      ],
+      "revealHint": "PLAY"
+    },
+    {
+      "id": "water",
+      "label": "Water Gear",
+      "items": [
+        "Swim Goggles",
+        "Snorkel",
+        "Swim Fins",
+        "Kickboard"
+      ],
+      "revealHint": "SPLASH"
+    },
+    {
+      "id": "finds",
+      "label": "Beach Finds",
+      "items": [
+        "Shell",
+        "Pebble",
+        "Sea Glass",
+        "Driftwood"
+      ],
+      "revealHint": "SHORE"
+    }
+  ]
+}

@@ -1,54 +1,58 @@
 {
   "id": "de-0001",
-  "title": "Blumen im Jahreskreis",
-  "difficulty": "easy",
+  "title": "Alles für den Kater",
+  "difficulty": "medium",
   "meta": {
-    "theme": "Jahreszeiten-Blumen",
+    "theme": "wortspiele_und_alltag",
+    "categoryType": "compound_wordplay",
     "batch": "de-batch-01",
-    "difficultyScore": 11,
+    "difficultyScore": 23,
     "editorialRank": 15,
-    "gptDifficulty": 18,
-    "gptRationale": "Die Jahreszeiten- und Alltagskategorien sind sehr vertraut und die Begriffe lassen sich fast ohne konkurrierende Deutungen sauber zuordnen."
+    "gptRationale": "Kater und Sonnenbrille verbinden Katze, Katerstimmung und die Suche am Morgen danach."
   },
   "groups": [
     {
-      "id": "group_a",
-      "label": "Frühlingsblumen",
+      "id": "felines",
+      "label": "Große und kleine Katzen",
+      "revealHint": "KATZEN",
       "items": [
-        "Tulpe",
-        "Narzisse",
-        "Krokus",
-        "Schneeglöckchen"
+        "Luchs",
+        "Gepard",
+        "Löwe",
+        "Kater"
       ]
     },
     {
-      "id": "group_b",
-      "label": "Sommergemüse",
+      "id": "kater_compounds",
+      "label": "Körperliche und seelische Zustände",
+      "revealHint": "KÖRPER",
       "items": [
-        "Zucchini",
-        "Gurke",
-        "Tomate",
-        "Paprika"
+        "Muskelkater",
+        "Katerstimmung",
+        "Erschöpfung",
+        "Schlafmangel"
       ]
     },
     {
-      "id": "group_c",
-      "label": "Herbstfrüchte",
+      "id": "morning_after",
+      "label": "Am Morgen danach gesucht",
+      "revealHint": "MORGEN",
       "items": [
-        "Apfel",
-        "Birne",
-        "Quitte",
-        "Pflaume"
+        "Aspirin",
+        "Wasser",
+        "Rollmops",
+        "Kaffee"
       ]
     },
     {
-      "id": "group_d",
-      "label": "Winterbäume",
+      "id": "brille_compounds",
+      "label": "Dinge mit «-brille»",
+      "revealHint": "BRILLE",
       "items": [
-        "Fichte",
-        "Kiefer",
-        "Tanne",
-        "Lärche"
+        "Lesebrille",
+        "Taucherbrille",
+        "Klobrille",
+        "Sonnenbrille"
       ]
     }
   ]

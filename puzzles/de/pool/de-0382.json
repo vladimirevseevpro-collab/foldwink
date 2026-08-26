@@ -1,55 +1,28 @@
 {
   "id": "de-0382",
-  "title": "Ernährungswissenschaft",
-  "difficulty": "medium",
-  "meta": {
-    "theme": "Ernährung",
-    "batch": "de-batch-04",
-    "difficultyScore": 21,
-    "editorialRank": 28,
-    "gptDifficulty": 33,
-    "gptRationale": "Ernährungswissen ist verbreitet und die Kategorien sind intuitiv, nur Stoffwechselbegriffe ziehen die Schwierigkeit leicht nach oben."
-  },
+  "title": "Badregal",
+  "difficulty": "easy",
+  "meta": { "theme": "Badregal", "batch": "cq6-de-replacements-wave3" },
   "groups": [
     {
       "id": "group_a",
-      "label": "Hauptnährstoffe und Wasser",
-      "items": [
-        "Kohlenhydrate",
-        "Protein",
-        "Fett",
-        "Wasser"
-      ]
+      "label": "Zahnpflege",
+      "items": ["Zahnbürste", "Zahnpasta", "Zahnseide", "Mundspülung"]
     },
     {
       "id": "group_b",
-      "label": "Stoffwechsel-Begriffe",
-      "items": [
-        "Glykolyse",
-        "Ketose",
-        "Anabolismus",
-        "Katabolismus"
-      ]
+      "label": "Haarpflege",
+      "items": ["Shampoo", "Spülung", "Haarkur", "Haaröl"]
     },
     {
       "id": "group_c",
-      "label": "Diätformen",
-      "items": [
-        "Vegan",
-        "Ketogen",
-        "Mediterran",
-        "Paleo"
-      ]
+      "label": "Rasur",
+      "items": ["Rasierer", "Rasierschaum", "Rasierklinge", "Aftershave"]
     },
     {
       "id": "group_d",
-      "label": "Nahrungsinhaltsstoffe",
-      "items": [
-        "Vitamin C",
-        "Eisen",
-        "Omega-3",
-        "Folsäure"
-      ]
+      "label": "Handpflege",
+      "items": ["Handcreme", "Nagelfeile", "Nagellack", "Nagelhautschere"]
     }
   ]
 }

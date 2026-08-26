@@ -17,6 +17,7 @@
     {
       "id": "media",
       "label": "Press (media)",
+      "revealHint": "News",
       "items": [
         "Reporter",
         "Headline",
@@ -27,6 +28,7 @@
     {
       "id": "button",
       "label": "Press (button)",
+      "revealHint": "Button",
       "items": [
         "Click",
         "Toggle",
@@ -37,6 +39,7 @@
     {
       "id": "gym",
       "label": "Press (exercise)",
+      "revealHint": "Gym",
       "items": [
         "Bench Press",
         "Shoulder Press",
@@ -47,6 +50,7 @@
     {
       "id": "wine",
       "label": "Press (wine)",
+      "revealHint": "Wine",
       "items": [
         "Crush",
         "Must",

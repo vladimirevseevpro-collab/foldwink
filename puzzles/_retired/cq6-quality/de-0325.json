@@ -1,0 +1,55 @@
+{
+  "id": "de-0325",
+  "title": "Kirchliche Begriffe",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Kirche Begriffe",
+    "batch": "de-batch-04",
+    "difficultyScore": 34,
+    "editorialRank": 50,
+    "gptDifficulty": 61,
+    "gptRationale": "Konfessionelle Spezialbegriffe verlangen präzises Religionswissen, besonders bei orthodoxen und evangelischen Unterscheidungen."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Katholische Begriffe",
+      "items": [
+        "Papst",
+        "Beichte",
+        "Ablass",
+        "Purgatorium"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Evangelische Begriffe",
+      "items": [
+        "Synode",
+        "Presbyterium",
+        "Sola Scriptura",
+        "Landeskirche"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Orthodoxe Begriffe",
+      "items": [
+        "Patriarch",
+        "Ikonostase",
+        "Hesychasmus",
+        "Tomos"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Allgemein christlich",
+      "items": [
+        "Taufe",
+        "Eucharistie",
+        "Gebet",
+        "Evangelium"
+      ]
+    }
+  ]
+}

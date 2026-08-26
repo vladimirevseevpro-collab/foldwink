@@ -1,56 +1,58 @@
 {
   "id": "puzzle-0002",
-  "title": "Kitchen and Beyond",
-  "difficulty": "easy",
-  "tags": [
-    "home"
-  ],
+  "title": "Bite and Hold",
+  "difficulty": "medium",
   "groups": [
     {
-      "id": "cutlery",
-      "label": "Cutlery",
+      "id": "teeth_items",
+      "label": "Things that have teeth",
+      "revealHint": "TEETH",
       "items": [
-        "Fork",
-        "Knife",
-        "Spoon",
-        "Ladle"
+        "Comb",
+        "Gear",
+        "Saw",
+        "Zipper"
       ]
     },
     {
-      "id": "fruits",
-      "label": "Fruits",
+      "id": "fasteners",
+      "label": "Sewing and fabric fasteners",
+      "revealHint": "FASTEN",
       "items": [
-        "Apple",
-        "Pear",
-        "Orange",
-        "Peach"
+        "Button",
+        "Clip",
+        "Snap",
+        "Pin"
       ]
     },
     {
-      "id": "rooms",
-      "label": "Rooms",
+      "id": "hair_styling",
+      "label": "Hair styling accessories",
+      "revealHint": "HAIR",
       "items": [
-        "Kitchen",
-        "Bedroom",
-        "Bathroom",
-        "Garage"
+        "Barrette",
+        "Scrunchie",
+        "Bobby Pin",
+        "Headband"
       ]
     },
     {
-      "id": "materials",
-      "label": "Materials",
+      "id": "hand_tools",
+      "label": "Workshop hand tools",
+      "revealHint": "TOOLS",
       "items": [
-        "Glass",
-        "Steel",
-        "Wood",
-        "Brick"
+        "Wrench",
+        "Pliers",
+        "Hammer",
+        "Chisel"
       ]
     }
   ],
   "meta": {
-    "difficultyScore": 6,
-    "editorialRank": 13,
-    "gptDifficulty": 18,
-    "gptRationale": "Still very accessible, but items like ladle and garage are a touch less instantly grouped than the most obvious beginner sets."
+    "theme": "objects",
+    "categoryType": "attribute",
+    "difficultyScore": 22,
+    "editorialRank": 28,
+    "gptRationale": "Zipper and Bobby Pin create multi-way cross-trails across grooming, workshop, and clothing."
   }
 }

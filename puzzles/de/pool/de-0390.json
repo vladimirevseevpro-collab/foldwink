@@ -1,55 +1,28 @@
 {
   "id": "de-0390",
-  "title": "Ozeanografie",
-  "difficulty": "medium",
-  "meta": {
-    "theme": "Ozeanografie",
-    "batch": "de-batch-04",
-    "difficultyScore": 31,
-    "editorialRank": 56,
-    "gptDifficulty": 73,
-    "gptRationale": "Ozeanografische Zonen, Strömungen und Forschungstechnik sind fachnah und enthalten mehrere wenig vertraute Fremdwörter mit hoher Verwechslungsgefahr."
-  },
+  "title": "Kleiderschrank",
+  "difficulty": "easy",
+  "meta": { "theme": "Kleiderschrank", "batch": "cq6-de-replacements-wave3" },
   "groups": [
     {
       "id": "group_a",
-      "label": "Meeresströmungen",
-      "items": [
-        "Golfstrom",
-        "Humboldtstrom",
-        "Kuroshio",
-        "Labradorstrom"
-      ]
+      "label": "Kopfbedeckungen",
+      "items": ["Mütze", "Hut", "Kappe", "Stirnband"]
     },
     {
       "id": "group_b",
-      "label": "Tiefsee-Zonen",
-      "items": [
-        "Hadal",
-        "Abyssal",
-        "Bathyal",
-        "Mesopelagial"
-      ]
+      "label": "Oberteile",
+      "items": ["T-Shirt", "Pullover", "Hemd", "Bluse"]
     },
     {
       "id": "group_c",
-      "label": "Meeresökosysteme",
-      "items": [
-        "Korallenriff",
-        "Mangrovenwälder",
-        "Tiefseehydrother.",
-        "Sargas someer"
-      ]
+      "label": "Unterteile",
+      "items": ["Jeans", "Rock", "Shorts", "Leggings"]
     },
     {
       "id": "group_d",
-      "label": "Meeresforschung",
-      "items": [
-        "ROV",
-        "Bathyscaph",
-        "Argo-Floats",
-        "Seekabel"
-      ]
+      "label": "Fußbekleidung",
+      "items": ["Sneaker", "Sandalen", "Stiefel", "Hausschuhe"]
     }
   ]
 }

@@ -1,54 +1,61 @@
 {
   "id": "de-0317",
-  "title": "Freud und Psychoanalyse",
-  "difficulty": "medium",
+  "title": "Kleidung für draußen",
+  "difficulty": "easy",
   "meta": {
-    "theme": "Psychoanalyse",
-    "batch": "de-batch-04",
-    "difficultyScore": 39,
-    "editorialRank": 43,
-    "gptDifficulty": 45,
-    "gptRationale": "Viele psychoanalytische Begriffe sind populärkulturell verankert, wodurch die Gruppen trotz etwas Fachsprache meist gut greifbar bleiben."
+    "theme": "Kleidung für draußen",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 1,
+    "tags": [
+      "kleidung",
+      "alltag",
+      "mode"
+    ],
+    "batch": "cq6-de-replacements",
+    "status": "needs-review",
+    "difficultyScore": 11
   },
   "groups": [
     {
-      "id": "group_a",
-      "label": "Freuds Triebe",
+      "id": "headwear",
+      "label": "Kopfbedeckungen",
       "items": [
-        "Eros",
-        "Thanatos",
-        "Sexualtrieb",
-        "Aggressionstrieb"
+        "Mütze",
+        "Hut",
+        "Kappe",
+        "Stirnband"
       ]
     },
     {
-      "id": "group_b",
-      "label": "Freuds Psyche",
+      "id": "tops",
+      "label": "Oberteile",
       "items": [
-        "Es",
-        "Ich",
-        "Über-Ich",
-        "Unbewusstes"
+        "Hemd",
+        "Pullover",
+        "T-Shirt",
+        "Bluse"
       ]
     },
     {
-      "id": "group_c",
-      "label": "Freuds Konzepte",
+      "id": "legwear",
+      "label": "Unterteile",
       "items": [
-        "Verdrängung",
-        "Übertragung",
-        "Komplex",
-        "Projektion"
+        "Hose",
+        "Rock",
+        "Shorts",
+        "Leggings"
       ]
     },
     {
-      "id": "group_d",
-      "label": "Freuds Methoden",
+      "id": "footwear",
+      "label": "Schuhe",
       "items": [
-        "Freie Assoziation",
-        "Traumdeutung",
-        "Analyse",
-        "Katharsis"
+        "Sneaker",
+        "Stiefel",
+        "Sandale",
+        "Wanderschuh"
       ]
     }
   ]

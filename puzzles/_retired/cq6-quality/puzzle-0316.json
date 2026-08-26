@@ -1,0 +1,58 @@
+{
+  "id": "puzzle-0316",
+  "title": "String Instruments",
+  "difficulty": "medium",
+  "editorialSummary": "Four families of string instrument by playing mechanism — bowed, plucked, struck, keyboard-plucked. False trail: the Clavichord looks like a keyboard instrument but its strings are struck by tangents, not plucked — it belongs with Dulcimer and Hammered Dulcimer, not with Harpsichord.",
+  "meta": {
+    "theme": "music",
+    "categoryType": "attribute",
+    "batch": "batch-08",
+    "status": "approved",
+    "difficultyScore": 36,
+    "editorialRank": 56,
+    "gptDifficulty": 70,
+    "gptRationale": "Instrument families are understandable, but distinguishing struck from keyboard-plucked demands more music-history knowledge than average."
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Bowed String Instruments",
+      "items": [
+        "Violin",
+        "Cello",
+        "Viola da Gamba",
+        "Erhu"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Hand-Plucked String Instruments",
+      "items": [
+        "Harp",
+        "Lute",
+        "Sitar",
+        "Banjo"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Struck String Instruments",
+      "items": [
+        "Dulcimer",
+        "Cimbalom",
+        "Clavichord",
+        "Piano"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Keyboard String Instruments",
+      "items": [
+        "Harpsichord",
+        "Virginal",
+        "Spinet",
+        "Clavicytherium"
+      ]
+    }
+  ]
+}

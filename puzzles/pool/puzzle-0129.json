@@ -1,58 +1,64 @@
 {
   "id": "puzzle-0129",
-  "title": "Root cause",
-  "difficulty": "medium",
-  "editorialSummary": "Four meanings of root.",
+  "title": "Ready for the Day",
+  "difficulty": "easy",
+  "editorialSummary": "A clean, everyday classification board. Each set is concrete and exact, with no specialist knowledge or artificial false trail.",
   "meta": {
-    "theme": "language",
-    "categoryType": "attribute",
-    "wordplay": true,
-    "batch": "batch-01",
-    "status": "approved",
-    "difficultyScore": 50,
-    "editorialRank": 63,
-    "gptDifficulty": 72,
-    "gptRationale": "Root has four distinct senses, but several groups include adjacent concepts rather than pure examples, which muddies the solve path."
+    "theme": "everyday routine",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "tags": [
+      "everyday",
+      "routine",
+      "personal-care",
+      "classification",
+      "easy"
+    ],
+    "batch": "cq6-en-replacements-wave1",
+    "status": "draft",
+    "difficultyScore": 4
   },
   "groups": [
     {
-      "id": "plant",
-      "label": "Underground Plant Parts",
+      "id": "phone-accessories",
+      "label": "Phone Accessories",
       "items": [
-        "Taproot",
-        "Tuber",
-        "Bulb",
-        "Rhizome"
+        "Car Mount",
+        "Phone Case",
+        "Phone Stand",
+        "Screen Protector"
       ]
     },
     {
-      "id": "math",
-      "label": "Math roots",
+      "id": "bathroom-textiles",
+      "label": "Bathroom Textiles",
       "items": [
-        "Square Root",
-        "Cube Root",
-        "Radical",
-        "Surd"
+        "Bath Mat",
+        "Bath Towel",
+        "Hand Towel",
+        "Washcloth"
       ]
     },
     {
-      "id": "word",
-      "label": "Word roots",
+      "id": "hair-accessories",
+      "label": "Hair Accessories",
       "items": [
-        "Etymology",
-        "Prefix",
-        "Suffix",
-        "Morpheme"
+        "Barrette",
+        "Hair Clip",
+        "Headband",
+        "Scrunchie"
       ]
     },
     {
-      "id": "tooth",
-      "label": "Tooth root",
+      "id": "first-aid-kit-items",
+      "label": "First-Aid Kit Items",
       "items": [
-        "Canal",
-        "Pulp",
-        "Enamel",
-        "Dentin"
+        "Antiseptic Wipe",
+        "Bandage",
+        "Gauze",
+        "Medical Tape"
       ]
     }
   ]

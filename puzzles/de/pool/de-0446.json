@@ -1,55 +1,35 @@
 {
   "id": "de-0446",
-  "title": "Dada und Surrealismus",
-  "difficulty": "medium",
+  "title": "Einkauf im Supermarkt",
+  "difficulty": "easy",
   "meta": {
-    "theme": "kunst",
-    "batch": "de-batch-05",
-    "difficultyScore": 31,
-    "editorialRank": 57,
-    "gptDifficulty": 74,
-    "gptRationale": "Dada und Surrealismus stehen kulturell nahe beieinander, sodass Techniken und Personen ohne präzises Kunstwissen leicht kreuzen."
+    "theme": "Supermarkteinkauf",
+    "batch": "cq6-de-replacements-wave7",
+    "difficultyScore": 8,
+    "editorialRank": 1,
+    "gptDifficulty": 12,
+    "gptRationale": "Vier vertraute Warengruppen mit eindeutigen Alltagsbegriffen und ohne konkurrierende Zuordnungen."
   },
   "groups": [
     {
       "id": "group_a",
-      "label": "Dada-Künstler",
-      "items": [
-        "Hugo Ball",
-        "Marcel Duchamp",
-        "Hannah Höch",
-        "Richard Huelsenbeck"
-      ]
+      "label": "Backwaren",
+      "items": ["Brötchen", "Brezel", "Croissant", "Baguette"]
     },
     {
       "id": "group_b",
-      "label": "Surrealisten",
-      "items": [
-        "Salvador Dalí",
-        "Magritte",
-        "Max Ernst",
-        "Yves Tanguy"
-      ]
+      "label": "Milchprodukte",
+      "items": ["Milch", "Joghurt", "Quark", "Käse"]
     },
     {
       "id": "group_c",
-      "label": "Dada-Techniken",
-      "items": [
-        "Fotomontage",
-        "Readymade",
-        "Lautgedicht",
-        "Zufallscollage"
-      ]
+      "label": "Obstsorten",
+      "items": ["Apfel", "Birne", "Banane", "Orange"]
     },
     {
       "id": "group_d",
-      "label": "Surrealist.-Techniken",
-      "items": [
-        "Cadavre exquis",
-        "Écriture automatique",
-        "Traumprotokoll",
-        "Grattage"
-      ]
+      "label": "Gemüsesorten",
+      "items": ["Möhre", "Gurke", "Paprika", "Zucchini"]
     }
   ]
 }

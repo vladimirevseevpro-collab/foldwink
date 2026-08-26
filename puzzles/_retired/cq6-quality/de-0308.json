@@ -1,0 +1,55 @@
+{
+  "id": "de-0308",
+  "title": "Erste Zeilen berühmter Werke",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Deutsche Literatur Anfänge",
+    "batch": "de-batch-04",
+    "difficultyScore": 42,
+    "editorialRank": 64,
+    "gptDifficulty": 79,
+    "gptRationale": "Erste Wörter berühmter Werke sind deutlich abstrakter als Titel- oder Figurenwissen und kaum über Teilassoziationen lösbar."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "Werke von Goethe",
+      "items": [
+        "Faust",
+        "Iphigenie",
+        "Egmont",
+        "Götz"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Werke von Schiller",
+      "items": [
+        "Kabale",
+        "Räuber",
+        "Wallenstein",
+        "Maria Stuart"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Werke von Kafka",
+      "items": [
+        "Verwandlung",
+        "Prozess",
+        "Schloss",
+        "Amerika"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "Werke von Thomas Mann",
+      "items": [
+        "Buddenbrooks",
+        "Zauberberg",
+        "Doktor Faustus",
+        "Tonio Kröger"
+      ]
+    }
+  ]
+}

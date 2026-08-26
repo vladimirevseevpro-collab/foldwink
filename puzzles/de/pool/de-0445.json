@@ -1,55 +1,35 @@
 {
   "id": "de-0445",
-  "title": "Expressionismus",
-  "difficulty": "medium",
+  "title": "Im Kleiderschrank",
+  "difficulty": "easy",
   "meta": {
-    "theme": "kunst",
-    "batch": "de-batch-05",
-    "difficultyScore": 32,
-    "editorialRank": 54,
-    "gptDifficulty": 69,
-    "gptRationale": "Expressionismus ist stilistisch erkennbar, doch Werke und Personen sind deutlich spezieller und laden zu kunsthistorischen Verwechslungen ein."
+    "theme": "alltag",
+    "batch": "cq6-de-replacements-wave6",
+    "difficultyScore": 10,
+    "editorialRank": 0,
+    "gptDifficulty": 10,
+    "gptRationale": "Oberteile, Beinbekleidung, Schuhe und Kleidungszubehör sind vier vertraute und klar getrennte Gruppen."
   },
   "groups": [
     {
       "id": "group_a",
-      "label": "Expressionis.-Maler",
-      "items": [
-        "Kirchner",
-        "Nolde",
-        "Beckmann",
-        "Kokoschka"
-      ]
+      "label": "Oberteile",
+      "items": ["T-Shirt", "Pullover", "Hemd", "Bluse"]
     },
     {
       "id": "group_b",
-      "label": "Expressionis.-Autoren",
-      "items": [
-        "Trakl",
-        "Heym",
-        "Benn",
-        "Toller"
-      ]
+      "label": "Beinbekleidung",
+      "items": ["Jeans", "Stoffhose", "Shorts", "Leggings"]
     },
     {
       "id": "group_c",
-      "label": "Expressionis.-Merkmale",
-      "items": [
-        "Verzerrung",
-        "Leuchtende Farben",
-        "Innenleben sichtbar",
-        "Städtische Angst"
-      ]
+      "label": "Schuhe",
+      "items": ["Turnschuhe", "Stiefel", "Sandalen", "Hausschuhe"]
     },
     {
       "id": "group_d",
-      "label": "Expressionis.-Werke",
-      "items": [
-        "Potsdamer Platz",
-        "Brücke Straßenszene",
-        "Tierschicksale",
-        "Mann und Frau"
-      ]
+      "label": "Kleidungszubehör",
+      "items": ["Gürtel", "Schal", "Mütze", "Handschuhe"]
     }
   ]
 }

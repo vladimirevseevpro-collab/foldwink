@@ -1,0 +1,55 @@
+{
+  "id": "de-0494",
+  "title": "SETI und Außerirdische",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "astronomie",
+    "batch": "de-batch-05",
+    "difficultyScore": 31,
+    "editorialRank": 57,
+    "gptDifficulty": 75,
+    "gptRationale": "SETI, Theorien über Außerirdische und Projekte liegen semantisch eng zusammen und setzen teils sehr spezielles SciTech-Vorwissen voraus."
+  },
+  "groups": [
+    {
+      "id": "group_a",
+      "label": "SETI-Methoden & -Instrumente",
+      "items": [
+        "Radioteleskop",
+        "Optisches SETI",
+        "Technosignaturen",
+        "Allen Telescope Array"
+      ]
+    },
+    {
+      "id": "group_b",
+      "label": "Außerird.-Konzepte",
+      "items": [
+        "Fermi-Paradoxon",
+        "Kardaschev-Skala",
+        "Drake-Gleichung",
+        "Große Filter"
+      ]
+    },
+    {
+      "id": "group_c",
+      "label": "Außerird.-Theorien",
+      "items": [
+        "Rare Earth Hypothesis",
+        "Dunkle Wald-Theorie",
+        "Zoo-Hypothese",
+        "Simulationshypothese"
+      ]
+    },
+    {
+      "id": "group_d",
+      "label": "SETI-Projekte",
+      "items": [
+        "SETI@home",
+        "Breakthrough Listen",
+        "Project Phoenix",
+        "SERENDIP"
+      ]
+    }
+  ]
+}

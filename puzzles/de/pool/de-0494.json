@@ -1,54 +1,54 @@
 {
   "id": "de-0494",
-  "title": "SETI und Außerirdische",
-  "difficulty": "medium",
+  "title": "Im Kleiderschrank",
+  "difficulty": "easy",
   "meta": {
-    "theme": "astronomie",
-    "batch": "de-batch-05",
-    "difficultyScore": 31,
-    "editorialRank": 57,
-    "gptDifficulty": 75,
-    "gptRationale": "SETI, Theorien über Außerirdische und Projekte liegen semantisch eng zusammen und setzen teils sehr spezielles SciTech-Vorwissen voraus."
+    "theme": "Kleidung",
+    "batch": "cq6-de-replacements-wave7",
+    "difficultyScore": 8,
+    "editorialRank": 1,
+    "gptDifficulty": 12,
+    "gptRationale": "Die vier Kleidungsarten sind im deutschen Alltag sehr geläufig und jedes Wort hat eine eindeutige Funktion."
   },
   "groups": [
     {
       "id": "group_a",
-      "label": "SETI-Methoden & -Instrumente",
+      "label": "Oberteile",
       "items": [
-        "Radioteleskop",
-        "Optisches SETI",
-        "Technosignaturen",
-        "Allen Telescope Array"
+        "T-Shirt",
+        "Pullover",
+        "Hemd",
+        "Bluse"
       ]
     },
     {
       "id": "group_b",
-      "label": "Außerird.-Konzepte",
+      "label": "Unterteile",
       "items": [
-        "Fermi-Paradoxon",
-        "Kardaschev-Skala",
-        "Drake-Gleichung",
-        "Große Filter"
+        "Hose",
+        "Rock",
+        "Shorts",
+        "Leggings"
       ]
     },
     {
       "id": "group_c",
-      "label": "Außerird.-Theorien",
+      "label": "Schuhe",
       "items": [
-        "Rare Earth Hypothesis",
-        "Dunkle Wald-Theorie",
-        "Zoo-Hypothese",
-        "Simulationshypothese"
+        "Sneaker",
+        "Sandale",
+        "Stiefel",
+        "Hausschuh"
       ]
     },
     {
       "id": "group_d",
-      "label": "SETI-Projekte",
+      "label": "Kopfbedeckungen",
       "items": [
-        "SETI@home",
-        "Breakthrough Listen",
-        "Project Phoenix",
-        "SERENDIP"
+        "Mütze",
+        "Kappe",
+        "Hut",
+        "Kopftuch"
       ]
     }
   ]

@@ -1,58 +1,43 @@
 {
   "id": "puzzle-0316",
-  "title": "String Instruments",
+  "title": "At the Airport",
   "difficulty": "medium",
-  "editorialSummary": "Four families of string instrument by playing mechanism — bowed, plucked, struck, keyboard-plucked. False trail: the Clavichord looks like a keyboard instrument but its strings are struck by tangents, not plucked — it belongs with Dulcimer and Hammered Dulcimer, not with Harpsichord.",
+  "editorialSummary": "Four familiar travel clusters separate documents, luggage, airport areas, and fixtures seen after boarding.",
   "meta": {
-    "theme": "music",
-    "categoryType": "attribute",
-    "batch": "batch-08",
+    "theme": "everyday",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "batch": "cq6-en-replacements-wave5",
     "status": "approved",
-    "difficultyScore": 36,
-    "editorialRank": 56,
-    "gptDifficulty": 70,
-    "gptRationale": "Instrument families are understandable, but distinguishing struck from keyboard-plucked demands more music-history knowledge than average."
+    "difficultyScore": 13,
+    "tags": ["travel", "everyday", "medium"]
   },
   "groups": [
     {
-      "id": "g1",
-      "label": "Bowed String Instruments",
-      "items": [
-        "Violin",
-        "Cello",
-        "Viola da Gamba",
-        "Erhu"
-      ]
+      "id": "documents",
+      "label": "Travel Documents",
+      "items": ["Passport", "Visa", "Boarding Pass", "ID Card"],
+      "revealHint": "PAPER"
     },
     {
-      "id": "g2",
-      "label": "Hand-Plucked String Instruments",
-      "items": [
-        "Harp",
-        "Lute",
-        "Sitar",
-        "Banjo"
-      ]
+      "id": "luggage",
+      "label": "Luggage Types",
+      "items": ["Carry-on", "Suitcase", "Duffel", "Garment Bag"],
+      "revealHint": "PACK"
     },
     {
-      "id": "g3",
-      "label": "Struck String Instruments",
-      "items": [
-        "Dulcimer",
-        "Cimbalom",
-        "Clavichord",
-        "Piano"
-      ]
+      "id": "areas",
+      "label": "Airport Areas",
+      "items": ["Gate", "Lounge", "Terminal", "Baggage Claim"],
+      "revealHint": "WAIT"
     },
     {
-      "id": "g4",
-      "label": "Keyboard String Instruments",
-      "items": [
-        "Harpsichord",
-        "Virginal",
-        "Spinet",
-        "Clavicytherium"
-      ]
+      "id": "cabin",
+      "label": "Cabin Fixtures",
+      "items": ["Seatbelt", "Overhead Bin", "Tray Table", "Call Button"],
+      "revealHint": "SEAT"
     }
   ]
 }

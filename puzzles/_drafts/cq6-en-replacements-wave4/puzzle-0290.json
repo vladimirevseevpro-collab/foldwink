@@ -1,0 +1,67 @@
+{
+  "id": "puzzle-0290",
+  "title": "Home Routine",
+  "difficulty": "medium",
+  "editorialSummary": "A familiar home board separates products for cleaning, fabric used around the house, bathroom fixtures and casual clothing.",
+  "meta": {
+    "theme": "everyday",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "batch": "cq6-en-replacements-wave4",
+    "status": "draft",
+    "difficultyScore": 11,
+    "tags": [
+      "home",
+      "everyday",
+      "medium"
+    ]
+  },
+  "groups": [
+    {
+      "id": "cleaners",
+      "label": "Household Cleaners",
+      "items": [
+        "Dish Soap",
+        "Bleach",
+        "Detergent",
+        "Glass Cleaner"
+      ],
+      "revealHint": "SPARK"
+    },
+    {
+      "id": "linens",
+      "label": "Household Linens",
+      "items": [
+        "Towel",
+        "Bedsheet",
+        "Pillowcase",
+        "Tablecloth"
+      ],
+      "revealHint": "FOLD"
+    },
+    {
+      "id": "entryway",
+      "label": "Entryway Items",
+      "items": [
+        "Doormat",
+        "Coat Rack",
+        "Umbrella Stand",
+        "Shoe Rack"
+      ],
+      "revealHint": "DOOR"
+    },
+    {
+      "id": "clothing",
+      "label": "Casual Clothing",
+      "items": [
+        "Jeans",
+        "T-shirt",
+        "Hoodie",
+        "Shorts"
+      ],
+      "revealHint": "OFFDAY"
+    }
+  ]
+}

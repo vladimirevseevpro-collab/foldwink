@@ -1,66 +1,67 @@
 {
   "id": "hard-024",
-  "title": "Stone Cold",
+  "title": "Garden Shed",
   "difficulty": "hard",
-  "editorialSummary": "Gemstones that can plausibly be sorted by color, mineral family, OR birthstone month — all three sorting principles are simultaneously available, making every group feel unstable until you fix the correct axis (mineral family). False trail 1: Ruby, Garnet, and Red Spinel are all red — players will try to group them together, but Ruby is corundum, Garnet is a separate mineral group, and Red Spinel is magnesium aluminium oxide. False trail 2: Sapphire and Ruby are both corundum (aluminum oxide), so they must share the corundum group even though they are different colors and different months. False trail 3: Aquamarine and Emerald are both beryl — players who don't know mineralogy will separate them by color (blue vs. green). False trail 4: Topaz is often confused with quartz (citrine looks similar in color), but Topaz is aluminum silicate fluoride while Citrine is quartz — placed in separate mineral groups. Note: all mineral family assignments are verifiable in the Gemological Institute of America (GIA) standard references.",
+  "editorialSummary": "Four practical garden-shed clusters divide working tools, planting supplies, watering equipment and protective outdoor wear.",
   "meta": {
-    "theme": "mineralogy",
-    "categoryType": "attribute",
-    "batch": "batch-09",
-    "status": "draft",
-    "difficultyScore": 42,
-    "editorialRank": 61,
-    "gptDifficulty": 74,
-    "gptRationale": "Gem families are specialized knowledge and several stones feel plausibly cross-grouped unless you already know mineral classification."
+    "theme": "everyday",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 0,
+    "batch": "cq6-en-replacements-wave6",
+    "status": "approved",
+    "difficultyScore": 15,
+    "tags": [
+      "garden",
+      "everyday",
+      "hard"
+    ]
   },
   "groups": [
     {
-      "id": "g1",
-      "label": "Corundum Family",
-      "revealHint": "",
+      "id": "supports",
+      "label": "Garden Supports",
       "items": [
-        "Ruby",
-        "Blue Sapphire",
-        "Yellow Sapphire",
-        "Padparadscha"
+        "Trellis",
+        "Stake",
+        "Plant Tie",
+        "Tomato Cage"
       ],
-      "color": "yellow"
+      "revealHint": "STAND"
     },
     {
-      "id": "g2",
-      "label": "Beryl Family",
-      "revealHint": "",
+      "id": "planting",
+      "label": "Planting Supplies",
       "items": [
-        "Emerald",
-        "Aquamarine",
-        "Morganite",
-        "Heliodor"
+        "Seeds",
+        "Soil",
+        "Fertilizer",
+        "Pots"
       ],
-      "color": "green"
+      "revealHint": "GROW"
     },
     {
-      "id": "g3",
-      "label": "Quartz Family",
-      "revealHint": "",
+      "id": "protection",
+      "label": "Plant Protection",
       "items": [
-        "Amethyst",
-        "Citrine",
-        "Rose Quartz",
-        "Smoky Quartz"
+        "Mulch",
+        "Plant Cover",
+        "Shade Cloth",
+        "Netting"
       ],
-      "color": "blue"
+      "revealHint": "GUARD"
     },
     {
-      "id": "g4",
-      "label": "Garnet Family",
-      "revealHint": "",
+      "id": "wear",
+      "label": "Outdoor Workwear",
       "items": [
-        "Almandine",
-        "Tsavorite",
-        "Spessartite",
-        "Pyrope"
+        "Gloves",
+        "Boots",
+        "Sun Hat",
+        "Raincoat"
       ],
-      "color": "purple"
+      "revealHint": "WEAR"
     }
   ]
 }

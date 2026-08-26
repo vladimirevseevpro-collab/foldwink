@@ -1,55 +1,38 @@
 {
   "id": "de-0308",
-  "title": "Erste Zeilen berühmter Werke",
-  "difficulty": "medium",
+  "title": "Garten im Sommer",
+  "difficulty": "easy",
   "meta": {
-    "theme": "Deutsche Literatur Anfänge",
-    "batch": "de-batch-04",
-    "difficultyScore": 42,
-    "editorialRank": 64,
-    "gptDifficulty": 79,
-    "gptRationale": "Erste Wörter berühmter Werke sind deutlich abstrakter als Titel- oder Figurenwissen und kaum über Teilassoziationen lösbar."
+    "theme": "Garten im Sommer",
+    "categoryType": "classification",
+    "wordplay": false,
+    "fairnessRisk": 0,
+    "repetitionRisk": 1,
+    "tags": ["garten", "alltag", "sommer"],
+    "batch": "cq6-de-replacements",
+    "status": "needs-review",
+    "difficultyScore": 12
   },
   "groups": [
     {
-      "id": "group_a",
-      "label": "Werke von Goethe",
-      "items": [
-        "Faust",
-        "Iphigenie",
-        "Egmont",
-        "Götz"
-      ]
+      "id": "garden_tools",
+      "label": "Gartenwerkzeuge",
+      "items": ["Spaten", "Harke", "Gartenschere", "Gießkanne"]
     },
     {
-      "id": "group_b",
-      "label": "Werke von Schiller",
-      "items": [
-        "Kabale",
-        "Räuber",
-        "Wallenstein",
-        "Maria Stuart"
-      ]
+      "id": "garden_flowers",
+      "label": "Blumen im Garten",
+      "items": ["Tulpe", "Rose", "Dahlie", "Narzisse"]
     },
     {
-      "id": "group_c",
-      "label": "Werke von Kafka",
-      "items": [
-        "Verwandlung",
-        "Prozess",
-        "Schloss",
-        "Amerika"
-      ]
+      "id": "garden_fruit",
+      "label": "Obstsorten",
+      "items": ["Apfel", "Birne", "Kirsche", "Pflaume"]
     },
     {
-      "id": "group_d",
-      "label": "Werke von Thomas Mann",
-      "items": [
-        "Buddenbrooks",
-        "Zauberberg",
-        "Doktor Faustus",
-        "Tonio Kröger"
-      ]
+      "id": "garden_insects",
+      "label": "Kleine Gartenbesucher",
+      "items": ["Biene", "Hummel", "Schmetterling", "Marienkäfer"]
     }
   ]
 }
