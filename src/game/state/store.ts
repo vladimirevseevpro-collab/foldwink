@@ -19,6 +19,7 @@ import {
   getHardRampedByIndex,
 } from "../../puzzles/loader";
 import { getDailyPuzzleId } from "../../puzzles/daily";
+import { getNextProgressionPuzzle } from "../../puzzles/progression";
 import { shuffleItems, seedFromString } from "../engine/shuffle";
 import { canSubmit, findMatchingGroup, isOneAway } from "../engine/submit";
 import { applyCorrectGroup, applyIncorrectGuess, isLoss, isWin } from "../engine/progress";
@@ -27,6 +28,9 @@ import { canWinkGroup } from "../engine/foldwinkTabs";
 import { applyGameResult } from "../../stats/stats";
 import { todayLocal } from "../../utils/date";
 import { mediumReadiness, hardReadiness } from "../engine/readiness";
+import { getLangSync } from "../../i18n/useLanguage";
+import { isSupporter } from "../../monetization/supporter";
+import { trackEvent } from "../../analytics/eventLog";
 
 type FlashKind = "correct" | "incorrect" | "one-away" | null;
 
@@ -49,6 +53,7 @@ export interface StoreState {
   streakDelta: number;
   newBest: boolean;
   onboarded: boolean;
+  howToPlayOpen: boolean;
 
   startStandard: () => void;
   startEasy: () => void;
@@ -63,8 +68,9 @@ export interface StoreState {
   showStats: () => void;
   startNextSame: () => void;
   clearFlash: () => void;
-  dismissOnboarding: () => void;
-  showOnboarding: () => void;
+  completeOnboarding: () => void;
+  openHowToPlay: () => void;
+  closeHowToPlay: () => void;
   winkTab: (groupId: string) => void;
 }
 
@@ -205,6 +211,7 @@ export function createStore(deps: StoreDeps = defaultDeps) {
     streakDelta: 0,
     newBest: false,
     onboarded: deps.initialOnboarded,
+    howToPlayOpen: false,
 
     startStandard: () => {
       get().startEasy();
@@ -212,13 +219,18 @@ export function createStore(deps: StoreDeps = defaultDeps) {
 
     startEasy: () => {
       const progress = get().progress;
+      const stats = get().stats;
       const cursor = resolveCursor(progress, "easy");
+      const pool = deps.getEasyPool ? deps.getEasyPool() : deps.easyPool;
+      const targetPool = pool.length > 0 ? pool : deps.getPool ? deps.getPool() : deps.pool;
+      const progressionPuzzle = getNextProgressionPuzzle({
+        pool: targetPool,
+        solvedIds: stats.solvedPuzzleIds,
+        cursor,
+        difficulty: "easy",
+      });
       const rampedGetter = deps.getEasyRampedByIndex ?? deps.getEasyByIndex;
-      const fromEasy = rampedGetter(cursor);
-      // Fallback to the full pool when there is no easy puzzle loaded (edge
-      // case for test fixtures with no easy entries). This keeps the action
-      // safe for callers that don't distinguish pools.
-      const puzzle = fromEasy ?? deps.getPuzzleByIndex(cursor);
+      const puzzle = progressionPuzzle ?? rampedGetter(cursor) ?? deps.getPuzzleByIndex(cursor);
       if (!puzzle) return;
       const active = initialActive(puzzle, "standard", String(deps.now()), true, deps.now());
       set({
@@ -229,14 +241,31 @@ export function createStore(deps: StoreDeps = defaultDeps) {
         flash: null,
         streakDelta: 0,
         newBest: false,
+      });
+      trackEvent({
+        name: "mode_start",
+        props: {
+          surface: "menu",
+          mode: "standard",
+          difficulty: "easy",
+          lang: getLangSync(),
+        },
       });
     },
 
     startMedium: () => {
       const progress = get().progress;
+      const stats = get().stats;
       const cursor = resolveCursor(progress, "medium");
+      const pool = deps.getMediumPool ? deps.getMediumPool() : deps.mediumPool;
+      const progressionPuzzle = getNextProgressionPuzzle({
+        pool,
+        solvedIds: stats.solvedPuzzleIds,
+        cursor,
+        difficulty: "medium",
+      });
       const rampedGetter = deps.getMediumRampedByIndex ?? deps.getMediumByIndex;
-      const puzzle = rampedGetter(cursor);
+      const puzzle = progressionPuzzle ?? rampedGetter(cursor);
       if (!puzzle) return;
       const active = initialActive(puzzle, "standard", String(deps.now()), true, deps.now());
       set({
@@ -248,15 +277,30 @@ export function createStore(deps: StoreDeps = defaultDeps) {
         streakDelta: 0,
         newBest: false,
       });
+      trackEvent({
+        name: "mode_start",
+        props: {
+          surface: "menu",
+          mode: "standard",
+          difficulty: "medium",
+          lang: getLangSync(),
+        },
+      });
     },
 
     startHard: () => {
       const progress = get().progress;
+      const stats = get().stats;
       const cursor = resolveCursor(progress, "hard");
+      const pool = deps.getHardPool ? deps.getHardPool() : deps.hardPool;
+      const progressionPuzzle = getNextProgressionPuzzle({
+        pool,
+        solvedIds: stats.solvedPuzzleIds,
+        cursor,
+        difficulty: "hard",
+      });
       const rampedGetter = deps.getHardRampedByIndex ?? deps.getHardByIndex;
-      const puzzle = rampedGetter(cursor);
-      // Hard is scaffolded — if no Hard content exists yet, the action is a
-      // safe no-op. The menu surfaces this via its own disabled state.
+      const puzzle = progressionPuzzle ?? rampedGetter(cursor);
       if (!puzzle) return;
       const active = initialActive(puzzle, "standard", String(deps.now()), true, deps.now());
       set({
@@ -267,6 +311,15 @@ export function createStore(deps: StoreDeps = defaultDeps) {
         flash: null,
         streakDelta: 0,
         newBest: false,
+      });
+      trackEvent({
+        name: "mode_start",
+        props: {
+          surface: "menu",
+          mode: "standard",
+          difficulty: "hard",
+          lang: getLangSync(),
+        },
       });
     },
 
@@ -305,6 +358,15 @@ export function createStore(deps: StoreDeps = defaultDeps) {
         flash: null,
         streakDelta: 0,
         newBest: false,
+      });
+      trackEvent({
+        name: "mode_start",
+        props: {
+          surface: "menu",
+          mode: "daily",
+          difficulty: puzzle.difficulty,
+          lang: getLangSync(),
+        },
       });
     },
 
@@ -361,12 +423,23 @@ export function createStore(deps: StoreDeps = defaultDeps) {
       let next: ActiveGame;
       let flash: FlashKind;
       if (matched) {
-        next = applyCorrectGroup(active, matched.id);
+        next = applyCorrectGroup(active, matched.id, matched.items);
         flash = "correct";
       } else {
         next = applyIncorrectGuess(active);
         flash = isOneAway(active.selection, puzzle) ? "one-away" : "incorrect";
       }
+      trackEvent({
+        name: "round_submit",
+        props: {
+          surface: "game",
+          mode: active.mode,
+          difficulty: puzzle.difficulty,
+          outcome:
+            flash === "correct" ? "correct" : flash === "one-away" ? "one_away" : "incorrect",
+          lang: getLangSync(),
+        },
+      });
       const finalized = finalizeIfEnded(next, puzzle, deps.now());
       if (!finalized.ended || !finalized.active.result) {
         set({ active: finalized.active, flash });
@@ -436,8 +509,18 @@ export function createStore(deps: StoreDeps = defaultDeps) {
         streakDelta,
         newBest,
       });
-      const schedule =
-        deps.scheduleTransition ?? ((cb) => cb());
+      trackEvent({
+        name: "round_finish",
+        props: {
+          surface: "game",
+          mode: active.mode,
+          difficulty: puzzle.difficulty,
+          outcome: result,
+          has_support_flag: isSupporter() ? "yes" : "no",
+          lang: getLangSync(),
+        },
+      });
+      const schedule = deps.scheduleTransition ?? ((cb) => cb());
       const currentScreen = get().screen;
       schedule(() => {
         // Guard against a race: if the player already navigated elsewhere
@@ -490,15 +573,26 @@ export function createStore(deps: StoreDeps = defaultDeps) {
 
     clearFlash: () => set({ flash: null }),
 
-    dismissOnboarding: () => set({ onboarded: true }),
+    completeOnboarding: () => set({ onboarded: true }),
 
-    showOnboarding: () => set({ onboarded: false }),
+    openHowToPlay: () => set({ howToPlayOpen: true }),
+
+    closeHowToPlay: () => set({ howToPlayOpen: false }),
 
     winkTab: (groupId: string) => {
       const { active, puzzle } = get();
       if (!active || !puzzle || active.result) return;
       if (!canWinkGroup(puzzle, active.solvedGroupIds, active.winkedGroupId, groupId)) return;
       set({ active: { ...active, winkedGroupId: groupId } });
+      trackEvent({
+        name: "wink_used",
+        props: {
+          surface: "game",
+          mode: active.mode,
+          difficulty: puzzle.difficulty,
+          lang: getLangSync(),
+        },
+      });
     },
   }));
 }
