@@ -24,6 +24,8 @@ import { mergeDailyHistory } from "../stats/dailyRitual";
 import { PrivacyPrompt } from "../components/PrivacyPrompt";
 import { isSupporter } from "../monetization/supporter";
 import { InstallFoldwink } from "../components/InstallFoldwink";
+import { ArchivistPassportModal } from "../components/ArchivistPassportModal";
+import { IronContractModal } from "../components/IronContractModal";
 
 export function MenuScreen() {
   const startEasy = useGameStore((s) => s.startEasy);
@@ -44,6 +46,8 @@ export function MenuScreen() {
   const t = useT();
   const dailyHistory = mergeDailyHistory(loadDailyHistory(), todayDailyRecord);
   const [consentStatus, setConsent] = useState(() => getConsentStatus());
+  const [isPassportOpen, setIsPassportOpen] = useState(false);
+  const [isContractOpen, setIsContractOpen] = useState(false);
 
   useEffect(() => {
     trackEvent({
@@ -158,10 +162,38 @@ export function MenuScreen() {
                 {hardButtonLabel}
               </Button>
             )}
-            <Button variant="ghost" onClick={showStats}>
-              {t.menu.stats}
+            <div className="flex gap-2 w-full">
+              <Button variant="ghost" className="flex-1" onClick={showStats}>
+                {t.menu.stats}
+              </Button>
+              <Button
+                variant="ghost"
+                className="flex-1"
+                onClick={() => setIsPassportOpen(true)}
+              >
+                📜 {lang === "ru" ? "Паспорт" : lang === "de" ? "Pass" : "Passport"}
+              </Button>
+            </div>
+
+            <Button
+              variant="secondary"
+              className="text-xs border-red-900/40 text-red-300 hover:bg-red-950/20"
+              onClick={() => setIsContractOpen(true)}
+            >
+              ⚔️ {lang === "ru" ? "Железный Контракт" : lang === "de" ? "Eiserner Vertrag" : "Iron Contract"}
             </Button>
           </div>
+
+          {isPassportOpen && (
+            <ArchivistPassportModal
+              onClose={() => setIsPassportOpen(false)}
+              onOpenContract={() => setIsContractOpen(true)}
+            />
+          )}
+
+          {isContractOpen && (
+            <IronContractModal onClose={() => setIsContractOpen(false)} />
+          )}
 
           {/* Show readiness caption from game 1 — disclosure of the existing
               unlock rule is anti-dark-pattern. Hidden before v0.6.6. */}
