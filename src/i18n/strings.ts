@@ -19,6 +19,7 @@ export interface Strings {
     emptyPoolDetail: string;
     iphoneTip: string;
     iphoneTipBody: string;
+    installApp: string;
     languageAria: string;
   };
   game: {
@@ -33,6 +34,11 @@ export interface Strings {
     mistakesLabel: string;
     mistakesAria: (used: number, max: number) => string;
     selectedAria: (n: number, max: number) => string;
+    gridAria: string;
+    elapsedAria: (time: string) => string;
+    solvedCardAria: (value: string, group: string) => string;
+    correctGroup: string;
+    incorrectGroup: string;
   };
   difficulty: {
     easy: string;
@@ -115,6 +121,17 @@ export interface Strings {
     noHistoryYet: string;
     solvedShort: string;
     failedShort: string;
+    foldSolved: string;
+    foldMissed: string;
+    foldEmpty: string;
+    todayMarker: string;
+    momentLabel: string;
+    momentFirst: string;
+    momentFlawless: string;
+    momentLogged: string;
+    momentFastest: (time: string) => string;
+    momentFastestCompared: (time: string, date: string) => string;
+    recentSummary: (solved: number, recorded: number) => string;
   };
   share: {
     shareResult: string;
@@ -171,17 +188,48 @@ export interface Strings {
   };
   onboarding: {
     howToPlay: string;
+    progressAria: string;
+    stepLabel: (current: number, total: number) => string;
+    selectTitle: string;
+    selectBody: string;
+    selectedCount: (selected: number, total: number) => string;
+    demoCards: readonly string[];
+    demoGroupAria: string;
+    submitTitle: string;
+    submitBody: string;
+    correctGroup: string;
+    continueAction: string;
+    tabsTitle: string;
     tabsHint: string;
-    rulePick: string;
-    ruleEasy: string;
-    ruleEasyBody: string;
-    ruleMedium: string;
-    ruleMediumBody: string;
+    tabsBody: string;
+    demoTabs: readonly string[];
+    demoCategory: string;
     wink: string;
-    ruleMaster: string;
-    ruleMasterBody: string;
+    winkAria: string;
+    winkPrompt: string;
+    winkResult: string;
+    skip: string;
     gotIt: string;
     menuLink: string;
+    guildTitle: string;
+    guildBody: string;
+  };
+  embed: {
+    fullSizeTitle: string;
+    fullSizeBody: string;
+    openFullSize: string;
+    continueHere: string;
+  };
+  monetization: {
+    tipCta: (amount: number) => string;
+    supporterHeadlineResult: string;
+    supporterHeadlineStats: string;
+    supporterHeadlineMenu: string;
+    supporterSublineResult: (price: string) => string;
+    supporterSublineAmbient: (price: string) => string;
+    unlockFor: (price: string) => string;
+    badgeLabel: string;
+    badgeTitle: string;
   };
 }
 
@@ -205,6 +253,7 @@ export const strings: Record<Lang, Strings> = {
       iphoneTip: "✦ iPhone tip",
       iphoneTipBody:
         "Tap Safari's Share button, then Add to Home Screen for a cleaner full-screen play.",
+      installApp: "Install Foldwink",
       languageAria: "Language",
     },
     game: {
@@ -219,6 +268,11 @@ export const strings: Record<Lang, Strings> = {
       mistakesLabel: "Mistakes",
       mistakesAria: (u, m) => `Mistakes used ${u} of ${m}`,
       selectedAria: (n, m) => `Selected ${n} of ${m}`,
+      gridAria: "Puzzle grid. Use arrow keys to move between cards.",
+      elapsedAria: (time) => `Elapsed time: ${time}`,
+      solvedCardAria: (value, group) => `${value}. Solved group: ${group}`,
+      correctGroup: "Correct group",
+      incorrectGroup: "Not a group",
     },
     difficulty: {
       easy: "Easy",
@@ -305,6 +359,17 @@ export const strings: Record<Lang, Strings> = {
       noHistoryYet: "No daily history yet. Solve today's puzzle to start.",
       solvedShort: "Solved",
       failedShort: "Failed",
+      foldSolved: "Solved",
+      foldMissed: "Missed",
+      foldEmpty: "Not played",
+      todayMarker: "Today",
+      momentLabel: "Daily note",
+      momentFirst: "First daily on the record.",
+      momentFlawless: "First flawless daily win.",
+      momentLogged: "Today's daily is logged.",
+      momentFastest: (time) => `Fastest daily win at ${time}.`,
+      momentFastestCompared: (time, date) => `Previous best ${time} on ${date}.`,
+      recentSummary: (solved, recorded) => `${solved}/${recorded} recent dailies solved.`,
     },
     share: {
       shareResult: "Share result",
@@ -363,17 +428,53 @@ export const strings: Record<Lang, Strings> = {
     },
     onboarding: {
       howToPlay: "How to play",
-      tabsHint: "Tabs hint the 4 hidden categories",
-      rulePick: "Pick 4 cards that share a category. 4 mistakes and you're out.",
-      ruleEasy: "Easy",
-      ruleEasyBody: "— 16 cards, 4 groups, no tabs.",
-      ruleMedium: "Medium",
-      ruleMediumBody: "— tabs reveal letters as you solve. One free",
+      progressAria: "Tutorial progress",
+      stepLabel: (current, total) => `Step ${current} of ${total}`,
+      selectTitle: "Find four that belong",
+      selectBody:
+        "Tap all four cards. They share one category; the full puzzle allows 4 mistakes.",
+      selectedCount: (selected, total) => `${selected} of ${total} selected`,
+      demoCards: ["APPLE", "PEAR", "LIME", "PLUM"],
+      demoGroupAria: "Demo group of four fruit cards",
+      submitTitle: "Check your group",
+      submitBody: "When four cards are selected, press Submit.",
+      correctGroup: "Correct — Fruit",
+      continueAction: "Continue",
+      tabsTitle: "Read the Foldwink Tabs",
+      tabsHint: "Four hidden categories",
+      tabsBody:
+        "Tabs reveal category letters as you solve. Once per puzzle, Wink one tab to reveal its full name.",
+      demoTabs: ["F··", "M··", "S··", "T··"],
+      demoCategory: "FRUIT",
       wink: "✦ Wink",
-      ruleMaster: "Master",
-      ruleMasterBody: "— slower reveals, no Wink.",
+      winkAria: "Wink the Fruit tab",
+      winkPrompt: "Tap the highlighted tab to try your one Wink.",
+      winkResult: "Wink reveals a category, but you still find its four cards.",
+      skip: "Skip",
       gotIt: "Got it",
       menuLink: "How to play",
+      guildTitle: "Archivist Guild, Loot & Contracts",
+      guildBody:
+        "Every solve awards an archival dispatch envelope with Ink 💧, Wax 🕯️, XP and rare collectible stamps. Level up your Scribe Passport or wager your wax in high-stakes Sudden Death Iron Contracts ⚔️!",
+    },
+    embed: {
+      fullSizeTitle: "Give the puzzle the whole screen",
+      fullSizeBody:
+        "This page is squeezing the game into a small frame. Open the same game directly for readable cards and full-size controls.",
+      openFullSize: "Open full-size game",
+      continueHere: "Continue in the small frame",
+    },
+    monetization: {
+      tipCta: (amount) => `Support Foldwink · €${amount} tip`,
+      supporterHeadlineResult: "Become a Supporter ★",
+      supporterHeadlineStats: "Support Foldwink",
+      supporterHeadlineMenu: "Support Foldwink ★",
+      supporterSublineResult: (price) =>
+        `One-time ${price} · keeps Foldwink ad-light and growing.`,
+      supporterSublineAmbient: (price) => `${price} · cosmetic Supporter ★ on your stats.`,
+      unlockFor: (price) => `Unlock for ${price}`,
+      badgeLabel: "Supporter",
+      badgeTitle: "Thanks for supporting Foldwink",
     },
   },
 
@@ -396,6 +497,7 @@ export const strings: Record<Lang, Strings> = {
       iphoneTip: "✦ iPhone-Tipp",
       iphoneTipBody:
         "Tippe in Safari auf Teilen und dann „Zum Home-Bildschirm“ für Vollbildspiel ohne Leiste.",
+      installApp: "Foldwink installieren",
       languageAria: "Sprache",
     },
     game: {
@@ -410,6 +512,11 @@ export const strings: Record<Lang, Strings> = {
       mistakesLabel: "Fehler",
       mistakesAria: (u, m) => `${u} von ${m} Fehlern`,
       selectedAria: (n, m) => `${n} von ${m} ausgewählt`,
+      gridAria: "Rätselraster. Mit den Pfeiltasten zwischen Karten wechseln.",
+      elapsedAria: (time) => `Vergangene Zeit: ${time}`,
+      solvedCardAria: (value, group) => `${value}. Gelöste Gruppe: ${group}`,
+      correctGroup: "Richtige Gruppe",
+      incorrectGroup: "Keine Gruppe",
     },
     difficulty: {
       easy: "Leicht",
@@ -494,10 +601,20 @@ export const strings: Record<Lang, Strings> = {
       solved: "gelöst",
       missed: "verpasst",
       nextDailyIn: "Nächstes Tagesrätsel in",
-      noHistoryYet:
-        "Noch kein Verlauf. Löse das heutige Tagesrätsel, um zu starten.",
+      noHistoryYet: "Noch kein Verlauf. Löse das heutige Tagesrätsel, um zu starten.",
       solvedShort: "Gelöst",
       failedShort: "Verpasst",
+      foldSolved: "Gelöst",
+      foldMissed: "Verpasst",
+      foldEmpty: "Nicht gespielt",
+      todayMarker: "Heute",
+      momentLabel: "Tagesnotiz",
+      momentFirst: "Erster Tageseintrag.",
+      momentFlawless: "Erster makelloser Tages­sieg.",
+      momentLogged: "Heutiges Tagesrätsel ist vermerkt.",
+      momentFastest: (time) => `Schnellster Tages­sieg: ${time}.`,
+      momentFastestCompared: (time, date) => `Vorher ${time} am ${date}.`,
+      recentSummary: (solved, recorded) => `${solved}/${recorded} letzte Tagesrätsel gelöst.`,
     },
     share: {
       shareResult: "Ergebnis teilen",
@@ -521,8 +638,7 @@ export const strings: Record<Lang, Strings> = {
       goodNextStep: "Ein Mittel-Rätsel wäre der nächste Schritt",
       mediumUnlocked: "Mittel freigeschaltet",
       tryWhenReady: "Probier es, wenn du bereit bist",
-      toughMediums:
-        "Zwei zähe Mittel-Rätsel in Folge — spiel zuerst ein paar Leichte.",
+      toughMediums: "Zwei zähe Mittel-Rätsel in Folge — spiel zuerst ein paar Leichte.",
       masterChallenge: "Meister-Herausforderung",
       masterLocked: "Meister — gesperrt",
       hardComingSoon: "Meister-Rätsel kommen bald",
@@ -530,8 +646,7 @@ export const strings: Record<Lang, Strings> = {
         `Noch ${n} Mittel-${n === 1 ? "Sieg" : "Siege"} bis zur Freischaltung`,
       youAreReady: "Du bist bereit",
       slowerRevealsNoWink: "Langsamere Hinweise, kein Wink",
-      toughStretch:
-        "Harte Phase — spiel ein Mittel-Rätsel, um Momentum zurückzugewinnen.",
+      toughStretch: "Harte Phase — spiel ein Mittel-Rätsel, um Momentum zurückzugewinnen.",
     },
     settings: {
       soundOn: "Ton an",
@@ -560,17 +675,54 @@ export const strings: Record<Lang, Strings> = {
     },
     onboarding: {
       howToPlay: "So wird gespielt",
-      tabsHint: "Tabs geben Hinweise auf die 4 versteckten Kategorien",
-      rulePick: "Wähle 4 Karten mit gemeinsamer Kategorie. Nach 4 Fehlern ist Schluss.",
-      ruleEasy: "Leicht",
-      ruleEasyBody: "— 16 Karten, 4 Gruppen, keine Tabs.",
-      ruleMedium: "Mittel",
-      ruleMediumBody: "— Tabs enthüllen Buchstaben mit jedem Treffer. Ein kostenloser",
+      progressAria: "Fortschritt der Einführung",
+      stepLabel: (current, total) => `Schritt ${current} von ${total}`,
+      selectTitle: "Finde vier passende Karten",
+      selectBody:
+        "Tippe alle vier Karten an. Sie gehören zu einer Kategorie; im Spiel sind 4 Fehler erlaubt.",
+      selectedCount: (selected, total) => `${selected} von ${total} ausgewählt`,
+      demoCards: ["APFEL", "BIRNE", "LIMETTE", "PFLAUME"],
+      demoGroupAria: "Beispielgruppe mit vier Obstkarten",
+      submitTitle: "Prüfe deine Gruppe",
+      submitBody: "Sind vier Karten gewählt, tippe auf Bestätigen.",
+      correctGroup: "Richtig — Obst",
+      continueAction: "Weiter",
+      tabsTitle: "Lies die Foldwink Tabs",
+      tabsHint: "Vier verborgene Kategorien",
+      tabsBody:
+        "Beim Lösen enthüllen Tabs Buchstaben der Kategorien. Einmal pro Spiel deckt Wink einen ganzen Namen auf.",
+      demoTabs: ["O··", "M··", "S··", "T··"],
+      demoCategory: "OBST",
       wink: "✦ Wink",
-      ruleMaster: "Meister",
-      ruleMasterBody: "— langsamere Hinweise, kein Wink.",
+      winkAria: "Wink für den Tab Obst einsetzen",
+      winkPrompt: "Tippe auf den markierten Tab und probiere deinen einen Wink aus.",
+      winkResult: "Wink verrät eine Kategorie; ihre vier Karten musst du trotzdem finden.",
+      skip: "Überspringen",
       gotIt: "Verstanden",
       menuLink: "Spielregeln",
+      guildTitle: "Archivarsgilde, Beute & Kontrakte",
+      guildBody:
+        "Jeder Sieg bringt einen Umschlag mit Tinte 💧, Siegelwachs 🕯️, XP und seltenen Briefmarken. Steigere deinen Schreiber-Pass und riskiere dein Wachs in eisernen Sudden-Death-Kontrakten ⚔️!",
+    },
+    embed: {
+      fullSizeTitle: "Gib dem Rätsel den ganzen Bildschirm",
+      fullSizeBody:
+        "Diese Seite drückt das Spiel in einen kleinen Rahmen. Öffne dasselbe Spiel direkt für lesbare Karten und große Bedienelemente.",
+      openFullSize: "Spiel in voller Größe öffnen",
+      continueHere: "Im kleinen Rahmen weiterspielen",
+    },
+    monetization: {
+      tipCta: (amount) => `Foldwink unterstützen · €${amount} Trinkgeld`,
+      supporterHeadlineResult: "Werde Supporter ★",
+      supporterHeadlineStats: "Foldwink unterstützen",
+      supporterHeadlineMenu: "Foldwink unterstützen ★",
+      supporterSublineResult: (price) =>
+        `Einmalig ${price} · hält Foldwink werbearm und am Wachsen.`,
+      supporterSublineAmbient: (price) =>
+        `${price} · kosmetisches Supporter-★ in deiner Statistik.`,
+      unlockFor: (price) => `Freischalten für ${price}`,
+      badgeLabel: "Supporter",
+      badgeTitle: "Danke, dass du Foldwink unterstützt",
     },
   },
 
@@ -593,6 +745,7 @@ export const strings: Record<Lang, Strings> = {
       iphoneTip: "✦ Совет для iPhone",
       iphoneTipBody:
         "Нажми в Safari «Поделиться» и «На экран „Домой“» — будет чистый полноэкранный режим.",
+      installApp: "Установить Foldwink",
       languageAria: "Язык",
     },
     game: {
@@ -607,6 +760,11 @@ export const strings: Record<Lang, Strings> = {
       mistakesLabel: "Ошибки",
       mistakesAria: (u, m) => `Использовано ошибок: ${u} из ${m}`,
       selectedAria: (n, m) => `Выбрано ${n} из ${m}`,
+      gridAria: "Сетка головоломки. Стрелки перемещают между карточками.",
+      elapsedAria: (time) => `Прошло: ${time}`,
+      solvedCardAria: (value, group) => `${value}. Решённая группа: ${group}`,
+      correctGroup: "Верная группа",
+      incorrectGroup: "Не группа",
     },
     difficulty: {
       easy: "Лёгкий",
@@ -693,6 +851,17 @@ export const strings: Record<Lang, Strings> = {
       noHistoryYet: "История пуста. Реши сегодняшний пазл, чтобы начать.",
       solvedShort: "Решено",
       failedShort: "Провал",
+      foldSolved: "Решено",
+      foldMissed: "Не решено",
+      foldEmpty: "Не сыграно",
+      todayMarker: "Сегодня",
+      momentLabel: "Дневная заметка",
+      momentFirst: "Первая запись о дневном пазле.",
+      momentFlawless: "Первая идеальная победа в дневном.",
+      momentLogged: "Сегодняшний дневной записан.",
+      momentFastest: (time) => `Самая быстрая победа: ${time}.`,
+      momentFastestCompared: (time, date) => `Прошлый рекорд: ${time} от ${date}.`,
+      recentSummary: (solved, recorded) => `Решено ${solved} из ${recorded} последних дневных.`,
     },
     share: {
       shareResult: "Поделиться результатом",
@@ -716,8 +885,7 @@ export const strings: Record<Lang, Strings> = {
       goodNextStep: "Средний пазл — хороший следующий шаг",
       mediumUnlocked: "Средний открыт",
       tryWhenReady: "Попробуй, когда будешь готов",
-      toughMediums:
-        "Два тяжёлых средних подряд — попробуй сначала пару лёгких.",
+      toughMediums: "Два тяжёлых средних подряд — попробуй сначала пару лёгких.",
       masterChallenge: "Мастер-испытание",
       masterLocked: "Мастер — заблокирован",
       hardComingSoon: "Мастер-пазлы скоро",
@@ -725,8 +893,7 @@ export const strings: Record<Lang, Strings> = {
         `Ещё ${n} ${n === 1 ? "победа" : n < 5 ? "победы" : "побед"} на среднем → разблокировка`,
       youAreReady: "Ты готов",
       slowerRevealsNoWink: "Медленные подсказки, без Wink",
-      toughStretch:
-        "Тяжёлая полоса — сыграй средний пазл, чтобы вернуть ритм.",
+      toughStretch: "Тяжёлая полоса — сыграй средний пазл, чтобы вернуть ритм.",
     },
     settings: {
       soundOn: "Звук вкл.",
@@ -755,17 +922,54 @@ export const strings: Record<Lang, Strings> = {
     },
     onboarding: {
       howToPlay: "Как играть",
-      tabsHint: "Вкладки подсказывают 4 скрытые категории",
-      rulePick: "Выбери 4 карточки одной категории. 4 ошибки — и ты выбываешь.",
-      ruleEasy: "Лёгкий",
-      ruleEasyBody: "— 16 карточек, 4 группы, без вкладок.",
-      ruleMedium: "Средний",
-      ruleMediumBody: "— вкладки открывают буквы по мере решения. Один бесплатный",
+      progressAria: "Прогресс обучения",
+      stepLabel: (current, total) => `Шаг ${current} из ${total}`,
+      selectTitle: "Найди четыре связанных слова",
+      selectBody:
+        "Нажми на все четыре карточки. У них одна категория; в полной игре можно сделать 4 ошибки.",
+      selectedCount: (selected, total) => `Выбрано ${selected} из ${total}`,
+      demoCards: ["ЯБЛОКО", "ГРУША", "ЛАЙМ", "СЛИВА"],
+      demoGroupAria: "Учебная группа из четырёх карточек с фруктами",
+      submitTitle: "Проверь группу",
+      submitBody: "Когда выбраны четыре карточки, нажми «Подтвердить».",
+      correctGroup: "Верно — Фрукты",
+      continueAction: "Дальше",
+      tabsTitle: "Используй Foldwink Tabs",
+      tabsHint: "Четыре скрытые категории",
+      tabsBody:
+        "По мере решения вкладки открывают буквы категорий. Один раз за игру Wink раскрывает название целиком.",
+      demoTabs: ["Ф··", "М··", "С··", "Т··"],
+      demoCategory: "ФРУКТЫ",
       wink: "✦ Wink",
-      ruleMaster: "Мастер",
-      ruleMasterBody: "— подсказки медленнее, Wink недоступен.",
+      winkAria: "Применить Wink к вкладке «Фрукты»",
+      winkPrompt: "Нажми на выделенную вкладку и попробуй единственный Wink.",
+      winkResult: "Wink раскрывает категорию, но четыре её карточки всё равно нужно найти.",
+      skip: "Пропустить",
       gotIt: "Понятно",
       menuLink: "Правила игры",
+      guildTitle: "Гильдия Архивариусов, Лут и Контракты",
+      guildBody:
+        "Каждая победа приносит запечатанный конверт с чернилами 💧, сургучом 🕯️, XP и редкими марками. Прокачивайте свой Паспорт Архивариуса и ставьте сургуч на кон в рискованных Железных Контрактах ⚔️!",
+    },
+    embed: {
+      fullSizeTitle: "Отдай головоломке весь экран",
+      fullSizeBody:
+        "Эта страница сжимает игру в маленькое окно. Открой ту же игру напрямую: карточки и кнопки будут нормального размера.",
+      openFullSize: "Открыть игру на весь экран",
+      continueHere: "Продолжить в маленьком окне",
+    },
+    monetization: {
+      tipCta: (amount) => `Поддержать Foldwink · чаевые €${amount}`,
+      supporterHeadlineResult: "Стань саппортером ★",
+      supporterHeadlineStats: "Поддержать Foldwink",
+      supporterHeadlineMenu: "Поддержать Foldwink ★",
+      supporterSublineResult: (price) =>
+        `Разовый взнос ${price} · Foldwink остаётся почти без рекламы и растёт.`,
+      supporterSublineAmbient: (price) =>
+        `${price} · косметический значок «Supporter ★» в статистике.`,
+      unlockFor: (price) => `Открыть за ${price}`,
+      badgeLabel: "Supporter",
+      badgeTitle: "Спасибо за поддержку Foldwink",
     },
   },
 };
