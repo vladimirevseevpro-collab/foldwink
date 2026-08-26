@@ -19,21 +19,106 @@ body {
 }
 
 #root {
+  position: relative;
+  z-index: 1;
   min-height: 100%;
   min-height: 100dvh;
 }
 
 body {
   margin: 0;
-  background-color: #0f1115;
-  color: #e8eaf0;
+  background-color: #1a1614;
+  color: #f7efe1;
   font-family:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    "Manrope Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   touch-action: manipulation;
   overflow-x: hidden;
   overscroll-behavior-y: contain;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url("/textures/graphite-paper.webp");
+  background-size: 720px 720px;
+  opacity: 0.08;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -15%);
+  width: 900px;
+  height: 600px;
+  max-width: 100vw;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(235, 178, 118, 0.13) 0%,
+    rgba(214, 137, 85, 0.05) 45%,
+    transparent 75%
+  );
+  filter: blur(40px);
+}
+
+:root {
+  --fw-ease-press: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --fw-ease-lift: cubic-bezier(0.16, 0.82, 0.25, 1);
+  --fw-ease-settle: cubic-bezier(0.34, 1.24, 0.64, 1);
+  --fw-shadow-contact: 0 1px 2px rgba(0, 0, 0, 0.14);
+  --fw-shadow-rest: 0 4px 12px rgba(0, 0, 0, 0.16);
+  --fw-shadow-lift: 0 10px 20px rgba(0, 0, 0, 0.24);
+  --fw-shadow-pressed: 0 1px 3px rgba(0, 0, 0, 0.28);
+}
+
+.fw-letterpress-paper {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7), 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.fw-letterpress-dark {
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.fw-card {
+  --lift: 0px;
+  --press-scale: 1;
+  --tilt-x: 0deg;
+  --tilt-y: 0deg;
+
+  transform: perspective(600px)
+    translate3d(0, var(--lift), 0)
+    rotateX(var(--tilt-x))
+    rotateY(var(--tilt-y))
+    scale(var(--press-scale));
+  transition:
+    transform 150ms var(--fw-ease-lift),
+    box-shadow 150ms var(--fw-ease-lift),
+    background-color 150ms ease-out,
+    border-color 150ms ease-out,
+    color 150ms ease-out;
+}
+
+@media (hover: hover) {
+  .fw-card:not([data-state="solved"]):not(:disabled):hover {
+    --lift: -2px;
+  }
+}
+
+.fw-card[data-pressed="true"],
+.fw-card:not([data-state="solved"]):not(:disabled):active {
+  --lift: 1px;
+  --press-scale: 0.985;
+  transition-duration: 80ms;
+  transition-timing-function: var(--fw-ease-press);
 }
 
 button {
@@ -67,7 +152,7 @@ button {
 }
 
 *:focus-visible {
-  outline: 2px solid #7cc4ff;
+  outline: 2px solid #e27a5b;
   outline-offset: 2px;
   border-radius: 6px;
 }
@@ -79,14 +164,19 @@ button {
  * Durations mirror src/styles/motion.ts — do not change one without the other.
  */
 
-@keyframes fw-tab-fade {
-  0%,
+@keyframes fw-brand-arrive {
+  0% {
+    opacity: 0.4;
+    transform: translateY(-3px) rotate(-1deg);
+  }
   100% {
     opacity: 1;
+    transform: translateY(0) rotate(0);
   }
-  50% {
-    opacity: 0.35;
-  }
+}
+
+.fw-brand-arrive {
+  animation: fw-brand-arrive 320ms ease-out both;
 }
 
 @keyframes fw-result-pop {
@@ -106,13 +196,13 @@ button {
 
 @keyframes fw-streak-pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(124, 196, 255, 0.45);
+    box-shadow: 0 0 0 0 rgba(103, 215, 208, 0.45);
   }
   70% {
-    box-shadow: 0 0 0 10px rgba(124, 196, 255, 0);
+    box-shadow: 0 0 0 10px rgba(103, 215, 208, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(124, 196, 255, 0);
+    box-shadow: 0 0 0 0 rgba(103, 215, 208, 0);
   }
 }
 
@@ -143,23 +233,42 @@ button {
 }
 
 .fw-shake {
-  animation: fw-shake 420ms cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  animation: fw-shake 380ms cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes fw-wooden-tap {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-3px);
+  }
+  55% {
+    transform: translateX(2.5px);
+  }
+  80% {
+    transform: translateX(-1px);
+  }
+}
+
+.fw-wooden-tap {
+  animation: fw-wooden-tap 180ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
 
 @keyframes fw-pop {
   0% {
-    transform: scale(1);
+    transform: translateY(-3px) scale(1.015);
   }
-  45% {
-    transform: scale(0.94);
+  48% {
+    transform: translateY(2px) scale(0.985);
   }
   100% {
-    transform: scale(1);
+    transform: translateY(0) scale(1);
   }
 }
 
 .fw-pop {
-  animation: fw-pop 260ms ease-out both;
+  animation: fw-pop 220ms cubic-bezier(0.2, 0.78, 0.28, 1) both;
 }
 
 @keyframes fw-tab-reveal {
@@ -177,12 +286,116 @@ button {
   animation: fw-tab-reveal 220ms ease-out both;
 }
 
+/* 3D Staggered Card Flip on Solve */
+@keyframes fw-card-flip {
+  0% {
+    transform: perspective(600px) rotateX(0deg) translateY(0) scale(1);
+  }
+  40% {
+    transform: perspective(600px) rotateX(-75deg) translateY(-4px) scale(1.02);
+  }
+  70% {
+    transform: perspective(600px) rotateX(20deg) translateY(-1px) scale(1.01);
+  }
+  100% {
+    transform: perspective(600px) rotateX(0deg) translateY(0) scale(1);
+  }
+}
+
+.fw-card-flip {
+  animation: fw-card-flip 340ms cubic-bezier(0.25, 0.8, 0.25, 1) both;
+  animation-delay: calc(var(--flip-delay, 0) * 55ms);
+}
+
+/* Dynamic Specular Sheen Glare */
+@keyframes fw-sheen-sweep {
+  0% {
+    transform: translateX(-120%) rotate(25deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.85;
+  }
+  80% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateX(180%) rotate(25deg);
+    opacity: 0;
+  }
+}
+
+.fw-sheen-glare {
+  position: absolute;
+  top: -60%;
+  left: -60%;
+  width: 220%;
+  height: 220%;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) 35%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0.05) 65%,
+    transparent 100%
+  );
+  animation: fw-sheen-sweep 550ms cubic-bezier(0.2, 0.8, 0.3, 1) 1 both;
+}
+
+/* 3D Mechanical Split-Flap Tab Animation */
+@keyframes fw-tab-flap {
+  0% {
+    transform: perspective(400px) rotateX(-90deg);
+    opacity: 0;
+  }
+  65% {
+    transform: perspective(400px) rotateX(12deg);
+    opacity: 1;
+  }
+  100% {
+    transform: perspective(400px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+.fw-tab-flap {
+  animation: fw-tab-flap 220ms cubic-bezier(0.34, 1.4, 0.64, 1) both;
+}
+
+/* One Away Tension Toast */
+@keyframes fw-one-away {
+  0% {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.95);
+  }
+  15% {
+    opacity: 1;
+    transform: translateY(0) scale(1.03);
+  }
+  30% {
+    transform: translateY(0) scale(1);
+  }
+  82% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-3px) scale(0.98);
+  }
+}
+
+.fw-one-away {
+  animation: fw-one-away 1900ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
 /* Wink payoff: staggered letter fade-in across the newly-revealed tab.
    The component splits the label into <span class="fw-wink-letter"> with
-   a `--i` CSS variable for position. Each letter eases in 30 ms later
-   than the previous one so the whole word visibly "assembles" instead
-   of appearing as a single text swap. 60 ms × up to 30 letters = a
-   cheap but visible celebration, no JS timers, no animation library. */
+   a `--i` CSS variable for position. Each letter eases in 24 ms later
+   than the previous one so the whole label visibly "assembles" instead
+   of appearing as a single text swap. 24 ms × up to 30 letters = a
+   crisp but visible celebration, no JS timers, no animation library. */
 @keyframes fw-wink-letter {
   0% {
     opacity: 0;
@@ -200,24 +413,106 @@ button {
   }
 }
 
+.fw-wink-word {
+  display: inline-block;
+}
+
 .fw-wink-letter {
   display: inline-block;
   opacity: 0;
-  animation: fw-wink-letter 380ms ease-out both;
-  animation-delay: calc(var(--i, 0) * 30ms);
-  /* Preserve whitespace so spaces don't collapse between spans. */
-  white-space: pre;
+  animation: fw-wink-letter 340ms ease-out both;
+  animation-delay: calc(var(--i, 0) * 24ms);
+}
+
+/* Pulsing ready glow for submit button */
+@keyframes fw-ready-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(103, 215, 208, 0.4), 0 3px 0 #367f7a;
+    transform: translateY(0);
+  }
+  50% {
+    box-shadow: 0 0 16px 3px rgba(103, 215, 208, 0.45), 0 3px 0 #367f7a;
+    transform: translateY(-1px);
+  }
+}
+
+.fw-ready-pulse {
+  animation: fw-ready-glow 1.6s ease-in-out infinite;
+}
+
+/* Tactile Dot Consumed Pop */
+@keyframes fw-dot-pop {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.4);
+    filter: brightness(1.3);
+  }
+  100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+}
+
+.fw-dot-pop {
+  animation: fw-dot-pop 340ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+/* Shuffle Icon Spin */
+@keyframes fw-spin-once {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.fw-spin {
+  animation: fw-spin-once 420ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 @media (prefers-reduced-motion: reduce) {
   .fw-result-pop,
   .fw-streak-pulse,
   .fw-shake,
+  .fw-wooden-tap,
   .fw-pop,
   .fw-tab-reveal,
+  .fw-card-flip,
+  .fw-sheen-glare,
+  .fw-tab-flap,
+  .fw-one-away,
+  .fw-ready-pulse,
+  .fw-dot-pop,
+  .fw-spin,
   .fw-wink-letter,
-  [style*="fw-tab-fade"] {
+  .fw-brand-arrive {
     animation: none !important;
     opacity: 1 !important;
+    transform: none !important;
   }
+}
+
+@keyframes fw-deal {
+  0% { transform: perspective(600px) rotateX(15deg) translateY(20px); opacity: 0; }
+  100% { transform: perspective(600px) rotateX(0deg) translateY(0); opacity: 1; }
+}
+.fw-deal {
+  animation: fw-deal 400ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.fw-grid-glow::before {
+  content: "";
+  position: absolute;
+  inset: -100px;
+  background: radial-gradient(circle 250px at var(--mouse-x, -250px) var(--mouse-y, -250px), rgba(255, 255, 255, 0.08), transparent 100%);
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.fw-grid-glow:hover::before {
+  opacity: 1;
 }

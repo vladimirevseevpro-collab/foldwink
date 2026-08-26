@@ -1,35 +1,27 @@
+import { SOUND_EVENTS, getSoundCueUrl, type SoundEvent } from "./cues";
+
+export type { SoundEvent } from "./cues";
+
 /**
  * Foldwink sound system.
  *
  * Design notes
  * ------------
- * Foldwink needs a tactile, quiet, paper/card/wood/tile audio palette. Rather
- * than ship binary asset files, this module synthesises every cue on the fly
- * with the Web Audio API. The synthesis vocabulary is tiny and physical:
+ * Foldwink needs a tactile, quiet, paper/card/wood/tile audio palette. The
+ * primary path decodes a compact local WAV pack into reusable AudioBuffers.
+ * The original Web Audio vocabulary remains as a first-tap and failure fallback:
  *
  *   - "tap"    — short band-limited noise burst (paper / card slide)
  *   - "knock"  — tap + low oscillator body (soft wood)
  *   - "chime"  — very short tile/bone-like tone (with a micro tap attack)
  *   - "thud"   — low oscillator + longer envelope (muted wood / fail)
  *
- * Every cue is ≤120ms, peaks well below 0dB, and gets envelope-shaped so it
- * doesn't click. Recipes are in one object so individual cues can be retuned
- * without touching call sites. When real recorded samples arrive later they
- * can replace `playCue` without changing the `useSound` API.
+ * Shipping cues are generated deterministically by `scripts/build-sound-pack.mjs`.
+ * Buffer playback and fallback synthesis share the same master gain, settings,
+ * iOS unlock path, and `useSound` API.
  *
  * Gameplay never depends on sound being on — every cue is pure feedback.
  */
-
-export type SoundEvent =
-  | "select"
-  | "deselect"
-  | "submit"
-  | "wrong"
-  | "correct"
-  | "tabReveal"
-  | "wink"
-  | "win"
-  | "loss";
 
 interface SoundSettings {
   muted: boolean;
@@ -37,13 +29,15 @@ interface SoundSettings {
 }
 
 const STORAGE_KEY = "foldwink:sound";
-// 0.4.1: default volume lowered from 0.55 → 0.42 to fit the restrained palette.
-const DEFAULT_SETTINGS: SoundSettings = { muted: false, volume: 0.42 };
+const DEFAULT_SETTINGS: SoundSettings = { muted: false, volume: 0.75 };
 
 let cachedSettings: SoundSettings | null = null;
 let audioCtx: AudioContext | null = null;
 let masterGain: GainNode | null = null;
 let noiseBuffer: AudioBuffer | null = null;
+const decodedCues = new Map<SoundEvent, AudioBuffer>();
+const cueLoadPromises = new Map<SoundEvent, Promise<AudioBuffer | null>>();
+const failedCueLoads = new Set<SoundEvent>();
 
 function isBrowser(): boolean {
   return typeof window !== "undefined" && typeof document !== "undefined";
@@ -121,10 +115,77 @@ function getOrCreateContext(): AudioContext | null {
     const s = loadSettings();
     masterGain.gain.value = s.muted ? 0 : s.volume;
     masterGain.connect(audioCtx.destination);
+    preloadSoundPack(audioCtx);
     return audioCtx;
   } catch {
     return null;
   }
+}
+
+function loadCue(ctx: AudioContext, event: SoundEvent): Promise<AudioBuffer | null> {
+  const decoded = decodedCues.get(event);
+  if (decoded) return Promise.resolve(decoded);
+  if (failedCueLoads.has(event)) return Promise.resolve(null);
+
+  const existing = cueLoadPromises.get(event);
+  if (existing) return existing;
+
+  const promise = fetch(getSoundCueUrl(event), { cache: "force-cache" })
+    .then((response) => {
+      if (!response.ok) throw new Error(`Sound asset returned ${response.status}`);
+      return response.arrayBuffer();
+    })
+    .then((data) => ctx.decodeAudioData(data.slice(0)))
+    .then((buffer) => {
+      if (ctx === audioCtx) decodedCues.set(event, buffer);
+      return buffer;
+    })
+    .catch(() => {
+      failedCueLoads.add(event);
+      return null;
+    });
+
+  cueLoadPromises.set(event, promise);
+  return promise;
+}
+
+function preloadSoundPack(ctx: AudioContext): void {
+  for (const event of SOUND_EVENTS) void loadCue(ctx, event);
+}
+
+export async function prepareSoundPack(): Promise<void> {
+  const ctx = getOrCreateContext();
+  if (!ctx) return;
+  await Promise.all(SOUND_EVENTS.map((event) => loadCue(ctx, event)));
+}
+
+function playDecodedCue(
+  ctx: AudioContext,
+  event: SoundEvent,
+  destination: AudioNode,
+  playbackRate: number = 1,
+  gainMultiplier: number = 1,
+): boolean {
+  const buffer = decodedCues.get(event);
+  if (!buffer) return false;
+
+  const source = ctx.createBufferSource();
+  source.buffer = buffer;
+  if (playbackRate !== 1) {
+    source.playbackRate.value = playbackRate;
+  }
+
+  if (gainMultiplier !== 1) {
+    const cueGain = ctx.createGain();
+    cueGain.gain.value = gainMultiplier;
+    source.connect(cueGain);
+    cueGain.connect(destination);
+  } else {
+    source.connect(destination);
+  }
+
+  source.start();
+  return true;
 }
 
 function getNoiseBuffer(ctx: AudioContext): AudioBuffer {
@@ -304,26 +365,24 @@ const RECIPES: Record<SoundEvent, Recipe> = {
       decay: 0.26,
     });
   },
-  // FULL SETTLE — four tiles placed in sequence on a wood surface. No melody,
-  // no chime ascent. Each step is a soft knock + low undertone, evenly paced.
+  // CELEBRATION CHIME ARPEGGIO — joyful ascending pentatonic resonance with warm acoustic overtones
   win: (ctx, dest) => {
-    const delays = [0, 0.09, 0.18, 0.28];
-    const freqs = [170, 190, 215, 240];
-    const filterHz = [1300, 1400, 1500, 1600];
-    for (let i = 0; i < 4; i++) {
+    const delays = [0, 0.1, 0.22, 0.36, 0.52, 0.7];
+    const freqs = [261.63, 329.63, 392.0, 523.25, 659.25, 783.99];
+    for (let i = 0; i < freqs.length; i++) {
       playTap(ctx, dest, {
-        duration: 0.035,
-        filterHz: filterHz[i],
-        gain: 0.16,
+        duration: 0.04,
+        filterHz: Math.min(8000, freqs[i] * 2.5),
+        gain: 0.14,
         delay: delays[i],
       });
       playBody(ctx, dest, {
         freq: freqs[i],
-        duration: 0.2,
-        gain: 0.14,
+        duration: 0.5,
+        gain: 0.22,
         type: "sine",
         delay: delays[i],
-        decay: 0.26,
+        decay: 0.35,
       });
     }
   },
@@ -340,14 +399,44 @@ const RECIPES: Record<SoundEvent, Recipe> = {
   },
 };
 
-export function playSound(event: SoundEvent): void {
+export interface PlaySoundOptions {
+  playbackRate?: number;
+  /** Micro-pitch variation (e.g. 0.025 for +/- 2.5%) for organic physical feel */
+  rateJitter?: number;
+  /** Micro-gain variation (e.g. 0.04 for +/- 4%) for subtle dynamics */
+  gainJitter?: number;
+}
+
+export function playSound(event: SoundEvent, options?: PlaySoundOptions): void {
   const ctx = getOrCreateContext();
   if (!ctx || !masterGain) return;
   if (loadSettings().muted) return;
 
-  const runRecipe = (): void => {
+  const baseRate = options?.playbackRate ?? 1;
+  // Apply organic jitter for physical interactions (select, deselect, wrong) if not explicitly overridden
+  const jitterRate =
+    options?.rateJitter !== undefined
+      ? options.rateJitter
+      : event === "select" || event === "deselect" || event === "wrong"
+        ? 0.025
+        : 0;
+  const rate = jitterRate > 0 ? baseRate * (1 + (Math.random() * 2 - 1) * jitterRate) : baseRate;
+
+  const jitterGain =
+    options?.gainJitter !== undefined
+      ? options.gainJitter
+      : event === "select" || event === "deselect"
+        ? 0.03
+        : 0;
+  const gainMult = jitterGain > 0 ? 1 + (Math.random() * 2 - 1) * jitterGain : 1;
+
+  const runCue = (): void => {
     try {
-      if (masterGain) RECIPES[event](ctx, masterGain);
+      if (!masterGain) return;
+      if (!playDecodedCue(ctx, event, masterGain, rate, gainMult)) {
+        RECIPES[event](ctx, masterGain);
+        void loadCue(ctx, event);
+      }
     } catch {
       /* ignore audio failures — gameplay is unaffected */
     }
@@ -355,17 +444,17 @@ export function playSound(event: SoundEvent): void {
 
   // iOS Safari ships the AudioContext in "suspended" state until a user
   // gesture explicitly resumes it. `ctx.resume()` is async — scheduling a
-  // recipe before it settles loses the first cue. We therefore chain the
-  // recipe onto the resume promise when the context is not yet running,
+  // cue before it settles loses the first sound. We therefore chain playback
+  // onto the resume promise when the context is not yet running,
   // and play synchronously otherwise.
   if (ctx.state === "running") {
-    runRecipe();
+    runCue();
     return;
   }
 
   ctx
     .resume()
-    .then(runRecipe)
+    .then(runCue)
     .catch(() => {
       /* resume rejected — gameplay is unaffected */
     });
@@ -383,4 +472,7 @@ export function resetSoundForTests(): void {
   audioCtx = null;
   masterGain = null;
   noiseBuffer = null;
+  decodedCues.clear();
+  cueLoadPromises.clear();
+  failedCueLoads.clear();
 }
