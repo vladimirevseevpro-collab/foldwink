@@ -25,10 +25,87 @@ body {
   min-height: 100dvh;
 }
 
+:root,
+[data-theme="walnut"] {
+  --theme-bg: #1a1614;
+  --theme-surface: #251e19;
+  --theme-surface-hi: #322720;
+  --theme-surface-hover: #3f3229;
+  --theme-text: #f7efe1;
+  --theme-muted: #aa9987;
+  --theme-accent: #e27a5b;
+  --theme-accent-hi: #ef8d6f;
+  --theme-accent-border: #b8573b;
+  --theme-line: #48392f;
+  --theme-glow: radial-gradient(
+    ellipse at center,
+    rgba(235, 178, 118, 0.14) 0%,
+    rgba(214, 137, 85, 0.05) 45%,
+    transparent 75%
+  );
+}
+
+[data-theme="matcha"] {
+  --theme-bg: #121914;
+  --theme-surface: #1a241e;
+  --theme-surface-hi: #233128;
+  --theme-surface-hover: #2e3f34;
+  --theme-text: #f2f7f2;
+  --theme-muted: #8da693;
+  --theme-accent: #60b278;
+  --theme-accent-hi: #78c58e;
+  --theme-accent-border: #428e57;
+  --theme-line: #324437;
+  --theme-glow: radial-gradient(
+    ellipse at center,
+    rgba(96, 178, 120, 0.15) 0%,
+    rgba(66, 142, 87, 0.05) 45%,
+    transparent 75%
+  );
+}
+
+[data-theme="midnight"] {
+  --theme-bg: #10131c;
+  --theme-surface: #181d2c;
+  --theme-surface-hi: #22293e;
+  --theme-surface-hover: #2c354f;
+  --theme-text: #f0f3fa;
+  --theme-muted: #8a95b0;
+  --theme-accent: #a58ded;
+  --theme-accent-hi: #b8a3f5;
+  --theme-accent-border: #8062d6;
+  --theme-line: #2f3954;
+  --theme-glow: radial-gradient(
+    ellipse at center,
+    rgba(165, 141, 237, 0.15) 0%,
+    rgba(128, 98, 214, 0.05) 45%,
+    transparent 75%
+  );
+}
+
+[data-theme="manila"] {
+  --theme-bg: #1f1a14;
+  --theme-surface: #2b241c;
+  --theme-surface-hi: #3b3227;
+  --theme-surface-hover: #4a3f32;
+  --theme-text: #fbf5ea;
+  --theme-muted: #b5a48d;
+  --theme-accent: #df9f43;
+  --theme-accent-hi: #eab25f;
+  --theme-accent-border: #b87b22;
+  --theme-line: #524536;
+  --theme-glow: radial-gradient(
+    ellipse at center,
+    rgba(223, 159, 67, 0.15) 0%,
+    rgba(184, 123, 34, 0.05) 45%,
+    transparent 75%
+  );
+}
+
 body {
   margin: 0;
-  background-color: #1a1614;
-  color: #f7efe1;
+  background-color: var(--theme-bg, #1a1614);
+  color: var(--theme-text, #f7efe1);
   font-family:
     "Manrope Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
     sans-serif;
@@ -61,12 +138,7 @@ body::after {
   max-width: 100vw;
   pointer-events: none;
   z-index: 0;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(235, 178, 118, 0.13) 0%,
-    rgba(214, 137, 85, 0.05) 45%,
-    transparent 75%
-  );
+  background: var(--theme-glow);
   filter: blur(40px);
 }
 

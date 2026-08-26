@@ -1,13 +1,15 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useGameStore } from "../game/state/appStore";
 import { Button } from "../components/Button";
 import { Wordmark } from "../components/Wordmark";
 import { DailyCompleteCard } from "../components/DailyCompleteCard";
+import { DailyFold } from "../components/DailyFold";
 import { SoundToggle } from "../components/SoundToggle";
 import { HapticsToggle } from "../components/HapticsToggle";
 import { LanguageToggle } from "../components/LanguageToggle";
+import { ThemeSelector } from "../components/ThemeSelector";
 import { AboutFooter } from "../components/AboutFooter";
-import { logEvent } from "../analytics/eventLog";
+import { getConsentStatus, isAnalyticsConfigured, trackEvent } from "../analytics/eventLog";
 import {
   mediumReadiness,
   hardReadiness,
@@ -17,6 +19,11 @@ import {
 import { currentBundle } from "../puzzles/byLang";
 import { isIosSafariInBrowser } from "../utils/platform";
 import { useLang, useT } from "../i18n/useLanguage";
+import { loadDailyHistory } from "../stats/persistence";
+import { mergeDailyHistory } from "../stats/dailyRitual";
+import { PrivacyPrompt } from "../components/PrivacyPrompt";
+import { isSupporter } from "../monetization/supporter";
+import { InstallFoldwink } from "../components/InstallFoldwink";
 
 export function MenuScreen() {
   const startEasy = useGameStore((s) => s.startEasy);
@@ -24,7 +31,7 @@ export function MenuScreen() {
   const startHard = useGameStore((s) => s.startHard);
   const startDaily = useGameStore((s) => s.startDaily);
   const showStats = useGameStore((s) => s.showStats);
-  const showOnboarding = useGameStore((s) => s.showOnboarding);
+  const openHowToPlay = useGameStore((s) => s.openHowToPlay);
   const lang = useLang();
   // Subscribe to `lang` so that a language switch re-renders the menu with
   // the matching pool. The bundle itself is read each render via currentBundle().
@@ -35,9 +42,27 @@ export function MenuScreen() {
   const stats = useGameStore((s) => s.stats);
   const todayDailyRecord = useGameStore((s) => s.todayDailyRecord);
   const t = useT();
+  const dailyHistory = mergeDailyHistory(loadDailyHistory(), todayDailyRecord);
+  const [consentStatus, setConsent] = useState(() => getConsentStatus());
 
   useEffect(() => {
-    logEvent("menu:view");
+    trackEvent({
+      name: "menu_view",
+      props: {
+        surface: "menu",
+        has_support_flag: isSupporter() ? "yes" : "no",
+        lang,
+      },
+    });
+  }, [lang]);
+
+  useEffect(() => {
+    const handler = (event: Event): void => {
+      const next = (event as CustomEvent<ReturnType<typeof getConsentStatus>>).detail;
+      if (next) setConsent(next);
+    };
+    window.addEventListener("foldwink:privacy-consent-changed", handler);
+    return () => window.removeEventListener("foldwink:privacy-consent-changed", handler);
   }, []);
 
   const empty = poolSize === 0;
@@ -55,12 +80,12 @@ export function MenuScreen() {
         ? "text-text font-semibold"
         : "text-muted font-semibold";
 
-  const mediumButtonLabel =
-    mReadiness.level === "locked" ? t.menu.mediumLocked : t.menu.medium;
-  const mediumButtonVariant: "primary" | "secondary" | "ghost" =
+  const mediumButtonLabel = mReadiness.level === "locked" ? t.menu.mediumLocked : t.menu.medium;
+  const mediumButtonVariant = "secondary" as const;
+  const mediumButtonClass =
     mReadiness.level === "strong" || mReadiness.level === "recommended"
-      ? "primary"
-      : "secondary";
+      ? "border-accent text-accent"
+      : "";
 
   const handleMediumClick = () => {
     if (!mReadiness.unlocked) return;
@@ -79,18 +104,19 @@ export function MenuScreen() {
       : hReadiness.level === "locked"
         ? t.menu.masterLocked
         : t.menu.masterChallenge;
-  const hardButtonVariant: "primary" | "secondary" | "ghost" =
-    hReadiness.unlocked && hReadiness.hasContent ? "primary" : "secondary";
+  const hardButtonVariant = "secondary" as const;
+  const hardButtonClass =
+    hReadiness.unlocked && hReadiness.hasContent ? "border-warning text-warning" : "";
 
   return (
     <div className="flex flex-col items-center text-center gap-3 pt-1 sm:pt-3">
       <Wordmark size="lg" animated showSublabel={false} subtitle={t.menu.subtitle} />
 
+      {isAnalyticsConfigured() && consentStatus === "unknown" && <PrivacyPrompt />}
+
       {empty ? (
-        <div className="w-full max-w-xs rounded-2xl bg-surface border border-[#2e343f] px-5 py-6 text-center">
-          <div className="text-[10px] uppercase tracking-[0.14em] text-muted mb-2">
-            {t.menu.emptyPool}
-          </div>
+        <div className="w-full max-w-xs rounded-lg bg-surface border border-line px-5 py-6 text-center">
+          <div className="text-[10px] uppercase text-muted mb-2">{t.menu.emptyPool}</div>
           <p className="text-sm text-text">{t.menu.emptyPoolDetail}</p>
         </div>
       ) : (
@@ -98,6 +124,8 @@ export function MenuScreen() {
           {dailyDone && todayDailyRecord && (
             <DailyCompleteCard record={todayDailyRecord} currentStreak={stats.currentStreak} />
           )}
+
+          <DailyFold history={dailyHistory} className="w-full max-w-[20rem]" />
 
           <div className="flex flex-col gap-3 w-full max-w-60">
             {dailyDone ? (
@@ -112,6 +140,7 @@ export function MenuScreen() {
             </Button>
             <Button
               variant={mediumButtonVariant}
+              className={mediumButtonClass}
               onClick={handleMediumClick}
               disabled={!mReadiness.unlocked}
               aria-disabled={!mReadiness.unlocked}
@@ -121,6 +150,7 @@ export function MenuScreen() {
             {hReadiness.hasContent && (
               <Button
                 variant={hardButtonVariant}
+                className={hardButtonClass}
                 onClick={handleHardClick}
                 disabled={hardDisabled}
                 aria-disabled={hardDisabled}
@@ -137,8 +167,7 @@ export function MenuScreen() {
               unlock rule is anti-dark-pattern. Hidden before v0.6.6. */}
           <div className="text-[11px] text-muted text-center max-w-xs space-y-1">
             <div>
-              <span className={mediumLabelClass}>{mDisplay.label}</span> ·{" "}
-              {mDisplay.caption}
+              <span className={mediumLabelClass}>{mDisplay.label}</span> · {mDisplay.caption}
             </div>
             {hReadiness.level !== "hidden" && (
               <div className="text-muted">
@@ -148,7 +177,7 @@ export function MenuScreen() {
           </div>
 
           {(mDisplay.fallback || hDisplay.fallback) && (
-            <div className="text-[11px] text-muted text-center max-w-xs border-t border-[#2e343f] pt-3 space-y-1">
+            <div className="text-[11px] text-muted text-center max-w-xs border-t border-line pt-3 space-y-1">
               {mDisplay.fallback && <div>{mDisplay.fallback}</div>}
               {hDisplay.fallback && <div>{hDisplay.fallback}</div>}
             </div>
@@ -166,9 +195,13 @@ export function MenuScreen() {
         <span aria-hidden="true" className="opacity-50">
           ·
         </span>
+        <ThemeSelector />
+        <span aria-hidden="true" className="opacity-50">
+          ·
+        </span>
         <button
           type="button"
-          onClick={showOnboarding}
+          onClick={openHowToPlay}
           className="text-muted hover:text-text underline-offset-2 hover:underline transition-colors"
         >
           {t.onboarding.menuLink}
@@ -177,6 +210,10 @@ export function MenuScreen() {
           ·
         </span>
         <AboutFooter />
+        <span aria-hidden="true" className="opacity-50">
+          ·
+        </span>
+        <InstallFoldwink />
         <span aria-hidden="true" className="opacity-50">
           ·
         </span>
