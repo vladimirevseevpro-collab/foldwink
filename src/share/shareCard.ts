@@ -445,12 +445,33 @@ function drawPostalStamp(
   ctx.restore();
 }
 
+function drawBarcode(
+  ctx: CanvasRenderingContext2D,
+  x: number,
+  y: number,
+  width: number,
+  height: number,
+): void {
+  ctx.save();
+  ctx.fillStyle = COLOR.line;
+  const barCount = 32;
+  const barWidth = width / (barCount * 1.5);
+  for (let i = 0; i < barCount; i++) {
+    const isThick = (i * 7 + 3) % 4 === 0;
+    const curX = x + i * barWidth * 1.5;
+    ctx.fillRect(curX, y, isThick ? barWidth * 1.6 : barWidth * 0.8, height);
+  }
+  ctx.restore();
+}
+
 function drawFooter(ctx: CanvasRenderingContext2D, height: number): void {
+  drawBarcode(ctx, 74, height - 68, 180, 20);
   ctx.fillStyle = COLOR.muted;
-  ctx.font = `600 22px ${FONT_STACK}`;
+  ctx.font = `600 20px ${FONT_STACK}`;
   ctx.textAlign = "center";
   ctx.textBaseline = "alphabetic";
-  ctx.fillText("neural-void.com/foldwink", WIDTH / 2, height - 54);
+  ctx.fillText("neural-void.com/foldwink", WIDTH / 2, height - 52);
+  drawBarcode(ctx, WIDTH - 254, height - 68, 180, 20);
 }
 
 export function drawShareCard(canvas: HTMLCanvasElement, opts: ShareCardOptions): void {

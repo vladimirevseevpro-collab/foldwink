@@ -85,7 +85,12 @@ export function GameScreen() {
     // playing sound + haptics in the same 600 ms window.
     const terminal = active?.result != null;
     if (flash === "correct" && !terminal) {
-      play("correct");
+      // 2026 ASMR Megatrend: Harmonic Chord Progression on row solves
+      // Row 1 = 1.0 (Root C3), Row 2 = 1.25 (Major 3rd E3), Row 3 = 1.5 (Fifth G3)
+      const solvedCount = active?.solvedGroupIds.length ?? 1;
+      const pitchRatios = [1.0, 1.25, 1.5, 2.0];
+      const rate = pitchRatios[Math.min(Math.max(0, solvedCount - 1), pitchRatios.length - 1)] ?? 1.0;
+      play("correct", { playbackRate: rate });
       haptic("correct");
     }
     if ((flash === "incorrect" || flash === "one-away") && !terminal) {
@@ -160,7 +165,11 @@ export function GameScreen() {
     if (solvedItems.has(value)) return;
     const already = selectedSet.has(value);
     if (!already && active.selection.length >= SELECTION_SIZE) return;
-    play(already ? "deselect" : "select");
+    
+    // Organic pitch variance
+    const basePitch = already ? 0.94 : [1.0, 1.05, 1.1, 1.15][active.selection.length] ?? 1.0;
+    play(already ? "deselect" : "select", { playbackRate: basePitch * (0.98 + Math.random() * 0.04) });
+    
     haptic(already ? "deselect" : "select");
     toggleSelection(value);
   };
@@ -180,11 +189,17 @@ export function GameScreen() {
         : flash === "one-away"
           ? "ring-2 ring-[#e0b25e]"
           : "";
-  const gridShakeKey = `${active.mistakesUsed}:${flash}`;
 
   return (
-    <div className={`transition-shadow rounded-2xl ${flashRingClass}`}>
-      <Header
+    <>
+      {flash === "one-away" && !active.result && (
+        <div
+          className="pointer-events-none fixed inset-0 z-[100] animate-pulse bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-transparent via-transparent to-danger/15"
+          aria-hidden="true"
+        />
+      )}
+      <div className={`transition-shadow rounded-2xl ${flashRingClass}`}>
+        <Header
         title={puzzle.title}
         subtitle={
           `${t.difficulty[puzzle.difficulty].toUpperCase()} · ${
@@ -194,7 +209,7 @@ export function GameScreen() {
         }
         right={
           <div className="flex items-center gap-3">
-            <GameTimer startedAt={active.startedAt} endedAt={active.endedAt} />
+            <GameTimer startedAt={active.startedAt} endedAt={active.endedAt} ariaLabel={t.game.elapsedAria} />
             <MistakesDots used={active.mistakesUsed} oneAwayLast={flash === "one-away"} />
           </div>
         }
@@ -207,10 +222,10 @@ export function GameScreen() {
         gameEnded={!!active.result}
       />
       <Grid
-        key={flash === "incorrect" || flash === "one-away" ? gridShakeKey : undefined}
+        label={t.game.gridAria}
         shake={flash === "incorrect" || flash === "one-away"}
       >
-        {active.order.map((value) => {
+        {active.order.map((value, index) => {
           const isSolved = solvedItems.has(value);
           const isSelected = selectedSet.has(value);
           const state = isSolved ? "solved" : isSelected ? "selected" : "idle";
@@ -219,6 +234,7 @@ export function GameScreen() {
               key={value}
               value={value}
               state={state}
+              dealIndex={index}
               solvedColorIndex={groupColorByItem.get(value) ?? 0}
               disabled={isSolved || !!active.result}
               onClick={() => handleToggle(value)}
@@ -290,5 +306,6 @@ export function GameScreen() {
         </button>
       </div>
     </div>
+    </>
   );
 }

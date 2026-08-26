@@ -40,6 +40,7 @@ export function Card({
   // Custom magnetic tilt & tactile press state
   const ref = useRef<HTMLButtonElement>(null);
   const [tilt, setTilt] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
+  const [glare, setGlare] = useState<{ x: number; y: number; opacity: number }>({ x: 50, y: 50, opacity: 0 });
   const [isPressed, setIsPressed] = useState(false);
   
   const handleMouseMove = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
@@ -50,14 +51,18 @@ export function Card({
     // Normalize coordinates from center: -1 to 1
     const x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
     const y = ((e.clientY - rect.top) / rect.height) * 2 - 1;
+    const gx = ((e.clientX - rect.left) / rect.width) * 100;
+    const gy = ((e.clientY - rect.top) / rect.height) * 100;
     
     // Rotate slightly away from pointer for 3D press feel
     setTilt({ x: -y * 8, y: x * 8 });
+    setGlare({ x: gx, y: gy, opacity: 0.35 });
   }, [disabled, state]);
 
   const handleMouseLeave = useCallback(() => {
     if (state === "solved") return;
     setTilt({ x: 0, y: 0 });
+    setGlare({ x: 50, y: 50, opacity: 0 });
     setIsPressed(false);
   }, [state]);
 
@@ -93,6 +98,9 @@ export function Card({
   const style: CSSProperties = {
     "--tilt-x": `${tilt.x}deg`,
     "--tilt-y": `${tilt.y}deg`,
+    "--glare-x": `${glare.x}%`,
+    "--glare-y": `${glare.y}%`,
+    "--glare-opacity": glare.opacity,
     ...(state === "selected" ? { "--lift": "-2px" } : {}),
     ...(state === "solved" ? { "--flip-delay": solvedIndex } as CSSProperties : {}),
     ...(dealIndex !== undefined && state === "idle" ? { animationDelay: `${dealIndex * 25}ms` } : {}),
