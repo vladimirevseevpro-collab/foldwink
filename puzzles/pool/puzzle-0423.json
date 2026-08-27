@@ -22,7 +22,8 @@
         "Beta",
         "Gamma",
         "Delta"
-      ]
+      ],
+      "revealHint": "SELECT"
     },
     {
       "id": "g2",
@@ -32,7 +33,8 @@
         "Theta",
         "Iota",
         "Kappa"
-      ]
+      ],
+      "revealHint": "SELECT"
     },
     {
       "id": "g3",
@@ -42,7 +44,8 @@
         "Xi",
         "Omicron",
         "Pi"
-      ]
+      ],
+      "revealHint": "SELECT"
     },
     {
       "id": "g4",
@@ -52,7 +55,8 @@
         "Upsilon",
         "Phi",
         "Omega"
-      ]
+      ],
+      "revealHint": "SELECT"
     }
   ]
 }

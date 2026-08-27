@@ -27,7 +27,7 @@
       "label": "Системные",
       "revealHint": "СИСТЕМНЫЕ",
       "items": [
-        "C",
+        "[C]",
         "C++",
         "Rust",
         "Go"
@@ -39,7 +39,7 @@
       "revealHint": "ДАННЫЕ",
       "items": [
         "Python",
-        "R",
+        "[R]",
         "Julia",
         "Scala"
       ]

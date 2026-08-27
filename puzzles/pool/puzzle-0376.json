@@ -22,7 +22,8 @@
         "Euler's Polyhedron Formula",
         "Thales' Theorem",
         "Midpoint Theorem"
-      ]
+      ],
+      "revealHint": "GEOMET"
     },
     {
       "id": "g2",
@@ -32,7 +33,8 @@
         "Euler's Theorem",
         "Wilson's Theorem",
         "Prime Number Theorem"
-      ]
+      ],
+      "revealHint": "NUMBER"
     },
     {
       "id": "g3",
@@ -42,7 +44,8 @@
         "Fundamental Theorem of Calculus",
         "Rolle's Theorem",
         "Squeeze Theorem"
-      ]
+      ],
+      "revealHint": "CALCUL"
     },
     {
       "id": "g4",
@@ -52,7 +55,8 @@
         "Factor Theorem",
         "Cayley-Hamilton",
         "Abel-Ruffini"
-      ]
+      ],
+      "revealHint": "ALGEBR"
     }
   ]
 }

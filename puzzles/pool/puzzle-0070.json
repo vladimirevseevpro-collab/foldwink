@@ -31,7 +31,7 @@
       "label": "Articles",
       "revealHint": "ARTICLE",
       "items": [
-        "A",
+        "Type A",
         "An",
         "The",
         "Some"
@@ -42,7 +42,7 @@
       "label": "Pronouns",
       "revealHint": "PRONOUN",
       "items": [
-        "I",
+        "Letter I",
         "You",
         "They",
         "We"

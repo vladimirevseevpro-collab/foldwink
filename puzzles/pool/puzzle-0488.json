@@ -22,7 +22,8 @@
         "Vigenere Cipher",
         "Atbash",
         "Playfair Cipher"
-      ]
+      ],
+      "revealHint": "CLASSI"
     },
     {
       "id": "g2",
@@ -32,7 +33,8 @@
         "DES",
         "Blowfish",
         "RC4"
-      ]
+      ],
+      "revealHint": "SYMMET"
     },
     {
       "id": "g3",
@@ -42,7 +44,8 @@
         "Diffie-Hellman",
         "Elliptic Curve",
         "ElGamal"
-      ]
+      ],
+      "revealHint": "PUBLIC"
     },
     {
       "id": "g4",
@@ -52,7 +55,8 @@
         "SHA-256",
         "bcrypt",
         "Whirlpool"
-      ]
+      ],
+      "revealHint": "HASH"
     }
   ]
 }

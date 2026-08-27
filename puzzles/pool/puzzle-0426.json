@@ -19,7 +19,7 @@
       "label": "ROMAN NUMERALS: 1–9",
       "items": [
         "III",
-        "V",
+        "[V]",
         "VII",
         "IX"
       ],
@@ -40,7 +40,7 @@
       "id": "g3",
       "label": "ROMAN NUMERALS: 50–99",
       "items": [
-        "L",
+        "[L]",
         "LXVI",
         "LXXXVIII",
         "XCIX"
@@ -51,7 +51,7 @@
       "id": "g4",
       "label": "ROMAN NUMERALS: 100+",
       "items": [
-        "C",
+        "[C]",
         "CDXLIV",
         "MCM",
         "MMXXIV"

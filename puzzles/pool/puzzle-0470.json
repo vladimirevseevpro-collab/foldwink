@@ -22,7 +22,8 @@
         "Falcon 9",
         "Falcon Heavy",
         "Falcon 9 Block 5"
-      ]
+      ],
+      "revealHint": "FALCON"
     },
     {
       "id": "g2",
@@ -32,7 +33,8 @@
         "Soyuz-2.1b",
         "Soyuz-ST",
         "Soyuz-5"
-      ]
+      ],
+      "revealHint": "SOYUZ"
     },
     {
       "id": "g3",
@@ -42,7 +44,8 @@
         "Ariane 5",
         "Ariane 6",
         "Ariane 1"
-      ]
+      ],
+      "revealHint": "ARIANE"
     },
     {
       "id": "g4",
@@ -52,7 +55,8 @@
         "Long March 5",
         "Long March 7",
         "Long March 9"
-      ]
+      ],
+      "revealHint": "LONG"
     }
   ]
 }

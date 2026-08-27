@@ -23,7 +23,8 @@
         "Bone",
         "Twig",
         "Shell"
-      ]
+      ],
+      "revealHint": "PHYSIC"
     },
     {
       "id": "commit",
@@ -33,7 +34,8 @@
         "Oath",
         "Pledge",
         "Promise"
-      ]
+      ],
+      "revealHint": "BROKEN"
     },
     {
       "id": "secure",
@@ -43,7 +45,8 @@
         "Cipher",
         "Seal",
         "Safe"
-      ]
+      ],
+      "revealHint": "BREAK"
     },
     {
       "id": "idiom",
@@ -53,7 +56,8 @@
         "Fast",
         "Sabbath",
         "Spell"
-      ]
+      ],
+      "revealHint": "BREAK"
     }
   ]
 }

@@ -22,7 +22,8 @@
         "Red Fox",
         "Black Bear",
         "Grey Wolf"
-      ]
+      ],
+      "revealHint": "COLOUR"
     },
     {
       "id": "g2",
@@ -32,7 +33,8 @@
         "Blue Jay",
         "Black Swan",
         "Grey Heron"
-      ]
+      ],
+      "revealHint": "COLOUR"
     },
     {
       "id": "g3",
@@ -42,7 +44,8 @@
         "Brown Recluse",
         "Red Knee",
         "Golden Silk"
-      ]
+      ],
+      "revealHint": "COLOUR"
     },
     {
       "id": "g4",
@@ -52,7 +55,8 @@
         "Green Mamba",
         "Black Rat Snake",
         "Brown Snake"
-      ]
+      ],
+      "revealHint": "COLOUR"
     }
   ]
 }

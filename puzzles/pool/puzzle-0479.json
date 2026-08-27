@@ -22,7 +22,8 @@
         "Tomato",
         "Avocado",
         "Chili"
-      ]
+      ],
+      "revealHint": "NAHUAT"
     },
     {
       "id": "g2",
@@ -32,7 +33,8 @@
         "Coyote",
         "Axolotl",
         "Quetzal"
-      ]
+      ],
+      "revealHint": "NAHUAT"
     },
     {
       "id": "g3",
@@ -42,7 +44,8 @@
         "Copal",
         "Zapote",
         "Nopal"
-      ]
+      ],
+      "revealHint": "NAHUAT"
     },
     {
       "id": "g4",
@@ -52,7 +55,8 @@
         "Atlatl",
         "Teocalli",
         "Cenote"
-      ]
+      ],
+      "revealHint": "NAHUAT"
     }
   ]
 }

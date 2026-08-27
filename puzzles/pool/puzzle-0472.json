@@ -22,7 +22,8 @@
         "Burglary",
         "Arson",
         "Robbery"
-      ]
+      ],
+      "revealHint": "CRIMIN"
     },
     {
       "id": "g2",
@@ -32,7 +33,8 @@
         "Defamation",
         "Nuisance",
         "Conversion"
-      ]
+      ],
+      "revealHint": "CIVIL"
     },
     {
       "id": "g3",
@@ -42,7 +44,8 @@
         "Equal Protection",
         "Free Speech",
         "Habeas Corpus"
-      ]
+      ],
+      "revealHint": "CONSTI"
     },
     {
       "id": "g4",
@@ -52,7 +55,8 @@
         "Acceptance",
         "Consideration",
         "Breach"
-      ]
+      ],
+      "revealHint": "CONTRA"
     }
   ]
 }

@@ -22,7 +22,8 @@
         "Plateosaurus",
         "Eoraptor",
         "Herrerasaurus"
-      ]
+      ],
+      "revealHint": "TRIASS"
     },
     {
       "id": "g2",
@@ -32,7 +33,8 @@
         "Camarasaurus",
         "Ceratosaurus",
         "Archaeopteryx"
-      ]
+      ],
+      "revealHint": "JURASS"
     },
     {
       "id": "g3",
@@ -42,7 +44,8 @@
         "Pachycephalosaurus",
         "Quetzalcoatlus",
         "Mosasaurus"
-      ]
+      ],
+      "revealHint": "CRETAC"
     },
     {
       "id": "g4",
@@ -52,7 +55,8 @@
         "Saber-Tooth Tiger",
         "Megalodon",
         "Dodo"
-      ]
+      ],
+      "revealHint": "CENOZO"
     }
   ]
 }

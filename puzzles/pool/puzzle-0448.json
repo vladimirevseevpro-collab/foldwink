@@ -22,7 +22,8 @@
         "Realism",
         "Romanticism",
         "Neoclassicism"
-      ]
+      ],
+      "revealHint": "EARLY"
     },
     {
       "id": "g2",
@@ -32,7 +33,8 @@
         "Fauvism",
         "Expressionism",
         "Futurism"
-      ]
+      ],
+      "revealHint": "EARLY"
     },
     {
       "id": "g3",
@@ -42,7 +44,8 @@
         "Color Field Painting",
         "Pop Art",
         "Minimalism"
-      ]
+      ],
+      "revealHint": "MID"
     },
     {
       "id": "g4",
@@ -52,7 +55,8 @@
         "Digital Art",
         "Neo-Expressionism",
         "Conceptual Art"
-      ]
+      ],
+      "revealHint": "LATE"
     }
   ]
 }

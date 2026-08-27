@@ -19,10 +19,10 @@
       "label": "MORSE ALL DOTS",
       "revealHint": "Dots",
       "items": [
-        "E",
-        "I",
-        "S",
-        "H"
+        "[E]",
+        "[I]",
+        "[S]",
+        "[H]"
       ]
     },
     {
@@ -30,10 +30,10 @@
       "label": "MORSE ALL DASHES",
       "revealHint": "Dashes",
       "items": [
-        "T",
-        "M",
-        "O",
-        "0"
+        "[T]",
+        "[M]",
+        "[O]",
+        "[0]"
       ]
     },
     {
@@ -41,10 +41,10 @@
       "label": "MORSE MIXED, STARTS WITH DOT",
       "revealHint": "Dot first",
       "items": [
-        "A",
-        "R",
-        "L",
-        "F"
+        "[A]",
+        "[R]",
+        "[L]",
+        "[F]"
       ]
     },
     {
@@ -52,10 +52,10 @@
       "label": "MORSE MIXED, STARTS WITH DASH",
       "revealHint": "Dash first",
       "items": [
-        "N",
-        "K",
-        "D",
-        "G"
+        "[N]",
+        "[K]",
+        "[D]",
+        "[G]"
       ]
     }
   ]

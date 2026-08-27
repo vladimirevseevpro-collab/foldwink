@@ -17,7 +17,7 @@
     {
       "id": "g1",
       "label": "Virtue Ethics Terms",
-      "revealHint": "",
+      "revealHint": "VIRTUE",
       "items": [
         "Eudaimonia",
         "Phronesis",
@@ -29,7 +29,7 @@
     {
       "id": "g2",
       "label": "Kantian Deontology Terms",
-      "revealHint": "",
+      "revealHint": "KANTIA",
       "items": [
         "Categorical Imperative",
         "Duty",
@@ -41,7 +41,7 @@
     {
       "id": "g3",
       "label": "Phenomenology Terms",
-      "revealHint": "",
+      "revealHint": "PHENOM",
       "items": [
         "Dasein",
         "Being-in-the-World",
@@ -53,7 +53,7 @@
     {
       "id": "g4",
       "label": "Hegelian Idealism Terms",
-      "revealHint": "",
+      "revealHint": "HEGELI",
       "items": [
         "Dialectic",
         "Geist",

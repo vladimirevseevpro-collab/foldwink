@@ -22,7 +22,8 @@
         "Goldbach's Conjecture",
         "Collatz Conjecture",
         "Twin Prime Conjecture"
-      ]
+      ],
+      "revealHint": "UNSOLV"
     },
     {
       "id": "g2",
@@ -32,7 +33,8 @@
         "Quantum Gravity",
         "Matter-Antimatter Asymmetry",
         "Turbulence"
-      ]
+      ],
+      "revealHint": "UNSOLV"
     },
     {
       "id": "g3",
@@ -42,7 +44,8 @@
         "Consciousness",
         "Ageing Mechanism",
         "Why We Sleep"
-      ]
+      ],
+      "revealHint": "UNSOLV"
     },
     {
       "id": "g4",
@@ -52,7 +55,8 @@
         "Shape of the Universe",
         "Hubble Tension",
         "Cosmic Inflation"
-      ]
+      ],
+      "revealHint": "UNSOLV"
     }
   ]
 }
