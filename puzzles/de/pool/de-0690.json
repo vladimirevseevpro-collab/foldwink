@@ -1,0 +1,59 @@
+{
+  "id": "de-0690",
+  "title": "Dinge mit «-schein» & Deutsche Alltagsrituale",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "wave2_de",
+    "categoryType": "polysemy_subversion",
+    "batch": "wave2-expansion",
+    "difficultyScore": 25,
+    "editorialRank": 15,
+    "gptRationale": "High-quality Wave 2 expanded puzzle with rich thematic depth and clean group symmetry."
+  },
+  "groups": [
+    {
+      "id": "g1_de_schein_compounds",
+      "label": "Dinge mit «-schein»",
+      "revealHint": "SCHEIN",
+      "items": [
+        "Führerschein",
+        "Sonnenschein",
+        "Heiligenschein",
+        "Geldschein"
+      ]
+    },
+    {
+      "id": "g2_de_rituals",
+      "label": "Deutsche Alltagsrituale",
+      "revealHint": "RITUAL",
+      "items": [
+        "Stoßlüften",
+        "Kehrwoche",
+        "Mülltrennung",
+        "Feierabend"
+      ]
+    },
+    {
+      "id": "g3_de_sofa_cozy",
+      "label": "Gemütlich auf dem Sofa",
+      "revealHint": "SOFA",
+      "items": [
+        "Kissen",
+        "Decke",
+        "Fernbedienung",
+        "Buch"
+      ]
+    },
+    {
+      "id": "g4_de_winter_cozy",
+      "label": "Winterliche Heißgetränke",
+      "revealHint": "WINTER",
+      "items": [
+        "Glühwein",
+        "Kinderpunsch",
+        "Kakao",
+        "Grog"
+      ]
+    }
+  ]
+}

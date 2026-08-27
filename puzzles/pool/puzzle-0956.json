@@ -1,0 +1,59 @@
+{
+  "id": "puzzle-0956",
+  "title": "Wax Seal Motifs & Deep Ocean Zones",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "wave2_puzzle",
+    "categoryType": "polysemy_subversion",
+    "batch": "wave2-expansion",
+    "difficultyScore": 25,
+    "editorialRank": 11,
+    "gptRationale": "High-quality Wave 2 expanded puzzle with rich thematic depth and clean group symmetry."
+  },
+  "groups": [
+    {
+      "id": "g1_wax_seals",
+      "label": "Wax Seal Motifs",
+      "revealHint": "SEAL",
+      "items": [
+        "Laurel",
+        "Raven",
+        "Keyhole",
+        "Compass"
+      ]
+    },
+    {
+      "id": "g2_ocean_zones",
+      "label": "Deep Ocean Zones",
+      "revealHint": "OCEAN",
+      "items": [
+        "Sunlight",
+        "Twilight",
+        "Midnight",
+        "Abyssal"
+      ]
+    },
+    {
+      "id": "g3_nocturnal_animals",
+      "label": "Nocturnal Forest Animals",
+      "revealHint": "NIGHT",
+      "items": [
+        "Owl",
+        "Badger",
+        "Firefly",
+        "Hedgehog"
+      ]
+    },
+    {
+      "id": "g4_things_with_wings",
+      "label": "Things with Wings",
+      "revealHint": "WINGS",
+      "items": [
+        "Airplane",
+        "Stage",
+        "Hospital",
+        "Butterfly"
+      ]
+    }
+  ]
+}

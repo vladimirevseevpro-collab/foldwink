@@ -1,0 +1,55 @@
+{
+  "id": "de-0925",
+  "title": "Wortsalat mit «-salat» & Dinge mit «-rad»",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "wave2_de",
+    "categoryType": "cultural_lifestyle",
+    "batch": "wave2-expansion",
+    "difficultyScore": 12,
+    "editorialRank": 10,
+    "gptRationale": "High-quality Wave 2 expanded puzzle with rich thematic depth and clean group symmetry."
+  },
+  "groups": [
+    {
+      "id": "g1_de_salat_compounds",
+      "label": "Wortsalat mit «-salat»",
+      "items": [
+        "Kartoffelsalat",
+        "Nudelsalat",
+        "Kabelsalat",
+        "Wortsalat"
+      ]
+    },
+    {
+      "id": "g2_de_rad_compounds",
+      "label": "Dinge mit «-rad»",
+      "items": [
+        "Fahrrad",
+        "Riesenrad",
+        "Zahnrad",
+        "Steuerrad"
+      ]
+    },
+    {
+      "id": "g3_de_zeit_compounds",
+      "label": "Begriffe mit «-zeit»",
+      "items": [
+        "Halbzeit",
+        "Mahlzeit",
+        "Eiszeit",
+        "Auszeit"
+      ]
+    },
+    {
+      "id": "g4_de_morning_after",
+      "label": "Am Morgen danach gesucht",
+      "items": [
+        "Aspirin",
+        "Wasser",
+        "Rollmops",
+        "Kaffee"
+      ]
+    }
+  ]
+}

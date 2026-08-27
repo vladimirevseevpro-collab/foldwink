@@ -1,0 +1,59 @@
+{
+  "id": "de-0636",
+  "title": "Dinge mit «-brille» & Dinge mit «-schuh»",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "wave2_de",
+    "categoryType": "polysemy_subversion",
+    "batch": "wave2-expansion",
+    "difficultyScore": 25,
+    "editorialRank": 21,
+    "gptRationale": "High-quality Wave 2 expanded puzzle with rich thematic depth and clean group symmetry."
+  },
+  "groups": [
+    {
+      "id": "g1_de_brille_compounds",
+      "label": "Dinge mit «-brille»",
+      "revealHint": "BRILLE",
+      "items": [
+        "Lesebrille",
+        "Taucherbrille",
+        "Klobrille",
+        "Sonnenbrille"
+      ]
+    },
+    {
+      "id": "g2_de_schuh_compounds",
+      "label": "Dinge mit «-schuh»",
+      "revealHint": "SCHUH",
+      "items": [
+        "Handschuh",
+        "Schlittschuh",
+        "Wanderschuh",
+        "Hufeisen"
+      ]
+    },
+    {
+      "id": "g3_de_biergarten",
+      "label": "Klassiker im Biergarten",
+      "revealHint": "GARTEN",
+      "items": [
+        "Brezel",
+        "Radler",
+        "Senf",
+        "Weißwurst"
+      ]
+    },
+    {
+      "id": "g4_de_felines",
+      "label": "Große und kleine Katzen",
+      "revealHint": "KATZEN",
+      "items": [
+        "Luchs",
+        "Gepard",
+        "Löwe",
+        "Kater"
+      ]
+    }
+  ]
+}

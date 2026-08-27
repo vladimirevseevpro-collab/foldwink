@@ -1,0 +1,55 @@
+{
+  "id": "puzzle-0915",
+  "title": "Artisan Paper Finishes & Classic Painter Pigments",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "wave2_puzzle",
+    "categoryType": "cultural_lifestyle",
+    "batch": "wave2-expansion",
+    "difficultyScore": 12,
+    "editorialRank": 10,
+    "gptRationale": "High-quality Wave 2 expanded puzzle with rich thematic depth and clean group symmetry."
+  },
+  "groups": [
+    {
+      "id": "g1_paper_finishes",
+      "label": "Artisan Paper Finishes",
+      "items": [
+        "Vellum",
+        "Deckle",
+        "Parchment",
+        "Linen"
+      ]
+    },
+    {
+      "id": "g2_art_pigments",
+      "label": "Classic Painter Pigments",
+      "items": [
+        "Ultramarine",
+        "Ochre",
+        "Cobalt",
+        "Cadmium"
+      ]
+    },
+    {
+      "id": "g3_gemstones_cut",
+      "label": "Precious Gemstone Cuts",
+      "items": [
+        "Emerald",
+        "Cabochon",
+        "Marquise",
+        "Princess"
+      ]
+    },
+    {
+      "id": "g4_cloud_forms",
+      "label": "Atmospheric Cloud Types",
+      "items": [
+        "Cumulus",
+        "Cirrus",
+        "Stratus",
+        "Nimbus"
+      ]
+    }
+  ]
+}

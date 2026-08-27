@@ -1,0 +1,59 @@
+{
+  "id": "de-0754",
+  "title": "Gemütlich auf dem Sofa & Winterliche Heißgetränke",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "wave2_de",
+    "categoryType": "polysemy_subversion",
+    "batch": "wave2-expansion",
+    "difficultyScore": 25,
+    "editorialRank": 19,
+    "gptRationale": "High-quality Wave 2 expanded puzzle with rich thematic depth and clean group symmetry."
+  },
+  "groups": [
+    {
+      "id": "g1_de_sofa_cozy",
+      "label": "Gemütlich auf dem Sofa",
+      "revealHint": "SOFA",
+      "items": [
+        "Kissen",
+        "Decke",
+        "Fernbedienung",
+        "Buch"
+      ]
+    },
+    {
+      "id": "g2_de_winter_cozy",
+      "label": "Winterliche Heißgetränke",
+      "revealHint": "WINTER",
+      "items": [
+        "Glühwein",
+        "Kinderpunsch",
+        "Kakao",
+        "Grog"
+      ]
+    },
+    {
+      "id": "g3_de_brille_compounds",
+      "label": "Dinge mit «-brille»",
+      "revealHint": "BRILLE",
+      "items": [
+        "Lesebrille",
+        "Taucherbrille",
+        "Klobrille",
+        "Sonnenbrille"
+      ]
+    },
+    {
+      "id": "g4_de_schuh_compounds",
+      "label": "Dinge mit «-schuh»",
+      "revealHint": "SCHUH",
+      "items": [
+        "Handschuh",
+        "Schlittschuh",
+        "Wanderschuh",
+        "Hufeisen"
+      ]
+    }
+  ]
+}

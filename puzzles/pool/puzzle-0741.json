@@ -1,0 +1,55 @@
+{
+  "id": "puzzle-0741",
+  "title": "Brand Names that are Everyday Nouns & Aged Hard Cheeses",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "wave2_puzzle",
+    "categoryType": "cultural_lifestyle",
+    "batch": "wave2-expansion",
+    "difficultyScore": 12,
+    "editorialRank": 16,
+    "gptRationale": "High-quality Wave 2 expanded puzzle with rich thematic depth and clean group symmetry."
+  },
+  "groups": [
+    {
+      "id": "g1_double_agents_corps",
+      "label": "Brand Names that are Everyday Nouns",
+      "items": [
+        "Apple",
+        "Amazon",
+        "Target",
+        "Shell"
+      ]
+    },
+    {
+      "id": "g2_cheese_varieties",
+      "label": "Aged Hard Cheeses",
+      "items": [
+        "Cheddar",
+        "Gouda",
+        "Parmesan",
+        "Gruyere"
+      ]
+    },
+    {
+      "id": "g3_pasta_shapes",
+      "label": "Italian Pasta Shapes",
+      "items": [
+        "Penne",
+        "Fusilli",
+        "Rigatoni",
+        "Farfalle"
+      ]
+    },
+    {
+      "id": "g4_breakfast_spreads",
+      "label": "Morning Toast Spreads",
+      "items": [
+        "Marmalade",
+        "Nutella",
+        "Peanut Butter",
+        "Honey"
+      ]
+    }
+  ]
+}
