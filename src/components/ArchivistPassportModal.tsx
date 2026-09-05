@@ -168,6 +168,20 @@ export function ArchivistPassportModal({ onClose, onOpenContract }: ArchivistPas
     return item.labelEn;
   };
 
+  const getSealLabel = (sId: string) => {
+    const item = SEALS.find((s) => s.id === sId) ?? SEALS[0];
+    if (lang === "ru") return item.labelRu ?? item.label;
+    if (lang === "de") return item.labelDe ?? item.label;
+    return item.label;
+  };
+
+  const getNibLabel = (nId: string) => {
+    const item = NIBS.find((n) => n.id === nId) ?? NIBS[0];
+    if (lang === "ru") return item.labelRu ?? item.label;
+    if (lang === "de") return item.labelDe ?? item.label;
+    return item.label;
+  };
+
   const selectedStamp = STAMP_COLLECTION.find((s) => s.id === selectedStampId);
   const validatedImport = importInput.trim() ? decodePassportFromSeal(importInput) : null;
 
@@ -185,7 +199,7 @@ export function ArchivistPassportModal({ onClose, onOpenContract }: ArchivistPas
                   activeTab === "passport" ? "bg-accent text-white" : "text-muted hover:text-text"
                 }`}
               >
-                📜 {lang === "ru" ? "Паспорт" : lang === "de" ? "Pass" : "Passport"}
+                📜 {t.passport.tabPassport}
               </button>
               <button
                 type="button"
@@ -194,7 +208,7 @@ export function ArchivistPassportModal({ onClose, onOpenContract }: ArchivistPas
                   activeTab === "stamps" ? "bg-accent text-white" : "text-muted hover:text-text"
                 }`}
               >
-                💌 {lang === "ru" ? "Альбом Марок" : lang === "de" ? "Marken-Album" : "Stamp Album"} ({profile.collectedStampIds.length}/{STAMP_COLLECTION.length})
+                💌 {t.passport.tabStamps} ({profile.collectedStampIds.length}/{STAMP_COLLECTION.length})
               </button>
             </div>
           ) : (
@@ -206,7 +220,7 @@ export function ArchivistPassportModal({ onClose, onOpenContract }: ArchivistPas
               }}
               className="text-xs font-bold text-accent hover:underline flex items-center gap-1"
             >
-              ← {subView === "diff" ? (lang === "ru" ? "Назад к коду" : lang === "de" ? "Zurück" : "Back to Input") : (lang === "ru" ? "Назад в Паспорт" : lang === "de" ? "Zurück" : "Back to Passport")}
+              ← {subView === "diff" ? (lang === "ru" ? "Назад к коду" : lang === "de" ? "Zurück zum Code" : "Back to Input") : (lang === "ru" ? "Назад в Паспорт" : lang === "de" ? "Zurück zum Pass" : "Back to Passport")}
             </button>
           )}
 
@@ -225,7 +239,9 @@ export function ArchivistPassportModal({ onClose, onOpenContract }: ArchivistPas
             <div className="text-xs uppercase tracking-widest font-bold text-muted">
               {lang === "ru"
                 ? "📜 Сургучная Грамота (Перенос без сервера)"
-                : "📜 Wax Seal Certificate (Zero-Backend Export)"}
+                : lang === "de"
+                  ? "📜 Wachssiegel-Urkunde (Serverloser Transfer)"
+                  : "📜 Wax Seal Certificate (Zero-Backend Export)"}
             </div>
 
             <div className="flex justify-center">
@@ -238,7 +254,9 @@ export function ArchivistPassportModal({ onClose, onOpenContract }: ArchivistPas
             <p className="text-[11px] text-muted max-w-xs mx-auto">
               {lang === "ru"
                 ? "Отсканируйте QR-код камерой на другом устройстве или скопируйте строку печати для мгновенного переноса профиля."
-                : "Scan this QR code with another device or copy the seal code below to transfer your passport without any server."}
+                : lang === "de"
+                  ? "Scanne diesen QR-Code mit einem anderen Gerät oder kopiere den Siegelcode unten für den direkten Transfer."
+                  : "Scan this QR code with another device or copy the seal code below to transfer your passport without any server."}
             </p>
 
             <div className="flex flex-col gap-2 pt-1">
@@ -249,9 +267,7 @@ export function ArchivistPassportModal({ onClose, onOpenContract }: ArchivistPas
               >
                 <span>{copySuccess ? "✓" : "📋"}</span>
                 <span>
-                  {copySuccess
-                    ? (lang === "ru" ? "Печать Скопирована!" : "Seal Copied!")
-                    : (lang === "ru" ? "Скопировать Код Печати" : "Copy Seal Code")}
+                  {copySuccess ? t.passport.sealCopied : t.passport.copyCode}
                 </span>
               </button>
 
@@ -261,7 +277,7 @@ export function ArchivistPassportModal({ onClose, onOpenContract }: ArchivistPas
                 className="w-full py-2 rounded-xl border border-line bg-surfaceHi hover:bg-surfaceHi/80 text-text text-xs font-medium transition-all flex items-center justify-center gap-2"
               >
                 <span>💾</span>
-                <span>{lang === "ru" ? "Сохранить Грамоту (PNG)" : "Download Scroll (PNG)"}</span>
+                <span>{t.passport.downloadPng}</span>
               </button>
             </div>
           </div>
@@ -272,12 +288,14 @@ export function ArchivistPassportModal({ onClose, onOpenContract }: ArchivistPas
           <div className="space-y-4 text-left animate-in zoom-in-95 duration-150">
             <div className="text-center">
               <div className="text-xs uppercase tracking-widest font-bold text-muted">
-                {lang === "ru" ? "📥 Импорт Сургучной Печати" : "📥 Import Wax Seal"}
+                {lang === "ru" ? "📥 Импорт Сургучной Печати" : lang === "de" ? "📥 Wachssiegel importieren" : "📥 Import Wax Seal"}
               </div>
               <p className="text-[11px] text-muted mt-1">
                 {lang === "ru"
                   ? "Вставьте код сургучной печати (FWSEAL1:...) для восстановления паспорта."
-                  : "Paste your wax seal code (FWSEAL1:...) to restore your passport."}
+                  : lang === "de"
+                    ? "Füge deinen Siegelcode (FWSEAL1:...) ein, um deinen Pass wiederherzustellen."
+                    : "Paste your wax seal code (FWSEAL1:...) to restore your passport."}
               </p>
             </div>
 
@@ -304,17 +322,19 @@ export function ArchivistPassportModal({ onClose, onOpenContract }: ArchivistPas
               <div className="p-3 rounded-xl border border-accent/60 bg-accent/10 space-y-1 text-xs animate-in fade-in duration-150">
                 <div className="font-bold text-accent flex items-center gap-1.5">
                   <span>✓</span>
-                  <span>{lang === "ru" ? "Печать проверена Гильдией" : "Verified Guild Seal"}</span>
+                  <span>{t.passport.verifiedSeal}</span>
                 </div>
                 <div className="text-text font-medium">
                   {getGuildRank(validatedImport.profile.level).icon}{" "}
                   {lang === "ru"
                     ? getGuildRank(validatedImport.profile.level).titleRu
-                    : getGuildRank(validatedImport.profile.level).titleEn}{" "}
+                    : lang === "de"
+                      ? getGuildRank(validatedImport.profile.level).titleDe
+                      : getGuildRank(validatedImport.profile.level).titleEn}{" "}
                   · Lv. {validatedImport.profile.level} ({validatedImport.profile.xp} XP)
                 </div>
                 <div className="text-muted text-[11px]">
-                  💧 {validatedImport.profile.ink} · 🕯️ {validatedImport.profile.wax} · 👑 {validatedImport.profile.prestige} · 💌 {validatedImport.profile.collectedStampIds.length} {lang === "ru" ? "марок" : "stamps"}
+                  💧 {validatedImport.profile.ink} · 🕯️ {validatedImport.profile.wax} · 👑 {validatedImport.profile.prestige} · 💌 {t.passport.stampsCount(validatedImport.profile.collectedStampIds.length, STAMP_COLLECTION.length)}
                 </div>
               </div>
             )}
@@ -332,7 +352,7 @@ export function ArchivistPassportModal({ onClose, onOpenContract }: ArchivistPas
               <span>{importSuccess ? "✓" : "⚖️"}</span>
               <span>
                 {importSuccess
-                  ? (lang === "ru" ? "Паспорт Успешно Восстановлен!" : "Passport Restored!")
+                  ? (lang === "ru" ? "Паспорт Успешно Восстановлен!" : lang === "de" ? "Pass erfolgreich wiederhergestellt!" : "Passport Restored!")
                   : (lang === "ru" ? "Сравнить профили и заменить" : lang === "de" ? "Profile vergleichen & ersetzen" : "Review Diff & Replace")}
               </span>
             </button>
@@ -403,7 +423,7 @@ export function ArchivistPassportModal({ onClose, onOpenContract }: ArchivistPas
                 <div className="font-semibold text-text">{t.passport.statStreak}</div>
                 <div className="text-center text-muted">{stats.currentStreak} 🔥</div>
                 <div className="text-center font-bold text-accent">
-                  {stats.currentStreak} 🔥
+                  {stats.currentStreak} 🔥 ({t.passport.preservedStreak})
                 </div>
               </div>
 
@@ -448,52 +468,57 @@ export function ArchivistPassportModal({ onClose, onOpenContract }: ArchivistPas
                 type="button"
                 onClick={handleConfirmReplace}
                 className="flex-1 py-2.5 rounded-xl border border-accent bg-accent hover:opacity-90 text-white text-xs font-bold uppercase tracking-wider transition-all shadow-md"
-                data-testid="confirm-replace-profile"
               >
-                ✓ {t.passport.replaceConfirm}
+                {t.passport.replaceConfirm}
               </button>
             </div>
           </div>
         )}
 
-        {/* Main View: Passport / Stamps */}
+        {/* Main View: Profile Card Tab */}
         {subView === "none" && activeTab === "passport" && (
           <div className="space-y-4">
-            {/* Vintage Guild Passport Card */}
-            <div className="rounded-xl border-2 border-line bg-surfaceHi/60 p-4 relative overflow-hidden shadow-inner space-y-3">
+            <div className="rounded-xl border border-line bg-surfaceHi/50 p-4 space-y-3">
               <div className="flex items-center justify-between">
                 <div>
-                  <div className="text-[10px] uppercase font-bold tracking-widest text-muted">
-                    Guild of Archivists
+                  <div className="text-xs uppercase tracking-wider font-bold text-accent">
+                    {getRankTitle()}
                   </div>
-                  <div className="text-base font-extrabold text-text flex items-center gap-1.5">
+                  <div className="text-lg font-extrabold text-text flex items-center gap-1.5 mt-0.5">
                     <span>{rank.icon}</span>
-                    <span>{getRankTitle()}</span>
+                    <span>Lv. {profile.level}</span>
+                    <span className="text-xs font-semibold text-muted">· {getTitleLabel(profile.titleId)}</span>
                   </div>
                 </div>
                 <div className="text-right">
-                  <div className="text-xs font-black text-accent">Lv. {profile.level}</div>
-                  <div className="text-[10px] text-muted">{profile.xp} XP</div>
+                  <div className="text-xs font-bold text-text tabular-nums">{profile.xp} XP</div>
+                  <div className="text-[10px] text-muted">{t.passport.statLevel} {profile.level}</div>
                 </div>
               </div>
 
-              {/* XP Progress bar */}
-              <div className="w-full bg-line/60 h-2 rounded-full overflow-hidden">
-                <div
-                  className="bg-accent h-full transition-all duration-300"
-                  style={{ width: `${xpProgress}%` }}
-                />
+              {/* XP Progress Bar */}
+              <div className="space-y-1">
+                <div className="h-2 w-full rounded-full bg-surface border border-line overflow-hidden">
+                  <div
+                    className="h-full bg-gradient-to-r from-accent to-accent/70 transition-all duration-300"
+                    style={{ width: `${xpProgress}%` }}
+                  />
+                </div>
+                <div className="flex justify-between text-[10px] text-muted">
+                  <span>{profile.xp - curLevelXp} XP</span>
+                  <span>{nextLevelXp - curLevelXp} XP to Lv. {profile.level + 1}</span>
+                </div>
               </div>
 
-              {/* Balances */}
-              <div className="grid grid-cols-4 gap-1.5 pt-1 text-center">
+              {/* Resource Ledger */}
+              <div className="grid grid-cols-4 gap-2 pt-2 text-center border-t border-line">
                 <div className="p-1.5 rounded-lg bg-surface/80 border border-line">
                   <div className="text-xs font-bold text-blue-400">💧 {profile.ink}</div>
-                  <div className="text-[9px] text-muted uppercase font-semibold">{lang === "ru" ? "Чернила" : "Ink"}</div>
+                  <div className="text-[9px] text-muted uppercase font-semibold">{t.passport.statInk}</div>
                 </div>
                 <div className="p-1.5 rounded-lg bg-surface/80 border border-line">
                   <div className="text-xs font-bold text-amber-400">🕯️ {profile.wax}</div>
-                  <div className="text-[9px] text-muted uppercase font-semibold">{lang === "ru" ? "Сургуч" : "Wax"}</div>
+                  <div className="text-[9px] text-muted uppercase font-semibold">{t.passport.statWax}</div>
                 </div>
                 <div className="p-1.5 rounded-lg bg-surface/80 border border-line">
                   <div className="text-xs font-bold text-yellow-300">👑 {profile.prestige}</div>
@@ -501,7 +526,7 @@ export function ArchivistPassportModal({ onClose, onOpenContract }: ArchivistPas
                 </div>
                 <div className="p-1.5 rounded-lg bg-surface/80 border border-line">
                   <div className="text-xs font-bold text-red-400">⚔️ {profile.contractsWon}</div>
-                  <div className="text-[9px] text-muted uppercase font-semibold">{lang === "ru" ? "Контракты" : "Trials"}</div>
+                  <div className="text-[9px] text-muted uppercase font-semibold">{lang === "ru" ? "Контракты" : lang === "de" ? "Verträge" : "Trials"}</div>
                 </div>
               </div>
             </div>
@@ -510,16 +535,16 @@ export function ArchivistPassportModal({ onClose, onOpenContract }: ArchivistPas
             <div className="space-y-3 text-xs">
               <div>
                 <label className="text-[11px] font-bold text-muted uppercase tracking-wider block mb-1">
-                  {lang === "ru" ? "Официальный Титул" : "Official Guild Title"}
+                  {t.passport.officialTitle}
                 </label>
                 <select
                   value={profile.titleId}
                   onChange={(e) => handleUpdateField("titleId", e.target.value)}
                   className="w-full rounded-lg border border-line bg-surfaceHi p-2 text-xs text-text font-medium"
                 >
-                  {TITLES.map((t) => (
-                    <option key={t.id} value={t.id}>
-                      {getTitleLabel(t.id)}
+                  {TITLES.map((tit) => (
+                    <option key={tit.id} value={tit.id}>
+                      {getTitleLabel(tit.id)}
                     </option>
                   ))}
                 </select>
@@ -528,7 +553,7 @@ export function ArchivistPassportModal({ onClose, onOpenContract }: ArchivistPas
               <div className="grid grid-cols-2 gap-3">
                 <div>
                   <label className="text-[11px] font-bold text-muted uppercase tracking-wider block mb-1">
-                    {lang === "ru" ? "Личная Печать" : "Wax Seal"}
+                    {t.passport.waxSealLabel}
                   </label>
                   <select
                     value={profile.sealId}
@@ -537,14 +562,14 @@ export function ArchivistPassportModal({ onClose, onOpenContract }: ArchivistPas
                   >
                     {SEALS.map((s) => (
                       <option key={s.id} value={s.id}>
-                        {s.icon} {s.label}
+                        {s.icon} {getSealLabel(s.id)}
                       </option>
                     ))}
                   </select>
                 </div>
                 <div>
                   <label className="text-[11px] font-bold text-muted uppercase tracking-wider block mb-1">
-                    {lang === "ru" ? "Перо Мастера" : "Scribe Nib"}
+                    {t.passport.scribeNibLabel}
                   </label>
                   <select
                     value={profile.nibId}
@@ -553,7 +578,7 @@ export function ArchivistPassportModal({ onClose, onOpenContract }: ArchivistPas
                   >
                     {NIBS.map((n) => (
                       <option key={n.id} value={n.id}>
-                        {n.icon} {n.label}
+                        {n.icon} {getNibLabel(n.id)}
                       </option>
                     ))}
                   </select>
@@ -573,7 +598,7 @@ export function ArchivistPassportModal({ onClose, onOpenContract }: ArchivistPas
                 className="py-2.5 px-3 rounded-xl border border-amber-500/40 bg-amber-950/20 hover:bg-amber-950/40 text-amber-200 text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 shadow-sm"
               >
                 <span>📜</span>
-                <span>{lang === "ru" ? "Запечатать (QR)" : "Seal Passport"}</span>
+                <span>{t.passport.sealPassport}</span>
               </button>
 
               <button
@@ -586,7 +611,7 @@ export function ArchivistPassportModal({ onClose, onOpenContract }: ArchivistPas
                 className="py-2.5 px-3 rounded-xl border border-line bg-surfaceHi hover:bg-surfaceHi/80 text-muted hover:text-text text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 shadow-sm"
               >
                 <span>📥</span>
-                <span>{lang === "ru" ? "Импорт Печати" : "Import Seal"}</span>
+                <span>{t.passport.importSeal}</span>
               </button>
             </div>
 
@@ -624,7 +649,7 @@ export function ArchivistPassportModal({ onClose, onOpenContract }: ArchivistPas
                 className="w-full py-2.5 rounded-xl border border-red-500/40 bg-red-950/30 hover:bg-red-950/50 text-red-200 text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-sm"
               >
                 <span>⚔️</span>
-                <span>{lang === "ru" ? "Железный Контракт (Высокие Ставки)" : "The Iron Contract (High Stakes)"}</span>
+                <span>{t.passport.ironContractCta}</span>
               </button>
             )}
           </div>

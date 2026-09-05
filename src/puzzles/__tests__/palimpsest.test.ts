@@ -8,6 +8,7 @@ import {
   isPalimpsestOneAway,
   type PalimpsestPuzzle,
 } from "../palimpsest";
+import { strings, SUPPORTED_LANGS } from "../../i18n/strings";
 
 function verifyOrthogonalPuzzle(puzzle: PalimpsestPuzzle) {
   // 1. Must contain exactly 16 unique words
@@ -77,5 +78,19 @@ describe("Palimpsest Dual-Layer Engine", () => {
 
     const twoFromGroup = [g.items[0], g.items[1], "BLADE", "MACE"];
     expect(isPalimpsestOneAway(twoFromGroup, layer)).toBe(false);
+  });
+
+  it("ensures palimpsest and passport strings exist for all supported languages", () => {
+    for (const l of SUPPORTED_LANGS) {
+      const s = strings[l];
+      expect(s.palimpsest.title).toBeTruthy();
+      expect(s.palimpsest.outOfMistakesTitle).toBeTruthy();
+      expect(s.palimpsest.retryLayer).toBeTruthy();
+      expect(s.palimpsest.menuButton).not.toContain("📜✨"); // no duplicate icon prefix
+      expect(s.passport.preservedStreak).toBeTruthy();
+      expect(s.passport.diffTitle).toBeTruthy();
+      expect(s.duel.bannerTitle).toBeTruthy();
+      expect(s.duel.sendResponse).toBeTruthy();
+    }
   });
 });

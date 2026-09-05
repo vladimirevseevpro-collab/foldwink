@@ -260,6 +260,20 @@ export interface Strings {
     statInk: string;
     statWax: string;
     statStamps: string;
+    preservedStreak: string;
+    sealPassport: string;
+    importSeal: string;
+    downloadPng: string;
+    copyCode: string;
+    sealCopied: string;
+    verifiedSeal: string;
+    officialTitle: string;
+    waxSealLabel: string;
+    scribeNibLabel: string;
+    ironContractCta: string;
+    tabPassport: string;
+    tabStamps: string;
+    stampsCount: (collected: number, total: number) => string;
   };
   palimpsest: {
     menuButton: string;
@@ -276,6 +290,11 @@ export interface Strings {
     archivalReward: string;
     rulesHint: string;
     backToMenu: string;
+    outOfMistakesTitle: string;
+    outOfMistakesDesc: string;
+    retryLayer: string;
+    openPassport: string;
+    recordedInPassport: string;
   };
 }
 
@@ -551,9 +570,23 @@ export const strings: Record<Lang, Strings> = {
       statInk: "Ink Drops",
       statWax: "Wax Seals",
       statStamps: "Stamps Unlocked",
+      preservedStreak: "Preserved",
+      sealPassport: "Seal Passport (QR)",
+      importSeal: "Import Seal",
+      downloadPng: "Download Scroll (PNG)",
+      copyCode: "Copy Seal Code",
+      sealCopied: "Seal Copied!",
+      verifiedSeal: "Verified Guild Seal",
+      officialTitle: "Official Guild Title",
+      waxSealLabel: "Wax Seal",
+      scribeNibLabel: "Scribe Nib",
+      ironContractCta: "The Iron Contract (High Stakes)",
+      tabPassport: "Passport",
+      tabStamps: "Stamp Album",
+      stampsCount: (c, t) => `${c}/${t} stamps`,
     },
     palimpsest: {
-      menuButton: "📜✨ The Palimpsest",
+      menuButton: "The Palimpsest",
       title: "The Palimpsest",
       subtitle: "Dual-Layer Archival Parchment",
       obverseBadge: "Obverse Layer (1/2)",
@@ -569,6 +602,11 @@ export const strings: Record<Lang, Strings> = {
       rulesHint:
         "Solve both orthogonal layers of the same 16 words. First by meaning, then by hidden structure.",
       backToMenu: "Return to Archives",
+      outOfMistakesTitle: "Parchment Spoiled",
+      outOfMistakesDesc: "All 4 mistakes consumed. The ancient ink bled through.",
+      retryLayer: "Retry Layer",
+      openPassport: "Open Passport",
+      recordedInPassport: "Recorded in Archivist Passport",
     },
   },
 
@@ -847,9 +885,23 @@ export const strings: Record<Lang, Strings> = {
       statInk: "Tintentropfen",
       statWax: "Siegelwachs",
       statStamps: "Briefmarken",
+      preservedStreak: "Behalten",
+      sealPassport: "Pass versiegeln (QR)",
+      importSeal: "Siegel importieren",
+      downloadPng: "Urkunde speichern (PNG)",
+      copyCode: "Siegelcode kopieren",
+      sealCopied: "Siegel kopiert!",
+      verifiedSeal: "Geprüftes Gildensiegel",
+      officialTitle: "Offizieller Gildentitel",
+      waxSealLabel: "Wachssiegel",
+      scribeNibLabel: "Schreibfeder",
+      ironContractCta: "Eiserner Vertrag (Hohe Einsätze)",
+      tabPassport: "Pass",
+      tabStamps: "Marken-Album",
+      stampsCount: (c, t) => `${c}/${t} Marken`,
     },
     palimpsest: {
-      menuButton: "📜✨ Das Palimpsest",
+      menuButton: "Das Palimpsest",
       title: "Das Palimpsest",
       subtitle: "Doppellagiges Pergament",
       obverseBadge: "Vorderseite (1/2)",
@@ -865,6 +917,11 @@ export const strings: Record<Lang, Strings> = {
       rulesHint:
         "Löse beide Ebenen derselben 16 Wörter. Erst nach Bedeutung, dann nach verborgener Struktur.",
       backToMenu: "Zurück zum Archiv",
+      outOfMistakesTitle: "Pergament beschädigt",
+      outOfMistakesDesc: "Alle 4 Fehler aufgebraucht. Die alte Tinte ist verlaufen.",
+      retryLayer: "Ebene neu starten",
+      openPassport: "Pass öffnen",
+      recordedInPassport: "Im Archivars-Pass vermerkt",
     },
   },
 
@@ -1142,9 +1199,23 @@ export const strings: Record<Lang, Strings> = {
       statInk: "Капли чернил",
       statWax: "Сургучные печати",
       statStamps: "Собрано марок",
+      preservedStreak: "Сохраняется",
+      sealPassport: "Запечатать (QR)",
+      importSeal: "Импорт Печати",
+      downloadPng: "Сохранить Грамоту (PNG)",
+      copyCode: "Скопировать Код Печати",
+      sealCopied: "Печать Скопирована!",
+      verifiedSeal: "Печать проверена Гильдией",
+      officialTitle: "Официальный Титул",
+      waxSealLabel: "Личная Печать",
+      scribeNibLabel: "Перо Мастера",
+      ironContractCta: "Железный Контракт (Высокие Ставки)",
+      tabPassport: "Паспорт",
+      tabStamps: "Альбом Марок",
+      stampsCount: (c, t) => `${c}/${t} марок`,
     },
     palimpsest: {
-      menuButton: "📜✨ Палимпсест",
+      menuButton: "Палимпсест",
       title: "Палимпсест",
       subtitle: "Двусторонний пергамент Архива",
       obverseBadge: "Лицевая сторона (1/2)",
@@ -1160,6 +1231,17 @@ export const strings: Record<Lang, Strings> = {
       rulesHint:
         "Разгадайте обе стороны одних и тех же 16 слов: сначала по смыслу, затем по ортогональному правилу.",
       backToMenu: "В архив",
+      outOfMistakesTitle: "Пергамент испорчен",
+      outOfMistakesDesc: "Превышен лимит в 4 ошибки. Древние чернила расплылись.",
+      retryLayer: "Переписать слой",
+      openPassport: "Открыть Паспорт",
+      recordedInPassport: "Занесено в Паспорт архивариуса",
     },
   },
 };
+
+export function getStrings(lang?: string): Strings {
+  if (lang === "ru") return strings.ru;
+  if (lang === "de") return strings.de;
+  return strings.en;
+}

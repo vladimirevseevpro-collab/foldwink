@@ -198,7 +198,7 @@ export function MenuScreen() {
                 className="flex-1"
                 onClick={() => setIsPassportOpen(true)}
               >
-                📜 {lang === "ru" ? "Паспорт" : lang === "de" ? "Pass" : "Passport"}
+                📜 {t.passport.tabPassport}
               </Button>
             </div>
 

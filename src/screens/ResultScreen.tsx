@@ -26,7 +26,7 @@ import { seedFromString } from "../game/engine/shuffle";
 import { todayLocal } from "../utils/date";
 import { isSupporter } from "../monetization/supporter";
 import { loadDailyHistory } from "../stats/persistence";
-import { derivePersonalMoment, mergeDailyHistory } from "../stats/dailyRitual";
+import { derivePersonalMoment, mergeDailyHistory, addLocalDays } from "../stats/dailyRitual";
 import { formatDuration, computePlayerArchetype } from "../game/engine/result";
 
 // Deterministic picker: same puzzle id → same copy every replay, so we
@@ -188,7 +188,10 @@ export function ResultScreen() {
     sealIcon: activeSeal.icon,
     sealLabel: activeSeal.label,
     dateStr: isDaily ? today : todayLocal(),
-    kintsugiRestored: Boolean(todayDailyRecord?.graceWaxUsed),
+    kintsugiRestored: Boolean(
+      todayDailyRecord?.graceWaxUsed ||
+        mergedDailyHistory[addLocalDays(today, -1)]?.graceWaxUsed,
+    ),
     labels: {
       solved: t.resultSummary.solved,
       closeCall: t.resultSummary.outOfMistakes,
@@ -332,9 +335,7 @@ export function ResultScreen() {
           >
             <span>{duelResponseSent ? "✓" : "⚔️"}</span>
             <span>
-              {duelResponseSent
-                ? (lang === "ru" ? "Ответ скопирован!" : lang === "de" ? "Antwort kopiert!" : "Response Copied!")
-                : (lang === "ru" ? "Отправить ответ на дуэль" : lang === "de" ? "Antwort auf Duell senden" : "Send Duel Response")}
+              {duelResponseSent ? t.duel.responseSent : t.duel.sendResponse}
             </span>
           </button>
         )}
@@ -346,9 +347,7 @@ export function ResultScreen() {
         >
           <span>{challengeCopied ? "✓" : "⚔️"}</span>
           <span>
-            {challengeCopied
-              ? (lang === "ru" ? "Ссылка на дуэль скопирована!" : "Duel Link Copied!")
-              : (lang === "ru" ? "Бросить вызов другу (Дуэль)" : "Challenge a Friend (Link Duel)")}
+            {challengeCopied ? t.duel.challengeCopied : t.duel.challengeFriend}
           </span>
         </button>
       </div>

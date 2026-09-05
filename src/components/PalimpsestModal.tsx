@@ -70,7 +70,13 @@ export function PalimpsestModal({ onClose, onOpenPassport }: PalimpsestModalProp
   });
 
   const toggleSelect = (word: string) => {
-    if (solvedColorByItem.has(word) || stage === "obverse_done" || stage === "completed") return;
+    if (
+      solvedColorByItem.has(word) ||
+      stage === "obverse_done" ||
+      stage === "completed" ||
+      mistakesUsed >= 4
+    )
+      return;
 
     if (selection.includes(word)) {
       setSelection(selection.filter((w) => w !== word));
@@ -98,8 +104,19 @@ export function PalimpsestModal({ onClose, onOpenPassport }: PalimpsestModalProp
     play("deselect");
   };
 
+  const handleRetryLayer = () => {
+    setMistakesUsed(0);
+    setSelection([]);
+    setFlash(null);
+    const unsolved = order.filter((w) => !solvedColorByItem.has(w));
+    const solved = order.filter((w) => solvedColorByItem.has(w));
+    setOrder([...solved, ...shuffleArray(unsolved)]);
+    play("deselect");
+    triggerHaptic("select");
+  };
+
   const handleSubmit = () => {
-    if (selection.length !== 4) return;
+    if (selection.length !== 4 || mistakesUsed >= 4) return;
 
     const matched = findMatchingPalimpsestGroup(selection, activeLayer);
     if (matched) {
@@ -224,7 +241,7 @@ export function PalimpsestModal({ onClose, onOpenPassport }: PalimpsestModalProp
               <div>{t.palimpsest.archivalReward}</div>
               {rewardGranted && (
                 <div className="text-[10px] text-amber-300/80 font-normal pt-1">
-                  ✓ {lang === "ru" ? "Занесено в Паспорт архивариуса" : lang === "de" ? "Im Archivars-Pass vermerkt" : "Recorded in Archivist Passport"}
+                  ✓ {t.palimpsest.recordedInPassport}
                 </div>
               )}
             </div>
@@ -236,7 +253,7 @@ export function PalimpsestModal({ onClose, onOpenPassport }: PalimpsestModalProp
                   onClick={onOpenPassport}
                   className="flex-1 py-2.5 rounded-xl border border-amber-500 bg-amber-500/20 hover:bg-amber-500/30 text-amber-200 text-xs font-bold uppercase tracking-wider transition-all"
                 >
-                  📜 {lang === "ru" ? "Открыть Паспорт" : "Open Passport"}
+                  📜 {t.palimpsest.openPassport}
                 </button>
               )}
               <button
@@ -294,14 +311,16 @@ export function PalimpsestModal({ onClose, onOpenPassport }: PalimpsestModalProp
                   <button
                     key={word}
                     type="button"
-                    disabled={isSolved || stage === "obverse_done"}
+                    disabled={isSolved || stage === "obverse_done" || mistakesUsed >= 4}
                     onClick={() => toggleSelect(word)}
                     className={`relative min-h-12 rounded-xl border-2 p-2 text-xs font-bold leading-tight uppercase transition-all shadow-sm flex items-center justify-center text-center ${
                       isSolved
                         ? `${colorClass} cursor-default opacity-90`
                         : isSelected
                           ? "border-accent bg-accent/20 text-text shadow-md -translate-y-0.5 scale-[1.02]"
-                          : "border-line bg-surface hover:bg-surfaceHi text-text hover:-translate-y-0.5"
+                          : mistakesUsed >= 4
+                            ? "border-line bg-surface/50 text-muted/60 cursor-not-allowed"
+                            : "border-line bg-surface hover:bg-surfaceHi text-text hover:-translate-y-0.5"
                     }`}
                   >
                     <span>{word}</span>
@@ -317,8 +336,28 @@ export function PalimpsestModal({ onClose, onOpenPassport }: PalimpsestModalProp
               {flash === "correct" && <span className="text-green-400">✓ {t.game.correctGroup}</span>}
             </div>
 
-            {/* Obverse Solved → Flip Parchment CTA */}
-            {stage === "obverse_done" ? (
+            {/* Out of Mistakes / Obverse Solved / Standard Controls */}
+            {mistakesUsed >= 4 ? (
+              <div className="p-4 rounded-xl border border-red-500/70 bg-red-950/40 space-y-3 animate-in zoom-in-95 duration-200">
+                <div>
+                  <div className="text-sm font-extrabold text-red-200">
+                    ⚠️ {t.palimpsest.outOfMistakesTitle}
+                  </div>
+                  <p className="text-xs text-muted mt-1 leading-relaxed">
+                    {t.palimpsest.outOfMistakesDesc}
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  onClick={handleRetryLayer}
+                  className="w-full py-2.5 px-4 rounded-xl border border-amber-500/60 bg-amber-500/20 hover:bg-amber-500/30 text-amber-200 font-bold text-xs uppercase tracking-wider transition-all shadow-sm flex items-center justify-center gap-2 cursor-pointer"
+                  data-testid="palimpsest-retry-button"
+                >
+                  <span>↺</span>
+                  <span>{t.palimpsest.retryLayer}</span>
+                </button>
+              </div>
+            ) : stage === "obverse_done" ? (
               <div className="p-4 rounded-xl border border-amber-500/70 bg-amber-950/40 space-y-3 animate-in zoom-in-95 duration-200">
                 <div>
                   <div className="text-sm font-extrabold text-amber-200">

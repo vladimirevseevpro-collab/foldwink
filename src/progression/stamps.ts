@@ -121,19 +121,19 @@ export const STAMP_COLLECTION: readonly CollectibleStamp[] = [
 ];
 
 export const SEALS = [
-  { id: "seal_raven", label: "Raven Crest", icon: "🦅" },
-  { id: "seal_compass", label: "Compass Rose", icon: "🧭" },
-  { id: "seal_keyhole", label: "Golden Keyhole", icon: "🗝️" },
-  { id: "seal_owl", label: "Nocturnal Owl", icon: "🦉" },
-  { id: "seal_laurel", label: "Imperial Laurel", icon: "🌿" },
-  { id: "seal_palimpsest", label: "Dual Archival Seal", icon: "📜" },
+  { id: "seal_raven", label: "Raven Crest", labelRu: "Герб Ворона", labelDe: "Raben-Wappen", icon: "🦅" },
+  { id: "seal_compass", label: "Compass Rose", labelRu: "Роза Ветров", labelDe: "Kompassrose", icon: "🧭" },
+  { id: "seal_keyhole", label: "Golden Keyhole", labelRu: "Золотая Скважина", labelDe: "Goldenes Schlüsselloch", icon: "🗝️" },
+  { id: "seal_owl", label: "Nocturnal Owl", labelRu: "Ночная Сова", labelDe: "Nachteule", icon: "🦉" },
+  { id: "seal_laurel", label: "Imperial Laurel", labelRu: "Имперский Лавр", labelDe: "Kaiserlicher Lorbeer", icon: "🌿" },
+  { id: "seal_palimpsest", label: "Dual Archival Seal", labelRu: "Двойная Печать Архива", labelDe: "Doppeltes Archiv-Siegel", icon: "📜" },
 ];
 
 export const NIBS = [
-  { id: "nib_brass", label: "Brass Italic 1.1mm", icon: "✒️" },
-  { id: "nib_obsidian", label: "Obsidian Fine Point", icon: "🖋️" },
-  { id: "nib_silver", label: "Silver Flex 14K", icon: "🖊️" },
-  { id: "nib_glass", label: "Murano Glass Dip Pen", icon: "💎" },
+  { id: "nib_brass", label: "Brass Italic 1.1mm", labelRu: "Латунное 1.1 мм", labelDe: "Messing Italic 1.1mm", icon: "✒️" },
+  { id: "nib_obsidian", label: "Obsidian Fine Point", labelRu: "Обсидиановое тонкое", labelDe: "Obsidian-Feinfeder", icon: "🖋️" },
+  { id: "nib_silver", label: "Silver Flex 14K", labelRu: "Серебряное Flex 14K", labelDe: "Silber-Flex 14K", icon: "🖊️" },
+  { id: "nib_glass", label: "Murano Glass Dip Pen", labelRu: "Муранское стекло", labelDe: "Murano-Glasfeder", icon: "💎" },
 ];
 
 export const TITLES = [

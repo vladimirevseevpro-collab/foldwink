@@ -56,7 +56,11 @@ async function networkThenCache(request) {
     }
     return response;
   } catch {
-    return (await cache.match(request)) || (await cache.match("./"));
+    return (
+      (await cache.match(request, { ignoreSearch: true })) ||
+      (await cache.match("./")) ||
+      (await cache.match("./index.html"))
+    );
   }
 }
 

@@ -107,6 +107,7 @@ describe("archivist profile & rewards engine", () => {
     expect(updatedProfile.wax).toBe(4);
     expect(updatedProfile.ink).toBe(7);
     expect(updatedProfile.collectedStampIds).toContain("stamp_palimpsest");
+    expect(updatedProfile.sealId).toBe("seal_palimpsest");
 
     // Second completion does not duplicate the stamp
     const second = awardPalimpsestCompletion(updatedProfile);

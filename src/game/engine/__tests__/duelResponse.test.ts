@@ -32,6 +32,11 @@ describe("duelResponse", () => {
     expect(url).toBe("https://neural-void.com/foldwink/?vs=puzzle-123&m=1&t=32");
   });
 
+  it("builds correct rematch url with index.html without trailing slash after html", () => {
+    const url = buildRematchUrl("puzzle-123", 0, 15000, "https://neural-void.com", "/foldwink/index.html");
+    expect(url).toBe("https://neural-void.com/foldwink/index.html?vs=puzzle-123&m=0&t=15");
+  });
+
   it("formats Russian duel response correctly", () => {
     const res = formatDuelResponse({
       puzzleId: "puzzle-ru-1",

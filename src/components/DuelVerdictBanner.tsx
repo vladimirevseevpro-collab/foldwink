@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { formatDuelResponse } from "../game/engine/duelResponse";
+import { formatDuelResponse, computeDuelOutcome } from "../game/engine/duelResponse";
 import { useSound } from "../audio/useSound";
 import { triggerHaptic } from "../haptics/haptics";
+import { getStrings, type Lang } from "../i18n/strings";
 
 interface DuelVerdictBannerProps {
   puzzleId?: string;
@@ -31,34 +32,25 @@ export function DuelVerdictBanner({
   const [responseSent, setResponseSent] = useState(false);
   const play = useSound();
   const playerSec = Math.max(1, Math.round(playerDurationMs / 1000));
-  const playerWonGame = playerResult === "win";
+  const t = getStrings((lang === "ru" || lang === "de" ? lang : "en") as Lang);
 
-  let outcome: "player" | "challenger" | "tie" = "challenger";
-  if (playerWonGame) {
-    if (playerMistakes < challengerMistakes) {
-      outcome = "player";
-    } else if (playerMistakes > challengerMistakes) {
-      outcome = "challenger";
-    } else {
-      if (playerSec < challengerTimeSec) {
-        outcome = "player";
-      } else if (playerSec > challengerTimeSec) {
-        outcome = "challenger";
-      } else {
-        outcome = "tie";
-      }
-    }
-  }
+  const outcome = computeDuelOutcome(
+    playerResult,
+    playerMistakes,
+    playerDurationMs,
+    challengerMistakes,
+    challengerTimeSec,
+  );
 
   const headline =
-    outcome === "player"
-      ? (lang === "ru" ? "🏆 Вы победили в Дуэли!" : lang === "de" ? "🏆 Duell gewonnen!" : "🏆 You Won the Duel!")
-      : outcome === "challenger"
-        ? (lang === "ru" ? "💀 Соперник оказался сильнее" : lang === "de" ? "💀 Herausforderer siegt" : "💀 Challenger Victorious")
-        : (lang === "ru" ? "🤝 Благородная Ничья!" : lang === "de" ? "🤝 Ehrenhaftes Unentschieden!" : "🤝 Honorable Tie!");
+    outcome === "victory"
+      ? t.duel.youWon
+      : outcome === "defeat"
+        ? t.duel.challengerWon
+        : t.duel.tie;
 
   const borderColor =
-    outcome === "player"
+    outcome === "victory"
       ? "border-amber-500/70 bg-surfaceHi"
       : outcome === "tie"
         ? "border-accent/70 bg-surfaceHi"
@@ -111,7 +103,7 @@ export function DuelVerdictBanner({
     >
       <div className="flex items-center justify-center gap-2">
         <span className="text-xs uppercase font-extrabold tracking-widest text-amber-400">
-          ⚔️ {lang === "ru" ? "Дуэль Печатей" : lang === "de" ? "Siegel-Duell" : "Shared Seal Duel"}
+          ⚔️ {t.duel.bannerTitle}
         </span>
       </div>
 
@@ -121,28 +113,28 @@ export function DuelVerdictBanner({
       <div className="grid grid-cols-2 gap-2 bg-surface/80 rounded-xl p-3 border border-line text-xs">
         <div className="space-y-1">
           <div className="text-[10px] uppercase font-bold text-accent">
-            {lang === "ru" ? "Ваш результат" : lang === "de" ? "Dein Ergebnis" : "You"}
+            {t.duel.yourResult}
           </div>
           <div className="text-base font-extrabold text-text">
-            {playerMistakes} {lang === "ru" ? (playerMistakes === 1 ? "ошибка" : playerMistakes >= 2 && playerMistakes <= 4 ? "ошибки" : "ошибок") : lang === "de" ? "Fehler" : playerMistakes === 1 ? "mistake" : "mistakes"}
+            {playerMistakes} {t.duel.mistakesWord(playerMistakes)}
           </div>
           <div className="text-muted text-[11px]">⏱️ {formatSec(playerSec)}</div>
         </div>
 
         <div className="space-y-1 border-l border-line pl-2">
           <div className="text-[10px] uppercase font-bold text-amber-400">
-            {lang === "ru" ? "Соперник" : lang === "de" ? "Herausforderer" : "Challenger"}
+            {t.duel.challengerResult}
           </div>
           <div className="text-base font-extrabold text-text">
-            {challengerMistakes} {lang === "ru" ? (challengerMistakes === 1 ? "ошибка" : challengerMistakes >= 2 && challengerMistakes <= 4 ? "ошибки" : "ошибок") : lang === "de" ? "Fehler" : challengerMistakes === 1 ? "mistake" : "mistakes"}
+            {challengerMistakes} {t.duel.mistakesWord(challengerMistakes)}
           </div>
           <div className="text-muted text-[11px]">⏱️ {formatSec(challengerTimeSec)}</div>
         </div>
       </div>
 
-      {/* Prompt requirement format: ("You: X mistakes ⚔️ Challenger: Y mistakes") */}
+      {/* Localized comparison summary */}
       <div className="text-xs font-bold text-muted">
-        You: {playerMistakes} mistakes ⚔️ Challenger: {challengerMistakes} mistakes
+        {t.duel.yourResult}: {playerMistakes} {t.duel.mistakesWord(playerMistakes)} ⚔️ {t.duel.challengerResult}: {challengerMistakes} {t.duel.mistakesWord(challengerMistakes)}
       </div>
 
       {/* Send response button */}
@@ -153,11 +145,7 @@ export function DuelVerdictBanner({
         data-testid="duel-send-response-button"
       >
         <span>{responseSent ? "✓" : "⚔️"}</span>
-        <span>
-          {responseSent
-            ? (lang === "ru" ? "Ответ скопирован!" : lang === "de" ? "Antwort kopiert!" : "Response Copied!")
-            : (lang === "ru" ? "Отправить ответ на дуэль" : lang === "de" ? "Antwort auf Duell senden" : "Send Duel Response")}
-        </span>
+        <span>{responseSent ? t.duel.responseSent : t.duel.sendResponse}</span>
       </button>
     </div>
   );

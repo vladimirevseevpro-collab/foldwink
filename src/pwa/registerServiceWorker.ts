@@ -72,10 +72,13 @@ export function registerServiceWorker(): void {
           console.warn("[SW] Registration failed:", err);
         });
 
-      // Reload smoothly when new controller takes over so users don't stay trapped on stale JS
+      // Reload smoothly when new controller replaces an existing one,
+      // so active players don't stay trapped on stale JS bundles.
+      // Guard against first-load activation: do NOT reload if there was no prior controller.
+      const hadController = Boolean(navigator.serviceWorker.controller);
       let refreshing = false;
       navigator.serviceWorker.addEventListener("controllerchange", () => {
-        if (!refreshing) {
+        if (hadController && !refreshing) {
           refreshing = true;
           window.location.reload();
         }

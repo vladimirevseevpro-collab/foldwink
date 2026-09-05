@@ -221,6 +221,7 @@ export function awardPalimpsestCompletion(profile: ArchivistProfile): {
     ink: profile.ink + inkGained,
     wax: profile.wax + waxGained,
     collectedStampIds,
+    sealId: "seal_palimpsest",
   };
 
   saveArchivistProfile(updatedProfile);

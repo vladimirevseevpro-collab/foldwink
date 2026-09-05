@@ -47,7 +47,8 @@ export function buildRematchUrl(
 ): string {
   const playerSec = Math.max(1, Math.round(playerDurationMs / 1000));
   const base = `${origin}${pathname}`;
-  const cleanBase = base.endsWith("/") ? base : `${base}/`;
+  const cleanBase =
+    base.endsWith("/") || base.endsWith(".html") ? base : `${base}/`;
   return `${cleanBase}?vs=${encodeURIComponent(puzzleId)}&m=${playerMistakes}&t=${playerSec}`;
 }
 
