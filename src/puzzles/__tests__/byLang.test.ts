@@ -57,4 +57,16 @@ describe("byLang fallback contract", () => {
     // Fallback to EN hard (34 puzzles) must be available.
     expect(hard.length).toBeGreaterThan(0);
   });
+
+  it("currentBundle().getById resolves across all language pools (EN, RU, DE)", () => {
+    vi.mocked(getLangSync).mockReturnValue("en");
+    const enBundle = currentBundle();
+    // An EN bundle can resolve a RU or DE puzzle ID via cross-pool fallback
+    const sampleRu = currentBundle().pool[0]?.id;
+    expect(enBundle.getById(sampleRu)).toBeDefined();
+
+    vi.mocked(getLangSync).mockReturnValue("de");
+    const deBundle = currentBundle();
+    expect(deBundle.getById(sampleRu)).toBeDefined();
+  });
 });

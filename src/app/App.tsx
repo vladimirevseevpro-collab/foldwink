@@ -43,7 +43,15 @@ export function App() {
           completeOnboarding();
         }
         startDuel(vs, m, t);
-        window.history.replaceState({}, "", window.location.pathname);
+        params.delete("vs");
+        params.delete("m");
+        params.delete("t");
+        const remaining = params.toString();
+        window.history.replaceState(
+          {},
+          "",
+          remaining ? `${window.location.pathname}?${remaining}` : window.location.pathname,
+        );
       }
     } catch {
       /* ignore */

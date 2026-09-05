@@ -175,7 +175,11 @@ export function currentBundle(): LangBundle {
     easyRamped: b.easyRamped.length > 0 ? b.easyRamped : EN_BUNDLE.easyRamped,
     mediumRamped: b.mediumRamped.length > 0 ? b.mediumRamped : EN_BUNDLE.mediumRamped,
     hardRamped: b.hardRamped.length > 0 ? b.hardRamped : EN_BUNDLE.hardRamped,
-    getById: (id) => b.getById(id) ?? EN_BUNDLE.getById(id),
+    getById: (id) =>
+      b.getById(id) ??
+      EN_BUNDLE.getById(id) ??
+      RU_BUNDLE.getById(id) ??
+      DE_BUNDLE.getById(id),
     getByIndex: (i) => (b.pool.length > 0 ? b.getByIndex(i) : EN_BUNDLE.getByIndex(i)),
     getEasyByIndex: (i) => (b.easy.length > 0 ? b.getEasyByIndex(i) : EN_BUNDLE.getEasyByIndex(i)),
     getMediumByIndex: (i) =>

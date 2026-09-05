@@ -125,6 +125,7 @@ export interface Strings {
     foldCracked: string;
     foldMissed: string;
     foldEmpty: string;
+    graceWaxApplied: string;
     todayMarker: string;
     momentLabel: string;
     momentFirst: string;
@@ -364,6 +365,7 @@ export const strings: Record<Lang, Strings> = {
       foldCracked: "Grace Wax (streak protected)",
       foldMissed: "Missed",
       foldEmpty: "Not played",
+      graceWaxApplied: "🕯️ Grace Wax: Missed day protected, streak preserved!",
       todayMarker: "Today",
       momentLabel: "Daily note",
       momentFirst: "First daily on the record.",
@@ -610,6 +612,7 @@ export const strings: Record<Lang, Strings> = {
       foldCracked: "Siegel-Schutz (Streak gerettet)",
       foldMissed: "Verpasst",
       foldEmpty: "Nicht gespielt",
+      graceWaxApplied: "🕯️ Siegelwachs-Gnade: Verpasster Tag geschützt, Serie gerettet!",
       todayMarker: "Heute",
       momentLabel: "Tagesnotiz",
       momentFirst: "Erster Tageseintrag.",
@@ -858,6 +861,7 @@ export const strings: Record<Lang, Strings> = {
       foldCracked: "Сургучная защита (серия сохранена)",
       foldMissed: "Не решено",
       foldEmpty: "Не сыграно",
+      graceWaxApplied: "🕯️ Защита Сургуча: вчерашний день спасён, серия сохранена!",
       todayMarker: "Сегодня",
       momentLabel: "Дневная заметка",
       momentFirst: "Первая запись о дневном пазле.",

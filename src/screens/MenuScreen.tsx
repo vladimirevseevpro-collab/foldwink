@@ -54,13 +54,9 @@ export function MenuScreen() {
   useEffect(() => {
     const res = checkAndProtectDailyStreakWithGraceWax(todayLocal());
     if (res.applied) {
-      setGraceWaxNotice(
-        lang === "ru"
-          ? "🕯️ Защита Сургуча: вчерашний день спасён, серия сохранена!"
-          : "🕯️ Grace Wax: Missed day protected, streak preserved!",
-      );
+      setGraceWaxNotice(t.daily.graceWaxApplied);
     }
-  }, [lang]);
+  }, [t.daily.graceWaxApplied]);
 
   useEffect(() => {
     trackEvent({
