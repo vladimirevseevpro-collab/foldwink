@@ -28,7 +28,7 @@ export class ErrorBoundary extends React.Component<Props, State> {
       return (
         <div className="min-h-full w-full flex justify-center">
           <main className="w-full max-w-md px-4 py-10 text-center">
-            <div className="text-[10px] uppercase tracking-[0.14em] text-muted mb-2">
+            <div className="text-[10px] uppercase text-muted mb-2">
               Something broke
             </div>
             <h1 className="text-2xl font-bold mb-3">Foldwink stumbled</h1>
@@ -39,7 +39,7 @@ export class ErrorBoundary extends React.Component<Props, State> {
             <button
               type="button"
               onClick={this.handleReload}
-              className="rounded-xl bg-accent text-surface px-5 py-2.5 font-semibold text-sm hover:opacity-90 transition-opacity"
+              className="rounded-lg bg-accent text-ink px-5 py-2.5 font-semibold text-sm hover:opacity-90 transition-opacity"
             >
               Reload Foldwink
             </button>

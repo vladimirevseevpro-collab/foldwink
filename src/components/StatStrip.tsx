@@ -25,14 +25,14 @@ export function StatStrip({ cells }: Props) {
   if (cells.length === 0) return null;
   return (
     <div
-      className="flex items-stretch justify-center rounded-xl bg-surface border border-[#262a33] overflow-hidden"
+      className="flex items-stretch justify-center rounded-lg bg-surface border border-line overflow-hidden"
       role="group"
     >
       {cells.map((cell, i) => (
         <div
           key={cell.label}
           className={`flex-1 flex flex-col items-center justify-center px-3 py-2.5 min-w-0 ${
-            i > 0 ? "border-l border-[#262a33]" : ""
+            i > 0 ? "border-l border-line" : ""
           }`}
         >
           <div
@@ -42,7 +42,7 @@ export function StatStrip({ cells }: Props) {
           >
             {cell.value}
           </div>
-          <div className="mt-1 text-[10px] uppercase tracking-[0.12em] text-muted truncate">
+          <div className="mt-1 min-h-[2.4em] flex items-start justify-center text-center text-[9px] sm:text-[10px] uppercase leading-[1.2] text-muted">
             {cell.label}
           </div>
         </div>

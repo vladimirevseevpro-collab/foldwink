@@ -1,14 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 import { useGameStore } from "../game/state/appStore";
-import { useT } from "../i18n/useLanguage";
+import { useT, useLang } from "../i18n/useLanguage";
+import { useSound } from "../audio/useSound";
+import { triggerHaptic } from "../haptics/haptics";
 import { Button } from "../components/Button";
 import { ResultSummary } from "../components/ResultSummary";
 import { ShareButton } from "../components/ShareButton";
+import { DuelVerdictBanner } from "../components/DuelVerdictBanner";
 import { DailyCountdown } from "../components/DailyCountdown";
 import { TipJarLink } from "../components/TipJarLink";
 import { SupporterUnlockCta } from "../components/SupporterUnlockCta";
 import { SoundToggle } from "../components/SoundToggle";
 import { EnvelopeUnboxingModal } from "../components/EnvelopeUnboxingModal";
+import { SEALS } from "../progression/stamps";
 import {
   loadArchivistProfile,
   awardSolveRewards,
@@ -45,12 +49,43 @@ export function ResultScreen() {
   const showStats = useGameStore((s) => s.showStats);
   const startNextSame = useGameStore((s) => s.startNextSame);
   const startMedium = useGameStore((s) => s.startMedium);
+  const duel = useGameStore((s) => s.duel);
   const t = useT();
+  const lang = useLang();
+  const play = useSound();
   const focusRef = useRef<HTMLDivElement>(null);
+  const [challengeCopied, setChallengeCopied] = useState(false);
+  const [unboxingRewards, setUnboxingRewards] = useState<SolveRewards | null>(() => {
+    if (!summary || !puzzle || summary.result !== "win") return null;
+    const profile = loadArchivistProfile();
+    const { rewards } = awardSolveRewards(profile, {
+      result: summary.result,
+      mistakesUsed: summary.mistakesUsed,
+      isDaily: active?.mode === "daily",
+      difficulty: puzzle.difficulty,
+    });
+    return rewards;
+  });
 
   useEffect(() => {
     focusRef.current?.focus();
   }, []);
+
+  const handleChallenge = async () => {
+    if (!puzzle || !summary) return;
+    const challengeUrl = `${window.location.origin}${window.location.pathname}?vs=${encodeURIComponent(puzzle.id)}&m=${summary.mistakesUsed}&t=${Math.round(summary.durationMs / 1000)}`;
+    try {
+      if (typeof navigator !== "undefined" && navigator.clipboard) {
+        await navigator.clipboard.writeText(challengeUrl);
+        setChallengeCopied(true);
+        play("submit");
+        triggerHaptic("select");
+        setTimeout(() => setChallengeCopied(false), 2200);
+      }
+    } catch {
+      /* ignore */
+    }
+  };
 
   // The terminal win/loss sound used to play from this screen's mount.
   // After v0.7's 600 ms board-hold (store.ts RESULT_HOLD_MS), it plays
@@ -88,6 +123,9 @@ export function ResultScreen() {
 
   const archetype = computePlayerArchetype(summary, puzzle.difficulty, active?.winkedGroupId);
 
+  const profile = loadArchivistProfile();
+  const activeSeal = SEALS.find((s) => s.id === profile.sealId) ?? SEALS[0];
+
   const cardOptions = {
     mode: (isDaily ? "daily" : "standard") as "daily" | "standard",
     title: puzzle.title,
@@ -104,6 +142,9 @@ export function ResultScreen() {
     difficultyLabel: t.difficulty[puzzle.difficulty],
     supporter: isSupporter(),
     archetype: `${archetype.icon} ${archetype.badge}`,
+    sealIcon: activeSeal.icon,
+    sealLabel: activeSeal.label,
+    dateStr: isDaily ? today : todayLocal(),
     labels: {
       solved: t.resultSummary.solved,
       closeCall: t.resultSummary.outOfMistakes,
@@ -121,17 +162,6 @@ export function ResultScreen() {
   // the Grade caption instead so nothing is lost.
   const showNewBest = isWin && streakDelta > 0 && newBest && stats.bestStreak >= 3;
 
-  const [unboxingRewards, setUnboxingRewards] = useState<SolveRewards | null>(() => {
-    if (!summary || !puzzle || summary.result !== "win") return null;
-    const profile = loadArchivistProfile();
-    const { rewards } = awardSolveRewards(profile, {
-      result: summary.result,
-      mistakesUsed: summary.mistakesUsed,
-      isDaily: active?.mode === "daily",
-      difficulty: puzzle.difficulty,
-    });
-    return rewards;
-  });
 
   return (
     <div
@@ -147,6 +177,19 @@ export function ResultScreen() {
           rewards={unboxingRewards}
           onClose={() => setUnboxingRewards(null)}
         />
+      )}
+
+      {duel && (
+        <div className="mb-3">
+          <DuelVerdictBanner
+            challengerMistakes={duel.challengerMistakes}
+            challengerTimeSec={duel.challengerTimeSec}
+            playerResult={summary.result}
+            playerMistakes={summary.mistakesUsed}
+            playerDurationMs={summary.durationMs}
+            lang={lang}
+          />
+        </div>
       )}
 
       <ResultSummary summary={summary} puzzle={puzzle} currentStreak={stats.currentStreak} />
@@ -233,8 +276,21 @@ export function ResultScreen() {
         </div>
       )}
 
-      <div className="mt-3">
+      <div className="mt-3 flex flex-col gap-2">
         <ShareButton text={shareText} card={cardOptions} />
+        <button
+          type="button"
+          onClick={handleChallenge}
+          className="w-full py-2.5 px-4 rounded-xl border border-amber-500/50 bg-amber-950/20 hover:bg-amber-950/40 text-amber-200 text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-sm"
+          data-testid="result-challenge-button"
+        >
+          <span>{challengeCopied ? "✓" : "⚔️"}</span>
+          <span>
+            {challengeCopied
+              ? (lang === "ru" ? "Ссылка на дуэль скопирована!" : "Duel Link Copied!")
+              : (lang === "ru" ? "Бросить вызов другу (Дуэль)" : "Challenge a Friend (Link Duel)")}
+          </span>
+        </button>
       </div>
 
       <div className="mt-3 flex flex-col gap-2" data-testid="result-cta-stack">

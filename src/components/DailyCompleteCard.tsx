@@ -12,9 +12,9 @@ export function DailyCompleteCard({ record, currentStreak }: Props) {
   const t = useT();
   const isWin = record.result === "win";
   return (
-    <div className="w-full max-w-xs rounded-2xl bg-surface border border-[#2e343f] px-4 py-3">
+    <div className="w-full max-w-xs rounded-lg bg-surface border border-line px-4 py-3">
       <div className="flex items-center justify-between gap-2">
-        <div className="text-[10px] uppercase tracking-[0.14em] text-accent">
+        <div className="text-[10px] uppercase text-accent">
           ✦ {t.daily.label} · {isWin ? t.daily.solved : t.daily.missed}
         </div>
         <div className="text-[10px] text-muted tabular-nums">

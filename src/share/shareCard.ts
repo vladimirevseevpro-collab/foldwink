@@ -38,6 +38,8 @@ export interface ShareCardLabels {
   supporter?: string;
 }
 
+import { todayLocal } from "../utils/date";
+
 export interface ShareCardOptions {
   mode: "daily" | "standard";
   title: string;
@@ -56,6 +58,9 @@ export interface ShareCardOptions {
   archetype?: string;
   format?: "square" | "story";
   labels?: ShareCardLabels;
+  sealIcon?: string;
+  sealLabel?: string;
+  dateStr?: string;
 }
 
 export function isShareCardSupported(): boolean {
@@ -474,6 +479,117 @@ function drawFooter(ctx: CanvasRenderingContext2D, height: number): void {
   drawBarcode(ctx, WIDTH - 254, height - 68, 180, 20);
 }
 
+function drawPersonalWaxSeal(
+  ctx: CanvasRenderingContext2D,
+  x: number,
+  y: number,
+  icon: string,
+  label?: string,
+): void {
+  ctx.save();
+  ctx.translate(x, y);
+  ctx.rotate(0.04);
+
+  // Drop shadow
+  ctx.save();
+  ctx.beginPath();
+  ctx.arc(0, 2, 42, 0, Math.PI * 2);
+  ctx.fillStyle = "rgba(0, 0, 0, 0.45)";
+  ctx.shadowColor = "rgba(0, 0, 0, 0.6)";
+  ctx.shadowBlur = 10;
+  ctx.shadowOffsetY = 4;
+  ctx.fill();
+  ctx.restore();
+
+  // Outer melted wax pool (deep crimson wax)
+  ctx.beginPath();
+  ctx.arc(0, 0, 40, 0, Math.PI * 2);
+  ctx.fillStyle = "#871f1f";
+  ctx.fill();
+
+  // Highlight crest rim (top-left arc)
+  ctx.beginPath();
+  ctx.arc(0, 0, 39, Math.PI * 0.8, Math.PI * 1.8);
+  ctx.strokeStyle = "#b53e3e";
+  ctx.lineWidth = 2;
+  ctx.stroke();
+
+  // Inner stamped circle impression
+  ctx.beginPath();
+  ctx.arc(0, 0, 33, 0, Math.PI * 2);
+  ctx.fillStyle = "#9e2a2b";
+  ctx.fill();
+  ctx.strokeStyle = "#5a1313";
+  ctx.lineWidth = 1.8;
+  ctx.stroke();
+
+  // Center crest icon (e.g. 🦅, 🧭, 🗝️, 🦉, 🌿)
+  ctx.font = "26px serif";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  ctx.fillText(icon, 0, -2);
+
+  // Micro label below
+  ctx.font = `800 8px ${FONT_STACK}`;
+  ctx.fillStyle = "#f5d580";
+  ctx.fillText(label ? label.toUpperCase().slice(0, 10) : "ARCHIVIST", 0, 24);
+
+  ctx.restore();
+}
+
+function drawPostalCancellationMark(
+  ctx: CanvasRenderingContext2D,
+  x: number,
+  y: number,
+  dateStr: string,
+): void {
+  ctx.save();
+  ctx.translate(x, y);
+  ctx.rotate(-0.07);
+
+  const inkColor = "rgba(165, 173, 166, 0.65)";
+  ctx.strokeStyle = inkColor;
+
+  // Outer postmark circle
+  ctx.lineWidth = 1.5;
+  ctx.beginPath();
+  ctx.arc(0, 0, 36, 0, Math.PI * 2);
+  ctx.stroke();
+
+  // Inner concentric ring
+  ctx.lineWidth = 0.8;
+  ctx.beginPath();
+  ctx.arc(0, 0, 30, 0, Math.PI * 2);
+  ctx.stroke();
+
+  // Date and postal archive text
+  ctx.fillStyle = inkColor;
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  ctx.font = `800 8px ${FONT_STACK}`;
+  ctx.fillText("FOLDWINK POST", 0, -15);
+
+  ctx.font = `700 10px ${FONT_STACK}`;
+  ctx.fillText(dateStr.replace(/-/g, "."), 0, 0);
+
+  ctx.font = `700 8px ${FONT_STACK}`;
+  ctx.fillText("BUREAU № 1", 0, 15);
+
+  // Wavy killer lines extending horizontally across the stamp
+  ctx.beginPath();
+  ctx.lineWidth = 1.8;
+  const lineOffsets = [-16, -8, 0, 8, 16];
+  for (const dy of lineOffsets) {
+    ctx.moveTo(34, dy);
+    ctx.bezierCurveTo(55, dy - 5, 75, dy + 5, 95, dy);
+    ctx.bezierCurveTo(115, dy - 5, 135, dy + 5, 155, dy);
+    ctx.bezierCurveTo(175, dy - 5, 195, dy + 5, 215, dy);
+  }
+  ctx.stroke();
+
+  ctx.restore();
+}
+
 export function drawShareCard(canvas: HTMLCanvasElement, opts: ShareCardOptions): void {
   const isStory = opts.format === "story";
   const height = isStory ? HEIGHT_STORY : HEIGHT_SQUARE;
@@ -488,17 +604,27 @@ export function drawShareCard(canvas: HTMLCanvasElement, opts: ShareCardOptions)
     drawBrandMark(ctx, WIDTH / 2, 160);
     drawWordmark(ctx, 380);
 
-    if (opts.supporter) {
-      drawSupporterSeal(ctx, opts.labels?.supporter ?? "Supporter", 160);
-    } else {
-      drawPostalStamp(
-        ctx,
-        WIDTH - 148,
-        168,
-        opts.result === "win",
-        opts.difficultyLabel ?? opts.difficulty,
-      );
+    if (opts.sealIcon) {
+      drawPersonalWaxSeal(ctx, 140, 168, opts.sealIcon, opts.sealLabel);
     }
+
+    if (opts.supporter) {
+      drawSupporterSeal(ctx, opts.labels?.supporter ?? "Supporter", 228);
+    }
+
+    drawPostalStamp(
+      ctx,
+      WIDTH - 148,
+      168,
+      opts.result === "win",
+      opts.difficultyLabel ?? opts.difficulty,
+    );
+    drawPostalCancellationMark(
+      ctx,
+      WIDTH - 275,
+      168,
+      opts.dateStr ?? todayLocal(),
+    );
 
     drawCenteredText(ctx, opts.subtitle, 450, 800, 34, 24, 650, COLOR.accent);
     const headline =
@@ -531,17 +657,27 @@ export function drawShareCard(canvas: HTMLCanvasElement, opts: ShareCardOptions)
     drawBrandMark(ctx, WIDTH / 2, 60);
     drawWordmark(ctx, 260);
 
-    if (opts.supporter) {
-      drawSupporterSeal(ctx, opts.labels?.supporter ?? "Supporter", 90);
-    } else {
-      drawPostalStamp(
-        ctx,
-        WIDTH - 148,
-        100,
-        opts.result === "win",
-        opts.difficultyLabel ?? opts.difficulty,
-      );
+    if (opts.sealIcon) {
+      drawPersonalWaxSeal(ctx, 140, 100, opts.sealIcon, opts.sealLabel);
     }
+
+    if (opts.supporter) {
+      drawSupporterSeal(ctx, opts.labels?.supporter ?? "Supporter", 158);
+    }
+
+    drawPostalStamp(
+      ctx,
+      WIDTH - 148,
+      100,
+      opts.result === "win",
+      opts.difficultyLabel ?? opts.difficulty,
+    );
+    drawPostalCancellationMark(
+      ctx,
+      WIDTH - 275,
+      100,
+      opts.dateStr ?? todayLocal(),
+    );
 
     drawCenteredText(ctx, opts.subtitle, 310, 760, 28, 20, 650, COLOR.accent);
     const headline =

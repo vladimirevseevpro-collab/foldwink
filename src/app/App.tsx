@@ -5,35 +5,86 @@ import { GameScreen } from "../screens/GameScreen";
 import { ResultScreen } from "../screens/ResultScreen";
 import { StatsScreen } from "../screens/StatsScreen";
 import { Onboarding } from "../components/Onboarding";
+import { EmbeddedMobileLaunch } from "../components/EmbeddedMobileLaunch";
+import { isSupporter } from "../monetization/supporter";
+import { trackEvent, type AnalyticsOutcome, bucketSource } from "../analytics/eventLog";
+import { useLang } from "../i18n/useLanguage";
+import { getFirstTouch } from "../monetization/attribution";
+import { SupporterThankYou } from "../components/SupporterThankYou";
+
+import { prepareSoundPack } from "../audio/sound";
 
 export function App() {
   const screen = useGameStore((s) => s.screen);
   const onboarded = useGameStore((s) => s.onboarded);
-  const dismissOnboarding = useGameStore((s) => s.dismissOnboarding);
-  const stats = useGameStore((s) => s.stats);
-  const todayDailyRecord = useGameStore((s) => s.todayDailyRecord);
+  const howToPlayOpen = useGameStore((s) => s.howToPlayOpen);
+  const completeOnboarding = useGameStore((s) => s.completeOnboarding);
+  const closeHowToPlay = useGameStore((s) => s.closeHowToPlay);
   const startDaily = useGameStore((s) => s.startDaily);
+  const startDuel = useGameStore((s) => s.startDuel);
+  const lang = useLang();
+  const initialLang = useRef(lang);
 
-  // First-time user experience: after dismissing the onboarding overlay,
-  // drop the player straight into today's daily puzzle instead of leaving
-  // them on the menu to figure out the next step. Four gates:
-  //   - gamesPlayed === 0 (truly first time)
-  //   - todayDailyRecord === null (hasn't touched today yet)
-  //   - screen === "menu" (not resuming an in-progress or finished game)
-  //   - this is the *initial* dismiss, not a re-open from the menu's
-  //     `showOnboarding` button. Without this gate, a player who hasn't
-  //     solved a game yet could tap "How to play" from the menu and be
-  //     force-navigated into the daily when they close it.
-  const initialDismissConsumed = useRef(false);
-  const handleOnboardingDismiss = () => {
-    const shouldAutoRoute =
-      !initialDismissConsumed.current &&
-      stats.gamesPlayed === 0 &&
-      todayDailyRecord === null &&
-      screen === "menu";
-    initialDismissConsumed.current = true;
-    dismissOnboarding();
-    if (shouldAutoRoute) startDaily();
+  const handleOnboardingComplete = (): void => {
+    completeOnboarding();
+    // A restored game takes precedence over the normal first-run handoff.
+    if (screen === "menu") startDaily();
+  };
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const vs = params.get("vs");
+      if (vs) {
+        const m = Math.max(0, parseInt(params.get("m") ?? "0", 10) || 0);
+        const t = Math.max(0, parseInt(params.get("t") ?? "0", 10) || 0);
+        if (!onboarded) {
+          completeOnboarding();
+        }
+        startDuel(vs, m, t);
+        window.history.replaceState({}, "", window.location.pathname);
+      }
+    } catch {
+      /* ignore */
+    }
+  }, [onboarded, completeOnboarding, startDuel]);
+
+  useEffect(() => {
+    void prepareSoundPack();
+    const handleFirstInteraction = (): void => {
+      void prepareSoundPack();
+      window.removeEventListener("pointerdown", handleFirstInteraction);
+      window.removeEventListener("keydown", handleFirstInteraction);
+    };
+    window.addEventListener("pointerdown", handleFirstInteraction, { passive: true });
+    window.addEventListener("keydown", handleFirstInteraction, { passive: true });
+
+    trackEvent({
+      name: "app_open",
+      props: {
+        surface: "app",
+        source_bucket: bucketSource(getFirstTouch()),
+        has_support_flag: isSupporter() ? "yes" : "no",
+        lang: initialLang.current,
+      },
+    });
+
+    return () => {
+      window.removeEventListener("pointerdown", handleFirstInteraction);
+      window.removeEventListener("keydown", handleFirstInteraction);
+    };
+  }, []);
+
+  const handleOnboardingEvent = (outcome: AnalyticsOutcome): void => {
+    trackEvent({
+      name: outcome === "complete" ? "onboarding_complete" : "onboarding_skip",
+      props: {
+        surface: "onboarding",
+        outcome,
+        lang,
+      },
+    });
   };
 
   // Reset document scroll on every screen change. Without this, opening a
@@ -49,15 +100,38 @@ export function App() {
     window.scrollTo({ top: 0, left: 0, behavior: "auto" });
   }, [screen]);
 
+  const shellClass =
+    !onboarded || screen === "game"
+      ? "max-w-[800px] px-3 pt-3 sm:px-5 sm:pt-5"
+      : "max-w-xl px-4 pt-4 sm:pt-6";
+
   return (
     <div className="w-full flex justify-center">
-      <main className="w-full max-w-xl px-4 pt-4 sm:pt-6 fw-safe-pb" data-fw-screen={screen}>
-        {screen === "menu" && <MenuScreen />}
-        {screen === "game" && <GameScreen />}
-        {screen === "result" && <ResultScreen />}
-        {screen === "stats" && <StatsScreen />}
+      <EmbeddedMobileLaunch />
+      <main
+        className={`w-full ${shellClass} fw-safe-pb`}
+        data-fw-screen={onboarded ? screen : "onboarding"}
+      >
+        <SupporterThankYou />
+        {!onboarded ? (
+          <Onboarding
+            presentation="page"
+            onDismiss={handleOnboardingComplete}
+            onComplete={() => handleOnboardingEvent("complete")}
+            onSkip={() => handleOnboardingEvent("skip")}
+          />
+        ) : (
+          <>
+            {screen === "menu" && <MenuScreen />}
+            {screen === "game" && <GameScreen />}
+            {screen === "result" && <ResultScreen />}
+            {screen === "stats" && <StatsScreen />}
+          </>
+        )}
       </main>
-      {!onboarded && <Onboarding onDismiss={handleOnboardingDismiss} />}
+      {onboarded && howToPlayOpen && (
+        <Onboarding presentation="dialog" onDismiss={closeHowToPlay} />
+      )}
     </div>
   );
 }

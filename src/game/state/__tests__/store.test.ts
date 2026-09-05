@@ -353,11 +353,22 @@ describe("store — newBest record flag", () => {
 });
 
 describe("store — onboarding", () => {
-  it("dismissal flips the flag", () => {
+  it("completion flips the persisted first-run flag", () => {
     const pool = [mkPuzzle("p1")];
     const store = createStore(makeDeps(pool, { initialOnboarded: false }));
     expect(store.getState().onboarded).toBe(false);
-    store.getState().dismissOnboarding();
+    store.getState().completeOnboarding();
+    expect(store.getState().onboarded).toBe(true);
+  });
+
+  it("replays help without changing first-run completion", () => {
+    const pool = [mkPuzzle("p1")];
+    const store = createStore(makeDeps(pool, { initialOnboarded: true }));
+    store.getState().openHowToPlay();
+    expect(store.getState().howToPlayOpen).toBe(true);
+    expect(store.getState().onboarded).toBe(true);
+    store.getState().closeHowToPlay();
+    expect(store.getState().howToPlayOpen).toBe(false);
     expect(store.getState().onboarded).toBe(true);
   });
 });
@@ -498,3 +509,47 @@ describe("store — wink mechanic", () => {
     expect(store.getState().active!.winkedGroupId).toBeNull();
   });
 });
+
+describe("store — duel mode", () => {
+  it("starts duel with specified puzzle id and challenger metrics", () => {
+    const puzzle = mkPuzzle("duel-puzzle-1");
+    const store = createStore(makeDeps([puzzle]));
+    store.getState().startDuel("duel-puzzle-1", 2, 45);
+
+    expect(store.getState().screen).toBe("game");
+    expect(store.getState().puzzle?.id).toBe("duel-puzzle-1");
+    expect(store.getState().duel).toEqual({
+      puzzleId: "duel-puzzle-1",
+      challengerMistakes: 2,
+      challengerTimeSec: 45,
+    });
+    expect(store.getState().active?.countsToStats).toBe(false);
+  });
+
+  it("clears duel state when returning to menu", () => {
+    const puzzle = mkPuzzle("duel-puzzle-2");
+    const store = createStore(makeDeps([puzzle]));
+    store.getState().startDuel("duel-puzzle-2", 1, 30);
+    expect(store.getState().duel).not.toBeNull();
+
+    store.getState().goToMenu();
+    expect(store.getState().duel).toBeNull();
+    expect(store.getState().screen).toBe("menu");
+  });
+
+  it("clears duel state when starting regular modes (easy, medium, hard, daily)", () => {
+    const puzzle = mkPuzzle("duel-puzzle-3");
+    const store = createStore(makeDeps([puzzle]));
+    store.getState().startDuel("duel-puzzle-3", 1, 30);
+    expect(store.getState().duel).not.toBeNull();
+
+    store.getState().startEasy();
+    expect(store.getState().duel).toBeNull();
+
+    store.getState().startDuel("duel-puzzle-3", 1, 30);
+    expect(store.getState().duel).not.toBeNull();
+    store.getState().startDaily();
+    expect(store.getState().duel).toBeNull();
+  });
+});
+

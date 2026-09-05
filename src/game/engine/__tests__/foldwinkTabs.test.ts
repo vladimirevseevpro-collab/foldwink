@@ -1,6 +1,7 @@
 import { describe, it, expect } from "vitest";
 import {
   revealStage,
+  revealStageHard,
   hintFor,
   buildFoldwinkTabs,
   canWinkGroup,
@@ -30,6 +31,18 @@ describe("revealStage", () => {
   });
 });
 
+describe("revealStageHard", () => {
+  it("holds the one-letter preview through the first solve", () => {
+    expect(revealStageHard("FLY", 0)).toBe(`F${HIDDEN_CHAR}${HIDDEN_CHAR}`);
+    expect(revealStageHard("FLY", 1)).toBe(`F${HIDDEN_CHAR}${HIDDEN_CHAR}`);
+  });
+
+  it("adds letters only after later hard solves", () => {
+    expect(revealStageHard("FLY", 2)).toBe(`FL${HIDDEN_CHAR}`);
+    expect(revealStageHard("FLY", 3)).toBe(`FL${HIDDEN_CHAR}`);
+  });
+});
+
 describe("hintFor", () => {
   it("uses revealHint when present", () => {
     expect(
@@ -41,7 +54,7 @@ describe("hintFor", () => {
   });
 });
 
-function puzzle(difficulty: "easy" | "medium"): Puzzle {
+function puzzle(difficulty: "easy" | "medium" | "hard"): Puzzle {
   return {
     id: "p",
     title: "p",
@@ -64,6 +77,18 @@ describe("buildFoldwinkTabs", () => {
   it("returns nothing on easy puzzles", () => {
     expect(buildFoldwinkTabs(puzzle("easy"), [])).toEqual([]);
   });
+  it("uses the slower hard formula while keeping the Tabs row", () => {
+    const tabs = buildFoldwinkTabs(puzzle("hard"), ["g1"]);
+    expect(tabs).toHaveLength(4);
+    expect(tabs.find((tab) => tab.groupId === "g2")?.display).toBe(
+      `F${HIDDEN_CHAR}${HIDDEN_CHAR}`,
+    );
+    expect(
+      buildFoldwinkTabs(puzzle("hard"), ["g1", "g2"]).find((tab) => tab.groupId === "g3")
+        ?.display,
+    ).toBe(`BI${HIDDEN_CHAR}`);
+  });
+
   it("shows 1-letter previews at start on medium puzzles", () => {
     const tabs = buildFoldwinkTabs(puzzle("medium"), []);
     expect(tabs).toHaveLength(4);
@@ -90,10 +115,10 @@ describe("buildFoldwinkTabs", () => {
     expect(solvedTab?.solved).toBe(true);
     expect(solvedTab?.winked).toBe(false);
   });
-  it("shows the full hint for a winked tab regardless of stage", () => {
+  it("shows the full category label for a winked tab regardless of stage", () => {
     const tabs = buildFoldwinkTabs(puzzle("medium"), [], "g2");
     const winkedTab = tabs.find((t) => t.groupId === "g2");
-    expect(winkedTab?.display).toBe("FLY");
+    expect(winkedTab?.display).toBe("___ FLY");
     expect(winkedTab?.winked).toBe(true);
     expect(winkedTab?.solved).toBe(false);
     const otherTab = tabs.find((t) => t.groupId === "g1");
@@ -120,6 +145,10 @@ describe("canWinkGroup", () => {
   it("refuses winking a solved group", () => {
     expect(canWinkGroup(p, ["g1"], null, "g1")).toBe(false);
   });
+  it("refuses Wink on hard puzzles", () => {
+    expect(canWinkGroup(puzzle("hard"), [], null, "g1")).toBe(false);
+  });
+
   it("refuses on easy puzzles", () => {
     expect(canWinkGroup(puzzle("easy"), [], null, "g1")).toBe(false);
   });

@@ -22,14 +22,18 @@ function formatDayNumber(lang: Lang, date: string): string {
   return new Intl.DateTimeFormat(lang, { day: "numeric" }).format(new Date(`${date}T12:00:00`));
 }
 
-function stateClass(state: "won" | "lost" | "empty"): string {
+import type { DailyCellState } from "../stats/dailyRitual";
+
+function stateClass(state: DailyCellState): string {
   if (state === "won") return "border-accent/80 bg-paper text-ink shadow-[0_2px_0_#b5a47e]";
+  if (state === "cracked") return "border-amber-500/80 bg-amber-950/30 text-amber-300 shadow-[0_2px_0_#92400e]";
   if (state === "lost") return "border-line bg-surfaceHi text-text";
   return "border-dashed border-line/60 bg-surface/50 text-muted";
 }
 
-function stateAria(strings: Strings, state: "won" | "lost" | "empty"): string {
+function stateAria(strings: Strings, state: DailyCellState): string {
   if (state === "won") return strings.daily.foldSolved;
+  if (state === "cracked") return strings.daily.foldCracked;
   if (state === "lost") return strings.daily.foldMissed;
   return strings.daily.foldEmpty;
 }
@@ -63,8 +67,9 @@ export function DailyFold({ history, today = todayLocal(), className = "" }: Pro
               }`}
             >
               <div className="text-[9px] uppercase tracking-[0.14em] opacity-75">{weekday}</div>
-              <div className="mt-0.5 text-sm font-semibold tabular-nums leading-none">
-                {day}
+              <div className="mt-0.5 text-sm font-semibold tabular-nums leading-none flex items-center justify-center gap-0.5">
+                <span>{day}</span>
+                {cell.state === "cracked" && <span className="text-[9px] leading-none" title="Grace Wax">🕯️</span>}
               </div>
               <div className="mt-1 h-1.5 flex items-center justify-center">
                 <span

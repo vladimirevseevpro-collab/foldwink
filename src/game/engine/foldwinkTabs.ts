@@ -7,7 +7,7 @@ import type { Puzzle, PuzzleGroup } from "../types/puzzle";
  * label replaces the progressive reveal.
  *
  * WINK: in addition to the passive progressive reveal, the player may WINK
- * exactly one tab per puzzle. A winked tab shows its full reveal hint
+ * exactly one tab per puzzle. A winked tab shows its full category label
  * immediately, regardless of the current stage. Once a wink has been used,
  * no further tabs can be winked for the rest of the game.
  *
@@ -57,16 +57,15 @@ export function revealStage(rawHint: string, stage: number): string {
 }
 
 /**
- * Hard reveal formula (0.4.3): roughly **half-speed** progressive reveal.
- * The Master Challenge tier gives you the Foldwink Tabs row but with less
- * information. The first two solved groups do not add any extra letters
- * beyond the single starting hint; only from the third solve onward does
- * the label start filling in.
+ * Hard reveal formula (0.4.3): roughly half-speed progressive reveal.
+ * The Master Challenge tier keeps the Foldwink Tabs row with less
+ * information. The first solved group does not add letters beyond the
+ * starting hint; later solves reveal letters at half the medium rate.
  *
- *   stage 0 → 1 letter
- *   stage 1 → 1 letter
- *   stage 2 → 2 letters
- *   stage 3 → 3 letters (effectively full on most keywords)
+ *   stage 0 -> 1 letter
+ *   stage 1 -> 1 letter
+ *   stage 2 -> 2 letters
+ *   stage 3 -> 2 letters
  */
 export function revealStageHard(rawHint: string, stage: number): string {
   const hint = rawHint.trim();
@@ -95,7 +94,7 @@ export interface FoldwinkTab {
  *
  * `winkedGroupId` is the id of the tab the player has chosen to wink this
  * game (or null / undefined if none). A winked unsolved tab shows its full
- * reveal hint.
+ * category label.
  */
 export function buildFoldwinkTabs(
   puzzle: Puzzle,
@@ -112,7 +111,7 @@ export function buildFoldwinkTabs(
       return { groupId: g.id, display: g.label, solved: true, winked: false };
     }
     if (winkedGroupId === g.id) {
-      return { groupId: g.id, display: hintFor(g), solved: false, winked: true };
+      return { groupId: g.id, display: g.label, solved: false, winked: true };
     }
     return {
       groupId: g.id,

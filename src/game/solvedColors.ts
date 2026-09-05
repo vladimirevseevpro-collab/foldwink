@@ -1,10 +1,17 @@
 import type { Puzzle } from "./types/puzzle";
 
 export const SOLVED_COLOR_CLASSES = [
-  "bg-solved1 text-[#2a1f00]",
-  "bg-solved2 text-[#0d260e]",
-  "bg-solved3 text-[#2a0d0d]",
-  "bg-solved4 text-[#180f2e]",
+  "bg-solved1 text-ink border border-solved1Border",
+  "bg-solved2 text-ink border border-solved2Border",
+  "bg-solved3 text-ink border border-solved3Border",
+  "bg-solved4 text-ink border border-solved4Border",
+] as const;
+
+export const SOLVED_CARD_DEPTH_CLASSES = [
+  "shadow-solved1",
+  "shadow-solved2",
+  "shadow-solved3",
+  "shadow-solved4",
 ] as const;
 
 /**
@@ -22,4 +29,8 @@ export function colorIndexForGroup(puzzle: Puzzle, groupId: string): number {
 
 export function solvedClassForGroup(puzzle: Puzzle, groupId: string): string {
   return SOLVED_COLOR_CLASSES[colorIndexForGroup(puzzle, groupId)];
+}
+
+export function solvedDepthClassForGroup(puzzle: Puzzle, groupId: string): string {
+  return SOLVED_CARD_DEPTH_CLASSES[colorIndexForGroup(puzzle, groupId)];
 }

@@ -59,8 +59,12 @@ export function useSoundSettings(): {
   return { muted: s.muted, volume: s.volume, toggleMute, setVolume };
 }
 
-export function useSound(): (event: SoundEvent) => void {
-  return useCallback((event: SoundEvent) => {
-    playSound(event);
+import type { PlaySoundOptions } from "./sound";
+
+export type { PlaySoundOptions };
+
+export function useSound(): (event: SoundEvent, options?: PlaySoundOptions) => void {
+  return useCallback((event: SoundEvent, options?: PlaySoundOptions) => {
+    playSound(event, options);
   }, []);
 }

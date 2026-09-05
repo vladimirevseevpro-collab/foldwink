@@ -45,6 +45,7 @@ export interface DailyRecord {
   result: GameResult;
   mistakesUsed: number;
   durationMs: number;
+  graceWaxUsed?: boolean;
 }
 
 export interface StandardProgress {

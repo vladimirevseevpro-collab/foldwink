@@ -2,6 +2,9 @@ import { useState } from "react";
 import { Button } from "./Button";
 import { renderShareCard, type ShareCardOptions } from "../share/shareCard";
 import { useT } from "../i18n/useLanguage";
+import { trackEvent } from "../analytics/eventLog";
+import { useGameStore } from "../game/state/appStore";
+import { useLang } from "../i18n/useLanguage";
 
 interface Props {
   text: string;
@@ -85,24 +88,39 @@ async function tryCopyText(text: string): Promise<boolean> {
 export function ShareButton({ text, card, filename = "foldwink.png" }: Props) {
   const [status, setStatus] = useState<Status>("idle");
   const t = useT();
+  const lang = useLang();
+  const active = useGameStore((s) => s.active);
+  const puzzle = useGameStore((s) => s.puzzle);
 
-  async function handleClick(): Promise<void> {
+  async function handleShare(isStory: boolean = false): Promise<void> {
+    trackEvent({
+      name: "share_clicked",
+      props: {
+        surface: "result",
+        mode: active?.mode === "daily" ? "daily" : "standard",
+        difficulty: puzzle?.difficulty ?? "easy",
+        lang,
+      },
+    });
     setStatus("sharing");
 
+    const targetCard: ShareCardOptions | undefined = card
+      ? { ...card, format: isStory ? "story" : "square" }
+      : undefined;
+    const targetFilename = isStory ? "foldwink-story.png" : filename;
+
     // Path A: we have a card — render it and try the image-first pipeline.
-    if (card) {
-      const blob = await renderShareCard(card);
+    if (targetCard) {
+      const blob = await renderShareCard(targetCard);
       if (blob) {
-        const file = new File([blob], filename, { type: "image/png" });
+        const file = new File([blob], targetFilename, { type: "image/png" });
         const outcome = await tryShareFile(file, text);
         if (outcome === "shared") {
           setStatus("idle");
           return;
         }
         // User explicitly cancelled the native share sheet — respect that
-        // and do not cascade into clipboard or download. The previous
-        // behavior silently prompted the OS "save image?" dialog, which
-        // felt like the app was ignoring the cancel.
+        // and do not cascade into clipboard or download.
         if (outcome === "cancelled") {
           setStatus("idle");
           return;
@@ -113,7 +131,7 @@ export function ShareButton({ text, card, filename = "foldwink.png" }: Props) {
           return;
         }
         try {
-          downloadBlob(blob, filename);
+          downloadBlob(blob, targetFilename);
           setStatus("downloaded");
           setTimeout(() => setStatus("idle"), 1800);
           return;
@@ -144,14 +162,34 @@ export function ShareButton({ text, card, filename = "foldwink.png" }: Props) {
   if (status === "downloaded") label = t.share.savedImage;
   if (status === "failed") label = t.share.unavailable;
 
+  const storyLabel =
+    lang === "ru"
+      ? "Поделиться в Stories (9:16)"
+      : lang === "de"
+        ? "In Story teilen (9:16)"
+        : "Share to Story (9:16)";
+
   return (
-    <Button
-      variant="secondary"
-      onClick={handleClick}
-      className="w-full"
-      disabled={status === "sharing"}
-    >
-      {label}
-    </Button>
+    <div className="flex flex-col gap-2">
+      <Button
+        variant="secondary"
+        onClick={() => handleShare(false)}
+        className="w-full"
+        disabled={status === "sharing"}
+        data-testid="share-result-button"
+      >
+        {label}
+      </Button>
+      {card && (
+        <button
+          type="button"
+          onClick={() => handleShare(true)}
+          disabled={status === "sharing"}
+          className="text-[11px] font-semibold text-accent hover:text-accentHi transition-colors text-center py-0.5"
+        >
+          📱 {storyLabel}
+        </button>
+      )}
+    </div>
   );
 }

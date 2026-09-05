@@ -2,6 +2,7 @@ import { useState } from "react";
 import { clearEventLog } from "../analytics/eventLog";
 import { clearAllLocalData } from "../stats/persistence";
 import { useT } from "../i18n/useLanguage";
+import { PrivacyControl } from "./PrivacyControl";
 
 export function AboutFooter() {
   const [open, setOpen] = useState(false);
@@ -30,7 +31,7 @@ export function AboutFooter() {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="text-[10px] uppercase tracking-[0.14em] text-muted hover:text-text transition-colors"
+        className="text-[10px] uppercase text-muted hover:text-text transition-colors"
       >
         {t.about.link}
       </button>
@@ -38,9 +39,9 @@ export function AboutFooter() {
   }
 
   return (
-    <div className="w-full max-w-sm rounded-2xl bg-surface border border-[#2e343f] px-5 py-4 text-left">
+    <div className="w-full max-w-sm rounded-lg bg-surface border border-line px-5 py-4 text-left">
       <div className="flex items-center justify-between mb-2">
-        <div className="text-[10px] uppercase tracking-[0.14em] text-muted">{t.about.title}</div>
+        <div className="text-[10px] uppercase text-muted">{t.about.title}</div>
         <button
           type="button"
           onClick={() => setOpen(false)}
@@ -62,13 +63,9 @@ export function AboutFooter() {
         </a>
         {t.about.bylineAfter}
       </p>
-      <div className="text-[10px] uppercase tracking-[0.14em] text-muted mb-1">
-        {t.about.privacy}
-      </div>
+      <div className="text-[10px] uppercase text-muted mb-1">{t.about.privacy}</div>
       <p className="text-xs text-muted leading-relaxed mb-3">{t.about.privacyBody}</p>
-      <div className="text-[10px] uppercase tracking-[0.14em] text-muted mb-1">
-        {t.about.support}
-      </div>
+      <div className="text-[10px] uppercase text-muted mb-1">{t.about.support}</div>
       <p className="text-xs text-muted leading-relaxed mb-3">
         {t.about.supportBody}{" "}
         <a
@@ -79,6 +76,9 @@ export function AboutFooter() {
         </a>
       </p>
       <div className="flex flex-col gap-2">
+        <div>
+          <PrivacyControl />
+        </div>
         <button
           type="button"
           onClick={handleClear}

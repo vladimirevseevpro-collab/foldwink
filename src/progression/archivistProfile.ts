@@ -1,4 +1,4 @@
-﻿import type { ArchivistProfile, GuildRank } from "./types";
+import type { ArchivistProfile, GuildRank } from "./types";
 import { GUILD_RANKS } from "./types";
 import { STAMP_COLLECTION } from "./stamps";
 
@@ -86,7 +86,7 @@ export function awardSolveRewards(
 ): { updatedProfile: ArchivistProfile; rewards: SolveRewards } {
   const { result, mistakesUsed, isDaily, difficulty } = ctx;
 
-  let xpGained = 0;
+  let xpGained: number;
   let inkGained = 0;
   let waxGained = 0;
   let prestigeGained = 0;

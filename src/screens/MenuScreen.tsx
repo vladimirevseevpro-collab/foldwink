@@ -19,8 +19,9 @@ import {
 import { currentBundle } from "../puzzles/byLang";
 import { isIosSafariInBrowser } from "../utils/platform";
 import { useLang, useT } from "../i18n/useLanguage";
-import { loadDailyHistory } from "../stats/persistence";
-import { mergeDailyHistory } from "../stats/dailyRitual";
+import { loadDailyHistory, checkAndProtectDailyStreakWithGraceWax } from "../stats/persistence";
+import { todayLocal } from "../utils/date";
+import { mergeDailyHistory, calculateDailyStreak } from "../stats/dailyRitual";
 import { PrivacyPrompt } from "../components/PrivacyPrompt";
 import { isSupporter } from "../monetization/supporter";
 import { InstallFoldwink } from "../components/InstallFoldwink";
@@ -48,6 +49,18 @@ export function MenuScreen() {
   const [consentStatus, setConsent] = useState(() => getConsentStatus());
   const [isPassportOpen, setIsPassportOpen] = useState(false);
   const [isContractOpen, setIsContractOpen] = useState(false);
+  const [graceWaxNotice, setGraceWaxNotice] = useState<string | null>(null);
+
+  useEffect(() => {
+    const res = checkAndProtectDailyStreakWithGraceWax(todayLocal());
+    if (res.applied) {
+      setGraceWaxNotice(
+        lang === "ru"
+          ? "🕯️ Защита Сургуча: вчерашний день спасён, серия сохранена!"
+          : "🕯️ Grace Wax: Missed day protected, streak preserved!",
+      );
+    }
+  }, [lang]);
 
   useEffect(() => {
     trackEvent({
@@ -126,7 +139,23 @@ export function MenuScreen() {
       ) : (
         <>
           {dailyDone && todayDailyRecord && (
-            <DailyCompleteCard record={todayDailyRecord} currentStreak={stats.currentStreak} />
+            <DailyCompleteCard
+              record={todayDailyRecord}
+              currentStreak={calculateDailyStreak(dailyHistory, todayLocal())}
+            />
+          )}
+
+          {graceWaxNotice && (
+            <div className="w-full max-w-[20rem] p-2.5 rounded-xl border border-amber-500/50 bg-amber-950/40 text-amber-200 text-xs flex items-center justify-between shadow-sm animate-in fade-in duration-200">
+              <span className="font-medium">{graceWaxNotice}</span>
+              <button
+                type="button"
+                onClick={() => setGraceWaxNotice(null)}
+                className="text-muted hover:text-text p-1 text-xs"
+              >
+                ✕
+              </button>
+            </div>
           )}
 
           <DailyFold history={dailyHistory} className="w-full max-w-[20rem]" />

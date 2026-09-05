@@ -24,10 +24,12 @@ export type HapticEvent =
   | "deselect"
   | "submit"
   | "wrong"
+  | "oneAway"
   | "correct"
   | "wink"
   | "win"
-  | "loss";
+  | "loss"
+  | "sealBreak";
 
 interface HapticSettings {
   enabled: boolean;
@@ -39,27 +41,31 @@ const DEFAULT_SETTINGS: HapticSettings = { enabled: true };
 // Per-event minimum gap. select/deselect are the spam-prone events, so they
 // get a tighter floor. Longer patterns can fire at their own cadence.
 const MIN_GAP_MS: Record<HapticEvent, number> = {
-  select: 45,
-  deselect: 45,
+  select: 35,
+  deselect: 35,
   submit: 120,
   wrong: 200,
+  oneAway: 200,
   correct: 200,
   wink: 200,
   win: 500,
   loss: 500,
+  sealBreak: 200,
 };
 
 // Intent-driven patterns in ms. Single numbers fire one pulse; arrays are
 // alternating on/off pulses per the Vibration API spec.
 const PATTERNS: Record<HapticEvent, number | number[]> = {
-  select: 8,
-  deselect: 6,
+  select: 5,
+  deselect: 5,
   submit: 12,
-  correct: 18,
-  wrong: [14, 40, 14],
+  correct: [15, 30, 15],
+  wrong: 40,
+  oneAway: [14, 30, 14, 30, 20],
   wink: 10,
   win: [16, 40, 16, 40, 22],
   loss: 30,
+  sealBreak: [10, 10, 25],
 };
 
 let cachedSettings: HapticSettings | null = null;

@@ -24,3 +24,43 @@ export function isIosSafariInBrowser(): boolean {
   }
   return true;
 }
+
+export function isEmbedded(): boolean {
+  if (typeof window === "undefined") return false;
+  try {
+    return window.self !== window.top;
+  } catch {
+    return true;
+  }
+}
+
+export function isCoarsePointer(): boolean {
+  if (typeof window === "undefined") return false;
+  const coarse =
+    typeof window.matchMedia === "function" && window.matchMedia("(pointer: coarse)").matches;
+  const touch = typeof navigator !== "undefined" && navigator.maxTouchPoints > 0;
+  return coarse || touch;
+}
+
+interface EmbeddedFullSizeConditions {
+  embedded: boolean;
+  coarsePointer: boolean;
+  dismissed: boolean;
+}
+
+export function shouldOfferEmbeddedFullSize({
+  embedded,
+  coarsePointer,
+  dismissed,
+}: EmbeddedFullSizeConditions): boolean {
+  return embedded && coarsePointer && !dismissed;
+}
+
+/**
+ * The iframe URL is the only full-size target guaranteed to exist for
+ * every distribution build, including itch drafts and local QA embeds.
+ */
+export function embeddedPlayUrl(): string | null {
+  if (!isEmbedded() || typeof window === "undefined") return null;
+  return window.location.href;
+}

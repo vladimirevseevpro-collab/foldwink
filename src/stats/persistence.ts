@@ -6,6 +6,8 @@ import {
   type DailyRecord,
 } from "../game/types/stats";
 import type { ActiveGame } from "../game/types/game";
+import { applyGraceWaxProtection, type GraceWaxResult } from "./dailyRitual";
+import { loadArchivistProfile, saveArchivistProfile } from "../progression/archivistProfile";
 
 const STATS_KEY = "foldwink:stats";
 const PROGRESS_KEY = "foldwink:progress";
@@ -42,6 +44,17 @@ export function loadDailyHistory(): DailyHistory {
 
 export function saveDailyHistory(h: DailyHistory): void {
   safeWrite(DAILY_KEY, h);
+}
+
+export function checkAndProtectDailyStreakWithGraceWax(today: string): GraceWaxResult {
+  const history = loadDailyHistory();
+  const profile = loadArchivistProfile();
+  const res = applyGraceWaxProtection(history, today, profile);
+  if (res.result.applied) {
+    saveDailyHistory(res.history);
+    saveArchivistProfile({ ...profile, wax: res.waxRemaining });
+  }
+  return res.result;
 }
 
 export function loadOnboarded(): boolean {

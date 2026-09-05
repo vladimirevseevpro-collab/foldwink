@@ -1,8 +1,9 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import type { SolveRewards } from "../progression/archivistProfile";
 import { getGuildRank } from "../progression/archivistProfile";
 import { useLang } from "../i18n/useLanguage";
 import { useSound } from "../audio/useSound";
+import { triggerHaptic } from "../haptics/haptics";
 
 interface EnvelopeUnboxingModalProps {
   rewards: SolveRewards;
@@ -18,6 +19,7 @@ export function EnvelopeUnboxingModal({ rewards, onClose }: EnvelopeUnboxingModa
   const handleCrackSeal = () => {
     setIsOpened(true);
     playSound("tabReveal");
+    triggerHaptic("sealBreak");
   };
 
   const getStampName = () => {

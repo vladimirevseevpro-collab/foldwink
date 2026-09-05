@@ -21,7 +21,7 @@ const MARK_PX: Record<NonNullable<Props["size"]>, number> = {
 };
 
 /**
- * The Foldwink wordmark lockup: brand mark + wordmark + accent underline +
+ * The Foldwink wordmark lockup: printed sheet mark + two-ink wordmark +
  * optional "by Neural Void" sublabel. One place, one lockup, reused on
  * Menu / Stats / Onboarding.
  */
@@ -30,12 +30,17 @@ export function Wordmark({ size = "md", animated = false, subtitle, showSublabel
   return (
     <div className="flex flex-col items-center text-center">
       <BrandMark size={MARK_PX[size]} animated={animated} />
-      <h1 className={`mt-3 font-extrabold tracking-tight leading-none ${TITLE_CLS[size]}`}>
-        Foldwink
+      <h1 className={`mt-3 font-extrabold tracking-normal leading-none ${TITLE_CLS[size]}`}>
+        <span>Fold</span>
+        <span className="text-accent">wink</span>
       </h1>
-      <div className="mt-2 h-[3px] w-14 rounded-full bg-accent/70" aria-hidden="true" />
+      <div className="mt-2 flex items-center gap-2" aria-hidden="true">
+        <span className="h-px w-5 bg-line" />
+        <span className="h-2 w-2 rotate-45 border border-accent bg-bg" />
+        <span className="h-px w-5 bg-line" />
+      </div>
       {sublabelOn && (
-        <div className="mt-2 text-[10px] uppercase tracking-[0.18em] text-muted">
+        <div className="mt-2 text-[10px] uppercase text-muted">
           by Neural Void
         </div>
       )}

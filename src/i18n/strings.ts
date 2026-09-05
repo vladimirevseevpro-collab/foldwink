@@ -122,6 +122,7 @@ export interface Strings {
     solvedShort: string;
     failedShort: string;
     foldSolved: string;
+    foldCracked: string;
     foldMissed: string;
     foldEmpty: string;
     todayMarker: string;
@@ -360,6 +361,7 @@ export const strings: Record<Lang, Strings> = {
       solvedShort: "Solved",
       failedShort: "Failed",
       foldSolved: "Solved",
+      foldCracked: "Grace Wax (streak protected)",
       foldMissed: "Missed",
       foldEmpty: "Not played",
       todayMarker: "Today",
@@ -605,6 +607,7 @@ export const strings: Record<Lang, Strings> = {
       solvedShort: "Gelöst",
       failedShort: "Verpasst",
       foldSolved: "Gelöst",
+      foldCracked: "Siegel-Schutz (Streak gerettet)",
       foldMissed: "Verpasst",
       foldEmpty: "Nicht gespielt",
       todayMarker: "Heute",
@@ -852,6 +855,7 @@ export const strings: Record<Lang, Strings> = {
       solvedShort: "Решено",
       failedShort: "Провал",
       foldSolved: "Решено",
+      foldCracked: "Сургучная защита (серия сохранена)",
       foldMissed: "Не решено",
       foldEmpty: "Не сыграно",
       todayMarker: "Сегодня",

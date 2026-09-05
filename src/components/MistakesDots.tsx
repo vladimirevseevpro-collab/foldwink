@@ -18,23 +18,29 @@ export function MistakesDots({ used, oneAwayLast = false }: Props) {
   return (
     <div
       className="flex items-center gap-1.5"
+      role="status"
+      aria-live="polite"
       aria-label={t.game.mistakesAria(used, MAX_MISTAKES)}
     >
-      <span className="text-xs uppercase tracking-wide text-muted mr-1">
+      <span className="text-xs uppercase text-muted mr-1">
         {t.game.mistakesLabel}
       </span>
       {dots.map((_, i) => {
         const consumed = i < used;
         const amber = consumed && oneAwayLast && i === lastConsumedIdx;
+        const isLatest = i === lastConsumedIdx;
+        const isLastRemaining = used === 3 && i === 3;
         return (
           <span
             key={i}
-            className={`w-2.5 h-2.5 rounded-full transition-colors duration-300 ${
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
               consumed
                 ? amber
-                  ? "bg-[#e0b25e]"
-                  : "bg-danger"
-                : "bg-surfaceHi border border-[#2e343f]"
+                  ? `bg-warning shadow-[0_0_8px_rgba(231,185,90,0.6)] ${isLatest ? "fw-dot-pop" : ""}`
+                  : `bg-danger shadow-[0_0_8px_rgba(200,70,53,0.7)] ${isLatest ? "fw-dot-pop" : ""}`
+                : isLastRemaining
+                  ? "bg-surfaceHi border border-danger/80 shadow-[0_0_6px_rgba(200,70,53,0.5)] animate-pulse"
+                  : "bg-surfaceHi border border-line/80 shadow-[inset_0_1px_0_rgba(255,255,255,0.15),0_1px_0_rgba(0,0,0,0.5)]"
             }`}
           />
         );

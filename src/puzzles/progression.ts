@@ -1,4 +1,4 @@
-﻿import type { Puzzle } from "../game/types/puzzle";
+import type { Puzzle } from "../game/types/puzzle";
 import { fnv1a } from "../utils/hash";
 
 const SEED_STORAGE_KEY = "foldwink:playerSeed";
@@ -20,6 +20,17 @@ export function getOrCreatePlayerSeed(): string | undefined {
     return seed;
   } catch {
     return undefined;
+  }
+}
+
+export function setPlayerSeed(seed: string): void {
+  if (typeof window === "undefined" || typeof localStorage === "undefined") {
+    return;
+  }
+  try {
+    localStorage.setItem(SEED_STORAGE_KEY, seed);
+  } catch {
+    /* storage unavailable */
   }
 }
 

@@ -73,9 +73,17 @@ describe("statsPersistenceObserver", () => {
 
   it("writes onboarded flag on toggle", () => {
     const store = makeStore();
+    store.setState({ onboarded: false });
     statsPersistenceObserver(store);
-    store.getState().showOnboarding();
+    store.getState().completeOnboarding();
     expect(persistence.saveOnboarded).toHaveBeenCalledTimes(1);
+  });
+
+  it("does not persist replayable help as first-run state", () => {
+    const store = makeStore();
+    statsPersistenceObserver(store);
+    store.getState().openHowToPlay();
+    expect(persistence.saveOnboarded).not.toHaveBeenCalled();
   });
 
   it("does not write when unrelated slice changes", () => {

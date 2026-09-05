@@ -1,4 +1,4 @@
-﻿export type DisciplineId = "scribe" | "archivist" | "cryptographer" | "curator" | "cartographer";
+export type DisciplineId = "scribe" | "archivist" | "cryptographer" | "curator" | "cartographer";
 
 export interface CollectibleStamp {
   id: string;
@@ -33,6 +33,7 @@ export interface ArchivistProfile {
     wagerWax: number;
     rule: "sudden_death";
   } | null;
+  playerSeed?: string;
 }
 
 export interface GuildRank {

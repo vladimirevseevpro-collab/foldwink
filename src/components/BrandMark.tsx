@@ -3,28 +3,37 @@ interface Props {
   animated?: boolean;
 }
 
-/**
- * The Foldwink brand mark — a 2×2 tile motif with a subtle accent star that
- * sits above the wordmark. When `animated`, the top-right tile gently fades
- * on a slow cycle, suggesting the Foldwink Tabs reveal.
- */
+/** Four stamped groups on one sheet, finished by the shared folded Wink corner. */
 export function BrandMark({ size = 56, animated = false }: Props) {
   return (
-    <svg width={size} height={size} viewBox="0 0 64 64" aria-hidden="true" className="shrink-0">
-      <rect width="64" height="64" rx="14" fill="#181b22" />
-      <rect x="9" y="9" width="20" height="20" rx="4" fill="#f5c86b" />
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 64 64"
+      aria-hidden="true"
+      className={`shrink-0 drop-shadow-[0_7px_8px_rgba(0,0,0,0.28)] ${animated ? "fw-brand-arrive" : ""}`}
+    >
+      <rect x="4" y="6" width="56" height="54" rx="8" className="fill-paperEdge" />
       <rect
-        x="35"
-        y="9"
-        width="20"
-        height="20"
-        rx="4"
-        fill="#8cd28e"
-        style={animated ? { animation: "fw-tab-fade 3.4s ease-in-out infinite" } : undefined}
+        x="4"
+        y="2"
+        width="56"
+        height="54"
+        rx="8"
+        className="fill-paper stroke-line"
+        strokeWidth="1.5"
       />
-      <rect x="9" y="35" width="20" height="20" rx="4" fill="#ef9e9e" />
-      <rect x="35" y="35" width="20" height="20" rx="4" fill="#b49cf0" />
-      <circle cx="32" cy="32" r="3" fill="#7cc4ff" />
+      <rect x="10" y="9" width="18" height="18" rx="3" className="fill-solved1" />
+      <rect x="34" y="9" width="18" height="18" rx="3" className="fill-solved2" />
+      <rect x="10" y="33" width="18" height="18" rx="3" className="fill-solved3" />
+      <rect x="34" y="33" width="18" height="18" rx="3" className="fill-solved4" />
+      <path d="M46 2H60V16Z" className="fill-accent" />
+      <path
+        d="M52 7L57 12"
+        className="stroke-ink"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
     </svg>
   );
 }
