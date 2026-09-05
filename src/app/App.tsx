@@ -110,8 +110,8 @@ export function App() {
 
   const shellClass =
     !onboarded || screen === "game"
-      ? "max-w-[800px] px-3 pt-3 sm:px-5 sm:pt-5"
-      : "max-w-xl px-4 pt-4 sm:pt-6";
+      ? "max-w-[800px] px-3 sm:px-5 fw-safe-pt"
+      : "max-w-xl px-4 fw-safe-pt-screen";
 
   return (
     <div className="w-full flex justify-center">

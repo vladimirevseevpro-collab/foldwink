@@ -27,6 +27,7 @@ import { isSupporter } from "../monetization/supporter";
 import { InstallFoldwink } from "../components/InstallFoldwink";
 import { ArchivistPassportModal } from "../components/ArchivistPassportModal";
 import { IronContractModal } from "../components/IronContractModal";
+import { PalimpsestModal } from "../components/PalimpsestModal";
 
 export function MenuScreen() {
   const startEasy = useGameStore((s) => s.startEasy);
@@ -49,6 +50,7 @@ export function MenuScreen() {
   const [consentStatus, setConsent] = useState(() => getConsentStatus());
   const [isPassportOpen, setIsPassportOpen] = useState(false);
   const [isContractOpen, setIsContractOpen] = useState(false);
+  const [isPalimpsestOpen, setIsPalimpsestOpen] = useState(false);
   const [graceWaxNotice, setGraceWaxNotice] = useState<string | null>(null);
 
   useEffect(() => {
@@ -207,6 +209,16 @@ export function MenuScreen() {
             >
               ⚔️ {lang === "ru" ? "Железный Контракт" : lang === "de" ? "Eiserner Vertrag" : "Iron Contract"}
             </Button>
+
+            <Button
+              variant="secondary"
+              className="text-xs border-amber-500/50 bg-amber-950/20 text-amber-200 hover:bg-amber-950/40"
+              onClick={() => setIsPalimpsestOpen(true)}
+              data-testid="menu-palimpsest-button"
+            >
+              <span>📜✨</span>
+              <span>{t.palimpsest.menuButton}</span>
+            </Button>
           </div>
 
           {isPassportOpen && (
@@ -218,6 +230,16 @@ export function MenuScreen() {
 
           {isContractOpen && (
             <IronContractModal onClose={() => setIsContractOpen(false)} />
+          )}
+
+          {isPalimpsestOpen && (
+            <PalimpsestModal
+              onClose={() => setIsPalimpsestOpen(false)}
+              onOpenPassport={() => {
+                setIsPalimpsestOpen(false);
+                setIsPassportOpen(true);
+              }}
+            />
           )}
 
           {/* Show readiness caption from game 1 — disclosure of the existing

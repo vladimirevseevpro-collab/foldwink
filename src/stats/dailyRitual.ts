@@ -1,6 +1,6 @@
 import type { DailyRecord } from "../game/types/stats";
 
-export type DailyCellState = "won" | "lost" | "empty" | "cracked";
+export type DailyCellState = "won" | "lost" | "empty" | "cracked" | "restored";
 
 export interface DailyFoldCell {
   date: string;
@@ -129,7 +129,7 @@ export function deriveSevenDayFold(
       state: !record
         ? "empty"
         : record.graceWaxUsed
-          ? "cracked"
+          ? "restored"
           : record.result === "win"
             ? "won"
             : "lost",

@@ -16,6 +16,9 @@
 html,
 body {
   min-height: 100%;
+  overscroll-behavior-y: none;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 #root {
@@ -237,6 +240,28 @@ button {
 @media (min-width: 640px) {
   .fw-safe-pb {
     padding-bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+/*
+ * Safe-area aware top padding for iOS notch / Dynamic Island and standalone apps.
+ * In a standard desktop/browser environment, env(safe-area-inset-top, 0px) evaluates
+ * to 0px, maintaining the canonical 0.75rem / 1rem spacing.
+ * In standalone iOS mode (Capacitor / Sideloaded IPA), it clears the status bar
+ * and Dynamic Island / notch.
+ */
+.fw-safe-pt {
+  padding-top: calc(0.75rem + env(safe-area-inset-top, 0px));
+}
+.fw-safe-pt-screen {
+  padding-top: calc(1rem + env(safe-area-inset-top, 0px));
+}
+@media (min-width: 640px) {
+  .fw-safe-pt {
+    padding-top: calc(1.25rem + env(safe-area-inset-top, 0px));
+  }
+  .fw-safe-pt-screen {
+    padding-top: calc(1.5rem + env(safe-area-inset-top, 0px));
   }
 }
 

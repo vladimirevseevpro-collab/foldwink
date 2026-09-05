@@ -5,6 +5,8 @@ export interface BeforeInstallPromptEvent extends Event {
 
 export function isStandalonePwa(): boolean {
   if (typeof window === "undefined") return false;
+  const cap = (window as unknown as { Capacitor?: { isNativePlatform?: () => boolean } }).Capacitor;
+  if (cap?.isNativePlatform?.()) return true;
   const navigatorWithStandalone = navigator as Navigator & { standalone?: boolean };
   return (
     navigatorWithStandalone.standalone === true ||

@@ -123,6 +123,7 @@ export interface Strings {
     failedShort: string;
     foldSolved: string;
     foldCracked: string;
+    foldRestored?: string;
     foldMissed: string;
     foldEmpty: string;
     graceWaxApplied: string;
@@ -232,6 +233,49 @@ export interface Strings {
     unlockFor: (price: string) => string;
     badgeLabel: string;
     badgeTitle: string;
+  };
+  duel: {
+    bannerTitle: string;
+    youWon: string;
+    challengerWon: string;
+    tie: string;
+    yourResult: string;
+    challengerResult: string;
+    sendResponse: string;
+    responseSent: string;
+    challengeFriend: string;
+    challengeCopied: string;
+    mistakesWord: (n: number) => string;
+  };
+  passport: {
+    diffTitle: string;
+    currentProfile: string;
+    importedProfile: string;
+    replaceConfirm: string;
+    undoImport: string;
+    undoSuccess: string;
+    statLevel: string;
+    statXp: string;
+    statStreak: string;
+    statInk: string;
+    statWax: string;
+    statStamps: string;
+  };
+  palimpsest: {
+    menuButton: string;
+    title: string;
+    subtitle: string;
+    obverseBadge: string;
+    reverseBadge: string;
+    obverseCompleteTitle: string;
+    obverseCompleteDesc: string;
+    flipButton: string;
+    completedTitle: string;
+    completedDetail: string;
+    doubleSealBadge: string;
+    archivalReward: string;
+    rulesHint: string;
+    backToMenu: string;
   };
 }
 
@@ -362,10 +406,11 @@ export const strings: Record<Lang, Strings> = {
       solvedShort: "Solved",
       failedShort: "Failed",
       foldSolved: "Solved",
-      foldCracked: "Grace Wax (streak protected)",
+      foldCracked: "Restored Seal (Kintsugi)",
+      foldRestored: "Restored Seal (Kintsugi)",
       foldMissed: "Missed",
       foldEmpty: "Not played",
-      graceWaxApplied: "🕯️ Grace Wax: Missed day protected, streak preserved!",
+      graceWaxApplied: "✨ Restored Seal (Kintsugi): Streak protected with golden repair!",
       todayMarker: "Today",
       momentLabel: "Daily note",
       momentFirst: "First daily on the record.",
@@ -479,6 +524,51 @@ export const strings: Record<Lang, Strings> = {
       unlockFor: (price) => `Unlock for ${price}`,
       badgeLabel: "Supporter",
       badgeTitle: "Thanks for supporting Foldwink",
+    },
+    duel: {
+      bannerTitle: "Shared Seal Duel",
+      youWon: "🏆 You Won the Duel!",
+      challengerWon: "💀 Challenger Victorious",
+      tie: "🤝 Honorable Tie!",
+      yourResult: "Your Result",
+      challengerResult: "Challenger",
+      sendResponse: "Send Response",
+      responseSent: "✓ Response Copied!",
+      challengeFriend: "Challenge a Friend (Link Duel)",
+      challengeCopied: "Duel Link Copied!",
+      mistakesWord: (n) => (n === 1 ? "mistake" : "mistakes"),
+    },
+    passport: {
+      diffTitle: "Wax Seal Passport Transfer",
+      currentProfile: "Current Profile",
+      importedProfile: "Imported Profile",
+      replaceConfirm: "Replace Profile",
+      undoImport: "Undo Import (Restore Previous)",
+      undoSuccess: "Previous Profile Restored!",
+      statLevel: "Archivist Level",
+      statXp: "Total XP",
+      statStreak: "Daily Streak",
+      statInk: "Ink Drops",
+      statWax: "Wax Seals",
+      statStamps: "Stamps Unlocked",
+    },
+    palimpsest: {
+      menuButton: "📜✨ The Palimpsest",
+      title: "The Palimpsest",
+      subtitle: "Dual-Layer Archival Parchment",
+      obverseBadge: "Obverse Layer (1/2)",
+      reverseBadge: "Reverse Layer (2/2)",
+      obverseCompleteTitle: "✦ Obverse Deciphered! ✦",
+      obverseCompleteDesc:
+        "The surface ink is cleared. A deeper, orthogonal script emerges on the reverse.",
+      flipButton: "Flip Parchment ↷",
+      completedTitle: "Palimpsest Mastered",
+      completedDetail: "Both orthogonal layers of the ancient parchment have been deciphered.",
+      doubleSealBadge: "Double Archival Wax Seal",
+      archivalReward: "Reward: +50 XP · 🕯️ +3 Wax · 💧 +2 Ink · Dual Stamp Unlocked",
+      rulesHint:
+        "Solve both orthogonal layers of the same 16 words. First by meaning, then by hidden structure.",
+      backToMenu: "Return to Archives",
     },
   },
 
@@ -609,10 +699,11 @@ export const strings: Record<Lang, Strings> = {
       solvedShort: "Gelöst",
       failedShort: "Verpasst",
       foldSolved: "Gelöst",
-      foldCracked: "Siegel-Schutz (Streak gerettet)",
+      foldCracked: "Restauriertes Siegel (Kintsugi)",
+      foldRestored: "Restauriertes Siegel (Kintsugi)",
       foldMissed: "Verpasst",
       foldEmpty: "Nicht gespielt",
-      graceWaxApplied: "🕯️ Siegelwachs-Gnade: Verpasster Tag geschützt, Serie gerettet!",
+      graceWaxApplied: "✨ Siegel-Schutz: Streak mit goldenem Kintsugi-Siegel restauriert!",
       todayMarker: "Heute",
       momentLabel: "Tagesnotiz",
       momentFirst: "Erster Tageseintrag.",
@@ -729,6 +820,51 @@ export const strings: Record<Lang, Strings> = {
       unlockFor: (price) => `Freischalten für ${price}`,
       badgeLabel: "Supporter",
       badgeTitle: "Danke, dass du Foldwink unterstützt",
+    },
+    duel: {
+      bannerTitle: "Siegel-Duell",
+      youWon: "🏆 Duell gewonnen!",
+      challengerWon: "💀 Herausforderer siegt",
+      tie: "🤝 Ehrenhaftes Unentschieden!",
+      yourResult: "Dein Ergebnis",
+      challengerResult: "Herausforderer",
+      sendResponse: "Antwort senden",
+      responseSent: "✓ Antwort kopiert!",
+      challengeFriend: "Freund herausfordern (Duell)",
+      challengeCopied: "Duell-Link kopiert!",
+      mistakesWord: (n) => (n === 1 ? "Fehler" : "Fehler"),
+    },
+    passport: {
+      diffTitle: "Wachssiegel-Pass Transfer",
+      currentProfile: "Aktuelles Profil",
+      importedProfile: "Importiertes Profil",
+      replaceConfirm: "Profil ersetzen",
+      undoImport: "Import rückgängig machen",
+      undoSuccess: "Vorheriges Profil wiederhergestellt!",
+      statLevel: "Archivar-Stufe",
+      statXp: "Gesamt-XP",
+      statStreak: "Tages-Streak",
+      statInk: "Tintentropfen",
+      statWax: "Siegelwachs",
+      statStamps: "Briefmarken",
+    },
+    palimpsest: {
+      menuButton: "📜✨ Das Palimpsest",
+      title: "Das Palimpsest",
+      subtitle: "Doppellagiges Pergament",
+      obverseBadge: "Vorderseite (1/2)",
+      reverseBadge: "Rückseite (2/2)",
+      obverseCompleteTitle: "✦ Vorderseite gelöst! ✦",
+      obverseCompleteDesc:
+        "Die Oberfläche ist entschlüsselt. Auf der Rückseite zeigt sich eine orthogonale Struktur.",
+      flipButton: "Pergament wenden ↷",
+      completedTitle: "Palimpsest vollendet",
+      completedDetail: "Beide orthogonalen Schichten des alten Pergaments wurden entschlüsselt.",
+      doubleSealBadge: "Doppeltes Archiv-Siegel",
+      archivalReward: "Belohnung: +50 XP · 🕯️ +3 Wachs · 💧 +2 Tinte · Palimpsest-Marke freigeschaltet",
+      rulesHint:
+        "Löse beide Ebenen derselben 16 Wörter. Erst nach Bedeutung, dann nach verborgener Struktur.",
+      backToMenu: "Zurück zum Archiv",
     },
   },
 
@@ -858,10 +994,11 @@ export const strings: Record<Lang, Strings> = {
       solvedShort: "Решено",
       failedShort: "Провал",
       foldSolved: "Решено",
-      foldCracked: "Сургучная защита (серия сохранена)",
+      foldCracked: "Восстановленная печать (Кинцуги)",
+      foldRestored: "Восстановленная печать (Кинцуги)",
       foldMissed: "Не решено",
       foldEmpty: "Не сыграно",
-      graceWaxApplied: "🕯️ Защита Сургуча: вчерашний день спасён, серия сохранена!",
+      graceWaxApplied: "✨ Защита Сургуча: серия восстановлена золотой печатью Кинцуги!",
       todayMarker: "Сегодня",
       momentLabel: "Дневная заметка",
       momentFirst: "Первая запись о дневном пазле.",
@@ -978,6 +1115,51 @@ export const strings: Record<Lang, Strings> = {
       unlockFor: (price) => `Открыть за ${price}`,
       badgeLabel: "Supporter",
       badgeTitle: "Спасибо за поддержку Foldwink",
+    },
+    duel: {
+      bannerTitle: "Дуэль Печатей",
+      youWon: "🏆 Вы победили в Дуэли!",
+      challengerWon: "💀 Соперник оказался сильнее",
+      tie: "🤝 Благородная Ничья!",
+      yourResult: "Ваш результат",
+      challengerResult: "Соперник",
+      sendResponse: "Отправить ответ на дуэль",
+      responseSent: "✓ Ответ скопирован!",
+      challengeFriend: "Бросить вызов другу (Дуэль)",
+      challengeCopied: "Ссылка на дуэль скопирована!",
+      mistakesWord: (n) => (n === 1 ? "ошибка" : n >= 2 && n <= 4 ? "ошибки" : "ошибок"),
+    },
+    passport: {
+      diffTitle: "Перенос Паспорта Архивариуса",
+      currentProfile: "Текущий профиль",
+      importedProfile: "Импортируемый профиль",
+      replaceConfirm: "Заменить профиль",
+      undoImport: "Вернуть предыдущий профиль",
+      undoSuccess: "Предыдущий профиль возвращён!",
+      statLevel: "Уровень Архивариуса",
+      statXp: "Всего опыта (XP)",
+      statStreak: "Дневная серия",
+      statInk: "Капли чернил",
+      statWax: "Сургучные печати",
+      statStamps: "Собрано марок",
+    },
+    palimpsest: {
+      menuButton: "📜✨ Палимпсест",
+      title: "Палимпсест",
+      subtitle: "Двусторонний пергамент Архива",
+      obverseBadge: "Лицевая сторона (1/2)",
+      reverseBadge: "Оборотная сторона (2/2)",
+      obverseCompleteTitle: "✦ Лицевая сторона разгадана! ✦",
+      obverseCompleteDesc:
+        "Поверхностный слой расшифрован. На обороте проявился скрытый ортогональный текст.",
+      flipButton: "Перевернуть лист ↷",
+      completedTitle: "Палимпсест покорен",
+      completedDetail: "Оба слоя древнего документа успешно разгаданы.",
+      doubleSealBadge: "Двойная Сургучная Печать Архива",
+      archivalReward: "Награда: +50 XP · 🕯️ +3 Сургуча · 💧 +2 Чернил · Марка Палимпсеста",
+      rulesHint:
+        "Разгадайте обе стороны одних и тех же 16 слов: сначала по смыслу, затем по ортогональному правилу.",
+      backToMenu: "В архив",
     },
   },
 };

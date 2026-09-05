@@ -3,6 +3,10 @@ import { generateQrMatrix } from "../qr";
 import {
   encodePassportToSeal,
   decodePassportFromSeal,
+  saveArchivistBackup,
+  loadArchivistBackup,
+  hasArchivistBackup,
+  clearArchivistBackup,
 } from "../waxSealTransfer";
 import type { ArchivistProfile } from "../types";
 import { STAMP_COLLECTION } from "../stamps";
@@ -275,7 +279,32 @@ describe("Wax Seal Passport Transfer", () => {
     playerSeed: "user_seed_test_123",
   };
 
+  function installLocalStorage(): void {
+    const store = new Map<string, string>();
+    (globalThis as unknown as { localStorage?: Storage }).localStorage = {
+      get length() {
+        return store.size;
+      },
+      key(i: number) {
+        return Array.from(store.keys())[i] ?? null;
+      },
+      getItem(k: string) {
+        return store.has(k) ? store.get(k)! : null;
+      },
+      setItem(k: string, v: string) {
+        store.set(k, v);
+      },
+      removeItem(k: string) {
+        store.delete(k);
+      },
+      clear() {
+        store.clear();
+      },
+    } as Storage;
+  }
+
   it("encodes profile into a portable FWSEAL1 string", () => {
+    installLocalStorage();
     const sealStr = encodePassportToSeal(sampleProfile, "user_seed_test_123");
     expect(sealStr.startsWith("FWSEAL1:")).toBe(true);
     expect(sealStr.includes("-")).toBe(true);
@@ -331,5 +360,22 @@ describe("Wax Seal Passport Transfer", () => {
 
     const invalidHeader = decodePassportFromSeal("INVALID:xyz");
     expect(invalidHeader.ok).toBe(false);
+  });
+
+  it("handles profile backup, detection, and clearing correctly", () => {
+    clearArchivistBackup();
+    expect(hasArchivistBackup()).toBe(false);
+    expect(loadArchivistBackup()).toBeNull();
+
+    saveArchivistBackup(sampleProfile, "seed_backup_test");
+    expect(hasArchivistBackup()).toBe(true);
+
+    const loaded = loadArchivistBackup();
+    expect(loaded?.profile.level).toBe(5);
+    expect(loaded?.playerSeed).toBe("seed_backup_test");
+    expect(loaded?.backedUpAt).toBeDefined();
+
+    clearArchivistBackup();
+    expect(hasArchivistBackup()).toBe(false);
   });
 });

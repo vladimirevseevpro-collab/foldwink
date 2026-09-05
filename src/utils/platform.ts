@@ -1,6 +1,15 @@
 /**
+ * Detect whether the application is running within the native Capacitor shell.
+ */
+export function isNativePlatform(): boolean {
+  if (typeof window === "undefined") return false;
+  const cap = (window as unknown as { Capacitor?: { isNativePlatform?: () => boolean } }).Capacitor;
+  return Boolean(cap?.isNativePlatform?.());
+}
+
+/**
  * Detect iOS Safari running in a regular browser tab (not standalone /
- * Add-to-Home-Screen mode, not Chrome-on-iOS).
+ * Add-to-Home-Screen mode, not Chrome-on-iOS, not native Capacitor shell).
  *
  * Used to surface an "Add to Home Screen for full-screen play" hint on
  * the menu, because iOS Safari forbids the JS Fullscreen API for iframes
@@ -8,6 +17,7 @@
  */
 export function isIosSafariInBrowser(): boolean {
   if (typeof navigator === "undefined") return false;
+  if (isNativePlatform()) return false;
   const ua = navigator.userAgent;
   const isIos = /iPhone|iPad|iPod/.test(ua);
   if (!isIos) return false;
@@ -15,6 +25,8 @@ export function isIosSafariInBrowser(): boolean {
   // Edge (EdgiOS) render differently and the Add-to-Home trick is
   // Safari-specific.
   if (/CriOS|FxiOS|EdgiOS/.test(ua)) return false;
+  // Native WKWebView does not include "Safari" in its userAgent, whereas mobile Safari does.
+  if (!/Safari/.test(ua)) return false;
   // Already launched as a PWA from the home screen — no hint needed.
   const nav = navigator as Navigator & { standalone?: boolean };
   if (nav.standalone === true) return false;

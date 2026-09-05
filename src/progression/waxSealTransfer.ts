@@ -374,3 +374,54 @@ export function drawWaxSealCertificate(
   ctx.font = `700 8px ${fontStack}`;
   ctx.fillText("neural-void.com/foldwink", width / 2, height - 24);
 }
+
+export const ARCHIVIST_BACKUP_KEY = "foldwink_archivist_backup";
+
+export interface ArchivistBackupPayload {
+  profile: ArchivistProfile;
+  playerSeed?: string;
+  backedUpAt: string;
+}
+
+export function saveArchivistBackup(profile: ArchivistProfile, playerSeed?: string): void {
+  if (typeof localStorage === "undefined") return;
+  try {
+    const payload: ArchivistBackupPayload = {
+      profile,
+      playerSeed,
+      backedUpAt: new Date().toISOString(),
+    };
+    localStorage.setItem(ARCHIVIST_BACKUP_KEY, JSON.stringify(payload));
+  } catch {
+    /* ignore */
+  }
+}
+
+export function loadArchivistBackup(): ArchivistBackupPayload | null {
+  if (typeof localStorage === "undefined") return null;
+  try {
+    const raw = localStorage.getItem(ARCHIVIST_BACKUP_KEY);
+    if (!raw) return null;
+    return JSON.parse(raw) as ArchivistBackupPayload;
+  } catch {
+    return null;
+  }
+}
+
+export function hasArchivistBackup(): boolean {
+  if (typeof localStorage === "undefined") return false;
+  try {
+    return Boolean(localStorage.getItem(ARCHIVIST_BACKUP_KEY));
+  } catch {
+    return false;
+  }
+}
+
+export function clearArchivistBackup(): void {
+  if (typeof localStorage === "undefined") return;
+  try {
+    localStorage.removeItem(ARCHIVIST_BACKUP_KEY);
+  } catch {
+    /* ignore */
+  }
+}

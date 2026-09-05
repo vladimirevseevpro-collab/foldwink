@@ -1,4 +1,4 @@
-﻿import type { CollectibleStamp } from "./types";
+import type { CollectibleStamp } from "./types";
 
 export const STAMP_COLLECTION: readonly CollectibleStamp[] = [
   {
@@ -105,6 +105,19 @@ export const STAMP_COLLECTION: readonly CollectibleStamp[] = [
     provenanceRu: "Засушен между страниц ботанического каталога восемнадцатого века.",
     provenanceDe: "Gepresst zwischen den Seiten eines botanischen Werkes des 18. Jahrhunderts.",
   },
+  {
+    id: "stamp_palimpsest",
+    nameEn: "The Dual Palimpsest",
+    nameRu: "Двусторонний Палимпсест",
+    nameDe: "Das Doppel-Palimpsest",
+    theme: "Mystery",
+    rarity: "mythic",
+    icon: "📜",
+    color: "#d4af37",
+    provenanceEn: "An ancient parchment bearing two orthogonal layers of script revealed only by folding.",
+    provenanceRu: "Древний пергамент с двумя ортогональными слоями текста, открывающимися при переворачивании листа.",
+    provenanceDe: "Ein uraltes Pergament mit zwei orthogonalen Schriftlagen, die sich beim Wenden enthüllen.",
+  },
 ];
 
 export const SEALS = [
@@ -113,6 +126,7 @@ export const SEALS = [
   { id: "seal_keyhole", label: "Golden Keyhole", icon: "🗝️" },
   { id: "seal_owl", label: "Nocturnal Owl", icon: "🦉" },
   { id: "seal_laurel", label: "Imperial Laurel", icon: "🌿" },
+  { id: "seal_palimpsest", label: "Dual Archival Seal", icon: "📜" },
 ];
 
 export const NIBS = [

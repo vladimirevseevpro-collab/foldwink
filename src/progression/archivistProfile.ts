@@ -194,3 +194,44 @@ export function startIronContract(
   saveArchivistProfile(updated);
   return updated;
 }
+
+export function awardPalimpsestCompletion(profile: ArchivistProfile): {
+  updatedProfile: ArchivistProfile;
+  rewards: {
+    xpGained: number;
+    waxGained: number;
+    inkGained: number;
+    stampUnlocked: boolean;
+  };
+} {
+  const xpGained = 50;
+  const waxGained = 3;
+  const inkGained = 2;
+  const stampUnlocked = !profile.collectedStampIds.includes("stamp_palimpsest");
+  const collectedStampIds = stampUnlocked
+    ? [...profile.collectedStampIds, "stamp_palimpsest"]
+    : profile.collectedStampIds;
+  const newXp = profile.xp + xpGained;
+  const newLevel = getLevelFromXp(newXp);
+
+  const updatedProfile: ArchivistProfile = {
+    ...profile,
+    level: newLevel,
+    xp: newXp,
+    ink: profile.ink + inkGained,
+    wax: profile.wax + waxGained,
+    collectedStampIds,
+  };
+
+  saveArchivistProfile(updatedProfile);
+
+  return {
+    updatedProfile,
+    rewards: {
+      xpGained,
+      waxGained,
+      inkGained,
+      stampUnlocked,
+    },
+  };
+}

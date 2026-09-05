@@ -7,6 +7,7 @@ import { Button } from "../components/Button";
 import { ResultSummary } from "../components/ResultSummary";
 import { ShareButton } from "../components/ShareButton";
 import { DuelVerdictBanner } from "../components/DuelVerdictBanner";
+import { formatDuelResponse } from "../game/engine/duelResponse";
 import { DailyCountdown } from "../components/DailyCountdown";
 import { TipJarLink } from "../components/TipJarLink";
 import { SupporterUnlockCta } from "../components/SupporterUnlockCta";
@@ -55,6 +56,7 @@ export function ResultScreen() {
   const play = useSound();
   const focusRef = useRef<HTMLDivElement>(null);
   const [challengeCopied, setChallengeCopied] = useState(false);
+  const [duelResponseSent, setDuelResponseSent] = useState(false);
   const [unboxingRewards, setUnboxingRewards] = useState<SolveRewards | null>(() => {
     if (!summary || !puzzle || summary.result !== "win") return null;
     const profile = loadArchivistProfile();
@@ -81,6 +83,47 @@ export function ResultScreen() {
         play("submit");
         triggerHaptic("select");
         setTimeout(() => setChallengeCopied(false), 2200);
+      }
+    } catch {
+      /* ignore */
+    }
+  };
+
+  const handleSendDuelResponse = async () => {
+    if (!puzzle || !summary || !duel) return;
+    const text = formatDuelResponse({
+      puzzleId: puzzle.id,
+      challengerMistakes: duel.challengerMistakes,
+      challengerTimeSec: duel.challengerTimeSec,
+      playerResult: summary.result,
+      playerMistakes: summary.mistakesUsed,
+      playerDurationMs: summary.durationMs,
+      lang,
+    });
+
+    if (typeof navigator !== "undefined" && typeof navigator.share === "function") {
+      try {
+        await navigator.share({
+          title: lang === "ru" ? "Дуэль Foldwink" : "Foldwink Duel",
+          text,
+        });
+        setDuelResponseSent(true);
+        play("submit");
+        triggerHaptic("select");
+        setTimeout(() => setDuelResponseSent(false), 2400);
+        return;
+      } catch {
+        /* Fallback to clipboard if share was cancelled or failed */
+      }
+    }
+
+    try {
+      if (typeof navigator !== "undefined" && navigator.clipboard) {
+        await navigator.clipboard.writeText(text);
+        setDuelResponseSent(true);
+        play("submit");
+        triggerHaptic("select");
+        setTimeout(() => setDuelResponseSent(false), 2400);
       }
     } catch {
       /* ignore */
@@ -145,6 +188,7 @@ export function ResultScreen() {
     sealIcon: activeSeal.icon,
     sealLabel: activeSeal.label,
     dateStr: isDaily ? today : todayLocal(),
+    kintsugiRestored: Boolean(todayDailyRecord?.graceWaxUsed),
     labels: {
       solved: t.resultSummary.solved,
       closeCall: t.resultSummary.outOfMistakes,
@@ -182,6 +226,7 @@ export function ResultScreen() {
       {duel && (
         <div className="mb-3">
           <DuelVerdictBanner
+            puzzleId={puzzle.id}
             challengerMistakes={duel.challengerMistakes}
             challengerTimeSec={duel.challengerTimeSec}
             playerResult={summary.result}
@@ -278,6 +323,21 @@ export function ResultScreen() {
 
       <div className="mt-3 flex flex-col gap-2">
         <ShareButton text={shareText} card={cardOptions} />
+        {duel && (
+          <button
+            type="button"
+            onClick={handleSendDuelResponse}
+            className="w-full py-2.5 px-4 rounded-xl border border-amber-400/70 bg-amber-500/20 hover:bg-amber-500/30 text-amber-200 text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-sm"
+            data-testid="result-send-duel-response"
+          >
+            <span>{duelResponseSent ? "✓" : "⚔️"}</span>
+            <span>
+              {duelResponseSent
+                ? (lang === "ru" ? "Ответ скопирован!" : lang === "de" ? "Antwort kopiert!" : "Response Copied!")
+                : (lang === "ru" ? "Отправить ответ на дуэль" : lang === "de" ? "Antwort auf Duell senden" : "Send Duel Response")}
+            </span>
+          </button>
+        )}
         <button
           type="button"
           onClick={handleChallenge}

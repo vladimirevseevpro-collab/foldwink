@@ -61,6 +61,7 @@ export interface ShareCardOptions {
   sealIcon?: string;
   sealLabel?: string;
   dateStr?: string;
+  kintsugiRestored?: boolean;
 }
 
 export function isShareCardSupported(): boolean {
@@ -485,6 +486,7 @@ function drawPersonalWaxSeal(
   y: number,
   icon: string,
   label?: string,
+  kintsugi?: boolean,
 ): void {
   ctx.save();
   ctx.translate(x, y);
@@ -523,6 +525,29 @@ function drawPersonalWaxSeal(
   ctx.lineWidth = 1.8;
   ctx.stroke();
 
+  // Kintsugi golden repair vein across the wax seal
+  if (kintsugi) {
+    ctx.save();
+    ctx.strokeStyle = "#d4af37";
+    ctx.lineWidth = 2.4;
+    ctx.lineCap = "round";
+    ctx.lineJoin = "round";
+    ctx.shadowColor = "#e5c158";
+    ctx.shadowBlur = 5;
+    ctx.beginPath();
+    ctx.moveTo(-28, -14);
+    ctx.bezierCurveTo(-10, -4, 4, 3, 26, 20);
+    ctx.stroke();
+
+    // Branch vein
+    ctx.lineWidth = 1.4;
+    ctx.beginPath();
+    ctx.moveTo(4, 3);
+    ctx.bezierCurveTo(12, -7, 20, -11, 28, -9);
+    ctx.stroke();
+    ctx.restore();
+  }
+
   // Center crest icon (e.g. 🦅, 🧭, 🗝️, 🦉, 🌿)
   ctx.font = "26px serif";
   ctx.textAlign = "center";
@@ -531,8 +556,12 @@ function drawPersonalWaxSeal(
 
   // Micro label below
   ctx.font = `800 8px ${FONT_STACK}`;
-  ctx.fillStyle = "#f5d580";
-  ctx.fillText(label ? label.toUpperCase().slice(0, 10) : "ARCHIVIST", 0, 24);
+  ctx.fillStyle = kintsugi ? "#ffd700" : "#f5d580";
+  ctx.fillText(
+    kintsugi ? "KINTSUGI" : label ? label.toUpperCase().slice(0, 10) : "ARCHIVIST",
+    0,
+    24,
+  );
 
   ctx.restore();
 }
@@ -605,7 +634,14 @@ export function drawShareCard(canvas: HTMLCanvasElement, opts: ShareCardOptions)
     drawWordmark(ctx, 380);
 
     if (opts.sealIcon) {
-      drawPersonalWaxSeal(ctx, 140, 168, opts.sealIcon, opts.sealLabel);
+      drawPersonalWaxSeal(
+        ctx,
+        140,
+        168,
+        opts.sealIcon,
+        opts.sealLabel,
+        opts.kintsugiRestored,
+      );
     }
 
     if (opts.supporter) {
@@ -658,7 +694,14 @@ export function drawShareCard(canvas: HTMLCanvasElement, opts: ShareCardOptions)
     drawWordmark(ctx, 260);
 
     if (opts.sealIcon) {
-      drawPersonalWaxSeal(ctx, 140, 100, opts.sealIcon, opts.sealLabel);
+      drawPersonalWaxSeal(
+        ctx,
+        140,
+        100,
+        opts.sealIcon,
+        opts.sealLabel,
+        opts.kintsugiRestored,
+      );
     }
 
     if (opts.supporter) {

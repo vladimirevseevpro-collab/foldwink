@@ -6,7 +6,8 @@ import {
   getXpForLevel,
 } from "../progression/archivistProfile";
 import { STAMP_COLLECTION, SEALS, NIBS, TITLES } from "../progression/stamps";
-import { useLang } from "../i18n/useLanguage";
+import { useLang, useT } from "../i18n/useLanguage";
+import { useGameStore } from "../game/state/appStore";
 import { useSound } from "../audio/useSound";
 import { triggerHaptic } from "../haptics/haptics";
 import { getOrCreatePlayerSeed, setPlayerSeed } from "../puzzles/progression";
@@ -14,6 +15,11 @@ import {
   encodePassportToSeal,
   decodePassportFromSeal,
   drawWaxSealCertificate,
+  saveArchivistBackup,
+  loadArchivistBackup,
+  hasArchivistBackup,
+  clearArchivistBackup,
+  type DecodeResult,
 } from "../progression/waxSealTransfer";
 
 interface ArchivistPassportModalProps {
@@ -25,7 +31,10 @@ export function ArchivistPassportModal({ onClose, onOpenContract }: ArchivistPas
   const [profile, setProfile] = useState(loadArchivistProfile);
   const [activeTab, setActiveTab] = useState<"passport" | "stamps">("passport");
   const [selectedStampId, setSelectedStampId] = useState<string | null>(null);
-  const [subView, setSubView] = useState<"none" | "export" | "import">("none");
+  const [subView, setSubView] = useState<"none" | "export" | "import" | "diff">("none");
+  const [pendingImport, setPendingImport] = useState<DecodeResult | null>(null);
+  const [hasBackup, setHasBackup] = useState(() => hasArchivistBackup());
+  const [rollbackSuccess, setRollbackSuccess] = useState(false);
   const [importInput, setImportInput] = useState("");
   const [copySuccess, setCopySuccess] = useState(false);
   const [importSuccess, setImportSuccess] = useState(false);
@@ -33,6 +42,8 @@ export function ArchivistPassportModal({ onClose, onOpenContract }: ArchivistPas
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const lang = useLang();
+  const t = useT();
+  const stats = useGameStore((s) => s.stats);
   const playSound = useSound();
 
   const rank = getGuildRank(profile.level);
@@ -98,19 +109,50 @@ export function ArchivistPassportModal({ onClose, onOpenContract }: ArchivistPas
       return;
     }
 
-    saveArchivistProfile(res.profile);
-    if (res.playerSeed) {
-      setPlayerSeed(res.playerSeed);
+    // Instead of immediately overwriting, proceed to Diff Preview
+    setPendingImport(res);
+    setSubView("diff");
+    playSound("select");
+    triggerHaptic("select");
+  };
+
+  const handleConfirmReplace = () => {
+    if (!pendingImport || !pendingImport.profile) return;
+    // 1. Save old profile snapshot in localStorage under foldwink_archivist_backup
+    saveArchivistBackup(profile, getOrCreatePlayerSeed());
+    setHasBackup(true);
+
+    // 2. Apply incoming profile
+    saveArchivistProfile(pendingImport.profile);
+    if (pendingImport.playerSeed) {
+      setPlayerSeed(pendingImport.playerSeed);
     }
-    setProfile(res.profile);
+    setProfile(pendingImport.profile);
     setImportSuccess(true);
     playSound("correct");
     triggerHaptic("correct");
     setTimeout(() => {
       setImportSuccess(false);
       setSubView("none");
+      setPendingImport(null);
       setImportInput("");
     }, 1500);
+  };
+
+  const handleUndoRollback = () => {
+    const backup = loadArchivistBackup();
+    if (!backup || !backup.profile) return;
+    saveArchivistProfile(backup.profile);
+    if (backup.playerSeed) {
+      setPlayerSeed(backup.playerSeed);
+    }
+    setProfile(backup.profile);
+    clearArchivistBackup();
+    setHasBackup(false);
+    setRollbackSuccess(true);
+    playSound("submit");
+    triggerHaptic("correct");
+    setTimeout(() => setRollbackSuccess(false), 2500);
   };
 
   const getRankTitle = () => {
@@ -159,12 +201,12 @@ export function ArchivistPassportModal({ onClose, onOpenContract }: ArchivistPas
             <button
               type="button"
               onClick={() => {
-                setSubView("none");
+                setSubView(subView === "diff" ? "import" : "none");
                 setImportError(null);
               }}
               className="text-xs font-bold text-accent hover:underline flex items-center gap-1"
             >
-              ← {lang === "ru" ? "Назад в Паспорт" : lang === "de" ? "Zurück" : "Back to Passport"}
+              ← {subView === "diff" ? (lang === "ru" ? "Назад к коду" : lang === "de" ? "Zurück" : "Back to Input") : (lang === "ru" ? "Назад в Паспорт" : lang === "de" ? "Zurück" : "Back to Passport")}
             </button>
           )}
 
@@ -287,13 +329,130 @@ export function ArchivistPassportModal({ onClose, onOpenContract }: ArchivistPas
                   : "border-line bg-surfaceHi text-muted opacity-50 cursor-not-allowed"
               }`}
             >
-              <span>{importSuccess ? "✓" : "📥"}</span>
+              <span>{importSuccess ? "✓" : "⚖️"}</span>
               <span>
                 {importSuccess
                   ? (lang === "ru" ? "Паспорт Успешно Восстановлен!" : "Passport Restored!")
-                  : (lang === "ru" ? "Применить Печать и Восстановить" : "Apply Seal & Restore")}
+                  : (lang === "ru" ? "Сравнить профили и заменить" : lang === "de" ? "Profile vergleichen & ersetzen" : "Review Diff & Replace")}
               </span>
             </button>
+
+            {hasBackup && (
+              <div className="p-3 rounded-xl border border-amber-500/50 bg-amber-950/30 text-amber-200 text-xs flex items-center justify-between shadow-sm">
+                <div className="flex items-center gap-2">
+                  <span>↩️</span>
+                  <span>{t.passport.undoImport}</span>
+                </div>
+                <button
+                  type="button"
+                  onClick={handleUndoRollback}
+                  className="px-2.5 py-1 rounded-lg bg-amber-500/30 hover:bg-amber-500/50 text-amber-100 font-bold text-[11px] uppercase tracking-wider transition-colors"
+                  data-testid="undo-passport-import-subview"
+                >
+                  {lang === "ru" ? "Вернуть" : lang === "de" ? "Wiederherstellen" : "Undo"}
+                </button>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* SubView: Diff Preview */}
+        {subView === "diff" && pendingImport?.profile && (
+          <div className="space-y-4 text-left animate-in zoom-in-95 duration-150" data-testid="passport-diff-preview">
+            <div className="text-center">
+              <div className="text-xs uppercase tracking-widest font-bold text-amber-400">
+                ⚖️ {t.passport.diffTitle}
+              </div>
+              <p className="text-[11px] text-muted mt-1">
+                {lang === "ru"
+                  ? "Сравните текущий профиль с импортируемым перед заменой."
+                  : lang === "de"
+                    ? "Vergleiche dein aktuelles Profil mit den Importdaten vor dem Speichern."
+                    : "Compare your current profile with incoming data before applying."}
+              </p>
+            </div>
+
+            {/* Comparison Grid */}
+            <div className="rounded-xl border border-line bg-surfaceHi/50 overflow-hidden divide-y divide-line text-xs">
+              <div className="grid grid-cols-3 p-2.5 bg-surface font-bold text-[11px] uppercase tracking-wider text-muted">
+                <div>{lang === "ru" ? "Параметр" : lang === "de" ? "Wert" : "Metric"}</div>
+                <div className="text-center text-text">{t.passport.currentProfile}</div>
+                <div className="text-center text-accent">{t.passport.importedProfile}</div>
+              </div>
+
+              {/* Level */}
+              <div className="grid grid-cols-3 p-2.5 items-center">
+                <div className="font-semibold text-text">{t.passport.statLevel}</div>
+                <div className="text-center text-muted">Lv. {profile.level}</div>
+                <div className={`text-center font-bold ${pendingImport.profile.level >= profile.level ? "text-green-400" : "text-amber-400"}`}>
+                  Lv. {pendingImport.profile.level} {pendingImport.profile.level > profile.level ? `(+${pendingImport.profile.level - profile.level})` : ""}
+                </div>
+              </div>
+
+              {/* XP */}
+              <div className="grid grid-cols-3 p-2.5 items-center">
+                <div className="font-semibold text-text">{t.passport.statXp}</div>
+                <div className="text-center text-muted">{profile.xp}</div>
+                <div className={`text-center font-bold ${pendingImport.profile.xp >= profile.xp ? "text-green-400" : "text-amber-400"}`}>
+                  {pendingImport.profile.xp} {pendingImport.profile.xp > profile.xp ? `(+${pendingImport.profile.xp - profile.xp})` : ""}
+                </div>
+              </div>
+
+              {/* Daily Streak */}
+              <div className="grid grid-cols-3 p-2.5 items-center">
+                <div className="font-semibold text-text">{t.passport.statStreak}</div>
+                <div className="text-center text-muted">{stats.currentStreak} 🔥</div>
+                <div className="text-center font-bold text-accent">
+                  {stats.currentStreak} 🔥
+                </div>
+              </div>
+
+              {/* Ink */}
+              <div className="grid grid-cols-3 p-2.5 items-center">
+                <div className="font-semibold text-text">{t.passport.statInk}</div>
+                <div className="text-center text-muted">💧 {profile.ink}</div>
+                <div className={`text-center font-bold ${pendingImport.profile.ink >= profile.ink ? "text-green-400" : "text-amber-400"}`}>
+                  💧 {pendingImport.profile.ink} {pendingImport.profile.ink > profile.ink ? `(+${pendingImport.profile.ink - profile.ink})` : ""}
+                </div>
+              </div>
+
+              {/* Wax */}
+              <div className="grid grid-cols-3 p-2.5 items-center">
+                <div className="font-semibold text-text">{t.passport.statWax}</div>
+                <div className="text-center text-muted">🕯️ {profile.wax}</div>
+                <div className={`text-center font-bold ${pendingImport.profile.wax >= profile.wax ? "text-green-400" : "text-amber-400"}`}>
+                  🕯️ {pendingImport.profile.wax} {pendingImport.profile.wax > profile.wax ? `(+${pendingImport.profile.wax - profile.wax})` : ""}
+                </div>
+              </div>
+
+              {/* Unlocked Stamps */}
+              <div className="grid grid-cols-3 p-2.5 items-center">
+                <div className="font-semibold text-text">{t.passport.statStamps}</div>
+                <div className="text-center text-muted">💌 {profile.collectedStampIds.length}</div>
+                <div className={`text-center font-bold ${pendingImport.profile.collectedStampIds.length >= profile.collectedStampIds.length ? "text-green-400" : "text-amber-400"}`}>
+                  💌 {pendingImport.profile.collectedStampIds.length}
+                </div>
+              </div>
+            </div>
+
+            <div className="flex gap-2 pt-1">
+              <button
+                type="button"
+                onClick={() => setSubView("import")}
+                className="flex-1 py-2.5 rounded-xl border border-line bg-surface hover:bg-surfaceHi text-muted hover:text-text text-xs font-bold transition-all"
+              >
+                {lang === "ru" ? "Отмена" : lang === "de" ? "Abbrechen" : "Cancel"}
+              </button>
+
+              <button
+                type="button"
+                onClick={handleConfirmReplace}
+                className="flex-1 py-2.5 rounded-xl border border-accent bg-accent hover:opacity-90 text-white text-xs font-bold uppercase tracking-wider transition-all shadow-md"
+                data-testid="confirm-replace-profile"
+              >
+                ✓ {t.passport.replaceConfirm}
+              </button>
+            </div>
           </div>
         )}
 
@@ -430,6 +589,29 @@ export function ArchivistPassportModal({ onClose, onOpenContract }: ArchivistPas
                 <span>{lang === "ru" ? "Импорт Печати" : "Import Seal"}</span>
               </button>
             </div>
+
+            {rollbackSuccess && (
+              <div className="p-2.5 rounded-xl border border-green-500/50 bg-green-950/30 text-green-200 text-xs text-center font-bold animate-in fade-in duration-200">
+                ✓ {t.passport.undoSuccess}
+              </div>
+            )}
+
+            {hasBackup && (
+              <div className="p-2.5 rounded-xl border border-amber-500/40 bg-amber-950/25 text-amber-200 text-xs flex items-center justify-between shadow-sm">
+                <div className="flex items-center gap-1.5">
+                  <span>↩️</span>
+                  <span>{t.passport.undoImport}</span>
+                </div>
+                <button
+                  type="button"
+                  onClick={handleUndoRollback}
+                  className="px-2.5 py-1 rounded-lg bg-amber-500/30 hover:bg-amber-500/50 text-amber-100 font-bold text-[11px] uppercase tracking-wider transition-colors"
+                  data-testid="undo-passport-import-main"
+                >
+                  {lang === "ru" ? "Вернуть" : lang === "de" ? "Wiederherstellen" : "Undo"}
+                </button>
+              </div>
+            )}
 
             {/* Iron Contract CTA */}
             {onOpenContract && (

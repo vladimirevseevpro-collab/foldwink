@@ -39,7 +39,47 @@ export function registerServiceWorker(): void {
     "load",
     () => {
       const base = import.meta.env.BASE_URL;
-      void navigator.serviceWorker.register(base + "sw.js", { scope: base });
+      void navigator.serviceWorker
+        .register(base + "sw.js", { scope: base })
+        .then((registration) => {
+          // If a worker is already waiting, trigger immediate activation
+          if (registration.waiting) {
+            registration.waiting.postMessage({ type: "SKIP_WAITING" });
+          }
+
+          // Detect newly installed service workers and tell them to skip waiting
+          registration.addEventListener("updatefound", () => {
+            const installing = registration.installing;
+            if (!installing) return;
+            installing.addEventListener("statechange", () => {
+              if (
+                installing.state === "installed" &&
+                navigator.serviceWorker.controller
+              ) {
+                installing.postMessage({ type: "SKIP_WAITING" });
+              }
+            });
+          });
+
+          // Check for fresh bundles whenever the user switches back to the tab
+          document.addEventListener("visibilitychange", () => {
+            if (document.visibilityState === "visible") {
+              void registration.update();
+            }
+          });
+        })
+        .catch((err) => {
+          console.warn("[SW] Registration failed:", err);
+        });
+
+      // Reload smoothly when new controller takes over so users don't stay trapped on stale JS
+      let refreshing = false;
+      navigator.serviceWorker.addEventListener("controllerchange", () => {
+        if (!refreshing) {
+          refreshing = true;
+          window.location.reload();
+        }
+      });
     },
     { once: true },
   );

@@ -26,14 +26,18 @@ import type { DailyCellState } from "../stats/dailyRitual";
 
 function stateClass(state: DailyCellState): string {
   if (state === "won") return "border-accent/80 bg-paper text-ink shadow-[0_2px_0_#b5a47e]";
-  if (state === "cracked") return "border-amber-500/80 bg-amber-950/30 text-amber-300 shadow-[0_2px_0_#92400e]";
+  if (state === "restored" || state === "cracked") {
+    return "border-[#d4af37] bg-gradient-to-br from-[#d4af37]/25 via-[#1a1408] to-[#e5c158]/15 text-[#e5c158] shadow-[0_2px_0_#927218] relative overflow-hidden";
+  }
   if (state === "lost") return "border-line bg-surfaceHi text-text";
   return "border-dashed border-line/60 bg-surface/50 text-muted";
 }
 
 function stateAria(strings: Strings, state: DailyCellState): string {
   if (state === "won") return strings.daily.foldSolved;
-  if (state === "cracked") return strings.daily.foldCracked;
+  if (state === "restored" || state === "cracked") {
+    return strings.daily.foldRestored ?? strings.daily.foldCracked;
+  }
   if (state === "lost") return strings.daily.foldMissed;
   return strings.daily.foldEmpty;
 }
@@ -54,6 +58,7 @@ export function DailyFold({ history, today = todayLocal(), className = "" }: Pro
         {cells.map((cell) => {
           const weekday = formatWeekday(lang, cell.date);
           const day = formatDayNumber(lang, cell.date);
+          const isRestored = cell.state === "restored" || cell.state === "cracked";
           return (
             <div
               key={cell.date}
@@ -66,12 +71,35 @@ export function DailyFold({ history, today = todayLocal(), className = "" }: Pro
                 cell.isToday ? `. ${t.daily.todayMarker}` : ""
               }`}
             >
-              <div className="text-[9px] uppercase tracking-[0.14em] opacity-75">{weekday}</div>
-              <div className="mt-0.5 text-sm font-semibold tabular-nums leading-none flex items-center justify-center gap-0.5">
+              {isRestored && (
+                <svg
+                  className="absolute inset-0 w-full h-full pointer-events-none opacity-80"
+                  viewBox="0 0 32 40"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M 2 4 Q 14 18 17 22 T 30 38"
+                    stroke="#d4af37"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M 17 22 Q 23 17 29 14"
+                    stroke="#e5c158"
+                    strokeWidth="1"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              )}
+              <div className="text-[9px] uppercase tracking-[0.14em] opacity-75 relative z-10">{weekday}</div>
+              <div className="mt-0.5 text-sm font-semibold tabular-nums leading-none flex items-center justify-center gap-0.5 relative z-10">
                 <span>{day}</span>
-                {cell.state === "cracked" && <span className="text-[9px] leading-none" title="Grace Wax">🕯️</span>}
+                {isRestored && (
+                  <span className="text-[9px] leading-none" title="Restored Seal (Kintsugi)">✨</span>
+                )}
               </div>
-              <div className="mt-1 h-1.5 flex items-center justify-center">
+              <div className="mt-1 h-1.5 flex items-center justify-center relative z-10">
                 <span
                   className={`inline-block h-1.5 w-1.5 rounded-full align-top ${
                     cell.isToday ? "bg-accent" : "bg-transparent"

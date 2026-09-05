@@ -162,10 +162,10 @@ describe("dailyRitual", () => {
     expect(resWithWax.waxRemaining).toBe(1);
     expect(resWithWax.history["2026-07-21"]?.graceWaxUsed).toBe(true);
 
-    // Seven-day fold marks the grace day as cracked
+    // Seven-day fold marks the grace day as restored (Kintsugi)
     const cells = deriveSevenDayFold(resWithWax.history, today);
-    const crackedCell = cells.find((c) => c.date === "2026-07-21");
-    expect(crackedCell?.state).toBe("cracked");
+    const restoredCell = cells.find((c) => c.date === "2026-07-21");
+    expect(restoredCell?.state).toBe("restored");
 
     // Streak is preserved
     expect(calculateDailyStreak(resWithWax.history, today)).toBe(2);
