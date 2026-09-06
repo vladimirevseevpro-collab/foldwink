@@ -37,6 +37,8 @@ export interface Stats {
   hardWins?: number;
   hardLosses?: number;
   hardLossStreak?: number;
+  zenStreak?: number;
+  bestZenStreak?: number;
 }
 
 export interface DailyRecord {
@@ -60,7 +62,10 @@ export interface StandardProgress {
   mediumCursor?: number;
   /** Hard-mode cursor added in 0.4.3. Defaults to 0. */
   hardCursor?: number;
+  /** Zen-mode sequential cursor for unlimited 500+ archive play. */
+  zenCursor?: number;
 }
+
 
 export const INITIAL_STATS: Stats = {
   gamesPlayed: 0,

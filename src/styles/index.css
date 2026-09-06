@@ -630,3 +630,61 @@ button {
 .fw-grid-glow:hover::before {
   opacity: 1;
 }
+
+/* Origami Fold-Lock Entrance: collapsing inward along horizontal crease and settling into plate */
+@keyframes fw-origami-fold-enter {
+  0% {
+    transform: perspective(800px) rotateX(-65deg) scaleY(0.4) translateY(-10px);
+    opacity: 0.2;
+  }
+  60% {
+    transform: perspective(800px) rotateX(12deg) scaleY(1.05) translateY(2px);
+    opacity: 0.95;
+  }
+  100% {
+    transform: perspective(800px) rotateX(0deg) scaleY(1) translateY(0);
+    opacity: 1;
+  }
+}
+.fw-origami-fold-enter {
+  animation: fw-origami-fold-enter 520ms cubic-bezier(0.34, 1.4, 0.64, 1) both;
+}
+
+/* Near-Miss Tactile Tension Wobble: physical suspense on 3-of-4 cards */
+@keyframes fw-tension-wobble {
+  0%, 100% { transform: translate3d(0, var(--lift, 0px), 0) rotate(0deg); }
+  20% { transform: translate3d(-2px, var(--lift, 0px), 0) rotate(-1.5deg); }
+  40% { transform: translate3d(2.5px, var(--lift, 0px), 0) rotate(1.8deg); }
+  60% { transform: translate3d(-2px, var(--lift, 0px), 0) rotate(-1deg); }
+  80% { transform: translate3d(1.5px, var(--lift, 0px), 0) rotate(1deg); }
+}
+.fw-tension-wobble {
+  animation: fw-tension-wobble 340ms ease-in-out infinite alternate;
+}
+
+/* Chrome Extension Popup (380x560px) & Edge Sidebar ultra-compact responsiveness */
+@media (max-width: 400px), (max-height: 600px) {
+  .fw-safe-pt {
+    padding-top: 0.25rem !important;
+  }
+  .fw-safe-pb {
+    padding-bottom: 0.25rem !important;
+  }
+  .fw-safe-pt-screen {
+    padding-top: 0.5rem !important;
+  }
+  .fw-card {
+    min-height: 48px !important;
+    padding-left: 0.25rem !important;
+    padding-right: 0.25rem !important;
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+  }
+  .fw-origami-plate {
+    min-height: 48px !important;
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+  }
+}
+
+

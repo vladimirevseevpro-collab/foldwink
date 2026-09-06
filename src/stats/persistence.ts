@@ -1,4 +1,5 @@
-import { safeRead, safeWrite } from "../utils/storage";
+import { safeRead, safeWrite, safeRemove } from "../utils/storage";
+
 import {
   INITIAL_STATS,
   type Stats,
@@ -111,8 +112,9 @@ export function clearAllLocalData(): void {
       const key = localStorage.key(i);
       if (key && key.startsWith("foldwink:")) toDelete.push(key);
     }
-    for (const k of toDelete) localStorage.removeItem(k);
+    for (const k of toDelete) safeRemove(k);
   } catch {
     /* ignore — storage unavailable */
   }
 }
+

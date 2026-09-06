@@ -65,7 +65,10 @@ export interface StoreState {
   startMedium: () => void;
   startHard: () => void;
   startDaily: () => void;
+  startZen: () => void;
+  startCustomPuzzle: (puzzle: Puzzle) => void;
   startDuel: (puzzleId: string, challengerMistakes: number, challengerTimeSec: number) => void;
+
   toggleSelection: (value: string) => void;
   clearSelection: () => void;
   reshuffleActive: () => void;
@@ -381,7 +384,61 @@ export function createStore(deps: StoreDeps = defaultDeps) {
       });
     },
 
+    startZen: () => {
+      const progress = get().progress;
+      const pool = deps.getPool ? deps.getPool() : deps.pool;
+      if (pool.length === 0) return;
+      const cursor = (progress.zenCursor ?? 0) % pool.length;
+      const puzzle = pool[cursor] ?? pool[0];
+      if (!puzzle) return;
+      const active = initialActive(puzzle, "zen", String(deps.now()), false, deps.now());
+      set({
+        screen: "game",
+        puzzle,
+        active,
+        summary: null,
+        flash: null,
+        streakDelta: 0,
+        newBest: false,
+        duel: null,
+      });
+      trackEvent({
+        name: "mode_start",
+        props: {
+          surface: "menu",
+          mode: "zen",
+          difficulty: puzzle.difficulty,
+          lang: getLangSync(),
+        },
+      });
+    },
+
+    startCustomPuzzle: (customPuzzle: Puzzle) => {
+      if (!customPuzzle) return;
+      const active = initialActive(customPuzzle, "standard", String(deps.now()), false, deps.now());
+      set({
+        screen: "game",
+        puzzle: customPuzzle,
+        active,
+        summary: null,
+        flash: null,
+        streakDelta: 0,
+        newBest: false,
+        duel: null,
+      });
+      trackEvent({
+        name: "mode_start",
+        props: {
+          surface: "app",
+          mode: "standard",
+          difficulty: customPuzzle.difficulty,
+          lang: getLangSync(),
+        },
+      });
+    },
+
     startDuel: (puzzleId: string, challengerMistakes: number, challengerTimeSec: number) => {
+
       let puzzle = deps.getPuzzleById(puzzleId);
       if (!puzzle && deps.getPool) {
         const fullPool = deps.getPool();
@@ -537,6 +594,13 @@ export function createStore(deps: StoreDeps = defaultDeps) {
             durationMs: summary.durationMs,
           };
         }
+      } else if (active.mode === "zen" && result === "win") {
+        const pool = deps.getPool ? deps.getPool() : deps.pool;
+        const nextZen = ((progress.zenCursor ?? 0) + 1) % Math.max(1, pool.length);
+        nextProgress = { ...progress, zenCursor: nextZen };
+        const curZenStreak = (stats.zenStreak ?? 0) + 1;
+        const bestZen = Math.max(stats.bestZenStreak ?? 0, curZenStreak);
+        nextStats = { ...stats, zenStreak: curZenStreak, bestZenStreak: bestZen };
       }
 
       // Two-phase terminal write: keep the board visible for ~600 ms so the
@@ -604,6 +668,10 @@ export function createStore(deps: StoreDeps = defaultDeps) {
         get().goToMenu();
         return;
       }
+      if (active.mode === "zen") {
+        get().startZen();
+        return;
+      }
       // Preserve difficulty across "next puzzle" in standard flow.
       if (puzzle?.difficulty === "hard") {
         get().startHard();
@@ -615,6 +683,7 @@ export function createStore(deps: StoreDeps = defaultDeps) {
       }
       get().startEasy();
     },
+
 
     clearFlash: () => set({ flash: null }),
 

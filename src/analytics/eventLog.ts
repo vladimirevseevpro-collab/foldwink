@@ -24,7 +24,7 @@ export type AnalyticsSurface =
   | "result"
   | "privacy_prompt"
   | "privacy_dialog";
-export type AnalyticsMode = "daily" | "standard";
+export type AnalyticsMode = "daily" | "standard" | "zen";
 export type AnalyticsDifficulty = "easy" | "medium" | "hard";
 export type AnalyticsOutcome =
   | "correct"

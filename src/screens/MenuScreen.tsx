@@ -34,9 +34,11 @@ export function MenuScreen() {
   const startMedium = useGameStore((s) => s.startMedium);
   const startHard = useGameStore((s) => s.startHard);
   const startDaily = useGameStore((s) => s.startDaily);
+  const startZen = useGameStore((s) => s.startZen);
   const showStats = useGameStore((s) => s.showStats);
   const openHowToPlay = useGameStore((s) => s.openHowToPlay);
   const lang = useLang();
+
   // Subscribe to `lang` so that a language switch re-renders the menu with
   // the matching pool. The bundle itself is read each render via currentBundle().
   void lang;
@@ -204,6 +206,19 @@ export function MenuScreen() {
 
             <Button
               variant="secondary"
+              className="text-xs border-emerald-600/40 text-emerald-300 hover:bg-emerald-950/20"
+              onClick={startZen}
+              data-testid="menu-zen-button"
+            >
+              <span>🧘</span>
+              <span>
+                {lang === "ru" ? "Режим Дзен" : lang === "de" ? "Zen-Modus" : "Zen Streak"}
+                {stats.zenStreak ? ` (${stats.zenStreak})` : ""}
+              </span>
+            </Button>
+
+            <Button
+              variant="secondary"
               className="text-xs border-red-900/40 text-red-300 hover:bg-red-950/20"
               onClick={() => setIsContractOpen(true)}
             >
@@ -220,6 +235,7 @@ export function MenuScreen() {
               <span>{t.palimpsest.menuButton}</span>
             </Button>
           </div>
+
 
           {isPassportOpen && (
             <ArchivistPassportModal

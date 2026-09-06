@@ -61,8 +61,9 @@ const PATTERNS: Record<HapticEvent, number | number[]> = {
   submit: 12,
   correct: [15, 30, 15],
   wrong: 40,
-  oneAway: [14, 30, 14, 30, 20],
+  oneAway: [15, 30, 15],
   wink: 10,
+
   win: [16, 40, 16, 40, 22],
   loss: 30,
   sealBreak: [10, 10, 25],

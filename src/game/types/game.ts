@@ -1,4 +1,4 @@
-export type GameMode = "daily" | "standard";
+export type GameMode = "daily" | "standard" | "zen";
 export type AppScreen = "menu" | "game" | "result" | "stats";
 export type GameResult = "win" | "loss";
 

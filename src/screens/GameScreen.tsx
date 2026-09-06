@@ -6,13 +6,23 @@ import { Card } from "../components/Card";
 import { Button } from "../components/Button";
 import { MistakesDots } from "../components/MistakesDots";
 import { FoldwinkTabs } from "../components/FoldwinkTabs";
+import { OrigamiFoldLockRow } from "../components/OrigamiFoldLockRow";
+import { OrigamiConfetti } from "../components/OrigamiConfetti";
 import { SELECTION_SIZE } from "../game/types/game";
 import { canSubmit } from "../game/engine/submit";
 import { colorIndexForGroup } from "../game/solvedColors";
 import { useSound } from "../audio/useSound";
 import { useHaptics } from "../haptics/useHaptics";
+import {
+  playCardClick,
+  playHarmonicSolve,
+  playErrorThud,
+  playOrigamiFold,
+  playTensionWobble,
+} from "../audio/proceduralSynth";
 import { GameTimer } from "../components/GameTimer";
 import { useT } from "../i18n/useLanguage";
+
 
 export function GameScreen() {
   const active = useGameStore((s) => s.active);
@@ -32,6 +42,10 @@ export function GameScreen() {
   const prevWinkedId = useRef<string | null>(null);
   const [quitArmed, setQuitArmed] = useState(false);
   const quitArmTimer = useRef<number | null>(null);
+
+  const [confettiTrigger, setConfettiTrigger] = useState(0);
+  const [latestSolvedColor, setLatestSolvedColor] = useState(0);
+  const [newlySolvedGroupId, setNewlySolvedGroupId] = useState<string | null>(null);
 
   useEffect(() => {
     return () => {
@@ -90,11 +104,18 @@ export function GameScreen() {
       const solvedCount = active?.solvedGroupIds.length ?? 1;
       const pitchRatios = [1.0, 1.25, 1.5, 2.0];
       const rate = pitchRatios[Math.min(Math.max(0, solvedCount - 1), pitchRatios.length - 1)] ?? 1.0;
+      playHarmonicSolve(Math.min(4, Math.max(1, solvedCount)) as 1 | 2 | 3 | 4);
+      playOrigamiFold();
       play("correct", { playbackRate: rate });
       haptic("correct");
     }
-    if ((flash === "incorrect" || flash === "one-away") && !terminal) {
+    if (flash === "one-away" && !terminal) {
       play("wrong");
+      playTensionWobble();
+      haptic("oneAway");
+    } else if (flash === "incorrect" && !terminal) {
+      play("wrong");
+      playErrorThud();
       haptic("wrong");
     }
     const id = setTimeout(() => clearFlash(), flash === "one-away" ? 1400 : 450);
@@ -122,11 +143,16 @@ export function GameScreen() {
       prevWinkedId.current = null;
       return;
     }
-    if (
-      puzzle.difficulty === "medium" &&
-      active.solvedGroupIds.length > prevSolvedCount.current
-    ) {
-      play("tabReveal");
+    if (active.solvedGroupIds.length > prevSolvedCount.current) {
+      const latestId = active.solvedGroupIds[active.solvedGroupIds.length - 1];
+      if (latestId) {
+        setNewlySolvedGroupId(latestId);
+        setLatestSolvedColor(colorIndexForGroup(puzzle, latestId));
+        setConfettiTrigger((prev) => prev + 1);
+      }
+      if (puzzle.difficulty === "medium") {
+        play("tabReveal");
+      }
     }
     prevSolvedCount.current = active.solvedGroupIds.length;
     if (active.winkedGroupId && active.winkedGroupId !== prevWinkedId.current) {
@@ -135,6 +161,7 @@ export function GameScreen() {
     }
     prevWinkedId.current = active.winkedGroupId;
   }, [active, puzzle, play, haptic]);
+
 
   if (!active || !puzzle) {
     return (
@@ -165,11 +192,12 @@ export function GameScreen() {
     if (solvedItems.has(value)) return;
     const already = selectedSet.has(value);
     if (!already && active.selection.length >= SELECTION_SIZE) return;
-    
-    // Organic pitch variance
+
+    // Organic pitch variance & dry procedural card click
     const basePitch = already ? 0.94 : [1.0, 1.05, 1.1, 1.15][active.selection.length] ?? 1.0;
+    playCardClick(basePitch);
     play(already ? "deselect" : "select", { playbackRate: basePitch * (0.98 + Math.random() * 0.04) });
-    
+
     haptic(already ? "deselect" : "select");
     toggleSelection(value);
   };
@@ -203,7 +231,11 @@ export function GameScreen() {
         title={puzzle.title}
         subtitle={
           `${t.difficulty[puzzle.difficulty].toUpperCase()} · ${
-            active.mode === "daily" ? t.mode.daily : t.mode.standard
+            active.mode === "daily"
+              ? t.mode.daily
+              : active.mode === "zen"
+                ? "ZEN STREAK 🧘"
+                : t.mode.standard
           }` +
           (active.mode === "daily" && !active.countsToStats ? ` · ${t.mode.replay}` : "")
         }
@@ -221,27 +253,48 @@ export function GameScreen() {
         onWink={winkTab}
         gameEnded={!!active.result}
       />
-      <Grid
-        label={t.game.gridAria}
-        shake={flash === "incorrect" || flash === "one-away"}
-      >
-        {active.order.map((value, index) => {
-          const isSolved = solvedItems.has(value);
-          const isSelected = selectedSet.has(value);
-          const state = isSolved ? "solved" : isSelected ? "selected" : "idle";
-          return (
-            <Card
-              key={value}
-              value={value}
-              state={state}
-              dealIndex={index}
-              solvedColorIndex={groupColorByItem.get(value) ?? 0}
-              disabled={isSolved || !!active.result}
-              onClick={() => handleToggle(value)}
-            />
-          );
-        })}
-      </Grid>
+      <div className="relative">
+        <OrigamiConfetti triggerKey={confettiTrigger} colorIndex={latestSolvedColor} />
+        <Grid
+          label={t.game.gridAria}
+          shake={flash === "incorrect" || flash === "one-away"}
+        >
+          {/* Solved groups displayed as compact origami fold-lock horizontal category bars */}
+          {active.solvedGroupIds.map((gId) => {
+            const g = puzzle.groups.find((x) => x.id === gId);
+            if (!g) return null;
+            return (
+              <OrigamiFoldLockRow
+                key={g.id}
+                group={g}
+                colorIndex={colorIndexForGroup(puzzle, g.id)}
+                isNew={g.id === newlySolvedGroupId}
+              />
+            );
+          })}
+
+          {/* Active unsolved cards */}
+          {active.order
+            .filter((val) => !solvedItems.has(val))
+            .map((value, index) => {
+              const isSelected = selectedSet.has(value);
+              const state = isSelected ? "selected" : "idle";
+              return (
+                <Card
+                  key={value}
+                  value={value}
+                  state={state}
+                  dealIndex={index}
+                  isWobbling={flash === "one-away" && isSelected}
+                  wobblePhase={active.selection.indexOf(value)}
+                  disabled={!!active.result}
+                  onClick={() => handleToggle(value)}
+                />
+              );
+            })}
+        </Grid>
+      </div>
+
       <div
         className="mt-2 h-5 flex items-center justify-center text-[11px] uppercase tracking-[0.14em]"
         role="status"

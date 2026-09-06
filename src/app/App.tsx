@@ -13,6 +13,8 @@ import { getFirstTouch } from "../monetization/attribution";
 import { SupporterThankYou } from "../components/SupporterThankYou";
 
 import { prepareSoundPack } from "../audio/sound";
+import { initStorageAdapter } from "../utils/storageAdapter";
+import { extractSharedPuzzleFromLocation } from "../share/urlHashPuzzle";
 
 export function App() {
   const screen = useGameStore((s) => s.screen);
@@ -22,7 +24,9 @@ export function App() {
   const closeHowToPlay = useGameStore((s) => s.closeHowToPlay);
   const startDaily = useGameStore((s) => s.startDaily);
   const startDuel = useGameStore((s) => s.startDuel);
+  const startCustomPuzzle = useGameStore((s) => s.startCustomPuzzle);
   const lang = useLang();
+
   const initialLang = useRef(lang);
 
   const handleOnboardingComplete = (): void => {
@@ -57,6 +61,19 @@ export function App() {
       /* ignore */
     }
   }, [onboarded, completeOnboarding, startDuel]);
+
+  useEffect(() => {
+    void initStorageAdapter();
+    void extractSharedPuzzleFromLocation().then((shared) => {
+      if (shared) {
+        if (!onboarded) {
+          completeOnboarding();
+        }
+        startCustomPuzzle(shared);
+      }
+    });
+  }, [onboarded, completeOnboarding, startCustomPuzzle]);
+
 
   useEffect(() => {
     void prepareSoundPack();
