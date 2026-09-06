@@ -1,4 +1,5 @@
 import { SOUND_EVENTS, getSoundCueUrl, type SoundEvent } from "./cues";
+import { setProceduralMuted, setProceduralVolume } from "./proceduralSynth";
 
 export type { SoundEvent } from "./cues";
 
@@ -87,6 +88,7 @@ export function setSoundMuted(muted: boolean): void {
   const next = { ...loadSettings(), muted };
   cachedSettings = next;
   persistSettings(next);
+  setProceduralMuted(muted);
   if (masterGain) {
     masterGain.gain.value = next.muted ? 0 : next.volume;
   }
@@ -97,6 +99,7 @@ export function setSoundVolume(volume: number): void {
   const next = { ...loadSettings(), volume: clamped };
   cachedSettings = next;
   persistSettings(next);
+  setProceduralVolume(clamped);
   if (masterGain && !next.muted) {
     masterGain.gain.value = clamped;
   }

@@ -235,6 +235,47 @@ describe("Scientific Gauntlet Loop: Oracle Point Mutation Testing", () => {
         fn: (sel, p) => !isOneAway(sel, p),
         oracleKills: (fn) => fn(["a1", "a2", "a3", "b1"], mockPuzzle) !== true,
       },
+      {
+        id: "ONEAWAY_M4_ALLOWS_DUPLICATES",
+        description: "allows duplicate items in selection to count as one-away",
+        fn: (sel, p) => {
+          if (sel.length !== 4) return false;
+          // mutant: does not check selSet.size === 4
+          for (const group of p.groups) {
+            let overlap = 0;
+            for (const item of group.items) {
+              if (sel.includes(item)) overlap += 1;
+            }
+            if (overlap === 3) return true;
+          }
+          return false;
+        },
+        // ["a1", "a1", "a2", "a3"] has 3 overlaps with g1 but has duplicate "a1"
+        oracleKills: (fn) => fn(["a1", "a1", "a2", "a3"], mockPuzzle) !== isOneAway(["a1", "a1", "a2", "a3"], mockPuzzle),
+      },
+    ];
+
+    // G. Zen Streak Invariant Mutants
+    type ZenUpdater = (curStreak: number, bestStreak: number, result: "win" | "loss") => { streak: number; best: number };
+    const zenMutants: Mutant<ZenUpdater>[] = [
+      {
+        id: "ZEN_M1_NO_RESET_ON_LOSS",
+        description: "fails to reset zenStreak to 0 on loss",
+        fn: (cur, best, res) => res === "win" ? { streak: cur + 1, best: Math.max(best, cur + 1) } : { streak: cur, best },
+        oracleKills: (fn) => fn(5, 7, "loss").streak !== 0,
+      },
+      {
+        id: "ZEN_M2_ERASES_BEST_ON_LOSS",
+        description: "erases bestZenStreak on loss",
+        fn: (cur, best, res) => res === "win" ? { streak: cur + 1, best: Math.max(best, cur + 1) } : { streak: 0, best: 0 },
+        oracleKills: (fn) => fn(5, 7, "loss").best !== 7,
+      },
+      {
+        id: "ZEN_M3_NO_INCREMENT_ON_WIN",
+        description: "fails to increment zenStreak on win",
+        fn: (cur, best, res) => res === "win" ? { streak: cur, best } : { streak: 0, best },
+        oracleKills: (fn) => fn(5, 7, "win").streak !== 6,
+      },
     ];
 
     // Execute Mutation Gate
@@ -245,6 +286,7 @@ describe("Scientific Gauntlet Loop: Oracle Point Mutation Testing", () => {
       ...submitMutants,
       ...matchMutants,
       ...oneAwayMutants,
+      ...zenMutants,
     ];
 
     let killedCount = 0;

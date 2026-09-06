@@ -19,6 +19,7 @@ import {
   playErrorThud,
   playOrigamiFold,
   playTensionWobble,
+  playZenBell,
 } from "../audio/proceduralSynth";
 import { GameTimer } from "../components/GameTimer";
 import { useT } from "../i18n/useLanguage";
@@ -133,6 +134,14 @@ export function GameScreen() {
     const key = `${active.puzzleId}:${active.result}`;
     if (terminalResultPlayed.current === key) return;
     terminalResultPlayed.current = key;
+    if (active.result === "win") {
+      // 4-tier Euphonic Victory Chord: Root, Major 3rd, Fifth, Octave (523.25Hz)
+      playHarmonicSolve(4);
+      playOrigamiFold();
+      if (active.mode === "zen") {
+        playZenBell();
+      }
+    }
     play(active.result === "win" ? "win" : "loss");
     haptic(active.result === "win" ? "win" : "loss");
   }, [active, play, haptic]);

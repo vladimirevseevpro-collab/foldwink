@@ -44,8 +44,8 @@ export function OrigamiConfetti({ triggerKey, colorIndex = 0 }: Props) {
     if (!ctx) return;
 
     const rect = canvas.getBoundingClientRect();
-    canvas.width = rect.width;
-    canvas.height = rect.height;
+    canvas.width = rect.width || canvas.clientWidth || 320;
+    canvas.height = rect.height || canvas.clientHeight || 320;
 
     const colors = PALETTE_GROUPS[colorIndex % PALETTE_GROUPS.length];
     const particles: Particle[] = [];

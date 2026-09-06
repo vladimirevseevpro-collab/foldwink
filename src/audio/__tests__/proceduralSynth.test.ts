@@ -12,6 +12,7 @@ import {
   playZenBell,
   disposeProceduralAudio,
 } from "../proceduralSynth";
+import { setSoundMuted } from "../sound";
 
 interface MockAudioParam {
   value: number;
@@ -215,5 +216,19 @@ describe("ProceduralSynth WebAudio Engine", () => {
     (globalThis as unknown as { AudioContext: unknown }).AudioContext = vi.fn(() => nextCtx);
     const reinitialized = getProceduralAudioContext();
     expect(reinitialized).toBe(nextCtx);
+  });
+
+  it("synchronizes procedural synth mute state when setSoundMuted is called", () => {
+    setSoundMuted(true);
+    expect(isProceduralMuted()).toBe(true);
+
+    playCardClick();
+    expect(mockCtx.createdSources.length).toBe(0);
+
+    setSoundMuted(false);
+    expect(isProceduralMuted()).toBe(false);
+
+    playCardClick();
+    expect(mockCtx.createdSources.length).toBe(1);
   });
 });

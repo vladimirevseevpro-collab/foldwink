@@ -20,6 +20,49 @@ interface Props {
   wobblePhase?: number;
 }
 
+// Shared Gyroscope orientation listener across cards with 0-leak cleanup
+let globalGyroTilt = { x: 0, y: 0 };
+const gyroSubscribers = new Set<(tilt: { x: number; y: number }) => void>();
+let gyroListenerAttached = false;
+
+function handleDeviceOrientation(e: DeviceOrientationEvent) {
+  if (e.gamma == null || e.beta == null) return;
+  const clampedGamma = Math.max(-20, Math.min(20, e.gamma));
+  const clampedBeta = Math.max(-20, Math.min(20, e.beta - 45));
+
+  globalGyroTilt = {
+    x: -(clampedBeta / 20) * 5.0,
+    y: (clampedGamma / 20) * 5.0,
+  };
+
+  for (const sub of gyroSubscribers) {
+    sub(globalGyroTilt);
+  }
+}
+
+function subscribeGyro(cb: (tilt: { x: number; y: number }) => void): () => void {
+  gyroSubscribers.add(cb);
+  if (!gyroListenerAttached && typeof window !== "undefined" && typeof window.DeviceOrientationEvent !== "undefined") {
+    try {
+      window.addEventListener("deviceorientation", handleDeviceOrientation, { passive: true });
+      gyroListenerAttached = true;
+    } catch {
+      // Ignore
+    }
+  }
+  return () => {
+    gyroSubscribers.delete(cb);
+    if (gyroSubscribers.size === 0 && gyroListenerAttached && typeof window !== "undefined") {
+      try {
+        window.removeEventListener("deviceorientation", handleDeviceOrientation);
+      } catch {
+        // Ignore
+      }
+      gyroListenerAttached = false;
+    }
+  };
+}
+
 export function Card({
   value,
   state,
@@ -43,6 +86,7 @@ export function Card({
 
   const ref = useRef<HTMLButtonElement>(null);
   const [isPressed, setIsPressed] = useState(false);
+  const isPointerHovered = useRef(false);
 
   // High-performance direct CSS transform parallax with S-curve damping
   const targetTilt = useRef({ x: 0, y: 0 });
@@ -75,6 +119,7 @@ export function Card({
     currentGlare.current.opacity += dgOp * 0.2;
 
     const el = ref.current;
+    el.dataset.tilting = "true";
     el.style.setProperty("--tilt-x", `${currentTilt.current.x.toFixed(2)}deg`);
     el.style.setProperty("--tilt-y", `${currentTilt.current.y.toFixed(2)}deg`);
     el.style.setProperty("--glare-x", `${currentGlare.current.x.toFixed(1)}%`);
@@ -85,7 +130,9 @@ export function Card({
       Math.abs(dx) < 0.05 &&
       Math.abs(dy) < 0.05 &&
       Math.abs(dgOp) < 0.01 &&
-      targetGlare.current.opacity === 0;
+      targetGlare.current.opacity === 0 &&
+      Math.abs(targetTilt.current.x) < 0.05 &&
+      Math.abs(targetTilt.current.y) < 0.05;
 
     if (!settled) {
       rafId.current = requestAnimationFrame(updateFrame);
@@ -94,6 +141,7 @@ export function Card({
       el.style.setProperty("--tilt-x", "0deg");
       el.style.setProperty("--tilt-y", "0deg");
       el.style.setProperty("--glare-opacity", "0");
+      delete el.dataset.tilting;
     }
   }, []);
 
@@ -113,9 +161,21 @@ export function Card({
     };
   }, []);
 
+  // Gyroscope tilt listener for physical mobile hardware
+  useEffect(() => {
+    if (disabled || state === "solved") return;
+    return subscribeGyro((gyro) => {
+      if (!isPointerHovered.current) {
+        targetTilt.current = { x: gyro.x, y: gyro.y };
+        startAnimation();
+      }
+    });
+  }, [disabled, state, startAnimation]);
+
   const handlePointerMove = useCallback(
     (e: React.PointerEvent<HTMLButtonElement>) => {
       if (disabled || state === "solved") return;
+      isPointerHovered.current = true;
       const rect = ref.current?.getBoundingClientRect();
       if (!rect) return;
 
@@ -135,6 +195,7 @@ export function Card({
   );
 
   const handlePointerLeave = useCallback(() => {
+    isPointerHovered.current = false;
     if (state === "solved") return;
     targetTilt.current = { x: 0, y: 0 };
     targetGlare.current = { x: 50, y: 50, opacity: 0 };

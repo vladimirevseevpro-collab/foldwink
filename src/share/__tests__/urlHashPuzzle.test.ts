@@ -80,4 +80,27 @@ describe("urlHashPuzzle", () => {
     };
     expect(validateAndBuildSharedPuzzle(duplicateItem)).toBeNull();
   });
+
+  it("handles Unicode characters and percent-encoded tokens in URL hash", async () => {
+    const unicodePuzzle: Puzzle = {
+      id: "unicode-ru",
+      title: "Русские Слова",
+      difficulty: "medium",
+      groups: [
+        { id: "g1", label: "Деревья", items: ["Берёза", "Дуб", "Сосна", "Клён"] },
+        { id: "g2", label: "Ягоды", items: ["Малина", "Клубника", "Черника", "Земляника"] },
+        { id: "g3", label: "Цвета", items: ["Красный", "Синий", "Зелёный", "Жёлтый"] },
+        { id: "g4", label: "Птицы", items: ["Соловей", "Воробей", "Синица", "Дятел"] },
+      ],
+    };
+
+    const hash = await encodePuzzleToHash(unicodePuzzle);
+    // Simulate URI encoding by third-party messengers
+    const encodedHash = encodeURIComponent(hash);
+    const decoded = await decodePuzzleFromHash(encodedHash);
+
+    expect(decoded).not.toBeNull();
+    expect(decoded?.title).toBe("Русские Слова");
+    expect(decoded?.groups[0].items).toEqual(["Берёза", "Дуб", "Сосна", "Клён"]);
+  });
 });

@@ -13,6 +13,7 @@ import { getFirstTouch } from "../monetization/attribution";
 import { SupporterThankYou } from "../components/SupporterThankYou";
 
 import { prepareSoundPack } from "../audio/sound";
+import { disposeProceduralAudio } from "../audio/proceduralSynth";
 import { initStorageAdapter } from "../utils/storageAdapter";
 import { extractSharedPuzzleFromLocation } from "../share/urlHashPuzzle";
 
@@ -28,6 +29,14 @@ export function App() {
   const lang = useLang();
 
   const initialLang = useRef(lang);
+  const customPuzzleLoaded = useRef(false);
+
+  // Liveness Invariant: 100% cleanup of procedural AudioContext upon App unmount
+  useEffect(() => {
+    return () => {
+      disposeProceduralAudio();
+    };
+  }, []);
 
   const handleOnboardingComplete = (): void => {
     completeOnboarding();
@@ -64,12 +73,38 @@ export function App() {
 
   useEffect(() => {
     void initStorageAdapter();
+    if (customPuzzleLoaded.current) return;
     void extractSharedPuzzleFromLocation().then((shared) => {
-      if (shared) {
+      if (shared && !customPuzzleLoaded.current) {
+        customPuzzleLoaded.current = true;
         if (!onboarded) {
           completeOnboarding();
         }
         startCustomPuzzle(shared);
+
+        // Seamless URL cleanup: remove hash/query so the puzzle does not re-trigger on reload/navigation
+        try {
+          if (typeof window !== "undefined") {
+            if (window.location.hash && window.location.hash.includes("p=")) {
+              window.history.replaceState(
+                {},
+                "",
+                window.location.pathname + window.location.search,
+              );
+            } else if (window.location.search && window.location.search.includes("p=")) {
+              const params = new URLSearchParams(window.location.search);
+              params.delete("p");
+              const remaining = params.toString();
+              window.history.replaceState(
+                {},
+                "",
+                remaining ? `${window.location.pathname}?${remaining}` : window.location.pathname,
+              );
+            }
+          }
+        } catch {
+          // Ignore history manipulation failure
+        }
       }
     });
   }, [onboarded, completeOnboarding, startCustomPuzzle]);

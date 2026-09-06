@@ -87,16 +87,26 @@ export function safeRead<T>(key: string, fallback: T): T {
     try {
       const raw = s.getItem(key);
       if (raw != null) {
-        const parsed = JSON.parse(raw) as T;
-        memoryCache.set(key, parsed);
-        return parsed;
+        try {
+          const parsed = JSON.parse(raw) as T;
+          memoryCache.set(key, parsed);
+          return parsed;
+        } catch {
+          // If fallback is string, tolerate raw unquoted string in storage
+          if (typeof fallback === "string") {
+            memoryCache.set(key, raw);
+            return raw as unknown as T;
+          }
+          memoryCache.delete(key);
+          return fallback;
+        }
       }
       if (!isChromeStorageAvailable()) {
         memoryCache.delete(key);
         return fallback;
       }
     } catch {
-      // JSON parse error or access denied
+      // Access denied
     }
   }
 
@@ -226,7 +236,7 @@ export async function initStorageAdapter(): Promise<void> {
       }
     });
 
-    if (all) {
+    if (all && Object.keys(all).length > 0) {
       const s = getLocalStorage();
       for (const [k, v] of Object.entries(all)) {
         if (k.startsWith("foldwink:")) {
@@ -238,6 +248,30 @@ export async function initStorageAdapter(): Promise<void> {
               // Ignore
             }
           }
+        }
+      }
+    } else {
+      // Fallback: sync from localStorage into chrome.storage.local if extension storage is empty
+      const s = getLocalStorage();
+      if (s) {
+        const exportPayload: Record<string, unknown> = {};
+        for (let i = 0; i < s.length; i++) {
+          const k = s.key(i);
+          if (k && k.startsWith("foldwink:")) {
+            try {
+              const raw = s.getItem(k);
+              if (raw != null) {
+                const val = JSON.parse(raw);
+                memoryCache.set(k, val);
+                exportPayload[k] = val;
+              }
+            } catch {
+              // Ignore
+            }
+          }
+        }
+        if (Object.keys(exportPayload).length > 0) {
+          void cs.set(exportPayload);
         }
       }
     }

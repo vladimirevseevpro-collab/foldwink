@@ -17,10 +17,27 @@ export interface ProceduralSynthConfig {
   muted?: boolean;
 }
 
+function getInitialConfig(): ProceduralSynthConfig {
+  if (typeof window === "undefined") return { volume: 0.75, muted: false };
+  try {
+    const raw = localStorage.getItem("foldwink:sound");
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      return {
+        volume: typeof parsed.volume === "number" ? Math.max(0, Math.min(1, parsed.volume)) : 0.75,
+        muted: Boolean(parsed.muted),
+      };
+    }
+  } catch {
+    // Ignore storage errors
+  }
+  return { volume: 0.75, muted: false };
+}
+
 let audioCtx: AudioContext | null = null;
 let masterGain: GainNode | null = null;
 let noiseBuffer: AudioBuffer | null = null;
-let config: ProceduralSynthConfig = { volume: 0.75, muted: false };
+let config: ProceduralSynthConfig = getInitialConfig();
 
 function isAudioSupported(): boolean {
   if (typeof window === "undefined" && typeof globalThis === "undefined") return false;

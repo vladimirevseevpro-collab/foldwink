@@ -190,8 +190,18 @@ export async function decodePuzzleFromHash(hashOrQuery: string): Promise<Puzzle 
     if (raw.startsWith("#")) raw = raw.slice(1);
     if (raw.startsWith("?")) raw = raw.slice(1);
 
+    try {
+      raw = decodeURIComponent(raw);
+    } catch {
+      // ignore URI decode error
+    }
+
     const match = raw.match(/(?:^|&)p=([^&]+)/);
-    const token = match ? match[1] : raw;
+    let token = match ? match[1] : raw;
+    if (token.startsWith("p=")) {
+      token = token.slice(2);
+    }
+    token = token.trim();
     if (!token) return null;
 
     const bytes = fromBase64Url(token);

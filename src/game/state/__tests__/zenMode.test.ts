@@ -94,4 +94,29 @@ describe("Zen Streak Mode & Custom Puzzle", () => {
     expect(store.getState().puzzle?.id).toBe("custom-shared-99");
     expect(store.getState().active?.countsToStats).toBe(false);
   });
+
+  it("resets zenStreak on loss while preserving bestZenStreak", () => {
+    const pool = [mkPuzzle("zen-1"), mkPuzzle("zen-2")];
+    const store = createStore(
+      makeDeps(pool, {
+        initialStats: { ...INITIAL_STATS, zenStreak: 4, bestZenStreak: 7 },
+      }),
+    );
+
+    store.getState().startZen();
+    expect(store.getState().stats.zenStreak).toBe(4);
+
+    // Consume 4 mistakes on zen-1
+    for (let i = 0; i < 4; i++) {
+      store.getState().toggleSelection("zen-1-a");
+      store.getState().toggleSelection("zen-1-b");
+      store.getState().toggleSelection("zen-1-e");
+      store.getState().toggleSelection("zen-1-i");
+      store.getState().submit();
+    }
+
+    expect(store.getState().active?.result).toBe("loss");
+    expect(store.getState().stats.zenStreak).toBe(0);
+    expect(store.getState().stats.bestZenStreak).toBe(7);
+  });
 });

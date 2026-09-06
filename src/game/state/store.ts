@@ -594,13 +594,22 @@ export function createStore(deps: StoreDeps = defaultDeps) {
             durationMs: summary.durationMs,
           };
         }
-      } else if (active.mode === "zen" && result === "win") {
-        const pool = deps.getPool ? deps.getPool() : deps.pool;
-        const nextZen = ((progress.zenCursor ?? 0) + 1) % Math.max(1, pool.length);
-        nextProgress = { ...progress, zenCursor: nextZen };
-        const curZenStreak = (stats.zenStreak ?? 0) + 1;
-        const bestZen = Math.max(stats.bestZenStreak ?? 0, curZenStreak);
-        nextStats = { ...stats, zenStreak: curZenStreak, bestZenStreak: bestZen };
+      } else if (active.mode === "zen") {
+        if (result === "win") {
+          const pool = deps.getPool ? deps.getPool() : deps.pool;
+          const nextZen = ((progress.zenCursor ?? 0) + 1) % Math.max(1, pool.length);
+          nextProgress = { ...progress, zenCursor: nextZen };
+          const curZenStreak = (stats.zenStreak ?? 0) + 1;
+          const bestZen = Math.max(stats.bestZenStreak ?? 0, curZenStreak);
+          nextStats = { ...stats, zenStreak: curZenStreak, bestZenStreak: bestZen };
+          streakDelta = 1;
+          newBest = curZenStreak > (stats.bestZenStreak ?? 0);
+        } else {
+          // On loss, current Zen streak resets to 0 while best streak is preserved
+          nextStats = { ...stats, zenStreak: 0 };
+          streakDelta = -(stats.zenStreak ?? 0);
+          newBest = false;
+        }
       }
 
       // Two-phase terminal write: keep the board visible for ~600 ms so the

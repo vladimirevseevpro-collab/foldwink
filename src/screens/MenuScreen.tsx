@@ -28,6 +28,7 @@ import { InstallFoldwink } from "../components/InstallFoldwink";
 import { ArchivistPassportModal } from "../components/ArchivistPassportModal";
 import { IronContractModal } from "../components/IronContractModal";
 import { PalimpsestModal } from "../components/PalimpsestModal";
+import { playZenBell } from "../audio/proceduralSynth";
 
 export function MenuScreen() {
   const startEasy = useGameStore((s) => s.startEasy);
@@ -207,7 +208,10 @@ export function MenuScreen() {
             <Button
               variant="secondary"
               className="text-xs border-emerald-600/40 text-emerald-300 hover:bg-emerald-950/20"
-              onClick={startZen}
+              onClick={() => {
+                playZenBell();
+                startZen();
+              }}
               data-testid="menu-zen-button"
             >
               <span>🧘</span>

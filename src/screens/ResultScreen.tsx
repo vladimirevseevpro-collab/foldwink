@@ -28,6 +28,7 @@ import { isSupporter } from "../monetization/supporter";
 import { loadDailyHistory } from "../stats/persistence";
 import { derivePersonalMoment, mergeDailyHistory, addLocalDays } from "../stats/dailyRitual";
 import { formatDuration, computePlayerArchetype } from "../game/engine/result";
+import { createShareUrl } from "../share/urlHashPuzzle";
 
 // Deterministic picker: same puzzle id → same copy every replay, so we
 // rotate without introducing variable-reward feel. Empty array safe-guard.
@@ -57,6 +58,7 @@ export function ResultScreen() {
   const focusRef = useRef<HTMLDivElement>(null);
   const [challengeCopied, setChallengeCopied] = useState(false);
   const [duelResponseSent, setDuelResponseSent] = useState(false);
+  const [puzzleUrlCopied, setPuzzleUrlCopied] = useState(false);
   const [unboxingRewards, setUnboxingRewards] = useState<SolveRewards | null>(() => {
     if (!summary || !puzzle || summary.result !== "win") return null;
     const profile = loadArchivistProfile();
@@ -72,6 +74,22 @@ export function ResultScreen() {
   useEffect(() => {
     focusRef.current?.focus();
   }, []);
+
+  const handleSharePuzzleUrl = async () => {
+    if (!puzzle) return;
+    try {
+      const url = await createShareUrl(puzzle);
+      if (typeof navigator !== "undefined" && navigator.clipboard) {
+        await navigator.clipboard.writeText(url);
+        setPuzzleUrlCopied(true);
+        play("submit");
+        triggerHaptic("select");
+        setTimeout(() => setPuzzleUrlCopied(false), 2200);
+      }
+    } catch {
+      /* ignore */
+    }
+  };
 
   const handleChallenge = async () => {
     if (!puzzle || !summary) return;
@@ -147,6 +165,7 @@ export function ResultScreen() {
   }
 
   const isDaily = active?.mode === "daily";
+  const isZen = active?.mode === "zen";
   const today = todayLocal();
   const isWin = summary.result === "win";
   const grade = gradeResult(summary, puzzle, active);
@@ -160,7 +179,9 @@ export function ResultScreen() {
 
   const subtitle = isDaily
     ? t.result.subtitleDaily(today)
-    : t.result.subtitleStandard(Math.max(1, progress.cursor));
+    : isZen
+      ? `${lang === "ru" ? "Серия Дзен" : lang === "de" ? "Zen-Serie" : "Zen Streak"}: ${stats.zenStreak ?? 0}`
+      : t.result.subtitleStandard(Math.max(1, progress.cursor));
   const mergedDailyHistory = mergeDailyHistory(loadDailyHistory(), todayDailyRecord);
   const dailyMoment = isDaily ? derivePersonalMoment(mergedDailyHistory, today) : null;
 
@@ -240,7 +261,7 @@ export function ResultScreen() {
         </div>
       )}
 
-      <ResultSummary summary={summary} puzzle={puzzle} currentStreak={stats.currentStreak} />
+      <ResultSummary summary={summary} puzzle={puzzle} currentStreak={isZen ? (stats.zenStreak ?? 0) : stats.currentStreak} />
 
       {isWin && (
         <div
@@ -348,6 +369,19 @@ export function ResultScreen() {
           <span>{challengeCopied ? "✓" : "⚔️"}</span>
           <span>
             {challengeCopied ? t.duel.challengeCopied : t.duel.challengeFriend}
+          </span>
+        </button>
+        <button
+          type="button"
+          onClick={handleSharePuzzleUrl}
+          className="w-full py-2.5 px-4 rounded-xl border border-emerald-500/50 bg-emerald-950/20 hover:bg-emerald-950/40 text-emerald-200 text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-sm"
+          data-testid="result-share-puzzle-url-button"
+        >
+          <span>{puzzleUrlCopied ? "✓" : "🔗"}</span>
+          <span>
+            {puzzleUrlCopied
+              ? (lang === "ru" ? "Ссылка на пазл скопирована!" : lang === "de" ? "Rätsel-Link kopiert!" : "Puzzle Link Copied!")
+              : (lang === "ru" ? "Поделиться ссылкой на пазл" : lang === "de" ? "Rätsel-Link teilen" : "Share Puzzle Link")}
           </span>
         </button>
       </div>

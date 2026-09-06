@@ -182,6 +182,15 @@ body::after {
     color 150ms ease-out;
 }
 
+.fw-card[data-tilting="true"] {
+  /* Direct 60 FPS transform control via rAF S-curve physics without CSS lag */
+  transition:
+    box-shadow 150ms var(--fw-ease-lift),
+    background-color 150ms ease-out,
+    border-color 150ms ease-out,
+    color 150ms ease-out !important;
+}
+
 @media (hover: hover) {
   .fw-card:not([data-state="solved"]):not(:disabled):hover {
     --lift: -2px;
@@ -602,7 +611,9 @@ button {
   .fw-dot-pop,
   .fw-spin,
   .fw-wink-letter,
-  .fw-brand-arrive {
+  .fw-brand-arrive,
+  .fw-origami-fold-enter,
+  .fw-tension-wobble {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
@@ -674,6 +685,7 @@ button {
     padding-top: 0.5rem !important;
   }
   .fw-card {
+    height: 52px !important;
     min-height: 48px !important;
     padding-left: 0.25rem !important;
     padding-right: 0.25rem !important;
@@ -681,6 +693,7 @@ button {
     padding-bottom: 0.25rem !important;
   }
   .fw-origami-plate {
+    height: 52px !important;
     min-height: 48px !important;
     padding-top: 0.25rem !important;
     padding-bottom: 0.25rem !important;
