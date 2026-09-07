@@ -15,4 +15,6 @@ logs/**
 audio/**
 public/audio/**
 test/**
+tests/**
+scripts/**
 
