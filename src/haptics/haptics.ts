@@ -144,8 +144,8 @@ export function triggerHaptic(event: HapticEvent): void {
     typeof performance !== "undefined" && typeof performance.now === "function"
       ? performance.now()
       : Date.now();
-  const last = lastFiredAt[event] ?? 0;
-  if (now - last < MIN_GAP_MS[event]) return;
+  const last = lastFiredAt[event];
+  if (last !== undefined && now - last < MIN_GAP_MS[event]) return;
   lastFiredAt[event] = now;
 
   try {
