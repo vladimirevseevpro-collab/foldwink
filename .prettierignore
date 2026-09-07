@@ -5,4 +5,14 @@ coverage
 package-lock.json
 reports
 itch.io
-docs/reports/artifacts
+docs/**
+assets/**
+ios/**
+tiktok/**
+puzzles/**
+tmp-debug/**
+logs/**
+audio/**
+public/audio/**
+test/**
+

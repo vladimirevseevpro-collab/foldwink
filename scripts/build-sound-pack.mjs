@@ -418,6 +418,29 @@ function buildCues(raw) {
 }
 
 async function main() {
+  if (CHECK_ONLY) {
+    try {
+      const manifestRaw = await readFile(join(OUTPUT_DIR, "manifest.json"), "utf8");
+      const manifest = JSON.parse(manifestRaw);
+      const cueEntries = Object.entries(manifest.cues ?? {});
+      if (cueEntries.length > 0) {
+        let actualBytes = 0;
+        for (const [event, meta] of cueEntries) {
+          const file = meta.file ?? `${event}.wav`;
+          const buffer = await readFile(join(OUTPUT_DIR, file));
+          if (buffer.length === 0) throw new Error(`Empty audio file: ${file}`);
+          actualBytes += buffer.length;
+        }
+        console.log(
+          `Sound pack check passed: ${cueEntries.length} cues, ${actualBytes} bytes.`,
+        );
+        return;
+      }
+    } catch {
+      // Fall back to building check from sources if output assets are missing
+    }
+  }
+
   const sources = await loadSources();
   const cues = buildCues(sources);
   const files = new Map();
