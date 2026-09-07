@@ -2,11 +2,15 @@ import type { ActiveGame } from "../types/game";
 import type { Puzzle } from "../types/puzzle";
 import { MAX_MISTAKES } from "../types/game";
 
-export function applyCorrectGroup(game: ActiveGame, groupId: string, groupItems: readonly string[] = []): ActiveGame {
+export function applyCorrectGroup(
+  game: ActiveGame,
+  groupId: string,
+  groupItems: readonly string[] = [],
+): ActiveGame {
   if (game.solvedGroupIds.includes(groupId)) return game;
-  const newOrder = game.order.filter(item => !groupItems.includes(item));
+  const newOrder = game.order.filter((item) => !groupItems.includes(item));
   const insertIndex = game.solvedGroupIds.length * 4;
-  newOrder.splice(insertIndex, 0, ...game.order.filter(item => groupItems.includes(item)));
+  newOrder.splice(insertIndex, 0, ...game.order.filter((item) => groupItems.includes(item)));
   return {
     ...game,
     solvedGroupIds: [...game.solvedGroupIds, groupId],

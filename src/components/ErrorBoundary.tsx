@@ -28,9 +28,7 @@ export class ErrorBoundary extends React.Component<Props, State> {
       return (
         <div className="min-h-full w-full flex justify-center">
           <main className="w-full max-w-md px-4 py-10 text-center">
-            <div className="text-[10px] uppercase text-muted mb-2">
-              Something broke
-            </div>
+            <div className="text-[10px] uppercase text-muted mb-2">Something broke</div>
             <h1 className="text-2xl font-bold mb-3">Foldwink stumbled</h1>
             <p className="text-sm text-muted mb-6">
               An unexpected error stopped the game. Reloading usually fixes it. Your stats are

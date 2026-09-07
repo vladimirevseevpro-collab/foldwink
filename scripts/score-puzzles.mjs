@@ -109,10 +109,8 @@ function itemRarityScore(groups, lang) {
 
 function scorePuzzle(puzzle, lang) {
   const abstraction =
-    puzzle.groups.reduce(
-      (s, g) => s + labelAbstractionScore(g.label, puzzle.meta),
-      0,
-    ) / puzzle.groups.length;
+    puzzle.groups.reduce((s, g) => s + labelAbstractionScore(g.label, puzzle.meta), 0) /
+    puzzle.groups.length;
   const overlap = crossGroupOverlapScore(puzzle.groups);
   const rarity = itemRarityScore(puzzle.groups, lang);
   const total = Math.round(abstraction + overlap + rarity);
@@ -176,9 +174,7 @@ if (targets.length === 0) {
 console.log(DRY ? "[dry-run]" : "[write mode]");
 for (const pool of targets) {
   const { lang, files, updated, perTier } = processPool(pool);
-  console.log(
-    `\n[${lang}] scanned ${files} puzzles, wrote ${updated} updates.`,
-  );
+  console.log(`\n[${lang}] scanned ${files} puzzles, wrote ${updated} updates.`);
   for (const tier of ["easy", "medium", "hard"]) {
     const list = perTier[tier];
     if (list.length === 0) continue;
@@ -187,9 +183,9 @@ for (const pool of targets) {
     const median = list[Math.floor(list.length / 2)];
     console.log(
       `  ${tier.padEnd(6)} n=${String(list.length).padStart(3)} ` +
-      `min=${min.score} (${min.id}) ` +
-      `median=${median.score} ` +
-      `max=${max.score} (${max.id})`,
+        `min=${min.score} (${min.id}) ` +
+        `median=${median.score} ` +
+        `max=${max.score} (${max.id})`,
     );
   }
 }

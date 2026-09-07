@@ -911,9 +911,11 @@ export const strings: Record<Lang, Strings> = {
         "Die Oberfläche ist entschlüsselt. Auf der Rückseite zeigt sich eine orthogonale Struktur.",
       flipButton: "Pergament wenden ↷",
       completedTitle: "Palimpsest vollendet",
-      completedDetail: "Beide orthogonalen Schichten des alten Pergaments wurden entschlüsselt.",
+      completedDetail:
+        "Beide orthogonalen Schichten des alten Pergaments wurden entschlüsselt.",
       doubleSealBadge: "Doppeltes Archiv-Siegel",
-      archivalReward: "Belohnung: +50 XP · 🕯️ +3 Wachs · 💧 +2 Tinte · Palimpsest-Marke freigeschaltet",
+      archivalReward:
+        "Belohnung: +50 XP · 🕯️ +3 Wachs · 💧 +2 Tinte · Palimpsest-Marke freigeschaltet",
       rulesHint:
         "Löse beide Ebenen derselben 16 Wörter. Erst nach Bedeutung, dann nach verborgener Struktur.",
       backToMenu: "Zurück zum Archiv",

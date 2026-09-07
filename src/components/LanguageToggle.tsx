@@ -43,7 +43,9 @@ export function LanguageToggle() {
           className={[
             "px-2.5 py-1 text-[11px] leading-none transition-colors",
             i > 0 ? "border-l border-line" : "",
-            lang === code ? "text-text bg-line" : "text-muted hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface rounded-sm",
+            lang === code
+              ? "text-text bg-line"
+              : "text-muted hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface rounded-sm",
             loading === code ? "text-accent" : "",
           ]
             .filter(Boolean)

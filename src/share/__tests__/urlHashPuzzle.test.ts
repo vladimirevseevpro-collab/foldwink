@@ -12,10 +12,23 @@ const samplePuzzle: Puzzle = {
   title: "Coffee & Pastries",
   difficulty: "medium",
   groups: [
-    { id: "g1", label: "Espresso Drinks", items: ["Latte", "Cappuccino", "Macchiato", "Americano"], revealHint: "COFFEE" },
-    { id: "g2", label: "French Pastries", items: ["Croissant", "Éclair", "Macaron", "Brioche"] },
+    {
+      id: "g1",
+      label: "Espresso Drinks",
+      items: ["Latte", "Cappuccino", "Macchiato", "Americano"],
+      revealHint: "COFFEE",
+    },
+    {
+      id: "g2",
+      label: "French Pastries",
+      items: ["Croissant", "Éclair", "Macaron", "Brioche"],
+    },
     { id: "g3", label: "Syrup Flavors", items: ["Vanilla", "Caramel", "Hazelnut", "Lavender"] },
-    { id: "g4", label: "Barista Tools", items: ["Tamper", "Portafilter", "Pitcher", "Knockbox"] },
+    {
+      id: "g4",
+      label: "Barista Tools",
+      items: ["Tamper", "Portafilter", "Pitcher", "Knockbox"],
+    },
   ],
 };
 

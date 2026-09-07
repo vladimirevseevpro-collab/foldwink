@@ -245,7 +245,10 @@ console.log(`Split into ${batches.length} batches of ≤${BATCH_SIZE}`);
 
 for (let i = 0; i < batches.length; i++) {
   const batch = batches[i];
-  const outFile = join(OUT_DIR, `${TYPE}-${ONLY_LANG ?? "all"}-b${String(i + 1).padStart(2, "0")}.json`);
+  const outFile = join(
+    OUT_DIR,
+    `${TYPE}-${ONLY_LANG ?? "all"}-b${String(i + 1).padStart(2, "0")}.json`,
+  );
   if (existsSync(outFile) && !ARGS.get("force")) {
     console.log(`batch ${i + 1}/${batches.length}: skip (exists)`);
     allDecisions.push(...JSON.parse(readFileSync(outFile, "utf8")).decisions);
@@ -289,7 +292,10 @@ for (let i = 0; i < batches.length; i++) {
   }
   const elapsed = Math.round((Date.now() - t0) / 1000);
   console.log(`  OK in ${elapsed}s — ${(payload.decisions ?? []).length} decisions`);
-  writeFileSync(outFile, JSON.stringify({ batchIndex: i, decisions: payload.decisions }, null, 2));
+  writeFileSync(
+    outFile,
+    JSON.stringify({ batchIndex: i, decisions: payload.decisions }, null, 2),
+  );
   allDecisions.push(...(payload.decisions ?? []));
 }
 

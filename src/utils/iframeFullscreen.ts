@@ -41,8 +41,7 @@ export function setupAutoFullscreen(): void {
   if (!inIframe) return;
 
   const coarse =
-    typeof window.matchMedia === "function" &&
-    window.matchMedia("(pointer: coarse)").matches;
+    typeof window.matchMedia === "function" && window.matchMedia("(pointer: coarse)").matches;
   if (!coarse) return;
 
   const requestFullscreen = () => {

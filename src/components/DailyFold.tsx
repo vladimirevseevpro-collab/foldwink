@@ -92,11 +92,15 @@ export function DailyFold({ history, today = todayLocal(), className = "" }: Pro
                   />
                 </svg>
               )}
-              <div className="text-[9px] uppercase tracking-[0.14em] opacity-75 relative z-10">{weekday}</div>
+              <div className="text-[9px] uppercase tracking-[0.14em] opacity-75 relative z-10">
+                {weekday}
+              </div>
               <div className="mt-0.5 text-sm font-semibold tabular-nums leading-none flex items-center justify-center gap-0.5 relative z-10">
                 <span>{day}</span>
                 {isRestored && (
-                  <span className="text-[9px] leading-none" title="Restored Seal (Kintsugi)">✨</span>
+                  <span className="text-[9px] leading-none" title="Restored Seal (Kintsugi)">
+                    ✨
+                  </span>
                 )}
               </div>
               <div className="mt-1 h-1.5 flex items-center justify-center relative z-10">

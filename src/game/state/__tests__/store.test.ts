@@ -552,4 +552,3 @@ describe("store — duel mode", () => {
     expect(store.getState().duel).toBeNull();
   });
 });
-

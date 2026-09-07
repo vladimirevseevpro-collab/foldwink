@@ -60,12 +60,22 @@ describe("Palimpsest Dual-Layer Engine", () => {
   it("matches groups correctly regardless of selection order", () => {
     const layer = PALIMPSEST_EN.obverse;
     const targetGroup = layer.groups[0];
-    const scrambled = [targetGroup.items[2], targetGroup.items[0], targetGroup.items[3], targetGroup.items[1]];
+    const scrambled = [
+      targetGroup.items[2],
+      targetGroup.items[0],
+      targetGroup.items[3],
+      targetGroup.items[1],
+    ];
 
     const matched = findMatchingPalimpsestGroup(scrambled, layer);
     expect(matched?.id).toBe(targetGroup.id);
 
-    const invalid = [targetGroup.items[0], targetGroup.items[1], targetGroup.items[2], "UNKNOWN"];
+    const invalid = [
+      targetGroup.items[0],
+      targetGroup.items[1],
+      targetGroup.items[2],
+      "UNKNOWN",
+    ];
     expect(findMatchingPalimpsestGroup(invalid, layer)).toBeNull();
   });
 

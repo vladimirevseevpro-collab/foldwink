@@ -15,7 +15,15 @@ export function WinkSparkles() {
     const isReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (isReduced) return;
 
-    const particles: { x: number; y: number; vx: number; vy: number; life: number; color: string; size: number }[] = [];
+    const particles: {
+      x: number;
+      y: number;
+      vx: number;
+      vy: number;
+      life: number;
+      color: string;
+      size: number;
+    }[] = [];
     const colors = ["#d4af37", "#ffdf00", "#fff8e7"];
 
     for (let i = 0; i < 30; i++) {

@@ -70,7 +70,10 @@ export function attributionRef(): string | null {
   );
   if (parts.length === 0) return null;
   // keep it short and URL-safe; providers show this verbatim
-  return parts.join(".").replace(/[^\w.-]+/g, "_").slice(0, 64);
+  return parts
+    .join(".")
+    .replace(/[^\w.-]+/g, "_")
+    .slice(0, 64);
 }
 
 /** Append the attribution ref to an outbound monetization URL.

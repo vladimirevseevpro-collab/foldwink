@@ -1,4 +1,4 @@
-﻿import fs from "node:fs";
+import fs from "node:fs";
 import path from "node:path";
 
 const POOLS = [
@@ -8,15 +8,34 @@ const POOLS = [
 ];
 
 const VAGUE_LABELS = new Set([
-  "things", "stuff", "miscellaneous", "other", "various", "general", "objects",
-  "вещи", "разное", "прочее", "всякое", "общее", "предметы",
-  "dinge", "sonstiges", "verschiedenes", "andere", "gegenstände",
+  "things",
+  "stuff",
+  "miscellaneous",
+  "other",
+  "various",
+  "general",
+  "objects",
+  "вещи",
+  "разное",
+  "прочее",
+  "всякое",
+  "общее",
+  "предметы",
+  "dinge",
+  "sonstiges",
+  "verschiedenes",
+  "andere",
+  "gegenstände",
 ]);
 
 const findings = [];
 
 function normalize(str) {
-  return String(str || "").toLowerCase().trim().normalize("NFKD").replace(/[\u0300-\u036f]/g, "");
+  return String(str || "")
+    .toLowerCase()
+    .trim()
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "");
 }
 
 for (const { key, dir } of POOLS) {
@@ -40,7 +59,7 @@ for (const { key, dir } of POOLS) {
       continue;
     }
 
-    const { id, title, difficulty, groups } = puzzle;
+    const { id, title: _title, difficulty, groups } = puzzle;
 
     // ─── Layer 1: 4x4 Grid Structure & Unique Partition ─────────────────────
     if (!Array.isArray(groups) || groups.length !== 4) {

@@ -239,7 +239,9 @@ export async function extractSharedPuzzleFromLocation(): Promise<Puzzle | null> 
  */
 export async function createShareUrl(puzzle: Puzzle, baseUrl: string = ""): Promise<string> {
   const hash = await encodePuzzleToHash(puzzle);
-  const base = baseUrl || (typeof window !== "undefined" ? window.location.origin + window.location.pathname : "");
+  const base =
+    baseUrl ||
+    (typeof window !== "undefined" ? window.location.origin + window.location.pathname : "");
   const cleanBase = base.split("#")[0].split("?")[0];
   return `${cleanBase}#${hash}`;
 }

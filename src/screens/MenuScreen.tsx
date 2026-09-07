@@ -226,7 +226,12 @@ export function MenuScreen() {
               className="text-xs border-red-900/40 text-red-300 hover:bg-red-950/20"
               onClick={() => setIsContractOpen(true)}
             >
-              ⚔️ {lang === "ru" ? "Железный Контракт" : lang === "de" ? "Eiserner Vertrag" : "Iron Contract"}
+              ⚔️{" "}
+              {lang === "ru"
+                ? "Железный Контракт"
+                : lang === "de"
+                  ? "Eiserner Vertrag"
+                  : "Iron Contract"}
             </Button>
 
             <Button
@@ -240,7 +245,6 @@ export function MenuScreen() {
             </Button>
           </div>
 
-
           {isPassportOpen && (
             <ArchivistPassportModal
               onClose={() => setIsPassportOpen(false)}
@@ -248,9 +252,7 @@ export function MenuScreen() {
             />
           )}
 
-          {isContractOpen && (
-            <IronContractModal onClose={() => setIsContractOpen(false)} />
-          )}
+          {isContractOpen && <IronContractModal onClose={() => setIsContractOpen(false)} />}
 
           {isPalimpsestOpen && (
             <PalimpsestModal

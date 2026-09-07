@@ -66,7 +66,8 @@ function verifySubstringClaim(puzzle, finding) {
   // Look for a claim like "X does not contain Y" in the explanation.
   // This covers the "locate doesn't contain CAT" hallucination case.
   const expl = finding.explanation ?? "";
-  const re = /["“]?([A-Za-zА-Яа-яÄÖÜäöüß-]+)["”]?\s+does\s+not\s+contain\s+["“]?([A-Za-zА-Яа-яÄÖÜäöüß]+)["”]?/gi;
+  const re =
+    /["“]?([A-Za-zА-Яа-яÄÖÜäöüß-]+)["”]?\s+does\s+not\s+contain\s+["“]?([A-Za-zА-Яа-яÄÖÜäöüß]+)["”]?/gi;
   const matches = [...expl.matchAll(re)];
   if (matches.length === 0) return null;
   const results = [];
@@ -94,7 +95,8 @@ function verifySameSpeciesSplit(puzzle, finding, lang) {
   const la = locations.get(a);
   const lb = locations.get(b);
   if (!la || !lb) return { status: "unverifiable", reason: "item not found in puzzle" };
-  if (la.groupId === lb.groupId) return { status: "refuted", reason: "items are in the same group" };
+  if (la.groupId === lb.groupId)
+    return { status: "refuted", reason: "items are in the same group" };
   // Check if the pair is a known same-species pair
   const langPairs = OVERLAP_PAIRS[lang] ?? [];
   for (const { pair } of langPairs) {
@@ -103,7 +105,10 @@ function verifySameSpeciesSplit(puzzle, finding, lang) {
       return { status: "confirmed-known", reason: "listed in overlap_pairs seed" };
     }
   }
-  return { status: "confirmed-unknown", reason: "items are in different groups; species relation not in seed — needs review" };
+  return {
+    status: "confirmed-unknown",
+    reason: "items are in different groups; species relation not in seed — needs review",
+  };
 }
 
 function verifyDuplicateItems(puzzle) {
@@ -122,7 +127,11 @@ function analyzeLabelOverlap(puzzle, finding) {
   if (labels.length < 2) return { status: "unverifiable" };
   const tokenize = (l) =>
     new Set(
-      l.toLowerCase().replace(/[^\p{L}\p{N}\s]+/gu, " ").split(/\s+/).filter((t) => t.length >= 3),
+      l
+        .toLowerCase()
+        .replace(/[^\p{L}\p{N}\s]+/gu, " ")
+        .split(/\s+/)
+        .filter((t) => t.length >= 3),
     );
   const ta = tokenize(labels[0]);
   const tb = tokenize(labels[1]);
@@ -136,8 +145,8 @@ function analyzeLabelOverlap(puzzle, finding) {
       subsetAtoB || subsetBtoA
         ? "one label's meaningful tokens are subset of the other — likely semantic overlap"
         : shared.length > 0
-        ? "labels share tokens but neither is subset — could be parallel-sibling (usually OK)"
-        : "no lexical overlap — semantic-only claim; needs-claude-review",
+          ? "labels share tokens but neither is subset — could be parallel-sibling (usually OK)"
+          : "no lexical overlap — semantic-only claim; needs-claude-review",
   };
 }
 
@@ -175,13 +184,18 @@ function processFinding(finding, lang, puzzleCache) {
       ? "confirmed"
       : checks.speciesSplit.status;
   } else if (finding.type === "LABEL_OVERLAP") {
-    verdict = checks.labelOverlap.lexicalSubset
-      ? "confirmed-lexical"
-      : "needs-claude-review";
+    verdict = checks.labelOverlap.lexicalSubset ? "confirmed-lexical" : "needs-claude-review";
   } else if (
-    ["AMBIGUOUS_ITEM", "OBSCURE", "WRONG_TIER", "TRIVIAL", "CULTURAL_MISFIT", "REDUNDANT_ITEMS", "FACTUAL_ERROR", "OTHER"].includes(
-      finding.type,
-    )
+    [
+      "AMBIGUOUS_ITEM",
+      "OBSCURE",
+      "WRONG_TIER",
+      "TRIVIAL",
+      "CULTURAL_MISFIT",
+      "REDUNDANT_ITEMS",
+      "FACTUAL_ERROR",
+      "OTHER",
+    ].includes(finding.type)
   ) {
     verdict = "needs-claude-review";
   } else {
@@ -209,7 +223,15 @@ console.log(`Loaded ${allFindings.length} GPT findings across ${batches.length} 
 
 const puzzleCache = new Map();
 const verdicts = [];
-const counts = { confirmed: 0, "confirmed-lexical": 0, "confirmed-known": 0, "confirmed-unknown": 0, refuted: 0, "needs-claude-review": 0, unverifiable: 0 };
+const counts = {
+  confirmed: 0,
+  "confirmed-lexical": 0,
+  "confirmed-known": 0,
+  "confirmed-unknown": 0,
+  refuted: 0,
+  "needs-claude-review": 0,
+  unverifiable: 0,
+};
 
 for (const f of allFindings) {
   const result = processFinding(f, f.__lang, puzzleCache);

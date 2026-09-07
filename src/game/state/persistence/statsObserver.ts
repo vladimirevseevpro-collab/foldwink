@@ -11,9 +11,7 @@ import {
 // Writes long-lived player data — stats, progression cursor, daily history,
 // onboarding flag — to localStorage on change. Narrow selector: only reads
 // the four slices it writes, so unrelated store updates never trigger IO.
-export function statsPersistenceObserver(
-  store: StoreApi<StoreState>,
-): () => void {
+export function statsPersistenceObserver(store: StoreApi<StoreState>): () => void {
   let prevStats = store.getState().stats;
   let prevProgress = store.getState().progress;
   let prevTodayDailyRecord = store.getState().todayDailyRecord;

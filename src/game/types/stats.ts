@@ -66,7 +66,6 @@ export interface StandardProgress {
   zenCursor?: number;
 }
 
-
 export const INITIAL_STATS: Stats = {
   gamesPlayed: 0,
   wins: 0,

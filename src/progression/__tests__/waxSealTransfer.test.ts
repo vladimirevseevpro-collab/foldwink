@@ -64,16 +64,89 @@ function rsRemainder(data: number[], ecCount: number): number[] {
 }
 
 const VERSION_SPECS = [
-  { version: 1, totalCodewords: 26, dataCodewords: 19, ecCodewordsPerBlock: 7, blocks: [{ count: 1, dataCodewords: 19 }], alignments: [] },
-  { version: 2, totalCodewords: 44, dataCodewords: 34, ecCodewordsPerBlock: 10, blocks: [{ count: 1, dataCodewords: 34 }], alignments: [6, 18] },
-  { version: 3, totalCodewords: 70, dataCodewords: 55, ecCodewordsPerBlock: 15, blocks: [{ count: 1, dataCodewords: 55 }], alignments: [6, 22] },
-  { version: 4, totalCodewords: 100, dataCodewords: 80, ecCodewordsPerBlock: 20, blocks: [{ count: 1, dataCodewords: 80 }], alignments: [6, 26] },
-  { version: 5, totalCodewords: 134, dataCodewords: 108, ecCodewordsPerBlock: 26, blocks: [{ count: 1, dataCodewords: 108 }], alignments: [6, 30] },
-  { version: 6, totalCodewords: 172, dataCodewords: 136, ecCodewordsPerBlock: 18, blocks: [{ count: 2, dataCodewords: 68 }], alignments: [6, 34] },
-  { version: 7, totalCodewords: 196, dataCodewords: 156, ecCodewordsPerBlock: 20, blocks: [{ count: 2, dataCodewords: 78 }], alignments: [6, 22, 38] },
-  { version: 8, totalCodewords: 242, dataCodewords: 194, ecCodewordsPerBlock: 24, blocks: [{ count: 2, dataCodewords: 97 }], alignments: [6, 24, 42] },
-  { version: 9, totalCodewords: 292, dataCodewords: 232, ecCodewordsPerBlock: 30, blocks: [{ count: 2, dataCodewords: 116 }], alignments: [6, 26, 46] },
-  { version: 10, totalCodewords: 346, dataCodewords: 274, ecCodewordsPerBlock: 18, blocks: [{ count: 2, dataCodewords: 68 }, { count: 2, dataCodewords: 69 }], alignments: [6, 28, 50] },
+  {
+    version: 1,
+    totalCodewords: 26,
+    dataCodewords: 19,
+    ecCodewordsPerBlock: 7,
+    blocks: [{ count: 1, dataCodewords: 19 }],
+    alignments: [],
+  },
+  {
+    version: 2,
+    totalCodewords: 44,
+    dataCodewords: 34,
+    ecCodewordsPerBlock: 10,
+    blocks: [{ count: 1, dataCodewords: 34 }],
+    alignments: [6, 18],
+  },
+  {
+    version: 3,
+    totalCodewords: 70,
+    dataCodewords: 55,
+    ecCodewordsPerBlock: 15,
+    blocks: [{ count: 1, dataCodewords: 55 }],
+    alignments: [6, 22],
+  },
+  {
+    version: 4,
+    totalCodewords: 100,
+    dataCodewords: 80,
+    ecCodewordsPerBlock: 20,
+    blocks: [{ count: 1, dataCodewords: 80 }],
+    alignments: [6, 26],
+  },
+  {
+    version: 5,
+    totalCodewords: 134,
+    dataCodewords: 108,
+    ecCodewordsPerBlock: 26,
+    blocks: [{ count: 1, dataCodewords: 108 }],
+    alignments: [6, 30],
+  },
+  {
+    version: 6,
+    totalCodewords: 172,
+    dataCodewords: 136,
+    ecCodewordsPerBlock: 18,
+    blocks: [{ count: 2, dataCodewords: 68 }],
+    alignments: [6, 34],
+  },
+  {
+    version: 7,
+    totalCodewords: 196,
+    dataCodewords: 156,
+    ecCodewordsPerBlock: 20,
+    blocks: [{ count: 2, dataCodewords: 78 }],
+    alignments: [6, 22, 38],
+  },
+  {
+    version: 8,
+    totalCodewords: 242,
+    dataCodewords: 194,
+    ecCodewordsPerBlock: 24,
+    blocks: [{ count: 2, dataCodewords: 97 }],
+    alignments: [6, 24, 42],
+  },
+  {
+    version: 9,
+    totalCodewords: 292,
+    dataCodewords: 232,
+    ecCodewordsPerBlock: 30,
+    blocks: [{ count: 2, dataCodewords: 116 }],
+    alignments: [6, 26, 46],
+  },
+  {
+    version: 10,
+    totalCodewords: 346,
+    dataCodewords: 274,
+    ecCodewordsPerBlock: 18,
+    blocks: [
+      { count: 2, dataCodewords: 68 },
+      { count: 2, dataCodewords: 69 },
+    ],
+    alignments: [6, 28, 50],
+  },
 ];
 
 function decodeQr(matrix: boolean[][]): string {
@@ -84,13 +157,26 @@ function decodeQr(matrix: boolean[][]): string {
 
   // Format info reading
   const formatCoords = [
-    [8, 0], [8, 1], [8, 2], [8, 3], [8, 4], [8, 5], [8, 7], [8, 8],
-    [7, 8], [5, 8], [4, 8], [3, 8], [2, 8], [1, 8], [0, 8],
+    [8, 0],
+    [8, 1],
+    [8, 2],
+    [8, 3],
+    [8, 4],
+    [8, 5],
+    [8, 7],
+    [8, 8],
+    [7, 8],
+    [5, 8],
+    [4, 8],
+    [3, 8],
+    [2, 8],
+    [1, 8],
+    [0, 8],
   ];
   let formatBits = 0;
   for (let i = 0; i < 15; i++) {
     const [r, c] = formatCoords[i];
-    if (matrix[r][c]) formatBits |= (1 << i);
+    if (matrix[r][c]) formatBits |= 1 << i;
   }
   const unmaskedFormat = formatBits ^ 0x5412;
   const ecLevel = (unmaskedFormat >> 13) & 0b11; // 01 for L
@@ -162,7 +248,7 @@ function decodeQr(matrix: boolean[][]): string {
   for (let i = 0; i + 8 <= bits.length; i += 8) {
     let b = 0;
     for (let j = 0; j < 8; j++) {
-      if (bits[i + j]) b |= (1 << (7 - j));
+      if (bits[i + j]) b |= 1 << (7 - j);
     }
     codewords.push(b);
   }
@@ -325,7 +411,10 @@ describe("Wax Seal Passport Transfer", () => {
     expect(res.profile?.sealId).toBe("seal_compass");
     expect(res.profile?.nibId).toBe("nib_obsidian");
     expect(res.profile?.titleId).toBe("title_connections");
-    expect(res.profile?.collectedStampIds).toEqual(["stamp_morning_brew", "stamp_midori_compass"]);
+    expect(res.profile?.collectedStampIds).toEqual([
+      "stamp_morning_brew",
+      "stamp_midori_compass",
+    ]);
     expect(res.profile?.contractsWon).toBe(2);
     expect(res.playerSeed).toBe("user_seed_test_123");
   });

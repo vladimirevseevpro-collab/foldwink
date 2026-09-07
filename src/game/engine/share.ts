@@ -39,8 +39,7 @@ export function buildShareString(
         ? s.share.shareTextOutLine(summary.mistakesUsed)
         : `Out of mistakes · ${summary.mistakesUsed}/4`;
 
-  const gradeLine =
-    ctx.grade && summary.result === "win" ? `✦ ${ctx.grade.label}` : null;
+  const gradeLine = ctx.grade && summary.result === "win" ? `✦ ${ctx.grade.label}` : null;
 
   const grid = puzzle.groups
     .map((g, i) => {

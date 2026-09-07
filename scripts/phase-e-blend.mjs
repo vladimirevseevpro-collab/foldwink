@@ -28,7 +28,9 @@ const POOLS = [
 const ratingById = new Map();
 const rationales = new Map();
 try {
-  const files = readdirSync(PHASE_E_DIR).filter((f) => /^[a-z]{2}-(easy|medium|hard)-b\d+\.json$/.test(f));
+  const files = readdirSync(PHASE_E_DIR).filter((f) =>
+    /^[a-z]{2}-(easy|medium|hard)-b\d+\.json$/.test(f),
+  );
   for (const f of files) {
     const batch = JSON.parse(readFileSync(join(PHASE_E_DIR, f), "utf8"));
     for (const r of batch.ratings ?? []) {
@@ -37,7 +39,9 @@ try {
     }
   }
 } catch (err) {
-  console.error(`No phase_e_raw data yet (${err.message}); run scripts/phase-e-gpt-ranking.mjs first.`);
+  console.error(
+    `No phase_e_raw data yet (${err.message}); run scripts/phase-e-gpt-ranking.mjs first.`,
+  );
   process.exit(1);
 }
 console.log(`Loaded GPT ratings for ${ratingById.size} puzzles.`);

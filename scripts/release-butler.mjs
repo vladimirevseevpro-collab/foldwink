@@ -54,7 +54,7 @@ if (!target || !/^[^/]+\/[^/]+$/.test(target)) {
       "Set it once, either:",
       '  • create `.itch-target` in repo root with "user/game" (gitignored)',
       '  • or set env var: setx ITCH_TARGET "user/game"   (Windows)',
-      '  • or pass --target=user/game',
+      "  • or pass --target=user/game",
     ].join("\n"),
   );
   process.exit(1);
@@ -111,12 +111,7 @@ const zip = zips[0];
 const channelSpec = `${target}:${channel}`;
 
 console.log(`→ butler push ${zip.name} ${channelSpec} (userversion=${version})`);
-run(butlerCmd, [
-  "push",
-  `"${zip.path}"`,
-  channelSpec,
-  `--userversion=${version}`,
-]);
+run(butlerCmd, ["push", `"${zip.path}"`, channelSpec, `--userversion=${version}`]);
 
 console.log(`\n✓ pushed v${version} to ${channelSpec}`);
 console.log(`  returning players keep their localStorage — channel URL is stable.`);

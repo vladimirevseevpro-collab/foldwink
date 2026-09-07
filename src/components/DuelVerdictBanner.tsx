@@ -112,9 +112,7 @@ export function DuelVerdictBanner({
       {/* Duel performance comparison card */}
       <div className="grid grid-cols-2 gap-2 bg-surface/80 rounded-xl p-3 border border-line text-xs">
         <div className="space-y-1">
-          <div className="text-[10px] uppercase font-bold text-accent">
-            {t.duel.yourResult}
-          </div>
+          <div className="text-[10px] uppercase font-bold text-accent">{t.duel.yourResult}</div>
           <div className="text-base font-extrabold text-text">
             {playerMistakes} {t.duel.mistakesWord(playerMistakes)}
           </div>
@@ -134,7 +132,9 @@ export function DuelVerdictBanner({
 
       {/* Localized comparison summary */}
       <div className="text-xs font-bold text-muted">
-        {t.duel.yourResult}: {playerMistakes} {t.duel.mistakesWord(playerMistakes)} ⚔️ {t.duel.challengerResult}: {challengerMistakes} {t.duel.mistakesWord(challengerMistakes)}
+        {t.duel.yourResult}: {playerMistakes} {t.duel.mistakesWord(playerMistakes)} ⚔️{" "}
+        {t.duel.challengerResult}: {challengerMistakes}{" "}
+        {t.duel.mistakesWord(challengerMistakes)}
       </div>
 
       {/* Send response button */}

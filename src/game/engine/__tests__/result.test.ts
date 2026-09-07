@@ -1,9 +1,5 @@
 import { describe, expect, it } from "vitest";
-import {
-  calculateResultSummary,
-  computePlayerArchetype,
-  formatDuration,
-} from "../result";
+import { calculateResultSummary, computePlayerArchetype, formatDuration } from "../result";
 import type { ActiveGame } from "../../types/game";
 
 describe("calculateResultSummary & formatDuration", () => {

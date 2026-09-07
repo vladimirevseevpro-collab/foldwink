@@ -10,7 +10,7 @@ import { join } from "node:path";
 
 const ROOT = process.cwd();
 const PAIRS = JSON.parse(
-  readFileSync(join(ROOT, "reports/puzzle_audit/overlap_pairs.json"), "utf8")
+  readFileSync(join(ROOT, "reports/puzzle_audit/overlap_pairs.json"), "utf8"),
 );
 
 const POOLS = [
@@ -73,13 +73,18 @@ for (const { lang, dir } of POOLS) {
 }
 
 findings.sort((a, b) =>
-  a.lang === b.lang
-    ? a.puzzleId.localeCompare(b.puzzleId)
-    : a.lang.localeCompare(b.lang)
+  a.lang === b.lang ? a.puzzleId.localeCompare(b.puzzleId) : a.lang.localeCompare(b.lang),
 );
 
 const out = join(ROOT, "reports/puzzle_audit/candidates.json");
-writeFileSync(out, JSON.stringify({ generatedAt: new Date().toISOString(), count: findings.length, findings }, null, 2));
+writeFileSync(
+  out,
+  JSON.stringify(
+    { generatedAt: new Date().toISOString(), count: findings.length, findings },
+    null,
+    2,
+  ),
+);
 
 console.log(`Scanned ${POOLS.length} pools.`);
 console.log(`Found ${findings.length} cross-group overlap candidate(s).`);
@@ -88,7 +93,7 @@ if (findings.length > 0) {
   console.log("\nPreview:");
   for (const f of findings.slice(0, 15)) {
     console.log(
-      `  [${f.lang}] ${f.puzzleId} (${f.difficulty}): ${f.pair[0]} in "${f.splitAcross[0].group}" vs ${f.pair[1]} in "${f.splitAcross[1].group}" — ${f.reason}`
+      `  [${f.lang}] ${f.puzzleId} (${f.difficulty}): ${f.pair[0]} in "${f.splitAcross[0].group}" vs ${f.pair[1]} in "${f.splitAcross[1].group}" — ${f.reason}`,
     );
   }
   if (findings.length > 15) console.log(`  ... and ${findings.length - 15} more`);

@@ -6,11 +6,7 @@
 
 import { readFileSync, writeFileSync } from "node:fs";
 
-const FILES = [
-  "src/puzzles/loader.ts",
-  "src/puzzles/loaderDe.ts",
-  "src/puzzles/loaderRu.ts",
-];
+const FILES = ["src/puzzles/loader.ts", "src/puzzles/loaderDe.ts", "src/puzzles/loaderRu.ts"];
 
 const OLD = `function compareByDifficultyScore(a: Puzzle, b: Puzzle): number {
   const sa = a.meta?.difficultyScore ?? 50;

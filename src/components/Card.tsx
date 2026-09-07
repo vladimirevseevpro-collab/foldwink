@@ -42,7 +42,11 @@ function handleDeviceOrientation(e: DeviceOrientationEvent) {
 
 function subscribeGyro(cb: (tilt: { x: number; y: number }) => void): () => void {
   gyroSubscribers.add(cb);
-  if (!gyroListenerAttached && typeof window !== "undefined" && typeof window.DeviceOrientationEvent !== "undefined") {
+  if (
+    !gyroListenerAttached &&
+    typeof window !== "undefined" &&
+    typeof window.DeviceOrientationEvent !== "undefined"
+  ) {
     try {
       window.addEventListener("deviceorientation", handleDeviceOrientation, { passive: true });
       gyroListenerAttached = true;
@@ -110,7 +114,8 @@ export function Card({
     // Custom S-curve velocity modulation
     const dist = Math.sqrt(dx * dx + dy * dy);
     const normalizedDist = Math.min(1, dist / 16);
-    const easeFactor = 0.12 + 0.16 * (normalizedDist * normalizedDist * (3 - 2 * normalizedDist));
+    const easeFactor =
+      0.12 + 0.16 * (normalizedDist * normalizedDist * (3 - 2 * normalizedDist));
 
     currentTilt.current.x += dx * easeFactor;
     currentTilt.current.y += dy * easeFactor;
@@ -191,7 +196,7 @@ export function Card({
 
       startAnimation();
     },
-    [disabled, state, startAnimation]
+    [disabled, state, startAnimation],
   );
 
   const handlePointerLeave = useCallback(() => {
@@ -231,7 +236,7 @@ export function Card({
       ? SOLVED_GROUP_MARKERS[solvedColorIndex % SOLVED_GROUP_MARKERS.length]
       : null;
 
-  const ariaLabel = state === "solved" ? solvedAria ?? `${value} - solved` : value;
+  const ariaLabel = state === "solved" ? (solvedAria ?? `${value} - solved`) : value;
 
   const style: CSSProperties = {
     ...(state === "selected" ? { "--lift": "-2px" } : {}),
@@ -279,4 +284,3 @@ export function Card({
     </button>
   );
 }
-

@@ -98,7 +98,9 @@ export function App() {
               window.history.replaceState(
                 {},
                 "",
-                remaining ? `${window.location.pathname}?${remaining}` : window.location.pathname,
+                remaining
+                  ? `${window.location.pathname}?${remaining}`
+                  : window.location.pathname,
               );
             }
           }
@@ -108,7 +110,6 @@ export function App() {
       }
     });
   }, [onboarded, completeOnboarding, startCustomPuzzle]);
-
 
   useEffect(() => {
     void prepareSoundPack();

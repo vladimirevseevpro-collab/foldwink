@@ -24,7 +24,8 @@ function getInitialConfig(): ProceduralSynthConfig {
     if (raw) {
       const parsed = JSON.parse(raw);
       return {
-        volume: typeof parsed.volume === "number" ? Math.max(0, Math.min(1, parsed.volume)) : 0.75,
+        volume:
+          typeof parsed.volume === "number" ? Math.max(0, Math.min(1, parsed.volume)) : 0.75,
         muted: Boolean(parsed.muted),
       };
     }
@@ -37,14 +38,14 @@ function getInitialConfig(): ProceduralSynthConfig {
 let audioCtx: AudioContext | null = null;
 let masterGain: GainNode | null = null;
 let noiseBuffer: AudioBuffer | null = null;
-let config: ProceduralSynthConfig = getInitialConfig();
+const config: ProceduralSynthConfig = getInitialConfig();
 
 function isAudioSupported(): boolean {
   if (typeof window === "undefined" && typeof globalThis === "undefined") return false;
   const root = typeof window !== "undefined" ? window : (globalThis as unknown as Window);
   return Boolean(
     (root as unknown as { AudioContext?: typeof AudioContext }).AudioContext ??
-    (root as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext
+    (root as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext,
   );
 }
 
@@ -149,8 +150,8 @@ export function playCardClick(pitchMultiplier: number = 1.0): void {
 const HARMONIC_STAGES: Record<1 | 2 | 3 | 4, number[]> = {
   1: [261.63],
   2: [261.63, 329.63],
-  3: [261.63, 329.63, 392.00],
-  4: [261.63, 329.63, 392.00, 523.25],
+  3: [261.63, 329.63, 392.0],
+  4: [261.63, 329.63, 392.0, 523.25],
 };
 
 export function playHarmonicSolve(stage: 1 | 2 | 3 | 4): void {

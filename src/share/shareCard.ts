@@ -173,7 +173,15 @@ function drawBrandMark(ctx: CanvasRenderingContext2D, centerX: number, top: numb
   COLOR.solved.forEach((color, index) => {
     const col = index % 2;
     const row = Math.floor(index / 2);
-    fillRoundRect(ctx, tileX + col * (tile + gap), tileY + row * (tile + gap), tile, tile, 5, color);
+    fillRoundRect(
+      ctx,
+      tileX + col * (tile + gap),
+      tileY + row * (tile + gap),
+      tile,
+      tile,
+      5,
+      color,
+    );
   });
   drawFoldedCorner(ctx, x + size, top, 25);
 }
@@ -256,7 +264,12 @@ function drawSupporterSeal(ctx: CanvasRenderingContext2D, label: string, top = 1
   ctx.restore();
 }
 
-function drawArchetypeBadge(ctx: CanvasRenderingContext2D, badge: string, centerX: number, centerY: number): void {
+function drawArchetypeBadge(
+  ctx: CanvasRenderingContext2D,
+  badge: string,
+  centerX: number,
+  centerY: number,
+): void {
   ctx.save();
   ctx.font = `800 20px ${FONT_STACK}`;
   const textWidth = ctx.measureText(badge).width;
@@ -279,7 +292,11 @@ function drawArchetypeBadge(ctx: CanvasRenderingContext2D, badge: string, center
   ctx.restore();
 }
 
-function drawMetricStrip(ctx: CanvasRenderingContext2D, opts: ShareCardOptions, y: number): void {
+function drawMetricStrip(
+  ctx: CanvasRenderingContext2D,
+  opts: ShareCardOptions,
+  y: number,
+): void {
   const labels = opts.labels ?? {};
   const thirdValue =
     opts.difficulty === "medium"
@@ -634,14 +651,7 @@ export function drawShareCard(canvas: HTMLCanvasElement, opts: ShareCardOptions)
     drawWordmark(ctx, 380);
 
     if (opts.sealIcon) {
-      drawPersonalWaxSeal(
-        ctx,
-        140,
-        168,
-        opts.sealIcon,
-        opts.sealLabel,
-        opts.kintsugiRestored,
-      );
+      drawPersonalWaxSeal(ctx, 140, 168, opts.sealIcon, opts.sealLabel, opts.kintsugiRestored);
     }
 
     if (opts.supporter) {
@@ -655,12 +665,7 @@ export function drawShareCard(canvas: HTMLCanvasElement, opts: ShareCardOptions)
       opts.result === "win",
       opts.difficultyLabel ?? opts.difficulty,
     );
-    drawPostalCancellationMark(
-      ctx,
-      WIDTH - 275,
-      168,
-      opts.dateStr ?? todayLocal(),
-    );
+    drawPostalCancellationMark(ctx, WIDTH - 275, 168, opts.dateStr ?? todayLocal());
 
     drawCenteredText(ctx, opts.subtitle, 450, 800, 34, 24, 650, COLOR.accent);
     const headline =
@@ -694,14 +699,7 @@ export function drawShareCard(canvas: HTMLCanvasElement, opts: ShareCardOptions)
     drawWordmark(ctx, 260);
 
     if (opts.sealIcon) {
-      drawPersonalWaxSeal(
-        ctx,
-        140,
-        100,
-        opts.sealIcon,
-        opts.sealLabel,
-        opts.kintsugiRestored,
-      );
+      drawPersonalWaxSeal(ctx, 140, 100, opts.sealIcon, opts.sealLabel, opts.kintsugiRestored);
     }
 
     if (opts.supporter) {
@@ -715,12 +713,7 @@ export function drawShareCard(canvas: HTMLCanvasElement, opts: ShareCardOptions)
       opts.result === "win",
       opts.difficultyLabel ?? opts.difficulty,
     );
-    drawPostalCancellationMark(
-      ctx,
-      WIDTH - 275,
-      100,
-      opts.dateStr ?? todayLocal(),
-    );
+    drawPostalCancellationMark(ctx, WIDTH - 275, 100, opts.dateStr ?? todayLocal());
 
     drawCenteredText(ctx, opts.subtitle, 310, 760, 28, 20, 650, COLOR.accent);
     const headline =

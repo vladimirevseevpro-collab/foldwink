@@ -117,4 +117,3 @@ export function clearAllLocalData(): void {
     /* ignore — storage unavailable */
   }
 }
-

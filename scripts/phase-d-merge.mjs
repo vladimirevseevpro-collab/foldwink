@@ -97,14 +97,18 @@ function renderSection(title, items) {
   for (const [lang, arr] of [...byLang.entries()].sort()) {
     lines.push(`\n### ${lang.toUpperCase()} (${arr.length})`);
     for (const it of arr) {
-      lines.push(`\n- **${it.puzzleId}** (${it.tier}) — \`${it.type}\` [${it.severity}] → verdict: \`${it.claudeVerdict}\``);
+      lines.push(
+        `\n- **${it.puzzleId}** (${it.tier}) — \`${it.type}\` [${it.severity}] → verdict: \`${it.claudeVerdict}\``,
+      );
       lines.push(`  - ${it.explanation}`);
       if (it.items?.length) lines.push(`  - items: ${it.items.join(", ")}`);
       if (it.groups?.length) lines.push(`  - groups: ${it.groups.join(" | ")}`);
       if (it.suggestedFix) lines.push(`  - fix: ${it.suggestedFix}`);
       if (it.checks?.substring) {
         for (const s of it.checks.substring) {
-          lines.push(`  - check: ${s.claim} → GPT ${s.gptCorrect ? "correct" : "**hallucinated**"}`);
+          lines.push(
+            `  - check: ${s.claim} → GPT ${s.gptCorrect ? "correct" : "**hallucinated**"}`,
+          );
         }
       }
     }

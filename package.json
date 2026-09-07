@@ -30,7 +30,10 @@
     "tiktok:compose:batch02": "node tiktok/video_automation/scripts/compose-tiktok-batch02.mjs",
     "audit:logic": "node scripts/audit-puzzle-logic.mjs",
     "validate:ru": "tsx scripts/validate-puzzles.ts --dir=puzzles/ru/pool",
-    "validate:de": "tsx scripts/validate-puzzles.ts --dir=puzzles/de/pool"
+    "validate:de": "tsx scripts/validate-puzzles.ts --dir=puzzles/de/pool",
+    "mobile:assets": "node scripts/build-ios-icons.mjs",
+    "mobile:sync": "npm run build && npm run mobile:assets && cap sync ios",
+    "mobile:open": "cap open ios"
   },
   "dependencies": {
     "@capacitor/core": "^8.5.1",

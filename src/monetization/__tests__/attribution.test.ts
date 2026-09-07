@@ -75,7 +75,9 @@ describe("attributionRef / withAttributionRef", () => {
   });
 
   it("builds a compact url-safe ref and appends it to outbound links", () => {
-    installWindow("https://example.com/?utm_source=tiktok&utm_campaign=batch 01&utm_content=tiktok_03");
+    installWindow(
+      "https://example.com/?utm_source=tiktok&utm_campaign=batch 01&utm_content=tiktok_03",
+    );
     captureUtm();
     expect(attributionRef()).toBe("tiktok.batch_01.tiktok_03");
     expect(withAttributionRef("https://ko-fi.com/neuralvoid")).toBe(
@@ -87,6 +89,8 @@ describe("attributionRef / withAttributionRef", () => {
   });
 
   it("returns the url untouched when there is no first touch", () => {
-    expect(withAttributionRef("https://ko-fi.com/neuralvoid")).toBe("https://ko-fi.com/neuralvoid");
+    expect(withAttributionRef("https://ko-fi.com/neuralvoid")).toBe(
+      "https://ko-fi.com/neuralvoid",
+    );
   });
 });

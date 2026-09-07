@@ -53,17 +53,14 @@ function fromBase64(b64: string): string {
   return Buffer.from(b64, "base64").toString("utf-8");
 }
 
-export function encodePassportToSeal(
-  profile: ArchivistProfile,
-  playerSeed?: string,
-): string {
+export function encodePassportToSeal(profile: ArchivistProfile, playerSeed?: string): string {
   const stampIds = Array.isArray(profile.collectedStampIds) ? profile.collectedStampIds : [];
   let stampMask = 0;
   let allInCollection = true;
   for (const s of stampIds) {
     const idx = STAMP_COLLECTION.findIndex((item) => item.id === s);
     if (idx !== -1) {
-      stampMask |= (1 << idx);
+      stampMask |= 1 << idx;
     } else {
       allInCollection = false;
       break;
@@ -180,7 +177,9 @@ export function decodePassportFromSeal(sealString: string): DecodeResult {
         collectedStampIds = ["stamp_morning_brew"];
       }
     } else if (Array.isArray(st)) {
-      collectedStampIds = st.map((item) => (item.startsWith("stamp_") ? item : `stamp_${item}`));
+      collectedStampIds = st.map((item) =>
+        item.startsWith("stamp_") ? item : `stamp_${item}`,
+      );
     } else {
       collectedStampIds = ["stamp_morning_brew"];
     }
@@ -209,7 +208,10 @@ export function decodePassportFromSeal(sealString: string): DecodeResult {
 
     return { ok: true, profile, playerSeed: ps || undefined };
   } catch (err) {
-    return { ok: false, error: `Decoding error: ${err instanceof Error ? err.message : String(err)}` };
+    return {
+      ok: false,
+      error: `Decoding error: ${err instanceof Error ? err.message : String(err)}`,
+    };
   }
 }
 
@@ -304,10 +306,8 @@ export function drawWaxSealCertificate(
 
   // Title & Level
   const rank = GUILD_RANKS.find((r) => r.minLevel <= profile.level) ?? GUILD_RANKS[0];
-  const rankTitle =
-    lang === "ru" ? rank.titleRu : lang === "de" ? rank.titleDe : rank.titleEn;
-  const officialTitle =
-    TITLES.find((t) => t.id === profile.titleId) ?? TITLES[0];
+  const rankTitle = lang === "ru" ? rank.titleRu : lang === "de" ? rank.titleDe : rank.titleEn;
+  const officialTitle = TITLES.find((t) => t.id === profile.titleId) ?? TITLES[0];
   const titleLabel =
     lang === "ru"
       ? officialTitle.labelRu
@@ -361,8 +361,7 @@ export function drawWaxSealCertificate(
   ctx.fillStyle = "#a5ada6";
   ctx.font = `600 9px monospace`;
   ctx.textAlign = "center";
-  const displaySnippet =
-    sealString.length > 44 ? sealString.slice(0, 42) + "..." : sealString;
+  const displaySnippet = sealString.length > 44 ? sealString.slice(0, 42) + "..." : sealString;
   ctx.fillText(displaySnippet, width / 2, qrY + qrSize + 22);
 
   // Footer motto

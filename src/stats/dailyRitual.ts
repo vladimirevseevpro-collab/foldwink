@@ -199,8 +199,7 @@ export function calculateDailyStreak(
   const normalized = normalizeDailyHistory(history);
   let streak = 0;
   const todayRecord = normalized[today];
-  let checkDate =
-    todayRecord && todayRecord.result === "win" ? today : addLocalDays(today, -1);
+  let checkDate = todayRecord && todayRecord.result === "win" ? today : addLocalDays(today, -1);
 
   while (true) {
     const record = normalized[checkDate];
@@ -266,4 +265,3 @@ export function applyGraceWaxProtection(
     result: { applied: false },
   };
 }
-

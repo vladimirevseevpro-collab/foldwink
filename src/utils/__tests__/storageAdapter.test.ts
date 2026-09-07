@@ -47,8 +47,6 @@ describe("StorageAdapter", () => {
     delete (globalThis as unknown as { chrome?: unknown }).chrome;
   });
 
-
-
   it("reads and writes synchronously with localStorage fallback", () => {
     expect(safeRead("foldwink:testKey", "defaultVal")).toBe("defaultVal");
 
@@ -74,7 +72,12 @@ describe("StorageAdapter", () => {
       storage: {
         local: {
           get: vi.fn((key: string | null, cb?: (res: Record<string, unknown>) => void) => {
-            const res = key === null ? { ...mockStorage } : (typeof key === "string" ? { [key]: mockStorage[key] } : {});
+            const res =
+              key === null
+                ? { ...mockStorage }
+                : typeof key === "string"
+                  ? { [key]: mockStorage[key] }
+                  : {};
             if (cb) cb(res);
             return Promise.resolve(res);
           }),
@@ -133,7 +136,6 @@ describe("StorageAdapter", () => {
     };
 
     (globalThis as unknown as { chrome: typeof mockChrome }).chrome = mockChrome;
-
 
     await initStorageAdapter();
     expect(safeRead("foldwink:stats", null)).toEqual({ wins: 5 });

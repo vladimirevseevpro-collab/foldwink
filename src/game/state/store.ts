@@ -415,7 +415,13 @@ export function createStore(deps: StoreDeps = defaultDeps) {
 
     startCustomPuzzle: (customPuzzle: Puzzle) => {
       if (!customPuzzle) return;
-      const active = initialActive(customPuzzle, "standard", String(deps.now()), false, deps.now());
+      const active = initialActive(
+        customPuzzle,
+        "standard",
+        String(deps.now()),
+        false,
+        deps.now(),
+      );
       set({
         screen: "game",
         puzzle: customPuzzle,
@@ -438,7 +444,6 @@ export function createStore(deps: StoreDeps = defaultDeps) {
     },
 
     startDuel: (puzzleId: string, challengerMistakes: number, challengerTimeSec: number) => {
-
       let puzzle = deps.getPuzzleById(puzzleId);
       if (!puzzle && deps.getPool) {
         const fullPool = deps.getPool();
@@ -692,7 +697,6 @@ export function createStore(deps: StoreDeps = defaultDeps) {
       }
       get().startEasy();
     },
-
 
     clearFlash: () => set({ flash: null }),
 

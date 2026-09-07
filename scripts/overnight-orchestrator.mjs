@@ -17,7 +17,14 @@
 // All output goes to logs/overnight/<UTC-ISO>.log plus mirrored to stdout.
 
 import { spawnSync } from "node:child_process";
-import { existsSync, mkdirSync, appendFileSync, readFileSync, writeFileSync, readdirSync } from "node:fs";
+import {
+  existsSync,
+  mkdirSync,
+  appendFileSync,
+  readFileSync,
+  writeFileSync,
+  readdirSync,
+} from "node:fs";
 import { join } from "node:path";
 
 const ROOT = process.cwd();
@@ -74,7 +81,9 @@ function phaseBMissingBatches() {
   const TIERS = ["easy", "medium", "hard"];
   const MAX_PER_BATCH = 60;
   for (const [lang, dir] of Object.entries(POOL_DIRS)) {
-    const files = readdirSync(dir).filter((f) => f.endsWith(".json")).sort();
+    const files = readdirSync(dir)
+      .filter((f) => f.endsWith(".json"))
+      .sort();
     const puzzles = [];
     for (const f of files) {
       try {

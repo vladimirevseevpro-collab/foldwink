@@ -64,7 +64,9 @@ const SCHEMA = {
 writeFileSync(SCHEMA_PATH, JSON.stringify(SCHEMA, null, 2));
 
 function loadPool({ lang: _lang, dir }) {
-  const files = readdirSync(dir).filter((f) => f.endsWith(".json")).sort();
+  const files = readdirSync(dir)
+    .filter((f) => f.endsWith(".json"))
+    .sort();
   const out = [];
   for (const f of files) {
     try {

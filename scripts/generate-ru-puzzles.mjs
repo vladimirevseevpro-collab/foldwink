@@ -409,12 +409,14 @@ function validatePuzzle(p) {
   if (!p || typeof p !== "object") return "not an object";
   if (typeof p.id !== "string") return "missing id";
   if (typeof p.title !== "string") return "missing title";
-  if (p.difficulty !== "easy" && p.difficulty !== "medium") return `bad difficulty: ${p.difficulty}`;
+  if (p.difficulty !== "easy" && p.difficulty !== "medium")
+    return `bad difficulty: ${p.difficulty}`;
   if (!Array.isArray(p.groups) || p.groups.length !== 4) return "need exactly 4 groups";
   const allItems = new Set();
   for (const g of p.groups) {
     if (!Array.isArray(g.items) || g.items.length !== 4) return `group ${g.id} needs 4 items`;
-    if (p.difficulty === "medium" && !g.revealHint) return `medium group ${g.id} missing revealHint`;
+    if (p.difficulty === "medium" && !g.revealHint)
+      return `medium group ${g.id} missing revealHint`;
     for (const item of g.items) {
       if (typeof item !== "string" || !item.trim()) return "empty item";
       if (item.length > MAX_ITEM_LEN) return `item too long (${item.length}): "${item}"`;
@@ -479,9 +481,7 @@ async function main() {
 
   // Skip already generated
   const existing = new Set(
-    fs.existsSync(OUT_DIR)
-      ? fs.readdirSync(OUT_DIR).map((f) => path.basename(f, ".json"))
-      : [],
+    fs.existsSync(OUT_DIR) ? fs.readdirSync(OUT_DIR).map((f) => path.basename(f, ".json")) : [],
   );
 
   const todo = [];
@@ -496,7 +496,9 @@ async function main() {
     return;
   }
 
-  console.log(`Generating ${todo.length} puzzles (skipped ${allThemes.length - todo.length} existing)...`);
+  console.log(
+    `Generating ${todo.length} puzzles (skipped ${allThemes.length - todo.length} existing)...`,
+  );
   console.log(`Model: ${MODEL} | Batch size: ${BATCH} | Output: ${OUT_DIR}\n`);
 
   let generated = 0;
@@ -509,7 +511,9 @@ async function main() {
 
     const batchNum = Math.floor(i / BATCH) + 1;
     const totalBatches = Math.ceil(todo.length / BATCH);
-    process.stdout.write(`[${batchNum}/${totalBatches}] Requesting ${batchThemes.length} puzzles... `);
+    process.stdout.write(
+      `[${batchNum}/${totalBatches}] Requesting ${batchThemes.length} puzzles... `,
+    );
 
     if (DRY_RUN) {
       console.log("[DRY RUN skipped]");
@@ -579,7 +583,9 @@ async function main() {
       generated++;
     }
 
-    console.log(`OK ${batchOk}/${batchThemes.length}${batchFail > 0 ? ` (${batchFail} skipped)` : ""}`);
+    console.log(
+      `OK ${batchOk}/${batchThemes.length}${batchFail > 0 ? ` (${batchFail} skipped)` : ""}`,
+    );
 
     // Polite rate limit: ~1 req/s on Haiku
     if (i + BATCH < todo.length) await new Promise((r) => setTimeout(r, 800));

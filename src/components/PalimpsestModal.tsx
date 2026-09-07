@@ -41,7 +41,9 @@ export function PalimpsestModal({ onClose, onOpenPassport }: PalimpsestModalProp
   const play = useSound();
 
   const [puzzle] = useState<PalimpsestPuzzle>(() => getPalimpsestPuzzle(lang));
-  const [stage, setStage] = useState<"obverse" | "obverse_done" | "reverse" | "completed">("obverse");
+  const [stage, setStage] = useState<"obverse" | "obverse_done" | "reverse" | "completed">(
+    "obverse",
+  );
   const [isFlipping, setIsFlipping] = useState(false);
 
   // Active layer cards & gameplay state
@@ -211,7 +213,10 @@ export function PalimpsestModal({ onClose, onOpenPassport }: PalimpsestModalProp
 
         {/* Victory Completion Screen */}
         {stage === "completed" ? (
-          <div className="py-4 space-y-4 animate-in zoom-in-95 duration-200" data-testid="palimpsest-completed-view">
+          <div
+            className="py-4 space-y-4 animate-in zoom-in-95 duration-200"
+            data-testid="palimpsest-completed-view"
+          >
             {/* Double Archival Wax Seal */}
             <div className="flex items-center justify-center gap-4 py-2">
               <div className="w-16 h-16 rounded-full bg-[#871f1f] border-2 border-[#b53e3e] shadow-xl flex items-center justify-center text-3xl shadow-red-950/80">
@@ -227,7 +232,9 @@ export function PalimpsestModal({ onClose, onOpenPassport }: PalimpsestModalProp
             </div>
 
             <div>
-              <h2 className="text-xl font-extrabold text-text">{t.palimpsest.completedTitle}</h2>
+              <h2 className="text-xl font-extrabold text-text">
+                {t.palimpsest.completedTitle}
+              </h2>
               <p className="text-xs text-muted mt-1 max-w-sm mx-auto leading-relaxed">
                 {t.palimpsest.completedDetail}
               </p>
@@ -273,7 +280,9 @@ export function PalimpsestModal({ onClose, onOpenPassport }: PalimpsestModalProp
                 <span>{activeLayer.title}</span>
                 <MistakesDots used={mistakesUsed} oneAwayLast={flash === "one-away"} />
               </div>
-              <p className="text-muted text-[11px] leading-relaxed">{activeLayer.description}</p>
+              <p className="text-muted text-[11px] leading-relaxed">
+                {activeLayer.description}
+              </p>
             </div>
 
             {/* Foldwink Category Tabs for this layer */}
@@ -281,20 +290,26 @@ export function PalimpsestModal({ onClose, onOpenPassport }: PalimpsestModalProp
               {activeLayer.groups.map((g, idx) => {
                 const isSolved = solvedGroupIds.includes(g.id);
                 const color = LAYER_COLORS[idx % LAYER_COLORS.length];
-                const revealLen = Math.min(g.revealHint.length, isSolved ? g.revealHint.length : 1 + solvedGroupIds.length);
-                const displayHint = isSolved ? g.label : g.revealHint.slice(0, revealLen) + "·".repeat(Math.max(0, g.revealHint.length - revealLen));
+                const revealLen = Math.min(
+                  g.revealHint.length,
+                  isSolved ? g.revealHint.length : 1 + solvedGroupIds.length,
+                );
+                const displayHint = isSolved
+                  ? g.label
+                  : g.revealHint.slice(0, revealLen) +
+                    "·".repeat(Math.max(0, g.revealHint.length - revealLen));
 
                 return (
                   <div
                     key={g.id}
                     className={`rounded-lg border p-1.5 text-center text-[10px] font-bold truncate transition-all ${
-                      isSolved
-                        ? color
-                        : "border-line bg-surfaceHi/50 text-muted"
+                      isSolved ? color : "border-line bg-surfaceHi/50 text-muted"
                     }`}
                     title={isSolved ? g.label : displayHint}
                   >
-                    <span className="block truncate">{isSolved ? `✓ ${g.label}` : displayHint}</span>
+                    <span className="block truncate">
+                      {isSolved ? `✓ ${g.label}` : displayHint}
+                    </span>
                   </div>
                 );
               })}
@@ -332,8 +347,12 @@ export function PalimpsestModal({ onClose, onOpenPassport }: PalimpsestModalProp
             {/* Status flash message */}
             <div className="h-4 flex items-center justify-center text-[11px] font-bold text-amber-300">
               {flash === "one-away" && <span>✦ {t.game.oneAway}</span>}
-              {flash === "incorrect" && <span className="text-red-400">✗ {t.game.incorrectGroup}</span>}
-              {flash === "correct" && <span className="text-green-400">✓ {t.game.correctGroup}</span>}
+              {flash === "incorrect" && (
+                <span className="text-red-400">✗ {t.game.incorrectGroup}</span>
+              )}
+              {flash === "correct" && (
+                <span className="text-green-400">✓ {t.game.correctGroup}</span>
+              )}
             </div>
 
             {/* Out of Mistakes / Obverse Solved / Standard Controls */}

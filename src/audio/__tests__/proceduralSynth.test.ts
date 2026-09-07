@@ -159,28 +159,40 @@ describe("ProceduralSynth WebAudio Engine", () => {
     // Stage 1: Root only
     playHarmonicSolve(1);
     expect(mockCtx.createdOscillators.length).toBe(1);
-    expect(mockCtx.createdOscillators[0].frequency.setValueAtTime).toHaveBeenCalledWith(261.63, 0.5);
+    expect(mockCtx.createdOscillators[0].frequency.setValueAtTime).toHaveBeenCalledWith(
+      261.63,
+      0.5,
+    );
 
     mockCtx.createdOscillators.length = 0;
 
     // Stage 2: Root + Major 3rd (329.63Hz)
     playHarmonicSolve(2);
     expect(mockCtx.createdOscillators.length).toBe(2);
-    expect(mockCtx.createdOscillators[1].frequency.setValueAtTime).toHaveBeenCalledWith(329.63, 0.5);
+    expect(mockCtx.createdOscillators[1].frequency.setValueAtTime).toHaveBeenCalledWith(
+      329.63,
+      0.5,
+    );
 
     mockCtx.createdOscillators.length = 0;
 
     // Stage 3: Triad with Fifth (392.00Hz)
     playHarmonicSolve(3);
     expect(mockCtx.createdOscillators.length).toBe(3);
-    expect(mockCtx.createdOscillators[2].frequency.setValueAtTime).toHaveBeenCalledWith(392.00, 0.5);
+    expect(mockCtx.createdOscillators[2].frequency.setValueAtTime).toHaveBeenCalledWith(
+      392.0,
+      0.5,
+    );
 
     mockCtx.createdOscillators.length = 0;
 
     // Stage 4: Full Octave (523.25Hz)
     playHarmonicSolve(4);
     expect(mockCtx.createdOscillators.length).toBe(4);
-    expect(mockCtx.createdOscillators[3].frequency.setValueAtTime).toHaveBeenCalledWith(523.25, 0.5);
+    expect(mockCtx.createdOscillators[3].frequency.setValueAtTime).toHaveBeenCalledWith(
+      523.25,
+      0.5,
+    );
   });
 
   it("plays error thud with pitch dropping to 50Hz", () => {
@@ -196,11 +208,23 @@ describe("ProceduralSynth WebAudio Engine", () => {
     expect(mockCtx.createdFilters.length).toBeGreaterThan(0);
 
     playTensionWobble();
-    expect(mockCtx.createdOscillators.some((o) => o.frequency.setValueAtTime.mock.calls.some(([freq]) => freq === 110))).toBe(true);
-    expect(mockCtx.createdOscillators.some((o) => o.frequency.setValueAtTime.mock.calls.some(([freq]) => freq === 116))).toBe(true);
+    expect(
+      mockCtx.createdOscillators.some((o) =>
+        o.frequency.setValueAtTime.mock.calls.some(([freq]) => freq === 110),
+      ),
+    ).toBe(true);
+    expect(
+      mockCtx.createdOscillators.some((o) =>
+        o.frequency.setValueAtTime.mock.calls.some(([freq]) => freq === 116),
+      ),
+    ).toBe(true);
 
     playZenBell();
-    expect(mockCtx.createdOscillators.some((o) => o.frequency.setValueAtTime.mock.calls.some(([freq]) => freq === 440))).toBe(true);
+    expect(
+      mockCtx.createdOscillators.some((o) =>
+        o.frequency.setValueAtTime.mock.calls.some(([freq]) => freq === 440),
+      ),
+    ).toBe(true);
   });
 
   it("enforces 100% liveness teardown: closes context and frees references", () => {

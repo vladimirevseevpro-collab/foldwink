@@ -75,9 +75,12 @@ export const STAMP_COLLECTION: readonly CollectibleStamp[] = [
     rarity: "rare",
     icon: "⚔️",
     color: "#c84635",
-    provenanceEn: "Sealed with blackened wax. Proof of victory in a high-stakes Sudden Death trial.",
-    provenanceRu: "Скреплена чёрным сургучом. Знак победы в рискованном испытании Sudden Death.",
-    provenanceDe: "Mit schwarzem Wachs besiegelt. Beweis des Mutes in einem Sudden-Death-Kontrakt.",
+    provenanceEn:
+      "Sealed with blackened wax. Proof of victory in a high-stakes Sudden Death trial.",
+    provenanceRu:
+      "Скреплена чёрным сургучом. Знак победы в рискованном испытании Sudden Death.",
+    provenanceDe:
+      "Mit schwarzem Wachs besiegelt. Beweis des Mutes in einem Sudden-Death-Kontrakt.",
   },
   {
     id: "stamp_gold_charter",
@@ -88,7 +91,8 @@ export const STAMP_COLLECTION: readonly CollectibleStamp[] = [
     rarity: "mythic",
     icon: "👑",
     color: "#ffd700",
-    provenanceEn: "The highest seal of the Guild. Reflects light with authentic gold-leaf brilliance.",
+    provenanceEn:
+      "The highest seal of the Guild. Reflects light with authentic gold-leaf brilliance.",
     provenanceRu: "Высшая печать Гильдии. Переливается на свету оттиском сусального золота.",
     provenanceDe: "Das höchste Siegel der Gilde. Schimmert im Licht wie reines Blattgold.",
   },
@@ -114,32 +118,120 @@ export const STAMP_COLLECTION: readonly CollectibleStamp[] = [
     rarity: "mythic",
     icon: "📜",
     color: "#d4af37",
-    provenanceEn: "An ancient parchment bearing two orthogonal layers of script revealed only by folding.",
-    provenanceRu: "Древний пергамент с двумя ортогональными слоями текста, открывающимися при переворачивании листа.",
-    provenanceDe: "Ein uraltes Pergament mit zwei orthogonalen Schriftlagen, die sich beim Wenden enthüllen.",
+    provenanceEn:
+      "An ancient parchment bearing two orthogonal layers of script revealed only by folding.",
+    provenanceRu:
+      "Древний пергамент с двумя ортогональными слоями текста, открывающимися при переворачивании листа.",
+    provenanceDe:
+      "Ein uraltes Pergament mit zwei orthogonalen Schriftlagen, die sich beim Wenden enthüllen.",
   },
 ];
 
 export const SEALS = [
-  { id: "seal_raven", label: "Raven Crest", labelRu: "Герб Ворона", labelDe: "Raben-Wappen", icon: "🦅" },
-  { id: "seal_compass", label: "Compass Rose", labelRu: "Роза Ветров", labelDe: "Kompassrose", icon: "🧭" },
-  { id: "seal_keyhole", label: "Golden Keyhole", labelRu: "Золотая Скважина", labelDe: "Goldenes Schlüsselloch", icon: "🗝️" },
-  { id: "seal_owl", label: "Nocturnal Owl", labelRu: "Ночная Сова", labelDe: "Nachteule", icon: "🦉" },
-  { id: "seal_laurel", label: "Imperial Laurel", labelRu: "Имперский Лавр", labelDe: "Kaiserlicher Lorbeer", icon: "🌿" },
-  { id: "seal_palimpsest", label: "Dual Archival Seal", labelRu: "Двойная Печать Архива", labelDe: "Doppeltes Archiv-Siegel", icon: "📜" },
+  {
+    id: "seal_raven",
+    label: "Raven Crest",
+    labelRu: "Герб Ворона",
+    labelDe: "Raben-Wappen",
+    icon: "🦅",
+  },
+  {
+    id: "seal_compass",
+    label: "Compass Rose",
+    labelRu: "Роза Ветров",
+    labelDe: "Kompassrose",
+    icon: "🧭",
+  },
+  {
+    id: "seal_keyhole",
+    label: "Golden Keyhole",
+    labelRu: "Золотая Скважина",
+    labelDe: "Goldenes Schlüsselloch",
+    icon: "🗝️",
+  },
+  {
+    id: "seal_owl",
+    label: "Nocturnal Owl",
+    labelRu: "Ночная Сова",
+    labelDe: "Nachteule",
+    icon: "🦉",
+  },
+  {
+    id: "seal_laurel",
+    label: "Imperial Laurel",
+    labelRu: "Имперский Лавр",
+    labelDe: "Kaiserlicher Lorbeer",
+    icon: "🌿",
+  },
+  {
+    id: "seal_palimpsest",
+    label: "Dual Archival Seal",
+    labelRu: "Двойная Печать Архива",
+    labelDe: "Doppeltes Archiv-Siegel",
+    icon: "📜",
+  },
 ];
 
 export const NIBS = [
-  { id: "nib_brass", label: "Brass Italic 1.1mm", labelRu: "Латунное 1.1 мм", labelDe: "Messing Italic 1.1mm", icon: "✒️" },
-  { id: "nib_obsidian", label: "Obsidian Fine Point", labelRu: "Обсидиановое тонкое", labelDe: "Obsidian-Feinfeder", icon: "🖋️" },
-  { id: "nib_silver", label: "Silver Flex 14K", labelRu: "Серебряное Flex 14K", labelDe: "Silber-Flex 14K", icon: "🖊️" },
-  { id: "nib_glass", label: "Murano Glass Dip Pen", labelRu: "Муранское стекло", labelDe: "Murano-Glasfeder", icon: "💎" },
+  {
+    id: "nib_brass",
+    label: "Brass Italic 1.1mm",
+    labelRu: "Латунное 1.1 мм",
+    labelDe: "Messing Italic 1.1mm",
+    icon: "✒️",
+  },
+  {
+    id: "nib_obsidian",
+    label: "Obsidian Fine Point",
+    labelRu: "Обсидиановое тонкое",
+    labelDe: "Obsidian-Feinfeder",
+    icon: "🖋️",
+  },
+  {
+    id: "nib_silver",
+    label: "Silver Flex 14K",
+    labelRu: "Серебряное Flex 14K",
+    labelDe: "Silber-Flex 14K",
+    icon: "🖊️",
+  },
+  {
+    id: "nib_glass",
+    label: "Murano Glass Dip Pen",
+    labelRu: "Муранское стекло",
+    labelDe: "Murano-Glasfeder",
+    icon: "💎",
+  },
 ];
 
 export const TITLES = [
-  { id: "title_truths", labelEn: "Keeper of Small Truths", labelRu: "Хранитель малых истин", labelDe: "Hüter der kleinen Wahrheiten" },
-  { id: "title_connections", labelEn: "Cartographer of Connections", labelRu: "Картограф связей", labelDe: "Kartograph der Verbindungen" },
-  { id: "title_unbroken", labelEn: "The Unbroken Hand", labelRu: "Непоколебимая рука", labelDe: "Die ruhige Hand" },
-  { id: "title_iron_scribe", labelEn: "The Iron Scribe", labelRu: "Железный писец", labelDe: "Der eiserne Schreiber" },
-  { id: "title_grand_archivist", labelEn: "Grand Master Archivist", labelRu: "Верховный архивариус", labelDe: "Großmeister-Archivar" },
+  {
+    id: "title_truths",
+    labelEn: "Keeper of Small Truths",
+    labelRu: "Хранитель малых истин",
+    labelDe: "Hüter der kleinen Wahrheiten",
+  },
+  {
+    id: "title_connections",
+    labelEn: "Cartographer of Connections",
+    labelRu: "Картограф связей",
+    labelDe: "Kartograph der Verbindungen",
+  },
+  {
+    id: "title_unbroken",
+    labelEn: "The Unbroken Hand",
+    labelRu: "Непоколебимая рука",
+    labelDe: "Die ruhige Hand",
+  },
+  {
+    id: "title_iron_scribe",
+    labelEn: "The Iron Scribe",
+    labelRu: "Железный писец",
+    labelDe: "Der eiserne Schreiber",
+  },
+  {
+    id: "title_grand_archivist",
+    labelEn: "Grand Master Archivist",
+    labelRu: "Верховный архивариус",
+    labelDe: "Großmeister-Archivar",
+  },
 ];

@@ -45,15 +45,24 @@ export default {
         ],
       },
       boxShadow: {
-        paper: "0 4px 0 #b5a47e, 0 10px 18px -4px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.95)",
-        paperHover: "0 6px 0 #9e8d67, 0 14px 24px -4px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,1)",
-        paperPressed: "0 1px 0 #b5a47e, 0 3px 6px -2px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.4)",
-        paperSelected: "0 5px 0 #b8573b, 0 14px 24px -4px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.95), 0 0 0 2px rgba(226,122,91,0.6)",
-        paperSelectedPressed: "0 2px 0 #b8573b, 0 6px 10px -4px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.5)",
-        solved1: "0 4px 0 #b88f2e, 0 10px 18px -4px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.6)",
-        solved2: "0 4px 0 #46965c, 0 10px 18px -4px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.6)",
-        solved3: "0 4px 0 #b25445, 0 10px 18px -4px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.6)",
-        solved4: "0 4px 0 #7e69be, 0 10px 18px -4px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.6)",
+        paper:
+          "0 4px 0 #b5a47e, 0 10px 18px -4px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.95)",
+        paperHover:
+          "0 6px 0 #9e8d67, 0 14px 24px -4px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,1)",
+        paperPressed:
+          "0 1px 0 #b5a47e, 0 3px 6px -2px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.4)",
+        paperSelected:
+          "0 5px 0 #b8573b, 0 14px 24px -4px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.95), 0 0 0 2px rgba(226,122,91,0.6)",
+        paperSelectedPressed:
+          "0 2px 0 #b8573b, 0 6px 10px -4px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.5)",
+        solved1:
+          "0 4px 0 #b88f2e, 0 10px 18px -4px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.6)",
+        solved2:
+          "0 4px 0 #46965c, 0 10px 18px -4px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.6)",
+        solved3:
+          "0 4px 0 #b25445, 0 10px 18px -4px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.6)",
+        solved4:
+          "0 4px 0 #7e69be, 0 10px 18px -4px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.6)",
         control: "0 3px 0 #18120e",
         controlPressed: "0 1px 0 #18120e",
         accentControl: "0 3px 0 #8e382c",

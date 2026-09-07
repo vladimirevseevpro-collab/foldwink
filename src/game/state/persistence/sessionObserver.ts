@@ -6,9 +6,7 @@ import { saveActiveSession, clearActiveSession } from "../../../stats/persistenc
 // restores the same puzzle. Clears the session on any transition away from
 // an in-progress game. Narrow selector: only reads {screen, active,
 // puzzle.id}, so ordinary stats/onboarding updates don't touch storage.
-export function sessionPersistenceObserver(
-  store: StoreApi<StoreState>,
-): () => void {
+export function sessionPersistenceObserver(store: StoreApi<StoreState>): () => void {
   let prevActive = store.getState().active;
   let prevScreen = store.getState().screen;
   let prevPuzzleId = store.getState().puzzle?.id ?? null;

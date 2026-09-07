@@ -176,15 +176,14 @@ export function currentBundle(): LangBundle {
     mediumRamped: b.mediumRamped.length > 0 ? b.mediumRamped : EN_BUNDLE.mediumRamped,
     hardRamped: b.hardRamped.length > 0 ? b.hardRamped : EN_BUNDLE.hardRamped,
     getById: (id) =>
-      b.getById(id) ??
-      EN_BUNDLE.getById(id) ??
-      RU_BUNDLE.getById(id) ??
-      DE_BUNDLE.getById(id),
+      b.getById(id) ?? EN_BUNDLE.getById(id) ?? RU_BUNDLE.getById(id) ?? DE_BUNDLE.getById(id),
     getByIndex: (i) => (b.pool.length > 0 ? b.getByIndex(i) : EN_BUNDLE.getByIndex(i)),
-    getEasyByIndex: (i) => (b.easy.length > 0 ? b.getEasyByIndex(i) : EN_BUNDLE.getEasyByIndex(i)),
+    getEasyByIndex: (i) =>
+      b.easy.length > 0 ? b.getEasyByIndex(i) : EN_BUNDLE.getEasyByIndex(i),
     getMediumByIndex: (i) =>
       b.medium.length > 0 ? b.getMediumByIndex(i) : EN_BUNDLE.getMediumByIndex(i),
-    getHardByIndex: (i) => (b.hard.length > 0 ? b.getHardByIndex(i) : EN_BUNDLE.getHardByIndex(i)),
+    getHardByIndex: (i) =>
+      b.hard.length > 0 ? b.getHardByIndex(i) : EN_BUNDLE.getHardByIndex(i),
     getEasyRampedByIndex: (i) =>
       b.easyRamped.length > 0 ? b.getEasyRampedByIndex(i) : EN_BUNDLE.getEasyRampedByIndex(i),
     getMediumRampedByIndex: (i) =>

@@ -47,8 +47,7 @@ export function buildRematchUrl(
 ): string {
   const playerSec = Math.max(1, Math.round(playerDurationMs / 1000));
   const base = `${origin}${pathname}`;
-  const cleanBase =
-    base.endsWith("/") || base.endsWith(".html") ? base : `${base}/`;
+  const cleanBase = base.endsWith("/") || base.endsWith(".html") ? base : `${base}/`;
   return `${cleanBase}?vs=${encodeURIComponent(puzzleId)}&m=${playerMistakes}&t=${playerSec}`;
 }
 
@@ -73,13 +72,29 @@ export function formatDuelResponse(params: DuelResponseParams): string {
     challengerMistakes,
     challengerTimeSec,
   );
-  const rematchUrl = buildRematchUrl(puzzleId, playerMistakes, playerDurationMs, origin, pathname);
+  const rematchUrl = buildRematchUrl(
+    puzzleId,
+    playerMistakes,
+    playerDurationMs,
+    origin,
+    pathname,
+  );
 
   if (lang === "ru") {
     const outcomeLabel =
       outcome === "victory" ? "Победа" : outcome === "tie" ? "Ничья" : "Поражение";
-    const chMistakesWord = challengerMistakes === 1 ? "ошибка" : challengerMistakes >= 2 && challengerMistakes <= 4 ? "ошибки" : "ошибок";
-    const plMistakesWord = playerMistakes === 1 ? "ошибка" : playerMistakes >= 2 && playerMistakes <= 4 ? "ошибки" : "ошибок";
+    const chMistakesWord =
+      challengerMistakes === 1
+        ? "ошибка"
+        : challengerMistakes >= 2 && challengerMistakes <= 4
+          ? "ошибки"
+          : "ошибок";
+    const plMistakesWord =
+      playerMistakes === 1
+        ? "ошибка"
+        : playerMistakes >= 2 && playerMistakes <= 4
+          ? "ошибки"
+          : "ошибок";
 
     return `⚔️ Дуэль принята! Ты: ${challengerMistakes} ${chMistakesWord} (${challengerTimeSec}с) vs Я: ${playerMistakes} ${plMistakesWord} (${playerSec}с) — ${outcomeLabel}! Принять реванш: ${rematchUrl}`;
   }
@@ -94,8 +109,7 @@ export function formatDuelResponse(params: DuelResponseParams): string {
   }
 
   // English fallback
-  const outcomeLabel =
-    outcome === "victory" ? "Victory" : outcome === "tie" ? "Tie" : "Defeat";
+  const outcomeLabel = outcome === "victory" ? "Victory" : outcome === "tie" ? "Tie" : "Defeat";
   const chWord = challengerMistakes === 1 ? "mistake" : "mistakes";
   const plWord = playerMistakes === 1 ? "mistake" : "mistakes";
 

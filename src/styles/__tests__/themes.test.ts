@@ -24,7 +24,17 @@ function installLocalStorage(): void {
     },
   } as Storage;
 
-  (globalThis as unknown as { document?: { documentElement: { setAttribute: (k: string, v: string) => void; getAttribute: (k: string) => string | null; removeAttribute: (k: string) => void } } }).document = {
+  (
+    globalThis as unknown as {
+      document?: {
+        documentElement: {
+          setAttribute: (k: string, v: string) => void;
+          getAttribute: (k: string) => string | null;
+          removeAttribute: (k: string) => void;
+        };
+      };
+    }
+  ).document = {
     documentElement: {
       setAttribute(k: string, v: string) {
         store.set(`__dom_${k}`, v);

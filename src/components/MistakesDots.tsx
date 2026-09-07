@@ -22,9 +22,7 @@ export function MistakesDots({ used, oneAwayLast = false }: Props) {
       aria-live="polite"
       aria-label={t.game.mistakesAria(used, MAX_MISTAKES)}
     >
-      <span className="text-xs uppercase text-muted mr-1">
-        {t.game.mistakesLabel}
-      </span>
+      <span className="text-xs uppercase text-muted mr-1">{t.game.mistakesLabel}</span>
       {dots.map((_, i) => {
         const consumed = i < used;
         const amber = consumed && oneAwayLast && i === lastConsumedIdx;

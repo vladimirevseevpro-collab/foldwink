@@ -423,7 +423,8 @@ export function playSound(event: SoundEvent, options?: PlaySoundOptions): void {
       : event === "select" || event === "deselect" || event === "wrong"
         ? 0.025
         : 0;
-  const rate = jitterRate > 0 ? baseRate * (1 + (Math.random() * 2 - 1) * jitterRate) : baseRate;
+  const rate =
+    jitterRate > 0 ? baseRate * (1 + (Math.random() * 2 - 1) * jitterRate) : baseRate;
 
   const jitterGain =
     options?.gainJitter !== undefined

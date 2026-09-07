@@ -90,16 +90,10 @@ const SCHEMA = {
           severity: { type: "string", enum: ["high", "medium", "low"] },
           explanation: { type: "string" },
           items: {
-            anyOf: [
-              { type: "array", items: { type: "string" } },
-              { type: "null" },
-            ],
+            anyOf: [{ type: "array", items: { type: "string" } }, { type: "null" }],
           },
           groups: {
-            anyOf: [
-              { type: "array", items: { type: "string" } },
-              { type: "null" },
-            ],
+            anyOf: [{ type: "array", items: { type: "string" } }, { type: "null" }],
           },
           suggestedFix: {
             anyOf: [{ type: "string" }, { type: "null" }],
@@ -112,7 +106,9 @@ const SCHEMA = {
 writeFileSync(SCHEMA_PATH, JSON.stringify(SCHEMA, null, 2));
 
 function loadPool({ lang: _lang, dir }) {
-  const files = readdirSync(dir).filter((f) => f.endsWith(".json")).sort();
+  const files = readdirSync(dir)
+    .filter((f) => f.endsWith(".json"))
+    .sort();
   const out = [];
   for (const f of files) {
     try {
@@ -137,8 +133,7 @@ function buildPrompt(lang, tier, puzzles, batchIndex, batchTotal) {
     easy: "concrete, everyday categories; labels should be single-concept.",
     medium:
       "may include wordplay, shared prefix/suffix, or thematic links; must still be solvable without specialist knowledge.",
-    hard:
-      "may include abstract or niche categories; fairness still required — ambiguity is the failure mode.",
+    hard: "may include abstract or niche categories; fairness still required — ambiguity is the failure mode.",
   };
   return `# Foldwink fairness audit — ${langName} / ${tier} (batch ${batchIndex + 1}/${batchTotal})
 
@@ -333,14 +328,10 @@ for (const pool of POOLS) {
           2,
         ),
       );
-      console.log(
-        `${label}: OK in ${elapsed}s — ${payload.findings?.length ?? 0} findings`,
-      );
+      console.log(`${label}: OK in ${elapsed}s — ${payload.findings?.length ?? 0} findings`);
       done += 1;
     }
   }
 }
 
-console.log(
-  `\nPhase B done. batches=${total} ran=${done} skipped=${skipped} failed=${failed}`,
-);
+console.log(`\nPhase B done. batches=${total} ran=${done} skipped=${skipped} failed=${failed}`);

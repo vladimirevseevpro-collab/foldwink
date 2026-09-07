@@ -12,7 +12,10 @@
 
 // Chrome extension storage interface definition without requiring heavy devDependencies
 interface ChromeStorageArea {
-  get(keys: string | string[] | Record<string, unknown> | null, callback?: (items: Record<string, unknown>) => void): Promise<Record<string, unknown>> | void;
+  get(
+    keys: string | string[] | Record<string, unknown> | null,
+    callback?: (items: Record<string, unknown>) => void,
+  ): Promise<Record<string, unknown>> | void;
   set(items: Record<string, unknown>, callback?: () => void): Promise<void> | void;
   remove(keys: string | string[], callback?: () => void): Promise<void> | void;
   clear(callback?: () => void): Promise<void> | void;
@@ -54,7 +57,10 @@ function getLocalStorage(): Storage | null {
   try {
     if (typeof localStorage !== "undefined") return localStorage;
     if (typeof window !== "undefined" && window.localStorage) return window.localStorage;
-    if (typeof globalThis !== "undefined" && (globalThis as { localStorage?: Storage }).localStorage) {
+    if (
+      typeof globalThis !== "undefined" &&
+      (globalThis as { localStorage?: Storage }).localStorage
+    ) {
       return (globalThis as { localStorage?: Storage }).localStorage ?? null;
     }
   } catch {
@@ -75,7 +81,6 @@ export function isLocalStorageAvailable(): boolean {
     return false;
   }
 }
-
 
 /**
  * Synchronous read. Checks memory cache first, then localStorage.
@@ -116,7 +121,6 @@ export function safeRead<T>(key: string, fallback: T): T {
 
   return fallback;
 }
-
 
 /**
  * Synchronous write. Updates memory cache immediately, writes to localStorage,
@@ -286,4 +290,3 @@ export async function initStorageAdapter(): Promise<void> {
 export function resetStorageAdapterForTests(): void {
   memoryCache.clear();
 }
-

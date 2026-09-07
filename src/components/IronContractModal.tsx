@@ -60,7 +60,9 @@ export function IronContractModal({ onClose }: IronContractModalProps) {
 
           <div className="pt-2 border-t border-red-950/60 flex items-center justify-between text-xs">
             <span className="text-muted">{lang === "ru" ? "Ставка:" : "Stake:"}</span>
-            <span className="font-bold text-amber-400">🕯️ {wager} {lang === "ru" ? "Сургуча" : "Wax"}</span>
+            <span className="font-bold text-amber-400">
+              🕯️ {wager} {lang === "ru" ? "Сургуча" : "Wax"}
+            </span>
           </div>
 
           <div className="flex items-center justify-between text-xs font-bold text-yellow-300">
@@ -82,8 +84,12 @@ export function IronContractModal({ onClose }: IronContractModalProps) {
             }`}
           >
             {canAfford
-              ? (lang === "ru" ? "Скрепить печатью и начать" : "Seal & Accept Contract")
-              : (lang === "ru" ? `Недостаточно сургуча (нужно ${wager})` : `Need ${wager} Wax to Enter`)}
+              ? lang === "ru"
+                ? "Скрепить печатью и начать"
+                : "Seal & Accept Contract"
+              : lang === "ru"
+                ? `Недостаточно сургуча (нужно ${wager})`
+                : `Need ${wager} Wax to Enter`}
           </button>
 
           <button

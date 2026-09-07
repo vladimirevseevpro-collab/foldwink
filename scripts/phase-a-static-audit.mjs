@@ -50,7 +50,9 @@ function tokenize(label, lang) {
 }
 
 function loadPool({ lang, dir }) {
-  const files = readdirSync(dir).filter((f) => f.endsWith(".json")).sort();
+  const files = readdirSync(dir)
+    .filter((f) => f.endsWith(".json"))
+    .sort();
   const out = [];
   for (const f of files) {
     try {
@@ -159,8 +161,7 @@ function checkMissingMeta(puzzle, lang) {
   }
   if (!puzzle.meta.categoryType)
     pushFinding(lang, puzzle.id, "MISSING_META", "low", "no categoryType");
-  if (!puzzle.meta.theme)
-    pushFinding(lang, puzzle.id, "MISSING_META", "low", "no theme");
+  if (!puzzle.meta.theme) pushFinding(lang, puzzle.id, "MISSING_META", "low", "no theme");
 }
 
 function checkCrossPuzzleRepetition(pool, lang) {

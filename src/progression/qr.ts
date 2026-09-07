@@ -70,16 +70,89 @@ interface VersionSpec {
 }
 
 const VERSION_SPECS: VersionSpec[] = [
-  { version: 1, totalCodewords: 26, dataCodewords: 19, ecCodewordsPerBlock: 7, blocks: [{ count: 1, dataCodewords: 19 }], alignments: [] },
-  { version: 2, totalCodewords: 44, dataCodewords: 34, ecCodewordsPerBlock: 10, blocks: [{ count: 1, dataCodewords: 34 }], alignments: [6, 18] },
-  { version: 3, totalCodewords: 70, dataCodewords: 55, ecCodewordsPerBlock: 15, blocks: [{ count: 1, dataCodewords: 55 }], alignments: [6, 22] },
-  { version: 4, totalCodewords: 100, dataCodewords: 80, ecCodewordsPerBlock: 20, blocks: [{ count: 1, dataCodewords: 80 }], alignments: [6, 26] },
-  { version: 5, totalCodewords: 134, dataCodewords: 108, ecCodewordsPerBlock: 26, blocks: [{ count: 1, dataCodewords: 108 }], alignments: [6, 30] },
-  { version: 6, totalCodewords: 172, dataCodewords: 136, ecCodewordsPerBlock: 18, blocks: [{ count: 2, dataCodewords: 68 }], alignments: [6, 34] },
-  { version: 7, totalCodewords: 196, dataCodewords: 156, ecCodewordsPerBlock: 20, blocks: [{ count: 2, dataCodewords: 78 }], alignments: [6, 22, 38] },
-  { version: 8, totalCodewords: 242, dataCodewords: 194, ecCodewordsPerBlock: 24, blocks: [{ count: 2, dataCodewords: 97 }], alignments: [6, 24, 42] },
-  { version: 9, totalCodewords: 292, dataCodewords: 232, ecCodewordsPerBlock: 30, blocks: [{ count: 2, dataCodewords: 116 }], alignments: [6, 26, 46] },
-  { version: 10, totalCodewords: 346, dataCodewords: 274, ecCodewordsPerBlock: 18, blocks: [{ count: 2, dataCodewords: 68 }, { count: 2, dataCodewords: 69 }], alignments: [6, 28, 50] },
+  {
+    version: 1,
+    totalCodewords: 26,
+    dataCodewords: 19,
+    ecCodewordsPerBlock: 7,
+    blocks: [{ count: 1, dataCodewords: 19 }],
+    alignments: [],
+  },
+  {
+    version: 2,
+    totalCodewords: 44,
+    dataCodewords: 34,
+    ecCodewordsPerBlock: 10,
+    blocks: [{ count: 1, dataCodewords: 34 }],
+    alignments: [6, 18],
+  },
+  {
+    version: 3,
+    totalCodewords: 70,
+    dataCodewords: 55,
+    ecCodewordsPerBlock: 15,
+    blocks: [{ count: 1, dataCodewords: 55 }],
+    alignments: [6, 22],
+  },
+  {
+    version: 4,
+    totalCodewords: 100,
+    dataCodewords: 80,
+    ecCodewordsPerBlock: 20,
+    blocks: [{ count: 1, dataCodewords: 80 }],
+    alignments: [6, 26],
+  },
+  {
+    version: 5,
+    totalCodewords: 134,
+    dataCodewords: 108,
+    ecCodewordsPerBlock: 26,
+    blocks: [{ count: 1, dataCodewords: 108 }],
+    alignments: [6, 30],
+  },
+  {
+    version: 6,
+    totalCodewords: 172,
+    dataCodewords: 136,
+    ecCodewordsPerBlock: 18,
+    blocks: [{ count: 2, dataCodewords: 68 }],
+    alignments: [6, 34],
+  },
+  {
+    version: 7,
+    totalCodewords: 196,
+    dataCodewords: 156,
+    ecCodewordsPerBlock: 20,
+    blocks: [{ count: 2, dataCodewords: 78 }],
+    alignments: [6, 22, 38],
+  },
+  {
+    version: 8,
+    totalCodewords: 242,
+    dataCodewords: 194,
+    ecCodewordsPerBlock: 24,
+    blocks: [{ count: 2, dataCodewords: 97 }],
+    alignments: [6, 24, 42],
+  },
+  {
+    version: 9,
+    totalCodewords: 292,
+    dataCodewords: 232,
+    ecCodewordsPerBlock: 30,
+    blocks: [{ count: 2, dataCodewords: 116 }],
+    alignments: [6, 26, 46],
+  },
+  {
+    version: 10,
+    totalCodewords: 346,
+    dataCodewords: 274,
+    ecCodewordsPerBlock: 18,
+    blocks: [
+      { count: 2, dataCodewords: 68 },
+      { count: 2, dataCodewords: 69 },
+    ],
+    alignments: [6, 28, 50],
+  },
 ];
 
 // ISO/IEC 18004 Table D.1 - Version Information (BCH 18, 6)
@@ -208,7 +281,13 @@ export function generateQrMatrix(text: string): boolean[][] {
         if (tr >= 0 && tr < size && tc >= 0 && tc < size) {
           if (r === -1 || r === 7 || c === -1 || c === 7) {
             matrix[tr][tc] = false; // separator
-          } else if (r === 0 || r === 6 || c === 0 || c === 6 || (r >= 2 && r <= 4 && c >= 2 && c <= 4)) {
+          } else if (
+            r === 0 ||
+            r === 6 ||
+            c === 0 ||
+            c === 6 ||
+            (r >= 2 && r <= 4 && c >= 2 && c <= 4)
+          ) {
             matrix[tr][tc] = true;
           } else {
             matrix[tr][tc] = false;
@@ -226,11 +305,7 @@ export function generateQrMatrix(text: string): boolean[][] {
   if (spec.alignments.length > 0) {
     for (const r of spec.alignments) {
       for (const c of spec.alignments) {
-        if (
-          (r < 9 && c < 9) ||
-          (r < 9 && c >= size - 9) ||
-          (r >= size - 9 && c < 9)
-        ) {
+        if ((r < 9 && c < 9) || (r < 9 && c >= size - 9) || (r >= size - 9 && c < 9)) {
           continue;
         }
         for (let ar = -2; ar <= 2; ar++) {

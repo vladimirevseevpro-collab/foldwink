@@ -28,12 +28,24 @@ describe("duelResponse", () => {
   });
 
   it("builds correct rematch url", () => {
-    const url = buildRematchUrl("puzzle-123", 1, 32000, "https://neural-void.com", "/foldwink/");
+    const url = buildRematchUrl(
+      "puzzle-123",
+      1,
+      32000,
+      "https://neural-void.com",
+      "/foldwink/",
+    );
     expect(url).toBe("https://neural-void.com/foldwink/?vs=puzzle-123&m=1&t=32");
   });
 
   it("builds correct rematch url with index.html without trailing slash after html", () => {
-    const url = buildRematchUrl("puzzle-123", 0, 15000, "https://neural-void.com", "/foldwink/index.html");
+    const url = buildRematchUrl(
+      "puzzle-123",
+      0,
+      15000,
+      "https://neural-void.com",
+      "/foldwink/index.html",
+    );
     expect(url).toBe("https://neural-void.com/foldwink/index.html?vs=puzzle-123&m=0&t=15");
   });
 
@@ -52,7 +64,9 @@ describe("duelResponse", () => {
     expect(res).toContain("⚔️ Дуэль принята!");
     expect(res).toContain("Ты: 2 ошибки (60с) vs Я: 1 ошибка (45с)");
     expect(res).toContain("Победа!");
-    expect(res).toContain("Принять реванш: https://neural-void.com/foldwink/?vs=puzzle-ru-1&m=1&t=45");
+    expect(res).toContain(
+      "Принять реванш: https://neural-void.com/foldwink/?vs=puzzle-ru-1&m=1&t=45",
+    );
   });
 
   it("formats English duel response correctly", () => {
@@ -70,7 +84,9 @@ describe("duelResponse", () => {
     expect(res).toContain("⚔️ Duel accepted!");
     expect(res).toContain("You: 1 mistake (30s) vs Me: 2 mistakes (25s)");
     expect(res).toContain("Defeat!");
-    expect(res).toContain("Take revenge: https://neural-void.com/foldwink/?vs=puzzle-en-1&m=2&t=25");
+    expect(res).toContain(
+      "Take revenge: https://neural-void.com/foldwink/?vs=puzzle-en-1&m=2&t=25",
+    );
   });
 
   it("formats German duel response correctly", () => {
@@ -88,6 +104,8 @@ describe("duelResponse", () => {
     expect(res).toContain("⚔️ Duell angenommen!");
     expect(res).toContain("Du: 0 Fehler (50s) vs Ich: 0 Fehler (50s)");
     expect(res).toContain("Unentschieden!");
-    expect(res).toContain("Revanche fordern: https://neural-void.com/foldwink/?vs=puzzle-de-1&m=0&t=50");
+    expect(res).toContain(
+      "Revanche fordern: https://neural-void.com/foldwink/?vs=puzzle-de-1&m=0&t=50",
+    );
   });
 });

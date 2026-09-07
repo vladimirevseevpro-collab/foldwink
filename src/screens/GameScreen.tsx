@@ -24,7 +24,6 @@ import {
 import { GameTimer } from "../components/GameTimer";
 import { useT } from "../i18n/useLanguage";
 
-
 export function GameScreen() {
   const active = useGameStore((s) => s.active);
   const puzzle = useGameStore((s) => s.puzzle);
@@ -104,7 +103,8 @@ export function GameScreen() {
       // Row 1 = 1.0 (Root C3), Row 2 = 1.25 (Major 3rd E3), Row 3 = 1.5 (Fifth G3)
       const solvedCount = active?.solvedGroupIds.length ?? 1;
       const pitchRatios = [1.0, 1.25, 1.5, 2.0];
-      const rate = pitchRatios[Math.min(Math.max(0, solvedCount - 1), pitchRatios.length - 1)] ?? 1.0;
+      const rate =
+        pitchRatios[Math.min(Math.max(0, solvedCount - 1), pitchRatios.length - 1)] ?? 1.0;
       playHarmonicSolve(Math.min(4, Math.max(1, solvedCount)) as 1 | 2 | 3 | 4);
       playOrigamiFold();
       play("correct", { playbackRate: rate });
@@ -171,7 +171,6 @@ export function GameScreen() {
     prevWinkedId.current = active.winkedGroupId;
   }, [active, puzzle, play, haptic]);
 
-
   if (!active || !puzzle) {
     return (
       <div className="text-center text-muted p-8">
@@ -203,9 +202,11 @@ export function GameScreen() {
     if (!already && active.selection.length >= SELECTION_SIZE) return;
 
     // Organic pitch variance & dry procedural card click
-    const basePitch = already ? 0.94 : [1.0, 1.05, 1.1, 1.15][active.selection.length] ?? 1.0;
+    const basePitch = already ? 0.94 : ([1.0, 1.05, 1.1, 1.15][active.selection.length] ?? 1.0);
     playCardClick(basePitch);
-    play(already ? "deselect" : "select", { playbackRate: basePitch * (0.98 + Math.random() * 0.04) });
+    play(already ? "deselect" : "select", {
+      playbackRate: basePitch * (0.98 + Math.random() * 0.04),
+    });
 
     haptic(already ? "deselect" : "select");
     toggleSelection(value);
@@ -237,137 +238,137 @@ export function GameScreen() {
       )}
       <div className={`transition-shadow rounded-2xl ${flashRingClass}`}>
         <Header
-        title={puzzle.title}
-        subtitle={
-          `${t.difficulty[puzzle.difficulty].toUpperCase()} · ${
-            active.mode === "daily"
-              ? t.mode.daily
-              : active.mode === "zen"
-                ? "ZEN STREAK 🧘"
-                : t.mode.standard
-          }` +
-          (active.mode === "daily" && !active.countsToStats ? ` · ${t.mode.replay}` : "")
-        }
-        right={
-          <div className="flex items-center gap-3">
-            <GameTimer startedAt={active.startedAt} endedAt={active.endedAt} ariaLabel={t.game.elapsedAria} />
-            <MistakesDots used={active.mistakesUsed} oneAwayLast={flash === "one-away"} />
-          </div>
-        }
-      />
-      <FoldwinkTabs
-        puzzle={puzzle}
-        solvedGroupIds={active.solvedGroupIds}
-        winkedGroupId={active.winkedGroupId}
-        onWink={winkTab}
-        gameEnded={!!active.result}
-      />
-      <div className="relative">
-        <OrigamiConfetti triggerKey={confettiTrigger} colorIndex={latestSolvedColor} />
-        <Grid
-          label={t.game.gridAria}
-          shake={flash === "incorrect" || flash === "one-away"}
-        >
-          {/* Solved groups displayed as compact origami fold-lock horizontal category bars */}
-          {active.solvedGroupIds.map((gId) => {
-            const g = puzzle.groups.find((x) => x.id === gId);
-            if (!g) return null;
-            return (
-              <OrigamiFoldLockRow
-                key={g.id}
-                group={g}
-                colorIndex={colorIndexForGroup(puzzle, g.id)}
-                isNew={g.id === newlySolvedGroupId}
+          title={puzzle.title}
+          subtitle={
+            `${t.difficulty[puzzle.difficulty].toUpperCase()} · ${
+              active.mode === "daily"
+                ? t.mode.daily
+                : active.mode === "zen"
+                  ? "ZEN STREAK 🧘"
+                  : t.mode.standard
+            }` + (active.mode === "daily" && !active.countsToStats ? ` · ${t.mode.replay}` : "")
+          }
+          right={
+            <div className="flex items-center gap-3">
+              <GameTimer
+                startedAt={active.startedAt}
+                endedAt={active.endedAt}
+                ariaLabel={t.game.elapsedAria}
               />
-            );
-          })}
-
-          {/* Active unsolved cards */}
-          {active.order
-            .filter((val) => !solvedItems.has(val))
-            .map((value, index) => {
-              const isSelected = selectedSet.has(value);
-              const state = isSelected ? "selected" : "idle";
+              <MistakesDots used={active.mistakesUsed} oneAwayLast={flash === "one-away"} />
+            </div>
+          }
+        />
+        <FoldwinkTabs
+          puzzle={puzzle}
+          solvedGroupIds={active.solvedGroupIds}
+          winkedGroupId={active.winkedGroupId}
+          onWink={winkTab}
+          gameEnded={!!active.result}
+        />
+        <div className="relative">
+          <OrigamiConfetti triggerKey={confettiTrigger} colorIndex={latestSolvedColor} />
+          <Grid label={t.game.gridAria} shake={flash === "incorrect" || flash === "one-away"}>
+            {/* Solved groups displayed as compact origami fold-lock horizontal category bars */}
+            {active.solvedGroupIds.map((gId) => {
+              const g = puzzle.groups.find((x) => x.id === gId);
+              if (!g) return null;
               return (
-                <Card
-                  key={value}
-                  value={value}
-                  state={state}
-                  dealIndex={index}
-                  isWobbling={flash === "one-away" && isSelected}
-                  wobblePhase={active.selection.indexOf(value)}
-                  disabled={!!active.result}
-                  onClick={() => handleToggle(value)}
+                <OrigamiFoldLockRow
+                  key={g.id}
+                  group={g}
+                  colorIndex={colorIndexForGroup(puzzle, g.id)}
+                  isNew={g.id === newlySolvedGroupId}
                 />
               );
             })}
-        </Grid>
-      </div>
 
-      <div
-        className="mt-2 h-5 flex items-center justify-center text-[11px] uppercase tracking-[0.14em]"
-        role="status"
-        aria-live="polite"
-      >
-        {flash === "one-away" && (
-          <span className="text-[#e0b25e] font-semibold">✦ {t.game.oneAway}</span>
-        )}
-      </div>
-      <div className="mt-3 flex items-center justify-between gap-3 max-w-md mx-auto">
-        <div className="flex items-center gap-2" aria-live="polite">
-          <div
-            className="flex gap-1"
-            role="img"
-            aria-label={t.game.selectedAria(active.selection.length, SELECTION_SIZE)}
-          >
-            {Array.from({ length: SELECTION_SIZE }).map((_, i) => (
-              <span
-                key={i}
-                className={`inline-block w-2 h-2 rounded-full ${
-                  i < active.selection.length ? "bg-accent" : "bg-[#2e343f]"
-                }`}
-              />
-            ))}
-          </div>
-          <span className="text-sm font-semibold text-text tabular-nums">
-            {active.selection.length}/{SELECTION_SIZE}
-          </span>
+            {/* Active unsolved cards */}
+            {active.order
+              .filter((val) => !solvedItems.has(val))
+              .map((value, index) => {
+                const isSelected = selectedSet.has(value);
+                const state = isSelected ? "selected" : "idle";
+                return (
+                  <Card
+                    key={value}
+                    value={value}
+                    state={state}
+                    dealIndex={index}
+                    isWobbling={flash === "one-away" && isSelected}
+                    wobblePhase={active.selection.indexOf(value)}
+                    disabled={!!active.result}
+                    onClick={() => handleToggle(value)}
+                  />
+                );
+              })}
+          </Grid>
         </div>
-        <div className="flex gap-2">
-          <Button variant="ghost" onClick={reshuffleActive} aria-label={t.game.shuffle}>
-            <span aria-hidden="true">⇄</span>
-          </Button>
-          <Button
-            variant="secondary"
-            onClick={clearSelection}
-            disabled={active.selection.length === 0}
-          >
-            {t.game.clear}
-          </Button>
-          <Button
-            onClick={handleSubmit}
-            disabled={!canSubmit(active.selection)}
-            className={
-              canSubmit(active.selection)
-                ? "ring-2 ring-accent/40 shadow-[0_0_0_4px_rgba(124,196,255,0.12)]"
-                : ""
-            }
-          >
-            {t.game.submit}
-          </Button>
-        </div>
-      </div>
-      <div className="mt-6 text-center">
-        <button
-          className={`text-sm underline underline-offset-2 transition-colors ${
-            quitArmed ? "text-danger" : "text-muted hover:text-text"
-          }`}
-          onClick={handleQuit}
+
+        <div
+          className="mt-2 h-5 flex items-center justify-center text-[11px] uppercase tracking-[0.14em]"
+          role="status"
+          aria-live="polite"
         >
-          {quitArmed ? t.game.quitConfirm : t.game.quitToMenu}
-        </button>
+          {flash === "one-away" && (
+            <span className="text-[#e0b25e] font-semibold">✦ {t.game.oneAway}</span>
+          )}
+        </div>
+        <div className="mt-3 flex items-center justify-between gap-3 max-w-md mx-auto">
+          <div className="flex items-center gap-2" aria-live="polite">
+            <div
+              className="flex gap-1"
+              role="img"
+              aria-label={t.game.selectedAria(active.selection.length, SELECTION_SIZE)}
+            >
+              {Array.from({ length: SELECTION_SIZE }).map((_, i) => (
+                <span
+                  key={i}
+                  className={`inline-block w-2 h-2 rounded-full ${
+                    i < active.selection.length ? "bg-accent" : "bg-[#2e343f]"
+                  }`}
+                />
+              ))}
+            </div>
+            <span className="text-sm font-semibold text-text tabular-nums">
+              {active.selection.length}/{SELECTION_SIZE}
+            </span>
+          </div>
+          <div className="flex gap-2">
+            <Button variant="ghost" onClick={reshuffleActive} aria-label={t.game.shuffle}>
+              <span aria-hidden="true">⇄</span>
+            </Button>
+            <Button
+              variant="secondary"
+              onClick={clearSelection}
+              disabled={active.selection.length === 0}
+            >
+              {t.game.clear}
+            </Button>
+            <Button
+              onClick={handleSubmit}
+              disabled={!canSubmit(active.selection)}
+              className={
+                canSubmit(active.selection)
+                  ? "ring-2 ring-accent/40 shadow-[0_0_0_4px_rgba(124,196,255,0.12)]"
+                  : ""
+              }
+            >
+              {t.game.submit}
+            </Button>
+          </div>
+        </div>
+        <div className="mt-6 text-center">
+          <button
+            className={`text-sm underline underline-offset-2 transition-colors ${
+              quitArmed ? "text-danger" : "text-muted hover:text-text"
+            }`}
+            onClick={handleQuit}
+          >
+            {quitArmed ? t.game.quitConfirm : t.game.quitToMenu}
+          </button>
+        </div>
       </div>
-    </div>
     </>
   );
 }

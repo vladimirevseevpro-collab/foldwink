@@ -413,8 +413,7 @@ function validatePuzzle(p) {
   if (!Array.isArray(p.groups) || p.groups.length !== 4) return "need exactly 4 groups";
   const allItems = new Set();
   for (const g of p.groups) {
-    if (!Array.isArray(g.items) || g.items.length !== 4)
-      return `group ${g.id} needs 4 items`;
+    if (!Array.isArray(g.items) || g.items.length !== 4) return `group ${g.id} needs 4 items`;
     if (p.difficulty === "medium" && !g.revealHint)
       return `medium group ${g.id} missing revealHint`;
     for (const item of g.items) {
@@ -479,9 +478,7 @@ async function main() {
   }
 
   const existing = new Set(
-    fs.existsSync(OUT_DIR)
-      ? fs.readdirSync(OUT_DIR).map((f) => path.basename(f, ".json"))
-      : [],
+    fs.existsSync(OUT_DIR) ? fs.readdirSync(OUT_DIR).map((f) => path.basename(f, ".json")) : [],
   );
 
   const todo = [];

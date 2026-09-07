@@ -51,12 +51,18 @@ interface Puzzle {
   meta?: PuzzleMeta;
 }
 
-const POOL_DIR = path.resolve("puzzles/pool");
+const poolArg = process.argv.find((arg) => arg.startsWith("--dir="));
+const referenceArg = process.argv.find((arg) => arg.startsWith("--reference-dir="));
+const POOL_DIR = path.resolve(poolArg?.slice("--dir=".length) || "puzzles/pool");
+const REFERENCE_DIR = referenceArg
+  ? path.resolve(referenceArg.slice("--reference-dir=".length))
+  : null;
 const MAX_ITEM_LEN = 22;
 const MIN_ITEM_LEN = 2;
 
 const errors: string[] = [];
 const warnings: string[] = [];
+const verboseWarnings = process.argv.includes("--verbose");
 
 function fail(file: string, msg: string): void {
   errors.push(`[${file}] ${msg}`);
@@ -76,6 +82,72 @@ function readJsonFiles(dir: string): { file: string; json: unknown }[] {
       file: f,
       json: JSON.parse(fs.readFileSync(path.join(dir, f), "utf8")),
     }));
+}
+
+function groupSignature(items: readonly string[]): string {
+  return items.map(comparisonToken).sort().join("\u0001");
+}
+
+function readReferenceGroups(dir: string): Map<string, { puzzleId: string; label: string }[]> {
+  const groups = new Map<string, { puzzleId: string; label: string }[]>();
+  for (const { json } of readJsonFiles(dir)) {
+    if (!json || typeof json !== "object") continue;
+    const raw = json as Record<string, unknown>;
+    if (typeof raw.id !== "string" || !Array.isArray(raw.groups)) continue;
+    for (const groupRaw of raw.groups) {
+      if (!groupRaw || typeof groupRaw !== "object") continue;
+      const group = groupRaw as Record<string, unknown>;
+      if (
+        typeof group.label !== "string" ||
+        !Array.isArray(group.items) ||
+        group.items.length !== 4 ||
+        !group.items.every((item) => typeof item === "string" && item.trim())
+      )
+        continue;
+      const signature = groupSignature(group.items as string[]);
+      const matches = groups.get(signature) ?? [];
+      matches.push({ puzzleId: raw.id, label: group.label });
+      groups.set(signature, matches);
+    }
+  }
+  return groups;
+}
+
+interface ReferenceGroupItems {
+  puzzleId: string;
+  label: string;
+  items: string[];
+}
+
+function readReferenceGroupItems(dir: string): ReferenceGroupItems[] {
+  const groups: ReferenceGroupItems[] = [];
+  for (const { json } of readJsonFiles(dir)) {
+    if (!json || typeof json !== "object") continue;
+    const raw = json as Record<string, unknown>;
+    if (typeof raw.id !== "string" || !Array.isArray(raw.groups)) continue;
+    for (const groupRaw of raw.groups) {
+      if (!groupRaw || typeof groupRaw !== "object") continue;
+      const group = groupRaw as Record<string, unknown>;
+      if (
+        typeof group.label !== "string" ||
+        !Array.isArray(group.items) ||
+        group.items.length !== 4 ||
+        !group.items.every((item) => typeof item === "string" && item.trim())
+      )
+        continue;
+      groups.push({
+        puzzleId: raw.id,
+        label: group.label,
+        items: (group.items as string[]).map(comparisonToken),
+      });
+    }
+  }
+  return groups;
+}
+
+function sharedItemCount(items: readonly string[], referenceItems: readonly string[]): number {
+  const reference = new Set(referenceItems);
+  return items.reduce((count, item) => count + (reference.has(item) ? 1 : 0), 0);
 }
 
 function validatePuzzle(file: string, raw: unknown): Puzzle | null {
@@ -147,14 +219,31 @@ function validatePuzzle(file: string, raw: unknown): Puzzle | null {
     }
   }
 
-  // Validate revealHint fields (Foldwink Tabs mechanic, medium puzzles).
-  if (v.difficulty === "medium") {
+  // Validate revealHint fields (Foldwink Tabs mechanic, medium and hard puzzles).
+  if (v.difficulty === "medium" || v.difficulty === "hard") {
     const hintSamples: string[] = [];
     for (const gRaw of v.groups as unknown[]) {
       if (!gRaw || typeof gRaw !== "object") continue;
       const g = gRaw as Record<string, unknown>;
-      if (g.revealHint === undefined) continue;
+      if (g.revealHint === undefined) {
+        warn(
+          file,
+          "group " +
+            String(g.id) +
+            " has no revealHint; label fallback needs Foldwink Tab review",
+        );
+        continue;
+      }
       if (typeof g.revealHint !== "string" || !g.revealHint.trim()) {
+        if (v.difficulty === "hard") {
+          warn(
+            file,
+            "group " +
+              String(g.id) +
+              " has an empty revealHint; label fallback needs Foldwink Tab review",
+          );
+          continue;
+        }
         fail(file, `group ${String(g.id)} revealHint must be a non-empty string`);
         continue;
       }
@@ -200,6 +289,18 @@ function normaliseToken(s: string): string {
     .replace(/\s+/g, " ");
 }
 
+function comparisonToken(s: string): string {
+  const words = normaliseToken(s).split(" ");
+  const lastIndex = words.length - 1;
+  const last = words[lastIndex];
+  if (last.length > 4 && last.endsWith("ies")) {
+    words[lastIndex] = last.slice(0, -3) + "y";
+  } else if (last.length > 3 && last.endsWith("s") && !last.endsWith("ss")) {
+    words[lastIndex] = last.slice(0, -1);
+  }
+  return words.join(" ");
+}
+
 function labelTokens(label: string): string[] {
   return normaliseToken(label)
     .split(" ")
@@ -230,8 +331,14 @@ const NICHE_CHAR = /[^\p{L}\p{N}\s'’\-.]/u;
 
 function main(): void {
   const files = readJsonFiles(POOL_DIR);
+  const referenceGroups =
+    REFERENCE_DIR && REFERENCE_DIR !== POOL_DIR
+      ? readReferenceGroups(REFERENCE_DIR)
+      : new Map();
+  const referenceGroupItems =
+    REFERENCE_DIR && REFERENCE_DIR !== POOL_DIR ? readReferenceGroupItems(REFERENCE_DIR) : [];
   if (files.length === 0) {
-    console.log("No puzzle files in puzzles/pool/.");
+    console.log(`No puzzle files in ${POOL_DIR}.`);
     process.exit(1);
   }
 
@@ -268,6 +375,44 @@ function main(): void {
       continue;
     }
     seenPuzzleIds.set(puzzle.id, file);
+
+    if (referenceGroups.size > 0) {
+      for (const group of puzzle.groups) {
+        const signature = groupSignature(group.items);
+        const matches = referenceGroups.get(signature);
+        if (matches?.length) {
+          for (const match of matches) {
+            warn(
+              file,
+              'group "' +
+                group.label +
+                '" exactly repeats active group "' +
+                match.label +
+                '" in ' +
+                match.puzzleId,
+            );
+          }
+        }
+        const comparisonItems = group.items.map(comparisonToken);
+        for (const match of referenceGroupItems) {
+          const overlap = sharedItemCount(comparisonItems, match.items);
+          if (overlap >= 3 && signature !== groupSignature(match.items)) {
+            warn(
+              file,
+              'group "' +
+                group.label +
+                '" shares ' +
+                overlap +
+                '/4 items with active group "' +
+                match.label +
+                '" in ' +
+                match.puzzleId +
+                " - editorial review recommended",
+            );
+          }
+        }
+      }
+    }
 
     if (puzzle.difficulty === "easy") easy++;
     if (puzzle.difficulty === "medium") {
@@ -369,7 +514,42 @@ function main(): void {
   const distinctLabelTokens = labelTokenIndex.size;
   const diversityScore = validCount > 0 ? distinctLabels / (validCount * 4) : 0; // 1.0 = every group label unique
 
-  for (const w of warnings) console.warn("WARN " + w);
+  const warningCategory = (warning: string): string => {
+    if (warning.includes("revealHint")) return "tabs";
+    if (
+      warning.includes("exceeds") ||
+      warning.includes("extremely short") ||
+      warning.includes("is long")
+    )
+      return "mobile-layout";
+    if (warning.includes("appears in") || warning.includes("theme signature"))
+      return "cross-puzzle-repeat";
+    if (warning.includes("shares ") && warning.includes("items with active group"))
+      return "near-duplicate";
+    if (warning.includes("fairness risk")) return "editorial-risk";
+    if (warning.includes("unusual characters")) return "character";
+    return "editorial";
+  };
+  const warningCounts = new Map<string, number>();
+  for (const warning of warnings) {
+    const category = warningCategory(warning);
+    warningCounts.set(category, (warningCounts.get(category) ?? 0) + 1);
+  }
+  if (verboseWarnings) {
+    for (const warning of warnings) console.warn("WARN " + warning);
+  } else if (warnings.length > 0) {
+    const summary = Array.from(warningCounts.entries())
+      .sort(([a], [b]) => a.localeCompare(b))
+      .map(([category, count]) => category + "=" + count)
+      .join(", ");
+    console.log(
+      "Editorial review queue: " +
+        warnings.length +
+        " advisory item(s) (" +
+        summary +
+        "). Run with --verbose for details.",
+    );
+  }
 
   if (errors.length > 0) {
     for (const e of errors) console.error("ERROR " + e);
@@ -401,6 +581,9 @@ function main(): void {
     console.log(
       `Medium mix: ${wordplayMediums}/${totalMediums} flagged wordplay (${wordplayPct}%) — target ≤ 25%.`,
     );
+  }
+  if (REFERENCE_DIR && REFERENCE_DIR !== POOL_DIR) {
+    console.log("Reference check: compared candidate groups against " + REFERENCE_DIR + ".");
   }
   if (batchCounts.size > 0) {
     const batchLine = Array.from(batchCounts.entries())

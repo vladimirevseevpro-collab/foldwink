@@ -27,7 +27,14 @@ export function formatDuration(ms: number): string {
 }
 
 export interface PlayerArchetype {
-  id: "sniper" | "speed_demon" | "gambler" | "purist" | "detective" | "strategist" | "persistent";
+  id:
+    | "sniper"
+    | "speed_demon"
+    | "gambler"
+    | "purist"
+    | "detective"
+    | "strategist"
+    | "persistent";
   title: string;
   icon: string;
   badge: string;

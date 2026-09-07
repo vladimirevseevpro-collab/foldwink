@@ -93,9 +93,9 @@ const metrics = await page.evaluate(() => {
   // On iPhone Safari that is the iOS "Add to Home Screen" tip paragraph;
   // elsewhere it is the last Stats button. Ignore <main>'s padding — it
   // always adds ~72px and would give a false-positive overlap.
-  const menuKids = Array.from(
-    main?.querySelectorAll(":scope > div > *") ?? [],
-  ).filter((el) => el.getBoundingClientRect().height > 0);
+  const menuKids = Array.from(main?.querySelectorAll(":scope > div > *") ?? []).filter(
+    (el) => el.getBoundingClientRect().height > 0,
+  );
   const lastEl = menuKids[menuKids.length - 1];
   const lastR = lastEl?.getBoundingClientRect();
   const iosTip = Array.from(document.querySelectorAll("p")).find((p) =>
@@ -112,16 +112,11 @@ const metrics = await page.evaluate(() => {
     tipBottom: tipR ? tipR.bottom : null,
     // Danger zone = last 90px of viewport (Safari bottom toolbar).
     // Measure against the last real content element, not <main>'s padding.
-    dangerOverlap: lastBottom
-      ? Math.max(0, lastBottom - (window.innerHeight - 90))
-      : 0,
+    dangerOverlap: lastBottom ? Math.max(0, lastBottom - (window.innerHeight - 90)) : 0,
   };
 });
 console.log("metrics:", metrics);
 
-await writeFile(
-  path.join(OUT_DIR, "summary.json"),
-  JSON.stringify(metrics, null, 2),
-);
+await writeFile(path.join(OUT_DIR, "summary.json"), JSON.stringify(metrics, null, 2));
 await browser.close();
 console.log(`snapshot + summary in ${path.relative(process.cwd(), OUT_DIR)}`);

@@ -59,7 +59,11 @@ export function EnvelopeUnboxingModal({ rewards, onClose }: EnvelopeUnboxingModa
                 🕯️
               </div>
               <span className="text-[11px] font-bold text-accent tracking-wider uppercase">
-                {lang === "ru" ? "Сорвать печать" : lang === "de" ? "Siegel brechen" : "Break Wax Seal"}
+                {lang === "ru"
+                  ? "Сорвать печать"
+                  : lang === "de"
+                    ? "Siegel brechen"
+                    : "Break Wax Seal"}
               </span>
             </div>
 
@@ -75,15 +79,21 @@ export function EnvelopeUnboxingModal({ rewards, onClose }: EnvelopeUnboxingModa
           <div className="space-y-4 py-2 animate-in zoom-in-95 duration-200">
             <div className="text-xs uppercase tracking-widest font-bold text-accent">
               {rewards.contractResult === "won"
-                ? (lang === "ru" ? "⚔️ Железный Контракт Выполнен!" : "⚔️ Iron Contract Complete!")
-                : (lang === "ru" ? "📜 Награды Архивариуса" : "📜 Dispatch Unboxed")}
+                ? lang === "ru"
+                  ? "⚔️ Железный Контракт Выполнен!"
+                  : "⚔️ Iron Contract Complete!"
+                : lang === "ru"
+                  ? "📜 Награды Архивариуса"
+                  : "📜 Dispatch Unboxed"}
             </div>
 
             {/* Currency rewards */}
             <div className="grid grid-cols-3 gap-2 py-2">
               <div className="p-2.5 rounded-xl border border-line bg-surfaceHi/50">
                 <div className="text-lg font-extrabold text-accent">+{rewards.xpGained}</div>
-                <div className="text-[10px] text-muted uppercase font-bold tracking-wider">XP</div>
+                <div className="text-[10px] text-muted uppercase font-bold tracking-wider">
+                  XP
+                </div>
               </div>
               <div className="p-2.5 rounded-xl border border-line bg-surfaceHi/50">
                 <div className="text-lg font-extrabold text-blue-400">+{rewards.inkGained}</div>
@@ -92,7 +102,9 @@ export function EnvelopeUnboxingModal({ rewards, onClose }: EnvelopeUnboxingModa
                 </div>
               </div>
               <div className="p-2.5 rounded-xl border border-line bg-surfaceHi/50">
-                <div className="text-lg font-extrabold text-amber-400">+{rewards.waxGained}</div>
+                <div className="text-lg font-extrabold text-amber-400">
+                  +{rewards.waxGained}
+                </div>
                 <div className="text-[10px] text-muted uppercase font-bold tracking-wider">
                   {lang === "ru" ? "Сургуч" : "Wax"}
                 </div>
@@ -102,7 +114,8 @@ export function EnvelopeUnboxingModal({ rewards, onClose }: EnvelopeUnboxingModa
             {/* Level up banner if applicable */}
             {rewards.leveledUp && (
               <div className="p-2.5 rounded-xl border border-accent/60 bg-accent/15 text-xs text-text font-bold animate-bounce">
-                🎉 {lang === "ru" ? "Новый Ранг:" : "Rank Up:"} {rank.icon} {lang === "ru" ? rank.titleRu : rank.titleEn} (Lv. {rewards.newLevel})
+                🎉 {lang === "ru" ? "Новый Ранг:" : "Rank Up:"} {rank.icon}{" "}
+                {lang === "ru" ? rank.titleRu : rank.titleEn} (Lv. {rewards.newLevel})
               </div>
             )}
 
@@ -118,9 +131,7 @@ export function EnvelopeUnboxingModal({ rewards, onClose }: EnvelopeUnboxingModa
                     {rewards.droppedStamp.rarity}
                   </span>
                 </div>
-                <p className="text-[11px] text-muted leading-snug italic">
-                  "{getStampLore()}"
-                </p>
+                <p className="text-[11px] text-muted leading-snug italic">"{getStampLore()}"</p>
               </div>
             )}
 
@@ -129,7 +140,11 @@ export function EnvelopeUnboxingModal({ rewards, onClose }: EnvelopeUnboxingModa
               onClick={onClose}
               className="w-full py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider bg-accent hover:bg-accentHi text-white shadow-md transition-colors cursor-pointer mt-2"
             >
-              {lang === "ru" ? "Принять и продолжить" : lang === "de" ? "Weiter" : "Claim & Continue"}
+              {lang === "ru"
+                ? "Принять и продолжить"
+                : lang === "de"
+                  ? "Weiter"
+                  : "Claim & Continue"}
             </button>
           </div>
         )}

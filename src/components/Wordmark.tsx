@@ -40,9 +40,7 @@ export function Wordmark({ size = "md", animated = false, subtitle, showSublabel
         <span className="h-px w-5 bg-line" />
       </div>
       {sublabelOn && (
-        <div className="mt-2 text-[10px] uppercase text-muted">
-          by Neural Void
-        </div>
+        <div className="mt-2 text-[10px] uppercase text-muted">by Neural Void</div>
       )}
       {subtitle && <p className="mt-3 text-muted text-sm max-w-xs">{subtitle}</p>}
     </div>

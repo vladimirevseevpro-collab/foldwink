@@ -47,7 +47,12 @@ interface Props {
   gameEnded: boolean;
 }
 
-const TAB_ROTATIONS = ["-rotate-[0.5deg]", "rotate-[0.4deg]", "-rotate-[0.3deg]", "rotate-[0.5deg]"];
+const TAB_ROTATIONS = [
+  "-rotate-[0.5deg]",
+  "rotate-[0.4deg]",
+  "-rotate-[0.3deg]",
+  "rotate-[0.5deg]",
+];
 
 export function FoldwinkTabs({
   puzzle,
@@ -85,7 +90,11 @@ export function FoldwinkTabs({
   const stageKey = solvedGroupIds.length;
 
   return (
-    <div className="mb-2.5 sm:mb-3 max-w-[760px] mx-auto" role="group" aria-label={t.tabs.label}>
+    <div
+      className="mb-2.5 sm:mb-3 max-w-[760px] mx-auto"
+      role="group"
+      aria-label={t.tabs.label}
+    >
       <div className="flex items-center justify-between mb-2 px-1">
         <span className="text-[11px] uppercase tracking-wider text-muted font-bold">
           {t.tabs.label}
@@ -137,7 +146,9 @@ export function FoldwinkTabs({
                 ? t.tabs.clickAria
                 : t.tabs.concealedAria;
 
-          const revealCls = tab.solved ? "" : `${MOTION_CLASS.tabReveal} ${MOTION_CLASS.tabFlap}`;
+          const revealCls = tab.solved
+            ? ""
+            : `${MOTION_CLASS.tabReveal} ${MOTION_CLASS.tabFlap}`;
 
           if (clickable) {
             return (

@@ -5,7 +5,7 @@ import reactHooks from "eslint-plugin-react-hooks";
 
 export default [
   {
-    // `reports/video_automation/**` are one-off TikTok capture harnesses
+    // `tiktok/video_automation/**` are one-off TikTok capture harnesses
     // that reference browser globals inside Playwright callbacks and are
     // not part of the app build path. They ship as artefacts next to the
     // report, not as production tooling, so lint does not apply.
@@ -14,7 +14,10 @@ export default [
       "node_modules",
       "coverage",
       ".vite",
-      "reports/video_automation/**",
+      "assets/**",
+      "ios/**",
+      "itch.io/**",
+      "tiktok/**",
       "docs/reports/**",
     ],
   },
@@ -67,12 +70,16 @@ export default [
     // this file and references browser globals (window, document,
     // getComputedStyle) that only exist at browser-evaluation time. ESLint
     // lints the callback as source code, so we declare them here.
-    files: ["scripts/**/*.{ts,mjs,js}", "tests/**/*.{ts,mjs,js}"],
+    files: ["scripts/**/*.{ts,mjs,js,cjs}", "tests/**/*.{ts,mjs,js}"],
     languageOptions: {
       globals: {
         // Node.js runtime globals (scripts/*.mjs run on node)
         process: "readonly",
         console: "readonly",
+        require: "readonly",
+        module: "readonly",
+        __dirname: "readonly",
+        __filename: "readonly",
         setTimeout: "readonly",
         clearTimeout: "readonly",
         setInterval: "readonly",
@@ -89,6 +96,7 @@ export default [
     },
     rules: {
       "no-console": "off",
+      "@typescript-eslint/no-require-imports": "off",
       // Script-local heuristic: empty catch around filesystem / JSON
       // probing is deliberate (try the file, move on). Don't flag it.
       "no-empty": ["error", { allowEmptyCatch: true }],
@@ -96,6 +104,17 @@ export default [
         "error",
         { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
       ],
+    },
+  },
+  {
+    files: ["sw.js", "public/sw.js"],
+    languageOptions: {
+      globals: {
+        console: "readonly",
+      },
+    },
+    rules: {
+      "no-console": "off",
     },
   },
 ];

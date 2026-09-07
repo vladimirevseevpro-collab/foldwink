@@ -118,11 +118,14 @@ export function awardSolveRewards(
     }
 
     // Stamp drop evaluation
-    const uncollected = STAMP_COLLECTION.filter((s) => !profile.collectedStampIds.includes(s.id));
+    const uncollected = STAMP_COLLECTION.filter(
+      (s) => !profile.collectedStampIds.includes(s.id),
+    );
     if (uncollected.length > 0) {
       if (hasContract) {
         // Guaranteed stamp on winning contract
-        droppedStamp = uncollected.find((s) => s.id === "stamp_iron_contract") ?? uncollected[0];
+        droppedStamp =
+          uncollected.find((s) => s.id === "stamp_iron_contract") ?? uncollected[0];
       } else if (isFlawless && !profile.collectedStampIds.includes("stamp_flawless_sun")) {
         droppedStamp = STAMP_COLLECTION.find((s) => s.id === "stamp_flawless_sun") ?? null;
       } else if (Math.random() < 0.45) {
@@ -154,7 +157,9 @@ export function awardSolveRewards(
     wax: profile.wax + waxGained,
     prestige: profile.prestige + prestigeGained,
     collectedStampIds,
-    contractsAttempted: hasContract ? profile.contractsAttempted + 1 : profile.contractsAttempted,
+    contractsAttempted: hasContract
+      ? profile.contractsAttempted + 1
+      : profile.contractsAttempted,
     contractsWon: contractResult === "won" ? profile.contractsWon + 1 : profile.contractsWon,
     activeContract: null, // contract completed
   };

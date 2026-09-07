@@ -112,6 +112,8 @@ describe("archivist profile & rewards engine", () => {
     // Second completion does not duplicate the stamp
     const second = awardPalimpsestCompletion(updatedProfile);
     expect(second.rewards.stampUnlocked).toBe(false);
-    expect(second.updatedProfile.collectedStampIds.filter((s) => s === "stamp_palimpsest").length).toBe(1);
+    expect(
+      second.updatedProfile.collectedStampIds.filter((s) => s === "stamp_palimpsest").length,
+    ).toBe(1);
   });
 });

@@ -44,7 +44,10 @@ function commonSuffix(strings) {
   return p;
 }
 
-const files = fs.readdirSync(DIR).filter((f) => f.endsWith(".json")).sort();
+const files = fs
+  .readdirSync(DIR)
+  .filter((f) => f.endsWith(".json"))
+  .sort();
 const flagged = [];
 
 for (const f of files) {
@@ -54,11 +57,25 @@ for (const f of files) {
     const prefix = commonPrefix(items).trim();
     const suffix = commonSuffix(items).trim();
     if (prefix.length >= 4 && !prefix.includes(" ")) {
-      flagged.push({ file: f, title: raw.title, group: g.label, kind: "prefix", token: prefix, items });
+      flagged.push({
+        file: f,
+        title: raw.title,
+        group: g.label,
+        kind: "prefix",
+        token: prefix,
+        items,
+      });
       continue;
     }
     if (suffix.length >= 4 && !suffix.includes(" ")) {
-      flagged.push({ file: f, title: raw.title, group: g.label, kind: "suffix", token: suffix, items });
+      flagged.push({
+        file: f,
+        title: raw.title,
+        group: g.label,
+        kind: "suffix",
+        token: suffix,
+        items,
+      });
       continue;
     }
     // single-token conjugation check: each item has no spaces, share 4-char stem
@@ -67,7 +84,14 @@ for (const f of files) {
       const lowered = items.map((s) => s.toLowerCase());
       const stemPrefix = commonPrefix(lowered);
       if (stemPrefix.length >= 4) {
-        flagged.push({ file: f, title: raw.title, group: g.label, kind: "stem", token: stemPrefix, items });
+        flagged.push({
+          file: f,
+          title: raw.title,
+          group: g.label,
+          kind: "stem",
+          token: stemPrefix,
+          items,
+        });
       }
     }
   }

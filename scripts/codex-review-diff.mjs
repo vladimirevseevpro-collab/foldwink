@@ -23,9 +23,7 @@ const args = new Map(
   }),
 );
 const GOAL = args.get("goal") ?? "unspecified batch";
-const OUT =
-  args.get("out") ??
-  join(ROOT, `logs/overnight/codex-review-${Date.now()}.json`);
+const OUT = args.get("out") ?? join(ROOT, `logs/overnight/codex-review-${Date.now()}.json`);
 
 mkdirSync(join(ROOT, "logs/overnight"), { recursive: true });
 

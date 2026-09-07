@@ -72,11 +72,15 @@ function compareByDifficultyScore(a: Puzzle, b: Puzzle): number {
   return a.id.localeCompare(b.id);
 }
 
-export const EASY_POOL_RAMPED: readonly Puzzle[] = [...EASY_POOL].sort(compareByDifficultyScore);
+export const EASY_POOL_RAMPED: readonly Puzzle[] = [...EASY_POOL].sort(
+  compareByDifficultyScore,
+);
 export const MEDIUM_POOL_RAMPED: readonly Puzzle[] = [...MEDIUM_POOL].sort(
   compareByDifficultyScore,
 );
-export const HARD_POOL_RAMPED: readonly Puzzle[] = [...HARD_POOL].sort(compareByDifficultyScore);
+export const HARD_POOL_RAMPED: readonly Puzzle[] = [...HARD_POOL].sort(
+  compareByDifficultyScore,
+);
 
 export function getPuzzleById(id: string): Puzzle | undefined {
   return PUZZLE_POOL.find((p) => p.id === id);

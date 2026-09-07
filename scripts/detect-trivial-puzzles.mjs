@@ -18,16 +18,84 @@ const dir = process.argv[2] ?? "puzzles/ru/pool";
 const DIR = path.resolve(dir);
 
 const STOPWORDS_RU = new Set([
-  "и", "в", "на", "с", "по", "для", "от", "из", "как", "что", "это", "или",
-  "но", "же", "ли", "не", "то", "та", "те", "та", "со", "до", "за", "о", "об",
-  "при", "под", "над", "без", "все", "их", "них", "его", "её", "них",
-  "название", "виды", "типы", "список", "слова", "фразы", "слово", "фраза",
-  "часть", "части", "группа", "категория",
+  "и",
+  "в",
+  "на",
+  "с",
+  "по",
+  "для",
+  "от",
+  "из",
+  "как",
+  "что",
+  "это",
+  "или",
+  "но",
+  "же",
+  "ли",
+  "не",
+  "то",
+  "та",
+  "те",
+  "та",
+  "со",
+  "до",
+  "за",
+  "о",
+  "об",
+  "при",
+  "под",
+  "над",
+  "без",
+  "все",
+  "их",
+  "них",
+  "его",
+  "её",
+  "них",
+  "название",
+  "виды",
+  "типы",
+  "список",
+  "слова",
+  "фразы",
+  "слово",
+  "фраза",
+  "часть",
+  "части",
+  "группа",
+  "категория",
 ]);
 const STOPWORDS_DE = new Set([
-  "der", "die", "das", "und", "in", "mit", "bei", "auf", "von", "zu", "zum",
-  "zur", "für", "aus", "an", "am", "um", "als", "auch", "wie", "was", "wer",
-  "oder", "ein", "eine", "einen", "einer", "eines", "eines",
+  "der",
+  "die",
+  "das",
+  "und",
+  "in",
+  "mit",
+  "bei",
+  "auf",
+  "von",
+  "zu",
+  "zum",
+  "zur",
+  "für",
+  "aus",
+  "an",
+  "am",
+  "um",
+  "als",
+  "auch",
+  "wie",
+  "was",
+  "wer",
+  "oder",
+  "ein",
+  "eine",
+  "einen",
+  "einer",
+  "eines",
+  "eines",
 ]);
 
 function labelWords(label, isRu) {
@@ -53,7 +121,10 @@ function itemContainsStem(item, s) {
   return normalized(item).includes(s);
 }
 
-const files = fs.readdirSync(DIR).filter((f) => f.endsWith(".json")).sort();
+const files = fs
+  .readdirSync(DIR)
+  .filter((f) => f.endsWith(".json"))
+  .sort();
 const flagged = [];
 const isRu = dir.includes("ru");
 

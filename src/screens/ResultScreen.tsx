@@ -211,7 +211,7 @@ export function ResultScreen() {
     dateStr: isDaily ? today : todayLocal(),
     kintsugiRestored: Boolean(
       todayDailyRecord?.graceWaxUsed ||
-        mergedDailyHistory[addLocalDays(today, -1)]?.graceWaxUsed,
+      mergedDailyHistory[addLocalDays(today, -1)]?.graceWaxUsed,
     ),
     labels: {
       solved: t.resultSummary.solved,
@@ -229,7 +229,6 @@ export function ResultScreen() {
   // irreplaceable signal was the "new best" accent — we fold that into
   // the Grade caption instead so nothing is lost.
   const showNewBest = isWin && streakDelta > 0 && newBest && stats.bestStreak >= 3;
-
 
   return (
     <div
@@ -261,7 +260,11 @@ export function ResultScreen() {
         </div>
       )}
 
-      <ResultSummary summary={summary} puzzle={puzzle} currentStreak={isZen ? (stats.zenStreak ?? 0) : stats.currentStreak} />
+      <ResultSummary
+        summary={summary}
+        puzzle={puzzle}
+        currentStreak={isZen ? (stats.zenStreak ?? 0) : stats.currentStreak}
+      />
 
       {isWin && (
         <div
@@ -355,9 +358,7 @@ export function ResultScreen() {
             data-testid="result-send-duel-response"
           >
             <span>{duelResponseSent ? "✓" : "⚔️"}</span>
-            <span>
-              {duelResponseSent ? t.duel.responseSent : t.duel.sendResponse}
-            </span>
+            <span>{duelResponseSent ? t.duel.responseSent : t.duel.sendResponse}</span>
           </button>
         )}
         <button
@@ -367,9 +368,7 @@ export function ResultScreen() {
           data-testid="result-challenge-button"
         >
           <span>{challengeCopied ? "✓" : "⚔️"}</span>
-          <span>
-            {challengeCopied ? t.duel.challengeCopied : t.duel.challengeFriend}
-          </span>
+          <span>{challengeCopied ? t.duel.challengeCopied : t.duel.challengeFriend}</span>
         </button>
         <button
           type="button"
@@ -380,8 +379,16 @@ export function ResultScreen() {
           <span>{puzzleUrlCopied ? "✓" : "🔗"}</span>
           <span>
             {puzzleUrlCopied
-              ? (lang === "ru" ? "Ссылка на пазл скопирована!" : lang === "de" ? "Rätsel-Link kopiert!" : "Puzzle Link Copied!")
-              : (lang === "ru" ? "Поделиться ссылкой на пазл" : lang === "de" ? "Rätsel-Link teilen" : "Share Puzzle Link")}
+              ? lang === "ru"
+                ? "Ссылка на пазл скопирована!"
+                : lang === "de"
+                  ? "Rätsel-Link kopiert!"
+                  : "Puzzle Link Copied!"
+              : lang === "ru"
+                ? "Поделиться ссылкой на пазл"
+                : lang === "de"
+                  ? "Rätsel-Link teilen"
+                  : "Share Puzzle Link"}
           </span>
         </button>
       </div>

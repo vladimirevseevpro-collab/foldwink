@@ -8,4 +8,3 @@ export {
   isChromeStorageAvailable,
   resetStorageAdapterForTests,
 } from "./storageAdapter";
-
