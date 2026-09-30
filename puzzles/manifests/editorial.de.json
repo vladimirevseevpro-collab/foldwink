@@ -1,0 +1,936 @@
+{
+  "language": "de",
+  "catalogVersion": "catalog-2026-09-v1",
+  "records": [
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0008",
+        "lineageId": "de-0008",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Musikinstrumente"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0012",
+        "lineageId": "de-0012",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B1",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Sportarten"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0407",
+        "lineageId": "de-0407",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "B2",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "berufe"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "approved",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0040",
+        "lineageId": "de-0040",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B1",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Smartphone"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0401",
+        "lineageId": "de-0401",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "B2",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Komposita"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "approved",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0023",
+        "lineageId": "de-0023",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B1",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Transportmittel"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0004",
+        "lineageId": "de-0004",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Gemüse"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0005",
+        "lineageId": "de-0005",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B1",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Haustiere"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0009",
+        "lineageId": "de-0009",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B1",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Möbel"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0014",
+        "lineageId": "de-0014",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B1",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Körperteile"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0015",
+        "lineageId": "de-0015",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B1",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Familienbeziehungen"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0020",
+        "lineageId": "de-0020",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B1",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Städte Deutschland"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0026",
+        "lineageId": "de-0026",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Chemische Elemente"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0027",
+        "lineageId": "de-0027",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Planetensystem"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0042",
+        "lineageId": "de-0042",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Musikgenres"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0043",
+        "lineageId": "de-0043",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B1",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Bücher und Literatur"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0053",
+        "lineageId": "de-0053",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B1",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Karneval und Fasching"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0054",
+        "lineageId": "de-0054",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Deutsche Autohersteller"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0065",
+        "lineageId": "de-0065",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Architektur"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0078",
+        "lineageId": "de-0078",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Internet und Soziale Medien"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0079",
+        "lineageId": "de-0079",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Programmierung"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0011",
+        "lineageId": "de-0011",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Frühstück"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0016",
+        "lineageId": "de-0016",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B1",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Zimmer im Haus"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0019",
+        "lineageId": "de-0019",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B1",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Blumen und Pflanzen"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0055",
+        "lineageId": "de-0055",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B1",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Autoteile"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0056",
+        "lineageId": "de-0056",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B1",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Eisenbahn"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0064",
+        "lineageId": "de-0064",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B1",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Malerei"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0069",
+        "lineageId": "de-0069",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B1",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Baustelle"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0077",
+        "lineageId": "de-0077",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Büro"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0089",
+        "lineageId": "de-0089",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Bierbrauerei"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    }
+  ]
+}

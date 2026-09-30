@@ -1,8 +1,10 @@
-import { describe, it, expect } from "vitest";
+import { describe, expect, it } from "vitest";
 import {
-  encodePuzzleToHash,
+  CUSTOM_PUZZLE_DECODED_MAX_BYTES,
+  CUSTOM_PUZZLE_TOKEN_MAX_CHARS,
   decodePuzzleFromHash,
-  createShareUrl,
+  decodeSharedPuzzleFromHash,
+  encodePuzzleToHash,
   validateAndBuildSharedPuzzle,
 } from "../urlHashPuzzle";
 import type { Puzzle } from "../../game/types/puzzle";
@@ -32,88 +34,121 @@ const samplePuzzle: Puzzle = {
   ],
 };
 
+function toBase64Url(bytes: Uint8Array): string {
+  let binary = "";
+  for (const byte of bytes) binary += String.fromCharCode(byte);
+  return btoa(binary).replace(/\+/gu, "-").replace(/\//gu, "_").replace(/=+$/u, "");
+}
+
+async function deflatePayload(value: unknown): Promise<string> {
+  const bytes = new TextEncoder().encode(JSON.stringify(value));
+  const stream = new Blob([bytes.buffer])
+    .stream()
+    .pipeThrough(new CompressionStream("deflate"));
+  return `p=${toBase64Url(new Uint8Array(await new Response(stream).arrayBuffer()))}`;
+}
+
 describe("urlHashPuzzle", () => {
-  it("encodes puzzle to compact URL hash starting with p=eJ... or URL-safe base64", async () => {
+  it("writes v2 and round-trips it through the compatibility wrapper", async () => {
     const hash = await encodePuzzleToHash(samplePuzzle);
-    expect(hash.startsWith("p=")).toBe(true);
-    // Base64 of zlib starts with eJ
-    expect(hash.includes("eJ")).toBe(true);
-  });
-
-  it("round-trips encode and decode losslessly", async () => {
-    const hash = await encodePuzzleToHash(samplePuzzle);
+    const result = await decodeSharedPuzzleFromHash(`#${hash}`);
+    expect(result).toMatchObject({ ok: true, payload: { v: 2, kind: "custom-puzzle" } });
     const decoded = await decodePuzzleFromHash(`#${hash}`);
-
-    expect(decoded).not.toBeNull();
-    expect(decoded?.title).toBe(samplePuzzle.title);
-    expect(decoded?.difficulty).toBe(samplePuzzle.difficulty);
-    expect(decoded?.groups.length).toBe(4);
-
-    for (let i = 0; i < 4; i++) {
-      expect(decoded?.groups[i].label).toBe(samplePuzzle.groups[i].label);
-      expect(decoded?.groups[i].items).toEqual(samplePuzzle.groups[i].items);
-      if (samplePuzzle.groups[i].revealHint) {
-        expect(decoded?.groups[i].revealHint).toBe(samplePuzzle.groups[i].revealHint);
-      }
-    }
+    expect(decoded).toMatchObject({ title: samplePuzzle.title, difficulty: "medium" });
+    expect(decoded?.groups.map((group) => group.items)).toEqual(
+      samplePuzzle.groups.map((group) => group.items),
+    );
   });
 
-  it("creates full shareable URL with origin and path", async () => {
-    const url = await createShareUrl(samplePuzzle, "https://foldwink.com/play");
-    expect(url.startsWith("https://foldwink.com/play#p=")).toBe(true);
-  });
-
-  it("safely rejects corrupt, malformed, or incomplete payload", async () => {
-    expect(await decodePuzzleFromHash("p=not-a-valid-base64-string!!")).toBeNull();
-    expect(await decodePuzzleFromHash("p=")).toBeNull();
-    expect(await decodePuzzleFromHash("")).toBeNull();
-  });
-
-  it("validates 4x4 group constraints and rejects duplicate items", () => {
-    // Missing one group (only 3 groups)
-    const invalid3Groups = {
-      t: "Broken",
-      g: [
-        { l: "G1", i: ["a", "b", "c", "d"] },
-        { l: "G2", i: ["e", "f", "g", "h"] },
-        { l: "G3", i: ["i", "j", "k", "l"] },
-      ],
+  it("normalizes legacy compact boards, including their medium default", async () => {
+    const legacy = {
+      t: "Legacy",
+      g: samplePuzzle.groups.map(({ label: l, items: i }) => ({ l, i })),
     };
-    expect(validateAndBuildSharedPuzzle(invalid3Groups)).toBeNull();
-
-    // Duplicate item "a" in two different groups
-    const duplicateItem = {
-      t: "Duplicate",
-      g: [
-        { l: "G1", i: ["a", "b", "c", "d"] },
-        { l: "G2", i: ["a", "f", "g", "h"] },
-        { l: "G3", i: ["i", "j", "k", "l"] },
-        { l: "G4", i: ["m", "n", "o", "p"] },
-      ],
-    };
-    expect(validateAndBuildSharedPuzzle(duplicateItem)).toBeNull();
-  });
-
-  it("handles Unicode characters and percent-encoded tokens in URL hash", async () => {
-    const unicodePuzzle: Puzzle = {
-      id: "unicode-ru",
-      title: "Русские Слова",
+    const result = await decodeSharedPuzzleFromHash(await deflatePayload(legacy));
+    expect(result).toMatchObject({
+      ok: true,
+      payload: { v: 2, kind: "custom-puzzle", board: { d: "medium" } },
+    });
+    const rawLegacy = `p=${toBase64Url(new TextEncoder().encode(JSON.stringify(legacy)))}`;
+    expect(await decodePuzzleFromHash(rawLegacy)).toMatchObject({
+      title: "Legacy",
       difficulty: "medium",
-      groups: [
-        { id: "g1", label: "Деревья", items: ["Берёза", "Дуб", "Сосна", "Клён"] },
-        { id: "g2", label: "Ягоды", items: ["Малина", "Клубника", "Черника", "Земляника"] },
-        { id: "g3", label: "Цвета", items: ["Красный", "Синий", "Зелёный", "Жёлтый"] },
-        { id: "g4", label: "Птицы", items: ["Соловей", "Воробей", "Синица", "Дятел"] },
-      ],
+    });
+  });
+
+  it("reports transport, version, schema and malformed compression errors", async () => {
+    expect(await decodeSharedPuzzleFromHash("p=")).toEqual({ ok: false, code: "missing" });
+    expect(await decodeSharedPuzzleFromHash("p=bad!!")).toEqual({
+      ok: false,
+      code: "invalid-encoding",
+    });
+    expect(
+      await decodeSharedPuzzleFromHash(`p=${"a".repeat(CUSTOM_PUZZLE_TOKEN_MAX_CHARS + 1)}`),
+    ).toEqual({ ok: false, code: "payload-too-large" });
+    expect(
+      await decodeSharedPuzzleFromHash(
+        await deflatePayload({ v: 99, kind: "custom-puzzle", board: {} }),
+      ),
+    ).toEqual({ ok: false, code: "unsupported-version" });
+    expect(await decodeSharedPuzzleFromHash(await deflatePayload("not an object"))).toEqual({
+      ok: false,
+      code: "invalid-schema",
+    });
+    const malformedCompression = await decodeSharedPuzzleFromHash(
+      `p=${toBase64Url(new Uint8Array([0, 1, 2, 3]))}`,
+    );
+    expect(malformedCompression).toEqual({ ok: false, code: "invalid-compression" });
+  });
+
+  it("enforces exact 4x4 unique trimmed items and v2 field bounds", () => {
+    const board = {
+      t: "Valid",
+      d: "medium",
+      g: samplePuzzle.groups.map(({ label: l, items: i }) => ({ l, i })),
     };
+    expect(validateAndBuildSharedPuzzle({ v: 2, kind: "custom-puzzle", board })).not.toBeNull();
+    expect(
+      validateAndBuildSharedPuzzle({
+        v: 2,
+        kind: "custom-puzzle",
+        board: { ...board, d: "unknown" },
+      }),
+    ).toBeNull();
+    const duplicate = structuredClone(board);
+    duplicate.g[1].i[0] = duplicate.g[0].i[0];
+    expect(
+      validateAndBuildSharedPuzzle({ v: 2, kind: "custom-puzzle", board: duplicate }),
+    ).toBeNull();
+    expect(
+      validateAndBuildSharedPuzzle({
+        v: 2,
+        kind: "custom-puzzle",
+        board: { ...board, t: "x".repeat(161) },
+      }),
+    ).toBeNull();
+    const longCategory = structuredClone(board);
+    longCategory.g[0].l = "x".repeat(161);
+    expect(
+      validateAndBuildSharedPuzzle({ v: 2, kind: "custom-puzzle", board: longCategory }),
+    ).toBeNull();
+    const longHint = structuredClone(board);
+    Object.assign(longHint.g[0], { h: "x".repeat(161) });
+    expect(
+      validateAndBuildSharedPuzzle({ v: 2, kind: "custom-puzzle", board: longHint }),
+    ).toBeNull();
+    const longItem = structuredClone(board);
+    longItem.g[0].i[0] = "x".repeat(121);
+    expect(
+      validateAndBuildSharedPuzzle({ v: 2, kind: "custom-puzzle", board: longItem }),
+    ).toBeNull();
+  });
 
-    const hash = await encodePuzzleToHash(unicodePuzzle);
-    // Simulate URI encoding by third-party messengers
-    const encodedHash = encodeURIComponent(hash);
-    const decoded = await decodePuzzleFromHash(encodedHash);
-
-    expect(decoded).not.toBeNull();
-    expect(decoded?.title).toBe("Русские Слова");
-    expect(decoded?.groups[0].items).toEqual(["Берёза", "Дуб", "Сосна", "Клён"]);
+  it("stops a decompression bomb at the decoded 32 KiB boundary", async () => {
+    const oversized = "x".repeat(CUSTOM_PUZZLE_DECODED_MAX_BYTES + 1);
+    expect(await decodeSharedPuzzleFromHash(await deflatePayload(oversized))).toEqual({
+      ok: false,
+      code: "payload-too-large",
+    });
   });
 });

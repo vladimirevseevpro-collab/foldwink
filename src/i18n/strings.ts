@@ -7,6 +7,8 @@ export interface Strings {
     subtitle: string;
     playDaily: string;
     replayDaily: string;
+    dailyUnavailable: string;
+    dailyUnavailableDetail: string;
     easy: string;
     medium: string;
     mediumLocked: string;
@@ -17,10 +19,19 @@ export interface Strings {
     poolSize: (n: number) => string;
     emptyPool: string;
     emptyPoolDetail: string;
+    contentUnavailable: string;
+    contentUnavailableDetail: string;
+    retryContent: string;
     iphoneTip: string;
     iphoneTipBody: string;
     installApp: string;
     languageAria: string;
+    practice: string;
+    practiceHint: string;
+    continueGame: string;
+    continueGameDetail: string;
+    moreWays: string;
+    collapse: string;
   };
   game: {
     submit: string;
@@ -39,6 +50,7 @@ export interface Strings {
     solvedCardAria: (value: string, group: string) => string;
     correctGroup: string;
     incorrectGroup: string;
+    alreadyTried: string;
   };
   difficulty: {
     easy: string;
@@ -80,6 +92,7 @@ export interface Strings {
      *  puzzle id. Optional flavour under the grade card. Keep 3–5. */
     winAffirmations: readonly string[];
     nextPuzzle: string;
+    retryPuzzle: string;
     tryMedium: string;
     showStats: string;
     subtitleDaily: (date: string) => string;
@@ -187,7 +200,11 @@ export interface Strings {
     eventLogCleared: string;
     resetAll: string;
     resetArmed: string;
+    resetBusy: string;
+    resetFailed: string;
     resetAria: string;
+    researchExport: string;
+    researchExportDetail: string;
   };
   onboarding: {
     howToPlay: string;
@@ -304,6 +321,8 @@ export const strings: Record<Lang, Strings> = {
       subtitle: "Find 4 hidden groups of 4 · 2–5 minutes",
       playDaily: "Play today's puzzle",
       replayDaily: "Replay daily",
+      dailyUnavailable: "Daily unavailable",
+      dailyUnavailableDetail: "The next published calendar is being prepared.",
       easy: "Easy puzzle",
       medium: "Medium puzzle",
       mediumLocked: "Medium — locked",
@@ -311,15 +330,24 @@ export const strings: Record<Lang, Strings> = {
       masterLocked: "Master Challenge — locked",
       masterSoon: "Master Challenge — soon",
       stats: "Stats",
-      poolSize: (n) => `${n} puzzles`,
+      poolSize: (n) => `${n.toLocaleString("en-US")} puzzles`,
       emptyPool: "Empty pool",
       emptyPoolDetail:
         "No puzzles are bundled in this build. Drop JSON files into puzzles/pool/ and rebuild.",
+      contentUnavailable: "Puzzle content unavailable",
+      contentUnavailableDetail: "Check your connection, then try loading this language again.",
+      retryContent: "Retry content",
       iphoneTip: "✦ iPhone tip",
       iphoneTipBody:
         "Tap Safari's Share button, then Add to Home Screen for a cleaner full-screen play.",
       installApp: "Install Foldwink",
       languageAria: "Language",
+      practice: "Practice",
+      practiceHint: "Choose a puzzle by difficulty.",
+      continueGame: "Continue saved puzzle",
+      continueGameDetail: "Your exact board and remaining mistakes are saved.",
+      moreWays: "More ways to play",
+      collapse: "Collapse",
     },
     game: {
       submit: "Submit",
@@ -338,6 +366,7 @@ export const strings: Record<Lang, Strings> = {
       solvedCardAria: (value, group) => `${value}. Solved group: ${group}`,
       correctGroup: "Correct group",
       incorrectGroup: "Not a group",
+      alreadyTried: "Already tried — change one card",
     },
     difficulty: {
       easy: "Easy",
@@ -383,6 +412,7 @@ export const strings: Record<Lang, Strings> = {
         "The categories held together.",
       ],
       nextPuzzle: "Next puzzle",
+      retryPuzzle: "Try this puzzle again",
       tryMedium: "Try a Medium puzzle",
       showStats: "Stats",
       subtitleDaily: (d) => `Daily · ${d}`,
@@ -485,14 +515,19 @@ export const strings: Record<Lang, Strings> = {
         ". 16 cards, 4 hidden groups, 4 mistakes. Medium puzzles reveal their categories one letter at a time — tap once to Wink.",
       privacy: "Privacy",
       privacyBody:
-        "No accounts, no tracking, no network. Your stats, streaks, sound preference, and an optional local-only event counter live in your browser's localStorage and never leave your device. Clearing your site data wipes everything.",
+        "No accounts. Your stats, streaks, preferences, and coarse event counters stay in your browser. Optional external analytics is off by default and sends only allowlisted coarse events after explicit consent; denied or offline events are never queued. Clearing site data wipes everything.",
       support: "Support",
       supportBody: "Bug reports and feedback:",
       clearEventLog: "Clear local event log",
       eventLogCleared: "Local event log cleared",
       resetAll: "Reset all local data",
       resetArmed: "Tap again to reset all data — this clears stats, streak, progress",
+      resetBusy: "Clearing local data…",
+      resetFailed: "Could not clear every local store. Nothing was reloaded; please try again.",
       resetAria: "Reset all local Foldwink data",
+      researchExport: "Download anonymous pilot report",
+      researchExportDetail:
+        "Optional: exports coarse local counts and any yes/no board feedback. It contains no player ID, puzzle words, attempt ID, seed, exact time, or free text.",
     },
     onboarding: {
       howToPlay: "How to play",
@@ -521,9 +556,9 @@ export const strings: Record<Lang, Strings> = {
       skip: "Skip",
       gotIt: "Got it",
       menuLink: "How to play",
-      guildTitle: "Archivist Guild, Loot & Contracts",
+      guildTitle: "Archive progress & mastery",
       guildBody:
-        "Every solve awards an archival dispatch envelope with Ink 💧, Wax 🕯️, XP and rare collectible stamps. Level up your Scribe Passport or wager your wax in high-stakes Sudden Death Iron Contracts ⚔️!",
+        "Your first solve of an official puzzle earns 80 XP. Collection milestones are predictable, and the optional Mastery Challenge has no stake or penalty.",
     },
     embed: {
       fullSizeTitle: "Give the puzzle the whole screen",
@@ -580,7 +615,7 @@ export const strings: Record<Lang, Strings> = {
       officialTitle: "Official Guild Title",
       waxSealLabel: "Wax Seal",
       scribeNibLabel: "Scribe Nib",
-      ironContractCta: "The Iron Contract (High Stakes)",
+      ironContractCta: "Mastery Challenge (No Stake)",
       tabPassport: "Passport",
       tabStamps: "Stamp Album",
       stampsCount: (c, t) => `${c}/${t} stamps`,
@@ -598,7 +633,7 @@ export const strings: Record<Lang, Strings> = {
       completedTitle: "Palimpsest Mastered",
       completedDetail: "Both orthogonal layers of the ancient parchment have been deciphered.",
       doubleSealBadge: "Double Archival Wax Seal",
-      archivalReward: "Reward: +50 XP · 🕯️ +3 Wax · 💧 +2 Ink · Dual Stamp Unlocked",
+      archivalReward: "Cosmetic record: Palimpsest Stamp · awarded once",
       rulesHint:
         "Solve both orthogonal layers of the same 16 words. First by meaning, then by hidden structure.",
       backToMenu: "Return to Archives",
@@ -615,6 +650,8 @@ export const strings: Record<Lang, Strings> = {
       subtitle: "Finde 4 versteckte Gruppen · 2–5 Minuten",
       playDaily: "Heutiges Rätsel spielen",
       replayDaily: "Tagesrätsel wiederholen",
+      dailyUnavailable: "Tagesrätsel nicht verfügbar",
+      dailyUnavailableDetail: "Der nächste veröffentlichte Kalender wird vorbereitet.",
       easy: "Leichtes Rätsel",
       medium: "Mittelschweres Rätsel",
       mediumLocked: "Mittel — gesperrt",
@@ -622,15 +659,24 @@ export const strings: Record<Lang, Strings> = {
       masterLocked: "Meister — gesperrt",
       masterSoon: "Meister — bald verfügbar",
       stats: "Statistik",
-      poolSize: (n) => `${n} Rätsel`,
+      poolSize: (n) => `${n.toLocaleString("de-DE")} Rätsel`,
       emptyPool: "Kein Rätsel-Pool",
       emptyPoolDetail:
         "Keine Rätsel im Build. Lege JSON-Dateien in puzzles/pool/ ab und baue neu.",
+      contentUnavailable: "Rätselinhalte nicht verfügbar",
+      contentUnavailableDetail: "Prüfe die Verbindung und lade diese Sprache erneut.",
+      retryContent: "Inhalte erneut laden",
       iphoneTip: "✦ iPhone-Tipp",
       iphoneTipBody:
         "Tippe in Safari auf Teilen und dann „Zum Home-Bildschirm“ für Vollbildspiel ohne Leiste.",
       installApp: "Foldwink installieren",
       languageAria: "Sprache",
+      practice: "Üben",
+      practiceHint: "Wähle ein Rätsel nach Schwierigkeit.",
+      continueGame: "Gespeichertes Rätsel fortsetzen",
+      continueGameDetail: "Dein genaues Feld und die übrigen Fehler sind gespeichert.",
+      moreWays: "Weitere Spielarten",
+      collapse: "Einklappen",
     },
     game: {
       submit: "Bestätigen",
@@ -649,6 +695,7 @@ export const strings: Record<Lang, Strings> = {
       solvedCardAria: (value, group) => `${value}. Gelöste Gruppe: ${group}`,
       correctGroup: "Richtige Gruppe",
       incorrectGroup: "Keine Gruppe",
+      alreadyTried: "Schon versucht — ändere eine Karte",
     },
     difficulty: {
       easy: "Leicht",
@@ -694,6 +741,7 @@ export const strings: Record<Lang, Strings> = {
         "Die Kategorien passten zusammen.",
       ],
       nextPuzzle: "Nächstes Rätsel",
+      retryPuzzle: "Dieses Rätsel wiederholen",
       tryMedium: "Mittel-Rätsel probieren",
       showStats: "Statistik",
       subtitleDaily: (d) => `Tagesrätsel · ${d}`,
@@ -799,14 +847,20 @@ export const strings: Record<Lang, Strings> = {
         ". 16 Karten, 4 versteckte Gruppen, 4 Fehler. Mittel-Rätsel enthüllen Kategorien Buchstabe für Buchstabe — einmal antippen für Wink.",
       privacy: "Datenschutz",
       privacyBody:
-        "Keine Konten, kein Tracking, keine Netzwerkanfragen. Deine Statistik, Streaks, Toneinstellungen und ein optionaler lokaler Ereigniszähler liegen nur im localStorage deines Browsers und verlassen dein Gerät nicht. Browser-Daten löschen entfernt alles.",
+        "Keine Konten. Statistik, Streaks, Einstellungen und grobe Ereigniszähler bleiben im Browser. Optionale externe Analyse ist standardmäßig aus und sendet nur nach ausdrücklicher Zustimmung erlaubte, grobe Ereignisse; abgelehnte oder Offline-Ereignisse werden nie vorgemerkt. Das Löschen der Website-Daten entfernt alles.",
       support: "Support",
       supportBody: "Fehler und Feedback:",
       clearEventLog: "Lokalen Ereigniszähler löschen",
       eventLogCleared: "Ereigniszähler gelöscht",
       resetAll: "Alle lokalen Daten zurücksetzen",
       resetArmed: "Nochmal tippen zum Zurücksetzen — löscht Statistik, Streak, Fortschritt",
+      resetBusy: "Lokale Daten werden gelöscht…",
+      resetFailed:
+        "Nicht alle lokalen Speicher konnten gelöscht werden. Nichts wurde neu geladen; bitte erneut versuchen.",
       resetAria: "Alle lokalen Foldwink-Daten zurücksetzen",
+      researchExport: "Anonymen Pilotbericht herunterladen",
+      researchExportDetail:
+        "Optional: exportiert grobe lokale Zähler und Ja/Nein-Feedback zu Rätseln. Enthält keine Spieler-ID, Rätselwörter, Versuchs-ID, Seeds, genaue Zeit oder Freitext.",
     },
     onboarding: {
       howToPlay: "So wird gespielt",
@@ -835,9 +889,9 @@ export const strings: Record<Lang, Strings> = {
       skip: "Überspringen",
       gotIt: "Verstanden",
       menuLink: "Spielregeln",
-      guildTitle: "Archivarsgilde, Beute & Kontrakte",
+      guildTitle: "Archivfortschritt & Meisterschaft",
       guildBody:
-        "Jeder Sieg bringt einen Umschlag mit Tinte 💧, Siegelwachs 🕯️, XP und seltenen Briefmarken. Steigere deinen Schreiber-Pass und riskiere dein Wachs in eisernen Sudden-Death-Kontrakten ⚔️!",
+        "Die erste Lösung eines offiziellen Rätsels bringt 80 XP. Sammlungsziele sind vorhersehbar; die optionale Meisterprüfung hat keinen Einsatz und keine Strafe.",
     },
     embed: {
       fullSizeTitle: "Gib dem Rätsel den ganzen Bildschirm",
@@ -895,7 +949,7 @@ export const strings: Record<Lang, Strings> = {
       officialTitle: "Offizieller Gildentitel",
       waxSealLabel: "Wachssiegel",
       scribeNibLabel: "Schreibfeder",
-      ironContractCta: "Eiserner Vertrag (Hohe Einsätze)",
+      ironContractCta: "Meisterprüfung (Ohne Einsatz)",
       tabPassport: "Pass",
       tabStamps: "Marken-Album",
       stampsCount: (c, t) => `${c}/${t} Marken`,
@@ -914,8 +968,7 @@ export const strings: Record<Lang, Strings> = {
       completedDetail:
         "Beide orthogonalen Schichten des alten Pergaments wurden entschlüsselt.",
       doubleSealBadge: "Doppeltes Archiv-Siegel",
-      archivalReward:
-        "Belohnung: +50 XP · 🕯️ +3 Wachs · 💧 +2 Tinte · Palimpsest-Marke freigeschaltet",
+      archivalReward: "Kosmetischer Eintrag: Palimpsest-Marke · einmalig verliehen",
       rulesHint:
         "Löse beide Ebenen derselben 16 Wörter. Erst nach Bedeutung, dann nach verborgener Struktur.",
       backToMenu: "Zurück zum Archiv",
@@ -932,6 +985,8 @@ export const strings: Record<Lang, Strings> = {
       subtitle: "Найди 4 скрытые группы · 2–5 минут",
       playDaily: "Играть сегодняшний пазл",
       replayDaily: "Повторить дневной",
+      dailyUnavailable: "Дневной пазл недоступен",
+      dailyUnavailableDetail: "Следующий опубликованный календарь ещё готовится.",
       easy: "Лёгкий пазл",
       medium: "Средний пазл",
       mediumLocked: "Средний — заблокирован",
@@ -939,15 +994,24 @@ export const strings: Record<Lang, Strings> = {
       masterLocked: "Мастер — заблокирован",
       masterSoon: "Мастер — скоро",
       stats: "Статистика",
-      poolSize: (n) => `${n} пазлов`,
+      poolSize: (n) => `${n.toLocaleString("ru-RU")} пазлов`,
       emptyPool: "Пул пуст",
       emptyPoolDetail:
         "В этой сборке нет пазлов. Добавь JSON-файлы в puzzles/pool/ и пересобери.",
+      contentUnavailable: "Содержимое пазлов недоступно",
+      contentUnavailableDetail: "Проверь подключение и попробуй загрузить этот язык снова.",
+      retryContent: "Повторить загрузку",
       iphoneTip: "✦ Совет для iPhone",
       iphoneTipBody:
         "Нажми в Safari «Поделиться» и «На экран „Домой“» — будет чистый полноэкранный режим.",
       installApp: "Установить Foldwink",
       languageAria: "Язык",
+      practice: "Практика",
+      practiceHint: "Выбери задачу по сложности.",
+      continueGame: "Продолжить сохранённую игру",
+      continueGameDetail: "Эта же доска и оставшиеся ошибки сохранены.",
+      moreWays: "Другие режимы",
+      collapse: "Свернуть",
     },
     game: {
       submit: "Подтвердить",
@@ -966,6 +1030,7 @@ export const strings: Record<Lang, Strings> = {
       solvedCardAria: (value, group) => `${value}. Решённая группа: ${group}`,
       correctGroup: "Верная группа",
       incorrectGroup: "Не группа",
+      alreadyTried: "Уже проверяли — замените одну карточку",
     },
     difficulty: {
       easy: "Лёгкий",
@@ -1011,6 +1076,7 @@ export const strings: Record<Lang, Strings> = {
         "Категории сложились.",
       ],
       nextPuzzle: "Следующий пазл",
+      retryPuzzle: "Попробовать этот пазл снова",
       tryMedium: "Попробовать средний",
       showStats: "Статистика",
       subtitleDaily: (d) => `Дневной · ${d}`,
@@ -1115,14 +1181,20 @@ export const strings: Record<Lang, Strings> = {
         ". 16 карточек, 4 скрытые группы, 4 ошибки. В средних пазлах категории раскрываются по букве — нажми один раз для Wink.",
       privacy: "Приватность",
       privacyBody:
-        "Нет аккаунтов, трекинга и сети. Статистика, серии, настройки звука и опциональный локальный счётчик событий живут только в localStorage и не покидают устройство. Очистка данных сайта удалит всё.",
+        "Нет аккаунтов. Статистика, серии, настройки и грубые счётчики событий остаются в браузере. Необязательная внешняя аналитика по умолчанию выключена и отправляет только разрешённые грубые события после явного согласия; отклонённые и офлайн-события не ставятся в очередь. Очистка данных сайта удалит всё.",
       support: "Поддержка",
       supportBody: "Баги и фидбек:",
       clearEventLog: "Очистить локальный лог событий",
       eventLogCleared: "Лог событий очищен",
       resetAll: "Сбросить все локальные данные",
       resetArmed: "Нажми ещё раз, чтобы сбросить всё — статистику, серию, прогресс",
+      resetBusy: "Локальные данные очищаются…",
+      resetFailed:
+        "Не удалось очистить все локальные хранилища. Перезагрузка не выполнена; попробуйте ещё раз.",
       resetAria: "Сбросить все локальные данные Foldwink",
+      researchExport: "Скачать анонимный отчёт пилота",
+      researchExportDetail:
+        "Необязательно: экспортирует грубые локальные счётчики и ответы да/нет о спорных связях. Без ID игрока и попытки, слов пазла, seed, точного времени и свободного текста.",
     },
     onboarding: {
       howToPlay: "Как играть",
@@ -1151,9 +1223,9 @@ export const strings: Record<Lang, Strings> = {
       skip: "Пропустить",
       gotIt: "Понятно",
       menuLink: "Правила игры",
-      guildTitle: "Гильдия Архивариусов, Лут и Контракты",
+      guildTitle: "Прогресс архива и мастерство",
       guildBody:
-        "Каждая победа приносит запечатанный конверт с чернилами 💧, сургучом 🕯️, XP и редкими марками. Прокачивайте свой Паспорт Архивариуса и ставьте сургуч на кон в рискованных Железных Контрактах ⚔️!",
+        "Первое решение официальной задачи приносит 80 XP. У коллекции понятные условия, а необязательная проверка мастерства проходит без ставки и штрафа.",
     },
     embed: {
       fullSizeTitle: "Отдай головоломке весь экран",
@@ -1211,7 +1283,7 @@ export const strings: Record<Lang, Strings> = {
       officialTitle: "Официальный Титул",
       waxSealLabel: "Личная Печать",
       scribeNibLabel: "Перо Мастера",
-      ironContractCta: "Железный Контракт (Высокие Ставки)",
+      ironContractCta: "Проверка мастерства (без ставки)",
       tabPassport: "Паспорт",
       tabStamps: "Альбом Марок",
       stampsCount: (c, t) => `${c}/${t} марок`,
@@ -1229,7 +1301,7 @@ export const strings: Record<Lang, Strings> = {
       completedTitle: "Палимпсест покорен",
       completedDetail: "Оба слоя древнего документа успешно разгаданы.",
       doubleSealBadge: "Двойная Сургучная Печать Архива",
-      archivalReward: "Награда: +50 XP · 🕯️ +3 Сургуча · 💧 +2 Чернил · Марка Палимпсеста",
+      archivalReward: "Косметическая запись: марка Палимпсеста · выдаётся один раз",
       rulesHint:
         "Разгадайте обе стороны одних и тех же 16 слов: сначала по смыслу, затем по ортогональному правилу.",
       backToMenu: "В архив",

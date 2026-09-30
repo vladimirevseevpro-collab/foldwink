@@ -1,10 +1,23 @@
-import type { Puzzle } from "../game/types/puzzle";
-import { fnv1a } from "../utils/hash";
+import type { DailyEntry, PuzzleLanguage } from "./catalog";
+import { getDailyEntry } from "./catalog";
 
-export function getDailyPuzzleId(date: string, pool: readonly Puzzle[]): string {
-  if (pool.length === 0) {
-    throw new Error("Puzzle pool is empty; cannot pick daily puzzle");
-  }
-  const idx = fnv1a(date) % pool.length;
-  return pool[idx].id;
+export type DailyEntryLookup = (
+  language: PuzzleLanguage,
+  date: string,
+) => DailyEntry | undefined;
+
+/**
+ * Resolves an immutable published Daily slot. It deliberately has no pool,
+ * unlock, stats or random inputs, so two players on the same language/date
+ * receive the same version-pinned payload reference.
+ */
+export function resolveDailyEntry(
+  language: PuzzleLanguage,
+  date: string,
+  lookup: DailyEntryLookup = getDailyEntry,
+): DailyEntry | undefined {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) return undefined;
+  const entry = lookup(language, date);
+  if (!entry || entry.language !== language || entry.date !== date) return undefined;
+  return entry;
 }

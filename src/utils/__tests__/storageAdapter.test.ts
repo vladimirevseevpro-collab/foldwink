@@ -5,6 +5,8 @@ import {
   safeRemove,
   storageGet,
   storageSet,
+  storageSetChecked,
+  clearFoldwinkNamespace,
   initStorageAdapter,
   isChromeStorageAvailable,
   resetStorageAdapterForTests,
@@ -140,5 +142,60 @@ describe("StorageAdapter", () => {
     await initStorageAdapter();
     expect(safeRead("foldwink:stats", null)).toEqual({ wins: 5 });
     expect(localStorage.getItem("foldwink:stats")).toBe(JSON.stringify({ wins: 5 }));
+  });
+
+  it("reports quota and denied writes instead of mistaking them for persistence", async () => {
+    (globalThis as { localStorage?: Storage }).localStorage = {
+      ...globalThis.localStorage,
+      setItem() {
+        throw new DOMException("full", "QuotaExceededError");
+      },
+    } as Storage;
+    await expect(storageSetChecked("foldwink:quota", { value: 1 })).resolves.toEqual({
+      ok: false,
+      reason: "quota",
+    });
+  });
+
+  it("awaits removal from local, extension, memory and Foldwink CacheStorage", async () => {
+    safeWrite("foldwink:local", 1);
+    safeWrite("unrelated:local", 2);
+    const extensionData: Record<string, unknown> = { "foldwink:extension": 1, other: 2 };
+    const chrome = {
+      storage: {
+        local: {
+          get: vi.fn((_keys: unknown, callback?: (items: Record<string, unknown>) => void) => {
+            callback?.({ ...extensionData });
+            return Promise.resolve({ ...extensionData });
+          }),
+          set: vi.fn(),
+          remove: vi.fn((keys: string[]) => {
+            for (const key of keys) delete extensionData[key];
+            return Promise.resolve();
+          }),
+          clear: vi.fn(),
+        },
+      },
+    };
+    (globalThis as unknown as { chrome: typeof chrome }).chrome = chrome;
+    const deleted: string[] = [];
+    Object.defineProperty(globalThis, "caches", {
+      configurable: true,
+      value: {
+        keys: vi.fn(async () => ["foldwink-v1", "other-v1"]),
+        delete: vi.fn(async (name: string) => {
+          deleted.push(name);
+          return true;
+        }),
+      },
+    });
+
+    await expect(clearFoldwinkNamespace()).resolves.toEqual({ ok: true });
+    expect(localStorage.getItem("foldwink:local")).toBeNull();
+    expect(localStorage.getItem("unrelated:local")).not.toBeNull();
+    expect(extensionData["foldwink:extension"]).toBeUndefined();
+    expect(extensionData.other).toBe(2);
+    expect(deleted).toEqual(["foldwink-v1"]);
+    delete (globalThis as { caches?: CacheStorage }).caches;
   });
 });

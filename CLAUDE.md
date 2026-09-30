@@ -59,12 +59,38 @@ holding the line on minimalism.
 - no backend, accounts, cloud sync, leaderboards
 - no live puzzle generation at runtime
 - no multiplayer
-- no ads in 1.0
-- no premium paid packs in 1.0 (defer)
 - no localisation beyond English in 1.0
 - no 3D renderer — clean 2D + subtle 2.5D polish only
 - no motion framework, no animation library
 - no casino / FOMO / login-streak-saver retention tricks
+
+## Monetization (allowed since v0.9.0)
+
+The previous "no ads / no premium packs in 1.0" hard rules are lifted.
+TikTok-driven mobile traffic without a monetization layer produced a
+zero-LTV funnel. Three channels are now permitted, all gated behind
+single-source-of-truth config in `src/monetization/config.ts`:
+
+1. **Tip jar.** Ko-fi / Buy Me a Coffee link, surfaced after a win.
+   Hosted by third party, no payment code in repo. Hidden when handle
+   not configured.
+2. **One-time supporter unlock.** Hosted checkout link (Stripe Payment
+   Link, Lemon Squeezy, etc). Success URL sets a localStorage flag —
+   trust-based, no backend. Perk is cosmetic ("Supporter ★" badge) plus
+   a quiet thank-you. **Never gate core gameplay (today's daily, easy
+   puzzles, archive) behind the unlock** — daily puzzle integrity is
+   load-bearing for retention.
+3. **Opt-in rewarded ad.** Player-initiated, never auto-play, never
+   interstitial. SDK is injected via `window.foldwinkShowRewardedAd`
+   (so any ad network works). Hidden when SDK not loaded. Ads must
+   never be required to complete a puzzle — they grant a peripheral
+   bonus only.
+
+Hard red lines that **stay**:
+
+- no auto-play ads, no interstitials, no banners
+- no paywall on today's daily puzzle, no paywall on easy mode
+- no analytics that track players without a privacy surface
 
 ## Default decisions
 
@@ -147,7 +173,9 @@ Do not:
 - turn Foldwink into a multi-mechanic puzzle platform
 - add a second twist system beyond Foldwink Tabs + Wink
 - add a backend, auth, cloud sync, or leaderboard
-- add ads, premium flows, or pay-to-win anything
+- add pay-to-win anything (paid Wink boosts, paid hint reveals on the
+  active puzzle, paid retries) — monetization must stay peripheral
+- add auto-play ads, interstitials, or banners (only opt-in rewarded)
 - add a motion framework or animation library
 - add a 3D renderer
 - generate large batches of puzzles without validator + editorial sign-off

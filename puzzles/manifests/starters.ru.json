@@ -1,0 +1,12 @@
+{
+  "language": "ru",
+  "catalogVersion": "catalog-2026-09-v1",
+  "entries": [
+    { "entryId": "starter-ru-v1-01", "order": 1, "role": "first-connection", "band": "B0", "puzzleRef": { "language": "ru", "puzzleId": "ru-0023", "lineageId": "ru-0023", "contentVersion": "catalog-2026-09-v1" } },
+    { "entryId": "starter-ru-v1-02", "order": 2, "role": "confidence-repeat", "band": "B1", "puzzleRef": { "language": "ru", "puzzleId": "ru-0025", "lineageId": "ru-0025", "contentVersion": "catalog-2026-09-v1" } },
+    { "entryId": "starter-ru-v1-03", "order": 3, "role": "wink-introduction", "band": "B2", "puzzleRef": { "language": "ru", "puzzleId": "ru-0106", "lineageId": "ru-0106", "contentVersion": "catalog-2026-09-v1" } },
+    { "entryId": "starter-ru-v1-04", "order": 4, "role": "reinforcement", "band": "B1", "puzzleRef": { "language": "ru", "puzzleId": "ru-0234", "lineageId": "ru-0234", "contentVersion": "catalog-2026-09-v1" } },
+    { "entryId": "starter-ru-v1-05", "order": 5, "role": "fair-challenge", "band": "B2", "puzzleRef": { "language": "ru", "puzzleId": "ru-0297", "lineageId": "ru-0297", "contentVersion": "catalog-2026-09-v1" } },
+    { "entryId": "starter-ru-v1-06", "order": 6, "role": "practice-bridge", "band": "B1", "puzzleRef": { "language": "ru", "puzzleId": "ru-0260", "lineageId": "ru-0260", "contentVersion": "catalog-2026-09-v1" } }
+  ]
+}

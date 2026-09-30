@@ -1,3 +1,10 @@
+import {
+  isServiceWorkerUpdateActivationRequested,
+  setWaitingServiceWorker,
+} from "./updateLifecycle";
+
+type BootManifest = { boot?: { path?: unknown } };
+
 function isTopLevelWindow(): boolean {
   try {
     return window.top === window;
@@ -9,11 +16,10 @@ function isTopLevelWindow(): boolean {
 export function registerServiceWorker(): void {
   if (typeof window === "undefined") return;
 
-  // On localhost / development, completely purge any stale service workers and caches from previous projects
-  const isLocalhost =
-    window.location.hostname === "localhost" ||
-    window.location.hostname === "127.0.0.1" ||
-    import.meta.env.DEV;
+  // Purge only while Vite is serving the mutable development graph. A
+  // production preview on localhost must exercise the exact shipping PWA
+  // lifecycle; otherwise offline acceptance can never test the built app.
+  const isLocalhost = import.meta.env.DEV;
 
   if (isLocalhost) {
     if ("serviceWorker" in navigator) {
@@ -35,52 +41,87 @@ export function registerServiceWorker(): void {
 
   if (!("serviceWorker" in navigator) || !isTopLevelWindow()) return;
 
-  window.addEventListener(
-    "load",
-    () => {
-      const base = import.meta.env.BASE_URL;
-      void navigator.serviceWorker
-        .register(base + "sw.js", { scope: base })
-        .then((registration) => {
-          // If a worker is already waiting, trigger immediate activation
-          if (registration.waiting) {
-            registration.waiting.postMessage({ type: "SKIP_WAITING" });
-          }
+  const cacheSelectedBootContent = (registration: ServiceWorkerRegistration): void => {
+    const language = document.documentElement.lang || "en";
+    if (!/^(en|ru|de)$/u.test(language)) return;
+    const manifestUrl = new URL(
+      `runtime-content/v1/manifest.${language}.json`,
+      registration.scope,
+    );
+    void fetch(manifestUrl)
+      .then((response) =>
+        response.ok ? response.json() : Promise.reject(new Error("manifest unavailable")),
+      )
+      .then((manifest: BootManifest) => {
+        if (typeof manifest.boot?.path !== "string") return;
+        const bootUrl = new URL(manifest.boot.path, manifestUrl);
+        registration.active?.postMessage({
+          type: "FOLDWINK_CACHE_URLS",
+          urls: [manifestUrl.href, bootUrl.href],
+        });
+      })
+      .catch(() => {
+        // Offline first launch has no boot manifest to save yet; the menu stays
+        // honest through its content availability rules.
+      });
+  };
 
-          // Detect newly installed service workers and tell them to skip waiting
-          registration.addEventListener("updatefound", () => {
-            const installing = registration.installing;
-            if (!installing) return;
-            installing.addEventListener("statechange", () => {
-              if (installing.state === "installed" && navigator.serviceWorker.controller) {
-                installing.postMessage({ type: "SKIP_WAITING" });
-              }
-            });
-          });
+  const register = (): void => {
+    const base = import.meta.env.BASE_URL;
+    void navigator.serviceWorker
+      .register(base + "sw.js", { scope: base })
+      .then((registration) => {
+        // `active` is null on a first install until install/activate finish.
+        // Wait for readiness so the selected boot manifest is not lost in
+        // that narrow first-load window.
+        void navigator.serviceWorker.ready.then(cacheSelectedBootContent);
+        // A waiting worker is an available update, not permission to disrupt
+        // a player. The Menu/Result prompt owns the explicit activation.
+        if (registration.waiting) {
+          setWaitingServiceWorker(registration.waiting);
+        }
 
-          // Check for fresh bundles whenever the user switches back to the tab
-          document.addEventListener("visibilitychange", () => {
-            if (document.visibilityState === "visible") {
-              void registration.update();
+        // Detect a freshly installed update but leave it waiting.
+        registration.addEventListener("updatefound", () => {
+          const installing = registration.installing;
+          if (!installing) return;
+          installing.addEventListener("statechange", () => {
+            if (installing.state === "installed" && navigator.serviceWorker.controller) {
+              setWaitingServiceWorker(installing);
             }
           });
-        })
-        .catch((err) => {
-          console.warn("[SW] Registration failed:", err);
         });
 
-      // Reload smoothly when new controller replaces an existing one,
-      // so active players don't stay trapped on stale JS bundles.
-      // Guard against first-load activation: do NOT reload if there was no prior controller.
-      const hadController = Boolean(navigator.serviceWorker.controller);
-      let refreshing = false;
-      navigator.serviceWorker.addEventListener("controllerchange", () => {
-        if (hadController && !refreshing) {
-          refreshing = true;
-          window.location.reload();
-        }
+        // Check for fresh bundles whenever the user switches back to the tab
+        document.addEventListener("visibilitychange", () => {
+          if (document.visibilityState === "visible") {
+            void registration.update();
+          }
+        });
+      })
+      .catch((err) => {
+        console.warn("[SW] Registration failed:", err);
       });
-    },
-    { once: true },
-  );
+
+    // An activation message is emitted by the worker only after the explicit
+    // Update now action. There is intentionally no controllerchange reload:
+    // a background update can never interrupt an active puzzle.
+    navigator.serviceWorker.addEventListener("message", (event) => {
+      if (
+        event.data?.type === "FOLDWINK_UPDATE_ACTIVATED" &&
+        isServiceWorkerUpdateActivationRequested()
+      ) {
+        window.location.reload();
+      }
+    });
+  };
+
+  // Module evaluation can finish after `load` when locale/content chunks are
+  // cold. Register immediately in that case instead of silently missing the
+  // only event we were waiting for.
+  if (document.readyState === "complete") {
+    register();
+  } else {
+    window.addEventListener("load", register, { once: true });
+  }
 }

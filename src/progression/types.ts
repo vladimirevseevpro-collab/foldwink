@@ -20,7 +20,8 @@ export interface CollectibleStamp {
 }
 
 export interface ArchivistProfile {
-  version: 1;
+  /** Version 1 remains readable for transfer/import compatibility. */
+  version: 1 | 2;
   level: number;
   xp: number;
   ink: number;
@@ -39,6 +40,10 @@ export interface ArchivistProfile {
     rule: "sudden_death";
   } | null;
   playerSeed?: string;
+  /** v2 idempotency ledger. Legacy profiles are normalised on read. */
+  consumedRewardKeys?: string[];
+  rewardReceipts?: Record<string, RewardReceipt>;
+  migrationReceipts?: string[];
 }
 
 export interface GuildRank {
@@ -124,3 +129,4 @@ export const GUILD_RANKS: readonly GuildRank[] = [
     icon: "🖤",
   },
 ];
+import type { RewardReceipt } from "../game/application/rewardPolicy";

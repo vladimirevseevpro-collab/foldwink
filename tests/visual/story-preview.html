@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foldwink Story Preview</title>
+    <style>
+      :root {
+        font-family: "Manrope Variable", Arial, sans-serif;
+        color: #f1f4ee;
+        background: #101310;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 1080px;
+        height: 1920px;
+        margin: 0;
+        overflow: hidden;
+      }
+
+      body {
+        position: relative;
+        background: #101310;
+      }
+
+      body::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("/textures/graphite-paper.webp") center / 720px 720px repeat;
+        opacity: 0.12;
+      }
+
+      .frame {
+        position: absolute;
+        inset: 36px;
+        border: 2px solid #343d36;
+        border-radius: 16px;
+        overflow: hidden;
+      }
+
+      .frame::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 76px;
+        height: 76px;
+        background: #67d7d0;
+        clip-path: polygon(0 0, 100% 0, 100% 100%);
+      }
+
+      .frame::before {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        right: 18px;
+        top: 23px;
+        width: 31px;
+        height: 5px;
+        border-radius: 999px;
+        background: #151a17;
+        transform: rotate(45deg);
+      }
+
+      .brand {
+        position: absolute;
+        z-index: 1;
+        top: 105px;
+        left: 50%;
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        transform: translateX(-50%);
+      }
+
+      .mark {
+        position: relative;
+        width: 102px;
+        height: 102px;
+        padding: 11px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        border: 2px solid #343d36;
+        border-radius: 10px;
+        background: #f1f4ee;
+        box-shadow: 0 8px 0 #aeb7ad;
+        overflow: hidden;
+      }
+
+      .mark::after,
+      .selected::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 27px;
+        height: 27px;
+        background: #67d7d0;
+        clip-path: polygon(0 0, 100% 0, 100% 100%);
+      }
+
+      .mark span {
+        border-radius: 5px;
+      }
+
+      .mark span:nth-child(1) {
+        background: #f1c75b;
+      }
+
+      .mark span:nth-child(2) {
+        background: #75c88a;
+      }
+
+      .mark span:nth-child(3) {
+        background: #ec8b7d;
+      }
+
+      .mark span:nth-child(4) {
+        background: #b9a2f2;
+      }
+
+      .wordmark {
+        margin: 0;
+        font-size: 90px;
+        line-height: 0.95;
+        font-weight: 800;
+      }
+
+      .wordmark b {
+        color: #67d7d0;
+      }
+
+      .hook {
+        position: absolute;
+        z-index: 1;
+        top: 290px;
+        left: 90px;
+        width: 900px;
+        text-align: center;
+      }
+
+      .hook h2 {
+        margin: 0;
+        font-size: 78px;
+        line-height: 1.04;
+        font-weight: 800;
+      }
+
+      .hook p {
+        margin: 18px 0 0;
+        color: #a5ada6;
+        font-size: 31px;
+      }
+
+      .game-object {
+        position: absolute;
+        z-index: 1;
+        left: 80px;
+        top: 500px;
+        width: 920px;
+      }
+
+      .tabs {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+        margin: 0 16px 18px;
+      }
+
+      .tab {
+        position: relative;
+        height: 76px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #d2d8d0;
+        border-bottom-width: 5px;
+        border-radius: 8px 8px 4px 4px;
+        color: #151a17;
+        background: #f1f4ee;
+        box-shadow: 0 4px 0 #111512;
+        font-size: 27px;
+        font-weight: 800;
+      }
+
+      .tab:first-child {
+        border-color: #67d7d0;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+      }
+
+      .card {
+        position: relative;
+        height: 158px;
+        padding: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #d2d8d0;
+        border-radius: 8px;
+        color: #151a17;
+        background: #f1f4ee;
+        box-shadow:
+          0 8px 0 #aeb7ad,
+          0 18px 28px -20px #000;
+        text-align: center;
+        font-size: 29px;
+        line-height: 1.08;
+        font-weight: 800;
+      }
+
+      .selected {
+        border: 4px solid #67d7d0;
+        background: #fff;
+        box-shadow:
+          0 8px 0 #418f8a,
+          0 18px 28px -20px #000;
+        transform: translateY(-3px);
+      }
+
+      .controls {
+        position: absolute;
+        z-index: 1;
+        top: 1310px;
+        left: 96px;
+        width: 888px;
+      }
+
+      .selection {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 28px;
+        color: #a5ada6;
+        font-size: 27px;
+        font-weight: 700;
+      }
+
+      .dot {
+        width: 18px;
+        height: 18px;
+        border-radius: 999px;
+        background: #67d7d0;
+      }
+
+      .dot.empty {
+        border: 2px solid #343d36;
+        background: #252b26;
+      }
+
+      .submit {
+        height: 92px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #4eb7b0;
+        border-radius: 8px;
+        color: #151a17;
+        background: #67d7d0;
+        box-shadow: 0 7px 0 #367f7a;
+        font-size: 35px;
+        font-weight: 800;
+      }
+
+      .ritual {
+        position: absolute;
+        z-index: 1;
+        top: 1515px;
+        left: 100px;
+        width: 880px;
+        text-align: center;
+      }
+
+      .ritual strong {
+        display: block;
+        font-size: 43px;
+        line-height: 1.2;
+      }
+
+      .ritual span {
+        display: block;
+        margin-top: 15px;
+        color: #a5ada6;
+        font-size: 27px;
+      }
+
+      .url {
+        position: absolute;
+        z-index: 1;
+        top: 1685px;
+        left: 50%;
+        padding: 22px 34px;
+        border: 2px solid #67d7d0;
+        border-radius: 8px;
+        color: #67d7d0;
+        background: #1b201c;
+        box-shadow: 0 6px 0 #111512;
+        font-size: 28px;
+        font-weight: 800;
+        transform: translateX(-50%);
+        white-space: nowrap;
+      }
+
+      .byline {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        top: 1810px;
+        color: #a5ada6;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 650;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="frame"></div>
+    <div class="brand">
+      <div class="mark" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+      </div>
+      <h1 class="wordmark">Fold<b>wink</b></h1>
+    </div>
+    <section class="hook">
+      <h2>Which four belong?</h2>
+      <p>Find the hidden category before you spend your Wink.</p>
+    </section>
+    <section class="game-object" aria-label="Foldwink puzzle preview">
+      <div class="tabs">
+        <div class="tab selected">F··</div>
+        <div class="tab">M··</div>
+        <div class="tab">S··</div>
+        <div class="tab">T··</div>
+      </div>
+      <div class="grid">
+        <div class="card selected">APPLE</div>
+        <div class="card">MARS</div>
+        <div class="card">BOW</div>
+        <div class="card selected">PEAR</div>
+        <div class="card">CANOE</div>
+        <div class="card selected">LIME</div>
+        <div class="card">VENUS</div>
+        <div class="card">MAST</div>
+        <div class="card">PLUTO</div>
+        <div class="card">KAYAK</div>
+        <div class="card">PLUM</div>
+        <div class="card">HULL</div>
+        <div class="card">RUDDER</div>
+        <div class="card">EARTH</div>
+        <div class="card">DINGHY</div>
+        <div class="card">SAIL</div>
+      </div>
+    </section>
+    <section class="controls">
+      <div class="selection">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <span class="dot empty"></span><span>3/4 selected</span>
+      </div>
+      <div class="submit">Submit</div>
+    </section>
+    <section class="ritual">
+      <strong>A fresh puzzle every day.</strong>
+      <span>Two to five minutes. No account.</span>
+    </section>
+    <div class="url">neural-void.com/foldwink</div>
+    <div class="byline">A small puzzle by Neural Void</div>
+    <script type="module" src="./story-preview.ts"></script>
+  </body>
+</html>

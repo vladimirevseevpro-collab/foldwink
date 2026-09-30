@@ -5,6 +5,18 @@ export function canSubmit(selection: readonly string[]): boolean {
   return selection.length === SELECTION_SIZE;
 }
 
+/**
+ * Stable identity for a quartet regardless of click or shuffle order.
+ * Puzzle items are still strings in the current schema; W2 will replace
+ * display-text identity with durable item ids without changing this API.
+ */
+export function guessSignature(selection: readonly string[]): string | null {
+  if (selection.length !== SELECTION_SIZE) return null;
+  const unique = new Set(selection);
+  if (unique.size !== SELECTION_SIZE) return null;
+  return JSON.stringify([...unique].sort());
+}
+
 export function findMatchingGroup(
   selection: readonly string[],
   puzzle: Puzzle,

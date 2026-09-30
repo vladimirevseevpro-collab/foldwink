@@ -1,5 +1,108 @@
 # Release Notes
 
+## 0.8.4 - 2026-09-16 - W7 pilot version-integrity fix
+
+This build supersedes `0.8.3` before participant 001. The frozen `0.8.3`
+bundle was labelled correctly by the package and itch channel but its voluntary
+research export still reported app version `0.8.2`. No participant records
+exist, so the pilot starts only on this corrected identity.
+
+- Runtime app version now comes from `package.json`, eliminating the duplicate
+  analytics/export constant.
+- Unit and production-browser E2E verify that the downloaded research export
+  matches the packaged app version.
+- Public itch **Run game** is upload `#19242763`, build `#1984826`; the download
+  channel is build `#1984827`.
+- ZIP SHA-256:
+  `b9e5dde25558e27dc9f846f28e8ad4b9dbb0d134136e2efa2bb8c9d7cf7fc645`.
+- Dist tree SHA-256:
+  `b41e3ce52dd56f28e96719a6e4872bc7701e6305cbfe270a5e8f02bdd64eb385`.
+- Both channels were fetched back and matched all 137 files. Live EN/DE/RU
+  export parity and gameplay smoke pass at 1440×900, 1024×768 and 390×844.
+- W7 remains incomplete: real participants, exact-build physical devices and
+  complete D1/D7 windows are still required.
+
+## 0.8.3 - 2026-09-15 - W7 pilot candidate
+
+This build is browser-staged on itch.io for the real-participant W7 balance and
+retention pilot. It is not a commercially accepted release: physical iOS,
+Android and external-desktop smoke, 20–30 observed first sessions and complete
+D1/D7 windows remain outstanding.
+
+Superseded before participant 001 by `0.8.4` because the runtime research
+export reported app version `0.8.2`. Retained below as immutable history only.
+
+### Product and content
+
+- 3,000 curated puzzles: 1,000 each in English, German and Russian.
+- Versioned Daily calendar, Foldwink Tabs + one-shot Wink, local-first
+  persistence, offline PWA, collection/share surfaces and consent-safe pilot
+  export.
+- The menu now reports the verified 1,000-board selected-language catalogue,
+  not the 30-board lazy boot chunk.
+
+### Verified staging
+
+- itch upload `#19242763`, build `#1981655`, version `0.8.3`.
+- Legacy download upload `#17237271`, build `#1981682`, now serves the same
+  `0.8.3` tree as the browser-playable channel.
+- Exact 137-file channel fetch matches tree SHA-256
+  `182628d9a1a80b10437fb90dbcf879522d345387db394cbb6687d180d2655d0e`.
+- EN/DE/RU external smoke passes at 1440×900, 1024×768 and 390×844 with
+  HTTP 200, one correct group per locale and zero console/page errors.
+- 55 Vitest files / 362 tests, 74/74 production E2E scenarios, all three
+  1,000-puzzle validators, build budgets, notices and production dependency
+  audit pass.
+
+---
+
+## 0.8.2 - 2026-07-24 - Mobile-first release candidate
+
+This is the first release-candidate line after the closed-beta era. It is ready
+for a free direct web/PWA deployment after the documented physical-device
+checks. It is not yet approved for paid activation.
+
+### Product
+
+- Responsive mobile shell, tactile 2.5D cards, motion tokens, nine local audio
+  cues, persistent sound/haptics controls, and a canvas-based share card.
+- Daily Fold retention surface, replay-safe daily history, mid-game resume,
+  local-only statistics, PWA offline shell, and player-initiated install flow.
+- Optional privacy-gated aggregate measurement plus a hidden-by-default tip jar
+  and cosmetic Supporter return surface. No gameplay paywall or pay-to-win.
+- Direct web/PWA is canonical. itch.io packaging is maintained as optional
+  discovery.
+
+### Content
+
+- EN, RU, and DE pools contain exactly 500 active curated puzzles each.
+- EN mix: 275 easy, 191 medium, 34 hard.
+- Recent English P0 remediation replaced puzzles 0092, 0097, 0169, and 0197
+  one-for-one after draft/reference duplicate checks, independent editorial
+  review, and 390px rendering QA.
+- Recent English CQ6 remediation also replaced hard-024 / puzzle-0355 as Garden Shed and puzzle-0394 as Car Care after independent editorial review, reference checks, and 390px rendering QA.
+- 18 Medium/Hard boards still use the explicit full-label Tabs fallback
+  (17 EN and 1 RU). This is a tracked readability backlog, not hidden.
+
+### Verification
+
+- 23 Vitest files / 178 unit tests passed.
+- 59 Playwright browser scenarios passed, including iPhone 390x844, Pixel,
+  itch embed, PWA offline, localization, and supporter-return flows.
+- TypeScript, ESLint, content validation, sound-pack check, production build,
+  free release preflight, and fresh itch packaging passed.
+
+### Public launch boundary
+
+A free launch still requires canonical deployment and physical iPhone/Android
+checks. Paid activation additionally requires real Ko-fi/hosted-checkout URLs,
+a real return redirect, and same-origin cosmetic-badge verification.
+
+See the current reports in `docs/reports/` and
+`docs/KNOWN_LIMITATIONS.md`.
+
+---
+
 ## 0.4.3 — 2026-04-12 — Master Challenge scaffold + Hard layer
 
 Adds the Hard / Master Challenge difficulty tier as a fully scaffolded but empty-content layer. Engine, store, readiness logic, validator, and MenuScreen button are complete and tested. Hard pool is empty — the button shows "Master Challenge — soon" until the first disciplined batch of curated Hard puzzles ships.

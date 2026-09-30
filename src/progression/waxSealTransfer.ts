@@ -1,8 +1,32 @@
 import type { ArchivistProfile, DisciplineId } from "./types";
 import { GUILD_RANKS } from "./types";
-import { SEALS, TITLES, STAMP_COLLECTION } from "./stamps";
+import { SEALS, NIBS, TITLES, STAMP_COLLECTION } from "./stamps";
 import { fnv1a } from "../utils/hash";
-import { generateQrMatrix, drawQrToCanvas } from "./qr";
+import { tryGenerateQrMatrix, drawQrToCanvas } from "./qr";
+
+export const WAX_SEAL_MAX_INPUT_CHARS = 4096;
+const WAX_SEAL_MAX_JSON_BYTES = 3072;
+const LEGACY_COUNTER_MAX = 1_000_000_000;
+const DISCIPLINES: readonly DisciplineId[] = [
+  "scribe",
+  "archivist",
+  "cryptographer",
+  "curator",
+  "cartographer",
+];
+
+function isBoundedCounter(value: unknown, minimum = 0): value is number {
+  return (
+    typeof value === "number" &&
+    Number.isSafeInteger(value) &&
+    value >= minimum &&
+    value <= LEGACY_COUNTER_MAX
+  );
+}
+
+function isPortableSeed(value: unknown): value is string {
+  return typeof value === "string" && /^[A-Za-z0-9_-]{1,128}$/u.test(value);
+}
 
 export interface CompactPassportPayload {
   v: 1;
@@ -101,6 +125,9 @@ export interface DecodeResult {
 
 export function decodePassportFromSeal(sealString: string): DecodeResult {
   const trimmed = sealString.trim();
+  if (trimmed.length > WAX_SEAL_MAX_INPUT_CHARS) {
+    return { ok: false, error: "Seal payload is too large" };
+  }
   if (!trimmed.startsWith("FWSEAL1:")) {
     return { ok: false, error: "Invalid seal format (missing FWSEAL1 header)" };
   }
@@ -113,12 +140,28 @@ export function decodePassportFromSeal(sealString: string): DecodeResult {
 
   const expectedHash = rest.slice(0, dashIndex);
   const b64 = rest.slice(dashIndex + 1);
+  if (
+    !/^[0-9a-f]{8}$/u.test(expectedHash) ||
+    b64.length % 4 !== 0 ||
+    !/^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$/u.test(b64)
+  ) {
+    return { ok: false, error: "Invalid seal encoding" };
+  }
 
   try {
     const jsonStr = fromBase64(b64);
+    if (toBase64(jsonStr) !== b64) {
+      return { ok: false, error: "Invalid seal encoding" };
+    }
+    if (new TextEncoder().encode(jsonStr).byteLength > WAX_SEAL_MAX_JSON_BYTES) {
+      return { ok: false, error: "Seal data is too large" };
+    }
     const actualHash = (fnv1a(jsonStr) >>> 0).toString(16).padStart(8, "0");
     if (actualHash !== expectedHash) {
-      return { ok: false, error: "Seal verification failed (checksum mismatch / tampering)" };
+      return {
+        ok: false,
+        error: "Seal checksum mismatch (the code may be incomplete or mistyped)",
+      };
     }
 
     const rawPayload = JSON.parse(jsonStr);
@@ -138,8 +181,11 @@ export function decodePassportFromSeal(sealString: string): DecodeResult {
     let cw: number;
 
     if (Array.isArray(rawPayload)) {
+      if (rawPayload.length > 14) {
+        return { ok: false, error: "Invalid seal data shape" };
+      }
       [v, lvl, xp, ink, wax, p, d, s, n, t, st, ps, ca, cw] = rawPayload;
-    } else {
+    } else if (rawPayload && typeof rawPayload === "object") {
       const obj = rawPayload as Partial<CompactPassportPayload>;
       v = obj.v ?? 1;
       lvl = obj.lvl ?? 1;
@@ -155,18 +201,38 @@ export function decodePassportFromSeal(sealString: string): DecodeResult {
       ps = obj.ps;
       ca = obj.ca ?? 0;
       cw = obj.cw ?? 0;
+    } else {
+      return { ok: false, error: "Invalid seal data shape" };
     }
 
     if (v !== 1) {
       return { ok: false, error: `Unsupported seal version (${v})` };
     }
-    if (typeof lvl !== "number" || typeof xp !== "number") {
-      return { ok: false, error: "Missing level or XP in seal data" };
+    if (
+      !isBoundedCounter(lvl, 1) ||
+      !isBoundedCounter(xp) ||
+      !isBoundedCounter(ink) ||
+      !isBoundedCounter(wax) ||
+      !isBoundedCounter(p) ||
+      !isBoundedCounter(ca) ||
+      !isBoundedCounter(cw)
+    ) {
+      return { ok: false, error: "Invalid numeric values in seal data" };
+    }
+    if (!DISCIPLINES.includes(d)) {
+      return { ok: false, error: "Unknown discipline in seal data" };
+    }
+    if (ps != null && !isPortableSeed(ps)) {
+      return { ok: false, error: "Invalid player seed in seal data" };
     }
 
     // Resolve stamps
     let collectedStampIds: string[];
     if (typeof st === "number") {
+      const maxMask = (1 << STAMP_COLLECTION.length) - 1;
+      if (!Number.isSafeInteger(st) || st < 0 || st > maxMask) {
+        return { ok: false, error: "Invalid stamp mask in seal data" };
+      }
       collectedStampIds = [];
       for (let i = 0; i < STAMP_COLLECTION.length; i++) {
         if ((st & (1 << i)) !== 0) {
@@ -177,31 +243,45 @@ export function decodePassportFromSeal(sealString: string): DecodeResult {
         collectedStampIds = ["stamp_morning_brew"];
       }
     } else if (Array.isArray(st)) {
-      collectedStampIds = st.map((item) =>
-        item.startsWith("stamp_") ? item : `stamp_${item}`,
-      );
+      if (st.length > STAMP_COLLECTION.length || st.some((item) => typeof item !== "string")) {
+        return { ok: false, error: "Invalid stamps in seal data" };
+      }
+      const knownStampIds = new Set(STAMP_COLLECTION.map((item) => item.id));
+      collectedStampIds = [
+        ...new Set(st.map((item) => (item.startsWith("stamp_") ? item : `stamp_${item}`))),
+      ];
+      if (collectedStampIds.some((stampId) => !knownStampIds.has(stampId))) {
+        return { ok: false, error: "Unknown stamp in seal data" };
+      }
     } else {
-      collectedStampIds = ["stamp_morning_brew"];
+      return { ok: false, error: "Invalid stamps in seal data" };
     }
 
     const cleanSealId = s?.startsWith("seal_") ? s : s ? `seal_${s}` : "seal_raven";
     const cleanNibId = n?.startsWith("nib_") ? n : n ? `nib_${n}` : "nib_brass";
     const cleanTitleId = t?.startsWith("title_") ? t : t ? `title_${t}` : "title_truths";
+    if (
+      !SEALS.some((item) => item.id === cleanSealId) ||
+      !NIBS.some((item) => item.id === cleanNibId) ||
+      !TITLES.some((item) => item.id === cleanTitleId)
+    ) {
+      return { ok: false, error: "Unknown passport cosmetic in seal data" };
+    }
 
     const profile: ArchivistProfile = {
       version: 1,
-      level: Math.max(1, lvl),
-      xp: Math.max(0, xp),
-      ink: Math.max(0, ink ?? 0),
-      wax: Math.max(0, wax ?? 0),
-      prestige: Math.max(0, p ?? 0),
-      discipline: d ?? "scribe",
+      level: lvl,
+      xp,
+      ink,
+      wax,
+      prestige: p,
+      discipline: d,
       sealId: cleanSealId,
       nibId: cleanNibId,
       titleId: cleanTitleId,
       collectedStampIds,
-      contractsAttempted: Math.max(0, ca ?? 0),
-      contractsWon: Math.max(0, cw ?? 0),
+      contractsAttempted: ca,
+      contractsWon: cw,
       activeContract: null,
       playerSeed: ps || undefined,
     };
@@ -353,9 +433,40 @@ export function drawWaxSealCertificate(
   ctx.lineWidth = 1.5;
   ctx.strokeRect(qrX - 8, qrY - 8, qrSize + 16, qrSize + 16);
 
-  // Draw QR code matrix
-  const matrix = generateQrMatrix(sealString);
-  drawQrToCanvas(ctx, matrix, qrX, qrY, qrSize, "#151a17", "#f1f4ee");
+  // Draw a camera-friendly QR when the legacy payload fits the accepted
+  // density ceiling. Older long player seeds remain import-compatible, but
+  // must never crash certificate rendering when their seal is too dense.
+  const qrResult = tryGenerateQrMatrix(sealString);
+  if (qrResult.ok) {
+    drawQrToCanvas(ctx, qrResult.matrix, qrX, qrY, qrSize, "#151a17", "#f1f4ee");
+  } else {
+    ctx.fillStyle = "#151a17";
+    ctx.fillRect(qrX, qrY, qrSize, qrSize);
+    ctx.fillStyle = "#e0b25e";
+    ctx.font = `800 38px ${fontStack}`;
+    ctx.textAlign = "center";
+    ctx.fillText("FW", width / 2, qrY + 82);
+    ctx.fillStyle = "#f1f4ee";
+    ctx.font = `700 13px ${fontStack}`;
+    const fallbackTitle =
+      lang === "ru"
+        ? "Код слишком длинный для QR"
+        : lang === "de"
+          ? "Code ist zu lang für QR"
+          : "Code is too long for QR";
+    const fallbackAction =
+      lang === "ru"
+        ? "Скопируйте код в приложении"
+        : lang === "de"
+          ? "Code in der App kopieren"
+          : "Copy the code in the app";
+    ctx.fillText(fallbackTitle, width / 2, qrY + 126);
+    ctx.fillStyle = "#a5ada6";
+    ctx.font = `600 11px ${fontStack}`;
+    ctx.fillText(fallbackAction, width / 2, qrY + 150);
+    ctx.font = `600 9px monospace`;
+    ctx.fillText(`${qrResult.bytes}/${qrResult.maxBytes} bytes`, width / 2, qrY + 176);
+  }
 
   // Code snippet text below QR
   ctx.fillStyle = "#a5ada6";

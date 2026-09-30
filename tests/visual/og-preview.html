@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foldwink Open Graph Preview</title>
+    <style>
+      :root {
+        font-family: "Manrope Variable", Arial, sans-serif;
+        color: #f1f4ee;
+        background: #101310;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 1200px;
+        height: 630px;
+        margin: 0;
+        overflow: hidden;
+      }
+
+      body {
+        position: relative;
+        background: #101310;
+      }
+
+      body::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("/textures/graphite-paper.webp") center / 720px 720px repeat;
+        opacity: 0.12;
+      }
+
+      .frame {
+        position: absolute;
+        inset: 28px;
+        border: 2px solid #343d36;
+        border-radius: 14px;
+        overflow: hidden;
+      }
+
+      .frame::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 58px;
+        height: 58px;
+        background: #67d7d0;
+        clip-path: polygon(0 0, 100% 0, 100% 100%);
+      }
+
+      .wink-slit {
+        position: absolute;
+        z-index: 2;
+        right: 13px;
+        top: 17px;
+        width: 24px;
+        height: 4px;
+        border-radius: 999px;
+        background: #151a17;
+        transform: rotate(45deg);
+      }
+
+      .copy {
+        position: absolute;
+        z-index: 1;
+        left: 80px;
+        top: 66px;
+        width: 500px;
+      }
+
+      .brand-row {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+      }
+
+      .mark {
+        position: relative;
+        width: 82px;
+        height: 82px;
+        padding: 9px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 7px;
+        border: 2px solid #343d36;
+        border-radius: 9px;
+        background: #f1f4ee;
+        box-shadow: 0 7px 0 #aeb7ad;
+        overflow: hidden;
+      }
+
+      .mark::after,
+      .selected::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 21px;
+        height: 21px;
+        background: #67d7d0;
+        clip-path: polygon(0 0, 100% 0, 100% 100%);
+      }
+
+      .mark span {
+        border-radius: 4px;
+      }
+
+      .yellow {
+        background: #f1c75b;
+      }
+
+      .green {
+        background: #75c88a;
+      }
+
+      .coral {
+        background: #ec8b7d;
+      }
+
+      .violet {
+        background: #b9a2f2;
+      }
+
+      .wordmark {
+        margin: 0;
+        font-size: 74px;
+        line-height: 0.95;
+        font-weight: 800;
+      }
+
+      .wordmark b {
+        color: #67d7d0;
+      }
+
+      .registration {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 170px;
+        margin: 28px 0 22px;
+      }
+
+      .registration span {
+        height: 3px;
+        flex: 1;
+        background: #343d36;
+      }
+
+      .registration i {
+        width: 12px;
+        height: 12px;
+        border: 3px solid #4eb7b0;
+        transform: rotate(45deg);
+      }
+
+      h2 {
+        max-width: 470px;
+        margin: 0;
+        font-size: 54px;
+        line-height: 1.04;
+        font-weight: 800;
+      }
+
+      .promise {
+        max-width: 440px;
+        margin: 20px 0 0;
+        color: #a5ada6;
+        font-size: 24px;
+        line-height: 1.45;
+      }
+
+      .url {
+        position: absolute;
+        left: 80px;
+        bottom: 65px;
+        color: #67d7d0;
+        font-size: 21px;
+        font-weight: 700;
+      }
+
+      .game-object {
+        position: absolute;
+        z-index: 1;
+        right: 84px;
+        top: 90px;
+        width: 464px;
+      }
+
+      .tabs {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+        margin: 0 10px 12px;
+      }
+
+      .tab {
+        position: relative;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #d2d8d0;
+        border-bottom-width: 4px;
+        border-radius: 7px 7px 4px 4px;
+        color: #151a17;
+        background: #f1f4ee;
+        box-shadow: 0 3px 0 #111512;
+        font-size: 18px;
+        font-weight: 800;
+      }
+
+      .tab:first-child {
+        border-color: #67d7d0;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+      }
+
+      .card {
+        position: relative;
+        height: 94px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #d2d8d0;
+        border-radius: 8px;
+        color: #151a17;
+        background: #f1f4ee;
+        box-shadow:
+          0 6px 0 #aeb7ad,
+          0 14px 20px -16px #000;
+        text-align: center;
+        font-size: 17px;
+        line-height: 1.08;
+        font-weight: 800;
+      }
+
+      .selected {
+        border-color: #67d7d0;
+        background: #fff;
+        box-shadow:
+          0 6px 0 #418f8a,
+          0 14px 20px -16px #000;
+        transform: translateY(-2px);
+      }
+
+      .rail {
+        height: 4px;
+        margin: 13px 20px 0;
+        border-radius: 0 0 5px 5px;
+        background: #343d36;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="frame">
+      <span class="wink-slit"></span>
+      <section class="copy">
+        <div class="brand-row">
+          <div class="mark" aria-hidden="true">
+            <span class="yellow"></span><span class="green"></span> <span class="coral"></span
+            ><span class="violet"></span>
+          </div>
+          <h1 class="wordmark">Fold<b>wink</b></h1>
+        </div>
+        <div class="registration"><span></span><i></i><span></span></div>
+        <h2>Find the four hidden groups.</h2>
+        <p class="promise">
+          16 paper cards. Four mistakes. One revealing Wink. A fresh puzzle every day.
+        </p>
+      </section>
+      <div class="url">neural-void.com/foldwink</div>
+
+      <section class="game-object" aria-label="Foldwink puzzle preview">
+        <div class="tabs">
+          <div class="tab selected">F··</div>
+          <div class="tab">M··</div>
+          <div class="tab">S··</div>
+          <div class="tab">T··</div>
+        </div>
+        <div class="grid">
+          <div class="card selected">APPLE</div>
+          <div class="card">MARS</div>
+          <div class="card">BOW</div>
+          <div class="card selected">PEAR</div>
+          <div class="card">CANOE</div>
+          <div class="card selected">LIME</div>
+          <div class="card">VENUS</div>
+          <div class="card">MAST</div>
+          <div class="card">PLUTO</div>
+          <div class="card">KAYAK</div>
+          <div class="card selected">PLUM</div>
+          <div class="card">HULL</div>
+          <div class="card">RUDDER</div>
+          <div class="card">EARTH</div>
+          <div class="card">DINGHY</div>
+          <div class="card">SAIL</div>
+        </div>
+        <div class="rail"></div>
+      </section>
+    </div>
+    <script type="module" src="./og-preview.ts"></script>
+  </body>
+</html>

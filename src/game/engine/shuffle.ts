@@ -4,8 +4,8 @@ import { fnv1a } from "../../utils/hash";
 export function flattenPuzzle(puzzle: Puzzle): FlatItem[] {
   const out: FlatItem[] = [];
   for (const group of puzzle.groups) {
-    for (const item of group.items) {
-      out.push({ value: item, groupId: group.id });
+    for (const [index, item] of group.items.entries()) {
+      out.push({ id: JSON.stringify([group.id, index]), value: item, groupId: group.id });
     }
   }
   return out;
@@ -37,5 +37,13 @@ export function seedFromString(s: string): number {
 }
 
 export function shuffleItems(puzzle: Puzzle, seed: number): string[] {
-  return shuffleDeterministic(flattenPuzzle(puzzle), seed).map((f) => f.value);
+  return shuffleFlatItems(puzzle, seed).map((item) => item.value);
+}
+
+export function shuffleFlatItems(puzzle: Puzzle, seed: number): FlatItem[] {
+  return shuffleDeterministic(flattenPuzzle(puzzle), seed);
+}
+
+export function itemIdForValue(puzzle: Puzzle, value: string): string | undefined {
+  return flattenPuzzle(puzzle).find((item) => item.value === value)?.id;
 }

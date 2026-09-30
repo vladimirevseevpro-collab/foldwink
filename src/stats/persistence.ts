@@ -1,4 +1,4 @@
-import { safeRead, safeWrite, safeRemove } from "../utils/storage";
+import { clearFoldwinkNamespace, safeRead, safeWrite, safeRemove } from "../utils/storage";
 
 import {
   INITIAL_STATS,
@@ -9,6 +9,7 @@ import {
 import type { ActiveGame } from "../game/types/game";
 import { applyGraceWaxProtection, type GraceWaxResult } from "./dailyRitual";
 import { loadArchivistProfile, saveArchivistProfile } from "../progression/archivistProfile";
+import { IndexedDbGameRepository } from "../persistence/gameRepository";
 
 const STATS_KEY = "foldwink:stats";
 const PROGRESS_KEY = "foldwink:progress";
@@ -88,32 +89,25 @@ export function saveActiveSession(session: StoredSession): void {
 }
 
 export function clearActiveSession(): void {
-  try {
-    if (typeof localStorage !== "undefined") {
-      localStorage.removeItem(SESSION_KEY);
-    }
-  } catch {
-    /* ignore */
-  }
+  safeRemove(SESSION_KEY);
 }
 
 /**
- * Wipes every Foldwink-owned localStorage key: stats, progress, daily
- * history, onboarding flag, saved session, sound settings, haptics
- * settings, and the local analytics counter. Intended for user-initiated
- * full resets and for automated QA agents. Every key is namespaced with
- * `foldwink:` so we can scan defensively.
+ * Wipes every Foldwink-owned adapter entry and CacheStorage cache, then the
+ * IndexedDB aggregate. It is only invoked after the explicit UI confirmation;
+ * callers receive false rather than claiming success after an aborted store.
  */
-export function clearAllLocalData(): void {
-  if (typeof localStorage === "undefined") return;
+export async function clearAllLocalData(): Promise<boolean> {
+  const adapterResult = await clearFoldwinkNamespace();
+  const repository = new IndexedDbGameRepository();
+  let indexedDbCleared = false;
   try {
-    const toDelete: string[] = [];
-    for (let i = 0; i < localStorage.length; i++) {
-      const key = localStorage.key(i);
-      if (key && key.startsWith("foldwink:")) toDelete.push(key);
-    }
-    for (const k of toDelete) safeRemove(k);
+    await repository.clear();
+    indexedDbCleared = true;
   } catch {
-    /* ignore — storage unavailable */
+    /* The caller receives false and must not claim a completed reset. */
+  } finally {
+    repository.close();
   }
+  return adapterResult.ok && indexedDbCleared;
 }

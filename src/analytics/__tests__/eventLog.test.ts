@@ -1,4 +1,9 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { APP_VERSION } from "../../appVersion";
+vi.mock("../../puzzles/byLang", () => ({
+  getRuntimeContentVersion: () => "catalog-test-v1",
+}));
+
 import {
   bootstrapAnalytics,
   bucketSource,
@@ -159,6 +164,70 @@ describe("consent and local counts", () => {
     );
   });
 
+  it("adds the complete OPS-06 version tuple to consented research events", async () => {
+    await setConsentStatus("granted");
+    trackEvent({
+      name: "attempt_started",
+      props: {
+        surface: "game",
+        context: "game",
+        mode: "standard",
+        tier: "easy",
+        difficulty: "easy",
+        first_attempt: "yes",
+        lang: "en",
+      },
+    });
+    expect(window.umami?.track as ReturnType<typeof vi.fn>).toHaveBeenCalledWith(
+      "attempt_started",
+      expect.objectContaining({
+        event_schema: "ops-06-v1",
+        app_version: APP_VERSION,
+        content_version: "catalog-test-v1",
+        policy_version: "privacy-v1",
+        balance_version: "balance-2026-09-v1",
+      }),
+    );
+  });
+
+  it("never replays a denied or revoked event after a later grant", async () => {
+    const providerTrack = window.umami?.track as ReturnType<typeof vi.fn>;
+    trackEvent({
+      name: "menu_view",
+      props: { surface: "menu", lang: "en", has_support_flag: "no" },
+    });
+    await setConsentStatus("granted");
+    expect(window.umami?.track as ReturnType<typeof vi.fn>).not.toHaveBeenCalled();
+
+    trackEvent({
+      name: "menu_view",
+      props: { surface: "menu", lang: "en", has_support_flag: "no" },
+    });
+    await setConsentStatus("denied");
+    expect(window.umami).toBeUndefined();
+    trackEvent({
+      name: "menu_view",
+      props: { surface: "menu", lang: "en", has_support_flag: "no" },
+    });
+    expect(providerTrack).toHaveBeenCalledTimes(1);
+    await setConsentStatus("granted");
+    expect(providerTrack).toHaveBeenCalledTimes(1);
+  });
+
+  it("does not hand events to a provider while offline", async () => {
+    Object.defineProperty(globalThis, "navigator", {
+      configurable: true,
+      value: { onLine: false },
+    });
+    await setConsentStatus("granted");
+    trackEvent({
+      name: "menu_view",
+      props: { surface: "menu", lang: "en", has_support_flag: "no" },
+    });
+    expect(window.umami?.track as ReturnType<typeof vi.fn>).not.toHaveBeenCalled();
+    delete (globalThis as { navigator?: Navigator }).navigator;
+  });
+
   it("sanitizes unknown properties out of the network payload", async () => {
     await setConsentStatus("granted");
     trackEvent({
@@ -190,10 +259,40 @@ describe("consent and local counts", () => {
     clearEventLog();
     expect(getEventCounts().app_open).toBeUndefined();
   });
+
+  it("drops corrupt legacy counters and merges independent page buckets", () => {
+    localStorage.setItem(
+      "foldwink:analytics:events:v2",
+      JSON.stringify({ attempt_started: "x", attempt_completed: -5, menu_view: 2 }),
+    );
+    localStorage.setItem(
+      "foldwink:analytics:event-bucket:v2:other-tab",
+      JSON.stringify({ attempt_started: 3, unknown_event: 99 }),
+    );
+    trackEvent({
+      name: "attempt_started",
+      props: {
+        surface: "game",
+        context: "game",
+        mode: "standard",
+        tier: "easy",
+        difficulty: "easy",
+        first_attempt: "yes",
+        lang: "en",
+      },
+    });
+
+    expect(getEventCounts()).toMatchObject({ menu_view: 2, attempt_started: 4 });
+    expect(getEventCounts().attempt_completed).toBeUndefined();
+  });
 });
 
 describe("bootstrapAnalytics", () => {
   it("does not inject before grant and injects once after grant", async () => {
+    // Module state survives test files; an explicit revoke resets a prior
+    // injected loader just as a real privacy choice would.
+    await setConsentStatus("denied");
+    vi.mocked(document.querySelector).mockClear();
     await bootstrapAnalytics();
     expect(document.querySelector).not.toHaveBeenCalled();
 

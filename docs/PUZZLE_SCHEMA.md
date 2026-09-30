@@ -3,16 +3,16 @@
 ## Canonical TypeScript shape
 
 ```ts
-type PuzzleDifficulty = "easy" | "medium";
+type PuzzleDifficulty = "easy" | "medium" | "hard";
 
 type PuzzleGroup = {
   id: string;
   label: string;
   items: [string, string, string, string];
   /**
-   * Short keyword used by Foldwink Tabs on medium puzzles. The Tabs row
-   * shows this hint progressively (one more letter per solved group) and
-   * fully on solve or on Wink. Required on every group of a medium puzzle.
+   * Short keyword used by Foldwink Tabs on medium puzzles. Medium reveals
+   * one more letter per solve and supports one optional Wink. Easy and Hard
+   * have no Tabs and no Wink in the accepted product baseline.
    */
   revealHint?: string;
 };
@@ -83,7 +83,9 @@ The game renders these four hints across the Foldwink Tabs row above the grid. A
 
 ### Wink mechanic
 
-Once per medium puzzle the player may tap any unsolved tab to **Wink** it — that tab's `revealHint` is then shown in full immediately, regardless of the progressive-reveal stage. Only one tab can be winked per game. The winked tab is not solved — it still requires the player to find the 4 matching items. Because Wink can fully reveal a `revealHint` at any moment, authors should pick hints that feel meaningful when fully shown (a keyword, not an item).
+Once per **medium** puzzle the player may tap an unsolved tab to **Wink** it. That tab's full category label appears immediately, regardless of progressive reveal stage. Only one tab can be winked per game. The winked tab is not solved: the player still has to find its four matching items.
+
+Hard puzzles are the strict no-hint tier: they render neither Foldwink Tabs nor Wink. A hard payload may retain historical authoring metadata, but runtime and release manifests must not expose it as an active hint surface.
 
 ## Validation rules (enforced by `npm run validate`)
 
@@ -96,7 +98,7 @@ Hard (error):
 - items must be non-empty strings
 - labels must be non-empty strings
 - no duplicate items across groups within a single puzzle (case-insensitive)
-- difficulty must be `easy` or `medium`
+- difficulty must be `easy`, `medium`, or `hard`
 - if a `revealHint` is present, it must be a non-empty string
 
 Soft (warning):
@@ -111,4 +113,5 @@ Soft (warning):
 3. Are the category labels real and defensible?
 4. Are any items so obscure that they make the puzzle feel unfair?
 5. Is the false trail interesting rather than trick-only?
-6. For medium puzzles: does every group carry a `revealHint` short enough to fit a tab (≤ ~10 chars), and meaningful enough that revealing it via Wink still leaves a real puzzle to solve? The hint must be a category keyword, not a giveaway item.
+6. For medium puzzles: is every `revealHint` short enough to fit a tab and a meaningful category keyword? Wink reveals the full category label, not the hint.
+7. For hard puzzles: is the board fair without Tabs, Wink, or another hint system?

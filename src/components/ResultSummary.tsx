@@ -19,13 +19,13 @@ export function ResultSummary({ summary, puzzle, currentStreak }: Props) {
   const archetype = computePlayerArchetype(summary, puzzle.difficulty);
 
   return (
-    <div className="space-y-3 fw-result-pop">
+    <div className="relative z-10 space-y-3 fw-result-pop">
       {isWin && <VictoryConfetti />}
-      <div className="text-center">
-        <div className={`text-[11px] uppercase mb-1.5 ${isWin ? "text-accent" : "text-muted"}`}>
+      <div className="relative z-10 text-center">
+        <div className={`fw-kicker mb-1.5 ${isWin ? "text-accent" : "text-muted"}`}>
           {isWin ? t.resultSummary.cleared : t.resultSummary.closeCall}
         </div>
-        <h1 id="result-heading" className="text-3xl font-extrabold">
+        <h1 id="result-heading" className="fw-screen-title">
           {headline}
         </h1>
         <div className="mt-2 flex justify-center">
@@ -36,26 +36,28 @@ export function ResultSummary({ summary, puzzle, currentStreak }: Props) {
         </div>
       </div>
 
-      <StatStrip
-        cells={[
-          {
-            label: t.resultSummary.time,
-            value: formatDuration(summary.durationMs),
-          },
-          {
-            label: t.resultSummary.mistakes,
-            value: `${summary.mistakesUsed}/4`,
-            tone: summary.mistakesUsed >= 3 ? "muted" : "default",
-          },
-          {
-            label: t.resultSummary.streak,
-            value: currentStreak,
-            tone: isWin && currentStreak > 0 ? "accent" : "default",
-          },
-        ]}
-      />
+      <div className="relative z-10">
+        <StatStrip
+          cells={[
+            {
+              label: t.resultSummary.time,
+              value: formatDuration(summary.durationMs),
+            },
+            {
+              label: t.resultSummary.mistakes,
+              value: `${summary.mistakesUsed}/4`,
+              tone: summary.mistakesUsed >= 3 ? "muted" : "default",
+            },
+            {
+              label: t.resultSummary.streak,
+              value: currentStreak,
+              tone: isWin && currentStreak > 0 ? "accent" : "default",
+            },
+          ]}
+        />
+      </div>
 
-      <div className="space-y-1.5">
+      <div className="relative z-10 space-y-1.5">
         {puzzle.groups.map((g) => (
           <div
             key={g.id}

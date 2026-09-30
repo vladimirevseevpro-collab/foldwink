@@ -1,0 +1,131 @@
+{
+  "verifiedAt": "2026-09-16T10:04:37.689Z",
+  "publicUrl": "https://neural-void.itch.io/foldwink",
+  "playableUrl": "https://html.itch.zone/html/19242763-1984826/index.html",
+  "publicRunGameTarget": "https://html.itch.zone/html/19242763-1984826/index.html?v=1789553016",
+  "publicEmbedWarnings": [
+    "WARNING Unrecognized feature: 'monetization'. @ https://static.itch.io/lib.min.js?1789551660",
+    "WARNING Unrecognized feature: 'xr'. @ https://static.itch.io/lib.min.js?1789551660",
+    "WARNING Unrecognized feature: 'web-share'. @ https://static.itch.io/lib.min.js?1789551660",
+    "WARNING Allow attribute will take precedence over 'allowfullscreen'. @ https://static.itch.io/lib.min.js?1789551660"
+  ],
+  "itch": {
+    "project": "neural-void/foldwink",
+    "channel": "pilot-2026-09",
+    "uploadId": 19242763,
+    "buildId": 1984826
+  },
+  "artifact": {
+    "version": "0.8.4",
+    "zipSha256": "b9e5dde25558e27dc9f846f28e8ad4b9dbb0d134136e2efa2bb8c9d7cf7fc645",
+    "treeSha256": "b41e3ce52dd56f28e96719a6e4872bc7701e6305cbfe270a5e8f02bdd64eb385",
+    "files": 137,
+    "bytes": 5382077
+  },
+  "results": [
+    {
+      "viewport": "1440x900@100%",
+      "language": "en",
+      "publicStatus": 200,
+      "playableStatus": 200,
+      "puzzleId": "puzzle-0019",
+      "solvedCategory": "___ FLY",
+      "researchExportVersion": "0.8.4",
+      "listingMetrics": {
+        "viewportWidth": 1440,
+        "viewportHeight": 900,
+        "documentWidth": 1440,
+        "documentHeight": 2653
+      },
+      "menuMetrics": {
+        "viewportWidth": 1440,
+        "viewportHeight": 900,
+        "documentWidth": 1440,
+        "documentHeight": 900
+      },
+      "gameMetrics": {
+        "viewportWidth": 1440,
+        "viewportHeight": 900,
+        "documentWidth": 1440,
+        "documentHeight": 900
+      },
+      "consoleErrors": 0,
+      "listingDiagnostics": []
+    },
+    {
+      "viewport": "1024x768@100%",
+      "language": "de",
+      "publicStatus": 200,
+      "playableStatus": 200,
+      "puzzleId": "de-0407",
+      "solvedCategory": "Tischler-Werkzeug",
+      "researchExportVersion": "0.8.4",
+      "listingMetrics": {
+        "viewportWidth": 1024,
+        "viewportHeight": 768,
+        "documentWidth": 1024,
+        "documentHeight": 2653
+      },
+      "menuMetrics": {
+        "viewportWidth": 1024,
+        "viewportHeight": 768,
+        "documentWidth": 1024,
+        "documentHeight": 838
+      },
+      "gameMetrics": {
+        "viewportWidth": 1024,
+        "viewportHeight": 768,
+        "documentWidth": 1024,
+        "documentHeight": 813
+      },
+      "consoleErrors": 0,
+      "listingDiagnostics": []
+    },
+    {
+      "viewport": "390x844@100%",
+      "language": "ru",
+      "publicStatus": 200,
+      "playableStatus": 200,
+      "puzzleId": "ru-0008",
+      "solvedCategory": "Воздушный транспорт",
+      "researchExportVersion": "0.8.4",
+      "listingMetrics": {
+        "viewportWidth": 390,
+        "viewportHeight": 844,
+        "documentWidth": 390,
+        "documentHeight": 3192
+      },
+      "menuMetrics": {
+        "viewportWidth": 390,
+        "viewportHeight": 844,
+        "documentWidth": 390,
+        "documentHeight": 893
+      },
+      "gameMetrics": {
+        "viewportWidth": 390,
+        "viewportHeight": 844,
+        "documentWidth": 390,
+        "documentHeight": 844
+      },
+      "consoleErrors": 0,
+      "listingDiagnostics": []
+    }
+  ],
+  "screenshots": [
+    "reports/w7-balance-retention-2026-09-14/itch-staging/listing-desktop-1440x900.png",
+    "reports/w7-balance-retention-2026-09-14/itch-staging/listing-copy-desktop-1440x900.png",
+    "reports/w7-balance-retention-2026-09-14/itch-staging/menu-en-desktop-1440x900.png",
+    "reports/w7-balance-retention-2026-09-14/itch-staging/menu-footer-en-desktop-1440x900.png",
+    "reports/w7-balance-retention-2026-09-14/itch-staging/game-correct-en-desktop-1440x900.png",
+    "reports/w7-balance-retention-2026-09-14/itch-staging/listing-tablet-1024x768.png",
+    "reports/w7-balance-retention-2026-09-14/itch-staging/listing-copy-tablet-1024x768.png",
+    "reports/w7-balance-retention-2026-09-14/itch-staging/menu-de-tablet-1024x768.png",
+    "reports/w7-balance-retention-2026-09-14/itch-staging/menu-footer-de-tablet-1024x768.png",
+    "reports/w7-balance-retention-2026-09-14/itch-staging/game-correct-de-tablet-1024x768.png",
+    "reports/w7-balance-retention-2026-09-14/itch-staging/listing-mobile-390x844.png",
+    "reports/w7-balance-retention-2026-09-14/itch-staging/listing-copy-mobile-390x844.png",
+    "reports/w7-balance-retention-2026-09-14/itch-staging/menu-ru-mobile-390x844.png",
+    "reports/w7-balance-retention-2026-09-14/itch-staging/menu-footer-ru-mobile-390x844.png",
+    "reports/w7-balance-retention-2026-09-14/itch-staging/game-correct-ru-mobile-390x844.png"
+  ]
+}

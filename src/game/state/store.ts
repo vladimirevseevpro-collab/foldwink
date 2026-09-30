@@ -1,38 +1,69 @@
 import { create } from "zustand";
-import type { ActiveGame, AppScreen, GameMode, GameResult } from "../types/game";
+import type {
+  ActiveGame,
+  AppScreen,
+  AttemptContext,
+  DailyAttemptRef,
+  GameMode,
+  GameResult,
+  PuzzleRef,
+} from "../types/game";
 import type { Puzzle } from "../types/puzzle";
 import type { Stats, StandardProgress, DailyRecord } from "../types/stats";
 import { INITIAL_STATS } from "../types/stats";
 import { SELECTION_SIZE } from "../types/game";
+import { resolveDailyEntry, type DailyEntryLookup } from "../../puzzles/daily";
 import {
-  PUZZLE_POOL,
-  EASY_POOL,
-  MEDIUM_POOL,
-  HARD_POOL,
-  getPuzzleById,
-  getPuzzleByIndex,
-  getEasyByIndex,
-  getMediumByIndex,
-  getHardByIndex,
-  getEasyRampedByIndex,
-  getMediumRampedByIndex,
-  getHardRampedByIndex,
-} from "../../puzzles/loader";
-import { getDailyPuzzleId } from "../../puzzles/daily";
-import { getNextProgressionPuzzle } from "../../puzzles/progression";
-import { shuffleItems, seedFromString } from "../engine/shuffle";
-import { canSubmit, findMatchingGroup, isOneAway } from "../engine/submit";
+  getNextProgressionPuzzle,
+  getOrCreatePlayerSeed,
+  selectPracticePuzzle,
+  type PracticeCandidate,
+} from "../../puzzles/progression";
+import {
+  getEditorialRecord,
+  getStarterManifest,
+  type EditorialRecord,
+  type PuzzleLanguage,
+  type StarterManifest,
+} from "../../puzzles/catalog";
+import {
+  flattenPuzzle,
+  itemIdForValue,
+  seedFromString,
+  shuffleFlatItems,
+} from "../engine/shuffle";
+import { canSubmit, findMatchingGroup, guessSignature, isOneAway } from "../engine/submit";
 import { applyCorrectGroup, applyIncorrectGuess, isLoss, isWin } from "../engine/progress";
 import { calculateResultSummary, type ResultSummary } from "../engine/result";
 import { canWinkGroup } from "../engine/foldwinkTabs";
+import { addForegroundDelta, foregroundDelta } from "../timing/foreground";
 import { applyGameResult } from "../../stats/stats";
 import { todayLocal } from "../../utils/date";
-import { mediumReadiness, hardReadiness } from "../engine/readiness";
 import { getLangSync } from "../../i18n/useLanguage";
 import { isSupporter } from "../../monetization/supporter";
 import { trackEvent } from "../../analytics/eventLog";
+import { getResearchAcquisition, recordQualifiedDay } from "../../analytics/researchCohort";
+import { bucketDuration } from "../../share/challengeLink";
+import type { RewardReceipt } from "../application/rewardPolicy";
+import type { LegacyPassportDetails } from "../../persistence/gameRepository";
+import {
+  commitSolveReward,
+  type CommitSolveRewardInput,
+} from "../../progression/archivistProfile";
 
-type FlashKind = "correct" | "incorrect" | "one-away" | null;
+type FlashKind = "correct" | "incorrect" | "one-away" | "repeat" | null;
+export type PersistenceIssue = "unavailable" | "corrupt" | "conflict" | "storage-error" | null;
+export type ContentIssue = "unavailable" | null;
+
+export interface DuelChallengeMetadata {
+  source: "legacy" | "challenge-v2";
+  creatorResult?: {
+    result: GameResult;
+    mistakesUsed: number;
+    winkUsed: boolean;
+    durationBucket?: "under-1m" | "1-3m" | "3-5m" | "over-5m";
+  };
+}
 
 // How long the fully-painted board stays visible after the terminal
 // submit before the Result screen takes over. Tuned in the audit top-10
@@ -49,6 +80,9 @@ export interface StoreState {
   active: ActiveGame | null;
   puzzle: Puzzle | null;
   summary: ResultSummary | null;
+  rewardReceipt: RewardReceipt | null;
+  persistenceIssue: PersistenceIssue;
+  contentIssue: ContentIssue;
   flash: FlashKind;
   streakDelta: number;
   newBest: boolean;
@@ -58,29 +92,48 @@ export interface StoreState {
     puzzleId: string;
     challengerMistakes: number;
     challengerTimeSec: number;
+    challenge: DuelChallengeMetadata;
   } | null;
 
   startStandard: () => void;
   startEasy: () => void;
   startMedium: () => void;
+  startMastery: () => void;
   startHard: () => void;
   startDaily: () => void;
   startZen: () => void;
   startCustomPuzzle: (puzzle: Puzzle) => void;
-  startDuel: (puzzleId: string, challengerMistakes: number, challengerTimeSec: number) => void;
+  startDuel: (
+    puzzleId: string,
+    challengerMistakes: number,
+    challengerTimeSec: number,
+    challenge?: DuelChallengeMetadata,
+  ) => void;
+  collectStamp: (stampId: string) => boolean;
+  updateProfileCosmetic: (field: "sealId" | "nibId" | "titleId", value: string) => boolean;
+  importLegacyPassport: (details: LegacyPassportDetails) => Promise<boolean>;
 
   toggleSelection: (value: string) => void;
   clearSelection: () => void;
   reshuffleActive: () => void;
   submit: () => void;
+  resumeActive: () => void;
   goToMenu: () => void;
   showStats: () => void;
   startNextSame: () => void;
+  retryCurrent: () => void;
+  openUnsavedResult: () => void;
   clearFlash: () => void;
   completeOnboarding: () => void;
   openHowToPlay: () => void;
   closeHowToPlay: () => void;
   winkTab: (groupId: string) => void;
+  /** Lifecycle seam: flushes only a live monotonic foreground interval. */
+  pauseActiveTiming: () => void;
+  /** Starts a new non-persisted monotonic interval after visibility/focus. */
+  resumeActiveTiming: () => void;
+  /** Clears yesterday's in-memory Daily completion when an open tab rolls over. */
+  refreshDaily: () => void;
 }
 
 export interface StoreDeps {
@@ -109,6 +162,14 @@ export interface StoreDeps {
   getEasyRampedByIndex?: (i: number) => Puzzle | undefined;
   getMediumRampedByIndex?: (i: number) => Puzzle | undefined;
   getHardRampedByIndex?: (i: number) => Puzzle | undefined;
+  /** Immutable date + language schedule lookup. No pool or unlock fallback. */
+  getDailyEntry?: DailyEntryLookup;
+  getStarterManifest?: (language: PuzzleLanguage) => StarterManifest | undefined;
+  getEditorialRecord?: (
+    language: PuzzleLanguage,
+    puzzleId: string,
+  ) => EditorialRecord | undefined;
+  getPlayerSeed?: () => string | undefined;
   /**
    * Schedule a deferred action. The store uses this to hold the final
    * painted board visible for ~600 ms after a terminal submit before
@@ -118,6 +179,8 @@ export interface StoreDeps {
    */
   scheduleTransition?: (cb: () => void, ms: number) => void;
   now: () => number;
+  /** Runtime-only monotonic source. Its values are never persisted. */
+  monotonicNow?: () => number;
   todayLocal: () => string;
   initialStats: Stats;
   initialProgress: StandardProgress;
@@ -126,21 +189,46 @@ export interface StoreDeps {
   initialActive?: ActiveGame | null;
   initialPuzzle?: Puzzle | null;
   initialScreen?: AppScreen;
+  initialSummary?: ResultSummary | null;
+  initialRewardReceipt?: RewardReceipt | null;
+  initialPersistenceIssue?: PersistenceIssue;
+  initialContentIssue?: ContentIssue;
+  createAttemptId?: () => string;
+  commitReward?: (input: CommitSolveRewardInput) => RewardReceipt;
+  commitCollectible?: (stampId: string) => boolean;
+  commitProfileCosmetic?: (field: "sealId" | "nibId" | "titleId", value: string) => boolean;
+  commitLegacyPassport?: (details: LegacyPassportDetails) => Promise<boolean>;
+}
+
+let fallbackAttemptSequence = 0;
+
+function createAttemptId(): string {
+  if (typeof crypto !== "undefined" && typeof crypto.randomUUID === "function") {
+    return crypto.randomUUID();
+  }
+  fallbackAttemptSequence += 1;
+  return `attempt-${Date.now().toString(36)}-${fallbackAttemptSequence.toString(36)}`;
 }
 
 export const defaultDeps: StoreDeps = {
-  pool: PUZZLE_POOL,
-  easyPool: EASY_POOL,
-  mediumPool: MEDIUM_POOL,
-  hardPool: HARD_POOL,
-  getPuzzleById,
-  getPuzzleByIndex,
-  getEasyByIndex,
-  getMediumByIndex,
-  getHardByIndex,
-  getEasyRampedByIndex,
-  getMediumRampedByIndex,
-  getHardRampedByIndex,
+  // The application injects selected-language runtime content. Keeping the
+  // standalone store defaults empty prevents unit-test imports (and any
+  // accidental fallback path) from statically bundling the EN authoring pool.
+  pool: [],
+  easyPool: [],
+  mediumPool: [],
+  hardPool: [],
+  getPuzzleById: () => undefined,
+  getPuzzleByIndex: () => undefined,
+  getEasyByIndex: () => undefined,
+  getMediumByIndex: () => undefined,
+  getHardByIndex: () => undefined,
+  getEasyRampedByIndex: () => undefined,
+  getMediumRampedByIndex: () => undefined,
+  getHardRampedByIndex: () => undefined,
+  getStarterManifest,
+  getEditorialRecord,
+  getPlayerSeed: getOrCreatePlayerSeed,
   scheduleTransition: (cb, ms) => {
     if (typeof window === "undefined") {
       cb();
@@ -149,6 +237,10 @@ export const defaultDeps: StoreDeps = {
     window.setTimeout(cb, ms);
   },
   now: () => Date.now(),
+  monotonicNow: () =>
+    typeof performance !== "undefined" && typeof performance.now === "function"
+      ? performance.now()
+      : 0,
   todayLocal,
   initialStats: INITIAL_STATS,
   initialProgress: { cursor: 0, easyCursor: 0, mediumCursor: 0, hardCursor: 0 },
@@ -157,6 +249,11 @@ export const defaultDeps: StoreDeps = {
   initialActive: null,
   initialPuzzle: null,
   initialScreen: "menu",
+  initialSummary: null,
+  initialRewardReceipt: null,
+  initialPersistenceIssue: null,
+  createAttemptId,
+  commitReward: commitSolveReward,
 };
 
 function resolveCursor(
@@ -168,6 +265,57 @@ function resolveCursor(
   return progress.hardCursor ?? 0;
 }
 
+function recordNewSelection(
+  progress: StandardProgress,
+  puzzleRef: PuzzleRef,
+  puzzle?: Puzzle,
+  editorial?: EditorialRecord,
+): StandardProgress {
+  const leadingTopic = editorial?.topicTags[0];
+  const recentItems = puzzle?.groups.flatMap((group) => group.items) ?? [];
+  return {
+    ...progress,
+    selectionSequence: (progress.selectionSequence ?? 0) + 1,
+    seenLineageIds: [...new Set([...(progress.seenLineageIds ?? []), puzzleRef.lineageId])],
+    recentTopicTags: leadingTopic
+      ? [...(progress.recentTopicTags ?? []), leadingTopic].slice(-2)
+      : progress.recentTopicTags,
+    recentItemValues:
+      recentItems.length > 0
+        ? [...(progress.recentItemValues ?? []), ...recentItems].slice(-48)
+        : progress.recentItemValues,
+  };
+}
+
+function selectCatalogPractice(
+  deps: StoreDeps,
+  progress: StandardProgress,
+  language: PuzzleLanguage,
+  tier: "easy" | "medium" | "hard",
+  pool: readonly Puzzle[],
+): PracticeCandidate | undefined {
+  if (!deps.getEditorialRecord) return undefined;
+  const candidates = pool.flatMap((puzzle): PracticeCandidate[] => {
+    const editorial = deps.getEditorialRecord?.(language, puzzle.id);
+    return editorial ? [{ puzzle, puzzleRef: editorial.puzzleRef, editorial }] : [];
+  });
+  if (candidates.length === 0) return undefined;
+  return selectPracticePuzzle({
+    language,
+    tier,
+    followStarterPath: false,
+    starters: [],
+    completedStarterEntryIds: progress.completedStarterEntryIds ?? [],
+    seenLineageIds: progress.seenLineageIds ?? [],
+    recentTopicTags: progress.recentTopicTags ?? [],
+    recentItemValues: progress.recentItemValues ?? [],
+    selectionSequence: progress.selectionSequence ?? 0,
+    playerSeed: deps.getPlayerSeed?.() ?? "local-player",
+    catalogVersion: candidates[0].puzzleRef.contentVersion,
+    candidates,
+  }).candidate;
+}
+
 export const selectDailyPlayedDate = (s: StoreState): string | null =>
   s.todayDailyRecord?.date ?? null;
 
@@ -177,17 +325,72 @@ function initialActive(
   seedExtra: string,
   countsToStats: boolean,
   now: number,
+  startedLocalDate: string,
+  context: AttemptContext,
+  attemptId: string,
+  puzzleRef?: PuzzleRef,
+  daily?: DailyAttemptRef,
+  firstAttempt = true,
 ): ActiveGame {
+  const lang = getLangSync();
+  const acquisition = getResearchAcquisition();
+  const qualified = recordQualifiedDay(startedLocalDate, acquisition);
+  if (qualified.isReturnDay) {
+    trackEvent({
+      name: "return_observed",
+      props: {
+        surface: "game",
+        context: "game",
+        source_bucket: acquisition === "invited" ? "campaign" : "direct",
+        lang,
+      },
+    });
+  }
+  trackEvent({
+    name: "attempt_started",
+    props: {
+      surface: "game",
+      context: "game",
+      mode,
+      tier: puzzle.difficulty,
+      difficulty: puzzle.difficulty,
+      first_attempt: firstAttempt ? "yes" : "no",
+      lang,
+    },
+  });
   const seed = seedFromString(puzzle.id + "|" + seedExtra);
+  const shuffledItems = shuffleFlatItems(puzzle, seed);
   return {
+    attemptId,
+    context,
+    revision: 0,
+    rules: {
+      version: 1,
+      maxIncorrectGuesses: 4,
+      tabsEnabled: puzzle.difficulty === "medium",
+      maxWinks: puzzle.difficulty === "medium" ? 1 : 0,
+      timerPresentation: mode === "zen" ? "hidden" : "optional",
+    },
+    startedLocalDate,
+    puzzleRef: puzzleRef ?? {
+      language: getLangSync(),
+      puzzleId: puzzle.id,
+      lineageId: puzzle.id,
+      contentVersion: context === "custom" ? "custom-v1" : "catalog-legacy-v1",
+    },
+    daily,
     puzzleId: puzzle.id,
     mode,
-    order: shuffleItems(puzzle, seed),
+    order: shuffledItems.map((item) => item.value),
     selection: [],
+    itemOrderIds: shuffledItems.map((item) => item.id),
+    selectionItemIds: [],
     solvedGroupIds: [],
     mistakesUsed: 0,
+    elapsedActiveMs: 0,
     startedAt: now,
     countsToStats,
+    incorrectGuessSignatures: [],
     winkedGroupId: null,
   };
 }
@@ -207,6 +410,31 @@ function finalizeIfEnded(
 }
 
 export function createStore(deps: StoreDeps = defaultDeps) {
+  let foregroundInterval: { attemptId: string; startedMonotonicMs: number } | null = null;
+
+  const resetForegroundInterval = (active: ActiveGame | null): void => {
+    const attemptId = active?.attemptId;
+    if (!attemptId) {
+      foregroundInterval = null;
+      return;
+    }
+    foregroundInterval = {
+      attemptId,
+      startedMonotonicMs: deps.monotonicNow?.() ?? 0,
+    };
+  };
+
+  const captureForegroundElapsed = (active: ActiveGame): ActiveGame => {
+    const interval = foregroundInterval;
+    if (!interval || !active.attemptId || interval.attemptId !== active.attemptId)
+      return active;
+    const now = deps.monotonicNow?.() ?? interval.startedMonotonicMs;
+    const delta = foregroundDelta(interval.startedMonotonicMs, now);
+    foregroundInterval = { ...interval, startedMonotonicMs: now };
+    if (delta <= 0) return active;
+    return { ...active, elapsedActiveMs: addForegroundDelta(active.elapsedActiveMs, delta) };
+  };
+
   return create<StoreState>((set, get) => ({
     screen: deps.initialScreen ?? "menu",
     stats: deps.initialStats,
@@ -215,7 +443,10 @@ export function createStore(deps: StoreDeps = defaultDeps) {
     poolSize: deps.pool.length,
     active: deps.initialActive ?? null,
     puzzle: deps.initialPuzzle ?? null,
-    summary: null,
+    summary: deps.initialSummary ?? null,
+    rewardReceipt: deps.initialRewardReceipt ?? null,
+    persistenceIssue: deps.initialPersistenceIssue ?? null,
+    contentIssue: deps.initialContentIssue ?? null,
     flash: null,
     streakDelta: 0,
     newBest: false,
@@ -224,15 +455,67 @@ export function createStore(deps: StoreDeps = defaultDeps) {
     duel: null,
 
     startStandard: () => {
-      get().startEasy();
+      const state = get();
+      const language = getLangSync();
+      const manifest = (deps.getStarterManifest ?? getStarterManifest)(language);
+      const completed = new Set(state.progress.completedStarterEntryIds ?? []);
+      const entry = manifest?.entries
+        .slice()
+        .sort((a, b) => a.order - b.order)
+        .find((candidate) => !completed.has(candidate.entryId));
+      if (!entry) {
+        state.startEasy();
+        return;
+      }
+      const puzzle = deps.getPuzzleById(entry.puzzleRef.puzzleId);
+      if (!puzzle) return;
+      const now = deps.now();
+      const active = initialActive(
+        puzzle,
+        "standard",
+        `${entry.entryId}:${state.progress.selectionSequence ?? 0}`,
+        true,
+        now,
+        deps.todayLocal(),
+        "onboarding",
+        (deps.createAttemptId ?? createAttemptId)(),
+        entry.puzzleRef,
+      );
+      active.starterEntryId = entry.entryId;
+      set({
+        screen: "game",
+        puzzle,
+        active,
+        progress: recordNewSelection(
+          state.progress,
+          entry.puzzleRef,
+          puzzle,
+          deps.getEditorialRecord?.(language, puzzle.id),
+        ),
+        summary: null,
+        rewardReceipt: null,
+        flash: null,
+        streakDelta: 0,
+        newBest: false,
+        duel: null,
+      });
+      resetForegroundInterval(active);
     },
 
     startEasy: () => {
       const progress = get().progress;
       const stats = get().stats;
+      const language = getLangSync();
       const cursor = resolveCursor(progress, "easy");
       const pool = deps.getEasyPool ? deps.getEasyPool() : deps.easyPool;
       const targetPool = pool.length > 0 ? pool : deps.getPool ? deps.getPool() : deps.pool;
+      const catalogSelection = selectCatalogPractice(
+        deps,
+        progress,
+        language,
+        "easy",
+        targetPool,
+      );
       const progressionPuzzle = getNextProgressionPuzzle({
         pool: targetPool,
         solvedIds: stats.solvedPuzzleIds,
@@ -240,19 +523,42 @@ export function createStore(deps: StoreDeps = defaultDeps) {
         difficulty: "easy",
       });
       const rampedGetter = deps.getEasyRampedByIndex ?? deps.getEasyByIndex;
-      const puzzle = progressionPuzzle ?? rampedGetter(cursor) ?? deps.getPuzzleByIndex(cursor);
+      const puzzle =
+        catalogSelection?.puzzle ??
+        progressionPuzzle ??
+        rampedGetter(cursor) ??
+        deps.getPuzzleByIndex(cursor);
       if (!puzzle) return;
-      const active = initialActive(puzzle, "standard", String(deps.now()), true, deps.now());
+      const now = deps.now();
+      const active = initialActive(
+        puzzle,
+        "standard",
+        String(now),
+        true,
+        now,
+        deps.todayLocal(),
+        "practice",
+        (deps.createAttemptId ?? createAttemptId)(),
+        catalogSelection?.puzzleRef,
+      );
       set({
         screen: "game",
         puzzle,
         active,
+        progress: recordNewSelection(
+          progress,
+          active.puzzleRef!,
+          puzzle,
+          catalogSelection?.editorial,
+        ),
         summary: null,
+        rewardReceipt: null,
         flash: null,
         streakDelta: 0,
         newBest: false,
         duel: null,
       });
+      resetForegroundInterval(active);
       trackEvent({
         name: "mode_start",
         props: {
@@ -267,8 +573,10 @@ export function createStore(deps: StoreDeps = defaultDeps) {
     startMedium: () => {
       const progress = get().progress;
       const stats = get().stats;
+      const language = getLangSync();
       const cursor = resolveCursor(progress, "medium");
       const pool = deps.getMediumPool ? deps.getMediumPool() : deps.mediumPool;
+      const catalogSelection = selectCatalogPractice(deps, progress, language, "medium", pool);
       const progressionPuzzle = getNextProgressionPuzzle({
         pool,
         solvedIds: stats.solvedPuzzleIds,
@@ -276,19 +584,85 @@ export function createStore(deps: StoreDeps = defaultDeps) {
         difficulty: "medium",
       });
       const rampedGetter = deps.getMediumRampedByIndex ?? deps.getMediumByIndex;
-      const puzzle = progressionPuzzle ?? rampedGetter(cursor);
+      const puzzle = catalogSelection?.puzzle ?? progressionPuzzle ?? rampedGetter(cursor);
       if (!puzzle) return;
-      const active = initialActive(puzzle, "standard", String(deps.now()), true, deps.now());
+      const now = deps.now();
+      const active = initialActive(
+        puzzle,
+        "standard",
+        String(now),
+        true,
+        now,
+        deps.todayLocal(),
+        "practice",
+        (deps.createAttemptId ?? createAttemptId)(),
+        catalogSelection?.puzzleRef,
+      );
       set({
         screen: "game",
         puzzle,
         active,
+        progress: recordNewSelection(
+          progress,
+          active.puzzleRef!,
+          puzzle,
+          catalogSelection?.editorial,
+        ),
         summary: null,
+        rewardReceipt: null,
         flash: null,
         streakDelta: 0,
         newBest: false,
         duel: null,
       });
+      resetForegroundInterval(active);
+      trackEvent({
+        name: "mode_start",
+        props: {
+          surface: "menu",
+          mode: "standard",
+          difficulty: "medium",
+          lang: getLangSync(),
+        },
+      });
+    },
+
+    startMastery: () => {
+      const progress = get().progress;
+      const stats = get().stats;
+      const cursor = resolveCursor(progress, "medium");
+      const pool = deps.getMediumPool ? deps.getMediumPool() : deps.mediumPool;
+      const puzzle = getNextProgressionPuzzle({
+        pool,
+        solvedIds: stats.solvedPuzzleIds,
+        cursor,
+        difficulty: "medium",
+      });
+      if (!puzzle) return;
+      const now = deps.now();
+      const active = initialActive(
+        puzzle,
+        "standard",
+        String(now),
+        false,
+        now,
+        deps.todayLocal(),
+        "mastery",
+        (deps.createAttemptId ?? createAttemptId)(),
+      );
+      active.rules = { ...active.rules!, maxIncorrectGuesses: 2 };
+      set({
+        screen: "game",
+        puzzle,
+        active,
+        summary: null,
+        rewardReceipt: null,
+        flash: null,
+        streakDelta: 0,
+        newBest: false,
+        duel: null,
+      });
+      resetForegroundInterval(active);
       trackEvent({
         name: "mode_start",
         props: {
@@ -303,8 +677,10 @@ export function createStore(deps: StoreDeps = defaultDeps) {
     startHard: () => {
       const progress = get().progress;
       const stats = get().stats;
+      const language = getLangSync();
       const cursor = resolveCursor(progress, "hard");
       const pool = deps.getHardPool ? deps.getHardPool() : deps.hardPool;
+      const catalogSelection = selectCatalogPractice(deps, progress, language, "hard", pool);
       const progressionPuzzle = getNextProgressionPuzzle({
         pool,
         solvedIds: stats.solvedPuzzleIds,
@@ -312,19 +688,38 @@ export function createStore(deps: StoreDeps = defaultDeps) {
         difficulty: "hard",
       });
       const rampedGetter = deps.getHardRampedByIndex ?? deps.getHardByIndex;
-      const puzzle = progressionPuzzle ?? rampedGetter(cursor);
+      const puzzle = catalogSelection?.puzzle ?? progressionPuzzle ?? rampedGetter(cursor);
       if (!puzzle) return;
-      const active = initialActive(puzzle, "standard", String(deps.now()), true, deps.now());
+      const now = deps.now();
+      const active = initialActive(
+        puzzle,
+        "standard",
+        String(now),
+        true,
+        now,
+        deps.todayLocal(),
+        "practice",
+        (deps.createAttemptId ?? createAttemptId)(),
+        catalogSelection?.puzzleRef,
+      );
       set({
         screen: "game",
         puzzle,
         active,
+        progress: recordNewSelection(
+          progress,
+          active.puzzleRef!,
+          puzzle,
+          catalogSelection?.editorial,
+        ),
         summary: null,
+        rewardReceipt: null,
         flash: null,
         streakDelta: 0,
         newBest: false,
         duel: null,
       });
+      resetForegroundInterval(active);
       trackEvent({
         name: "mode_start",
         props: {
@@ -337,42 +732,64 @@ export function createStore(deps: StoreDeps = defaultDeps) {
     },
 
     startDaily: () => {
-      const easyPool = deps.getEasyPool ? deps.getEasyPool() : deps.easyPool;
-      const mediumPool = deps.getMediumPool ? deps.getMediumPool() : deps.mediumPool;
-      const hardPool = deps.getHardPool ? deps.getHardPool() : deps.hardPool;
-      const pool = deps.getPool ? deps.getPool() : deps.pool;
-      if (pool.length === 0) return;
-      // Daily must respect the player's unlock ladder. A locked-Medium player
-      // should never be dropped into a Medium puzzle via daily — that breaks
-      // the progression contract and surfaces Foldwink Tabs + Wink before
-      // the player has unlocked the explainer for them. So we build the
-      // daily-eligible pool from the tiers the player has actually unlocked
-      // and only then deterministic-pick by date.
-      const stats = get().stats;
-      const med = mediumReadiness(stats);
-      const hard = hardReadiness(stats, hardPool.length);
-      const eligible: Puzzle[] = [...easyPool];
-      if (med.unlocked) eligible.push(...mediumPool);
-      if (hard.unlocked && hard.hasContent) eligible.push(...hardPool);
-      // Safety net: if a test fixture has no easy puzzles, fall back to the
-      // full pool so the action remains usable.
-      const candidates = eligible.length > 0 ? eligible : [...pool];
       const date = deps.todayLocal();
-      const id = getDailyPuzzleId(date, candidates);
-      const puzzle = deps.getPuzzleById(id);
+      const language = getLangSync();
+      const previousRecord = get().todayDailyRecord;
+      const pinnedReplay =
+        previousRecord?.date === date &&
+        previousRecord.language === language &&
+        previousRecord.entryId &&
+        previousRecord.scheduleVersion &&
+        previousRecord.puzzleRef &&
+        previousRecord.puzzleSnapshot
+          ? previousRecord
+          : null;
+      const entry = pinnedReplay
+        ? {
+            ...pinnedReplay.puzzleRef!,
+            entryId: pinnedReplay.entryId!,
+            date,
+            scheduleVersion: pinnedReplay.scheduleVersion!,
+          }
+        : resolveDailyEntry(language, date, deps.getDailyEntry);
+      if (!entry) return;
+      const puzzle = pinnedReplay?.puzzleSnapshot ?? deps.getPuzzleById(entry.puzzleId);
       if (!puzzle) return;
-      const alreadyPlayed = get().todayDailyRecord?.date === date;
-      const active = initialActive(puzzle, "daily", date, !alreadyPlayed, deps.now());
+      const alreadyPlayed = previousRecord?.date === date;
+      const now = deps.now();
+      const active = initialActive(
+        puzzle,
+        "daily",
+        date,
+        !alreadyPlayed,
+        now,
+        date,
+        "daily",
+        (deps.createAttemptId ?? createAttemptId)(),
+        {
+          language: entry.language,
+          puzzleId: entry.puzzleId,
+          lineageId: entry.lineageId,
+          contentVersion: entry.contentVersion,
+        },
+        {
+          date: entry.date,
+          scheduleVersion: entry.scheduleVersion,
+          entryId: entry.entryId,
+        },
+      );
       set({
         screen: "game",
         puzzle,
         active,
         summary: null,
+        rewardReceipt: null,
         flash: null,
         streakDelta: 0,
         newBest: false,
         duel: null,
       });
+      resetForegroundInterval(active);
       trackEvent({
         name: "mode_start",
         props: {
@@ -391,17 +808,29 @@ export function createStore(deps: StoreDeps = defaultDeps) {
       const cursor = (progress.zenCursor ?? 0) % pool.length;
       const puzzle = pool[cursor] ?? pool[0];
       if (!puzzle) return;
-      const active = initialActive(puzzle, "zen", String(deps.now()), false, deps.now());
+      const now = deps.now();
+      const active = initialActive(
+        puzzle,
+        "zen",
+        String(now),
+        false,
+        now,
+        deps.todayLocal(),
+        "zen",
+        (deps.createAttemptId ?? createAttemptId)(),
+      );
       set({
         screen: "game",
         puzzle,
         active,
         summary: null,
+        rewardReceipt: null,
         flash: null,
         streakDelta: 0,
         newBest: false,
         duel: null,
       });
+      resetForegroundInterval(active);
       trackEvent({
         name: "mode_start",
         props: {
@@ -415,18 +844,23 @@ export function createStore(deps: StoreDeps = defaultDeps) {
 
     startCustomPuzzle: (customPuzzle: Puzzle) => {
       if (!customPuzzle) return;
+      const now = deps.now();
       const active = initialActive(
         customPuzzle,
         "standard",
-        String(deps.now()),
+        String(now),
         false,
-        deps.now(),
+        now,
+        deps.todayLocal(),
+        "custom",
+        (deps.createAttemptId ?? createAttemptId)(),
       );
       set({
         screen: "game",
         puzzle: customPuzzle,
         active,
         summary: null,
+        rewardReceipt: null,
         flash: null,
         streakDelta: 0,
         newBest: false,
@@ -443,19 +877,41 @@ export function createStore(deps: StoreDeps = defaultDeps) {
       });
     },
 
-    startDuel: (puzzleId: string, challengerMistakes: number, challengerTimeSec: number) => {
+    startDuel: (
+      puzzleId: string,
+      challengerMistakes: number,
+      challengerTimeSec: number,
+      challenge = { source: "legacy" },
+    ) => {
       let puzzle = deps.getPuzzleById(puzzleId);
       if (!puzzle && deps.getPool) {
         const fullPool = deps.getPool();
         puzzle = fullPool.find((p) => p.id === puzzleId);
       }
       if (!puzzle) return;
-      const active = initialActive(puzzle, "standard", String(deps.now()), false, deps.now());
+      const language = getLangSync();
+      const puzzleRef = (deps.getEditorialRecord ?? getEditorialRecord)(
+        language,
+        puzzle.id,
+      )?.puzzleRef;
+      const now = deps.now();
+      const active = initialActive(
+        puzzle,
+        "standard",
+        String(now),
+        false,
+        now,
+        deps.todayLocal(),
+        "duel",
+        (deps.createAttemptId ?? createAttemptId)(),
+        puzzleRef,
+      );
       set({
         screen: "game",
         puzzle,
         active,
         summary: null,
+        rewardReceipt: null,
         flash: null,
         streakDelta: 0,
         newBest: false,
@@ -463,8 +919,10 @@ export function createStore(deps: StoreDeps = defaultDeps) {
           puzzleId,
           challengerMistakes,
           challengerTimeSec,
+          challenge,
         },
       });
+      resetForegroundInterval(active);
       trackEvent({
         name: "mode_start",
         props: {
@@ -475,6 +933,12 @@ export function createStore(deps: StoreDeps = defaultDeps) {
         },
       });
     },
+
+    collectStamp: (stampId: string) => deps.commitCollectible?.(stampId) ?? false,
+    updateProfileCosmetic: (field, value) =>
+      deps.commitProfileCosmetic?.(field, value) ?? false,
+    importLegacyPassport: (details) =>
+      deps.commitLegacyPassport?.(details) ?? Promise.resolve(false),
 
     toggleSelection: (value: string) => {
       const { active, puzzle } = get();
@@ -490,49 +954,119 @@ export function createStore(deps: StoreDeps = defaultDeps) {
         if (solvedItems.has(value)) return;
       }
       const already = active.selection.includes(value);
+      const itemId = itemIdForValue(puzzle, value);
+      if (!itemId) return;
       if (already) {
         set({
-          active: { ...active, selection: active.selection.filter((v) => v !== value) },
+          active: {
+            ...active,
+            revision: (active.revision ?? 0) + 1,
+            selection: active.selection.filter((v) => v !== value),
+            selectionItemIds: (active.selectionItemIds ?? []).filter((id) => id !== itemId),
+          },
         });
         return;
       }
       if (active.selection.length >= SELECTION_SIZE) return;
-      set({ active: { ...active, selection: [...active.selection, value] } });
+      set({
+        active: {
+          ...active,
+          revision: (active.revision ?? 0) + 1,
+          selection: [...active.selection, value],
+          selectionItemIds: [...(active.selectionItemIds ?? []), itemId],
+        },
+      });
     },
 
     clearSelection: () => {
       const { active } = get();
       if (!active || active.result) return;
-      set({ active: { ...active, selection: [] } });
+      set({
+        active: {
+          ...active,
+          revision: (active.revision ?? 0) + 1,
+          selection: [],
+          selectionItemIds: [],
+        },
+      });
     },
 
     reshuffleActive: () => {
       const { active, puzzle } = get();
       if (!active || !puzzle || active.result) return;
-      const current = active.order;
-      // Fisher–Yates using Math.random. Not deterministic — reshuffle is a
-      // cosmetic reset, not a rerollable game event.
-      const next = current.slice();
+      const next = active.order.map((value, index) => ({
+        value,
+        id: active.itemOrderIds?.[index] ?? itemIdForValue(puzzle, value) ?? "",
+      }));
+      // Fisher–Yates using Math.random. This is a cosmetic reorder, but the
+      // display value and its stable identity always move as one pair.
       for (let i = next.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [next[i], next[j]] = [next[j], next[i]];
       }
-      set({ active: { ...active, order: next } });
+      set({
+        active: {
+          ...active,
+          revision: (active.revision ?? 0) + 1,
+          order: next.map((item) => item.value),
+          itemOrderIds: next.map((item) => item.id),
+        },
+      });
     },
 
     submit: () => {
       const state = get();
-      const { active, puzzle, stats, progress } = state;
+      const { active: currentActive, puzzle, stats, progress } = state;
+      const active = currentActive ? captureForegroundElapsed(currentActive) : null;
       if (!active || !puzzle || active.result) return;
       if (!canSubmit(active.selection)) return;
       const matched = findMatchingGroup(active.selection, puzzle);
+      const signature = guessSignature(
+        active.selectionItemIds?.length === SELECTION_SIZE
+          ? active.selectionItemIds
+          : active.selection,
+      );
+      if (!matched && signature && active.incorrectGuessSignatures?.includes(signature)) {
+        // Keep a captured live timing delta in memory even though this guess
+        // intentionally does not advance game revision or consume a mistake.
+        set(active === currentActive ? { flash: "repeat" } : { active, flash: "repeat" });
+        trackEvent({
+          name: "round_submit",
+          props: {
+            surface: "game",
+            mode: active.mode,
+            difficulty: puzzle.difficulty,
+            outcome: "repeat",
+            lang: getLangSync(),
+          },
+        });
+        return;
+      }
       let next: ActiveGame;
       let flash: FlashKind;
       if (matched) {
-        next = applyCorrectGroup(active, matched.id, matched.items);
+        const itemIds = flattenPuzzle(puzzle)
+          .filter((item) => item.groupId === matched.id)
+          .map((item) => item.id);
+        next = applyCorrectGroup(active, matched.id, matched.items, itemIds);
         flash = "correct";
+        if (next.solvedGroupIds.length === 1) {
+          trackEvent({
+            name: "first_group_solved",
+            props: {
+              surface: "game",
+              context: "game",
+              mode: active.mode,
+              tier: puzzle.difficulty,
+              difficulty: puzzle.difficulty,
+              duration_bucket: bucketDuration(active.elapsedActiveMs ?? 0),
+              first_attempt: active.parentAttemptId ? "no" : "yes",
+              lang: getLangSync(),
+            },
+          });
+        }
       } else {
-        next = applyIncorrectGuess(active);
+        next = applyIncorrectGuess(active, signature ?? undefined);
         flash = isOneAway(active.selection, puzzle) ? "one-away" : "incorrect";
       }
       trackEvent({
@@ -555,12 +1089,64 @@ export function createStore(deps: StoreDeps = defaultDeps) {
       const result: GameResult = finalized.active.result;
       const endedAt = finalized.active.endedAt ?? deps.now();
       const summary = calculateResultSummary(finalized.active, endedAt);
+      const rewardReceipt = deps.commitReward
+        ? deps.commitReward({
+            language: getLangSync(),
+            lineageId: puzzle.id,
+            context: active.context ?? (active.mode === "daily" ? "daily" : "practice"),
+            result,
+            officialLineage: active.context !== "custom" && active.context !== "duel",
+          })
+        : null;
+      recordQualifiedDay(
+        active.startedLocalDate ?? deps.todayLocal(),
+        getResearchAcquisition(),
+        result === "win" || result === "loss",
+      );
+      trackEvent({
+        name: "attempt_completed",
+        props: {
+          surface: "game",
+          context: "game",
+          mode: active.mode,
+          tier: puzzle.difficulty,
+          difficulty: puzzle.difficulty,
+          duration_bucket: bucketDuration(summary.durationMs),
+          first_attempt: active.parentAttemptId ? "no" : "yes",
+          outcome: result,
+          lang: getLangSync(),
+        },
+      });
+      if (rewardReceipt)
+        trackEvent({
+          name: "reward_presented",
+          props: {
+            surface: "result",
+            context: "result",
+            mode: active.mode,
+            tier: puzzle.difficulty,
+            difficulty: puzzle.difficulty,
+            lang: getLangSync(),
+          },
+        });
 
       let nextStats = stats;
       let nextProgress = progress;
       let nextTodayDailyRecord = state.todayDailyRecord;
       let streakDelta = 0;
       let newBest = false;
+
+      if (active.starterEntryId) {
+        nextProgress = {
+          ...nextProgress,
+          completedStarterEntryIds: [
+            ...new Set([
+              ...(nextProgress.completedStarterEntryIds ?? []),
+              active.starterEntryId,
+            ]),
+          ],
+        };
+      }
 
       if (active.countsToStats) {
         nextStats = applyGameResult(stats, result, {
@@ -577,26 +1163,32 @@ export function createStore(deps: StoreDeps = defaultDeps) {
           if (puzzle.difficulty === "easy") {
             const nextEasy = (progress.easyCursor ?? progress.cursor ?? 0) + 1;
             nextProgress = {
-              ...progress,
+              ...nextProgress,
               easyCursor: nextEasy,
               cursor: nextEasy, // keep legacy field in sync
             };
           } else if (puzzle.difficulty === "medium") {
             const nextMedium = (progress.mediumCursor ?? 0) + 1;
-            nextProgress = { ...progress, mediumCursor: nextMedium };
+            nextProgress = { ...nextProgress, mediumCursor: nextMedium };
           } else {
             const nextHard = (progress.hardCursor ?? 0) + 1;
-            nextProgress = { ...progress, hardCursor: nextHard };
+            nextProgress = { ...nextProgress, hardCursor: nextHard };
           }
         }
         if (active.mode === "daily") {
-          const date = deps.todayLocal();
+          const date = active.startedLocalDate ?? deps.todayLocal();
           nextTodayDailyRecord = {
             date,
             puzzleId: puzzle.id,
             result,
             mistakesUsed: summary.mistakesUsed,
             durationMs: summary.durationMs,
+            language: active.puzzleRef?.language ?? getLangSync(),
+            entryId: active.daily?.entryId,
+            scheduleVersion: active.daily?.scheduleVersion,
+            puzzleRef: active.puzzleRef,
+            puzzleSnapshot: puzzle,
+            attemptId: active.attemptId,
           };
         }
       } else if (active.mode === "zen") {
@@ -627,10 +1219,12 @@ export function createStore(deps: StoreDeps = defaultDeps) {
         progress: nextProgress,
         todayDailyRecord: nextTodayDailyRecord,
         summary,
+        rewardReceipt,
         flash,
         streakDelta,
         newBest,
       });
+      foregroundInterval = null;
       trackEvent({
         name: "round_finish",
         props: {
@@ -655,12 +1249,51 @@ export function createStore(deps: StoreDeps = defaultDeps) {
       }, RESULT_HOLD_MS);
     },
 
+    resumeActive: () => {
+      const { active, puzzle } = get();
+      if (!active || !puzzle || active.result) return;
+      const acquisition = getResearchAcquisition();
+      const qualified = recordQualifiedDay(deps.todayLocal(), acquisition);
+      if (qualified.isReturnDay) {
+        trackEvent({
+          name: "return_observed",
+          props: {
+            surface: "game",
+            context: "game",
+            source_bucket: acquisition === "invited" ? "campaign" : "direct",
+            lang: getLangSync(),
+          },
+        });
+      }
+      set({ screen: "game", flash: null });
+      resetForegroundInterval(active);
+    },
+
     goToMenu: () => {
+      const leavingState = get();
+      const leaving = leavingState.active;
+      if (leaving && !leaving.result) {
+        trackEvent({
+          name: "attempt_abandoned",
+          props: {
+            surface: "game",
+            context: "game",
+            mode: leaving.mode,
+            difficulty: leavingState.puzzle?.difficulty,
+            tier: leavingState.puzzle?.difficulty,
+            duration_bucket: bucketDuration(leaving.elapsedActiveMs ?? 0),
+            first_attempt: leaving.parentAttemptId ? "no" : "yes",
+            lang: getLangSync(),
+          },
+        });
+      }
+      foregroundInterval = null;
       set({
         screen: "menu",
         active: null,
         puzzle: null,
         summary: null,
+        rewardReceipt: null,
         flash: null,
         streakDelta: 0,
         newBest: false,
@@ -682,8 +1315,24 @@ export function createStore(deps: StoreDeps = defaultDeps) {
         get().goToMenu();
         return;
       }
+      trackEvent({
+        name: "next_puzzle_started",
+        props: {
+          surface: "result",
+          context: "result",
+          mode: active.mode,
+          difficulty: puzzle?.difficulty,
+          tier: puzzle?.difficulty,
+          outcome: active.result,
+          lang: getLangSync(),
+        },
+      });
       if (active.mode === "zen") {
         get().startZen();
+        return;
+      }
+      if (active.starterEntryId) {
+        get().startStandard();
         return;
       }
       // Preserve difficulty across "next puzzle" in standard flow.
@@ -698,7 +1347,72 @@ export function createStore(deps: StoreDeps = defaultDeps) {
       get().startEasy();
     },
 
+    retryCurrent: () => {
+      const state = get();
+      const previous = state.active;
+      const puzzle = state.puzzle;
+      if (!previous?.result || !previous.attemptId || !puzzle) return;
+      const now = deps.now();
+      const active = initialActive(
+        puzzle,
+        previous.mode,
+        `retry:${previous.attemptId}`,
+        previous.mode === "daily" ? false : previous.countsToStats,
+        now,
+        deps.todayLocal(),
+        previous.context ?? (previous.mode === "daily" ? "daily" : "practice"),
+        (deps.createAttemptId ?? createAttemptId)(),
+        previous.puzzleRef,
+        previous.daily,
+        false,
+      );
+      active.parentAttemptId = previous.attemptId;
+      active.starterEntryId = previous.starterEntryId;
+      set({
+        screen: "game",
+        active,
+        summary: null,
+        rewardReceipt: null,
+        flash: null,
+        streakDelta: 0,
+        newBest: false,
+      });
+      resetForegroundInterval(active);
+    },
+
+    openUnsavedResult: () => {
+      const { active, summary } = get();
+      if (!active?.result || !summary) return;
+      set({ screen: "result" });
+    },
+
     clearFlash: () => set({ flash: null }),
+
+    pauseActiveTiming: () => {
+      const { active, screen } = get();
+      if (!active || active.result || screen !== "game") {
+        foregroundInterval = null;
+        return;
+      }
+      const timed = captureForegroundElapsed(active);
+      foregroundInterval = null;
+      if (timed === active) return;
+      // This is a durable lifecycle checkpoint, so it gets its own revision.
+      set({ active: { ...timed, revision: (active.revision ?? 0) + 1 } });
+    },
+
+    resumeActiveTiming: () => {
+      const { active, screen } = get();
+      if (!active || active.result || screen !== "game") return;
+      resetForegroundInterval(active);
+    },
+
+    refreshDaily: () => {
+      const current = get().todayDailyRecord;
+      if (current && current.date !== deps.todayLocal()) {
+        set({ todayDailyRecord: null });
+      }
+    },
 
     completeOnboarding: () => set({ onboarded: true }),
 
@@ -710,7 +1424,13 @@ export function createStore(deps: StoreDeps = defaultDeps) {
       const { active, puzzle } = get();
       if (!active || !puzzle || active.result) return;
       if (!canWinkGroup(puzzle, active.solvedGroupIds, active.winkedGroupId, groupId)) return;
-      set({ active: { ...active, winkedGroupId: groupId } });
+      set({
+        active: {
+          ...active,
+          revision: (active.revision ?? 0) + 1,
+          winkedGroupId: groupId,
+        },
+      });
       trackEvent({
         name: "wink_used",
         props: {

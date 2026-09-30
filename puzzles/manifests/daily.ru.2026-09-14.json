@@ -1,0 +1,276 @@
+{
+  "language": "ru",
+  "scheduleVersion": "daily-2026-09-14-2026-10-13-v1",
+  "entries": [
+    {
+      "entryId": "daily-ru-2026-09-14-v1",
+      "date": "2026-09-14",
+      "language": "ru",
+      "puzzleId": "ru-0023",
+      "lineageId": "ru-0023",
+      "contentVersion": "catalog-2026-09-v1",
+      "scheduleVersion": "daily-2026-09-14-2026-10-13-v1"
+    },
+    {
+      "entryId": "daily-ru-2026-09-15-v1",
+      "date": "2026-09-15",
+      "language": "ru",
+      "puzzleId": "ru-0025",
+      "lineageId": "ru-0025",
+      "contentVersion": "catalog-2026-09-v1",
+      "scheduleVersion": "daily-2026-09-14-2026-10-13-v1"
+    },
+    {
+      "entryId": "daily-ru-2026-09-16-v1",
+      "date": "2026-09-16",
+      "language": "ru",
+      "puzzleId": "ru-0008",
+      "lineageId": "ru-0008",
+      "contentVersion": "catalog-2026-09-v1",
+      "scheduleVersion": "daily-2026-09-14-2026-10-13-v1"
+    },
+    {
+      "entryId": "daily-ru-2026-09-17-v1",
+      "date": "2026-09-17",
+      "language": "ru",
+      "puzzleId": "ru-0010",
+      "lineageId": "ru-0010",
+      "contentVersion": "catalog-2026-09-v1",
+      "scheduleVersion": "daily-2026-09-14-2026-10-13-v1"
+    },
+    {
+      "entryId": "daily-ru-2026-09-18-v1",
+      "date": "2026-09-18",
+      "language": "ru",
+      "puzzleId": "ru-0027",
+      "lineageId": "ru-0027",
+      "contentVersion": "catalog-2026-09-v1",
+      "scheduleVersion": "daily-2026-09-14-2026-10-13-v1"
+    },
+    {
+      "entryId": "daily-ru-2026-09-19-v1",
+      "date": "2026-09-19",
+      "language": "ru",
+      "puzzleId": "ru-0035",
+      "lineageId": "ru-0035",
+      "contentVersion": "catalog-2026-09-v1",
+      "scheduleVersion": "daily-2026-09-14-2026-10-13-v1"
+    },
+    {
+      "entryId": "daily-ru-2026-09-20-v1",
+      "date": "2026-09-20",
+      "language": "ru",
+      "puzzleId": "ru-0046",
+      "lineageId": "ru-0046",
+      "contentVersion": "catalog-2026-09-v1",
+      "scheduleVersion": "daily-2026-09-14-2026-10-13-v1"
+    },
+    {
+      "entryId": "daily-ru-2026-09-21-v1",
+      "date": "2026-09-21",
+      "language": "ru",
+      "puzzleId": "ru-0062",
+      "lineageId": "ru-0062",
+      "contentVersion": "catalog-2026-09-v1",
+      "scheduleVersion": "daily-2026-09-14-2026-10-13-v1"
+    },
+    {
+      "entryId": "daily-ru-2026-09-22-v1",
+      "date": "2026-09-22",
+      "language": "ru",
+      "puzzleId": "ru-0073",
+      "lineageId": "ru-0073",
+      "contentVersion": "catalog-2026-09-v1",
+      "scheduleVersion": "daily-2026-09-14-2026-10-13-v1"
+    },
+    {
+      "entryId": "daily-ru-2026-09-23-v1",
+      "date": "2026-09-23",
+      "language": "ru",
+      "puzzleId": "ru-0126",
+      "lineageId": "ru-0126",
+      "contentVersion": "catalog-2026-09-v1",
+      "scheduleVersion": "daily-2026-09-14-2026-10-13-v1"
+    },
+    {
+      "entryId": "daily-ru-2026-09-24-v1",
+      "date": "2026-09-24",
+      "language": "ru",
+      "puzzleId": "ru-0127",
+      "lineageId": "ru-0127",
+      "contentVersion": "catalog-2026-09-v1",
+      "scheduleVersion": "daily-2026-09-14-2026-10-13-v1"
+    },
+    {
+      "entryId": "daily-ru-2026-09-25-v1",
+      "date": "2026-09-25",
+      "language": "ru",
+      "puzzleId": "ru-0134",
+      "lineageId": "ru-0134",
+      "contentVersion": "catalog-2026-09-v1",
+      "scheduleVersion": "daily-2026-09-14-2026-10-13-v1"
+    },
+    {
+      "entryId": "daily-ru-2026-09-26-v1",
+      "date": "2026-09-26",
+      "language": "ru",
+      "puzzleId": "ru-0211",
+      "lineageId": "ru-0211",
+      "contentVersion": "catalog-2026-09-v1",
+      "scheduleVersion": "daily-2026-09-14-2026-10-13-v1"
+    },
+    {
+      "entryId": "daily-ru-2026-09-27-v1",
+      "date": "2026-09-27",
+      "language": "ru",
+      "puzzleId": "ru-0265",
+      "lineageId": "ru-0265",
+      "contentVersion": "catalog-2026-09-v1",
+      "scheduleVersion": "daily-2026-09-14-2026-10-13-v1"
+    },
+    {
+      "entryId": "daily-ru-2026-09-28-v1",
+      "date": "2026-09-28",
+      "language": "ru",
+      "puzzleId": "ru-0268",
+      "lineageId": "ru-0268",
+      "contentVersion": "catalog-2026-09-v1",
+      "scheduleVersion": "daily-2026-09-14-2026-10-13-v1"
+    },
+    {
+      "entryId": "daily-ru-2026-09-29-v1",
+      "date": "2026-09-29",
+      "language": "ru",
+      "puzzleId": "ru-0106",
+      "lineageId": "ru-0106",
+      "contentVersion": "catalog-2026-09-v1",
+      "scheduleVersion": "daily-2026-09-14-2026-10-13-v1"
+    },
+    {
+      "entryId": "daily-ru-2026-09-30-v1",
+      "date": "2026-09-30",
+      "language": "ru",
+      "puzzleId": "ru-0225",
+      "lineageId": "ru-0225",
+      "contentVersion": "catalog-2026-09-v1",
+      "scheduleVersion": "daily-2026-09-14-2026-10-13-v1"
+    },
+    {
+      "entryId": "daily-ru-2026-10-01-v1",
+      "date": "2026-10-01",
+      "language": "ru",
+      "puzzleId": "ru-0227",
+      "lineageId": "ru-0227",
+      "contentVersion": "catalog-2026-09-v1",
+      "scheduleVersion": "daily-2026-09-14-2026-10-13-v1"
+    },
+    {
+      "entryId": "daily-ru-2026-10-02-v1",
+      "date": "2026-10-02",
+      "language": "ru",
+      "puzzleId": "ru-0234",
+      "lineageId": "ru-0234",
+      "contentVersion": "catalog-2026-09-v1",
+      "scheduleVersion": "daily-2026-09-14-2026-10-13-v1"
+    },
+    {
+      "entryId": "daily-ru-2026-10-03-v1",
+      "date": "2026-10-03",
+      "language": "ru",
+      "puzzleId": "ru-0260",
+      "lineageId": "ru-0260",
+      "contentVersion": "catalog-2026-09-v1",
+      "scheduleVersion": "daily-2026-09-14-2026-10-13-v1"
+    },
+    {
+      "entryId": "daily-ru-2026-10-04-v1",
+      "date": "2026-10-04",
+      "language": "ru",
+      "puzzleId": "ru-0297",
+      "lineageId": "ru-0297",
+      "contentVersion": "catalog-2026-09-v1",
+      "scheduleVersion": "daily-2026-09-14-2026-10-13-v1"
+    },
+    {
+      "entryId": "daily-ru-2026-10-05-v1",
+      "date": "2026-10-05",
+      "language": "ru",
+      "puzzleId": "ru-0326",
+      "lineageId": "ru-0326",
+      "contentVersion": "catalog-2026-09-v1",
+      "scheduleVersion": "daily-2026-09-14-2026-10-13-v1"
+    },
+    {
+      "entryId": "daily-ru-2026-10-06-v1",
+      "date": "2026-10-06",
+      "language": "ru",
+      "puzzleId": "ru-0364",
+      "lineageId": "ru-0364",
+      "contentVersion": "catalog-2026-09-v1",
+      "scheduleVersion": "daily-2026-09-14-2026-10-13-v1"
+    },
+    {
+      "entryId": "daily-ru-2026-10-07-v1",
+      "date": "2026-10-07",
+      "language": "ru",
+      "puzzleId": "ru-0373",
+      "lineageId": "ru-0373",
+      "contentVersion": "catalog-2026-09-v1",
+      "scheduleVersion": "daily-2026-09-14-2026-10-13-v1"
+    },
+    {
+      "entryId": "daily-ru-2026-10-08-v1",
+      "date": "2026-10-08",
+      "language": "ru",
+      "puzzleId": "ru-0378",
+      "lineageId": "ru-0378",
+      "contentVersion": "catalog-2026-09-v1",
+      "scheduleVersion": "daily-2026-09-14-2026-10-13-v1"
+    },
+    {
+      "entryId": "daily-ru-2026-10-09-v1",
+      "date": "2026-10-09",
+      "language": "ru",
+      "puzzleId": "ru-0395",
+      "lineageId": "ru-0395",
+      "contentVersion": "catalog-2026-09-v1",
+      "scheduleVersion": "daily-2026-09-14-2026-10-13-v1"
+    },
+    {
+      "entryId": "daily-ru-2026-10-10-v1",
+      "date": "2026-10-10",
+      "language": "ru",
+      "puzzleId": "ru-0405",
+      "lineageId": "ru-0405",
+      "contentVersion": "catalog-2026-09-v1",
+      "scheduleVersion": "daily-2026-09-14-2026-10-13-v1"
+    },
+    {
+      "entryId": "daily-ru-2026-10-11-v1",
+      "date": "2026-10-11",
+      "language": "ru",
+      "puzzleId": "ru-0417",
+      "lineageId": "ru-0417",
+      "contentVersion": "catalog-2026-09-v1",
+      "scheduleVersion": "daily-2026-09-14-2026-10-13-v1"
+    },
+    {
+      "entryId": "daily-ru-2026-10-12-v1",
+      "date": "2026-10-12",
+      "language": "ru",
+      "puzzleId": "ru-0438",
+      "lineageId": "ru-0438",
+      "contentVersion": "catalog-2026-09-v1",
+      "scheduleVersion": "daily-2026-09-14-2026-10-13-v1"
+    },
+    {
+      "entryId": "daily-ru-2026-10-13-v1",
+      "date": "2026-10-13",
+      "language": "ru",
+      "puzzleId": "ru-0154",
+      "lineageId": "ru-0154",
+      "contentVersion": "catalog-2026-09-v1",
+      "scheduleVersion": "daily-2026-09-14-2026-10-13-v1"
+    }
+  ]
+}

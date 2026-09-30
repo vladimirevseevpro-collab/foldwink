@@ -1,0 +1,17 @@
+{
+  "schema": "foldwink-butler-channel-verification-v1",
+  "verifiedAt": "2026-09-16T10:02:27.494Z",
+  "target": "neural-void/foldwink:pilot-2026-09",
+  "sourceArtifactSha256": "b9e5dde25558e27dc9f846f28e8ad4b9dbb0d134136e2efa2bb8c9d7cf7fc645",
+  "expected": {
+    "files": 137,
+    "bytes": 5382077,
+    "treeSha256": "b41e3ce52dd56f28e96719a6e4872bc7701e6305cbfe270a5e8f02bdd64eb385"
+  },
+  "actual": {
+    "files": 137,
+    "bytes": 5382077,
+    "treeSha256": "b41e3ce52dd56f28e96719a6e4872bc7701e6305cbfe270a5e8f02bdd64eb385"
+  },
+  "matches": true
+}

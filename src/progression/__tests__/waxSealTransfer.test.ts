@@ -1,5 +1,10 @@
 import { describe, expect, it } from "vitest";
-import { generateQrMatrix } from "../qr";
+import {
+  generateQrMatrix,
+  QR_MAX_INPUT_BYTES,
+  QrPayloadTooLargeError,
+  tryGenerateQrMatrix,
+} from "../qr";
 import {
   encodePassportToSeal,
   decodePassportFromSeal,
@@ -7,9 +12,12 @@ import {
   loadArchivistBackup,
   hasArchivistBackup,
   clearArchivistBackup,
+  drawWaxSealCertificate,
 } from "../waxSealTransfer";
 import type { ArchivistProfile } from "../types";
 import { STAMP_COLLECTION } from "../stamps";
+import { fnv1a } from "../../utils/hash";
+import jsQR from "jsqr";
 
 // ISO 18004 Galois Field + Reed Solomon validator
 const EXP_TABLE = new Uint8Array(512);
@@ -67,89 +75,120 @@ const VERSION_SPECS = [
   {
     version: 1,
     totalCodewords: 26,
-    dataCodewords: 19,
-    ecCodewordsPerBlock: 7,
-    blocks: [{ count: 1, dataCodewords: 19 }],
+    dataCodewords: 16,
+    ecCodewordsPerBlock: 10,
+    blocks: [{ count: 1, dataCodewords: 16 }],
     alignments: [],
   },
   {
     version: 2,
     totalCodewords: 44,
-    dataCodewords: 34,
-    ecCodewordsPerBlock: 10,
-    blocks: [{ count: 1, dataCodewords: 34 }],
+    dataCodewords: 28,
+    ecCodewordsPerBlock: 16,
+    blocks: [{ count: 1, dataCodewords: 28 }],
     alignments: [6, 18],
   },
   {
     version: 3,
     totalCodewords: 70,
-    dataCodewords: 55,
-    ecCodewordsPerBlock: 15,
-    blocks: [{ count: 1, dataCodewords: 55 }],
+    dataCodewords: 44,
+    ecCodewordsPerBlock: 26,
+    blocks: [{ count: 1, dataCodewords: 44 }],
     alignments: [6, 22],
   },
   {
     version: 4,
     totalCodewords: 100,
-    dataCodewords: 80,
-    ecCodewordsPerBlock: 20,
-    blocks: [{ count: 1, dataCodewords: 80 }],
+    dataCodewords: 64,
+    ecCodewordsPerBlock: 18,
+    blocks: [{ count: 2, dataCodewords: 32 }],
     alignments: [6, 26],
   },
   {
     version: 5,
     totalCodewords: 134,
-    dataCodewords: 108,
-    ecCodewordsPerBlock: 26,
-    blocks: [{ count: 1, dataCodewords: 108 }],
+    dataCodewords: 86,
+    ecCodewordsPerBlock: 24,
+    blocks: [{ count: 2, dataCodewords: 43 }],
     alignments: [6, 30],
   },
   {
     version: 6,
     totalCodewords: 172,
-    dataCodewords: 136,
-    ecCodewordsPerBlock: 18,
-    blocks: [{ count: 2, dataCodewords: 68 }],
+    dataCodewords: 108,
+    ecCodewordsPerBlock: 16,
+    blocks: [{ count: 4, dataCodewords: 27 }],
     alignments: [6, 34],
   },
   {
     version: 7,
     totalCodewords: 196,
-    dataCodewords: 156,
-    ecCodewordsPerBlock: 20,
-    blocks: [{ count: 2, dataCodewords: 78 }],
+    dataCodewords: 124,
+    ecCodewordsPerBlock: 18,
+    blocks: [{ count: 4, dataCodewords: 31 }],
     alignments: [6, 22, 38],
   },
   {
     version: 8,
     totalCodewords: 242,
-    dataCodewords: 194,
-    ecCodewordsPerBlock: 24,
-    blocks: [{ count: 2, dataCodewords: 97 }],
+    dataCodewords: 154,
+    ecCodewordsPerBlock: 22,
+    blocks: [
+      { count: 2, dataCodewords: 38 },
+      { count: 2, dataCodewords: 39 },
+    ],
     alignments: [6, 24, 42],
   },
   {
     version: 9,
     totalCodewords: 292,
-    dataCodewords: 232,
-    ecCodewordsPerBlock: 30,
-    blocks: [{ count: 2, dataCodewords: 116 }],
+    dataCodewords: 182,
+    ecCodewordsPerBlock: 22,
+    blocks: [
+      { count: 3, dataCodewords: 36 },
+      { count: 2, dataCodewords: 37 },
+    ],
     alignments: [6, 26, 46],
   },
   {
     version: 10,
     totalCodewords: 346,
-    dataCodewords: 274,
-    ecCodewordsPerBlock: 18,
+    dataCodewords: 216,
+    ecCodewordsPerBlock: 26,
     blocks: [
-      { count: 2, dataCodewords: 68 },
-      { count: 2, dataCodewords: 69 },
+      { count: 4, dataCodewords: 43 },
+      { count: 1, dataCodewords: 44 },
     ],
     alignments: [6, 28, 50],
   },
 ];
 
 function decodeQr(matrix: boolean[][]): string {
+  // Independent decoder path: rasterise the generated modules with the
+  // required four-module quiet zone and let jsQR parse the actual pixels.
+  const scale = 8;
+  const quiet = 4;
+  const rasterSize = (matrix.length + quiet * 2) * scale;
+  const rgba = new Uint8ClampedArray(rasterSize * rasterSize * 4).fill(255);
+  for (let row = 0; row < matrix.length; row++) {
+    for (let column = 0; column < matrix.length; column++) {
+      if (!matrix[row][column]) continue;
+      for (let dy = 0; dy < scale; dy++) {
+        for (let dx = 0; dx < scale; dx++) {
+          const pixelX = (column + quiet) * scale + dx;
+          const pixelY = (row + quiet) * scale + dy;
+          const offset = (pixelY * rasterSize + pixelX) * 4;
+          rgba[offset] = 0;
+          rgba[offset + 1] = 0;
+          rgba[offset + 2] = 0;
+          rgba[offset + 3] = 255;
+        }
+      }
+    }
+  }
+  const independent = jsQR(rgba, rasterSize, rasterSize);
+  if (independent) return independent.data;
+
   const size = matrix.length;
   const version = (size - 17) / 4;
   const spec = VERSION_SPECS.find((s) => s.version === version);
@@ -179,10 +218,9 @@ function decodeQr(matrix: boolean[][]): string {
     if (matrix[r][c]) formatBits |= 1 << i;
   }
   const unmaskedFormat = formatBits ^ 0x5412;
-  const ecLevel = (unmaskedFormat >> 13) & 0b11; // 01 for L
-  const mask = (unmaskedFormat >> 10) & 0b111; // 000 for mask 0
-  if (ecLevel !== 1) throw new Error(`Unexpected EC level ${ecLevel}`);
-  if (mask !== 0) throw new Error(`Unexpected mask ${mask}`);
+  const ecLevel = (unmaskedFormat >> 13) & 0b11; // 00 for M
+  const mask = (unmaskedFormat >> 10) & 0b111;
+  if (ecLevel !== 0) throw new Error(`Unexpected EC level ${ecLevel}`);
 
   // Function module marking
   const isFunction = Array.from({ length: size }, () => new Array(size).fill(false));
@@ -235,7 +273,24 @@ function decodeQr(matrix: boolean[][]): string {
         const cx = x - col;
         if (!isFunction[y][cx]) {
           let cell = matrix[y][cx];
-          if ((y + cx) % 2 === 0) cell = !cell;
+          const product = y * cx;
+          const masked =
+            mask === 0
+              ? (y + cx) % 2 === 0
+              : mask === 1
+                ? y % 2 === 0
+                : mask === 2
+                  ? cx % 3 === 0
+                  : mask === 3
+                    ? (y + cx) % 3 === 0
+                    : mask === 4
+                      ? (Math.floor(y / 2) + Math.floor(cx / 3)) % 2 === 0
+                      : mask === 5
+                        ? (product % 2) + (product % 3) === 0
+                        : mask === 6
+                          ? ((product % 2) + (product % 3)) % 2 === 0
+                          : (((y + cx) % 2) + (product % 3)) % 2 === 0;
+          if (masked) cell = !cell;
           bits.push(cell);
         }
       }
@@ -334,8 +389,8 @@ describe("QR Code Generator", () => {
       "HELLO",
       "Foldwink 2026",
       "FWSEAL1:12345678-abcdefghijklmnopqrstuvwxyz",
-      "A".repeat(150), // Version 7
-      "B".repeat(240), // Version 10
+      "A".repeat(150),
+      "B".repeat(210), // Version 10-M near the accepted visual ceiling
     ];
 
     for (const sample of samples) {
@@ -343,6 +398,22 @@ describe("QR Code Generator", () => {
       const decoded = decodeQr(matrix);
       expect(decoded).toBe(sample);
     }
+  });
+
+  it("accepts the exact supported boundary and rejects overflow without truncation", () => {
+    const max = "Q".repeat(QR_MAX_INPUT_BYTES);
+    const accepted = tryGenerateQrMatrix(max);
+    expect(accepted.ok).toBe(true);
+    if (accepted.ok) expect(decodeQr(accepted.matrix)).toBe(max);
+
+    const overflow = tryGenerateQrMatrix(`${max}Q`);
+    expect(overflow).toEqual({
+      ok: false,
+      code: "payload-too-large",
+      bytes: QR_MAX_INPUT_BYTES + 1,
+      maxBytes: QR_MAX_INPUT_BYTES,
+    });
+    expect(() => generateQrMatrix(`${max}Q`)).toThrow(QrPayloadTooLargeError);
   });
 });
 
@@ -389,6 +460,12 @@ describe("Wax Seal Passport Transfer", () => {
     } as Storage;
   }
 
+  function forgeLegacySeal(payload: unknown): string {
+    const json = JSON.stringify(payload);
+    const checksum = (fnv1a(json) >>> 0).toString(16).padStart(8, "0");
+    return `FWSEAL1:${checksum}-${Buffer.from(json, "utf8").toString("base64")}`;
+  }
+
   it("encodes profile into a portable FWSEAL1 string", () => {
     installLocalStorage();
     const sealStr = encodePassportToSeal(sampleProfile, "user_seed_test_123");
@@ -419,6 +496,32 @@ describe("Wax Seal Passport Transfer", () => {
     expect(res.playerSeed).toBe("user_seed_test_123");
   });
 
+  it("keeps the original object-shaped FWSEAL1 payload readable", () => {
+    const res = decodePassportFromSeal(
+      forgeLegacySeal({
+        v: 1,
+        lvl: 3,
+        xp: 240,
+        ink: 2,
+        wax: 1,
+        p: 0,
+        d: "scribe",
+        s: "seal_raven",
+        n: "nib_brass",
+        t: "title_truths",
+        st: ["stamp_morning_brew"],
+        ps: "legacy-object-seed",
+        ca: 0,
+        cw: 0,
+      }),
+    );
+    expect(res).toMatchObject({
+      ok: true,
+      playerSeed: "legacy-object-seed",
+      profile: { level: 3, xp: 240, sealId: "seal_raven" },
+    });
+  });
+
   it("encodes and decodes profile with all stamps unlocked cleanly", () => {
     const fullProfile: ArchivistProfile = {
       ...sampleProfile,
@@ -440,6 +543,36 @@ describe("Wax Seal Passport Transfer", () => {
     expect(roundtripFromQr.profile?.level).toBe(25);
   });
 
+  it("renders a manual-copy fallback instead of throwing for an oversized valid seal", () => {
+    const longSeed = "s".repeat(128);
+    const sealStr = encodePassportToSeal(sampleProfile, longSeed);
+    const qrResult = tryGenerateQrMatrix(sealStr);
+    expect(qrResult.ok).toBe(false);
+
+    const drawnText: string[] = [];
+    const context = new Proxy(
+      {},
+      {
+        get: (_target, property) => {
+          if (property === "fillText") {
+            return (value: string) => drawnText.push(String(value));
+          }
+          return () => undefined;
+        },
+        set: () => true,
+      },
+    ) as CanvasRenderingContext2D;
+    const canvas = {
+      width: 0,
+      height: 0,
+      getContext: () => context,
+    } as unknown as HTMLCanvasElement;
+
+    expect(() => drawWaxSealCertificate(canvas, sampleProfile, sealStr, "en")).not.toThrow();
+    expect(drawnText).toContain("Code is too long for QR");
+    expect(drawnText).toContain("Copy the code in the app");
+  });
+
   it("rejects tampered or corrupted seal strings gracefully", () => {
     const sealStr = encodePassportToSeal(sampleProfile);
     const corrupted = sealStr.slice(0, -3) + "xyz";
@@ -449,6 +582,67 @@ describe("Wax Seal Passport Transfer", () => {
 
     const invalidHeader = decodePassportFromSeal("INVALID:xyz");
     expect(invalidHeader.ok).toBe(false);
+  });
+
+  it("bounds legacy input and rejects checksummed but unsafe profile values", () => {
+    const validArray = [
+      1,
+      5,
+      10,
+      0,
+      0,
+      0,
+      "scribe",
+      "seal_raven",
+      "nib_brass",
+      "title_truths",
+      1,
+      "seed",
+      0,
+      0,
+    ];
+    expect(decodePassportFromSeal(`FWSEAL1:${"a".repeat(5000)}`).ok).toBe(false);
+    expect(decodePassportFromSeal("FWSEAL1:00000000-YQ=").ok).toBe(false);
+    expect(
+      decodePassportFromSeal(
+        forgeLegacySeal(
+          validArray.map((value, index) => (index === 2 ? Number.MAX_SAFE_INTEGER : value)),
+        ),
+      ).ok,
+    ).toBe(false);
+    expect(
+      decodePassportFromSeal(
+        forgeLegacySeal([
+          1,
+          5,
+          10,
+          0,
+          0,
+          0,
+          "scribe",
+          "seal_admin",
+          "nib_brass",
+          "title_truths",
+          ["stamp_unknown"],
+          "../../foreign-seed",
+          0,
+          0,
+        ]),
+      ).ok,
+    ).toBe(false);
+    for (const invalidMask of [-1, 1.5, 1 << STAMP_COLLECTION.length]) {
+      const payload = [...validArray];
+      payload[10] = invalidMask;
+      expect(decodePassportFromSeal(forgeLegacySeal(payload)).ok).toBe(false);
+    }
+
+    const seed128 = "s".repeat(128);
+    const acceptedSeed = [...validArray];
+    acceptedSeed[11] = seed128;
+    expect(decodePassportFromSeal(forgeLegacySeal(acceptedSeed)).ok).toBe(true);
+    const rejectedSeed = [...validArray];
+    rejectedSeed[11] = `${seed128}s`;
+    expect(decodePassportFromSeal(forgeLegacySeal(rejectedSeed)).ok).toBe(false);
   });
 
   it("handles profile backup, detection, and clearing correctly", () => {

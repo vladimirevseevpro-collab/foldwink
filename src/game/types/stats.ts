@@ -1,5 +1,5 @@
-import type { GameResult } from "./game";
-import type { PuzzleDifficulty } from "./puzzle";
+import type { GameResult, PuzzleLanguage, PuzzleRef } from "./game";
+import type { Puzzle, PuzzleDifficulty } from "./puzzle";
 
 /**
  * A single completed attempt. Added in 0.4.2 for the progression readiness
@@ -48,6 +48,13 @@ export interface DailyRecord {
   mistakesUsed: number;
   durationMs: number;
   graceWaxUsed?: boolean;
+  /** W2 identity fields are optional only for legacy localStorage records. */
+  language?: PuzzleLanguage;
+  entryId?: string;
+  scheduleVersion?: string;
+  puzzleRef?: PuzzleRef;
+  puzzleSnapshot?: Puzzle;
+  attemptId?: string;
 }
 
 export interface StandardProgress {
@@ -64,6 +71,16 @@ export interface StandardProgress {
   hardCursor?: number;
   /** Zen-mode sequential cursor for unlimited 500+ archive play. */
   zenCursor?: number;
+  /** Increments whenever a new practice selection is committed, including after a loss. */
+  selectionSequence?: number;
+  /** Seen is intentionally distinct from solved; abandon/loss still records exposure. */
+  seenLineageIds?: string[];
+  /** Explicit manifest positions completed by a terminal win or loss. */
+  completedStarterEntryIds?: string[];
+  /** Leading topic tag for the last two newly selected practice boards. */
+  recentTopicTags?: string[];
+  /** Item vocabulary for the last three newly selected practice boards. */
+  recentItemValues?: string[];
 }
 
 export const INITIAL_STATS: Stats = {

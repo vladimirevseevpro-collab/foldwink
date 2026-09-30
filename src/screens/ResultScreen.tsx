@@ -1,8 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useGameStore } from "../game/state/appStore";
 import { useT, useLang } from "../i18n/useLanguage";
-import { useSound } from "../audio/useSound";
-import { triggerHaptic } from "../haptics/haptics";
+import { useFeedback } from "../feedback/useFeedback";
 import { Button } from "../components/Button";
 import { ResultSummary } from "../components/ResultSummary";
 import { ShareButton } from "../components/ShareButton";
@@ -12,13 +11,8 @@ import { DailyCountdown } from "../components/DailyCountdown";
 import { TipJarLink } from "../components/TipJarLink";
 import { SupporterUnlockCta } from "../components/SupporterUnlockCta";
 import { SoundToggle } from "../components/SoundToggle";
-import { EnvelopeUnboxingModal } from "../components/EnvelopeUnboxingModal";
 import { SEALS } from "../progression/stamps";
-import {
-  loadArchivistProfile,
-  awardSolveRewards,
-  type SolveRewards,
-} from "../progression/archivistProfile";
+import { loadArchivistProfile } from "../progression/archivistProfile";
 import { buildShareString } from "../game/engine/share";
 import { gradeResult } from "../game/engine/grading";
 import { mediumReadiness } from "../game/engine/readiness";
@@ -28,7 +22,11 @@ import { isSupporter } from "../monetization/supporter";
 import { loadDailyHistory } from "../stats/persistence";
 import { derivePersonalMoment, mergeDailyHistory, addLocalDays } from "../stats/dailyRitual";
 import { formatDuration, computePlayerArchetype } from "../game/engine/result";
-import { createShareUrl } from "../share/urlHashPuzzle";
+import { bucketDuration, createChallengeUrl } from "../share/challengeLink";
+import { newlyEarnedCollectionMilestone } from "../progression/milestones";
+import { StampArtwork } from "../components/StampArtwork";
+import { loadResearchState, recordBoardFeedback } from "../analytics/researchCohort";
+import { trackEvent } from "../analytics/eventLog";
 
 // Deterministic picker: same puzzle id → same copy every replay, so we
 // rotate without introducing variable-reward feel. Empty array safe-guard.
@@ -40,6 +38,7 @@ function pickVariant(variants: readonly string[], seed: string): string {
 
 export function ResultScreen() {
   const summary = useGameStore((s) => s.summary);
+  const rewardReceipt = useGameStore((s) => s.rewardReceipt);
   const puzzle = useGameStore((s) => s.puzzle);
   const active = useGameStore((s) => s.active);
   const stats = useGameStore((s) => s.stats);
@@ -50,62 +49,26 @@ export function ResultScreen() {
   const goToMenu = useGameStore((s) => s.goToMenu);
   const showStats = useGameStore((s) => s.showStats);
   const startNextSame = useGameStore((s) => s.startNextSame);
+  const retryCurrent = useGameStore((s) => s.retryCurrent);
   const startMedium = useGameStore((s) => s.startMedium);
   const duel = useGameStore((s) => s.duel);
   const t = useT();
   const lang = useLang();
-  const play = useSound();
+  const feedback = useFeedback();
   const focusRef = useRef<HTMLDivElement>(null);
-  const [challengeCopied, setChallengeCopied] = useState(false);
   const [duelResponseSent, setDuelResponseSent] = useState(false);
-  const [puzzleUrlCopied, setPuzzleUrlCopied] = useState(false);
-  const [unboxingRewards, setUnboxingRewards] = useState<SolveRewards | null>(() => {
-    if (!summary || !puzzle || summary.result !== "win") return null;
-    const profile = loadArchivistProfile();
-    const { rewards } = awardSolveRewards(profile, {
-      result: summary.result,
-      mistakesUsed: summary.mistakesUsed,
-      isDaily: active?.mode === "daily",
-      difficulty: puzzle.difficulty,
-    });
-    return rewards;
-  });
+  const [feedbackRecorded, setFeedbackRecorded] = useState<"yes" | "no" | null>(null);
+  useEffect(() => {
+    if (!active?.attemptId || !active.puzzleId) return;
+    const prior = loadResearchState().feedback.find(
+      (item) => item.boardId === active.puzzleId && item.attemptKey === active.attemptId,
+    );
+    if (prior) setFeedbackRecorded(prior.answer);
+  }, [active?.attemptId, active?.puzzleId]);
 
   useEffect(() => {
     focusRef.current?.focus();
   }, []);
-
-  const handleSharePuzzleUrl = async () => {
-    if (!puzzle) return;
-    try {
-      const url = await createShareUrl(puzzle);
-      if (typeof navigator !== "undefined" && navigator.clipboard) {
-        await navigator.clipboard.writeText(url);
-        setPuzzleUrlCopied(true);
-        play("submit");
-        triggerHaptic("select");
-        setTimeout(() => setPuzzleUrlCopied(false), 2200);
-      }
-    } catch {
-      /* ignore */
-    }
-  };
-
-  const handleChallenge = async () => {
-    if (!puzzle || !summary) return;
-    const challengeUrl = `${window.location.origin}${window.location.pathname}?vs=${encodeURIComponent(puzzle.id)}&m=${summary.mistakesUsed}&t=${Math.round(summary.durationMs / 1000)}`;
-    try {
-      if (typeof navigator !== "undefined" && navigator.clipboard) {
-        await navigator.clipboard.writeText(challengeUrl);
-        setChallengeCopied(true);
-        play("submit");
-        triggerHaptic("select");
-        setTimeout(() => setChallengeCopied(false), 2200);
-      }
-    } catch {
-      /* ignore */
-    }
-  };
 
   const handleSendDuelResponse = async () => {
     if (!puzzle || !summary || !duel) return;
@@ -126,12 +89,17 @@ export function ResultScreen() {
           text,
         });
         setDuelResponseSent(true);
-        play("submit");
-        triggerHaptic("select");
+        feedback("submit");
         setTimeout(() => setDuelResponseSent(false), 2400);
         return;
-      } catch {
-        /* Fallback to clipboard if share was cancelled or failed */
+      } catch (error) {
+        const cancelled =
+          !!error &&
+          typeof error === "object" &&
+          ((error as { name?: unknown }).name === "AbortError" ||
+            (typeof (error as { message?: unknown }).message === "string" &&
+              /cancel|abort/i.test((error as { message: string }).message)));
+        if (cancelled) return;
       }
     }
 
@@ -139,8 +107,7 @@ export function ResultScreen() {
       if (typeof navigator !== "undefined" && navigator.clipboard) {
         await navigator.clipboard.writeText(text);
         setDuelResponseSent(true);
-        play("submit");
-        triggerHaptic("select");
+        feedback("submit");
         setTimeout(() => setDuelResponseSent(false), 2400);
       }
     } catch {
@@ -168,6 +135,8 @@ export function ResultScreen() {
   const isZen = active?.mode === "zen";
   const today = todayLocal();
   const isWin = summary.result === "win";
+  const earnedMilestone =
+    isWin && rewardReceipt?.awarded ? newlyEarnedCollectionMilestone(stats) : null;
   const grade = gradeResult(summary, puzzle, active);
   const shareText = buildShareString(summary, puzzle, {
     mode: isDaily ? "daily" : "standard",
@@ -176,6 +145,21 @@ export function ResultScreen() {
     strings: t,
     grade,
   });
+  const challengeUrl = active?.puzzleRef
+    ? createChallengeUrl(
+        active.puzzleRef,
+        {
+          result: summary.result,
+          mistakesUsed: summary.mistakesUsed,
+          winkUsed: Boolean(active.winkedGroupId),
+          durationBucket: bucketDuration(summary.durationMs),
+        },
+        typeof window === "undefined"
+          ? ""
+          : `${window.location.origin}${window.location.pathname}`,
+      )
+    : null;
+  const officialChallengeUrl = challengeUrl?.ok ? challengeUrl.url : undefined;
 
   const subtitle = isDaily
     ? t.result.subtitleDaily(today)
@@ -239,13 +223,6 @@ export function ResultScreen() {
       aria-labelledby="result-heading"
       tabIndex={-1}
     >
-      {unboxingRewards && (
-        <EnvelopeUnboxingModal
-          rewards={unboxingRewards}
-          onClose={() => setUnboxingRewards(null)}
-        />
-      )}
-
       {duel && (
         <div className="mb-3">
           <DuelVerdictBanner
@@ -256,6 +233,7 @@ export function ResultScreen() {
             playerMistakes={summary.mistakesUsed}
             playerDurationMs={summary.durationMs}
             lang={lang}
+            challenge={duel.challenge}
           />
         </div>
       )}
@@ -265,6 +243,64 @@ export function ResultScreen() {
         puzzle={puzzle}
         currentStreak={isZen ? (stats.zenStreak ?? 0) : stats.currentStreak}
       />
+
+      {isWin && rewardReceipt && (
+        <div
+          className="mt-3 rounded-lg border border-line bg-surface px-4 py-3 text-center"
+          data-testid="result-reward-receipt"
+        >
+          {rewardReceipt.awarded ? (
+            <>
+              <div className="text-[10px] uppercase tracking-[0.14em] text-muted">
+                {lang === "ru"
+                  ? "Запись в архиве"
+                  : lang === "de"
+                    ? "Archiveintrag"
+                    : "Archive entry"}
+              </div>
+              <div className="mt-1 text-lg font-bold text-accent">
+                +{rewardReceipt.xpGained} XP
+              </div>
+            </>
+          ) : (
+            <div className="text-xs text-muted">
+              {rewardReceipt.reason === "already-consumed"
+                ? lang === "ru"
+                  ? "Повтор: прогресс этой задачи уже учтён"
+                  : lang === "de"
+                    ? "Wiederholung: Der Fortschritt wurde bereits gezählt"
+                    : "Replay: this puzzle's progress was already counted"
+                : lang === "ru"
+                  ? "Эта игровая сессия не влияет на прогресс"
+                  : lang === "de"
+                    ? "Diese Spielsitzung zählt nicht zum Fortschritt"
+                    : "This game session does not count toward progression"}
+            </div>
+          )}
+        </div>
+      )}
+
+      {earnedMilestone && (
+        <div
+          className="mt-3 flex items-center gap-3 rounded-lg border border-accent/60 bg-surface px-4 py-3"
+          data-testid="result-collection-milestone"
+        >
+          <StampArtwork stampId={earnedMilestone.id} color={earnedMilestone.color} size={42} />
+          <div className="text-left">
+            <div className="text-[10px] font-bold uppercase tracking-[0.14em] text-accent">
+              {lang === "ru"
+                ? "Новая страница архива"
+                : lang === "de"
+                  ? "Neue Archivseite"
+                  : "New archive page"}
+            </div>
+            <div className="mt-0.5 text-sm font-bold text-text">
+              {earnedMilestone.label[lang]}
+            </div>
+            <div className="mt-0.5 text-[11px] text-muted">{earnedMilestone.detail[lang]}</div>
+          </div>
+        </div>
+      )}
 
       {isWin && (
         <div
@@ -315,6 +351,109 @@ export function ResultScreen() {
         </div>
       )}
 
+      <div
+        className="mt-3 rounded-lg border border-line bg-surface px-4 py-3"
+        data-testid="board-feedback"
+      >
+        <div className="text-xs text-muted">
+          {lang === "ru"
+            ? "Связь в одной группе была неясной?"
+            : lang === "de"
+              ? "War eine Verbindung unklar?"
+              : "Was a connection unclear?"}
+        </div>
+        <div className="mt-2 flex gap-2">
+          {(["yes", "no"] as const).map((value) => (
+            <button
+              key={value}
+              type="button"
+              disabled={feedbackRecorded !== null}
+              onClick={() => {
+                if (feedbackRecorded) return;
+                const result = recordBoardFeedback(
+                  value,
+                  active?.puzzleId,
+                  active?.puzzleRef?.contentVersion,
+                  active?.attemptId,
+                );
+                if (result.recorded) {
+                  trackEvent({
+                    name: "board_feedback_recorded",
+                    props: {
+                      surface: "result",
+                      lang,
+                      outcome: value === "yes" ? "accepted" : "dismissed",
+                    },
+                  });
+                }
+                setFeedbackRecorded(value);
+              }}
+              aria-pressed={feedbackRecorded === value}
+              className={`min-h-10 flex-1 rounded-lg border px-3 text-xs transition-colors ${feedbackRecorded === value ? "border-accent bg-accent/15 text-text" : "border-line text-text hover:bg-surfaceHi disabled:opacity-60"}`}
+              data-testid={`board-feedback-${value}`}
+            >
+              {value === "yes"
+                ? lang === "ru"
+                  ? "Да"
+                  : lang === "de"
+                    ? "Ja"
+                    : "Yes"
+                : lang === "ru"
+                  ? "Нет"
+                  : lang === "de"
+                    ? "Nein"
+                    : "No"}
+            </button>
+          ))}
+        </div>
+        {feedbackRecorded && (
+          <p className="mt-2 text-[11px] text-muted" role="status">
+            {lang === "ru"
+              ? "Сохранено только на этом устройстве и попадёт в отчёт лишь при добровольном экспорте."
+              : lang === "de"
+                ? "Nur auf diesem Gerät gespeichert und erst bei einem freiwilligen Export geteilt."
+                : "Saved only on this device and shared only through a voluntary export."}
+          </p>
+        )}
+      </div>
+
+      <div className="mt-3 flex flex-col gap-2" data-testid="result-cta-stack">
+        {isDaily ? (
+          <Button onClick={goToMenu}>{t.result.backToMenu}</Button>
+        ) : (
+          <>
+            <Button onClick={startNextSame} data-testid="result-next-puzzle">
+              {t.result.nextPuzzle}
+            </Button>
+            {!isWin && (
+              <Button
+                variant="secondary"
+                onClick={retryCurrent}
+                data-testid="result-retry-puzzle"
+              >
+                {t.result.retryPuzzle}
+              </Button>
+            )}
+          </>
+        )}
+        {!isDaily &&
+          isWin &&
+          puzzle.difficulty === "easy" &&
+          mediumReadiness(stats).unlocked && (
+            <Button variant="secondary" onClick={startMedium} data-testid="result-try-medium">
+              {t.result.tryMedium}
+            </Button>
+          )}
+        <Button variant="secondary" onClick={showStats}>
+          {t.result.showStats}
+        </Button>
+        {!isDaily && (
+          <Button variant="ghost" onClick={goToMenu}>
+            {t.result.backToMenu}
+          </Button>
+        )}
+      </div>
+
       {isDaily && (
         <div className="mt-3 text-center text-[11px] text-muted">
           <DailyCountdown />
@@ -349,8 +488,8 @@ export function ResultScreen() {
       )}
 
       <div className="mt-3 flex flex-col gap-2">
-        <ShareButton text={shareText} card={cardOptions} />
-        {duel && (
+        <ShareButton text={shareText} card={cardOptions} challengeUrl={officialChallengeUrl} />
+        {duel?.challenge.source === "legacy" && (
           <button
             type="button"
             onClick={handleSendDuelResponse}
@@ -361,58 +500,6 @@ export function ResultScreen() {
             <span>{duelResponseSent ? t.duel.responseSent : t.duel.sendResponse}</span>
           </button>
         )}
-        <button
-          type="button"
-          onClick={handleChallenge}
-          className="w-full py-2.5 px-4 rounded-xl border border-amber-500/50 bg-amber-950/20 hover:bg-amber-950/40 text-amber-200 text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-sm"
-          data-testid="result-challenge-button"
-        >
-          <span>{challengeCopied ? "✓" : "⚔️"}</span>
-          <span>{challengeCopied ? t.duel.challengeCopied : t.duel.challengeFriend}</span>
-        </button>
-        <button
-          type="button"
-          onClick={handleSharePuzzleUrl}
-          className="w-full py-2.5 px-4 rounded-xl border border-emerald-500/50 bg-emerald-950/20 hover:bg-emerald-950/40 text-emerald-200 text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-sm"
-          data-testid="result-share-puzzle-url-button"
-        >
-          <span>{puzzleUrlCopied ? "✓" : "🔗"}</span>
-          <span>
-            {puzzleUrlCopied
-              ? lang === "ru"
-                ? "Ссылка на пазл скопирована!"
-                : lang === "de"
-                  ? "Rätsel-Link kopiert!"
-                  : "Puzzle Link Copied!"
-              : lang === "ru"
-                ? "Поделиться ссылкой на пазл"
-                : lang === "de"
-                  ? "Rätsel-Link teilen"
-                  : "Share Puzzle Link"}
-          </span>
-        </button>
-      </div>
-
-      <div className="mt-3 flex flex-col gap-2" data-testid="result-cta-stack">
-        {!isDaily && (
-          <Button onClick={startNextSame} data-testid="result-next-puzzle">
-            {t.result.nextPuzzle}
-          </Button>
-        )}
-        {!isDaily &&
-          isWin &&
-          puzzle.difficulty === "easy" &&
-          mediumReadiness(stats).unlocked && (
-            <Button variant="secondary" onClick={startMedium} data-testid="result-try-medium">
-              {t.result.tryMedium}
-            </Button>
-          )}
-        <Button variant="secondary" onClick={showStats}>
-          {t.result.showStats}
-        </Button>
-        <Button variant="ghost" onClick={goToMenu}>
-          {t.result.backToMenu}
-        </Button>
       </div>
 
       {/* Monetization rail — only renders if configured. Tip jar is the

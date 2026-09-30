@@ -20,53 +20,6 @@ interface Props {
   wobblePhase?: number;
 }
 
-// Shared Gyroscope orientation listener across cards with 0-leak cleanup
-let globalGyroTilt = { x: 0, y: 0 };
-const gyroSubscribers = new Set<(tilt: { x: number; y: number }) => void>();
-let gyroListenerAttached = false;
-
-function handleDeviceOrientation(e: DeviceOrientationEvent) {
-  if (e.gamma == null || e.beta == null) return;
-  const clampedGamma = Math.max(-20, Math.min(20, e.gamma));
-  const clampedBeta = Math.max(-20, Math.min(20, e.beta - 45));
-
-  globalGyroTilt = {
-    x: -(clampedBeta / 20) * 5.0,
-    y: (clampedGamma / 20) * 5.0,
-  };
-
-  for (const sub of gyroSubscribers) {
-    sub(globalGyroTilt);
-  }
-}
-
-function subscribeGyro(cb: (tilt: { x: number; y: number }) => void): () => void {
-  gyroSubscribers.add(cb);
-  if (
-    !gyroListenerAttached &&
-    typeof window !== "undefined" &&
-    typeof window.DeviceOrientationEvent !== "undefined"
-  ) {
-    try {
-      window.addEventListener("deviceorientation", handleDeviceOrientation, { passive: true });
-      gyroListenerAttached = true;
-    } catch {
-      // Ignore
-    }
-  }
-  return () => {
-    gyroSubscribers.delete(cb);
-    if (gyroSubscribers.size === 0 && gyroListenerAttached && typeof window !== "undefined") {
-      try {
-        window.removeEventListener("deviceorientation", handleDeviceOrientation);
-      } catch {
-        // Ignore
-      }
-      gyroListenerAttached = false;
-    }
-  };
-}
-
 export function Card({
   value,
   state,
@@ -80,8 +33,9 @@ export function Card({
   wobblePhase = 0,
 }: Props) {
   const glyphCount = Array.from(value).length;
+  const isSingleToken = !/\s/u.test(value);
   const textSize =
-    glyphCount > 18
+    (isSingleToken && glyphCount > 15) || glyphCount > 18
       ? "text-[10px] sm:text-[13px]"
       : glyphCount > 13
         ? "text-[11px] sm:text-[14px]"
@@ -90,7 +44,6 @@ export function Card({
 
   const ref = useRef<HTMLButtonElement>(null);
   const [isPressed, setIsPressed] = useState(false);
-  const isPointerHovered = useRef(false);
 
   // High-performance direct CSS transform parallax with S-curve damping
   const targetTilt = useRef({ x: 0, y: 0 });
@@ -99,6 +52,7 @@ export function Card({
   const currentGlare = useRef({ x: 50, y: 50, opacity: 0 });
   const rafId = useRef<number | null>(null);
   const isAnimating = useRef(false);
+  const reducedMotion = useRef(false);
 
   const updateFrame = useCallback(() => {
     if (!ref.current) {
@@ -109,6 +63,8 @@ export function Card({
     // S-curve smooth damping: s(t) = t * t * (3 - 2 * t)
     const dx = targetTilt.current.x - currentTilt.current.x;
     const dy = targetTilt.current.y - currentTilt.current.y;
+    const dgX = targetGlare.current.x - currentGlare.current.x;
+    const dgY = targetGlare.current.y - currentGlare.current.y;
     const dgOp = targetGlare.current.opacity - currentGlare.current.opacity;
 
     // Custom S-curve velocity modulation
@@ -134,23 +90,48 @@ export function Card({
     const settled =
       Math.abs(dx) < 0.05 &&
       Math.abs(dy) < 0.05 &&
-      Math.abs(dgOp) < 0.01 &&
-      targetGlare.current.opacity === 0 &&
-      Math.abs(targetTilt.current.x) < 0.05 &&
-      Math.abs(targetTilt.current.y) < 0.05;
+      Math.abs(dgX) < 0.1 &&
+      Math.abs(dgY) < 0.1 &&
+      Math.abs(dgOp) < 0.01;
 
     if (!settled) {
       rafId.current = requestAnimationFrame(updateFrame);
     } else {
       isAnimating.current = false;
-      el.style.setProperty("--tilt-x", "0deg");
-      el.style.setProperty("--tilt-y", "0deg");
-      el.style.setProperty("--glare-opacity", "0");
-      delete el.dataset.tilting;
+      rafId.current = null;
+      if (
+        Math.abs(targetTilt.current.x) < 0.05 &&
+        Math.abs(targetTilt.current.y) < 0.05 &&
+        targetGlare.current.opacity === 0
+      ) {
+        el.style.setProperty("--tilt-x", "0deg");
+        el.style.setProperty("--tilt-y", "0deg");
+        el.style.setProperty("--glare-opacity", "0");
+        delete el.dataset.tilting;
+      }
     }
   }, []);
 
+  const resetMotion = useCallback(() => {
+    if (rafId.current !== null) cancelAnimationFrame(rafId.current);
+    rafId.current = null;
+    isAnimating.current = false;
+    targetTilt.current = { x: 0, y: 0 };
+    currentTilt.current = { x: 0, y: 0 };
+    targetGlare.current = { x: 50, y: 50, opacity: 0 };
+    currentGlare.current = { x: 50, y: 50, opacity: 0 };
+    const el = ref.current;
+    if (!el) return;
+    el.style.setProperty("--tilt-x", "0deg");
+    el.style.setProperty("--tilt-y", "0deg");
+    el.style.setProperty("--glare-x", "50%");
+    el.style.setProperty("--glare-y", "50%");
+    el.style.setProperty("--glare-opacity", "0");
+    delete el.dataset.tilting;
+  }, []);
+
   const startAnimation = useCallback(() => {
+    if (reducedMotion.current || document.hidden) return;
     if (!isAnimating.current) {
       isAnimating.current = true;
       rafId.current = requestAnimationFrame(updateFrame);
@@ -159,28 +140,32 @@ export function Card({
 
   // Clean teardown invariant: always cancel rAF on unmount
   useEffect(() => {
-    return () => {
-      if (rafId.current !== null) {
-        cancelAnimationFrame(rafId.current);
-      }
+    const media =
+      typeof window.matchMedia === "function"
+        ? window.matchMedia("(prefers-reduced-motion: reduce)")
+        : null;
+    const syncReducedMotion = () => {
+      reducedMotion.current = media?.matches ?? false;
+      if (reducedMotion.current) resetMotion();
     };
-  }, []);
-
-  // Gyroscope tilt listener for physical mobile hardware
-  useEffect(() => {
-    if (disabled || state === "solved") return;
-    return subscribeGyro((gyro) => {
-      if (!isPointerHovered.current) {
-        targetTilt.current = { x: gyro.x, y: gyro.y };
-        startAnimation();
-      }
-    });
-  }, [disabled, state, startAnimation]);
+    syncReducedMotion();
+    const stopWhenHidden = () => {
+      if (!document.hidden) return;
+      resetMotion();
+    };
+    media?.addEventListener("change", syncReducedMotion);
+    document.addEventListener("visibilitychange", stopWhenHidden);
+    return () => {
+      resetMotion();
+      media?.removeEventListener("change", syncReducedMotion);
+      document.removeEventListener("visibilitychange", stopWhenHidden);
+    };
+  }, [resetMotion]);
 
   const handlePointerMove = useCallback(
     (e: React.PointerEvent<HTMLButtonElement>) => {
       if (disabled || state === "solved") return;
-      isPointerHovered.current = true;
+      if (reducedMotion.current) return;
       const rect = ref.current?.getBoundingClientRect();
       if (!rect) return;
 
@@ -200,7 +185,6 @@ export function Card({
   );
 
   const handlePointerLeave = useCallback(() => {
-    isPointerHovered.current = false;
     if (state === "solved") return;
     targetTilt.current = { x: 0, y: 0 };
     targetGlare.current = { x: 50, y: 50, opacity: 0 };
@@ -271,8 +255,7 @@ export function Card({
       {state === "selected" && <FoldedCorner />}
       {state === "selected" && <span className="fw-sheen-glare" aria-hidden="true" />}
       <span
-        className={`hyphens-auto [overflow-wrap:anywhere] [word-break:break-word] max-w-full relative z-10 tracking-tight ${letterpress}`}
-        style={{ wordBreak: "break-word" }}
+        className={`hyphens-auto [overflow-wrap:anywhere] max-w-full relative z-10 tracking-tight ${letterpress}`}
       >
         {marker && (
           <span className="mr-0.5 text-xs opacity-90" aria-hidden="true">

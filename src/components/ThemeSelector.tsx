@@ -2,7 +2,7 @@
 import { THEMES, loadTheme, saveTheme, type DeskTheme } from "../styles/themes";
 import { useGameStore } from "../game/state/appStore";
 import { useLang } from "../i18n/useLanguage";
-import { useSound } from "../audio/useSound";
+import { useFeedback } from "../feedback/useFeedback";
 import { isSupporter } from "../monetization/supporter";
 
 export function ThemeSelector() {
@@ -10,7 +10,7 @@ export function ThemeSelector() {
   const [isOpen, setIsOpen] = useState(false);
   const stats = useGameStore((s) => s.stats);
   const lang = useLang();
-  const playSound = useSound();
+  const feedback = useFeedback();
   const supporter = isSupporter();
   const solvedCount = stats.solvedPuzzleIds.length;
 
@@ -22,7 +22,7 @@ export function ThemeSelector() {
     if (isLocked) return;
     setCurrentTheme(themeId);
     saveTheme(themeId);
-    playSound("select");
+    feedback("select");
   };
 
   const getLabel = (theme: (typeof THEMES)[number]) => {

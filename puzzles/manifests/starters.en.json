@@ -1,0 +1,12 @@
+{
+  "language": "en",
+  "catalogVersion": "catalog-2026-09-v1",
+  "entries": [
+    { "entryId": "starter-en-v1-01", "order": 1, "role": "first-connection", "band": "B0", "puzzleRef": { "language": "en", "puzzleId": "puzzle-0004", "lineageId": "puzzle-0004", "contentVersion": "catalog-2026-09-v1" } },
+    { "entryId": "starter-en-v1-02", "order": 2, "role": "confidence-repeat", "band": "B0", "puzzleRef": { "language": "en", "puzzleId": "puzzle-0005", "lineageId": "puzzle-0005", "contentVersion": "catalog-2026-09-v1" } },
+    { "entryId": "starter-en-v1-03", "order": 3, "role": "wink-introduction", "band": "B2", "puzzleRef": { "language": "en", "puzzleId": "puzzle-0019", "lineageId": "puzzle-0019", "contentVersion": "catalog-2026-09-v1" } },
+    { "entryId": "starter-en-v1-04", "order": 4, "role": "reinforcement", "band": "B1", "puzzleRef": { "language": "en", "puzzleId": "puzzle-0022", "lineageId": "puzzle-0022", "contentVersion": "catalog-2026-09-v1" } },
+    { "entryId": "starter-en-v1-05", "order": 5, "role": "fair-challenge", "band": "B2", "puzzleRef": { "language": "en", "puzzleId": "puzzle-0165", "lineageId": "puzzle-0165", "contentVersion": "catalog-2026-09-v1" } },
+    { "entryId": "starter-en-v1-06", "order": 6, "role": "practice-bridge", "band": "B2", "puzzleRef": { "language": "en", "puzzleId": "puzzle-0020", "lineageId": "puzzle-0020", "contentVersion": "catalog-2026-09-v1" } }
+  ]
+}

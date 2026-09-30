@@ -1,16 +1,146 @@
 import type { Puzzle } from "../game/types/puzzle";
+import type {
+  EditorialRecord,
+  PuzzleBand,
+  PuzzleLanguage,
+  PuzzleRef,
+  StarterEntry,
+} from "./catalog";
 import { fnv1a } from "../utils/hash";
 
 const SEED_STORAGE_KEY = "foldwink:playerSeed";
 
+export interface PracticeCandidate {
+  puzzle: Puzzle;
+  puzzleRef: PuzzleRef;
+  editorial: EditorialRecord;
+}
+
+export interface PracticeSelectionInput {
+  language: PuzzleLanguage;
+  tier: "easy" | "medium" | "hard";
+  recommendedBand?: PuzzleBand;
+  followStarterPath: boolean;
+  starters: readonly StarterEntry[];
+  completedStarterEntryIds: readonly string[];
+  seenLineageIds: readonly string[];
+  recentTopicTags: readonly string[];
+  recentItemValues: readonly string[];
+  selectionSequence: number;
+  playerSeed: string;
+  catalogVersion: string;
+  candidates: readonly PracticeCandidate[];
+}
+
+export type PracticeSelection = {
+  candidate?: PracticeCandidate;
+  starterEntry?: StarterEntry;
+  source: "starter" | "catalog" | "none";
+  diversityRelaxed: boolean;
+  repeatsExhaustedCatalog: boolean;
+  bandUnavailable: boolean;
+};
+
+function itemVocabulary(puzzle: Puzzle): Set<string> {
+  return new Set(
+    puzzle.groups
+      .flatMap((group) => group.items)
+      .map((item) => item.trim().toLocaleLowerCase()),
+  );
+}
+
+function overlapsRecentVocabulary(puzzle: Puzzle, recent: Set<string>): boolean {
+  return [...itemVocabulary(puzzle)].some((item) => recent.has(item));
+}
+
 /**
- * Returns or initializes a persistent, unique player seed for randomized
- * yet deterministic personal progression.
+ * Pure W2 selection policy. All state, seed and catalog data are injected;
+ * this function never reads or writes storage and never changes language or tier.
  */
-export function getOrCreatePlayerSeed(): string | undefined {
-  if (typeof window === "undefined" || typeof localStorage === "undefined") {
-    return undefined;
+export function selectPracticePuzzle(input: PracticeSelectionInput): PracticeSelection {
+  if (input.followStarterPath) {
+    const completed = new Set(input.completedStarterEntryIds);
+    const starterEntry = [...input.starters]
+      .sort((a, b) => a.order - b.order)
+      .find((entry) => !completed.has(entry.entryId));
+    if (starterEntry) {
+      const candidate = input.candidates.find(
+        (item) =>
+          item.puzzleRef.language === input.language &&
+          item.puzzleRef.puzzleId === starterEntry.puzzleRef.puzzleId,
+      );
+      if (candidate) {
+        return {
+          candidate,
+          starterEntry,
+          source: "starter",
+          diversityRelaxed: false,
+          repeatsExhaustedCatalog: false,
+          bandUnavailable: false,
+        };
+      }
+    }
   }
+
+  const sameTier = input.candidates.filter(
+    (item) =>
+      item.puzzleRef.language === input.language &&
+      item.puzzle.difficulty === input.tier &&
+      item.editorial.status === "ready" &&
+      item.editorial.ambiguityRisk === "low" &&
+      item.editorial.mobileFit === "approved",
+  );
+  const bandCandidates = input.recommendedBand
+    ? sameTier.filter((item) => item.editorial.band === input.recommendedBand)
+    : sameTier;
+  if (bandCandidates.length === 0) {
+    return {
+      source: "none",
+      diversityRelaxed: false,
+      repeatsExhaustedCatalog: false,
+      bandUnavailable: sameTier.length > 0 && Boolean(input.recommendedBand),
+    };
+  }
+
+  const seen = new Set(input.seenLineageIds);
+  const unseen = bandCandidates.filter((item) => !seen.has(item.puzzleRef.lineageId));
+  const repeatsExhaustedCatalog = unseen.length === 0;
+  const noveltyPool = unseen.length > 0 ? unseen : bandCandidates;
+
+  const recentTopics = new Set(input.recentTopicTags.slice(-2));
+  const recentItems = new Set(
+    input.recentItemValues.slice(-48).map((item) => item.trim().toLocaleLowerCase()),
+  );
+  const diverse = noveltyPool.filter(
+    (item) =>
+      !item.editorial.topicTags.some((topic) => recentTopics.has(topic)) &&
+      !overlapsRecentVocabulary(item.puzzle, recentItems),
+  );
+  const diversityRelaxed = diverse.length === 0 && noveltyPool.length > 0;
+  const selectable = (diverse.length > 0 ? diverse : noveltyPool)
+    .slice()
+    .sort((a, b) => a.puzzleRef.puzzleId.localeCompare(b.puzzleRef.puzzleId));
+  const seed = [
+    input.catalogVersion,
+    input.language,
+    input.tier,
+    input.recommendedBand ?? "any",
+    input.selectionSequence,
+    input.playerSeed,
+  ].join(":");
+  const candidate = selectable[fnv1a(seed) % selectable.length];
+  return {
+    candidate,
+    source: candidate ? "catalog" : "none",
+    diversityRelaxed,
+    repeatsExhaustedCatalog,
+    bandUnavailable: false,
+  };
+}
+
+/** Storage adapter for the passport/backup surface; never used by the pure selector. */
+export function getOrCreatePlayerSeed(): string | undefined {
+  if (typeof window === "undefined" || typeof localStorage === "undefined") return undefined;
   try {
     let seed = localStorage.getItem(SEED_STORAGE_KEY);
     if (!seed) {
@@ -24,16 +154,15 @@ export function getOrCreatePlayerSeed(): string | undefined {
 }
 
 export function setPlayerSeed(seed: string): void {
-  if (typeof window === "undefined" || typeof localStorage === "undefined") {
-    return;
-  }
+  if (typeof window === "undefined" || typeof localStorage === "undefined") return;
   try {
     localStorage.setItem(SEED_STORAGE_KEY, seed);
   } catch {
-    /* storage unavailable */
+    // Storage failure is surfaced by the caller's backup/import flow.
   }
 }
 
+/** Compatibility selector for un-migrated callers. Pure and free of pool-order starter magic. */
 export interface ProgressionOptions {
   pool: readonly Puzzle[];
   solvedIds: readonly string[];
@@ -42,42 +171,21 @@ export interface ProgressionOptions {
   playerSeed?: string;
 }
 
-/**
- * Picks the next puzzle for a player in Standard mode:
- * 1. Step 0 (cursor = 0): Starter Puzzle 1 (hand-curated onboarding).
- * 2. Step 1 (cursor = 1): Starter Puzzle 2 (introducing twist mechanics).
- * 3. Step 2+ (cursor >= 2): Deterministic Seeded Pick from all remaining UNSOLVED puzzles in the tier.
- *    - Never repeats a solved puzzle until the entire tier pool is exhausted.
- *    - Uses (playerSeed + cursor) for stable personal shuffling across reloads.
- */
 export function getNextProgressionPuzzle(opts: ProgressionOptions): Puzzle | undefined {
-  const { pool, solvedIds, cursor, difficulty, playerSeed = getOrCreatePlayerSeed() } = opts;
-  if (pool.length === 0) return undefined;
-
-  // Onboarding guarantee: first 2 steps always give the hand-crafted starter puzzles
-  if (cursor === 0 && pool[0]) {
-    return pool[0];
-  }
-  if (cursor === 1 && pool[1]) {
-    return pool[1];
-  }
-
-  // Filter for unsolved puzzles in this tier
-  const solvedSet = new Set(solvedIds);
-  const unsolved = pool.filter((p) => !solvedSet.has(p.id));
-
-  // If player cleared the entire pool, wrap around to all candidates
-  const candidates = unsolved.length > 0 ? unsolved : pool;
-
-  if (!playerSeed) {
-    const idx = ((cursor % candidates.length) + candidates.length) % candidates.length;
-    return candidates[idx];
-  }
-
-  // Seeded deterministic index based on playerSeed + difficulty + cursor
-  const seedString = `${playerSeed}:${difficulty}:${cursor}`;
-  const hash = fnv1a(seedString);
-  const selectedIndex = hash % candidates.length;
-
-  return candidates[selectedIndex];
+  const { pool, solvedIds, cursor, difficulty, playerSeed } = opts;
+  const tier = pool
+    .filter((puzzle) => puzzle.difficulty === difficulty)
+    .slice()
+    .sort((a, b) => a.id.localeCompare(b.id));
+  if (tier.length === 0) return undefined;
+  const solved = new Set(solvedIds);
+  const preferred = tier[((cursor % tier.length) + tier.length) % tier.length];
+  if (!playerSeed && preferred && !solved.has(preferred.id)) return preferred;
+  const unseen = tier.filter((puzzle) => !solved.has(puzzle.id));
+  const candidates = (unseen.length > 0 ? unseen : tier)
+    .slice()
+    .sort((a, b) => a.id.localeCompare(b.id));
+  if (!playerSeed) return candidates[0];
+  const seed = playerSeed ? `${playerSeed}:${difficulty}:${cursor}` : `${difficulty}:${cursor}`;
+  return candidates[fnv1a(seed) % candidates.length];
 }

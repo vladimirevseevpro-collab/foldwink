@@ -39,7 +39,7 @@ describe("persistence — clearAllLocalData", () => {
     installLocalStorage();
   });
 
-  it("wipes bestStreak and every foldwink-namespaced key", () => {
+  it("wipes bestStreak and every foldwink-namespaced key", async () => {
     const high = { ...INITIAL_STATS, bestStreak: 9, currentStreak: 3, wins: 7 };
     saveStats(high);
     saveProgress({ cursor: 12, easyCursor: 12, mediumCursor: 4, hardCursor: 1 });
@@ -71,7 +71,10 @@ describe("persistence — clearAllLocalData", () => {
     // Unrelated non-foldwink key must survive.
     localStorage.setItem("unrelated:key", "keep-me");
 
-    clearAllLocalData();
+    // IndexedDB is intentionally unavailable in this fixture. The reset
+    // contract reports that incomplete durable clear so the footer must not
+    // reload and pretend the profile was fully removed.
+    expect(await clearAllLocalData()).toBe(false);
 
     expect(loadStats().bestStreak).toBe(0);
     expect(loadStats().wins).toBe(0);

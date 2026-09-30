@@ -56,24 +56,6 @@ export function revealStage(rawHint: string, stage: number): string {
   return applyVisibleCount(hint, visibleCount);
 }
 
-/**
- * Hard reveal formula (0.4.3): roughly half-speed progressive reveal.
- * The Master Challenge tier keeps the Foldwink Tabs row with less
- * information. The first solved group does not add letters beyond the
- * starting hint; later solves reveal letters at half the medium rate.
- *
- *   stage 0 -> 1 letter
- *   stage 1 -> 1 letter
- *   stage 2 -> 2 letters
- *   stage 3 -> 2 letters
- */
-export function revealStageHard(rawHint: string, stage: number): string {
-  const hint = rawHint.trim();
-  if (!hint) return "";
-  const visibleCount = Math.min(hint.length, Math.max(1, Math.floor(stage / 2) + 1));
-  return applyVisibleCount(hint, visibleCount);
-}
-
 export function hintFor(group: PuzzleGroup): string {
   return (group.revealHint && group.revealHint.trim()) || group.label;
 }
@@ -86,11 +68,8 @@ export interface FoldwinkTab {
 }
 
 /**
- * Builds the tab row for a medium or hard puzzle. Returns an empty list for
- * easy puzzles — they ship with no Foldwink Tabs by design.
- *
- * Medium uses `revealStage` (one letter per solve). Hard uses
- * `revealStageHard` (half-speed reveal). Wink is medium-only.
+ * Builds the tab row for a medium puzzle. Easy and hard return an empty
+ * list: the accepted product baseline reserves Tabs + Wink for medium only.
  *
  * `winkedGroupId` is the id of the tab the player has chosen to wink this
  * game (or null / undefined if none). A winked unsolved tab shows its full
@@ -101,10 +80,9 @@ export function buildFoldwinkTabs(
   solvedGroupIds: readonly string[],
   winkedGroupId: string | null = null,
 ): FoldwinkTab[] {
-  if (puzzle.difficulty === "easy") return [];
+  if (puzzle.difficulty !== "medium") return [];
   const solvedSet = new Set(solvedGroupIds);
   const stage = solvedSet.size;
-  const formula = puzzle.difficulty === "hard" ? revealStageHard : revealStage;
   return puzzle.groups.map((g) => {
     const solved = solvedSet.has(g.id);
     if (solved) {
@@ -115,7 +93,7 @@ export function buildFoldwinkTabs(
     }
     return {
       groupId: g.id,
-      display: formula(hintFor(g), stage),
+      display: revealStage(hintFor(g), stage),
       solved: false,
       winked: false,
     };

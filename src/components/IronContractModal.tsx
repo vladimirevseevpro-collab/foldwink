@@ -1,106 +1,120 @@
-﻿import { useState } from "react";
-import { loadArchivistProfile, startIronContract } from "../progression/archivistProfile";
+import { useRef } from "react";
 import { useGameStore } from "../game/state/appStore";
 import { useLang } from "../i18n/useLanguage";
-import { useSound } from "../audio/useSound";
+import { useFeedback } from "../feedback/useFeedback";
+import { DialogShell } from "./DialogShell";
 
 interface IronContractModalProps {
   onClose: () => void;
 }
 
+/**
+ * Compatibility name for the existing surface. The wager-based contract is
+ * retired: this now launches an attempt-bound, no-penalty mastery challenge.
+ */
 export function IronContractModal({ onClose }: IronContractModalProps) {
-  const [profile, setProfile] = useState(loadArchivistProfile);
-  const startMedium = useGameStore((s) => s.startMedium);
+  const startMastery = useGameStore((s) => s.startMastery);
   const lang = useLang();
-  const playSound = useSound();
-  const wager = 2;
-  const canAfford = profile.wax >= wager;
+  const feedback = useFeedback();
+  const startButtonRef = useRef<HTMLButtonElement>(null);
 
-  const handleSignContract = () => {
-    if (!canAfford) return;
-    const updated = startIronContract(profile, wager);
-    if (!updated) return;
-    setProfile(updated);
-    playSound("submit");
+  const handleStart = () => {
+    feedback("submit");
     onClose();
-    // Launch game into high-stakes medium puzzle
-    startMedium();
+    startMastery();
   };
 
+  const copy =
+    lang === "ru"
+      ? {
+          eyebrow: "Испытание гильдии",
+          title: "Проверка мастерства",
+          badge: "Одна ошибка разрешена",
+          condition:
+            "Решите задачу Medium. Первая ошибка допускается; вторая неверная четвёрка завершит попытку. Wink остаётся бесплатным.",
+          reward:
+            "Без ставки и штрафа. Победа отмечает мастерство; базовый XP выдаётся только один раз за новую задачу.",
+          start: "Начать испытание",
+          cancel: "Не сейчас",
+        }
+      : lang === "de"
+        ? {
+            eyebrow: "Prüfung der Gilde",
+            title: "Meisterprüfung",
+            badge: "Ein Fehler erlaubt",
+            condition:
+              "Löse ein Medium-Rätsel. Der erste Fehler ist erlaubt; der zweite beendet den Versuch. Wink bleibt kostenlos.",
+            reward:
+              "Kein Einsatz und keine Strafe. Der Sieg markiert Meisterschaft; Basis-XP gibt es nur einmal pro neuem Rätsel.",
+            start: "Prüfung starten",
+            cancel: "Nicht jetzt",
+          }
+        : {
+            eyebrow: "Guild challenge",
+            title: "Mastery Challenge",
+            badge: "One mistake allowed",
+            condition:
+              "Solve a Medium puzzle. The first mistake is allowed; the second ends the attempt. Wink remains free.",
+            reward:
+              "No stake and no penalty. A win records mastery; base XP is awarded only once for a new puzzle.",
+            start: "Start challenge",
+            cancel: "Not now",
+          };
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
-      <div className="relative w-full max-w-sm rounded-2xl border-2 border-red-900/60 bg-[#141010] p-6 shadow-2xl space-y-4 text-center">
-        {/* Black Seal Crest */}
-        <div className="w-14 h-14 mx-auto rounded-full bg-red-950 border-2 border-red-600/50 flex items-center justify-center text-2xl shadow-inner">
-          ⚔️
-        </div>
-
-        <div>
-          <div className="text-[10px] uppercase font-bold tracking-widest text-red-400">
-            {lang === "ru" ? "Тайная Комиссия Гильдии" : "Guild Secret Commission"}
-          </div>
-          <h3 className="text-base font-extrabold text-white">
-            {lang === "ru" ? "Железный Контракт" : "The Iron Contract"}
-          </h3>
-        </div>
-
-        {/* Contract Conditions */}
-        <div className="rounded-xl border border-red-950 bg-black/40 p-3.5 text-left text-xs space-y-2 text-red-100/90">
-          <div className="flex items-center justify-between font-bold text-red-300">
-            <span>{lang === "ru" ? "Условие:" : "Condition:"}</span>
-            <span className="uppercase text-[10px] tracking-wider bg-red-900/40 px-2 py-0.5 rounded text-red-200">
-              Sudden Death
-            </span>
-          </div>
-          <p className="text-[11px] text-muted leading-relaxed">
-            {lang === "ru"
-              ? "Расшифруйте депешу уровня Medium. Допустима только 1 ошибка. В случае поражения ставка сгорает."
-              : "Solve a Medium dispatch with max 1 mistake. If failed, the staked wax is lost."}
-          </p>
-
-          <div className="pt-2 border-t border-red-950/60 flex items-center justify-between text-xs">
-            <span className="text-muted">{lang === "ru" ? "Ставка:" : "Stake:"}</span>
-            <span className="font-bold text-amber-400">
-              🕯️ {wager} {lang === "ru" ? "Сургуча" : "Wax"}
-            </span>
-          </div>
-
-          <div className="flex items-center justify-between text-xs font-bold text-yellow-300">
-            <span>{lang === "ru" ? "Награда за победу:" : "Win Reward:"}</span>
-            <span>👑 1 Prestige + 🕯️ {wager * 2} Wax + Gold Stamp</span>
-          </div>
-        </div>
-
-        {/* Buttons */}
-        <div className="space-y-2 pt-1">
-          <button
-            type="button"
-            disabled={!canAfford}
-            onClick={handleSignContract}
-            className={`w-full py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider transition-all shadow-md ${
-              canAfford
-                ? "bg-red-700 hover:bg-red-600 text-white cursor-pointer"
-                : "bg-red-950/40 text-red-400/40 cursor-not-allowed border border-red-950"
-            }`}
-          >
-            {canAfford
-              ? lang === "ru"
-                ? "Скрепить печатью и начать"
-                : "Seal & Accept Contract"
-              : lang === "ru"
-                ? `Недостаточно сургуча (нужно ${wager})`
-                : `Need ${wager} Wax to Enter`}
-          </button>
-
-          <button
-            type="button"
-            onClick={onClose}
-            className="w-full py-1.5 text-xs text-muted hover:text-text transition-colors"
-          >
-            {lang === "ru" ? "Отклонить" : "Decline"}
-          </button>
-        </div>
+    <DialogShell
+      onClose={onClose}
+      titleId="mastery-dialog-title"
+      descriptionId="mastery-dialog-description"
+      initialFocusRef={startButtonRef}
+      panelClassName="relative max-w-sm border-2 border-red-900/60 bg-[#141010] p-6 space-y-4 text-center"
+      testId="mastery-dialog"
+    >
+      <div className="w-14 h-14 mx-auto rounded-full bg-red-950 border-2 border-red-600/50 flex items-center justify-center text-2xl shadow-inner">
+        ⚔️
       </div>
-    </div>
+
+      <div>
+        <div className="text-[10px] uppercase font-bold tracking-widest text-red-400">
+          {copy.eyebrow}
+        </div>
+        <h3 id="mastery-dialog-title" className="text-base font-extrabold text-white">
+          {copy.title}
+        </h3>
+      </div>
+
+      <div className="rounded-xl border border-red-950 bg-black/40 p-3.5 text-left text-xs space-y-3 text-red-100/90">
+        <div className="flex items-center justify-between font-bold text-red-300">
+          <span>{lang === "ru" ? "Условие:" : lang === "de" ? "Regel:" : "Rule:"}</span>
+          <span className="uppercase text-[10px] tracking-wider bg-red-900/40 px-2 py-0.5 rounded text-red-200">
+            {copy.badge}
+          </span>
+        </div>
+        <p id="mastery-dialog-description" className="text-[11px] text-muted leading-relaxed">
+          {copy.condition}
+        </p>
+        <p className="pt-2 border-t border-red-950/60 text-[11px] text-muted leading-relaxed">
+          {copy.reward}
+        </p>
+      </div>
+
+      <div className="space-y-2 pt-1">
+        <button
+          ref={startButtonRef}
+          type="button"
+          onClick={handleStart}
+          className="w-full py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider transition-all shadow-md bg-red-700 hover:bg-red-600 text-white cursor-pointer"
+        >
+          {copy.start}
+        </button>
+        <button
+          type="button"
+          onClick={onClose}
+          className="w-full py-1.5 text-xs text-muted hover:text-text transition-colors"
+        >
+          {copy.cancel}
+        </button>
+      </div>
+    </DialogShell>
   );
 }

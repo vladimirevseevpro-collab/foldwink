@@ -1,7 +1,6 @@
 import { describe, it, expect } from "vitest";
 import {
   revealStage,
-  revealStageHard,
   hintFor,
   buildFoldwinkTabs,
   canWinkGroup,
@@ -28,18 +27,6 @@ describe("revealStage", () => {
   });
   it("handles empty hint gracefully", () => {
     expect(revealStage("", 3)).toBe("");
-  });
-});
-
-describe("revealStageHard", () => {
-  it("holds the one-letter preview through the first solve", () => {
-    expect(revealStageHard("FLY", 0)).toBe(`F${HIDDEN_CHAR}${HIDDEN_CHAR}`);
-    expect(revealStageHard("FLY", 1)).toBe(`F${HIDDEN_CHAR}${HIDDEN_CHAR}`);
-  });
-
-  it("adds letters only after later hard solves", () => {
-    expect(revealStageHard("FLY", 2)).toBe(`FL${HIDDEN_CHAR}`);
-    expect(revealStageHard("FLY", 3)).toBe(`FL${HIDDEN_CHAR}`);
   });
 });
 
@@ -77,16 +64,8 @@ describe("buildFoldwinkTabs", () => {
   it("returns nothing on easy puzzles", () => {
     expect(buildFoldwinkTabs(puzzle("easy"), [])).toEqual([]);
   });
-  it("uses the slower hard formula while keeping the Tabs row", () => {
-    const tabs = buildFoldwinkTabs(puzzle("hard"), ["g1"]);
-    expect(tabs).toHaveLength(4);
-    expect(tabs.find((tab) => tab.groupId === "g2")?.display).toBe(
-      `F${HIDDEN_CHAR}${HIDDEN_CHAR}`,
-    );
-    expect(
-      buildFoldwinkTabs(puzzle("hard"), ["g1", "g2"]).find((tab) => tab.groupId === "g3")
-        ?.display,
-    ).toBe(`BI${HIDDEN_CHAR}`);
+  it("returns nothing on hard puzzles", () => {
+    expect(buildFoldwinkTabs(puzzle("hard"), ["g1"])).toEqual([]);
   });
 
   it("shows 1-letter previews at start on medium puzzles", () => {

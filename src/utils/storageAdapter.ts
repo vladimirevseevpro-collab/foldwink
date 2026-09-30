@@ -33,6 +33,17 @@ declare global {
 
 const memoryCache = new Map<string, unknown>();
 
+export type StorageAdapterFailure = "unavailable" | "denied" | "quota" | "unknown";
+export type StorageAdapterResult = { ok: true } | { ok: false; reason: StorageAdapterFailure };
+
+function failureReason(error: unknown): StorageAdapterFailure {
+  const name =
+    typeof DOMException !== "undefined" && error instanceof DOMException ? error.name : "";
+  if (name === "QuotaExceededError") return "quota";
+  if (name === "SecurityError" || name === "NotAllowedError") return "denied";
+  return "unknown";
+}
+
 function getChromeStorage(): ChromeStorageArea | null {
   try {
     const root = typeof window !== "undefined" ? window : (globalThis as unknown as Window);
@@ -150,6 +161,39 @@ export function safeWrite(key: string, value: unknown): void {
 }
 
 /**
+ * Explicit write result for recovery surfaces.  Existing synchronous callers
+ * remain best-effort for compatibility; atomic game terminal writes never use
+ * this adapter and remain in IndexedDB transactions.
+ */
+export async function storageSetChecked(
+  key: string,
+  value: unknown,
+): Promise<StorageAdapterResult> {
+  memoryCache.set(key, value);
+  let localResult: StorageAdapterResult = { ok: false, reason: "unavailable" };
+  const storage = getLocalStorage();
+  if (storage) {
+    try {
+      storage.setItem(key, JSON.stringify(value));
+      localResult = { ok: true };
+    } catch (error) {
+      localResult = { ok: false, reason: failureReason(error) };
+    }
+  }
+
+  const chrome = getChromeStorage();
+  if (chrome) {
+    try {
+      await chromeSet(chrome, { [key]: value });
+      return { ok: true };
+    } catch (error) {
+      return localResult.ok ? localResult : { ok: false, reason: failureReason(error) };
+    }
+  }
+  return localResult;
+}
+
+/**
  * Synchronous remove. Deletes from cache, localStorage, and chrome.storage.local.
  */
 export function safeRemove(key: string): void {
@@ -223,6 +267,94 @@ export async function storageSet(key: string, value: unknown): Promise<void> {
       // Ignore
     }
   }
+}
+
+function chromeSet(storage: ChromeStorageArea, items: Record<string, unknown>): Promise<void> {
+  return new Promise<void>((resolve, reject) => {
+    try {
+      const result = storage.set(items, () => resolve());
+      if (result && typeof (result as Promise<void>).then === "function") {
+        (result as Promise<void>).then(resolve, reject);
+      }
+    } catch (error) {
+      reject(error);
+    }
+  });
+}
+
+function chromeGetAll(storage: ChromeStorageArea): Promise<Record<string, unknown>> {
+  return new Promise<Record<string, unknown>>((resolve, reject) => {
+    try {
+      const result = storage.get(null, (items) => resolve(items ?? {}));
+      if (result && typeof (result as Promise<Record<string, unknown>>).then === "function") {
+        (result as Promise<Record<string, unknown>>).then(resolve, reject);
+      }
+    } catch (error) {
+      reject(error);
+    }
+  });
+}
+
+function chromeRemove(storage: ChromeStorageArea, keys: string[]): Promise<void> {
+  return new Promise<void>((resolve, reject) => {
+    try {
+      const result = storage.remove(keys, () => resolve());
+      if (result && typeof (result as Promise<void>).then === "function") {
+        (result as Promise<void>).then(resolve, reject);
+      }
+    } catch (error) {
+      reject(error);
+    }
+  });
+}
+
+/** Removes Foldwink data from every adapter layer and awaits extension I/O. */
+export async function clearFoldwinkNamespace(
+  prefix = "foldwink:",
+): Promise<StorageAdapterResult> {
+  let failed: StorageAdapterResult | null = null;
+  for (const key of [...memoryCache.keys()]) {
+    if (key.startsWith(prefix)) memoryCache.delete(key);
+  }
+
+  const local = getLocalStorage();
+  if (local) {
+    try {
+      const keys: string[] = [];
+      for (let index = 0; index < local.length; index += 1) {
+        const key = local.key(index);
+        if (key?.startsWith(prefix)) keys.push(key);
+      }
+      for (const key of keys) local.removeItem(key);
+    } catch (error) {
+      failed = { ok: false, reason: failureReason(error) };
+    }
+  }
+
+  const chrome = getChromeStorage();
+  if (chrome) {
+    try {
+      const all = await chromeGetAll(chrome);
+      const keys = Object.keys(all).filter((key) => key.startsWith(prefix));
+      if (keys.length > 0) await chromeRemove(chrome, keys);
+    } catch (error) {
+      failed = { ok: false, reason: failureReason(error) };
+    }
+  }
+
+  // Caches are user data as well: leaving a Foldwink-named cache behind
+  // after an explicit full reset can resurrect old shell/content on reload.
+  if (typeof caches !== "undefined") {
+    try {
+      const names = await caches.keys();
+      await Promise.all(
+        names.filter((name) => name.startsWith("foldwink-")).map((name) => caches.delete(name)),
+      );
+    } catch (error) {
+      failed = { ok: false, reason: failureReason(error) };
+    }
+  }
+  return failed ?? { ok: true };
 }
 
 /**

@@ -1,9 +1,13 @@
 import type { ActiveGame, GameResult } from "../types/game";
+import { nonNegativeFinite, rawElapsedMs } from "../timing/foreground";
 
 export interface ResultSummary {
   result: GameResult;
   mistakesUsed: number;
+  /** Primary duration: persisted monotonic foreground thinking time. */
   durationMs: number;
+  /** Diagnostic wall-clock duration; never used for scoring. */
+  rawElapsedMs?: number;
   solvedGroupIds: string[];
 }
 
@@ -11,10 +15,14 @@ export function calculateResultSummary(game: ActiveGame, endedAt: number): Resul
   if (!game.result) {
     throw new Error("calculateResultSummary called before game ended");
   }
+  const rawElapsed = rawElapsedMs(game.startedAt, endedAt);
+  const activeElapsed =
+    game.elapsedActiveMs === undefined ? rawElapsed : nonNegativeFinite(game.elapsedActiveMs);
   return {
     result: game.result,
     mistakesUsed: game.mistakesUsed,
-    durationMs: Math.max(0, endedAt - game.startedAt),
+    durationMs: activeElapsed,
+    rawElapsedMs: rawElapsed,
     solvedGroupIds: game.solvedGroupIds.slice(),
   };
 }

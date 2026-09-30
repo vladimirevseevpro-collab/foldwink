@@ -746,18 +746,17 @@ export function drawShareCard(canvas: HTMLCanvasElement, opts: ShareCardOptions)
   }
 }
 
-export function renderShareCard(opts: ShareCardOptions): Promise<Blob | null> {
-  return new Promise((resolve) => {
-    if (!isShareCardSupported()) {
-      resolve(null);
-      return;
-    }
-    try {
-      const canvas = document.createElement("canvas");
-      drawShareCard(canvas, opts);
-      canvas.toBlob((blob) => resolve(blob), "image/png");
-    } catch {
-      resolve(null);
-    }
-  });
+export async function renderShareCard(opts: ShareCardOptions): Promise<Blob | null> {
+  if (!isShareCardSupported()) return null;
+  try {
+    // Canvas captures the font available at draw time. Waiting here makes the
+    // preview and exported blob deterministic; the CSS-style stack still has
+    // system fallbacks when the custom face fails to load.
+    if (document.fonts?.ready) await document.fonts.ready;
+    const canvas = document.createElement("canvas");
+    drawShareCard(canvas, opts);
+    return await new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
+  } catch {
+    return null;
+  }
 }

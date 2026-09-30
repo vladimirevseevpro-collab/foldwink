@@ -100,10 +100,7 @@ await runCases("itch-embed-smoke", [
         throw new Error(`navigator.share override failed, got: ${shareExposed}`);
       }
       // App must still render — no error boundary, no white screen.
-      const stillHasMenu = await page
-        .locator("button:has-text('Easy puzzle')")
-        .first()
-        .isVisible();
+      const stillHasMenu = await page.getByTestId("menu-today-card").isVisible();
       if (!stillHasMenu) throw new Error("menu disappeared with navigator.share stripped");
     },
   },

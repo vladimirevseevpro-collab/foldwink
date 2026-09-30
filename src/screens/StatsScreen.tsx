@@ -12,6 +12,12 @@ import { useEffect } from "react";
 import { useLang } from "../i18n/useLanguage";
 import { trackEvent } from "../analytics/eventLog";
 import { isSupporter } from "../monetization/supporter";
+import {
+  earnedCollectionMilestones,
+  nextCollectionMilestone,
+  uniqueSolvedCount,
+} from "../progression/milestones";
+import { StampArtwork } from "../components/StampArtwork";
 
 export function StatsScreen() {
   const stats = useGameStore((s) => s.stats);
@@ -22,7 +28,9 @@ export function StatsScreen() {
   const dailyHistory = mergeDailyHistory(loadDailyHistory(), todayDailyRecord);
   const winRate =
     stats.gamesPlayed > 0 ? Math.round((stats.wins / stats.gamesPlayed) * 100) : 0;
-  const solvedCount = stats.solvedPuzzleIds.length;
+  const solvedCount = uniqueSolvedCount(stats);
+  const earnedMilestones = earnedCollectionMilestones(stats);
+  const nextMilestone = nextCollectionMilestone(stats);
   const mediumWins = stats.mediumWins ?? 0;
   const mediumLosses = stats.mediumLosses ?? 0;
   const mediumPlayed = mediumWins + mediumLosses;
@@ -91,6 +99,63 @@ export function StatsScreen() {
           />
         </div>
       )}
+
+      <section
+        className="mt-4 rounded-xl border border-line bg-surface px-4 py-3"
+        aria-labelledby="collection-progress-title"
+        data-testid="stats-collection-progress"
+      >
+        <div className="flex items-center gap-3">
+          <StampArtwork
+            stampId={nextMilestone?.id ?? "milestone_century_archive"}
+            color={nextMilestone?.color ?? "#d5b65a"}
+            locked={Boolean(nextMilestone)}
+            size={42}
+          />
+          <div className="min-w-0 flex-1">
+            <h2
+              id="collection-progress-title"
+              className="text-xs font-bold uppercase tracking-[0.12em] text-accent"
+            >
+              {lang === "ru"
+                ? "Личная коллекция"
+                : lang === "de"
+                  ? "Eigene Sammlung"
+                  : "Personal collection"}
+            </h2>
+            <p className="mt-0.5 text-sm font-semibold text-text">
+              {nextMilestone
+                ? nextMilestone.label[lang]
+                : lang === "ru"
+                  ? "Все стартовые страницы собраны"
+                  : lang === "de"
+                    ? "Alle Startseiten gesammelt"
+                    : "All starter pages collected"}
+            </p>
+            <p className="mt-0.5 text-[11px] text-muted">
+              {nextMilestone
+                ? `${solvedCount}/${nextMilestone.threshold} · ${nextMilestone.detail[lang]}`
+                : `${earnedMilestones.length}/6`}
+            </p>
+          </div>
+        </div>
+        {nextMilestone && (
+          <div
+            className="mt-3 h-1.5 overflow-hidden rounded-full bg-surfaceHi"
+            role="progressbar"
+            aria-valuemin={0}
+            aria-valuemax={nextMilestone.threshold}
+            aria-valuenow={solvedCount}
+          >
+            <div
+              className="h-full rounded-full bg-accent"
+              style={{
+                width: `${Math.min(100, (solvedCount / nextMilestone.threshold) * 100)}%`,
+              }}
+            />
+          </div>
+        )}
+      </section>
 
       <div className="mt-4">
         <div className="text-[10px] uppercase text-muted text-center mb-1.5">

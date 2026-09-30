@@ -1,5 +1,6 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 import {
+  getHostPresentation,
   isIosSafariInBrowser,
   isNativePlatform,
   shouldOfferEmbeddedFullSize,
@@ -34,6 +35,29 @@ describe("platform detection", () => {
       Capacitor: { isNativePlatform: () => true },
     });
     expect(isNativePlatform()).toBe(true);
+  });
+
+  it("classifies host presentation without using viewport dimensions", () => {
+    vi.stubGlobal("window", {
+      self: {},
+      top: {},
+      matchMedia: () => ({ matches: false }),
+    });
+    expect(getHostPresentation()).toBe("embed");
+
+    const sameWindow = { matchMedia: () => ({ matches: true }) };
+    Object.assign(sameWindow, { self: sameWindow, top: sameWindow });
+    vi.stubGlobal("window", sameWindow);
+    vi.stubGlobal("navigator", { standalone: false });
+    expect(getHostPresentation()).toBe("standalone");
+
+    const extensionWindow = {
+      chrome: { runtime: { id: "foldwink-extension" } },
+      matchMedia: () => ({ matches: false }),
+    };
+    Object.assign(extensionWindow, { self: extensionWindow, top: extensionWindow });
+    vi.stubGlobal("window", extensionWindow);
+    expect(getHostPresentation()).toBe("extension");
   });
 
   it("detects iOS Safari in browser vs standalone / native / other browsers", () => {

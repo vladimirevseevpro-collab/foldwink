@@ -48,10 +48,22 @@ describe("applyCorrectGroup", () => {
 });
 
 describe("applyIncorrectGuess", () => {
-  it("increments mistakes and clears selection", () => {
-    const g = applyIncorrectGuess(base());
+  it("increments mistakes and keeps the attempted cards selected for adjustment", () => {
+    const attempted = { ...base(), selectionItemIds: ["p:a", "p:b", "p:c", "p:d"] };
+    const g = applyIncorrectGuess(attempted);
     expect(g.mistakesUsed).toBe(1);
-    expect(g.selection).toEqual([]);
+    expect(g.selection).toEqual(attempted.selection);
+    expect(g.selectionItemIds).toEqual(attempted.selectionItemIds);
+  });
+  it("records a canonical signature and refuses to consume it twice", () => {
+    const first = applyIncorrectGuess(base(), '["a","e","i","m"]');
+    const reordered = { ...first, selection: ["m", "i", "e", "a"] };
+    const second = applyIncorrectGuess(reordered, '["a","e","i","m"]');
+    expect(first.mistakesUsed).toBe(1);
+    expect(first.incorrectGuessSignatures).toEqual(['["a","e","i","m"]']);
+    expect(second).toBe(reordered);
+    expect(second.mistakesUsed).toBe(1);
+    expect(second.selection).toEqual(["m", "i", "e", "a"]);
   });
 });
 
@@ -75,5 +87,20 @@ describe("isLoss", () => {
     expect(isLoss({ ...base(), mistakesUsed: 3 })).toBe(false);
     expect(isLoss({ ...base(), mistakesUsed: 4 })).toBe(true);
     expect(isLoss({ ...base(), mistakesUsed: 5 })).toBe(true);
+  });
+  it("uses an attempt-bound terminal threshold", () => {
+    const mastery = {
+      ...base(),
+      rules: {
+        version: 1 as const,
+        maxIncorrectGuesses: 2,
+        tabsEnabled: true,
+        maxWinks: 1 as const,
+        timerPresentation: "optional" as const,
+      },
+    };
+    expect(isLoss({ ...mastery, mistakesUsed: 1 })).toBe(false);
+    expect(isLoss({ ...mastery, mistakesUsed: 2 })).toBe(true);
+    expect(remainingMistakes({ ...mastery, mistakesUsed: 1 })).toBe(1);
   });
 });

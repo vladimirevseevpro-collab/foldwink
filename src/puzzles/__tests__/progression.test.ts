@@ -1,112 +1,157 @@
-﻿import { describe, expect, it } from "vitest";
-import { getNextProgressionPuzzle } from "../progression";
+import { describe, expect, it } from "vitest";
 import type { Puzzle } from "../../game/types/puzzle";
+import type { EditorialRecord, PuzzleBand, StarterEntry } from "../catalog";
+import { selectPracticePuzzle, type PracticeCandidate } from "../progression";
 
-const MOCK_POOL: Puzzle[] = [
+function puzzle(id: string, difficulty: Puzzle["difficulty"] = "easy", prefix = id): Puzzle {
+  return {
+    id,
+    title: id,
+    difficulty,
+    groups: [0, 1, 2, 3].map((group) => ({
+      id: `g${group}`,
+      label: `G${group}`,
+      items: [0, 1, 2, 3].map((item) => `${prefix}-${group}-${item}`),
+    })) as Puzzle["groups"],
+  };
+}
+
+function candidate(
+  id: string,
+  band: PuzzleBand,
+  topic: string,
+  options: Partial<EditorialRecord> & { difficulty?: Puzzle["difficulty"] } = {},
+): PracticeCandidate {
+  const puzzleRef = {
+    language: "en" as const,
+    puzzleId: id,
+    lineageId: id,
+    contentVersion: "catalog-v1",
+  };
+  return {
+    puzzle: puzzle(id, options.difficulty ?? "easy"),
+    puzzleRef,
+    editorial: {
+      puzzleRef,
+      publicTier: options.difficulty ?? "easy",
+      band,
+      vocabularyFamiliarity: "common",
+      relationTypes: ["classification"],
+      topicTags: [topic],
+      anchorGroupId: "g0",
+      ambiguityRisk: "low",
+      tabReview: "not-applicable",
+      mobileFit: "approved",
+      authorReview: { reviewerId: "author", date: "2026-09-14" },
+      independentReview: { reviewerId: "validator", date: "2026-09-14" },
+      playtest: null,
+      status: "ready",
+      ...options,
+    },
+  };
+}
+
+const starters: StarterEntry[] = [
   {
-    id: "puzzle-0001",
-    title: "Starter 1",
-    difficulty: "easy",
-    groups: [
-      { id: "g1", label: "G1", items: ["A", "B", "C", "D"] },
-      { id: "g2", label: "G2", items: ["E", "F", "G", "H"] },
-      { id: "g3", label: "G3", items: ["I", "J", "K", "L"] },
-      { id: "g4", label: "G4", items: ["M", "N", "O", "P"] },
-    ],
-  },
-  {
-    id: "puzzle-0002",
-    title: "Starter 2",
-    difficulty: "easy",
-    groups: [
-      { id: "g1", label: "G1", items: ["A", "B", "C", "D"] },
-      { id: "g2", label: "G2", items: ["E", "F", "G", "H"] },
-      { id: "g3", label: "G3", items: ["I", "J", "K", "L"] },
-      { id: "g4", label: "G4", items: ["M", "N", "O", "P"] },
-    ],
-  },
-  {
-    id: "puzzle-0003",
-    title: "Puzzle 3",
-    difficulty: "easy",
-    groups: [
-      { id: "g1", label: "G1", items: ["A", "B", "C", "D"] },
-      { id: "g2", label: "G2", items: ["E", "F", "G", "H"] },
-      { id: "g3", label: "G3", items: ["I", "J", "K", "L"] },
-      { id: "g4", label: "G4", items: ["M", "N", "O", "P"] },
-    ],
-  },
-  {
-    id: "puzzle-0004",
-    title: "Puzzle 4",
-    difficulty: "easy",
-    groups: [
-      { id: "g1", label: "G1", items: ["A", "B", "C", "D"] },
-      { id: "g2", label: "G2", items: ["E", "F", "G", "H"] },
-      { id: "g3", label: "G3", items: ["I", "J", "K", "L"] },
-      { id: "g4", label: "G4", items: ["M", "N", "O", "P"] },
-    ],
-  },
-  {
-    id: "puzzle-0005",
-    title: "Puzzle 5",
-    difficulty: "easy",
-    groups: [
-      { id: "g1", label: "G1", items: ["A", "B", "C", "D"] },
-      { id: "g2", label: "G2", items: ["E", "F", "G", "H"] },
-      { id: "g3", label: "G3", items: ["I", "J", "K", "L"] },
-      { id: "g4", label: "G4", items: ["M", "N", "O", "P"] },
-    ],
+    entryId: "starter-1",
+    order: 1,
+    role: "first-connection",
+    band: "B0",
+    puzzleRef: {
+      language: "en",
+      puzzleId: "starter",
+      lineageId: "starter",
+      contentVersion: "catalog-v1",
+    },
   },
 ];
 
-describe("getNextProgressionPuzzle", () => {
-  it("guarantees hand-crafted starter puzzles on steps 0 and 1", () => {
-    const p0 = getNextProgressionPuzzle({
-      pool: MOCK_POOL,
-      solvedIds: [],
-      cursor: 0,
-      difficulty: "easy",
-      playerSeed: "user_seed_abc",
-    });
-    expect(p0?.id).toBe("puzzle-0001");
+const base = {
+  language: "en" as const,
+  tier: "easy" as const,
+  followStarterPath: false,
+  starters,
+  completedStarterEntryIds: [] as string[],
+  seenLineageIds: [] as string[],
+  recentTopicTags: [] as string[],
+  recentItemValues: [] as string[],
+  selectionSequence: 0,
+  playerSeed: "player-1",
+  catalogVersion: "catalog-v1",
+};
 
-    const p1 = getNextProgressionPuzzle({
-      pool: MOCK_POOL,
-      solvedIds: ["puzzle-0001"],
-      cursor: 1,
-      difficulty: "easy",
-      playerSeed: "user_seed_abc",
+describe("selectPracticePuzzle", () => {
+  it("uses the explicit starter manifest instead of pool order", () => {
+    const random = candidate("aaa", "B0", "other");
+    const starter = candidate("starter", "B0", "intro");
+    const result = selectPracticePuzzle({
+      ...base,
+      followStarterPath: true,
+      candidates: [random, starter],
     });
-    expect(p1?.id).toBe("puzzle-0002");
+    expect(result.source).toBe("starter");
+    expect(result.candidate?.puzzle.id).toBe("starter");
   });
 
-  it("selects only unsolved puzzles for steps 2+", () => {
-    const p2 = getNextProgressionPuzzle({
-      pool: MOCK_POOL,
-      solvedIds: ["puzzle-0001", "puzzle-0002", "puzzle-0003"],
-      cursor: 2,
-      difficulty: "easy",
-      playerSeed: "user_seed_xyz",
+  it("excludes seen lineage even when it has not been solved", () => {
+    const result = selectPracticePuzzle({
+      ...base,
+      seenLineageIds: ["seen"],
+      candidates: [candidate("seen", "B1", "a"), candidate("new", "B1", "b")],
     });
-    expect(["puzzle-0004", "puzzle-0005"]).toContain(p2?.id);
+    expect(result.candidate?.puzzle.id).toBe("new");
+    expect(result.repeatsExhaustedCatalog).toBe(false);
   });
 
-  it("produces deterministic output for the same player seed and cursor", () => {
-    const pick1 = getNextProgressionPuzzle({
-      pool: MOCK_POOL,
-      solvedIds: [],
-      cursor: 3,
-      difficulty: "easy",
-      playerSeed: "deterministic_seed_123",
+  it("never escapes the requested tier or language", () => {
+    const result = selectPracticePuzzle({
+      ...base,
+      recommendedBand: "B2",
+      candidates: [
+        candidate("medium", "B2", "a", { difficulty: "medium", publicTier: "medium" }),
+        {
+          ...candidate("ru-easy", "B2", "b"),
+          puzzleRef: {
+            language: "ru",
+            puzzleId: "ru-easy",
+            lineageId: "ru-easy",
+            contentVersion: "catalog-v1",
+          },
+        },
+      ],
     });
-    const pick2 = getNextProgressionPuzzle({
-      pool: MOCK_POOL,
-      solvedIds: [],
-      cursor: 3,
-      difficulty: "easy",
-      playerSeed: "deterministic_seed_123",
+    expect(result.candidate).toBeUndefined();
+    expect(result.source).toBe("none");
+  });
+
+  it("does not silently widen an unavailable band", () => {
+    const result = selectPracticePuzzle({
+      ...base,
+      recommendedBand: "B2",
+      candidates: [candidate("b1", "B1", "a")],
     });
-    expect(pick1?.id).toBe(pick2?.id);
+    expect(result.candidate).toBeUndefined();
+    expect(result.bandUnavailable).toBe(true);
+  });
+
+  it("relaxes only diversity when it would empty the valid pool", () => {
+    const result = selectPracticePuzzle({
+      ...base,
+      recentTopicTags: ["food"],
+      candidates: [candidate("food-1", "B1", "food")],
+    });
+    expect(result.candidate?.puzzle.id).toBe("food-1");
+    expect(result.diversityRelaxed).toBe(true);
+  });
+
+  it("is deterministic for the same explicit state and seed", () => {
+    const input = {
+      ...base,
+      selectionSequence: 14,
+      candidates: [candidate("a", "B1", "x"), candidate("b", "B1", "y")],
+    };
+    expect(selectPracticePuzzle(input).candidate?.puzzle.id).toBe(
+      selectPracticePuzzle(input).candidate?.puzzle.id,
+    );
   });
 });

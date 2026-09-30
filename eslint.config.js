@@ -19,6 +19,7 @@ export default [
       "itch.io/**",
       "tiktok/**",
       "docs/reports/**",
+      "reports/**",
     ],
   },
   js.configs.recommended,

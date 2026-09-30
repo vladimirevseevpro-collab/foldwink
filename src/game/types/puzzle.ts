@@ -78,6 +78,8 @@ export interface Puzzle {
 }
 
 export interface FlatItem {
+  /** Stable within one version-pinned payload; never derived from display text. */
+  id: string;
   value: string;
   groupId: string;
 }

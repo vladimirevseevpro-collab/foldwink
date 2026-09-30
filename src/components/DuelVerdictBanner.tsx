@@ -1,8 +1,6 @@
-import { useState } from "react";
-import { formatDuelResponse, computeDuelOutcome } from "../game/engine/duelResponse";
-import { useSound } from "../audio/useSound";
-import { triggerHaptic } from "../haptics/haptics";
+import { computeDuelOutcome, type DuelOutcome } from "../game/engine/duelResponse";
 import { getStrings, type Lang } from "../i18n/strings";
+import type { DuelChallengeMetadata } from "../game/state/store";
 
 interface DuelVerdictBannerProps {
   puzzleId?: string;
@@ -12,6 +10,7 @@ interface DuelVerdictBannerProps {
   playerMistakes: number;
   playerDurationMs: number;
   lang: string;
+  challenge?: DuelChallengeMetadata;
 }
 
 function formatSec(sec: number): string {
@@ -21,26 +20,40 @@ function formatSec(sec: number): string {
 }
 
 export function DuelVerdictBanner({
-  puzzleId = "",
   challengerMistakes,
   challengerTimeSec,
   playerResult,
   playerMistakes,
   playerDurationMs,
   lang,
+  challenge = { source: "legacy" },
 }: DuelVerdictBannerProps) {
-  const [responseSent, setResponseSent] = useState(false);
-  const play = useSound();
   const playerSec = Math.max(1, Math.round(playerDurationMs / 1000));
   const t = getStrings((lang === "ru" || lang === "de" ? lang : "en") as Lang);
+  const sentResult = challenge.creatorResult;
+  const isVersionedChallenge = challenge.source === "challenge-v2";
 
-  const outcome = computeDuelOutcome(
-    playerResult,
-    playerMistakes,
-    playerDurationMs,
-    challengerMistakes,
-    challengerTimeSec,
-  );
+  let outcome: DuelOutcome;
+  if (isVersionedChallenge && sentResult) {
+    outcome =
+      playerResult !== sentResult.result
+        ? playerResult === "win"
+          ? "victory"
+          : "defeat"
+        : playerMistakes < sentResult.mistakesUsed
+          ? "victory"
+          : playerMistakes > sentResult.mistakesUsed
+            ? "defeat"
+            : "tie";
+  } else {
+    outcome = computeDuelOutcome(
+      playerResult,
+      playerMistakes,
+      playerDurationMs,
+      challengerMistakes,
+      challengerTimeSec,
+    );
+  }
 
   const headline =
     outcome === "victory"
@@ -56,45 +69,15 @@ export function DuelVerdictBanner({
         ? "border-accent/70 bg-surfaceHi"
         : "border-red-500/60 bg-surfaceHi";
 
-  const handleSendResponse = async () => {
-    const text = formatDuelResponse({
-      puzzleId,
-      challengerMistakes,
-      challengerTimeSec,
-      playerResult,
-      playerMistakes,
-      playerDurationMs,
-      lang,
-    });
-
-    if (typeof navigator !== "undefined" && typeof navigator.share === "function") {
-      try {
-        await navigator.share({
-          title: lang === "ru" ? "Дуэль Foldwink" : "Foldwink Duel",
-          text,
-        });
-        setResponseSent(true);
-        play("submit");
-        triggerHaptic("select");
-        setTimeout(() => setResponseSent(false), 2400);
-        return;
-      } catch {
-        /* Fallback to clipboard if share was cancelled or failed */
-      }
-    }
-
-    try {
-      if (typeof navigator !== "undefined" && navigator.clipboard) {
-        await navigator.clipboard.writeText(text);
-        setResponseSent(true);
-        play("submit");
-        triggerHaptic("select");
-        setTimeout(() => setResponseSent(false), 2400);
-      }
-    } catch {
-      /* ignore */
-    }
-  };
+  const durationBucketLabel = sentResult?.durationBucket
+    ? sentResult.durationBucket === "under-1m"
+      ? "< 1:00"
+      : sentResult.durationBucket === "1-3m"
+        ? "1:00–3:00"
+        : sentResult.durationBucket === "3-5m"
+          ? "3:00–5:00"
+          : "> 5:00"
+    : null;
 
   return (
     <div
@@ -124,9 +107,13 @@ export function DuelVerdictBanner({
             {t.duel.challengerResult}
           </div>
           <div className="text-base font-extrabold text-text">
-            {challengerMistakes} {t.duel.mistakesWord(challengerMistakes)}
+            {sentResult?.mistakesUsed ?? challengerMistakes}{" "}
+            {t.duel.mistakesWord(sentResult?.mistakesUsed ?? challengerMistakes)}
           </div>
-          <div className="text-muted text-[11px]">⏱️ {formatSec(challengerTimeSec)}</div>
+          <div className="text-muted text-[11px]">
+            ⏱️{" "}
+            {isVersionedChallenge ? (durationBucketLabel ?? "—") : formatSec(challengerTimeSec)}
+          </div>
         </div>
       </div>
 
@@ -136,17 +123,15 @@ export function DuelVerdictBanner({
         {t.duel.challengerResult}: {challengerMistakes}{" "}
         {t.duel.mistakesWord(challengerMistakes)}
       </div>
-
-      {/* Send response button */}
-      <button
-        type="button"
-        onClick={handleSendResponse}
-        className="w-full py-2.5 px-4 rounded-xl border border-amber-500/60 bg-amber-500/20 hover:bg-amber-500/30 text-amber-200 text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-sm"
-        data-testid="duel-send-response-button"
-      >
-        <span>{responseSent ? "✓" : "⚔️"}</span>
-        <span>{responseSent ? t.duel.responseSent : t.duel.sendResponse}</span>
-      </button>
+      {isVersionedChallenge && (
+        <div className="rounded-md border border-line px-2 py-1.5 text-[10px] text-muted">
+          {lang === "ru"
+            ? "Результат прислан другом и не проверен сервером"
+            : lang === "de"
+              ? "Vom Freund gesendetes Ergebnis; nicht serverseitig geprüft"
+              : "Result sent by a friend; not server-verified"}
+        </div>
+      )}
     </div>
   );
 }

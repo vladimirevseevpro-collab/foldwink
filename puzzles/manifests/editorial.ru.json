@@ -1,0 +1,952 @@
+{
+  "language": "ru",
+  "catalogVersion": "catalog-2026-09-v1",
+  "records": [
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0023",
+        "lineageId": "ru-0023",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Профессии"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0025",
+        "lineageId": "ru-0025",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B1",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Музыкальные инструменты"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0008",
+        "lineageId": "ru-0008",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B1",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Виды транспорта"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0010",
+        "lineageId": "ru-0010",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B1",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Времена года"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0027",
+        "lineageId": "ru-0027",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B1",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Посуда"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0035",
+        "lineageId": "ru-0035",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B1",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Напитки"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0046",
+        "lineageId": "ru-0046",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B1",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Виды спорта"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0062",
+        "lineageId": "ru-0062",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Животные зоопарка"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0073",
+        "lineageId": "ru-0073",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Столицы государств"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0126",
+        "lineageId": "ru-0126",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Рыбалка"
+      ],
+      "anchorGroupId": "tackle",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0127",
+        "lineageId": "ru-0127",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Туризм и путешествия"
+      ],
+      "anchorGroupId": "transport",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0134",
+        "lineageId": "ru-0134",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Дикие животные России"
+      ],
+      "anchorGroupId": "predators",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0211",
+        "lineageId": "ru-0211",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Ремонт квартиры"
+      ],
+      "anchorGroupId": "flooring",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0265",
+        "lineageId": "ru-0265",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Столицы государств по регионам"
+      ],
+      "anchorGroupId": "asian_capitals",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0268",
+        "lineageId": "ru-0268",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Фрукты и ягоды по климату"
+      ],
+      "anchorGroupId": "tropical_fruits",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0106",
+        "lineageId": "ru-0106",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "B2",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Города по достопримечательностям"
+      ],
+      "anchorGroupId": "moscow",
+      "ambiguityRisk": "low",
+      "tabReview": "approved",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0225",
+        "lineageId": "ru-0225",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "B1",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Цивилизации древнего мира"
+      ],
+      "anchorGroupId": "egypt_things",
+      "ambiguityRisk": "low",
+      "tabReview": "approved",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0227",
+        "lineageId": "ru-0227",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "B1",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Финансовые инструменты и термины"
+      ],
+      "anchorGroupId": "securities",
+      "ambiguityRisk": "low",
+      "tabReview": "approved",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0234",
+        "lineageId": "ru-0234",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "B1",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Автомобильные бренды по странам"
+      ],
+      "anchorGroupId": "german_cars",
+      "ambiguityRisk": "low",
+      "tabReview": "approved",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0260",
+        "lineageId": "ru-0260",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "B1",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Транспортные средства по категориям"
+      ],
+      "anchorGroupId": "rail_transport",
+      "ambiguityRisk": "low",
+      "tabReview": "approved",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0297",
+        "lineageId": "ru-0297",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "B2",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Форматы файлов по типу"
+      ],
+      "anchorGroupId": "image_formats",
+      "ambiguityRisk": "low",
+      "tabReview": "approved",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0326",
+        "lineageId": "ru-0326",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "дом",
+        "гардероб",
+        "быт"
+      ],
+      "anchorGroupId": "outerwear",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0364",
+        "lineageId": "ru-0364",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "easy",
+        "дом",
+        "быт"
+      ],
+      "anchorGroupId": "hand_tools",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0373",
+        "lineageId": "ru-0373",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "easy",
+        "город",
+        "повседневность"
+      ],
+      "anchorGroupId": "public_transport",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0378",
+        "lineageId": "ru-0378",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "easy",
+        "профессии",
+        "повседневность"
+      ],
+      "anchorGroupId": "medical_professions",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0395",
+        "lineageId": "ru-0395",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "easy",
+        "животные",
+        "природа"
+      ],
+      "anchorGroupId": "reptiles",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0405",
+        "lineageId": "ru-0405",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "easy",
+        "сад",
+        "природа"
+      ],
+      "anchorGroupId": "garden_flowers",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0417",
+        "lineageId": "ru-0417",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "easy",
+        "игры",
+        "дом"
+      ],
+      "anchorGroupId": "dolls",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0438",
+        "lineageId": "ru-0438",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "easy",
+        "дом",
+        "быт"
+      ],
+      "anchorGroupId": "plumbing_fixtures",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0154",
+        "lineageId": "ru-0154",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B1",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Посуда по назначению"
+      ],
+      "anchorGroupId": "cooking_ware",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    }
+  ]
+}

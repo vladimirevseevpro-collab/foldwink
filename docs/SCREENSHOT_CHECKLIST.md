@@ -1,70 +1,47 @@
-# Screenshot Checklist
+# Foldwink Screenshot Acceptance Checklist
 
-For listing pages, README covers, and store shots. Capture at a mobile and a desktop viewport.
+Release evidence uses actual rendered captures at 100% zoom. Numerical DOM
+geometry supplements but never replaces visual inspection.
 
-## Viewports to capture
+## Required matrix
 
-- Mobile: 390 × 844 (iPhone 13/14)
-- Mobile: 360 × 780 (mid-range Android)
-- Desktop: 1280 × 800
+| Profile | Viewport | Minimum locale coverage |
+| ------- | -------: | ----------------------- |
+| Desktop | 1440×900 | EN                      |
+| Tablet  | 1024×768 | DE                      |
+| Mobile  |  390×844 | RU                      |
 
-## Shots
+Add a physical iOS Safari/PWA and Android Chrome/PWA set. Record browser, OS,
+device, zoom, build/channel and whether browser chrome or safe areas are shown.
 
-### 1. Menu screen
+## Required states
 
-- Title visible
-- Play, Daily, Stats buttons
-- Pool count visible at bottom
+1. Public listing and exact-build identifier.
+2. Menu: Today, Daily Fold, Practice hierarchy, counts and footer.
+3. First-run onboarding step 1 and step 2.
+4. Fresh Easy board: 16 cards, 0/4, mistakes, disabled actions.
+5. Medium Tabs/Wink before and after one correct group.
+6. Four selected cards and one-away/wrong feedback.
+7. Solved group plus 12 remaining cards.
+8. Win and loss Result, including long localized copy.
+9. Retry vs Another puzzle actions.
+10. Stats, collection/passport and framed share card.
+11. Challenge/share failure and safe error state.
+12. Storage unavailable/conflict/recovery and PWA update notices.
+13. Backup import preview, conflict and cancel.
+14. About/privacy/research export.
+15. Reduced-motion and keyboard-focus states.
 
-### 2. Game screen — fresh puzzle
+## Inspection notes required per set
 
-- Full 4×4 grid of unselected cards
-- Mistakes dots all empty
-- Selected 0/4
-- Clear and Submit disabled
+- horizontal overflow and viewport clipping;
+- overlaps and unintended empty space;
+- long-word/localized wrapping;
+- hierarchy and primary action clarity;
+- focus visibility and disabled/selected distinction;
+- error wording and recovery action;
+- contrast and non-colour solved markers;
+- safe areas, browser chrome and touch target reachability.
 
-### 3. Game screen — mid selection
-
-- 3 cards selected, showing the accent state
-- Selected 3/4
-- Submit still disabled
-
-### 4. Game screen — one group solved
-
-- Top 4 cards locked in a solved color
-- 12 remaining cards in idle state
-- Mistakes dots showing at least 1 consumed
-- Header subtitle showing puzzle difficulty + mode
-
-### 5. Game screen — incorrect flash (optional)
-
-- Caught mid-flash with the danger ring; this is timing-sensitive so may be skipped.
-
-### 6. Result screen — win
-
-- "Solved" headline
-- Time + mistakes used
-- All 4 groups revealed in their solved colors with the category label
-
-### 7. Result screen — loss
-
-- "Out of mistakes" headline
-- Groups revealed
-- Next puzzle / Stats / Back to menu actions
-
-### 8. Stats screen
-
-- Games played, Wins, Losses
-- Win %, Streak, Best streak
-- Back to menu action
-
-### 9. Daily mode header
-
-- Any game screen while in daily mode, subtitle showing `DAILY`
-
-## Capture tips
-
-- Use a fresh browser profile to get clean stats (`localStorage` empty).
-- For the daily screenshot, any valid date works — the puzzle is deterministic per date.
-- For the "one group solved" shot, pick an easy puzzle where the first group is obvious (e.g. puzzle-0001 Colors).
-- Turn off browser UI chrome (address bar, devtools) before capture.
+Every folder of PNG files must have a short written inspection result. Do not
+mark a state accepted merely because a screenshot file exists.

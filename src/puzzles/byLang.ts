@@ -1,70 +1,14 @@
 import type { Puzzle } from "../game/types/puzzle";
-import {
-  PUZZLE_POOL,
-  EASY_POOL,
-  MEDIUM_POOL,
-  HARD_POOL,
-  EASY_POOL_RAMPED,
-  MEDIUM_POOL_RAMPED,
-  HARD_POOL_RAMPED,
-  getPuzzleById,
-  getPuzzleByIndex,
-  getEasyByIndex,
-  getMediumByIndex,
-  getHardByIndex,
-  getEasyRampedByIndex,
-  getMediumRampedByIndex,
-  getHardRampedByIndex,
-} from "./loader";
-import {
-  DE_PUZZLE_POOL,
-  DE_EASY_POOL,
-  DE_MEDIUM_POOL,
-  DE_HARD_POOL,
-  DE_EASY_POOL_RAMPED,
-  DE_MEDIUM_POOL_RAMPED,
-  DE_HARD_POOL_RAMPED,
-  getDEPuzzleById,
-  getDEPuzzleByIndex,
-  getDEEasyByIndex,
-  getDEMediumByIndex,
-  getDEHardByIndex,
-  getDEEasyRampedByIndex,
-  getDEMediumRampedByIndex,
-  getDEHardRampedByIndex,
-  ensureDeLoaded,
-} from "./loaderDe";
-import {
-  RU_PUZZLE_POOL,
-  RU_EASY_POOL,
-  RU_MEDIUM_POOL,
-  RU_HARD_POOL,
-  RU_EASY_POOL_RAMPED,
-  RU_MEDIUM_POOL_RAMPED,
-  RU_HARD_POOL_RAMPED,
-  getRUPuzzleById,
-  getRUPuzzleByIndex,
-  getRUEasyByIndex,
-  getRUMediumByIndex,
-  getRUHardByIndex,
-  getRUEasyRampedByIndex,
-  getRUMediumRampedByIndex,
-  getRUHardRampedByIndex,
-  ensureRuLoaded,
-} from "./loaderRu";
 import { getLangSync } from "../i18n/useLanguage";
 import type { Lang } from "../i18n/strings";
+import { RuntimeContentCatalog } from "./runtimeContent";
 
-// One registry per language: every tier-level pool and lookup helper that
-// used to live as `lang === "de" ? ... : lang === "ru" ? ...` fallback
-// ladders at call sites now reads from here.
-//
-// Fallback contract (behaviour-preserving, **per-tier**, matches the
-// pre-v0.7 appStore/MenuScreen rule): each tier falls back to EN
-// **independently**. DE has no Hard content today (only Easy + Medium);
-// without independent fallback, DE players would lose access to the
-// English Hard puzzles the previous code exposed.
-interface LangBundle {
+// Runtime content is deliberately outside the JavaScript module graph. The
+// selected locale gets its 30-board boot asset; archive assets are fetched
+// only for an explicit archived/referral/resume board.
+const runtimeCatalog = new RuntimeContentCatalog();
+
+export interface LangBundle {
   pool: readonly Puzzle[];
   easy: readonly Puzzle[];
   medium: readonly Puzzle[];
@@ -82,122 +26,83 @@ interface LangBundle {
   getHardRampedByIndex: (i: number) => Puzzle | undefined;
 }
 
-const EN_BUNDLE: LangBundle = {
-  pool: PUZZLE_POOL,
-  easy: EASY_POOL,
-  medium: MEDIUM_POOL,
-  hard: HARD_POOL,
-  easyRamped: EASY_POOL_RAMPED,
-  mediumRamped: MEDIUM_POOL_RAMPED,
-  hardRamped: HARD_POOL_RAMPED,
-  getById: getPuzzleById,
-  getByIndex: getPuzzleByIndex,
-  getEasyByIndex,
-  getMediumByIndex,
-  getHardByIndex,
-  getEasyRampedByIndex,
-  getMediumRampedByIndex,
-  getHardRampedByIndex,
-};
-
-const DE_BUNDLE: LangBundle = {
-  pool: DE_PUZZLE_POOL,
-  easy: DE_EASY_POOL,
-  medium: DE_MEDIUM_POOL,
-  hard: DE_HARD_POOL,
-  easyRamped: DE_EASY_POOL_RAMPED,
-  mediumRamped: DE_MEDIUM_POOL_RAMPED,
-  hardRamped: DE_HARD_POOL_RAMPED,
-  getById: getDEPuzzleById,
-  getByIndex: getDEPuzzleByIndex,
-  getEasyByIndex: getDEEasyByIndex,
-  getMediumByIndex: getDEMediumByIndex,
-  getHardByIndex: getDEHardByIndex,
-  getEasyRampedByIndex: getDEEasyRampedByIndex,
-  getMediumRampedByIndex: getDEMediumRampedByIndex,
-  getHardRampedByIndex: getDEHardRampedByIndex,
-};
-
-const RU_BUNDLE: LangBundle = {
-  pool: RU_PUZZLE_POOL,
-  easy: RU_EASY_POOL,
-  medium: RU_MEDIUM_POOL,
-  hard: RU_HARD_POOL,
-  easyRamped: RU_EASY_POOL_RAMPED,
-  mediumRamped: RU_MEDIUM_POOL_RAMPED,
-  hardRamped: RU_HARD_POOL_RAMPED,
-  getById: getRUPuzzleById,
-  getByIndex: getRUPuzzleByIndex,
-  getEasyByIndex: getRUEasyByIndex,
-  getMediumByIndex: getRUMediumByIndex,
-  getHardByIndex: getRUHardByIndex,
-  getEasyRampedByIndex: getRUEasyRampedByIndex,
-  getMediumRampedByIndex: getRUMediumRampedByIndex,
-  getHardRampedByIndex: getRUHardRampedByIndex,
-};
-
-function bundleFor(lang: Lang): LangBundle {
-  if (lang === "de") return DE_BUNDLE;
-  if (lang === "ru") return RU_BUNDLE;
-  return EN_BUNDLE;
+function at(pool: readonly Puzzle[], index: number): Puzzle | undefined {
+  if (pool.length === 0) return undefined;
+  return pool[((index % pool.length) + pool.length) % pool.length];
 }
 
-// Strict per-language lookup — used by the session-resume path in
-// appStore.ts. Unlike `currentBundle()`, this does NOT fall back to EN:
-// a saved DE/RU session must only reopen its own language's puzzle,
-// never a different-language substitute under localised chrome.
+function ramped(pool: readonly Puzzle[]): readonly Puzzle[] {
+  return [...pool].sort((left, right) => {
+    const leftRank = left.meta?.editorialRank ?? left.meta?.difficultyScore ?? 50;
+    const rightRank = right.meta?.editorialRank ?? right.meta?.difficultyScore ?? 50;
+    return leftRank === rightRank ? left.id.localeCompare(right.id) : leftRank - rightRank;
+  });
+}
+
+function bundleFor(language: Lang): LangBundle {
+  const pool = runtimeCatalog.getPool(language);
+  const easy = pool.filter((puzzle) => puzzle.difficulty === "easy");
+  const medium = pool.filter((puzzle) => puzzle.difficulty === "medium");
+  const hard = pool.filter((puzzle) => puzzle.difficulty === "hard");
+  const easyRamped = ramped(easy);
+  const mediumRamped = ramped(medium);
+  const hardRamped = ramped(hard);
+  return {
+    pool,
+    easy,
+    medium,
+    hard,
+    easyRamped,
+    mediumRamped,
+    hardRamped,
+    getById: (id) => runtimeCatalog.getPuzzle(language, id),
+    getByIndex: (index) => at(pool, index),
+    getEasyByIndex: (index) => at(easy, index),
+    getMediumByIndex: (index) => at(medium, index),
+    getHardByIndex: (index) => at(hard, index),
+    getEasyRampedByIndex: (index) => at(easyRamped, index),
+    getMediumRampedByIndex: (index) => at(mediumRamped, index),
+    getHardRampedByIndex: (index) => at(hardRamped, index),
+  };
+}
+
+/** Load only the selected language manifest and its released 30-board boot asset. */
+export function ensureLangLoaded(language: Lang): Promise<void> {
+  return runtimeCatalog.ensureBoot(language);
+}
+
+/** Fetch and validate the one archive asset containing a specific published board. */
+export function ensurePuzzleLoaded(language: Lang, puzzleId: string): Promise<void> {
+  return runtimeCatalog.ensurePuzzle(language, puzzleId);
+}
+
+/** Bounded one-chunk prefetch used after a real practice/Zen progression step. */
+export function ensureNextArchiveChunk(language: Lang): Promise<boolean> {
+  return runtimeCatalog.ensureNextArchiveChunk(language);
+}
+
+export function isLangLoaded(language: Lang): boolean {
+  return runtimeCatalog.isBootLoaded(language);
+}
+
+export function getRuntimeContentVersion(language: Lang): string | undefined {
+  return runtimeCatalog.getContentVersion(language);
+}
+
+/** Verified catalogue total for product copy; unlike getPool(), this is not a lazy-load counter. */
+export function getRuntimeCatalogSize(language: Lang): number | undefined {
+  return runtimeCatalog.getCatalogSize(language);
+}
+
+export function currentBundle(): LangBundle {
+  return bundleFor(getLangSync());
+}
+
+/** Strict per-language lookup. No EN fallback is ever permitted. */
 export function langGetPuzzleByIdStrict(id: string): Puzzle | undefined {
   return bundleFor(getLangSync()).getById(id);
 }
 
-// Kick the lazy loader for a language chunk. EN is eager and resolves
-// immediately; DE/RU fetch their `import.meta.glob` entries via Vite's
-// dynamic-import plumbing. Idempotent per language.
-export function ensureLangLoaded(lang: Lang): Promise<void> {
-  if (lang === "de") return ensureDeLoaded();
-  if (lang === "ru") return ensureRuLoaded();
-  return Promise.resolve();
-}
-
-// currentBundle returns a per-tier composite: every tier independently
-// falls back to EN if the current-language tier is empty. This preserves
-// the pre-refactor behaviour where DE (which has no Hard content) exposed
-// the EN Hard pool to DE players.
-export function currentBundle(): LangBundle {
-  const lang = getLangSync();
-  const b = bundleFor(lang);
-  if (b === EN_BUNDLE) return b;
-  return {
-    pool: b.pool.length > 0 ? b.pool : EN_BUNDLE.pool,
-    easy: b.easy.length > 0 ? b.easy : EN_BUNDLE.easy,
-    medium: b.medium.length > 0 ? b.medium : EN_BUNDLE.medium,
-    hard: b.hard.length > 0 ? b.hard : EN_BUNDLE.hard,
-    easyRamped: b.easyRamped.length > 0 ? b.easyRamped : EN_BUNDLE.easyRamped,
-    mediumRamped: b.mediumRamped.length > 0 ? b.mediumRamped : EN_BUNDLE.mediumRamped,
-    hardRamped: b.hardRamped.length > 0 ? b.hardRamped : EN_BUNDLE.hardRamped,
-    getById: (id) =>
-      b.getById(id) ?? EN_BUNDLE.getById(id) ?? RU_BUNDLE.getById(id) ?? DE_BUNDLE.getById(id),
-    getByIndex: (i) => (b.pool.length > 0 ? b.getByIndex(i) : EN_BUNDLE.getByIndex(i)),
-    getEasyByIndex: (i) =>
-      b.easy.length > 0 ? b.getEasyByIndex(i) : EN_BUNDLE.getEasyByIndex(i),
-    getMediumByIndex: (i) =>
-      b.medium.length > 0 ? b.getMediumByIndex(i) : EN_BUNDLE.getMediumByIndex(i),
-    getHardByIndex: (i) =>
-      b.hard.length > 0 ? b.getHardByIndex(i) : EN_BUNDLE.getHardByIndex(i),
-    getEasyRampedByIndex: (i) =>
-      b.easyRamped.length > 0 ? b.getEasyRampedByIndex(i) : EN_BUNDLE.getEasyRampedByIndex(i),
-    getMediumRampedByIndex: (i) =>
-      b.mediumRamped.length > 0
-        ? b.getMediumRampedByIndex(i)
-        : EN_BUNDLE.getMediumRampedByIndex(i),
-    getHardRampedByIndex: (i) =>
-      b.hardRamped.length > 0 ? b.getHardRampedByIndex(i) : EN_BUNDLE.getHardRampedByIndex(i),
-  };
-}
-
-// Language-aware getters that read `getLangSync()` each call, so switching
-// the language takes effect on the next store action without recreating
-// the store.
 export function langGetPool(): readonly Puzzle[] {
   return currentBundle().pool;
 }
@@ -210,28 +115,27 @@ export function langGetMediumPool(): readonly Puzzle[] {
 export function langGetHardPool(): readonly Puzzle[] {
   return currentBundle().hard;
 }
-
 export function langGetPuzzleById(id: string): Puzzle | undefined {
   return currentBundle().getById(id);
 }
-export function langGetPuzzleByIndex(i: number): Puzzle | undefined {
-  return currentBundle().getByIndex(i);
+export function langGetPuzzleByIndex(index: number): Puzzle | undefined {
+  return currentBundle().getByIndex(index);
 }
-export function langGetEasyByIndex(i: number): Puzzle | undefined {
-  return currentBundle().getEasyByIndex(i);
+export function langGetEasyByIndex(index: number): Puzzle | undefined {
+  return currentBundle().getEasyByIndex(index);
 }
-export function langGetMediumByIndex(i: number): Puzzle | undefined {
-  return currentBundle().getMediumByIndex(i);
+export function langGetMediumByIndex(index: number): Puzzle | undefined {
+  return currentBundle().getMediumByIndex(index);
 }
-export function langGetHardByIndex(i: number): Puzzle | undefined {
-  return currentBundle().getHardByIndex(i);
+export function langGetHardByIndex(index: number): Puzzle | undefined {
+  return currentBundle().getHardByIndex(index);
 }
-export function langGetEasyRampedByIndex(i: number): Puzzle | undefined {
-  return currentBundle().getEasyRampedByIndex(i);
+export function langGetEasyRampedByIndex(index: number): Puzzle | undefined {
+  return currentBundle().getEasyRampedByIndex(index);
 }
-export function langGetMediumRampedByIndex(i: number): Puzzle | undefined {
-  return currentBundle().getMediumRampedByIndex(i);
+export function langGetMediumRampedByIndex(index: number): Puzzle | undefined {
+  return currentBundle().getMediumRampedByIndex(index);
 }
-export function langGetHardRampedByIndex(i: number): Puzzle | undefined {
-  return currentBundle().getHardRampedByIndex(i);
+export function langGetHardRampedByIndex(index: number): Puzzle | undefined {
+  return currentBundle().getHardRampedByIndex(index);
 }

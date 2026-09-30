@@ -1,0 +1,991 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Foldwink W7 observation form</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #17252b;
+        --muted: #607077;
+        --paper: #fbfaf7;
+        --panel: #fff;
+        --line: #d5dfe0;
+        --accent: #176b68;
+        --bad: #a62d2d;
+        --good: #176b50;
+        --focus: #d77c2d;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #e8eeee;
+        color: var(--ink);
+        font:
+          16px/1.45 system-ui,
+          -apple-system,
+          "Segoe UI",
+          sans-serif;
+      }
+      main {
+        width: min(100% - 24px, 980px);
+        margin: 24px auto 56px;
+      }
+      header,
+      section,
+      footer {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 20px;
+        box-shadow: 0 5px 18px #1730330c;
+      }
+      header {
+        border-top: 5px solid var(--accent);
+      }
+      h1 {
+        margin: 0 0 5px;
+        font-size: clamp(1.45rem, 4vw, 2.1rem);
+      }
+      h2 {
+        margin: 0 0 14px;
+        font-size: 1.16rem;
+      }
+      h3 {
+        margin: 17px 0 8px;
+        font-size: 1rem;
+      }
+      p {
+        margin: 6px 0 12px;
+      }
+      .muted,
+      small {
+        color: var(--muted);
+      }
+      .notice {
+        margin-top: 14px;
+        padding: 11px 13px;
+        background: #eef7f5;
+        border-left: 4px solid var(--accent);
+        border-radius: 7px;
+      }
+      form {
+        display: grid;
+        gap: 14px;
+        margin-top: 14px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 13px 16px;
+      }
+      .full {
+        grid-column: 1/-1;
+      }
+      label {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        font-weight: 650;
+      }
+      label.check {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 9px;
+        font-weight: 500;
+      }
+      input,
+      select,
+      textarea,
+      button {
+        font: inherit;
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        min-height: 42px;
+        padding: 9px 10px;
+        border: 1px solid #aebfc1;
+        border-radius: 8px;
+        color: var(--ink);
+        background: #fff;
+      }
+      textarea {
+        min-height: 76px;
+        resize: vertical;
+      }
+      input[readonly] {
+        background: #f1f4f4;
+        color: #48595d;
+      }
+      input[type="checkbox"] {
+        width: 20px;
+        min-height: 20px;
+        margin: 2px 0 0;
+        accent-color: var(--accent);
+      }
+      input:focus-visible,
+      select:focus-visible,
+      textarea:focus-visible,
+      button:focus-visible {
+        outline: 3px solid var(--focus);
+        outline-offset: 2px;
+      }
+      .checks {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+      .subsection {
+        border-top: 1px solid var(--line);
+        margin-top: 16px;
+        padding-top: 14px;
+      }
+      .error {
+        min-height: 1.2em;
+        color: var(--bad);
+        font-size: 0.88rem;
+        margin-top: 4px;
+      }
+      [aria-invalid="true"] {
+        border-color: var(--bad);
+      }
+      .issue {
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 14px;
+        margin: 10px 0;
+        background: #fcfdfd;
+      }
+      .issue-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+      }
+      .issue-head strong {
+        font-size: 0.96rem;
+      }
+      button {
+        border: 1px solid #145552;
+        border-radius: 8px;
+        min-height: 42px;
+        padding: 9px 14px;
+        cursor: pointer;
+        background: var(--accent);
+        color: white;
+        font-weight: 700;
+      }
+      button.secondary {
+        background: white;
+        color: var(--accent);
+      }
+      button.danger {
+        background: white;
+        color: var(--bad);
+        border-color: #c88686;
+        min-height: 36px;
+        padding: 6px 10px;
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+      }
+      .status {
+        margin: 0;
+        font-weight: 650;
+      }
+      .status.good {
+        color: var(--good);
+      }
+      .status.bad {
+        color: var(--bad);
+      }
+      footer {
+        margin-top: 14px;
+        font-size: 0.91rem;
+      }
+      code {
+        background: #eff3f3;
+        padding: 2px 4px;
+        border-radius: 4px;
+      }
+      @media (max-width: 640px) {
+        main {
+          width: min(100% - 14px, 980px);
+          margin-top: 8px;
+        }
+        header,
+        section,
+        footer {
+          padding: 15px;
+          border-radius: 11px;
+        }
+        .grid,
+        .checks {
+          grid-template-columns: 1fr;
+        }
+        .full {
+          grid-column: auto;
+        }
+        .issue-head {
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Foldwink W7 — observation record</h1>
+        <p class="muted">
+          Локальная исследовательская форма. Она ничего не отправляет и не сохраняет.
+          CLI-валидатор проекта остаётся источником истины.
+        </p>
+        <div class="notice">
+          <strong>Правило приватности:</strong> не вводите имя, e-mail, телефон, точные
+          идентификаторы устройства, ссылки или свободные заметки. Единственное свободное
+          текстовое поле — краткое резюме конкретной issue.
+        </div>
+      </header>
+
+      <form id="observation-form" novalidate>
+        <section>
+          <h2>1. Frozen identity</h2>
+          <div class="grid">
+            <label
+              >Study code (выданный во внешнем roster)<input
+                id="studyCode"
+                value=""
+                placeholder="P017"
+                pattern="P[0-9]{3}"
+                maxlength="4"
+                autocomplete="off" /><span class="muted"
+                >Введите уже назначенный код; форма не создаёт roster и не назначает
+                участников.</span
+              ><span class="error" data-error-for="studyCode"></span
+            ></label>
+            <label
+              >Locale<select id="locale">
+                <option value="en">English (en)</option>
+                <option value="ru" selected>Русский (ru)</option>
+                <option value="de">Deutsch (de)</option>
+              </select></label
+            >
+            <label class="full"
+              >Board ID (safe token)<input
+                id="boardId"
+                value="puzzle-0001"
+                maxlength="120"
+                autocomplete="off" /><span class="muted"
+                >Только board ID из приложения, не идентификатор человека.</span
+              ><span class="error" data-error-for="boardId"></span
+            ></label>
+          </div>
+          <details>
+            <summary>Read-only build tuple</summary>
+            <pre id="build-preview"></pre>
+          </details>
+          <div class="error" data-error-section="identity"></div>
+        </section>
+
+        <section>
+          <h2>2. Cohort context</h2>
+          <div class="grid">
+            <label
+              >Acquisition<select id="acquisition">
+                <option value="organic" selected>organic</option>
+                <option value="invited">invited</option>
+              </select></label
+            >
+            <label
+              >Device class<select id="deviceClass">
+                <option value="phone">phone</option>
+                <option value="tablet">tablet</option>
+                <option value="desktop" selected>desktop</option>
+              </select></label
+            >
+            <label
+              >OS family<select id="osFamily">
+                <option value="ios">iOS</option>
+                <option value="android">Android</option>
+                <option value="windows" selected>Windows</option>
+                <option value="macos">macOS</option>
+                <option value="linux">Linux</option>
+                <option value="chromeos">ChromeOS</option>
+                <option value="other">other</option>
+              </select></label
+            >
+            <label
+              >Browser family<select id="browserFamily">
+                <option value="safari">Safari</option>
+                <option value="chrome" selected>Chrome</option>
+                <option value="edge">Edge</option>
+                <option value="firefox">Firefox</option>
+                <option value="other">other</option>
+              </select></label
+            >
+            <label
+              >Launch mode<select id="launchMode">
+                <option value="browser" selected>browser</option>
+                <option value="pwa">PWA</option>
+              </select></label
+            >
+            <label
+              >Input<select id="input">
+                <option value="touch">touch</option>
+                <option value="mouse" selected>mouse</option>
+                <option value="keyboard">keyboard</option>
+                <option value="mixed">mixed</option>
+              </select></label
+            >
+            <label
+              >Accessibility requested<select id="accessibility">
+                <option value="none" selected>none</option>
+                <option value="reduced-motion">reduced-motion</option>
+                <option value="keyboard-only">keyboard-only</option>
+                <option value="other">other</option>
+              </select></label
+            >
+            <label
+              >Puzzle frequency<select id="puzzleFrequency">
+                <option value="never" selected>never</option>
+                <option value="monthly">monthly</option>
+                <option value="weekly">weekly</option>
+                <option value="several-weekly">several-weekly</option>
+              </select></label
+            >
+          </div>
+          <div class="error" data-error-section="cohort"></div>
+        </section>
+
+        <section>
+          <h2>3. Flow and onboarding</h2>
+          <h3>Flow checkpoints</h3>
+          <div class="checks" id="flow-checks"></div>
+          <h3>Onboarding</h3>
+          <div class="grid">
+            <label class="check"
+              ><input type="checkbox" id="onboardingStarted" checked /> Onboarding
+              started</label
+            >
+            <label
+              >Outcome<select id="onboardingOutcome">
+                <option value="completed" selected>completed</option>
+                <option value="skipped">skipped</option>
+                <option value="not-started">not-started</option>
+              </select></label
+            >
+            <label class="check"
+              ><input type="checkbox" id="firstMeaningfulActionIndependent" checked /> First
+              meaningful action was independent</label
+            >
+            <label
+              >Core-loop explanation<select id="coreLoopExplanation">
+                <option value="correct" selected>correct</option>
+                <option value="partial">partial</option>
+                <option value="incorrect">incorrect</option>
+                <option value="not-asked">not-asked</option>
+              </select></label
+            >
+          </div>
+          <div class="error" data-error-section="flow"></div>
+        </section>
+
+        <section>
+          <h2>4. First session</h2>
+          <div class="grid">
+            <label>Content version<input value="catalog-2026-09-v1" readonly /></label>
+            <label
+              >First group independent<select id="firstGroupIndependent">
+                <option value="true" selected>yes</option>
+                <option value="false">no</option>
+                <option value="null">not observed</option>
+              </select></label
+            >
+            <label
+              >Time to first group (seconds)<input
+                id="timeToFirstGroupSeconds"
+                type="number"
+                min="0"
+                max="3600"
+                step="1"
+                value="34"
+              /><span class="muted"
+                >Оставьте пустым, если независимого решения не было.</span
+              ></label
+            >
+            <label
+              >First attempt outcome<select id="firstAttemptOutcome">
+                <option value="win">win</option>
+                <option value="loss" selected>loss</option>
+                <option value="abandon">abandon</option>
+                <option value="not-started">not-started</option>
+              </select></label
+            >
+            <label
+              >Mistakes used<input
+                id="mistakesUsed"
+                type="number"
+                min="0"
+                max="4"
+                step="1"
+                value="1"
+            /></label>
+            <label class="check"
+              ><input type="checkbox" id="resultReached" checked /> Result reached</label
+            >
+          </div>
+          <h3>Interventions (counts)</h3>
+          <div class="grid" id="interventions"></div>
+          <div class="error" data-error-section="firstSession"></div>
+        </section>
+
+        <section>
+          <h2>5. Result actions, Wink, Share</h2>
+          <div class="grid">
+            <label class="check"
+              ><input type="checkbox" id="retryStartedAfterLoss" checked /> Retry after loss was
+              started</label
+            >
+            <label
+              >Retry outcome<select id="retryOutcome">
+                <option value="not-started">not-started</option>
+                <option value="win" selected>win</option>
+                <option value="loss">loss</option>
+                <option value="abandon">abandon</option>
+              </select></label
+            >
+            <label class="check"
+              ><input type="checkbox" id="differentBoardAvailable" checked /> Different board
+              was available</label
+            >
+            <label class="check"
+              ><input type="checkbox" id="differentBoardStarted" /> Different board was
+              started</label
+            >
+            <label
+              >Previous result<select id="previousResult">
+                <option value="none">none</option>
+                <option value="win">win</option>
+                <option value="loss" selected>loss</option>
+              </select></label
+            >
+            <label class="check"
+              ><input type="checkbox" id="winkShown" checked /> Wink was shown</label
+            >
+            <label
+              >Wink understanding<select id="winkUnderstanding">
+                <option value="correct" selected>correct</option>
+                <option value="partial">partial</option>
+                <option value="incorrect">incorrect</option>
+                <option value="not-asked">not-asked</option>
+              </select></label
+            >
+            <label class="check"><input type="checkbox" id="winkUsed" /> Wink was used</label>
+            <label class="check"
+              ><input type="checkbox" id="shareStarted" /> Share was started</label
+            >
+            <label
+              >Share outcome<select id="shareOutcome">
+                <option value="not-started" selected>not-started</option>
+                <option value="completed">completed</option>
+                <option value="cancelled">cancelled</option>
+                <option value="failed">failed</option>
+              </select></label
+            >
+          </div>
+          <div class="error" data-error-section="actions"></div>
+        </section>
+
+        <section>
+          <h2>6. Export observation</h2>
+          <div class="grid">
+            <label
+              >Export status<select id="exportStatus">
+                <option value="declined" selected>declined</option>
+                <option value="provided-invalid">provided-invalid</option>
+                <option value="provided-valid">provided-valid</option>
+                <option value="not-offered">not-offered</option>
+              </select></label
+            >
+            <label
+              >Fields match<select id="fieldsMatch">
+                <option value="null" selected>not assessed</option>
+                <option value="true">yes</option>
+                <option value="false">no</option>
+              </select></label
+            >
+            <label
+              >Privacy inspection<select id="privacyInspectionPassed">
+                <option value="null" selected>not assessed</option>
+                <option value="true">passed</option>
+                <option value="false">failed</option>
+              </select></label
+            >
+          </div>
+          <div class="error" data-error-section="export"></div>
+        </section>
+
+        <section>
+          <h2>7. Return windows</h2>
+          <div class="grid">
+            <label class="check full"
+              ><input type="checkbox" id="d0Qualified" checked /> Qualified D0 session
+              recorded</label
+            >
+            <label>D0 local date<input id="d0LocalDate" type="date" /></label>
+            <label>D1 target date (computed)<input id="d1TargetDate" readonly /></label>
+            <label>D7 target date (computed)<input id="d7TargetDate" readonly /></label>
+          </div>
+          <div class="subsection">
+            <h3>D1</h3>
+            <div class="grid" id="d1-fields"></div>
+          </div>
+          <div class="subsection">
+            <h3>D7</h3>
+            <div class="grid" id="d7-fields"></div>
+          </div>
+          <div class="error" data-error-section="returns"></div>
+        </section>
+
+        <section>
+          <h2>8. Issues</h2>
+          <p class="muted">
+            Добавляйте только наблюдаемую проблему. Вне поля summary не вводите свободные
+            заметки или персональные данные.
+          </p>
+          <div id="issues"></div>
+          <button type="button" class="secondary" id="add-issue">+ Add issue</button>
+          <div class="error" data-error-section="issues"></div>
+        </section>
+
+        <section>
+          <div class="actions">
+            <button type="submit">Validate record</button
+            ><button type="button" class="secondary" id="download" disabled>
+              Download JSON
+            </button>
+            <p class="status" id="status" role="status" aria-live="polite"></p>
+          </div>
+          <div class="error" id="form-error"></div>
+        </section>
+      </form>
+      <footer>
+        <strong>После экспорта:</strong> откройте JSON в текстовом редакторе, проверьте
+        отсутствие персональных данных и прогоните его через CLI:
+        <code>npm run pilot:summarize-observations -- &lt;file.json&gt;</code>. Удалите
+        локальный файл после передачи по согласованному исследовательскому каналу.
+      </footer>
+    </main>
+
+    <script>
+      (() => {
+        "use strict";
+        const BUILD = Object.freeze({
+          app: "0.8.4",
+          content: "catalog-2026-09-v1",
+          daily: "daily-2026-09-14-2026-10-13-v1",
+          events: "ops-06-v1",
+          privacy: "privacy-v1",
+          balance: "balance-2026-09-v1",
+          itchUpload: "#19242763",
+          itchBuild: "#1984826",
+          artifactSha256: "b9e5dde25558e27dc9f846f28e8ad4b9dbb0d134136e2efa2bb8c9d7cf7fc645",
+          treeSha256: "b41e3ce52dd56f28e96719a6e4872bc7701e6305cbfe270a5e8f02bdd64eb385",
+        });
+        const $ = (id) => document.getElementById(id);
+        const val = (id) => $(id).value;
+        const checked = (id) => $(id).checked;
+        const nullableBool = (id) => (val(id) === "null" ? null : val(id) === "true");
+        const today = new Date();
+        const iso = (date) => {
+          const d = new Date(date);
+          return Number.isNaN(d.getTime()) ? "" : d.toISOString().slice(0, 10);
+        };
+        $("d0LocalDate").value = iso(today);
+        $("build-preview").textContent = JSON.stringify(BUILD, null, 2);
+        const flowLabels = [
+          ["recruited", "Recruited"],
+          ["consented", "Consented"],
+          ["appOpened", "App opened"],
+          ["firstSessionStarted", "First session started"],
+          ["usableObservation", "Usable observation"],
+          ["exportOffered", "Export offered"],
+          ["exportProvided", "Export provided"],
+        ];
+        $("flow-checks").innerHTML = flowLabels
+          .map(
+            ([id, label]) =>
+              `<label class="check"><input type="checkbox" id="flow-${id}" ${id === "exportProvided" ? "" : "checked"}> ${label}</label>`,
+          )
+          .join("");
+        const interventionLabels = [
+          ["navigation", "Navigation"],
+          ["ruleClarification", "Rule clarification"],
+          ["answerHelp", "Answer-level help"],
+          ["technicalRecovery", "Technical recovery"],
+        ];
+        $("interventions").innerHTML = interventionLabels
+          .map(
+            ([id, label]) =>
+              `<label>${label}<input id="intervention-${id}" type="number" min="0" max="20" step="1" value="0"></label>`,
+          )
+          .join("");
+        const returnFields = (prefix) =>
+          `<label>Window complete<select id="${prefix}-windowComplete"><option value="false" selected>no</option><option value="true">yes</option></select></label><label>Qualified return<select id="${prefix}-qualifiedReturn"><option value="null" selected>not closed</option><option value="true">yes</option><option value="false">no</option></select></label><label>Attribution<select id="${prefix}-attribution"><option value="unknown" selected>unknown</option><option value="organic">organic</option><option value="invited">invited</option><option value="none">none</option></select></label><label class="check"><input type="checkbox" id="${prefix}-exportReceived"> Export received</label>`;
+        $("d1-fields").innerHTML = returnFields("d1");
+        $("d7-fields").innerHTML = returnFields("d7");
+        function addDays(date, days) {
+          const d = new Date(`${date}T00:00:00Z`);
+          d.setUTCDate(d.getUTCDate() + days);
+          return d.toISOString().slice(0, 10);
+        }
+        function updateDates() {
+          const qualified = checked("d0Qualified");
+          if (qualified && !val("d0LocalDate")) $("d0LocalDate").value = iso(today);
+          if (!qualified) $("d0LocalDate").value = "";
+          $("d0LocalDate").disabled = !qualified;
+          const d = qualified ? val("d0LocalDate") : "";
+          $("d1TargetDate").value = d ? addDays(d, 1) : "";
+          $("d7TargetDate").value = d ? addDays(d, 7) : "";
+          for (const prefix of ["d1", "d7"])
+            for (const suffix of [
+              "windowComplete",
+              "qualifiedReturn",
+              "attribution",
+              "exportReceived",
+            ])
+              $(`${prefix}-${suffix}`).disabled = !qualified;
+        }
+        $("d0Qualified").addEventListener("input", updateDates);
+        $("d0LocalDate").addEventListener("input", updateDates);
+        updateDates();
+        let issueNumber = 0;
+        function addIssue() {
+          if ($("issues").querySelectorAll(".issue").length >= 50) {
+            $("status").textContent = "Максимум 50 issues на одну карточку.";
+            $("status").className = "status bad";
+            return;
+          }
+          issueNumber += 1;
+          const id = `issue-${issueNumber}`;
+          const node = document.createElement("div");
+          node.id = id;
+          node.className = "issue";
+          node.dataset.issue = id;
+          node.innerHTML = `<div class="issue-head"><strong>Issue ${issueNumber}</strong><button type="button" class="danger" data-remove="${id}">Remove</button></div><div class="grid"><label>Kind<select data-field="kind"><option value="knowledge-gap">knowledge-gap</option><option value="wording-friction">wording-friction</option><option value="plausible-competing-answer">plausible-competing-answer</option><option value="confirmed-competing-answer">confirmed-competing-answer</option><option value="rule-misunderstanding">rule-misunderstanding</option><option value="technical">technical</option></select></label><label>Affected group<input data-field="affectedGroup" maxlength="120"></label><label>Severity<select data-field="severity"><option>P0</option><option>P1</option><option selected>P2</option><option>P3</option></select></label><label>Validator status<select data-field="validatorStatus"><option selected>not-required</option><option>pending</option><option>confirmed</option><option>rejected</option></select></label><label>Retest status<select data-field="retestStatus"><option selected>not-required</option><option>pending</option><option>passed</option><option>failed</option></select></label><label>Board ID<input data-field="boardId" value="puzzle-0001" maxlength="120"></label><label>Content version<input data-field="contentVersion" value="catalog-2026-09-v1" maxlength="120"></label><label class="full">Summary (единственное свободное текстовое поле)<textarea data-field="summary" maxlength="400"></textarea><span class="error" data-error-field="summary"></span></label></div>`;
+          $("issues").appendChild(node);
+        }
+        $("add-issue").addEventListener("click", addIssue);
+        $("issues").addEventListener("click", (event) => {
+          const button = event.target.closest("[data-remove]");
+          if (button) $(button.dataset.remove).remove();
+        });
+        const error = (message, section, field) => ({ message, section, field });
+        const pnr =
+          /(?:\b[^\s@]+@[^\s@]+\.[^\s@]+\b|\b(?:\d{1,3}\.){3}\d{1,3}\b|https?:\/\/|\+\d[\d ()-]{7,}\d|\b\d{2,4}[ ()]\d[\d ()-]{5,}\d\b|\b\d{4}-\d{2}-\d{2}[T ]\d{2}:\d{2})/iu;
+        function payload() {
+          const issueValues = [...$("issues").querySelectorAll(".issue")].map((node) => {
+            const get = (key) => node.querySelector(`[data-field="${key}"]`).value;
+            return {
+              kind: get("kind"),
+              boardId: get("boardId"),
+              contentVersion: get("contentVersion"),
+              affectedGroup: get("affectedGroup"),
+              summary: get("summary"),
+              severity: get("severity"),
+              validatorStatus: get("validatorStatus"),
+              retestStatus: get("retestStatus"),
+            };
+          });
+          const d0Qualified = checked("d0Qualified");
+          const ret = (prefix) => ({
+            targetDate: d0Qualified ? val(`${prefix}TargetDate`) : null,
+            windowComplete: d0Qualified && val(`${prefix}-windowComplete`) === "true",
+            qualifiedReturn: d0Qualified ? nullableBool(`${prefix}-qualifiedReturn`) : null,
+            attribution: d0Qualified ? val(`${prefix}-attribution`) : "unknown",
+            exportReceived: d0Qualified && checked(`${prefix}-exportReceived`),
+          });
+          return {
+            schema: "foldwink-pilot-observation-v1",
+            studyCode: val("studyCode"),
+            build: { ...BUILD },
+            locale: val("locale"),
+            cohort: {
+              acquisition: val("acquisition"),
+              deviceClass: val("deviceClass"),
+              osFamily: val("osFamily"),
+              browserFamily: val("browserFamily"),
+              launchMode: val("launchMode"),
+              input: val("input"),
+              accessibility: val("accessibility"),
+              puzzleFrequency: val("puzzleFrequency"),
+            },
+            flow: Object.fromEntries(flowLabels.map(([id]) => [id, checked(`flow-${id}`)])),
+            onboarding: {
+              started: checked("onboardingStarted"),
+              outcome: val("onboardingOutcome"),
+              firstMeaningfulActionIndependent: checked("firstMeaningfulActionIndependent"),
+              coreLoopExplanation: val("coreLoopExplanation"),
+            },
+            firstSession: {
+              boardId: val("boardId"),
+              contentVersion: BUILD.content,
+              firstGroupIndependent: nullableBool("firstGroupIndependent"),
+              timeToFirstGroupSeconds:
+                val("timeToFirstGroupSeconds") === ""
+                  ? null
+                  : Number(val("timeToFirstGroupSeconds")),
+              firstAttemptOutcome: val("firstAttemptOutcome"),
+              mistakesUsed: val("mistakesUsed") === "" ? null : Number(val("mistakesUsed")),
+              resultReached: checked("resultReached"),
+              interventions: Object.fromEntries(
+                interventionLabels.map(([id]) => [id, Number(val(`intervention-${id}`))]),
+              ),
+            },
+            resultActions: {
+              retryStartedAfterLoss: checked("retryStartedAfterLoss"),
+              retryOutcome: val("retryOutcome"),
+              differentBoardAvailable: checked("differentBoardAvailable"),
+              differentBoardStarted: checked("differentBoardStarted"),
+              previousResult: val("previousResult"),
+            },
+            wink: {
+              shown: checked("winkShown"),
+              understanding: val("winkUnderstanding"),
+              used: checked("winkUsed"),
+            },
+            share: { started: checked("shareStarted"), outcome: val("shareOutcome") },
+            export: {
+              status: val("exportStatus"),
+              fieldsMatch: nullableBool("fieldsMatch"),
+              privacyInspectionPassed: nullableBool("privacyInspectionPassed"),
+            },
+            returns: {
+              d0Qualified,
+              d0LocalDate: d0Qualified ? val("d0LocalDate") : null,
+              d1: ret("d1"),
+              d7: ret("d7"),
+            },
+            issues: issueValues,
+          };
+        }
+        function validate(v) {
+          const e = [];
+          const add = (message, section, field) => e.push(error(message, section, field));
+          const safeToken = /^[A-Za-z0-9._:#-]{1,120}$/u;
+          const boundedInteger = (value, min, max) =>
+            Number.isSafeInteger(value) && value >= min && value <= max;
+          if (!/^P\d{3}$/u.test(v.studyCode))
+            add("Study code должен иметь формат P000.", "identity", "studyCode");
+          if (!safeToken.test(v.firstSession.boardId))
+            add("Board ID должен быть safe token.", "identity", "boardId");
+          const ordered = [
+            "recruited",
+            "consented",
+            "appOpened",
+            "firstSessionStarted",
+            "usableObservation",
+          ];
+          for (let i = 1; i < ordered.length; i += 1)
+            if (v.flow[ordered[i]] && !v.flow[ordered[i - 1]])
+              add("Flow должен быть монотонным до usable observation.", "flow");
+          if (v.flow.exportOffered && !v.flow.usableObservation)
+            add("Export нельзя предлагать до usable observation.", "flow");
+          if (v.flow.exportProvided && !v.flow.exportOffered)
+            add("Export нельзя считать provided до offered.", "flow");
+          if (v.onboarding.started !== (v.onboarding.outcome !== "not-started"))
+            add("Onboarding started и outcome противоречат друг другу.", "flow");
+          if (v.onboarding.firstMeaningfulActionIndependent && !v.flow.firstSessionStarted)
+            add("Independent gameplay action требует начатой сессии.", "flow");
+          if (
+            (v.firstSession.firstGroupIndependent === true &&
+              v.firstSession.timeToFirstGroupSeconds === null) ||
+            (v.firstSession.firstGroupIndependent !== true &&
+              v.firstSession.timeToFirstGroupSeconds !== null)
+          )
+            add("Время первой группы допустимо только для independent=true.", "firstSession");
+          if (
+            v.firstSession.timeToFirstGroupSeconds !== null &&
+            !boundedInteger(v.firstSession.timeToFirstGroupSeconds, 0, 3600)
+          )
+            add("Время первой группы должно быть целым числом 0–3600.", "firstSession");
+          if (
+            v.firstSession.mistakesUsed !== null &&
+            !boundedInteger(v.firstSession.mistakesUsed, 0, 4)
+          )
+            add("Mistakes used должно быть целым числом 0–4.", "firstSession");
+          for (const [kind, count] of Object.entries(v.firstSession.interventions))
+            if (!boundedInteger(count, 0, 20))
+              add(`${kind}: intervention count должен быть 0–20.`, "firstSession");
+          if (
+            v.firstSession.firstGroupIndependent === true &&
+            v.firstSession.interventions.answerHelp > 0
+          )
+            add("Answer-level help исключает independent first group.", "firstSession");
+          if (
+            ["win", "loss"].includes(v.firstSession.firstAttemptOutcome) !==
+            v.firstSession.resultReached
+          )
+            add(
+              "First attempt outcome и result reached противоречат друг другу.",
+              "firstSession",
+            );
+          if (
+            v.flow.firstSessionStarted ===
+            (v.firstSession.firstAttemptOutcome === "not-started")
+          )
+            add("First-session flow и outcome противоречат друг другу.", "firstSession");
+          if (v.resultActions.differentBoardStarted && !v.resultActions.differentBoardAvailable)
+            add("Different board started требует available.", "actions");
+          if (
+            v.resultActions.retryStartedAfterLoss ===
+            (v.resultActions.retryOutcome === "not-started")
+          )
+            add("Retry start/outcome должны соответствовать CLI-инварианту.", "actions");
+          if (
+            v.resultActions.retryStartedAfterLoss &&
+            v.firstSession.firstAttemptOutcome !== "loss"
+          )
+            add("Retry after loss требует first-attempt loss.", "actions");
+          if (!v.wink.shown && (v.wink.used || v.wink.understanding !== "not-asked"))
+            add("Unshown Wink нельзя использовать или оценивать.", "actions");
+          if (v.share.started !== (v.share.outcome !== "not-started"))
+            add("Share started и outcome противоречат друг другу.", "actions");
+          const provided = ["provided-valid", "provided-invalid"].includes(v.export.status);
+          if (provided !== v.flow.exportProvided)
+            add("Export status и flow.exportProvided противоречат друг другу.", "export");
+          if ((v.export.status !== "not-offered") !== v.flow.exportOffered)
+            add("Export offered и status противоречат друг другу.", "export");
+          if (
+            v.export.status === "provided-valid" &&
+            (v.export.fieldsMatch !== true || v.export.privacyInspectionPassed !== true)
+          )
+            add("Valid export требует двух положительных проверок.", "export");
+          if (
+            ["declined", "not-offered"].includes(v.export.status) &&
+            (v.export.fieldsMatch !== null || v.export.privacyInspectionPassed !== null)
+          )
+            add("Для отсутствующего export проверки должны быть null.", "export");
+          if (v.returns.d0Qualified && !/^\d{4}-\d{2}-\d{2}$/u.test(v.returns.d0LocalDate))
+            add("Qualified D0 требует локальную дату.", "returns");
+          if (!v.returns.d0Qualified && v.returns.d0LocalDate !== null)
+            add("Без qualified D0 дата должна быть пустой.", "returns");
+          if (v.returns.d0Qualified && (!v.flow.consented || !v.flow.firstSessionStarted))
+            add("Qualified D0 требует consent и начатую сессию.", "returns");
+          const todayLocal = iso(today);
+          for (const prefix of ["d1", "d7"]) {
+            const r = v.returns[prefix];
+            if (
+              !v.returns.d0Qualified &&
+              (r.targetDate !== null ||
+                r.windowComplete ||
+                r.qualifiedReturn !== null ||
+                r.attribution !== "unknown" ||
+                r.exportReceived)
+            )
+              add(
+                `${prefix.toUpperCase()}: окно должно быть пустым до qualified D0.`,
+                "returns",
+              );
+            if (!r.windowComplete && r.qualifiedReturn !== null)
+              add(
+                `${prefix.toUpperCase()}: результат возможен только после закрытия окна.`,
+                "returns",
+              );
+            if (r.windowComplete && r.qualifiedReturn === null)
+              add(`${prefix.toUpperCase()}: после закрытия нужен yes/no.`, "returns");
+            if (r.qualifiedReturn === true && r.attribution === "none")
+              add(`${prefix.toUpperCase()}: возврат требует attribution.`, "returns");
+            if (r.qualifiedReturn === false && r.attribution !== "none")
+              add(`${prefix.toUpperCase()}: no-return требует attribution none.`, "returns");
+            if (r.qualifiedReturn === true && r.attribution !== v.cohort.acquisition)
+              add(
+                `${prefix.toUpperCase()}: attribution должен совпадать с acquisition.`,
+                "returns",
+              );
+            if (r.windowComplete && r.targetDate >= todayLocal)
+              add(
+                `${prefix.toUpperCase()}: окно нельзя закрывать до окончания целевого дня.`,
+                "returns",
+              );
+          }
+          v.issues.forEach((issue, i) => {
+            if (!issue.summary.trim()) add(`Issue ${i + 1}: summary обязателен.`, "issues");
+            if (pnr.test(issue.summary) || pnr.test(issue.affectedGroup))
+              add(`Issue ${i + 1}: возможные персональные данные или URL.`, "issues");
+            if (!safeToken.test(issue.boardId) || issue.contentVersion !== BUILD.content)
+              add(
+                `Issue ${i + 1}: board/content version не соответствуют safe/frozen tuple.`,
+                "issues",
+              );
+          });
+          return e;
+        }
+        function clearErrors() {
+          document.querySelectorAll(".error").forEach((node) => {
+            node.textContent = "";
+          });
+          document
+            .querySelectorAll("[aria-invalid=true]")
+            .forEach((node) => node.removeAttribute("aria-invalid"));
+        }
+        let lastValid = null;
+        function showErrors(errors) {
+          clearErrors();
+          errors.forEach((item) => {
+            const target = item.field && $(`${item.field}`);
+            if (target) {
+              target.setAttribute("aria-invalid", "true");
+              const nearby = document.querySelector(`[data-error-for="${item.field}"]`);
+              if (nearby) nearby.textContent = item.message;
+            }
+            const section = document.querySelector(`[data-error-section="${item.section}"]`);
+            if (section) section.textContent += (section.textContent ? " " : "") + item.message;
+          });
+        }
+        $("observation-form").addEventListener("submit", (event) => {
+          event.preventDefault();
+          const v = payload();
+          const errors = validate(v);
+          showErrors(errors);
+          lastValid = errors.length ? null : v;
+          $("download").disabled = !lastValid;
+          $("status").textContent = errors.length
+            ? `Не прошло: ${errors.length} error(s)`
+            : "Valid locally — можно скачать JSON";
+          $("status").className = `status ${errors.length ? "bad" : "good"}`;
+          $("form-error").textContent = errors.length
+            ? "Исправьте ошибки рядом с соответствующими секциями."
+            : "";
+          if (!errors.length) $("status").focus?.();
+        });
+        $("download").addEventListener("click", () => {
+          if (!lastValid) return;
+          const blob = new Blob([JSON.stringify(lastValid, null, 2) + "\n"], {
+            type: "application/json",
+          });
+          const url = URL.createObjectURL(blob);
+          const anchor = document.createElement("a");
+          anchor.href = url;
+          anchor.download = `foldwink-${lastValid.studyCode}-observation.json`;
+          anchor.click();
+          setTimeout(() => URL.revokeObjectURL(url), 1000);
+        });
+        document.querySelectorAll("input,select,textarea").forEach((control) =>
+          control.addEventListener("input", () => {
+            $("download").disabled = true;
+            lastValid = null;
+          }),
+        );
+      })();
+    </script>
+  </body>
+</html>

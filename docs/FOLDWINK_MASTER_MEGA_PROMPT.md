@@ -1,5 +1,8 @@
 # Foldwink Master Mega Prompt for Claude Code
 
+> **Historical MVP bootstrap prompt — not the active product specification.**
+> Its English-only, no-monetization, small-pool and generic dependency-installation instructions do not govern the current EN/RU/DE Foldwink product. The active execution contract is `docs/FOLDWINK_IMPLEMENTATION_SPEC_2026-09-12.md` together with `docs/decisions/ADR-001-product-baseline.md` and `docs/decisions/ADR-002-persistence.md`. The historical body below is preserved as provenance.
+
 Paste the full block below into Claude Code at the repository root.
 
 This prompt combines the bootstrap, one-shot, and bypass-permissions execution variants into a single high-autonomy build prompt for the Foldwink MVP.

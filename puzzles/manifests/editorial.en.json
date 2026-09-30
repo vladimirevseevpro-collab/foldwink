@@ -1,0 +1,940 @@
+{
+  "language": "en",
+  "catalogVersion": "catalog-2026-09-v1",
+  "records": [
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0004",
+        "lineageId": "puzzle-0004",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "body",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0005",
+        "lineageId": "puzzle-0005",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "food"
+      ],
+      "anchorGroupId": "breads",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0019",
+        "lineageId": "puzzle-0019",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "B2",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Tack it on"
+      ],
+      "anchorGroupId": "fly",
+      "ambiguityRisk": "low",
+      "tabReview": "approved",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0022",
+        "lineageId": "puzzle-0022",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "B1",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Where you find it"
+      ],
+      "anchorGroupId": "library",
+      "ambiguityRisk": "low",
+      "tabReview": "approved",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0165",
+        "lineageId": "puzzle-0165",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "B2",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "abstract"
+      ],
+      "anchorGroupId": "tv",
+      "ambiguityRisk": "low",
+      "tabReview": "approved",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0020",
+        "lineageId": "puzzle-0020",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "B2",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Say it different"
+      ],
+      "anchorGroupId": "small",
+      "ambiguityRisk": "low",
+      "tabReview": "approved",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0006",
+        "lineageId": "puzzle-0006",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "animals"
+      ],
+      "anchorGroupId": "reptiles",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0009",
+        "lineageId": "puzzle-0009",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "days",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0011",
+        "lineageId": "puzzle-0011",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "people"
+      ],
+      "anchorGroupId": "family",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0015",
+        "lineageId": "puzzle-0015",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B1",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "home"
+      ],
+      "anchorGroupId": "appliances",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0023",
+        "lineageId": "puzzle-0023",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "B1",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Verbs in disguise"
+      ],
+      "anchorGroupId": "throw",
+      "ambiguityRisk": "low",
+      "tabReview": "approved",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0024",
+        "lineageId": "puzzle-0024",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "B1",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Terrain"
+      ],
+      "anchorGroupId": "beach",
+      "ambiguityRisk": "low",
+      "tabReview": "approved",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0031",
+        "lineageId": "puzzle-0031",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Desktop drawer"
+      ],
+      "anchorGroupId": "stationery",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0042",
+        "lineageId": "puzzle-0042",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B1",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Small things"
+      ],
+      "anchorGroupId": "sewing",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0060",
+        "lineageId": "puzzle-0060",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B1",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Paper trail"
+      ],
+      "anchorGroupId": "currency",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0032",
+        "lineageId": "puzzle-0032",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Waterline"
+      ],
+      "anchorGroupId": "drinks-hot",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0033",
+        "lineageId": "puzzle-0033",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B0",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "In the toolbox"
+      ],
+      "anchorGroupId": "power-tools",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0099",
+        "lineageId": "puzzle-0099",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B1",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "music"
+      ],
+      "anchorGroupId": "strings",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0100",
+        "lineageId": "puzzle-0100",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B1",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "transport"
+      ],
+      "anchorGroupId": "air",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0055",
+        "lineageId": "puzzle-0055",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B1",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Morning fuel"
+      ],
+      "anchorGroupId": "coffee",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0058",
+        "lineageId": "puzzle-0058",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B1",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Market day"
+      ],
+      "anchorGroupId": "citrus",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0071",
+        "lineageId": "puzzle-0071",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B1",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Trails on paper"
+      ],
+      "anchorGroupId": "maps",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0162",
+        "lineageId": "puzzle-0162",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "B1",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "abstract"
+      ],
+      "anchorGroupId": "money",
+      "ambiguityRisk": "low",
+      "tabReview": "approved",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0171",
+        "lineageId": "puzzle-0171",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "B1",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "science"
+      ],
+      "anchorGroupId": "biology",
+      "ambiguityRisk": "low",
+      "tabReview": "approved",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0192",
+        "lineageId": "puzzle-0192",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B1",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "everyday"
+      ],
+      "anchorGroupId": "input",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0193",
+        "lineageId": "puzzle-0193",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "B1",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "everyday"
+      ],
+      "anchorGroupId": "decor",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "codex-puzzle-designer-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "hard-010",
+        "lineageId": "hard-010",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "hard",
+      "band": "B3",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "thematic"
+      ],
+      "topicTags": [
+        "abstract",
+        "mirror image"
+      ],
+      "anchorGroupId": "optical",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "foldwink-editorial-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2-hard",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "hard-012",
+        "lineageId": "hard-012",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "hard",
+      "band": "B4",
+      "vocabularyFamiliarity": "specialist",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "language",
+        "fine print"
+      ],
+      "anchorGroupId": "quality",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "foldwink-editorial-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2-hard",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "hard-014",
+        "lineageId": "hard-014",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "hard",
+      "band": "B4",
+      "vocabularyFamiliarity": "specialist",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "abstract",
+        "space invaders"
+      ],
+      "anchorGroupId": "outer",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "foldwink-editorial-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2-hard",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "hard-015",
+        "lineageId": "hard-015",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "hard",
+      "band": "B4",
+      "vocabularyFamiliarity": "specialist",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "abstract",
+        "fault lines"
+      ],
+      "anchorGroupId": "geology",
+      "ambiguityRisk": "low",
+      "tabReview": "not-applicable",
+      "mobileFit": "approved",
+      "authorReview": {
+        "reviewerId": "foldwink-editorial-w2",
+        "date": "2026-09-14"
+      },
+      "independentReview": {
+        "reviewerId": "codex-puzzle-validator-w2-hard",
+        "date": "2026-09-14"
+      },
+      "playtest": null,
+      "status": "ready"
+    }
+  ]
+}

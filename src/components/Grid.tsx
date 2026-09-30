@@ -1,4 +1,4 @@
-import { type ReactNode, useCallback, useRef, useLayoutEffect } from "react";
+import { type ReactNode, useCallback, useRef } from "react";
 import { MOTION_CLASS } from "../styles/motion";
 
 interface Props {
@@ -15,41 +15,6 @@ interface Props {
  */
 export function Grid({ children, shake, label }: Props) {
   const ref = useRef<HTMLDivElement>(null);
-  const previousPositions = useRef(new Map<string, DOMRect>());
-
-  useLayoutEffect(() => {
-    if (!ref.current) return;
-    const parent = ref.current;
-    const childrenNodes = Array.from(parent.children) as HTMLElement[];
-
-    // Smooth DOM reordering using FLIP technique
-    childrenNodes.forEach((child) => {
-      const key = child.dataset.key;
-      if (!key) return;
-      const prev = previousPositions.current.get(key);
-      const current = child.getBoundingClientRect();
-
-      if (prev && (prev.left !== current.left || prev.top !== current.top)) {
-        const deltaX = prev.left - current.left;
-        const deltaY = prev.top - current.top;
-
-        child.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
-        child.style.transition = "none";
-        child.style.zIndex = "10";
-
-        requestAnimationFrame(() => {
-          child.style.transform = "";
-          // smooth, slightly bouncy spring
-          child.style.transition = "transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)";
-          setTimeout(() => {
-            child.style.zIndex = "";
-          }, 500);
-        });
-      }
-
-      previousPositions.current.set(key, current);
-    });
-  });
 
   const handleKeyDown = useCallback((e: React.KeyboardEvent<HTMLDivElement>) => {
     const grid = ref.current;

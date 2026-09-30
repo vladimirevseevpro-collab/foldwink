@@ -2,7 +2,7 @@
   "id": "puzzle-0165",
   "title": "Pocket watch",
   "difficulty": "medium",
-  "editorialSummary": "Four things you watch — TV, birds, time, sports. Screen/Field overlap.",
+  "editorialSummary": "Four familiar meanings of watch: television, birds, time, and live sport. Context anchors are intentionally specific so the false trail stays soft.",
   "meta": {
     "theme": "abstract",
     "categoryType": "attribute",
@@ -19,10 +19,10 @@
       "label": "Watching TV",
       "revealHint": "TV",
       "items": [
-        "Binge",
-        "Episode",
-        "Season",
-        "Streaming"
+        "Sitcom",
+        "Soap Opera",
+        "Remote Control",
+        "Channel Guide"
       ]
     },
     {
@@ -32,8 +32,8 @@
       "items": [
         "Binoculars",
         "Field Guide",
-        "Migration",
-        "Nesting"
+        "Plumage",
+        "Life List"
       ]
     },
     {
@@ -52,10 +52,10 @@
       "label": "Spectating",
       "revealHint": "Spectate",
       "items": [
-        "Stadium",
-        "Bleachers",
-        "Replay",
-        "Commentary"
+        "Grandstand",
+        "Scoreboard",
+        "Ticket Stub",
+        "Turnstile"
       ]
     }
   ]

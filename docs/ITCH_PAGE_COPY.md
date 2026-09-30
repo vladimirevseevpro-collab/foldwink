@@ -1,6 +1,6 @@
 # Foldwink — Itch.io Page Copy
 
-Ready-to-use text for the itch.io project page. Update counts when the library grows.
+Ready-to-use text for the itch.io project page. Keep counts, privacy claims and AI disclosure aligned with the shipped build.
 
 ## Title
 
@@ -8,64 +8,66 @@ Foldwink
 
 ## Tagline
 
-A short daily grouping puzzle with a twist.
+A daily 4×4 grouping puzzle with the one-shot Wink.
 
 ## Short description (for search / listing)
 
-Find 4 hidden groups of 4 in a 4×4 grid. Medium puzzles reveal their categories one letter at a time — tap once to Wink and reveal a full category. 500 curated puzzles across three difficulties. 2–5 minutes per session. No accounts. No tracking.
+A daily 4×4 grouping puzzle with the one-shot Wink. 3,000 curated puzzles in English, German and Russian.
 
 ## Long description
 
-### What is Foldwink?
+### Find the 4 hidden groups.
 
-Foldwink is a short-session grouping puzzle. You see 16 cards on a 4×4 grid. Your job: find 4 hidden groups of 4 that share a category. You have 4 mistakes to spare.
+A quick daily puzzle: 16 cards, 4 secret categories, 4 mistakes. Plays free in your browser in 2–5 minutes.
 
-### Three difficulty tiers
+**▶ Play today's puzzle free**
 
-**Easy** — Start here. Familiar categories, clean groupings, quick payoff.
+### Quick reasons to try it
 
-**Medium** — Stronger false trails and structured ambiguity. Medium puzzles introduce **Foldwink Tabs**: a row of 4 hidden category previews above the grid. Each time you solve a group, the tabs reveal one more letter. Once per puzzle you can **Wink** a tab — tap it to fully reveal its category keyword. Save the Wink for when you're stuck.
-
-**Master Challenge (Hard)** — The tabs slow to half speed. The Wink is gone. You solve from the grid and your own reasoning. Reduced help, cleaner pressure, stronger overlap. Tough but fair.
-
-### What's included
-
-- **500 curated puzzles** (272 easy · 194 medium · 34 hard)
-- **Daily puzzle** — one per day, deterministic
-- **Foldwink Tabs + Wink** — the mechanic that makes this game different
-- **Progression system** — guided Easy → Medium → Hard path
-- **Grading** — flawless, clean, clutch, no-wink-medium
-- **Daily archive** — your recent daily history
-- **Sound** — tactile paper / card / wood palette
-- **Share card** — shareable result image
-- **No accounts, no tracking, no ads** — stats live in your browser only
+- **Free in browser.** No install or account required.
+- **2–5 minutes.** Coffee-break short.
+- **Daily.** One fresh puzzle every day.
+- **The Wink.** A one-shot category reveal that makes Foldwink different.
+- **Quiet by design.** No banners, interstitials or streak pressure.
 
 ### How to play
 
 1. Look at the 16 cards.
 2. Pick exactly 4 that share a hidden category.
-3. Submit. If correct, the group locks in.
-4. If wrong, you lose a mistake.
-5. 4 mistakes and you're out. Find all 4 groups and you win.
-6. On Medium: Foldwink Tabs reveal the categories gradually. Use the Wink wisely.
-7. On Hard: tabs reveal slower, no Wink. Trust your reasoning.
+3. Submit. Right → the group locks. Wrong → one mistake.
+4. Four mistakes and the run ends. Solve all four groups to win.
 
-### Current status
+### Three difficulty tiers
 
-Foldwink is an actively developed indie puzzle game. The current build has 500 curated puzzles across three difficulties.
+**Easy** — Familiar categories and a quick payoff.
 
-### Credits
+**Medium** — Trickier overlap plus Foldwink Tabs: category previews reveal one letter after every solve. Once per puzzle, Wink a tab to reveal its full category.
 
-Designed and built by Neural Void.
-Contact: foldwink@neural-void.com
+**Master Challenge (Hard)** — Tabs reveal more slowly and the Wink is gone.
+
+### Content
+
+3,000 curated puzzles: 1,000 each in English, German (Deutsch) and Russian (Русский). The daily puzzle follows your language.
 
 ### Privacy
 
-No accounts. No network tracking. No ads. Your stats, streaks, and sound preference live in your browser's localStorage and never leave your device.
+No accounts. Stats, streaks, preferences and coarse event counters stay in your browser. Optional external analytics is off by default and sends only allowlisted coarse events after explicit consent; denied or offline events are never queued. An anonymous pilot report is downloaded only when you request it and is shared only if you choose to send it.
+
+### Support
+
+If Foldwink earns a smile, pay what you want above. Free play stays free; support funds new puzzle packs.
+
+### Credits
+
+Built by Neural Void with AI-assisted development, validation and editorial review. Contact: foldwink@neural-void.com
 
 ## Version text
 
-0.6.3 — 500 curated puzzles (272 easy · 194 medium · 34 hard). Content target reached.
+0.8.3 — 3,000 curated puzzles: 1,000 each in English, German and Russian. Daily calendar, offline PWA, collection/share polish, consent-safe pilot instrumentation and a verified catalogue count in the menu.
+
+## AI generation disclosure
+
+Select **Yes — This project contains the output of Generative AI**. Foldwink has AI-assisted code and content that is subsequently validated and edited; itch.io explicitly requires disclosure even when generated material was hand-edited. Do not use the `No generative AI was used` tag or claim.
 
 ## Tags (for itch.io)
 

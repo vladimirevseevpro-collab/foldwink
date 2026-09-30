@@ -2,21 +2,40 @@
  * Agent 1: progression-validator
  *
  * Verifies that Foldwink's unlock / routing logic cannot silently escalate
- * a player into a higher tier through UI interactions or stale state.
+ * Practice while Daily follows its reviewed, versioned calendar independently.
  *
- * Specifically guards against the regression flagged in QA row D-05:
- * "Medium shows locked in menu but Daily still launches a Medium puzzle."
- * That should be impossible after the 0.6.2 startDaily fix.
+ * Practice locks are progression gates. They must never rewrite or block the
+ * date-selected Daily entry, whose difficulty is part of the frozen calendar.
  */
+
+import { readFile } from "node:fs/promises";
+import { resolve } from "node:path";
 
 import {
   BASE_URL,
+  openPracticePicker,
   runCases,
   seedDismissedOnboarding,
   seedLocalStorage,
   stubStats,
+  startEasyPractice,
   waitForMenu,
 } from "./lib/harness.mjs";
+
+function todayLocal() {
+  const date = new Date();
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+}
+
+const dailyManifest = JSON.parse(
+  await readFile(resolve("puzzles/manifests/daily.en.2026-09-14.json"), "utf8"),
+);
+const expectedDailyEntry = dailyManifest.entries.find((entry) => entry.date === todayLocal());
+if (!expectedDailyEntry)
+  throw new Error(`reviewed EN Daily calendar has no entry for ${todayLocal()}`);
+const expectedDailyPuzzle = JSON.parse(
+  await readFile(resolve("puzzles/pool", `${expectedDailyEntry.puzzleId}.json`), "utf8"),
+);
 
 async function readTextOf(page, selector) {
   const el = await page.$(selector);
@@ -25,10 +44,12 @@ async function readTextOf(page, selector) {
 }
 
 async function menuMediumButton(page) {
+  await openPracticePicker(page);
   return page.locator("button", { hasText: /^Medium/ }).first();
 }
 
 async function menuHardButton(page) {
+  await openPracticePicker(page);
   return page.locator("button", { hasText: /Master Challenge/ }).first();
 }
 
@@ -59,7 +80,7 @@ await runCases("progression-validator", [
     },
   },
   {
-    name: "fresh state: Daily opens an Easy puzzle (does not leak into Medium)",
+    name: "fresh state: Daily follows the reviewed calendar independently of Practice locks",
     fn: async ({ page }) => {
       await seedDismissedOnboarding(page);
       await page.goto(BASE_URL);
@@ -67,8 +88,25 @@ await runCases("progression-validator", [
       await (await dailyButton(page)).click();
       await page.waitForSelector("header h1");
       const diff = await activeDifficultyFromHeader(page);
-      if (diff !== "easy")
-        throw new Error(`daily launched difficulty "${diff}", expected "easy"`);
+      if (diff !== expectedDailyPuzzle.difficulty) {
+        throw new Error(
+          `daily launched difficulty "${diff}", calendar puzzle ${expectedDailyEntry.puzzleId} requires "${expectedDailyPuzzle.difficulty}"`,
+        );
+      }
+      const renderedItems = await page
+        .locator('[role="grid"] button[data-key]')
+        .evaluateAll((buttons) =>
+          buttons
+            .map((button) => button.getAttribute("data-key"))
+            .filter(Boolean)
+            .sort(),
+        );
+      const expectedItems = expectedDailyPuzzle.groups.flatMap((group) => group.items).sort();
+      if (renderedItems.join("\0") !== expectedItems.join("\0")) {
+        throw new Error(
+          `daily did not render reviewed calendar puzzle ${expectedDailyEntry.puzzleId}`,
+        );
+      }
     },
   },
   {
@@ -125,8 +163,7 @@ await runCases("progression-validator", [
       await seedDismissedOnboarding(page);
       await page.goto(BASE_URL);
       await waitForMenu(page);
-      await page.locator("button", { hasText: "Easy puzzle" }).first().click();
-      await page.waitForSelector("header h1");
+      await startEasyPractice(page);
       // tap 3 cards then quit
       const cards = page.locator("button[aria-pressed]");
       await cards.nth(0).click();
@@ -174,6 +211,7 @@ await runCases("progression-validator", [
       await page.goto(BASE_URL);
       await waitForMenu(page);
       await (await dailyButton(page)).click();
+      await page.waitForSelector("header p");
       const subtitle = await readTextOf(page, "header p");
       if (!subtitle?.includes("replay")) {
         throw new Error(`daily subtitle missing · replay tag: "${subtitle}"`);
@@ -186,11 +224,12 @@ await runCases("progression-validator", [
       await seedDismissedOnboarding(page);
       await page.goto(BASE_URL);
       await waitForMenu(page);
-      await page.locator("button", { hasText: "Easy puzzle" }).first().click();
-      await page.waitForSelector("header h1");
+      await startEasyPractice(page);
       const titleBefore = await readTextOf(page, "header h1");
       const diffBefore = await activeDifficultyFromHeader(page);
       await page.reload();
+      await page.getByTestId("menu-continue-card").waitFor({ state: "visible" });
+      await page.getByTestId("menu-continue-card").getByRole("button").click();
       await page.waitForSelector("header h1");
       const titleAfter = await readTextOf(page, "header h1");
       const diffAfter = await activeDifficultyFromHeader(page);
@@ -205,17 +244,11 @@ await runCases("progression-validator", [
   {
     name: "Reset all local data clears stats and brings onboarding back",
     fn: async ({ page }) => {
-      // Seed onboarded via a one-shot evaluate (not addInitScript) so the
-      // post-reset reload does NOT re-seed onboarded from an init script.
       await page.goto(BASE_URL);
-      await page.evaluate(
-        (stats) => {
-          localStorage.setItem("foldwink:onboarded", "true");
-          localStorage.setItem("foldwink:stats", stats);
-        },
-        JSON.stringify(stubStats({ wins: 2, losses: 1 })),
-      );
-      await page.reload();
+      await page.getByRole("button", { name: "Skip" }).click();
+      await page.waitForSelector("header h1");
+      await page.getByRole("button", { name: "Quit to menu" }).click();
+      await page.getByRole("button", { name: "Tap again to quit" }).click();
       await waitForMenu(page);
       await page.locator("button", { hasText: "About · Privacy" }).click();
       const resetBtn = page.locator('button[aria-label="Reset all local Foldwink data"]');

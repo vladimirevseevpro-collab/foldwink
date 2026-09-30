@@ -1,10 +1,11 @@
-import { describe, it, expect, vi, beforeEach } from "vitest";
-import { currentBundle, langGetHardPool, langGetPool } from "../byLang";
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
+import { describe, it, expect, vi, beforeAll, beforeEach } from "vitest";
+import { currentBundle, ensureLangLoaded, langGetHardPool, langGetPool } from "../byLang";
 
-// Sanity tests for the per-language bundle + per-tier fallback contract.
-// The production pools are loaded at module-init by `import.meta.glob`, so
-// these tests are observational: they confirm the fallback rule works
-// against whatever the actual pools hold today (EN has Hard, DE/RU do not).
+// Sanity tests for the strict per-language bundle contract.
+// Runtime content is fetched on demand. Keep this test entirely local while
+// exercising the checked-in manifest/payload contract.
 
 vi.mock("../../i18n/useLanguage", () => ({
   getLangSync: vi.fn(() => "en"),
@@ -12,7 +13,16 @@ vi.mock("../../i18n/useLanguage", () => ({
 
 import { getLangSync } from "../../i18n/useLanguage";
 
-describe("byLang fallback contract", () => {
+describe("byLang strict locale contract", () => {
+  beforeAll(async () => {
+    vi.stubGlobal("fetch", async (url: string) => {
+      const relative = url.replace(/^\.?\//u, "");
+      const body = await readFile(join(process.cwd(), "public", relative), "utf8");
+      return { ok: true, status: 200, text: async () => body };
+    });
+    await Promise.all([ensureLangLoaded("en"), ensureLangLoaded("de"), ensureLangLoaded("ru")]);
+  });
+
   beforeEach(() => {
     vi.mocked(getLangSync).mockReset();
   });
@@ -24,21 +34,16 @@ describe("byLang fallback contract", () => {
     expect(b.hard.length).toBeGreaterThan(0);
   });
 
-  it("DE falls back to EN Hard when DE Hard tier is empty", () => {
+  it("DE does not expose another language's pool", () => {
     vi.mocked(getLangSync).mockReturnValue("de");
     const b = currentBundle();
-    // DE has Easy + Medium content but no Hard tier. The fallback
-    // contract says Hard must expose EN puzzles so the tier stays
-    // reachable for DE players.
-    expect(b.hard.length).toBeGreaterThan(0);
     expect(b.easy.length).toBeGreaterThan(0);
+    expect(b.pool.every((puzzle) => puzzle.id.startsWith("de-"))).toBe(true);
   });
 
-  it("RU exposes its own Hard tier if present, otherwise falls back", () => {
+  it("RU only exposes its own boot boards", () => {
     vi.mocked(getLangSync).mockReturnValue("ru");
-    const b = currentBundle();
-    // Whatever RU has (today: no Hard), Hard must be non-empty via fallback.
-    expect(b.hard.length).toBeGreaterThan(0);
+    expect(currentBundle().pool.every((puzzle) => puzzle.id.startsWith("ru-"))).toBe(true);
   });
 
   it("langGetPool respects language switch", () => {
@@ -46,27 +51,25 @@ describe("byLang fallback contract", () => {
     const en = langGetPool().length;
     vi.mocked(getLangSync).mockReturnValue("de");
     const de = langGetPool().length;
-    // EN pool is fixed at 500; DE is at least as large as EN fallback (so both non-empty).
     expect(en).toBeGreaterThan(0);
     expect(de).toBeGreaterThan(0);
   });
 
-  it("langGetHardPool falls back for DE", () => {
+  it("langGetHardPool remains selected-language only for DE", () => {
     vi.mocked(getLangSync).mockReturnValue("de");
     const hard = langGetHardPool();
-    // Fallback to EN hard (34 puzzles) must be available.
-    expect(hard.length).toBeGreaterThan(0);
+    expect(hard.every((puzzle) => puzzle.id.startsWith("de-"))).toBe(true);
   });
 
-  it("currentBundle().getById resolves across all language pools (EN, RU, DE)", () => {
+  it("getById never resolves a puzzle from another language", () => {
     vi.mocked(getLangSync).mockReturnValue("en");
     const enBundle = currentBundle();
-    // An EN bundle can resolve a RU or DE puzzle ID via cross-pool fallback
-    const sampleRu = currentBundle().pool[0]?.id;
-    expect(enBundle.getById(sampleRu)).toBeDefined();
-
     vi.mocked(getLangSync).mockReturnValue("de");
     const deBundle = currentBundle();
-    expect(deBundle.getById(sampleRu)).toBeDefined();
+    const sampleDe = deBundle.pool[0]?.id;
+    expect(sampleDe).toBeDefined();
+
+    vi.mocked(getLangSync).mockReturnValue("en");
+    expect(enBundle.getById(sampleDe!)).toBeUndefined();
   });
 });

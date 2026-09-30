@@ -6,12 +6,13 @@ import {
   type PalimpsestPuzzle,
 } from "../puzzles/palimpsest";
 import { useLang, useT } from "../i18n/useLanguage";
-import { useSound } from "../audio/useSound";
-import { triggerHaptic } from "../haptics/haptics";
+import { useFeedback } from "../feedback/useFeedback";
 import {
-  loadArchivistProfile,
-  awardPalimpsestCompletion,
-} from "../progression/archivistProfile";
+  completePalimpsestResume,
+  loadPalimpsestResume,
+  savePalimpsestResume,
+} from "../game/state/appStore";
+import type { PersistedPalimpsestSession } from "../persistence/gameRepository";
 import { MistakesDots } from "./MistakesDots";
 
 interface PalimpsestModalProps {
@@ -38,28 +39,54 @@ function shuffleArray<T>(arr: readonly T[]): T[] {
 export function PalimpsestModal({ onClose, onOpenPassport }: PalimpsestModalProps) {
   const lang = useLang();
   const t = useT();
-  const play = useSound();
-
+  const feedback = useFeedback();
   const [puzzle] = useState<PalimpsestPuzzle>(() => getPalimpsestPuzzle(lang));
+  const [restoredSession] = useState(() => loadPalimpsestResume(lang, puzzle.id));
   const [stage, setStage] = useState<"obverse" | "obverse_done" | "reverse" | "completed">(
-    "obverse",
+    restoredSession?.stage ?? "obverse",
   );
   const [isFlipping, setIsFlipping] = useState(false);
 
   // Active layer cards & gameplay state
   const activeLayer = stage === "reverse" ? puzzle.reverse : puzzle.obverse;
-  const [order, setOrder] = useState<string[]>(() => shuffleArray(puzzle.allWords));
-  const [selection, setSelection] = useState<string[]>([]);
-  const [solvedGroupIds, setSolvedGroupIds] = useState<string[]>([]);
-  const [mistakesUsed, setMistakesUsed] = useState(0);
+  const [order, setOrder] = useState<string[]>(
+    () => restoredSession?.order ?? shuffleArray(puzzle.allWords),
+  );
+  const [selection, setSelection] = useState<string[]>(() => restoredSession?.selection ?? []);
+  const [solvedGroupIds, setSolvedGroupIds] = useState<string[]>(
+    () => restoredSession?.solvedGroupIds ?? [],
+  );
+  const [mistakesUsed, setMistakesUsed] = useState(() => restoredSession?.mistakesUsed ?? 0);
   const [flash, setFlash] = useState<"correct" | "incorrect" | "one-away" | null>(null);
   const [rewardGranted, setRewardGranted] = useState(false);
+  const completionTriggered = useRef(false);
 
   // Focus lock
   const containerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     containerRef.current?.focus();
   }, []);
+
+  useEffect(() => {
+    if (stage === "completed") {
+      if (!completionTriggered.current) {
+        completionTriggered.current = true;
+        setRewardGranted(completePalimpsestResume(lang, puzzle.id));
+      }
+      return;
+    }
+    const session: PersistedPalimpsestSession = {
+      puzzleId: puzzle.id,
+      language: lang,
+      stage,
+      order,
+      selection,
+      solvedGroupIds,
+      mistakesUsed,
+      savedAt: Date.now(),
+    };
+    savePalimpsestResume(session);
+  }, [lang, mistakesUsed, order, puzzle.id, selection, solvedGroupIds, stage]);
 
   // Map of solved items to their group color
   const solvedColorByItem = new Map<string, string>();
@@ -82,13 +109,11 @@ export function PalimpsestModal({ onClose, onOpenPassport }: PalimpsestModalProp
 
     if (selection.includes(word)) {
       setSelection(selection.filter((w) => w !== word));
-      play("deselect");
-      triggerHaptic("deselect");
+      feedback("deselect");
     } else {
       if (selection.length >= 4) return;
       setSelection([...selection, word]);
-      play("select");
-      triggerHaptic("select");
+      feedback("select");
     }
   };
 
@@ -97,13 +122,12 @@ export function PalimpsestModal({ onClose, onOpenPassport }: PalimpsestModalProp
     const solved = order.filter((w) => solvedColorByItem.has(w));
     const shuffledUnsolved = shuffleArray(unsolved);
     setOrder([...solved, ...shuffledUnsolved]);
-    play("deselect");
-    triggerHaptic("select");
+    feedback("deselect");
   };
 
   const handleClear = () => {
     setSelection([]);
-    play("deselect");
+    feedback("deselect");
   };
 
   const handleRetryLayer = () => {
@@ -113,8 +137,7 @@ export function PalimpsestModal({ onClose, onOpenPassport }: PalimpsestModalProp
     const unsolved = order.filter((w) => !solvedColorByItem.has(w));
     const solved = order.filter((w) => solvedColorByItem.has(w));
     setOrder([...solved, ...shuffleArray(unsolved)]);
-    play("deselect");
-    triggerHaptic("select");
+    feedback("deselect");
   };
 
   const handleSubmit = () => {
@@ -126,44 +149,32 @@ export function PalimpsestModal({ onClose, onOpenPassport }: PalimpsestModalProp
       setSolvedGroupIds(nextSolved);
       setSelection([]);
       setFlash("correct");
-      play("correct");
-      triggerHaptic("correct");
+      feedback("correct");
 
       setTimeout(() => setFlash(null), 800);
 
       // Check if all 4 groups of this layer are solved
       if (nextSolved.length === 4) {
         if (stage === "obverse") {
-          setTimeout(() => {
-            setStage("obverse_done");
-            play("win");
-            triggerHaptic("win");
-          }, 600);
+          setStage("obverse_done");
+          feedback("win");
         } else if (stage === "reverse") {
-          setTimeout(() => {
-            setStage("completed");
-            play("win");
-            triggerHaptic("win");
-            // Award rewards
-            awardPalimpsestCompletion(loadArchivistProfile());
-            setRewardGranted(true);
-          }, 600);
+          setStage("completed");
+          feedback("win");
         }
       }
     } else {
       const isOne = isPalimpsestOneAway(selection, activeLayer);
       setMistakesUsed((m) => Math.min(4, m + 1));
       setFlash(isOne ? "one-away" : "incorrect");
-      play("wrong");
-      triggerHaptic("wrong");
+      feedback(isOne ? "oneAway" : "wrong");
       setTimeout(() => setFlash(null), isOne ? 1200 : 500);
     }
   };
 
   const handleFlipParchment = () => {
     setIsFlipping(true);
-    play("tabReveal");
-    triggerHaptic("select");
+    feedback("tabReveal");
 
     setTimeout(() => {
       // Transition to reverse side
@@ -173,8 +184,7 @@ export function PalimpsestModal({ onClose, onOpenPassport }: PalimpsestModalProp
       setMistakesUsed(0);
       setOrder(shuffleArray(puzzle.allWords));
       setIsFlipping(false);
-      play("submit");
-      triggerHaptic("correct");
+      feedback("submit");
     }, 700);
   };
 
@@ -326,6 +336,7 @@ export function PalimpsestModal({ onClose, onOpenPassport }: PalimpsestModalProp
                   <button
                     key={word}
                     type="button"
+                    aria-pressed={isSelected}
                     disabled={isSolved || stage === "obverse_done" || mistakesUsed >= 4}
                     onClick={() => toggleSelect(word)}
                     className={`relative min-h-12 rounded-xl border-2 p-2 text-xs font-bold leading-tight uppercase transition-all shadow-sm flex items-center justify-center text-center ${

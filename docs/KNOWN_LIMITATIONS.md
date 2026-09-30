@@ -1,75 +1,53 @@
 # Known Limitations
 
-Foldwink MVP is intentionally scoped small. These are known gaps documented so the next iteration has a clear starting point.
+This document records the real remaining limits of the current Foldwink web/PWA build. It is a release decision aid, not a historical changelog.
 
-## Gameplay
+## Product and gameplay
 
-- **Timer visibility (fixed 0.6.2).** A live in-game timer is rendered on the game-screen header. Earlier QA notes ("timer not visible") tracked a readability issue caused by a `text-muted` + 12px combo, not a missing element; 0.6.2 bumps the timer to normal body weight and contrast.
-- **No one-away hint.** Deferred to post-MVP.
-- **Standard mode wraps on completion.** After the last puzzle in the pool, the player restarts at the beginning. There is no "you finished everything" celebration.
-- **Standard "Next puzzle" after a loss** retries the same puzzle. This is intentional ("retry") but may surprise first-time players.
-- **Quit to menu mid-game** drops the attempt with no stats change — the game is simply abandoned.
-
-## Daily mode
-
-- **Local date, not UTC.** Two players in different time zones may see different daily puzzles on the same calendar day. Natural UX, but not "global daily".
-- **Daily replay is allowed but not recorded.** A replay shows `· replay` in the header subtitle and does not touch stats or daily history.
-- **No daily calendar or past-puzzle browser.** Only today's daily is reachable.
-- **Countdown is local.** The "Next daily in HH:MM:SS" clock on the result screen is computed against the player's local midnight. It will disagree with a friend in a different time zone — acceptable, matches the selection rule.
+- Daily selection uses the player's local date. It is intentionally not a UTC-global shared daily.
+- Daily replays are allowed but do not change daily history or statistics.
+- Standard tracks wrap after their curated pool is exhausted; there is no separate "pool complete" celebration.
+- Quitting a game abandons that attempt without changing statistics.
+- There is no past-daily browser yet. Daily Fold is a seven-day personal history, not an archive of playable old dailies.
 
 ## Content
 
-- **Current library: 500 curated puzzles (272 easy · 194 medium · 34 hard).** Comfortable for ~1 year of daily + standard play. Every medium carries Foldwink Tabs (`revealHint` on all 4 groups) and supports the Wink action. Hard puzzles use half-speed Tabs with no Wink.
-- **Content target reached.** Post-launch batches may extend toward 600 at a slower cadence.
-- **One Wink per medium puzzle.** The player can tap a Foldwink Tab once per game to fully reveal its category. No second wink. Easy puzzles have no Wink affordance — by design, not a gap. Hard puzzles have no Wink by design.
-- **Hard / Master Challenge: 20 real puzzles, fully playable.** Tabs reveal at half-speed and Wink is disabled. See `docs/PROGRESSION_RULES.md` for the product spec and progression model.
-- **English only.** No localization.
-- **Editorial notes are sparse on easy puzzles.** Medium puzzles carry `editorialSummary` hints for the false trails; easy puzzles mostly do not.
+- Active local pools contain exactly 1,000 puzzles each in English, Russian, and German. Structural validation passes for all 3,000 records, but the September scale-up inventory is not equivalent to a human editorial sign-off on every board.
+- The validator enforces structure and catches a defined set of logic risks. It cannot prove that every category feels natural to a human, so future batches still require editorial review before promotion.
+- One review signal remains in the Russian pool: `ru-0205` distinguishes conventional geographic regions of East Asia and Southeast Asia. It was retained after manual review, but belongs on the next editorial revisit list.
+- German Tabs audit classified 33 fallback boards as P0 rebuild/retire candidates. All 33 have now been replaced one-for-one with independently reviewed general-audience boards.
+- 28 active Medium/Hard boards still rely on a full group-label fallback instead of a short explicit revealHint (27 English and 1 Russian; German has none). They are playable, but this is a mobile readability debt and is now counted by validation.
+- Easy puzzles deliberately have no Tabs or Wink. Medium puzzles have Tabs and one optional Wink. Hard puzzles reveal Tabs more slowly and have no Wink.
 
-## Persistence
+## Privacy, storage, and monetization
 
-- **Mid-game persistence works.** Refreshing restores the active game via `foldwink:active-session`. Closing the tab preserves state in localStorage.
-- **No cross-device sync.** All stats live in `localStorage` of the current browser.
-- **Clearing site data wipes stats.** Expected.
-- **No export/import of stats.**
+- Progress, statistics, consent, and the cosmetic Supporter flag are local to this browser. Clearing site data removes them; there is no account or cross-device sync.
+- Optional Umami measurement is dormant until an operator configures it and the player explicitly consents. No analytics endpoint is configured in the repository.
+- Ko-fi and hosted Supporter checkout are code-ready but intentionally hidden until public URLs are configured. The Supporter return is trust-based because there is no receipt-verification backend; its perk remains cosmetic.
+- Rewarded ads are not active. The adapter is deliberately dormant until real product evidence justifies a peripheral, non-pay-to-win reward.
 
-## UX and accessibility
+## Platform and release
 
-- **Keyboard navigation is default tab order only.** No custom arrow-key grid navigation. QA note D-18 (April 2026) confirms arrow-key navigation is missing; Tab / Enter / Space do work. Deferred to a dedicated accessibility pass after 1.0.
-- **Onboarding modal is per-origin.** localStorage scopes the `foldwink:onboarded` flag to the origin the game was loaded from. A player who first dismisses onboarding on `sunlike78.github.io/foldwink/` will still see it on `neural-void.com/foldwink/` because those are different origins. Standard browser behavior, not a bug.
-- **Console noise when the game is loaded through the neural-void.com launcher page.** The parent page may inject DatadogRUM, Facebook Pixel, and Intercom — these appear in the console alongside the game's own bundle logs. The game bundle itself logs nothing in production. Ignore third-party lines when triaging real issues.
-- **Color is not the only signal** (solved groups also move visually to the lock state), but the four solved palette colors are not color-blind validated.
-- **Screen reader experience is basic.** Cards announce text + `aria-pressed`; mistakes have an `aria-label`. No live region for game state changes.
-- **Long item names** (≥18 chars) may wrap tightly on the smallest phones. The current pool is safe (longest word is "Stracciatella" at 13 chars).
+- Direct web/PWA is the canonical product. itch.io is optional discovery, not the primary home or payment flow.
+- Service-worker offline behavior and responsive layouts are automated in browser tests, but real iPhone Safari and Android Chrome install/safe-area/share checks remain human work. The exact W7 pilot build is itch `0.8.4` / `#1984826`; older device evidence does not substitute for exact-build acceptance.
+- Native Android/iOS shells have not been started. They require a separate Capacitor setup, real-device testing, and channel-compliant purchase handling; a thin wrapped website is not a release target.
+- The Cloudflare Pages source has been prepared to serve the current PWA at the canonical route, but the public deploy is blocked by an expired Wrangler authentication token. itch.io was updated separately; direct web publication, support contact verification, and a real hosted checkout return test are still required before an openly monetized launch.
 
-## Build / tooling
+## Accessibility and audio
 
-- **ESLint + Prettier configured.** CI runs typecheck / test / validate / lint / format:check / build.
-- **No component or e2e tests.** Only pure-logic unit tests in Vitest + Playwright browser QA automation.
-- **No bundle analyser.** Production JS is 321 kB / 103 kB gzip — acceptable for web, on the heavier side for itch.io HTML5 embed.
+- Keyboard grid navigation, localized labels, and live game-status announcements are implemented. A full screen-reader audit with real assistive technology is still outstanding.
+- The solved palette uses dark ink plus shape markers, but has not been independently tested with colour-blind participants.
+- Nine local tactile audio cues are integrated and mute state persists. A human listening pass on phone speakers and headphones remains required.
 
-## Observability
+## Build and QA
 
-- **No analytics.** No Sentry, no Plausible, no network telemetry of any kind. 0.4.x adds a **local-only** aggregate event counter (`foldwink:events`) that never leaves the device. A clear-local-data affordance lives in the About footer on the menu.
+- Automated gates currently cover formatting, TypeScript, linting, 57 Vitest files / 367 tests, content validation for 1,000 puzzles in each supported language, production build, 74/74 production-browser E2E scenarios and 4/4 strict pilot/release-operations suites. The W8 checker represents all 47 acceptance items, cryptographically binds each pass to gate-specific local evidence, checks the real ZIP entry set against its manifest and requires a matching detached exact-commit rebuild receipt. It intentionally remains NO-GO while physical-device, human, rollback or clean-candidate evidence is absent.
+- `npm audit --omit=dev` reports zero production vulnerabilities. After the isolated Vite 8/Vitest 5/PostCSS/SDK hardening slice, the full development tree reports four advisories (1 low, 3 moderate; no high or critical). The low item is `tsx`'s pinned development-only esbuild, while the three moderate entries are one Capacitor CLI → xcode → uuid chain used only for future iOS tooling and not shipped in the static web build. npm currently offers a Capacitor CLI downgrade rather than a compatible patched xcode chain. These residuals require an exact macOS/iOS compatibility decision or upstream fix before a native shell release; the clean W8 web candidate must repeat both audits.
+- Browser automation cannot replace physical-device checks for Safari audio unlock, safe areas, install UX, native share sheets, payment redirects, or store review expectations.
 
-## Audio (0.4.1)
+## Deliberate non-goals for 1.0
 
-- **Synthesised palette, not recorded.** All nine cues (`select`, `deselect`, `submit`, `wrong`, `correct`, `tabReveal`, `wink`, `win`, `loss`) are generated at runtime via the Web Audio API. The target material reference is paper / card / wood / bone; the 0.4.1 recipes tune bodies to 80–280 Hz with low-pass filtered noise taps to stay away from mobile-chime brightness. See `docs/SOUND_DESIGN.md` for the cue manifest and the asset-replacement plan.
-- **No in-browser audio QA has been run on 0.4.1.** The retune is based on the documented material direction, not on a listening pass. Remains a human-verification task before a public launch.
-
-## Progression (0.4.2)
-
-- **Easy → Medium soft-gate.** Medium puzzles are visible from day one but the Medium button is disabled until the player has solved **5 easy puzzles**. The unlock is simple on purpose; see `docs/PROGRESSION_RULES.md` for the full model (unlock, recommendation, strong, fallback).
-- **No mixed "Standard" walk anymore.** Since 0.4.2, Standard mode is split into Easy and Medium tracks with independent cursors (`progress.easyCursor`, `progress.mediumCursor`). Old saved state using the legacy single `cursor` field is read as the easy cursor on upgrade.
-- **Time is not a hard gate.** Recent solve durations only affect the "strong" confidence bump on the recommendation signal — they never lock or unlock anything.
-- **Fallback is gentle.** Two consecutive medium losses trigger a short hint suggesting more easy puzzles. Medium is never re-locked.
-
-## Branding
-
-- **System-sans wordmark only.** No human-designed logotype. The new "by Neural Void" sublabel (Wordmark / AboutFooter / share card / OG image) is typographic, not illustrated.
-- **SVG-only OG image.** `public/og.svg` is updated for 0.4.1 (Neural Void sublabel + corrected tagline). A raster 1200×630 PNG is still a deferred human-art task — many social scrapers prefer PNG/JPG over SVG.
-- **No deployed branded domain wired into production yet.** The app text and share-card footer reference `neural-void.com/foldwink` but the actual deployment is separate.
-
-## Post-MVP candidates
-
-See `docs/POST_MVP_ROADMAP.md` for the prioritized list of deferred features.
+- No backend, accounts, cloud sync, leaderboards, multiplayer, or runtime puzzle generation.
+- No additional gameplay twist beyond Foldwink Tabs and Wink.
+- No 3D renderer, motion framework, autoplay ads, interstitials, banners, or paid active-puzzle advantage.
+- All 27 audited Russian P0 boards have now been rebuilt one-for-one after native-language review; no audited Russian P0 candidates remain.

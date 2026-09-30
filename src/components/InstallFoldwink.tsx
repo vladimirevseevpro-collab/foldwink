@@ -6,6 +6,7 @@ import {
   type BeforeInstallPromptEvent,
 } from "../pwa/installPrompt";
 import { useLang, useT } from "../i18n/useLanguage";
+import { FoldwinkIcon } from "./FoldwinkIcon";
 
 /**
  * The browser only exposes this prompt when the page meets its own install
@@ -55,7 +56,7 @@ export function InstallFoldwink() {
       onClick={() => void install()}
       className="inline-flex items-center gap-1.5 text-[11px] text-muted hover:text-accent transition-colors"
     >
-      <span aria-hidden="true">+</span>
+      <FoldwinkIcon name="install" size={14} />
       <span>{t.menu.installApp}</span>
     </button>
   );

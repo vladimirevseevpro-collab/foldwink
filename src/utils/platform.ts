@@ -8,6 +8,28 @@ export function isNativePlatform(): boolean {
   return Boolean(cap?.isNativePlatform?.());
 }
 
+export type HostPresentation = "web" | "standalone" | "embed" | "extension" | "native";
+
+/** Stable styling signal: compact host treatment must not be inferred from viewport alone. */
+export function getHostPresentation(): HostPresentation {
+  if (typeof window === "undefined") return "web";
+  if (isNativePlatform()) return "native";
+  const runtime = (window as unknown as { chrome?: { runtime?: { id?: string } } }).chrome
+    ?.runtime;
+  if (runtime?.id) return "extension";
+  if (isEmbedded()) return "embed";
+  const nav =
+    typeof navigator === "undefined"
+      ? undefined
+      : (navigator as Navigator & {
+          standalone?: boolean;
+        });
+  if (nav?.standalone || window.matchMedia?.("(display-mode: standalone)").matches) {
+    return "standalone";
+  }
+  return "web";
+}
+
 /**
  * Detect iOS Safari running in a regular browser tab (not standalone /
  * Add-to-Home-Screen mode, not Chrome-on-iOS, not native Capacitor shell).

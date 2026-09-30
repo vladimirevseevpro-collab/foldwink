@@ -106,12 +106,17 @@ describe("Zen Streak Mode & Custom Puzzle", () => {
     store.getState().startZen();
     expect(store.getState().stats.zenStreak).toBe(4);
 
-    // Consume 4 mistakes on zen-1
-    for (let i = 0; i < 4; i++) {
-      store.getState().toggleSelection("zen-1-a");
-      store.getState().toggleSelection("zen-1-b");
-      store.getState().toggleSelection("zen-1-e");
-      store.getState().toggleSelection("zen-1-i");
+    // Consume 4 unique mistakes on zen-1. Repeating the same quartet is
+    // intentionally non-consuming under the W1 fairness rule.
+    const wrongQuartets = [
+      ["zen-1-a", "zen-1-e", "zen-1-i", "zen-1-m"],
+      ["zen-1-b", "zen-1-f", "zen-1-j", "zen-1-n"],
+      ["zen-1-c", "zen-1-g", "zen-1-k", "zen-1-o"],
+      ["zen-1-d", "zen-1-h", "zen-1-l", "zen-1-p"],
+    ];
+    for (const quartet of wrongQuartets) {
+      store.getState().clearSelection();
+      for (const item of quartet) store.getState().toggleSelection(item);
       store.getState().submit();
     }
 

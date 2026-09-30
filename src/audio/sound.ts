@@ -1,5 +1,4 @@
 import { SOUND_EVENTS, getSoundCueUrl, type SoundEvent } from "./cues";
-import { setProceduralMuted, setProceduralVolume } from "./proceduralSynth";
 
 export type { SoundEvent } from "./cues";
 
@@ -39,6 +38,10 @@ let noiseBuffer: AudioBuffer | null = null;
 const decodedCues = new Map<SoundEvent, AudioBuffer>();
 const cueLoadPromises = new Map<SoundEvent, Promise<AudioBuffer | null>>();
 const failedCueLoads = new Set<SoundEvent>();
+const lastPlayedAt: Partial<Record<SoundEvent, number>> = {};
+const consumedEventKeys = new Set<string>();
+const TAP_MIN_GAP_MS = 28;
+const MAX_EVENT_KEYS = 256;
 
 function isBrowser(): boolean {
   return typeof window !== "undefined" && typeof document !== "undefined";
@@ -88,7 +91,6 @@ export function setSoundMuted(muted: boolean): void {
   const next = { ...loadSettings(), muted };
   cachedSettings = next;
   persistSettings(next);
-  setProceduralMuted(muted);
   if (masterGain) {
     masterGain.gain.value = next.muted ? 0 : next.volume;
   }
@@ -99,7 +101,6 @@ export function setSoundVolume(volume: number): void {
   const next = { ...loadSettings(), volume: clamped };
   cachedSettings = next;
   persistSettings(next);
-  setProceduralVolume(clamped);
   if (masterGain && !next.muted) {
     masterGain.gain.value = clamped;
   }
@@ -118,7 +119,6 @@ function getOrCreateContext(): AudioContext | null {
     const s = loadSettings();
     masterGain.gain.value = s.muted ? 0 : s.volume;
     masterGain.connect(audioCtx.destination);
-    preloadSoundPack(audioCtx);
     return audioCtx;
   } catch {
     return null;
@@ -152,10 +152,7 @@ function loadCue(ctx: AudioContext, event: SoundEvent): Promise<AudioBuffer | nu
   return promise;
 }
 
-function preloadSoundPack(ctx: AudioContext): void {
-  for (const event of SOUND_EVENTS) void loadCue(ctx, event);
-}
-
+/** Explicit full-pack loader for the sound lab only. Gameplay loads each cue on demand. */
 export async function prepareSoundPack(): Promise<void> {
   const ctx = getOrCreateContext();
   if (!ctx) return;
@@ -408,12 +405,33 @@ export interface PlaySoundOptions {
   rateJitter?: number;
   /** Micro-gain variation (e.g. 0.04 for +/- 4%) for subtle dynamics */
   gainJitter?: number;
+  /** Idempotency key for committed state transitions (solve, terminal, Wink). */
+  eventKey?: string;
 }
 
 export function playSound(event: SoundEvent, options?: PlaySoundOptions): void {
+  if (options?.eventKey) {
+    if (consumedEventKeys.has(options.eventKey)) return;
+    consumedEventKeys.add(options.eventKey);
+    if (consumedEventKeys.size > MAX_EVENT_KEYS) {
+      const oldest = consumedEventKeys.values().next().value;
+      if (oldest) consumedEventKeys.delete(oldest);
+    }
+  }
+  if (loadSettings().muted) return;
+
+  if (event === "select" || event === "deselect") {
+    const now =
+      typeof performance !== "undefined" && typeof performance.now === "function"
+        ? performance.now()
+        : Date.now();
+    const previous = lastPlayedAt[event];
+    if (previous !== undefined && now - previous < TAP_MIN_GAP_MS) return;
+    lastPlayedAt[event] = now;
+  }
+
   const ctx = getOrCreateContext();
   if (!ctx || !masterGain) return;
-  if (loadSettings().muted) return;
 
   const baseRate = options?.playbackRate ?? 1;
   // Apply organic jitter for physical interactions (select, deselect, wrong) if not explicitly overridden
@@ -464,13 +482,23 @@ export function playSound(event: SoundEvent, options?: PlaySoundOptions): void {
     });
 }
 
-export function resetSoundForTests(): void {
-  cachedSettings = null;
+/** Pause decorative audio while the page is backgrounded. Playback resumes
+ * only through the next explicit sound event/user gesture. */
+export function suspendSound(): void {
+  if (!audioCtx || audioCtx.state !== "running") return;
+  try {
+    void audioCtx.suspend();
+  } catch {
+    /* suspension is best-effort */
+  }
+}
+
+export function disposeSound(): void {
   if (audioCtx) {
     try {
       void audioCtx.close();
     } catch {
-      /* ignore */
+      /* teardown is best-effort */
     }
   }
   audioCtx = null;
@@ -479,4 +507,11 @@ export function resetSoundForTests(): void {
   decodedCues.clear();
   cueLoadPromises.clear();
   failedCueLoads.clear();
+  consumedEventKeys.clear();
+  for (const event of SOUND_EVENTS) delete lastPlayedAt[event];
+}
+
+export function resetSoundForTests(): void {
+  cachedSettings = null;
+  disposeSound();
 }

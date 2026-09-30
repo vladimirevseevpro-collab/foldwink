@@ -3,12 +3,17 @@ import { clearEventLog } from "../analytics/eventLog";
 import { clearAllLocalData } from "../stats/persistence";
 import { useT } from "../i18n/useLanguage";
 import { PrivacyControl } from "./PrivacyControl";
+import { downloadResearchExport } from "../analytics/researchCohort";
+import { useLang } from "../i18n/useLanguage";
 
 export function AboutFooter() {
   const [open, setOpen] = useState(false);
   const [cleared, setCleared] = useState(false);
   const [resetArmed, setResetArmed] = useState(false);
+  const [resetBusy, setResetBusy] = useState(false);
+  const [resetFailed, setResetFailed] = useState(false);
   const t = useT();
+  const lang = useLang();
 
   const handleClear = (): void => {
     clearEventLog();
@@ -16,14 +21,29 @@ export function AboutFooter() {
     setTimeout(() => setCleared(false), 1800);
   };
 
-  const handleReset = (): void => {
+  const handleReset = async (): Promise<void> => {
+    if (resetBusy) return;
     if (!resetArmed) {
+      setResetFailed(false);
       setResetArmed(true);
       setTimeout(() => setResetArmed(false), 3000);
       return;
     }
-    clearAllLocalData();
-    if (typeof window !== "undefined") window.location.reload();
+    setResetBusy(true);
+    try {
+      const clearedAllStores = await clearAllLocalData();
+      if (clearedAllStores && typeof window !== "undefined") {
+        window.location.reload();
+        return;
+      }
+      setResetFailed(true);
+      setResetArmed(false);
+    } catch {
+      setResetFailed(true);
+      setResetArmed(false);
+    } finally {
+      setResetBusy(false);
+    }
   };
 
   if (!open) {
@@ -65,6 +85,14 @@ export function AboutFooter() {
       </p>
       <div className="text-[10px] uppercase text-muted mb-1">{t.about.privacy}</div>
       <p className="text-xs text-muted leading-relaxed mb-3">{t.about.privacyBody}</p>
+      <a
+        href={`${import.meta.env.BASE_URL}third-party-notices.txt`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mb-3 inline-block text-[11px] text-muted hover:text-text transition-colors underline underline-offset-2"
+      >
+        Third-party notices
+      </a>
       <div className="text-[10px] uppercase text-muted mb-1">{t.about.support}</div>
       <p className="text-xs text-muted leading-relaxed mb-3">
         {t.about.supportBody}{" "}
@@ -86,16 +114,31 @@ export function AboutFooter() {
         >
           {cleared ? t.about.eventLogCleared : t.about.clearEventLog}
         </button>
+        <p className="text-[11px] leading-relaxed text-muted">{t.about.researchExportDetail}</p>
+        <button
+          type="button"
+          onClick={() => downloadResearchExport(lang)}
+          className="text-[11px] text-muted hover:text-text transition-colors underline underline-offset-2 text-left"
+          data-testid="research-export"
+        >
+          {t.about.researchExport}
+        </button>
         <button
           type="button"
           onClick={handleReset}
           aria-label={t.about.resetAria}
+          disabled={resetBusy}
           className={`text-[11px] underline underline-offset-2 transition-colors text-left ${
             resetArmed ? "text-danger hover:text-danger" : "text-muted hover:text-text"
           }`}
         >
-          {resetArmed ? t.about.resetArmed : t.about.resetAll}
+          {resetBusy ? t.about.resetBusy : resetArmed ? t.about.resetArmed : t.about.resetAll}
         </button>
+        {resetFailed && (
+          <p className="text-xs text-danger" role="status">
+            {t.about.resetFailed}
+          </p>
+        )}
       </div>
     </div>
   );

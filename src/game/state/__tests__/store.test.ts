@@ -2,6 +2,7 @@ import { describe, it, expect } from "vitest";
 import { createStore, type StoreDeps } from "../store";
 import type { Puzzle } from "../../types/puzzle";
 import { INITIAL_STATS } from "../../types/stats";
+import type { EditorialRecord } from "../../../puzzles/catalog";
 
 function mkPuzzle(id: string, overrides: Partial<Puzzle> = {}): Puzzle {
   return {
@@ -36,6 +37,20 @@ function makeDeps(pool: Puzzle[], opts: Partial<StoreDeps> = {}): StoreDeps {
     getEasyByIndex: (i) => wrap(easyPool, i),
     getMediumByIndex: (i) => wrap(mediumPool, i),
     getHardByIndex: (i) => wrap(hardPool, i),
+    getStarterManifest: () => undefined,
+    getDailyEntry: (language, date) => {
+      const puzzle = pool[0];
+      if (!puzzle) return undefined;
+      return {
+        entryId: `daily-${language}-${date}`,
+        date,
+        language,
+        puzzleId: puzzle.id,
+        lineageId: puzzle.id,
+        contentVersion: "test-catalog-v1",
+        scheduleVersion: "test-calendar-v1",
+      };
+    },
     now: () => {
       t += 1000;
       return t;
@@ -57,7 +72,149 @@ function winCurrentPuzzle(store: ReturnType<typeof createStore>) {
   }
 }
 
+function loseCurrentPuzzle(store: ReturnType<typeof createStore>) {
+  const puzzle = store.getState().puzzle!;
+  for (let itemIndex = 0; itemIndex < 4; itemIndex++) {
+    store.getState().clearSelection();
+    for (const group of puzzle.groups) {
+      store.getState().toggleSelection(group.items[itemIndex]);
+    }
+    store.getState().submit();
+  }
+}
+
 describe("store — standard mode", () => {
+  it("delegates legacy passport import through the persistence boundary", async () => {
+    const puzzle = mkPuzzle("passport-fixture");
+    let received: unknown = null;
+    const store = createStore(
+      makeDeps([puzzle], {
+        commitLegacyPassport: async (details) => {
+          received = details;
+          return true;
+        },
+      }),
+    );
+    const details = {
+      playerSeed: "portable-seed",
+      sealId: "seal_compass",
+      nibId: "nib_obsidian",
+      titleId: "title_connections",
+      collectedStampIds: ["stamp_midori_compass"],
+    };
+
+    await expect(store.getState().importLegacyPassport(details)).resolves.toBe(true);
+    expect(received).toEqual(details);
+  });
+
+  it("selects only ready catalog content and records exposure diversity", () => {
+    const seen = mkPuzzle("seen");
+    const fresh = mkPuzzle("fresh");
+    const editorial = (puzzle: Puzzle, topic: string): EditorialRecord => ({
+      puzzleRef: {
+        language: "en",
+        puzzleId: puzzle.id,
+        lineageId: puzzle.id,
+        contentVersion: "test-catalog-v1",
+      },
+      publicTier: "easy",
+      band: "B1",
+      vocabularyFamiliarity: "common",
+      relationTypes: ["classification"],
+      topicTags: [topic],
+      anchorGroupId: "g1",
+      ambiguityRisk: "low",
+      tabReview: "not-applicable",
+      mobileFit: "approved",
+      authorReview: { reviewerId: "author", date: "2026-09-14" },
+      independentReview: { reviewerId: "validator", date: "2026-09-14" },
+      playtest: null,
+      status: "ready",
+    });
+    const records = new Map([
+      [seen.id, editorial(seen, "old-topic")],
+      [fresh.id, editorial(fresh, "fresh-topic")],
+    ]);
+    const store = createStore(
+      makeDeps([seen, fresh], {
+        getEditorialRecord: (_language, puzzleId) => records.get(puzzleId),
+        getPlayerSeed: () => "player-1",
+        initialProgress: { cursor: 0, seenLineageIds: [seen.id], selectionSequence: 4 },
+      }),
+    );
+
+    store.getState().startEasy();
+
+    expect(store.getState().puzzle?.id).toBe(fresh.id);
+    expect(store.getState().active?.puzzleRef).toEqual(records.get(fresh.id)?.puzzleRef);
+    expect(store.getState().progress.selectionSequence).toBe(5);
+    expect(store.getState().progress.seenLineageIds).toEqual([seen.id, fresh.id]);
+    expect(store.getState().progress.recentTopicTags).toEqual(["fresh-topic"]);
+    expect(store.getState().progress.recentItemValues).toHaveLength(16);
+  });
+
+  it("follows explicit starter entries across difficulty tiers", () => {
+    const easy = mkPuzzle("intro-easy");
+    const medium = mkPuzzle("intro-wink", { difficulty: "medium" });
+    const starterManifest = {
+      language: "en" as const,
+      catalogVersion: "test-catalog-v1",
+      entries: [
+        {
+          entryId: "starter-1",
+          order: 1,
+          role: "first-connection",
+          band: "B0" as const,
+          puzzleRef: {
+            language: "en" as const,
+            puzzleId: easy.id,
+            lineageId: easy.id,
+            contentVersion: "test-catalog-v1",
+          },
+        },
+        {
+          entryId: "starter-2",
+          order: 2,
+          role: "wink-introduction",
+          band: "B2" as const,
+          puzzleRef: {
+            language: "en" as const,
+            puzzleId: medium.id,
+            lineageId: medium.id,
+            contentVersion: "test-catalog-v1",
+          },
+        },
+        ...[3, 4, 5, 6].map((order) => ({
+          entryId: `starter-${order}`,
+          order,
+          role: "later",
+          band: "B1" as const,
+          puzzleRef: {
+            language: "en" as const,
+            puzzleId: `missing-${order}`,
+            lineageId: `missing-${order}`,
+            contentVersion: "test-catalog-v1",
+          },
+        })),
+      ],
+    };
+    const store = createStore(
+      makeDeps([easy, medium], { getStarterManifest: () => starterManifest }),
+    );
+
+    store.getState().startStandard();
+    expect(store.getState().puzzle?.id).toBe(easy.id);
+    expect(store.getState().progress.selectionSequence).toBe(1);
+    expect(store.getState().progress.seenLineageIds).toEqual([easy.id]);
+    winCurrentPuzzle(store);
+    expect(store.getState().progress.completedStarterEntryIds).toEqual(["starter-1"]);
+
+    store.getState().startNextSame();
+    expect(store.getState().puzzle?.id).toBe(medium.id);
+    expect(store.getState().active?.starterEntryId).toBe("starter-2");
+    expect(store.getState().progress.selectionSequence).toBe(2);
+  });
+
   it("advances cursor on win", () => {
     const pool = [mkPuzzle("p1"), mkPuzzle("p2"), mkPuzzle("p3")];
     const store = createStore(makeDeps(pool));
@@ -78,16 +235,27 @@ describe("store — standard mode", () => {
     const store = createStore(makeDeps(pool));
     store.getState().startStandard();
 
-    for (let i = 0; i < 4; i++) {
-      store.getState().toggleSelection("a");
-      store.getState().toggleSelection("e");
-      store.getState().toggleSelection("i");
-      store.getState().toggleSelection("m");
-      store.getState().submit();
-    }
+    loseCurrentPuzzle(store);
     expect(store.getState().summary?.result).toBe("loss");
     expect(store.getState().progress.cursor).toBe(0);
     expect(store.getState().stats.losses).toBe(1);
+  });
+
+  it("retries the same pinned board without advancing selectionSequence", () => {
+    const target = mkPuzzle("retry-me");
+    const store = createStore(makeDeps([target]));
+    store.getState().startEasy();
+    const first = store.getState().active!;
+    loseCurrentPuzzle(store);
+    const sequence = store.getState().progress.selectionSequence;
+
+    store.getState().retryCurrent();
+    const retry = store.getState().active!;
+    expect(store.getState().puzzle?.id).toBe(target.id);
+    expect(retry.attemptId).not.toBe(first.attemptId);
+    expect(retry.parentAttemptId).toBe(first.attemptId);
+    expect(retry.puzzleRef).toEqual(first.puzzleRef);
+    expect(store.getState().progress.selectionSequence).toBe(sequence);
   });
 
   it("wraps cursor past the end of pool", () => {
@@ -152,9 +320,83 @@ describe("store — daily mode", () => {
     expect(store.getState().stats.wins).toBe(1);
   });
 
-  it("restricts daily to easy when Medium is locked (fresh state)", () => {
-    // Deterministic date → hash lands on a medium if the full pool is used;
-    // with the unlock-respecting fix, the daily must still pick from easy.
+  it("replays the exact pinned Daily board after the published calendar changes", () => {
+    const first = mkPuzzle("daily-v1", { title: "Original daily" });
+    const replacement = mkPuzzle("daily-v2", {
+      title: "Replacement daily",
+      groups: [
+        { id: "r1", label: "R1", items: ["q", "r", "s", "t"] },
+        { id: "r2", label: "R2", items: ["u", "v", "w", "x"] },
+        { id: "r3", label: "R3", items: ["y", "z", "aa", "bb"] },
+        { id: "r4", label: "R4", items: ["cc", "dd", "ee", "ff"] },
+      ],
+    });
+    let publishedPuzzle = first;
+    const store = createStore(
+      makeDeps([first, replacement], {
+        getDailyEntry: (language, date) => ({
+          entryId: `daily-${language}-${date}-${publishedPuzzle.id}`,
+          date,
+          language,
+          puzzleId: publishedPuzzle.id,
+          lineageId: publishedPuzzle.id,
+          contentVersion: `${publishedPuzzle.id}-content-v1`,
+          scheduleVersion: `${publishedPuzzle.id}-calendar-v1`,
+        }),
+      }),
+    );
+
+    store.getState().startDaily();
+    winCurrentPuzzle(store);
+    const recorded = store.getState().todayDailyRecord;
+    expect(recorded?.puzzleSnapshot).toEqual(first);
+    expect(recorded?.puzzleRef?.puzzleId).toBe(first.id);
+
+    publishedPuzzle = replacement;
+    store.getState().goToMenu();
+    store.getState().startDaily();
+
+    expect(store.getState().puzzle).toEqual(first);
+    expect(store.getState().active?.countsToStats).toBe(false);
+    expect(store.getState().active?.puzzleRef).toEqual(recorded?.puzzleRef);
+    expect(store.getState().active?.daily).toEqual({
+      entryId: recorded?.entryId,
+      date: recorded?.date,
+      scheduleVersion: recorded?.scheduleVersion,
+    });
+  });
+
+  it("replays a legacy Daily record through today's calendar when no snapshot exists", () => {
+    const published = mkPuzzle("published-daily");
+    const store = createStore(
+      makeDeps([published], {
+        initialTodayDailyRecord: {
+          date: "2026-04-11",
+          puzzleId: "removed-legacy-daily",
+          result: "win",
+          mistakesUsed: 1,
+          durationMs: 90_000,
+          language: "en",
+          entryId: "legacy-daily:en:2026-04-11",
+          scheduleVersion: "legacy-calendar-v1",
+          puzzleRef: {
+            language: "en",
+            puzzleId: "removed-legacy-daily",
+            lineageId: "removed-legacy-daily",
+            contentVersion: "legacy-content-v1",
+          },
+          attemptId: "legacy-attempt",
+        },
+      }),
+    );
+
+    store.getState().startDaily();
+
+    expect(store.getState().puzzle).toEqual(published);
+    expect(store.getState().active?.countsToStats).toBe(false);
+  });
+
+  it("uses the published entry even when Medium is not unlocked", () => {
     const pool = [
       mkPuzzle("e1"),
       mkPuzzle("e2"),
@@ -162,19 +404,32 @@ describe("store — daily mode", () => {
       mkPuzzle("m2", { difficulty: "medium" }),
       mkPuzzle("h1", { difficulty: "hard" }),
     ];
-    const store = createStore(makeDeps(pool));
+    const store = createStore(
+      makeDeps(pool, {
+        getDailyEntry: (language, date) => ({
+          entryId: `daily-${language}-${date}`,
+          date,
+          language,
+          puzzleId: "m1",
+          lineageId: "m1",
+          contentVersion: "test-catalog-v1",
+          scheduleVersion: "test-calendar-v1",
+        }),
+      }),
+    );
     store.getState().startDaily();
-    expect(store.getState().puzzle!.difficulty).toBe("easy");
+    expect(store.getState().puzzle!.id).toBe("m1");
+    expect(store.getState().active?.daily?.entryId).toBe("daily-en-2026-04-11");
   });
 
-  it("includes medium puzzles once player has unlocked Medium", () => {
+  it("does not change the Daily identity when stats or unlocks differ", () => {
     const pool = [
       mkPuzzle("e1"),
       mkPuzzle("m1", { difficulty: "medium" }),
       mkPuzzle("m2", { difficulty: "medium" }),
     ];
-    // 5 easy wins is MEDIUM_UNLOCK_AT.
-    const store = createStore(
+    const fresh = createStore(makeDeps(pool));
+    const experienced = createStore(
       makeDeps(pool, {
         initialStats: {
           ...INITIAL_STATS,
@@ -184,9 +439,19 @@ describe("store — daily mode", () => {
         },
       }),
     );
+    fresh.getState().startDaily();
+    experienced.getState().startDaily();
+    expect(fresh.getState().active?.puzzleRef).toEqual(
+      experienced.getState().active?.puzzleRef,
+    );
+    expect(fresh.getState().active?.daily).toEqual(experienced.getState().active?.daily);
+  });
+
+  it("stays on the menu when the published horizon has no entry", () => {
+    const store = createStore(makeDeps([mkPuzzle("p1")], { getDailyEntry: () => undefined }));
     store.getState().startDaily();
-    const picked = store.getState().puzzle!.difficulty;
-    expect(["easy", "medium"]).toContain(picked);
+    expect(store.getState().screen).toBe("menu");
+    expect(store.getState().active).toBeNull();
   });
 });
 
@@ -210,6 +475,25 @@ describe("store — selection limits", () => {
     store.getState().toggleSelection("a");
     store.getState().toggleSelection("a");
     expect(store.getState().active!.selection).toEqual([]);
+  });
+
+  it("keeps an incorrect quartet selected and does not consume it twice", () => {
+    const store = createStore(makeDeps([mkPuzzle("p1")]));
+    store.getState().startStandard();
+    for (const item of ["a", "e", "i", "m"]) store.getState().toggleSelection(item);
+    store.getState().submit();
+    expect(store.getState().active?.mistakesUsed).toBe(1);
+    expect(store.getState().active?.selection).toEqual(["a", "e", "i", "m"]);
+
+    store.getState().submit();
+
+    expect(store.getState().active?.mistakesUsed).toBe(1);
+    expect(store.getState().active?.selection).toEqual(["a", "e", "i", "m"]);
+    expect(store.getState().flash).toBe("repeat");
+
+    store.getState().toggleSelection("m");
+    store.getState().toggleSelection("n");
+    expect(store.getState().active?.selection).toEqual(["a", "e", "i", "n"]);
   });
 });
 
@@ -293,13 +577,7 @@ describe("store — newBest record flag", () => {
       }),
     );
     store.getState().startStandard();
-    for (let i = 0; i < 4; i++) {
-      store.getState().toggleSelection("a");
-      store.getState().toggleSelection("e");
-      store.getState().toggleSelection("i");
-      store.getState().toggleSelection("m");
-      store.getState().submit();
-    }
+    loseCurrentPuzzle(store);
     expect(store.getState().summary?.result).toBe("loss");
     expect(store.getState().newBest).toBe(false);
     expect(store.getState().stats.bestStreak).toBe(4);
@@ -349,6 +627,28 @@ describe("store — newBest record flag", () => {
     expect(store.getState().stats.bestStreak).toBe(7);
     expect(store.getState().stats.currentStreak).toBe(7);
     expect(store.getState().newBest).toBe(false);
+  });
+});
+
+describe("store — saved attempt continuation", () => {
+  it("opens an already pinned in-progress attempt only through explicit Continue", () => {
+    const puzzle = mkPuzzle("saved-puzzle");
+    const source = createStore(makeDeps([puzzle]));
+    source.getState().startEasy();
+    const saved = source.getState().active!;
+    const restored = createStore(
+      makeDeps([puzzle], {
+        initialActive: saved,
+        initialPuzzle: puzzle,
+        initialScreen: "menu",
+      }),
+    );
+
+    expect(restored.getState().screen).toBe("menu");
+    expect(restored.getState().active?.attemptId).toBe(saved.attemptId);
+    restored.getState().resumeActive();
+    expect(restored.getState().screen).toBe("game");
+    expect(restored.getState().active).toBe(saved);
   });
 });
 
@@ -419,18 +719,7 @@ describe("store — easy vs medium mode split", () => {
     const store = createStore(makeDeps(pool));
     store.getState().startMedium();
     // Force a loss: select 4 items from different groups, submit until dead.
-    const puzzle = store.getState().puzzle!;
-    const wrong = [
-      puzzle.groups[0].items[0],
-      puzzle.groups[1].items[0],
-      puzzle.groups[2].items[0],
-      puzzle.groups[3].items[0],
-    ];
-    for (let i = 0; i < 4; i++) {
-      wrong.forEach((v) => store.getState().toggleSelection(v));
-      store.getState().submit();
-      store.getState().clearSelection?.();
-    }
+    loseCurrentPuzzle(store);
     const s = store.getState().stats;
     expect(s.losses).toBeGreaterThanOrEqual(1);
     expect(s.mediumLossStreak ?? 0).toBeGreaterThanOrEqual(1);
@@ -497,16 +786,35 @@ describe("store — wink mechanic", () => {
   it("refuses winking after the game has ended", () => {
     const store = createStore(makeDeps(mediumPool));
     store.getState().startStandard();
-    for (let i = 0; i < 4; i++) {
-      store.getState().toggleSelection("a");
-      store.getState().toggleSelection("e");
-      store.getState().toggleSelection("i");
-      store.getState().toggleSelection("m");
-      store.getState().submit();
-    }
+    loseCurrentPuzzle(store);
     expect(store.getState().summary?.result).toBe("loss");
     store.getState().winkTab("g1");
     expect(store.getState().active!.winkedGroupId).toBeNull();
+  });
+});
+
+describe("store — mastery challenge", () => {
+  it("allows one mistake and ends on the second without counting normal stats", () => {
+    const puzzle = mkPuzzle("m1", { difficulty: "medium" });
+    const store = createStore(makeDeps([puzzle]));
+
+    store.getState().startMastery();
+    expect(store.getState().active).toMatchObject({
+      context: "mastery",
+      countsToStats: false,
+      rules: { maxIncorrectGuesses: 2, maxWinks: 1 },
+    });
+
+    for (const item of ["a", "e", "i", "m"]) store.getState().toggleSelection(item);
+    store.getState().submit();
+    expect(store.getState().active?.result).toBeUndefined();
+    expect(store.getState().active?.mistakesUsed).toBe(1);
+
+    store.getState().clearSelection();
+    for (const item of ["b", "f", "j", "n"]) store.getState().toggleSelection(item);
+    store.getState().submit();
+    expect(store.getState().active?.result).toBe("loss");
+    expect(store.getState().stats.gamesPlayed).toBe(0);
   });
 });
 
@@ -522,6 +830,7 @@ describe("store — duel mode", () => {
       puzzleId: "duel-puzzle-1",
       challengerMistakes: 2,
       challengerTimeSec: 45,
+      challenge: { source: "legacy" },
     });
     expect(store.getState().active?.countsToStats).toBe(false);
   });

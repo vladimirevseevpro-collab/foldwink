@@ -63,14 +63,21 @@ if (!target || !/^[^/]+\/[^/]+$/.test(target)) {
 const channel = args.get("channel") ?? "html";
 const skipPack = args.get("skip-pack") === "true";
 
+if (!/^[a-z0-9][a-z0-9._-]{0,63}$/i.test(channel)) {
+  console.error(
+    "Channel must be 1-64 characters and contain only letters, numbers, '.', '_' or '-'.",
+  );
+  process.exit(1);
+}
+
 function run(cmd, argv, opts = {}) {
-  const r = spawnSync(cmd, argv, { stdio: "inherit", shell: true, ...opts });
+  const r = spawnSync(cmd, argv, { stdio: "inherit", shell: false, ...opts });
   if (r.status !== 0) {
     process.exit(r.status ?? 1);
   }
 }
 
-const butlerCheck = spawnSync(butlerCmd, ["-V"], { shell: true, stdio: "ignore" });
+const butlerCheck = spawnSync(butlerCmd, ["-V"], { shell: false, stdio: "ignore" });
 if (butlerCheck.status !== 0) {
   console.error(
     [
@@ -86,7 +93,7 @@ if (butlerCheck.status !== 0) {
 
 if (!skipPack) {
   console.log("→ pack:itch");
-  run("npm", ["run", "pack:itch"]);
+  run(process.platform === "win32" ? "npm.cmd" : "npm", ["run", "pack:itch"]);
 }
 
 const exportDir = join(root, "itch.io", "export");
@@ -111,7 +118,7 @@ const zip = zips[0];
 const channelSpec = `${target}:${channel}`;
 
 console.log(`→ butler push ${zip.name} ${channelSpec} (userversion=${version})`);
-run(butlerCmd, ["push", `"${zip.path}"`, channelSpec, `--userversion=${version}`]);
+run(butlerCmd, ["push", zip.path, channelSpec, `--userversion=${version}`]);
 
 console.log(`\n✓ pushed v${version} to ${channelSpec}`);
 console.log(`  returning players keep their localStorage — channel URL is stable.`);

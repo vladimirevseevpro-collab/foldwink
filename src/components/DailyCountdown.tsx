@@ -7,10 +7,29 @@ export function DailyCountdown() {
   const t = useT();
 
   useEffect(() => {
-    const id = window.setInterval(() => {
+    let id: number | null = null;
+    const update = (): void => {
       setMs(msUntilNextLocalMidnight());
-    }, 1000);
-    return () => window.clearInterval(id);
+    };
+    const start = (): void => {
+      if (id !== null || document.hidden) return;
+      update();
+      id = window.setInterval(update, 1000);
+    };
+    const stop = (): void => {
+      if (id !== null) window.clearInterval(id);
+      id = null;
+    };
+    const visibility = (): void => {
+      if (document.hidden) stop();
+      else start();
+    };
+    start();
+    document.addEventListener("visibilitychange", visibility);
+    return () => {
+      stop();
+      document.removeEventListener("visibilitychange", visibility);
+    };
   }, []);
 
   return (

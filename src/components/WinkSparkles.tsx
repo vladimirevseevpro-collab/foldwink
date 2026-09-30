@@ -38,7 +38,7 @@ export function WinkSparkles() {
       });
     }
 
-    let animationId: number;
+    let animationId: number | null = null;
     let lastTime = performance.now();
 
     const render = (time: number) => {
@@ -63,14 +63,24 @@ export function WinkSparkles() {
         ctx.fill();
       }
 
-      if (active) {
+      if (active && !document.hidden) {
         animationId = requestAnimationFrame(render);
       }
     };
 
     animationId = requestAnimationFrame(render);
+    const stopWhenHidden = () => {
+      if (document.hidden && animationId !== null) {
+        cancelAnimationFrame(animationId);
+        animationId = null;
+      }
+    };
+    document.addEventListener("visibilitychange", stopWhenHidden);
 
-    return () => cancelAnimationFrame(animationId);
+    return () => {
+      if (animationId !== null) cancelAnimationFrame(animationId);
+      document.removeEventListener("visibilitychange", stopWhenHidden);
+    };
   }, []);
 
   return (

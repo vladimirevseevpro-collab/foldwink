@@ -131,9 +131,9 @@ body::before {
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background-image: url("/textures/graphite-paper.webp");
-  background-size: 720px 720px;
-  opacity: 0.08;
+  background-image: url("/textures/paper-theatre-w4.webp");
+  background-size: 512px 512px;
+  opacity: 0.1;
 }
 
 body::after {
@@ -152,6 +152,10 @@ body::after {
 }
 
 :root {
+  --fw-type-kicker: 0.6875rem;
+  --fw-type-body: 0.9375rem;
+  --fw-type-title: clamp(1.5rem, 1.15rem + 1.2vw, 2rem);
+  --fw-leading-body: 1.55;
   --fw-ease-press: cubic-bezier(0.2, 0.8, 0.2, 1);
   --fw-ease-lift: cubic-bezier(0.16, 0.82, 0.25, 1);
   --fw-ease-settle: cubic-bezier(0.34, 1.24, 0.64, 1);
@@ -159,6 +163,26 @@ body::after {
   --fw-shadow-rest: 0 4px 12px rgba(0, 0, 0, 0.16);
   --fw-shadow-lift: 0 10px 20px rgba(0, 0, 0, 0.24);
   --fw-shadow-pressed: 0 1px 3px rgba(0, 0, 0, 0.28);
+}
+
+.fw-kicker {
+  font-size: var(--fw-type-kicker);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.fw-screen-title {
+  font-size: var(--fw-type-title);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+}
+
+.fw-body-copy {
+  font-size: var(--fw-type-body);
+  line-height: var(--fw-leading-body);
 }
 
 .fw-letterpress-paper {
@@ -178,6 +202,12 @@ body::after {
   --press-scale: 1;
   --tilt-x: 0deg;
   --tilt-y: 0deg;
+
+  /* The animated sheen is intentionally wider than the card. Paint
+     containment keeps its transformed bounds from enlarging the page's
+     scrollable area on narrow viewports. */
+  contain: paint;
+  overflow: clip;
 
   transform: perspective(600px) translate3d(0, var(--lift), 0) rotateX(var(--tilt-x))
     rotateY(var(--tilt-y)) scale(var(--press-scale));
@@ -441,35 +471,27 @@ button {
 /* Dynamic Specular Sheen Glare */
 @keyframes fw-sheen-sweep {
   0% {
-    transform: translateX(-120%) rotate(25deg);
     opacity: 0;
   }
-  20% {
-    opacity: 0.85;
-  }
-  80% {
-    opacity: 0.85;
+  35% {
+    opacity: 0.72;
   }
   100% {
-    transform: translateX(180%) rotate(25deg);
     opacity: 0;
   }
 }
 
 .fw-sheen-glare {
   position: absolute;
-  top: -60%;
-  left: -60%;
-  width: 220%;
-  height: 220%;
+  inset: 0;
   pointer-events: none;
   background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.05) 35%,
-    rgba(255, 255, 255, 0.35) 50%,
-    rgba(255, 255, 255, 0.05) 65%,
-    transparent 100%
+    115deg,
+    transparent 26%,
+    rgba(255, 255, 255, 0.08) 40%,
+    rgba(255, 255, 255, 0.32) 50%,
+    rgba(255, 255, 255, 0.08) 60%,
+    transparent 74%
   );
   animation: fw-sheen-sweep 550ms cubic-bezier(0.2, 0.8, 0.3, 1) 1 both;
 }
@@ -573,7 +595,7 @@ button {
 }
 
 .fw-ready-pulse {
-  animation: fw-ready-glow 1.6s ease-in-out infinite;
+  animation: fw-ready-glow 1.6s ease-in-out 1;
 }
 
 /* Tactile Dot Consumed Pop */
@@ -631,6 +653,12 @@ button {
     opacity: 1 !important;
     transform: none !important;
   }
+
+  .fw-deal {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 @keyframes fw-deal {
@@ -650,7 +678,9 @@ button {
 .fw-grid-glow::before {
   content: "";
   position: absolute;
-  inset: -100px;
+  /* Keep the atmospheric halo inside narrow screens; the former -100px
+     inset made the document 467px wide on a 390px phone. */
+  inset: -12px;
   background: radial-gradient(
     circle 250px at var(--mouse-x, -250px) var(--mouse-y, -250px),
     rgba(255, 255, 255, 0.08),
@@ -660,6 +690,11 @@ button {
   z-index: -1;
   opacity: 0;
   transition: opacity 0.4s;
+}
+@media (min-width: 640px) {
+  .fw-grid-glow::before {
+    inset: -100px;
+  }
 }
 .fw-grid-glow:hover::before {
   opacity: 1;
@@ -704,32 +739,48 @@ button {
   }
 }
 .fw-tension-wobble {
-  animation: fw-tension-wobble 340ms ease-in-out infinite alternate;
+  animation: fw-tension-wobble 340ms ease-in-out 1 both;
 }
 
-/* Chrome Extension Popup (380x560px) & Edge Sidebar ultra-compact responsiveness */
-@media (max-width: 400px), (max-height: 600px) {
-  .fw-safe-pt {
+/* Compact hosts opt in explicitly; an ordinary small phone keeps the normal mobile rhythm. */
+@media (max-width: 400px) and (max-height: 600px) {
+  [data-fw-host="extension"],
+  [data-fw-host="embed"] {
+    --fw-type-title: 1.35rem;
+    --fw-type-body: 0.875rem;
+  }
+  [data-fw-host="extension"] .fw-safe-pt,
+  [data-fw-host="embed"] .fw-safe-pt {
     padding-top: 0.25rem !important;
   }
-  .fw-safe-pb {
+  [data-fw-host="extension"] .fw-safe-pb,
+  [data-fw-host="embed"] .fw-safe-pb {
     padding-bottom: 0.25rem !important;
   }
-  .fw-safe-pt-screen {
+  [data-fw-host="extension"] .fw-safe-pt-screen,
+  [data-fw-host="embed"] .fw-safe-pt-screen {
     padding-top: 0.5rem !important;
   }
-  .fw-card {
+  [data-fw-host="extension"] .fw-card,
+  [data-fw-host="embed"] .fw-card {
     height: 52px !important;
     min-height: 48px !important;
-    padding-left: 0.25rem !important;
-    padding-right: 0.25rem !important;
+    padding: 0.25rem !important;
+  }
+  [data-fw-host="extension"] .fw-origami-plate,
+  [data-fw-host="embed"] .fw-origami-plate {
+    height: 52px !important;
+    min-height: 48px !important;
     padding-top: 0.25rem !important;
     padding-bottom: 0.25rem !important;
   }
+}
+
+/* Short desktop/tablet viewports keep the complete decision row above the fold. */
+@media (min-width: 401px) and (max-height: 820px) {
+  .fw-card,
   .fw-origami-plate {
-    height: 52px !important;
-    min-height: 48px !important;
-    padding-top: 0.25rem !important;
-    padding-bottom: 0.25rem !important;
+    height: 76px !important;
+    min-height: 64px !important;
   }
 }

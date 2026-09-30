@@ -1,6 +1,6 @@
 # Foldwink 10-Layer Deep Heuristics Audit Report
 
-**Date:** 2026-08-27
+**Date:** 2026-09-05
 **Scope:** 3000 Puzzles (EN: 1000, RU: 1000, DE: 1000)
 
 ## Summary

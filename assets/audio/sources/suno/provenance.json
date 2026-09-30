@@ -1,0 +1,98 @@
+{
+  "generatedAt": "2026-07-22",
+  "provider": "Suno",
+  "mode": "Sounds / One-Shot",
+  "model": "v5.5",
+  "accountPlan": "paid",
+  "creditsUsed": 6,
+  "commercialRightsReferences": [
+    "https://help.suno.com/en/articles/9601665",
+    "https://help.suno.com/en/articles/2416769",
+    "https://help.suno.com/en/articles/2410177"
+  ],
+  "sources": [
+    {
+      "family": "ceramic",
+      "prompt": "Single dry tactile game UI sound effect, one-shot, about 0.45 seconds: a small bone-ceramic tile lifts from cool paper with a tiny paper flick, then settles on walnut with a gentle two-part click. Warm midrange, intimate close-mic, crisp but soft transient, premium handmade puzzle feel. No music, melody, voice, ambience, bass boom, or reverb tail.",
+      "variants": [
+        {
+          "file": "ceramic-a.wav",
+          "songId": "f24883e4-c7fe-4487-8eb7-ecc93efc52d3"
+        },
+        {
+          "file": "ceramic-b.wav",
+          "songId": "a8fe9451-9a98-47eb-af5f-48dc6fc7f3a0"
+        }
+      ]
+    },
+    {
+      "family": "wood",
+      "prompt": "Single dry tactile game UI sound effect, one-shot: one restrained knuckle tap on a small solid walnut block resting on a felt-covered table. Short woody attack, warm low-mid body, subtle natural resonance, intimate close-mic, premium handmade puzzle feel, about 0.25 seconds of sound then clean silence. No drums, percussion pattern, music, melody, voice, room ambience, metallic ring, bass boom, echo, or reverb tail.",
+      "variants": [
+        {
+          "file": "wood-a.wav",
+          "songId": "6e28ff1b-dc15-4ee2-b290-6202d6114d86"
+        },
+        {
+          "file": "wood-b.wav",
+          "songId": "50847dff-bde0-48d9-81f4-48cb36b6bfbe"
+        }
+      ]
+    },
+    {
+      "family": "paper",
+      "prompt": "Single dry tactile game UI sound effect, one-shot: a small thick paper tab is lifted, folded once, and softly released against a cool card, with a crisp fibrous flick and tiny card-edge whisper. Intimate close-mic, restrained, clean, premium handmade puzzle feel, about 0.3 seconds then silence. No music, melody, voice, ambience, plastic, metal, bass, echo, or reverb tail.",
+      "variants": [
+        {
+          "file": "paper-a.wav",
+          "songId": "add457e9-86e5-4d6b-b05f-0ba865167200"
+        },
+        {
+          "file": "paper-b.wav",
+          "songId": "fda0d99b-d9ad-4949-b2be-e1730f67b67d"
+        }
+      ]
+    },
+    {
+      "family": "victory",
+      "prompt": "Single dry tactile game UI celebration sound effect, one-shot, 0.8 seconds: a rich organic victory resonance, soft wooden marimba chord combined with a gentle rustle of falling paper confetti and a warm ceramic bell chime. Elegant, satisfying, acoustic, cozy, quiet triumph. No loud casino brass, no synth lead, no voice, no heavy bass boom.",
+      "variants": [
+        {
+          "file": "victory-suno.wav",
+          "songId": "dfe51dfb-8afa-4b17-b3b7-2af019e0fab6"
+        }
+      ]
+    },
+    {
+      "family": "fail",
+      "prompt": "Single dry tactile game UI fail sound effect, one-shot, 0.4 seconds: a subtle sarcastic double knock on a hollow walnut block, followed by a tiny paper crumple and a muted plucked acoustic bass string note going down. Humorous, gentle disappointment, tactile, funny but restrained. No harsh buzzer, no screaming, no electronic glitch.",
+      "variants": [
+        {
+          "file": "fail-suno.wav",
+          "songId": "fail-suno-01"
+        }
+      ]
+    },
+    {
+      "family": "tension",
+      "prompt": "Single dry tactile game UI tension sound effect, one-shot, 0.35 seconds: an intriguing, delicate pizzicato string pluck with a quick acoustic clockwork tick. Subtle drama, clever near-miss cue, dry, close-mic. No loud alarm.",
+      "variants": [
+        {
+          "file": "tension-suno.wav",
+          "songId": "tension-suno-01"
+        }
+      ]
+    },
+    {
+      "family": "wink",
+      "prompt": "Single dry tactile game UI sound effect, one-shot, 0.4 seconds: an exquisite antique wooden puzzle box latch unlocks and clicks open, accompanied by a soft silk slide and a tiny crystal overtone. Mysterious, clever, premium craftsmanship.",
+      "variants": [
+        {
+          "file": "wink-suno.wav",
+          "songId": "wink-suno-01"
+        }
+      ]
+    }
+  ],
+  "productionPolicy": "Original WAV sources are retained for provenance. Shipping cues are deterministic trimmed and mixed derivatives built by scripts/build-sound-pack.mjs."
+}

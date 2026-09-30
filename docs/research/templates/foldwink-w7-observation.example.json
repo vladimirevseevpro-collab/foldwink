@@ -1,0 +1,97 @@
+{
+  "schema": "foldwink-pilot-observation-v1",
+  "studyCode": "P001",
+  "build": {
+    "app": "0.8.4",
+    "content": "catalog-2026-09-v1",
+    "daily": "daily-2026-09-14-2026-10-13-v1",
+    "events": "ops-06-v1",
+    "privacy": "privacy-v1",
+    "balance": "balance-2026-09-v1",
+    "itchUpload": "#19242763",
+    "itchBuild": "#1984826",
+    "artifactSha256": "b9e5dde25558e27dc9f846f28e8ad4b9dbb0d134136e2efa2bb8c9d7cf7fc645",
+    "treeSha256": "b41e3ce52dd56f28e96719a6e4872bc7701e6305cbfe270a5e8f02bdd64eb385"
+  },
+  "locale": "en",
+  "cohort": {
+    "acquisition": "organic",
+    "deviceClass": "phone",
+    "osFamily": "ios",
+    "browserFamily": "safari",
+    "launchMode": "browser",
+    "input": "touch",
+    "accessibility": "none",
+    "puzzleFrequency": "never"
+  },
+  "flow": {
+    "recruited": true,
+    "consented": true,
+    "appOpened": true,
+    "firstSessionStarted": true,
+    "usableObservation": true,
+    "exportOffered": true,
+    "exportProvided": true
+  },
+  "onboarding": {
+    "started": true,
+    "outcome": "completed",
+    "firstMeaningfulActionIndependent": true,
+    "coreLoopExplanation": "correct"
+  },
+  "firstSession": {
+    "boardId": "puzzle-0001",
+    "contentVersion": "catalog-2026-09-v1",
+    "firstGroupIndependent": true,
+    "timeToFirstGroupSeconds": 34,
+    "firstAttemptOutcome": "win",
+    "mistakesUsed": 1,
+    "resultReached": true,
+    "interventions": {
+      "navigation": 0,
+      "ruleClarification": 0,
+      "answerHelp": 0,
+      "technicalRecovery": 0
+    }
+  },
+  "resultActions": {
+    "retryStartedAfterLoss": false,
+    "retryOutcome": "not-started",
+    "differentBoardAvailable": true,
+    "differentBoardStarted": true,
+    "previousResult": "win"
+  },
+  "wink": {
+    "shown": true,
+    "understanding": "correct",
+    "used": false
+  },
+  "share": {
+    "started": true,
+    "outcome": "completed"
+  },
+  "export": {
+    "status": "provided-valid",
+    "fieldsMatch": true,
+    "privacyInspectionPassed": true
+  },
+  "returns": {
+    "d0Qualified": true,
+    "d0LocalDate": "2026-09-15",
+    "d1": {
+      "targetDate": "2026-09-16",
+      "windowComplete": false,
+      "qualifiedReturn": null,
+      "attribution": "unknown",
+      "exportReceived": false
+    },
+    "d7": {
+      "targetDate": "2026-09-22",
+      "windowComplete": false,
+      "qualifiedReturn": null,
+      "attribution": "unknown",
+      "exportReceived": false
+    }
+  },
+  "issues": []
+}

@@ -1,20 +1,5 @@
 import { useEffect, useRef } from "react";
 
-interface Particle {
-  x: number;
-  y: number;
-  vx: number;
-  vy: number;
-  width: number;
-  height: number;
-  rotation: number;
-  rotationSpeed: number;
-  flipSpeed: number;
-  flip: number;
-  color: string;
-  opacity: number;
-}
-
 const PALETTE = [
   "#67d7d0", // accent mint
   "#ffd700", // radiant gold
@@ -75,13 +60,13 @@ export function VictoryConfetti() {
     const particles: Particle[] = [];
 
     for (let i = 0; i < PARTICLE_COUNT; i++) {
-      const angle = (Math.random() * Math.PI) / 3 + Math.PI / 3; // spread downwards and outward
-      const speed = Math.random() * 7 + 4;
+      const side = i % 2 === 0 ? -1 : 1;
+      const launchOffset = Math.min(210, width * 0.32) + Math.random() * 38;
       particles.push({
-        x: width * 0.5 + (Math.random() * 140 - 70),
-        y: height * 0.22 + (Math.random() * 50 - 25),
-        vx: Math.cos(angle) * speed * (Math.random() > 0.5 ? 1 : -1),
-        vy: -Math.sin(angle) * speed * 0.75 - Math.random() * 3,
+        x: width * 0.5 + side * launchOffset,
+        y: height * 0.2 + (Math.random() * 42 - 21),
+        vx: side * (Math.random() * 3.5 + 1.5),
+        vy: -(Math.random() * 5 + 4),
         width: Math.random() * 9 + 6,
         height: Math.random() * 7 + 4,
         rotation: Math.random() * Math.PI * 2,
@@ -94,9 +79,9 @@ export function VictoryConfetti() {
       });
     }
 
-    let animationFrameId: number;
+    let animationFrameId: number | null = null;
     let startTime: number | null = null;
-    const DURATION = 2800; // ms
+    const DURATION = 900; // ms
 
     const render = (time: number) => {
       if (!startTime) startTime = time;
@@ -106,6 +91,7 @@ export function VictoryConfetti() {
       ctx.clearRect(0, 0, width, height);
 
       if (progress >= 1) {
+        ctx.clearRect(0, 0, width, height);
         return;
       }
 
@@ -119,6 +105,18 @@ export function VictoryConfetti() {
         p.vx *= 0.985; // air drag
         p.rotation += p.rotationSpeed;
         p.flip += p.flipSpeed;
+
+        // Preserve the result hierarchy: particles may frame the headline,
+        // but never paint through the title/archetype band at the top-centre.
+        const protectedHalfWidth = Math.min(190, width * 0.36);
+        if (
+          p.x > width / 2 - protectedHalfWidth &&
+          p.x < width / 2 + protectedHalfWidth &&
+          p.y > 18 &&
+          p.y < 142
+        ) {
+          continue;
+        }
 
         ctx.save();
         ctx.translate(p.x, p.y);
@@ -143,21 +141,29 @@ export function VictoryConfetti() {
         ctx.restore();
       }
 
-      animationFrameId = requestAnimationFrame(render);
+      if (!document.hidden) animationFrameId = requestAnimationFrame(render);
     };
 
     animationFrameId = requestAnimationFrame(render);
+    const stopWhenHidden = () => {
+      if (document.hidden && animationFrameId !== null) {
+        cancelAnimationFrame(animationFrameId);
+        animationFrameId = null;
+      }
+    };
+    document.addEventListener("visibilitychange", stopWhenHidden);
 
     return () => {
       window.removeEventListener("resize", handleResize);
-      cancelAnimationFrame(animationFrameId);
+      if (animationFrameId !== null) cancelAnimationFrame(animationFrameId);
+      document.removeEventListener("visibilitychange", stopWhenHidden);
     };
   }, []);
 
   return (
     <canvas
       ref={canvasRef}
-      className="pointer-events-none fixed inset-0 z-50 h-full w-full"
+      className="pointer-events-none fixed inset-0 z-0 h-full w-full"
       aria-hidden="true"
     />
   );

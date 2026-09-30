@@ -5,6 +5,7 @@ import {
   resetSoundForTests,
   setSoundMuted,
   setSoundVolume,
+  suspendSound,
 } from "./sound";
 
 class MockAudioParam {
@@ -44,6 +45,7 @@ class MockAudioContext {
   destination = new MockAudioNode();
   biquadCount = 0;
   bufferSources: MockBufferSource[] = [];
+  gainNodes: Array<MockAudioNode & { gain: MockAudioParam }> = [];
   decodedBuffer = { duration: 0.13 };
   decodeAudioData = vi.fn(async () => this.decodedBuffer as AudioBuffer);
 
@@ -52,7 +54,9 @@ class MockAudioContext {
   }
 
   createGain(): MockAudioNode & { gain: MockAudioParam } {
-    return Object.assign(new MockAudioNode(), { gain: new MockAudioParam() });
+    const node = Object.assign(new MockAudioNode(), { gain: new MockAudioParam() });
+    this.gainNodes.push(node);
+    return node;
   }
 
   createBuffer(): { getChannelData: () => Float32Array } {
@@ -101,6 +105,11 @@ class MockAudioContext {
     this.state = "closed";
     return Promise.resolve();
   }
+
+  suspend(): Promise<void> {
+    this.state = "suspended";
+    return Promise.resolve();
+  }
 }
 
 function installBrowserMocks(fetchMock: ReturnType<typeof vi.fn>): void {
@@ -136,11 +145,11 @@ describe("sound runtime", () => {
     const context = MockAudioContext.instances[0];
     expect(context.biquadCount).toBe(1);
 
-    await vi.waitFor(() => expect(context.decodeAudioData).toHaveBeenCalledTimes(9));
+    await vi.waitFor(() => expect(context.decodeAudioData).toHaveBeenCalledTimes(1));
     context.biquadCount = 0;
     playSound("select");
 
-    expect(fetchMock).toHaveBeenCalledTimes(9);
+    expect(fetchMock).toHaveBeenCalledTimes(1);
     expect(context.biquadCount).toBe(0);
     expect(context.bufferSources.at(-1)?.buffer).toBe(context.decodedBuffer);
   });
@@ -166,5 +175,43 @@ describe("sound runtime", () => {
     setSoundMuted(true);
 
     expect(getSoundSettings()).toEqual({ muted: true, volume: 1 });
+  });
+
+  it("deduplicates a committed feedback event and rate-limits rapid taps", () => {
+    installBrowserMocks(
+      vi.fn(async () => ({ ok: true, arrayBuffer: async () => new ArrayBuffer(16) })),
+    );
+    const now = vi.fn(() => 100);
+    vi.stubGlobal("performance", { now });
+
+    playSound("correct", { eventKey: "attempt-1:solve:g1" });
+    const context = MockAudioContext.instances[0];
+    const afterCommitted = context.bufferSources.length;
+    playSound("correct", { eventKey: "attempt-1:solve:g1" });
+    expect(context.bufferSources.length).toBe(afterCommitted);
+
+    playSound("select");
+    const afterTap = context.bufferSources.length;
+    playSound("select");
+    expect(context.bufferSources.length).toBe(afterTap);
+  });
+
+  it("mutes active tails, suspends in background, and contains resume rejection", async () => {
+    installBrowserMocks(vi.fn(async () => Promise.reject(new Error("offline"))));
+    playSound("submit");
+    const context = MockAudioContext.instances[0];
+    const master = context.gainNodes[0];
+
+    setSoundMuted(true);
+    expect(master.gain.value).toBe(0);
+    setSoundMuted(false);
+    expect(master.gain.value).toBe(0.75);
+
+    suspendSound();
+    expect(context.state).toBe("suspended");
+    context.resume = vi.fn(() => Promise.reject(new Error("blocked")));
+    expect(() => playSound("loss", { eventKey: "attempt-2:terminal:loss" })).not.toThrow();
+    await new Promise((resolve) => setTimeout(resolve, 0));
+    expect(context.resume).toHaveBeenCalledTimes(1);
   });
 });

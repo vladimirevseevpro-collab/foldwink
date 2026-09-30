@@ -11,18 +11,10 @@ import { OrigamiConfetti } from "../components/OrigamiConfetti";
 import { SELECTION_SIZE } from "../game/types/game";
 import { canSubmit } from "../game/engine/submit";
 import { colorIndexForGroup } from "../game/solvedColors";
-import { useSound } from "../audio/useSound";
-import { useHaptics } from "../haptics/useHaptics";
-import {
-  playCardClick,
-  playHarmonicSolve,
-  playErrorThud,
-  playOrigamiFold,
-  playTensionWobble,
-  playZenBell,
-} from "../audio/proceduralSynth";
+import { useFeedback } from "../feedback/useFeedback";
 import { GameTimer } from "../components/GameTimer";
 import { useT } from "../i18n/useLanguage";
+import { FoldwinkIcon } from "../components/FoldwinkIcon";
 
 export function GameScreen() {
   const active = useGameStore((s) => s.active);
@@ -35,8 +27,7 @@ export function GameScreen() {
   const goToMenu = useGameStore((s) => s.goToMenu);
   const clearFlash = useGameStore((s) => s.clearFlash);
   const winkTab = useGameStore((s) => s.winkTab);
-  const play = useSound();
-  const haptic = useHaptics();
+  const feedback = useFeedback();
   const t = useT();
   const prevSolvedCount = useRef(0);
   const prevWinkedId = useRef<string | null>(null);
@@ -46,6 +37,8 @@ export function GameScreen() {
   const [confettiTrigger, setConfettiTrigger] = useState(0);
   const [latestSolvedColor, setLatestSolvedColor] = useState(0);
   const [newlySolvedGroupId, setNewlySolvedGroupId] = useState<string | null>(null);
+  const attemptFeedbackKey =
+    active?.attemptId ?? `${active?.puzzleId ?? "none"}:${active?.startedAt ?? 0}`;
 
   useEffect(() => {
     return () => {
@@ -61,11 +54,14 @@ export function GameScreen() {
       const target = e.target as HTMLElement | null;
       const tag = target?.tagName?.toLowerCase();
       if (tag === "input" || tag === "textarea") return;
+      // Native controls own Enter. Letting the window shortcut also fire
+      // would submit the selected quartet before Clear/Shuffle performs
+      // its own action.
+      if (target?.closest("button, a, select, [role='button']")) return;
       if (e.key === "Enter") {
         if (canSubmit(active.selection)) {
           e.preventDefault();
-          play("submit");
-          haptic("submit");
+          feedback("submit");
           submit();
         }
       } else if (e.key === "Escape") {
@@ -77,7 +73,7 @@ export function GameScreen() {
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-  }, [active, submit, clearSelection, play, haptic]);
+  }, [active, submit, clearSelection, feedback]);
 
   const handleQuit = (): void => {
     if (!quitArmed) {
@@ -99,29 +95,30 @@ export function GameScreen() {
     // playing sound + haptics in the same 600 ms window.
     const terminal = active?.result != null;
     if (flash === "correct" && !terminal) {
-      // 2026 ASMR Megatrend: Harmonic Chord Progression on row solves
-      // Row 1 = 1.0 (Root C3), Row 2 = 1.25 (Major 3rd E3), Row 3 = 1.5 (Fifth G3)
       const solvedCount = active?.solvedGroupIds.length ?? 1;
       const pitchRatios = [1.0, 1.25, 1.5, 2.0];
       const rate =
         pitchRatios[Math.min(Math.max(0, solvedCount - 1), pitchRatios.length - 1)] ?? 1.0;
-      playHarmonicSolve(Math.min(4, Math.max(1, solvedCount)) as 1 | 2 | 3 | 4);
-      playOrigamiFold();
-      play("correct", { playbackRate: rate });
-      haptic("correct");
+      feedback("correct", {
+        playbackRate: rate,
+        eventKey: `${attemptFeedbackKey}:revision:${active?.revision ?? 0}:correct`,
+      });
     }
     if (flash === "one-away" && !terminal) {
-      play("wrong");
-      playTensionWobble();
-      haptic("oneAway");
+      feedback("oneAway", {
+        eventKey: `${attemptFeedbackKey}:revision:${active?.revision ?? 0}:one-away`,
+      });
     } else if (flash === "incorrect" && !terminal) {
-      play("wrong");
-      playErrorThud();
-      haptic("wrong");
+      feedback("wrong", {
+        eventKey: `${attemptFeedbackKey}:revision:${active?.revision ?? 0}:wrong`,
+      });
     }
-    const id = setTimeout(() => clearFlash(), flash === "one-away" ? 1400 : 450);
+    const id = setTimeout(
+      () => clearFlash(),
+      flash === "one-away" || flash === "repeat" ? 1400 : 450,
+    );
     return () => clearTimeout(id);
-  }, [flash, active, clearFlash, play, haptic]);
+  }, [flash, active, attemptFeedbackKey, clearFlash, feedback]);
 
   // Terminal cue — the store now holds the board visible for ~600 ms
   // after a win/loss before flipping to ResultScreen (see RESULT_HOLD_MS
@@ -130,21 +127,17 @@ export function GameScreen() {
   // not on the Result panel.
   const terminalResultPlayed = useRef<string | null>(null);
   useEffect(() => {
-    if (!active || !active.result) return;
+    if (!active || !active.result) {
+      terminalResultPlayed.current = null;
+      return;
+    }
     const key = `${active.puzzleId}:${active.result}`;
     if (terminalResultPlayed.current === key) return;
     terminalResultPlayed.current = key;
-    if (active.result === "win") {
-      // 4-tier Euphonic Victory Chord: Root, Major 3rd, Fifth, Octave (523.25Hz)
-      playHarmonicSolve(4);
-      playOrigamiFold();
-      if (active.mode === "zen") {
-        playZenBell();
-      }
-    }
-    play(active.result === "win" ? "win" : "loss");
-    haptic(active.result === "win" ? "win" : "loss");
-  }, [active, play, haptic]);
+    feedback(active.result === "win" ? "win" : "loss", {
+      eventKey: `${attemptFeedbackKey}:terminal:${active.result}`,
+    });
+  }, [active, attemptFeedbackKey, feedback]);
 
   useEffect(() => {
     if (!active || !puzzle) {
@@ -159,17 +152,13 @@ export function GameScreen() {
         setLatestSolvedColor(colorIndexForGroup(puzzle, latestId));
         setConfettiTrigger((prev) => prev + 1);
       }
-      if (puzzle.difficulty === "medium") {
-        play("tabReveal");
-      }
     }
     prevSolvedCount.current = active.solvedGroupIds.length;
     if (active.winkedGroupId && active.winkedGroupId !== prevWinkedId.current) {
-      play("wink");
-      haptic("wink");
+      feedback("wink", { eventKey: `${attemptFeedbackKey}:wink:${active.winkedGroupId}` });
     }
     prevWinkedId.current = active.winkedGroupId;
-  }, [active, puzzle, play, haptic]);
+  }, [active, puzzle, attemptFeedbackKey, feedback]);
 
   if (!active || !puzzle) {
     return (
@@ -201,21 +190,17 @@ export function GameScreen() {
     const already = selectedSet.has(value);
     if (!already && active.selection.length >= SELECTION_SIZE) return;
 
-    // Organic pitch variance & dry procedural card click
+    // Tiny playback variance keeps repeated paper taps from sounding cloned.
     const basePitch = already ? 0.94 : ([1.0, 1.05, 1.1, 1.15][active.selection.length] ?? 1.0);
-    playCardClick(basePitch);
-    play(already ? "deselect" : "select", {
+    feedback(already ? "deselect" : "select", {
       playbackRate: basePitch * (0.98 + Math.random() * 0.04),
     });
-
-    haptic(already ? "deselect" : "select");
     toggleSelection(value);
   };
 
   const handleSubmit = (): void => {
     if (!canSubmit(active.selection)) return;
-    play("submit");
-    haptic("submit");
+    feedback("submit");
     submit();
   };
 
@@ -226,7 +211,9 @@ export function GameScreen() {
         ? "ring-2 ring-danger"
         : flash === "one-away"
           ? "ring-2 ring-[#e0b25e]"
-          : "";
+          : flash === "repeat"
+            ? "ring-2 ring-accent/50"
+            : "";
 
   return (
     <>
@@ -253,6 +240,7 @@ export function GameScreen() {
               <GameTimer
                 startedAt={active.startedAt}
                 endedAt={active.endedAt}
+                elapsedActiveMs={active.elapsedActiveMs}
                 ariaLabel={t.game.elapsedAria}
               />
               <MistakesDots used={active.mistakesUsed} oneAwayLast={flash === "one-away"} />
@@ -313,9 +301,12 @@ export function GameScreen() {
           {flash === "one-away" && (
             <span className="text-[#e0b25e] font-semibold">✦ {t.game.oneAway}</span>
           )}
+          {flash === "repeat" && (
+            <span className="text-accent font-semibold">{t.game.alreadyTried}</span>
+          )}
         </div>
-        <div className="mt-3 flex items-center justify-between gap-3 max-w-md mx-auto">
-          <div className="flex items-center gap-2" aria-live="polite">
+        <div className="mt-3 flex flex-wrap items-center justify-between gap-3 max-w-md mx-auto">
+          <div className="flex items-center gap-2 max-[479px]:w-full" aria-live="polite">
             <div
               className="flex gap-1"
               role="img"
@@ -334,15 +325,22 @@ export function GameScreen() {
               {active.selection.length}/{SELECTION_SIZE}
             </span>
           </div>
-          <div className="flex gap-2">
-            <Button variant="ghost" onClick={reshuffleActive} aria-label={t.game.shuffle}>
-              <span aria-hidden="true">⇄</span>
+          <div className="flex min-w-0 gap-2 max-[479px]:w-full">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={reshuffleActive}
+              aria-label={t.game.shuffle}
+            >
+              <FoldwinkIcon name="shuffle" size={19} />
             </Button>
             <Button
               variant="secondary"
+              className="max-[479px]:min-w-0 max-[479px]:flex-1 max-[479px]:px-2"
               onClick={clearSelection}
               disabled={active.selection.length === 0}
             >
+              <FoldwinkIcon name="clear" size={16} className="mr-1.5" />
               {t.game.clear}
             </Button>
             <Button
@@ -350,8 +348,8 @@ export function GameScreen() {
               disabled={!canSubmit(active.selection)}
               className={
                 canSubmit(active.selection)
-                  ? "ring-2 ring-accent/40 shadow-[0_0_0_4px_rgba(124,196,255,0.12)]"
-                  : ""
+                  ? "max-[479px]:min-w-0 max-[479px]:flex-1 max-[479px]:px-2 ring-2 ring-accent/40 shadow-[0_0_0_4px_rgba(124,196,255,0.12)]"
+                  : "max-[479px]:min-w-0 max-[479px]:flex-1 max-[479px]:px-2"
               }
             >
               {t.game.submit}

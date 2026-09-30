@@ -68,7 +68,7 @@ export function OrigamiConfetti({ triggerKey, colorIndex = 0 }: Props) {
       });
     }
 
-    let rafId: number;
+    let rafId: number | null = null;
     let startTime: number | null = null;
     const duration = 1000;
 
@@ -97,7 +97,7 @@ export function OrigamiConfetti({ triggerKey, colorIndex = 0 }: Props) {
         ctx.restore();
       }
 
-      if (progress < 1) {
+      if (progress < 1 && !document.hidden) {
         rafId = requestAnimationFrame(render);
       } else {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -105,9 +105,17 @@ export function OrigamiConfetti({ triggerKey, colorIndex = 0 }: Props) {
     };
 
     rafId = requestAnimationFrame(render);
+    const stopWhenHidden = () => {
+      if (document.hidden && rafId !== null) {
+        cancelAnimationFrame(rafId);
+        rafId = null;
+      }
+    };
+    document.addEventListener("visibilitychange", stopWhenHidden);
 
     return () => {
-      if (rafId) cancelAnimationFrame(rafId);
+      if (rafId !== null) cancelAnimationFrame(rafId);
+      document.removeEventListener("visibilitychange", stopWhenHidden);
     };
   }, [triggerKey, colorIndex]);
 

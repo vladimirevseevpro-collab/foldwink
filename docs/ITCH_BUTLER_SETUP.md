@@ -12,7 +12,6 @@ URL is stable and returning players keep their saves.
 ## One-time setup (≈ 2 minutes)
 
 1. **Install butler.** Two options — the release script finds it either way:
-
    - **Local (recommended for this repo):** download
      `butler-windows-amd64.zip` from
      <https://itch.io/docs/butler/installing.html> and unzip into
@@ -36,7 +35,6 @@ URL is stable and returning players keep their saves.
 
 3. **Record your itch target** (`user/game-slug`, e.g. `sunlike78/foldwink`).
    Pick one of the three options — the release script reads them in order:
-
    - `.itch-target` file in repo root (gitignored — recommended):
      ```
      sunlike78/foldwink

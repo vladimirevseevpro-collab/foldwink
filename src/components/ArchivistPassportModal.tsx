@@ -1,26 +1,28 @@
 import { useState, useRef, useEffect } from "react";
 import {
   loadArchivistProfile,
-  saveArchivistProfile,
   getGuildRank,
   getXpForLevel,
 } from "../progression/archivistProfile";
 import { STAMP_COLLECTION, SEALS, NIBS, TITLES } from "../progression/stamps";
+import { StampArtwork } from "./StampArtwork";
 import { useLang, useT } from "../i18n/useLanguage";
 import { useGameStore } from "../game/state/appStore";
-import { useSound } from "../audio/useSound";
-import { triggerHaptic } from "../haptics/haptics";
-import { getOrCreatePlayerSeed, setPlayerSeed } from "../puzzles/progression";
+import { useFeedback } from "../feedback/useFeedback";
+import { getOrCreatePlayerSeed } from "../puzzles/progression";
+import {
+  COLLECTION_MILESTONES,
+  earnedCollectionMilestones,
+  uniqueSolvedCount,
+} from "../progression/milestones";
 import {
   encodePassportToSeal,
   decodePassportFromSeal,
   drawWaxSealCertificate,
-  saveArchivistBackup,
-  loadArchivistBackup,
-  hasArchivistBackup,
-  clearArchivistBackup,
   type DecodeResult,
 } from "../progression/waxSealTransfer";
+import { tryGenerateQrMatrix } from "../progression/qr";
+import { ProfileTransferDialog } from "./ProfileTransferDialog";
 
 interface ArchivistPassportModalProps {
   onClose: () => void;
@@ -36,18 +38,22 @@ export function ArchivistPassportModal({
   const [selectedStampId, setSelectedStampId] = useState<string | null>(null);
   const [subView, setSubView] = useState<"none" | "export" | "import" | "diff">("none");
   const [pendingImport, setPendingImport] = useState<DecodeResult | null>(null);
-  const [hasBackup, setHasBackup] = useState(() => hasArchivistBackup());
-  const [rollbackSuccess, setRollbackSuccess] = useState(false);
   const [importInput, setImportInput] = useState("");
   const [copySuccess, setCopySuccess] = useState(false);
   const [importSuccess, setImportSuccess] = useState(false);
+  const [legacyImportBusy, setLegacyImportBusy] = useState(false);
   const [importError, setImportError] = useState<string | null>(null);
+  const [profileTransferOpen, setProfileTransferOpen] = useState(false);
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const lang = useLang();
   const t = useT();
   const stats = useGameStore((s) => s.stats);
-  const playSound = useSound();
+  const updateProfileCosmetic = useGameStore((s) => s.updateProfileCosmetic);
+  const importLegacyPassport = useGameStore((s) => s.importLegacyPassport);
+  const solvedCount = uniqueSolvedCount(stats);
+  const earnedMilestones = earnedCollectionMilestones(stats);
+  const feedback = useFeedback();
 
   const rank = getGuildRank(profile.level);
   const curLevelXp = getXpForLevel(profile.level);
@@ -58,6 +64,7 @@ export function ArchivistPassportModal({
   );
 
   const sealString = encodePassportToSeal(profile, getOrCreatePlayerSeed());
+  const sealQrResult = tryGenerateQrMatrix(sealString);
 
   useEffect(() => {
     if (subView === "export" && canvasRef.current) {
@@ -67,18 +74,17 @@ export function ArchivistPassportModal({
 
   const handleUpdateField = (key: "sealId" | "nibId" | "titleId", val: string) => {
     const next = { ...profile, [key]: val };
-    setProfile(next);
-    saveArchivistProfile(next);
-    playSound("select");
-    triggerHaptic("select");
+    if (updateProfileCosmetic(key, val)) {
+      setProfile(next);
+      feedback("select");
+    }
   };
 
   const handleCopySeal = async () => {
     try {
       await navigator.clipboard.writeText(sealString);
       setCopySuccess(true);
-      playSound("submit");
-      triggerHaptic("select");
+      feedback("submit");
       setTimeout(() => setCopySuccess(false), 2000);
     } catch {
       /* ignore */
@@ -94,7 +100,7 @@ export function ArchivistPassportModal({
     document.body.appendChild(a);
     a.click();
     a.remove();
-    playSound("submit");
+    feedback("submit");
   };
 
   const handleImportSubmit = () => {
@@ -104,55 +110,58 @@ export function ArchivistPassportModal({
       setImportError(
         res.error ?? (lang === "ru" ? "Неверная сургучная печать" : "Invalid wax seal code"),
       );
-      playSound("wrong");
-      triggerHaptic("wrong");
+      feedback("wrong");
       return;
     }
 
     // Instead of immediately overwriting, proceed to Diff Preview
     setPendingImport(res);
     setSubView("diff");
-    playSound("select");
-    triggerHaptic("select");
+    feedback("select");
   };
 
-  const handleConfirmReplace = () => {
+  const handleConfirmReplace = async () => {
     if (!pendingImport || !pendingImport.profile) return;
-    // 1. Save old profile snapshot in localStorage under foldwink_archivist_backup
-    saveArchivistBackup(profile, getOrCreatePlayerSeed());
-    setHasBackup(true);
-
-    // 2. Apply incoming profile
-    saveArchivistProfile(pendingImport.profile);
-    if (pendingImport.playerSeed) {
-      setPlayerSeed(pendingImport.playerSeed);
+    setLegacyImportBusy(true);
+    setImportError(null);
+    const incoming = pendingImport.profile;
+    const committed = await importLegacyPassport({
+      playerSeed: pendingImport.playerSeed,
+      sealId: incoming.sealId,
+      nibId: incoming.nibId,
+      titleId: incoming.titleId,
+      collectedStampIds: incoming.collectedStampIds,
+    });
+    setLegacyImportBusy(false);
+    if (!committed) {
+      setImportError(
+        lang === "ru"
+          ? "Не удалось безопасно сохранить паспорт. Проверьте хранилище или конфликт другой вкладки."
+          : lang === "de"
+            ? "Der Pass konnte nicht sicher gespeichert werden. Prüfe Speicher oder einen Tab-Konflikt."
+            : "The passport could not be saved safely. Check storage or another-tab conflict.",
+      );
+      feedback("wrong");
+      return;
     }
-    setProfile(pendingImport.profile);
+    setProfile({
+      ...profile,
+      sealId: incoming.sealId,
+      nibId: incoming.nibId,
+      titleId: incoming.titleId,
+      collectedStampIds: [
+        ...new Set([...profile.collectedStampIds, ...incoming.collectedStampIds]),
+      ],
+      playerSeed: pendingImport.playerSeed ?? profile.playerSeed,
+    });
     setImportSuccess(true);
-    playSound("correct");
-    triggerHaptic("correct");
+    feedback("correct");
     setTimeout(() => {
       setImportSuccess(false);
       setSubView("none");
       setPendingImport(null);
       setImportInput("");
     }, 1500);
-  };
-
-  const handleUndoRollback = () => {
-    const backup = loadArchivistBackup();
-    if (!backup || !backup.profile) return;
-    saveArchivistProfile(backup.profile);
-    if (backup.playerSeed) {
-      setPlayerSeed(backup.playerSeed);
-    }
-    setProfile(backup.profile);
-    clearArchivistBackup();
-    setHasBackup(false);
-    setRollbackSuccess(true);
-    playSound("submit");
-    triggerHaptic("correct");
-    setTimeout(() => setRollbackSuccess(false), 2500);
   };
 
   const getRankTitle = () => {
@@ -191,9 +200,17 @@ export function ArchivistPassportModal({
         {/* Header Tabs & Close */}
         <div className="flex items-center justify-between border-b border-line pb-3">
           {subView === "none" ? (
-            <div className="flex items-center gap-2">
+            <div
+              className="flex items-center gap-2"
+              role="tablist"
+              aria-label={t.passport.tabPassport}
+            >
               <button
                 type="button"
+                id="passport-tab"
+                role="tab"
+                aria-selected={activeTab === "passport"}
+                aria-controls="passport-panel"
                 onClick={() => setActiveTab("passport")}
                 className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-colors ${
                   activeTab === "passport"
@@ -205,13 +222,16 @@ export function ArchivistPassportModal({
               </button>
               <button
                 type="button"
+                id="stamps-tab"
+                role="tab"
+                aria-selected={activeTab === "stamps"}
+                aria-controls="stamps-panel"
                 onClick={() => setActiveTab("stamps")}
                 className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-colors ${
                   activeTab === "stamps" ? "bg-accent text-white" : "text-muted hover:text-text"
                 }`}
               >
-                💌 {t.passport.tabStamps} ({profile.collectedStampIds.length}/
-                {STAMP_COLLECTION.length})
+                💌 {t.passport.tabStamps} ({earnedMilestones.length}/6)
               </button>
             </div>
           ) : (
@@ -252,25 +272,40 @@ export function ArchivistPassportModal({
           <div className="space-y-4 text-center animate-in zoom-in-95 duration-150">
             <div className="text-xs uppercase tracking-widest font-bold text-muted">
               {lang === "ru"
-                ? "📜 Сургучная Грамота (Перенос без сервера)"
+                ? "📜 Legacy-сургуч (только паспорт / seed)"
                 : lang === "de"
-                  ? "📜 Wachssiegel-Urkunde (Serverloser Transfer)"
-                  : "📜 Wax Seal Certificate (Zero-Backend Export)"}
+                  ? "📜 Legacy-Wachssiegel (nur Pass / Seed)"
+                  : "📜 Legacy Wax Seal (passport / seed only)"}
             </div>
 
             <div className="flex justify-center">
               <canvas
                 ref={canvasRef}
                 className="w-64 h-auto rounded-xl border border-line shadow-2xl bg-[#121613]"
+                data-testid="legacy-passport-certificate"
               />
             </div>
 
+            {!sealQrResult.ok && (
+              <p
+                className="rounded-xl border border-amber-500/40 bg-amber-950/20 p-3 text-[11px] text-amber-100"
+                role="status"
+                data-testid="legacy-passport-qr-fallback"
+              >
+                {lang === "ru"
+                  ? "Этот старый код слишком длинный для надёжного QR. Паспорт не повреждён — используйте «Копировать код»."
+                  : lang === "de"
+                    ? "Dieser alte Code ist zu lang für einen zuverlässigen QR. Der Pass ist intakt — nutze „Code kopieren“."
+                    : "This legacy code is too long for a reliable QR. The passport is intact — use Copy code."}
+              </p>
+            )}
+
             <p className="text-[11px] text-muted max-w-xs mx-auto">
               {lang === "ru"
-                ? "Отсканируйте QR-код камерой на другом устройстве или скопируйте строку печати для мгновенного переноса профиля."
+                ? "Legacy: переносит только паспорт и seed, а не полный прогресс. Для полного backup используйте кнопку ниже в паспорте."
                 : lang === "de"
-                  ? "Scanne diesen QR-Code mit einem anderen Gerät oder kopiere den Siegelcode unten für den direkten Transfer."
-                  : "Scan this QR code with another device or copy the seal code below to transfer your passport without any server."}
+                  ? "Legacy: überträgt nur Pass und Seed, nicht den vollständigen Fortschritt. Nutze Vollständiges Backup / Import im Pass."
+                  : "Legacy: transfers passport and seed only, not full progress. Use Full backup / import in the passport for a complete transfer."}
             </p>
 
             <div className="flex flex-col gap-2 pt-1">
@@ -301,17 +336,17 @@ export function ArchivistPassportModal({
             <div className="text-center">
               <div className="text-xs uppercase tracking-widest font-bold text-muted">
                 {lang === "ru"
-                  ? "📥 Импорт Сургучной Печати"
+                  ? "📥 Legacy-импорт сургуча"
                   : lang === "de"
-                    ? "📥 Wachssiegel importieren"
-                    : "📥 Import Wax Seal"}
+                    ? "📥 Legacy-Wachssiegel importieren"
+                    : "📥 Legacy Wax Seal Import"}
               </div>
               <p className="text-[11px] text-muted mt-1">
                 {lang === "ru"
-                  ? "Вставьте код сургучной печати (FWSEAL1:...) для восстановления паспорта."
+                  ? "Legacy: вставьте код (FWSEAL1:...), чтобы восстановить только паспорт и seed, не полный прогресс."
                   : lang === "de"
-                    ? "Füge deinen Siegelcode (FWSEAL1:...) ein, um deinen Pass wiederherzustellen."
-                    : "Paste your wax seal code (FWSEAL1:...) to restore your passport."}
+                    ? "Legacy: Siegelcode (FWSEAL1:...) einfügen, um nur Pass und Seed wiederherzustellen, nicht den vollständigen Fortschritt."
+                    : "Legacy: paste a wax seal code (FWSEAL1:...) to restore only your passport and seed, not full progress."}
               </p>
             </div>
 
@@ -323,8 +358,10 @@ export function ArchivistPassportModal({
                   setImportError(null);
                 }}
                 rows={3}
+                maxLength={4096}
                 placeholder="FWSEAL1:..."
                 className="w-full rounded-xl border border-line bg-surfaceHi p-2.5 text-xs text-text font-mono focus:border-accent outline-none"
+                data-testid="legacy-passport-input"
               />
             </div>
 
@@ -338,70 +375,56 @@ export function ArchivistPassportModal({
               <div className="p-3 rounded-xl border border-accent/60 bg-accent/10 space-y-1 text-xs animate-in fade-in duration-150">
                 <div className="font-bold text-accent flex items-center gap-1.5">
                   <span>✓</span>
-                  <span>{t.passport.verifiedSeal}</span>
-                </div>
-                <div className="text-text font-medium">
-                  {getGuildRank(validatedImport.profile.level).icon}{" "}
-                  {lang === "ru"
-                    ? getGuildRank(validatedImport.profile.level).titleRu
-                    : lang === "de"
-                      ? getGuildRank(validatedImport.profile.level).titleDe
-                      : getGuildRank(validatedImport.profile.level).titleEn}{" "}
-                  · Lv. {validatedImport.profile.level} ({validatedImport.profile.xp} XP)
+                  <span>
+                    {lang === "ru"
+                      ? "Формат legacy-паспорта распознан"
+                      : lang === "de"
+                        ? "Legacy-Passformat erkannt"
+                        : "Legacy passport format recognized"}
+                  </span>
                 </div>
                 <div className="text-muted text-[11px]">
-                  💧 {validatedImport.profile.ink} · 🕯️ {validatedImport.profile.wax} · 👑{" "}
-                  {validatedImport.profile.prestige} · 💌{" "}
-                  {t.passport.stampsCount(
-                    validatedImport.profile.collectedStampIds.length,
-                    STAMP_COLLECTION.length,
-                  )}
+                  {lang === "ru"
+                    ? "Будут проверены только seed, оформление и известные марки."
+                    : lang === "de"
+                      ? "Nur Seed, Gestaltung und bekannte Marken werden geprüft."
+                      : "Only seed, cosmetics, and known stamps will be reviewed."}
                 </div>
               </div>
             )}
 
             <button
               type="button"
-              disabled={!validatedImport?.ok || importSuccess}
+              disabled={!validatedImport?.ok || importSuccess || legacyImportBusy}
               onClick={handleImportSubmit}
               className={`w-full py-2.5 rounded-xl border text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-sm ${
                 validatedImport?.ok
                   ? "border-accent bg-accent text-white hover:opacity-90 cursor-pointer"
                   : "border-line bg-surfaceHi text-muted opacity-50 cursor-not-allowed"
               }`}
+              data-testid="legacy-passport-review"
             >
               <span>{importSuccess ? "✓" : "⚖️"}</span>
               <span>
                 {importSuccess
                   ? lang === "ru"
-                    ? "Паспорт Успешно Восстановлен!"
+                    ? "Детали паспорта сохранены"
                     : lang === "de"
-                      ? "Pass erfolgreich wiederhergestellt!"
-                      : "Passport Restored!"
-                  : lang === "ru"
-                    ? "Сравнить профили и заменить"
-                    : lang === "de"
-                      ? "Profile vergleichen & ersetzen"
-                      : "Review Diff & Replace"}
+                      ? "Passdetails gespeichert"
+                      : "Passport details saved"
+                  : legacyImportBusy
+                    ? lang === "ru"
+                      ? "Проверка хранилища…"
+                      : lang === "de"
+                        ? "Speicher wird geprüft…"
+                        : "Checking storage…"
+                    : lang === "ru"
+                      ? "Проверить детали паспорта"
+                      : lang === "de"
+                        ? "Passdetails prüfen"
+                        : "Review passport details"}
               </span>
             </button>
-
-            {hasBackup && (
-              <div className="p-3 rounded-xl border border-amber-500/50 bg-amber-950/30 text-amber-200 text-xs flex items-center justify-between shadow-sm">
-                <div className="flex items-center gap-2">
-                  <span>↩️</span>
-                  <span>{t.passport.undoImport}</span>
-                </div>
-                <button
-                  type="button"
-                  onClick={handleUndoRollback}
-                  className="px-2.5 py-1 rounded-lg bg-amber-500/30 hover:bg-amber-500/50 text-amber-100 font-bold text-[11px] uppercase tracking-wider transition-colors"
-                  data-testid="undo-passport-import-subview"
-                >
-                  {lang === "ru" ? "Вернуть" : lang === "de" ? "Wiederherstellen" : "Undo"}
-                </button>
-              </div>
-            )}
           </div>
         )}
 
@@ -413,103 +436,73 @@ export function ArchivistPassportModal({
           >
             <div className="text-center">
               <div className="text-xs uppercase tracking-widest font-bold text-amber-400">
-                ⚖️ {t.passport.diffTitle}
+                ⚖️{" "}
+                {lang === "ru"
+                  ? "Детали legacy-паспорта"
+                  : lang === "de"
+                    ? "Legacy-Passdetails"
+                    : "Legacy passport details"}
               </div>
               <p className="text-[11px] text-muted mt-1">
                 {lang === "ru"
-                  ? "Сравните текущий профиль с импортируемым перед заменой."
+                  ? "XP, уровень, Ink/Wax, статистика и награды останутся на этом устройстве без изменений."
                   : lang === "de"
-                    ? "Vergleiche dein aktuelles Profil mit den Importdaten vor dem Speichern."
-                    : "Compare your current profile with incoming data before applying."}
+                    ? "XP, Level, Ink/Wax, Statistik und Belohnungen bleiben auf diesem Gerät unverändert."
+                    : "XP, level, Ink/Wax, stats, and rewards stay unchanged on this device."}
               </p>
             </div>
 
-            {/* Comparison Grid */}
-            <div className="rounded-xl border border-line bg-surfaceHi/50 overflow-hidden divide-y divide-line text-xs">
-              <div className="grid grid-cols-3 p-2.5 bg-surface font-bold text-[11px] uppercase tracking-wider text-muted">
-                <div>{lang === "ru" ? "Параметр" : lang === "de" ? "Wert" : "Metric"}</div>
-                <div className="text-center text-text">{t.passport.currentProfile}</div>
-                <div className="text-center text-accent">{t.passport.importedProfile}</div>
+            <div className="rounded-xl border border-line bg-surfaceHi/50 p-3 text-xs space-y-2">
+              <div className="flex justify-between gap-3">
+                <span className="text-muted">
+                  {lang === "ru" ? "Титул" : lang === "de" ? "Titel" : "Title"}
+                </span>
+                <span className="text-right font-bold text-text">
+                  {getTitleLabel(pendingImport.profile.titleId)}
+                </span>
               </div>
-
-              {/* Level */}
-              <div className="grid grid-cols-3 p-2.5 items-center">
-                <div className="font-semibold text-text">{t.passport.statLevel}</div>
-                <div className="text-center text-muted">Lv. {profile.level}</div>
-                <div
-                  className={`text-center font-bold ${pendingImport.profile.level >= profile.level ? "text-green-400" : "text-amber-400"}`}
-                >
-                  Lv. {pendingImport.profile.level}{" "}
-                  {pendingImport.profile.level > profile.level
-                    ? `(+${pendingImport.profile.level - profile.level})`
-                    : ""}
-                </div>
+              <div className="flex justify-between gap-3">
+                <span className="text-muted">{t.passport.waxSealLabel}</span>
+                <span className="text-right font-bold text-text">
+                  {getSealLabel(pendingImport.profile.sealId)}
+                </span>
               </div>
-
-              {/* XP */}
-              <div className="grid grid-cols-3 p-2.5 items-center">
-                <div className="font-semibold text-text">{t.passport.statXp}</div>
-                <div className="text-center text-muted">{profile.xp}</div>
-                <div
-                  className={`text-center font-bold ${pendingImport.profile.xp >= profile.xp ? "text-green-400" : "text-amber-400"}`}
-                >
-                  {pendingImport.profile.xp}{" "}
-                  {pendingImport.profile.xp > profile.xp
-                    ? `(+${pendingImport.profile.xp - profile.xp})`
-                    : ""}
-                </div>
+              <div className="flex justify-between gap-3">
+                <span className="text-muted">{t.passport.scribeNibLabel}</span>
+                <span className="text-right font-bold text-text">
+                  {getNibLabel(pendingImport.profile.nibId)}
+                </span>
               </div>
-
-              {/* Daily Streak */}
-              <div className="grid grid-cols-3 p-2.5 items-center">
-                <div className="font-semibold text-text">{t.passport.statStreak}</div>
-                <div className="text-center text-muted">{stats.currentStreak} 🔥</div>
-                <div className="text-center font-bold text-accent">
-                  {stats.currentStreak} 🔥 ({t.passport.preservedStreak})
-                </div>
+              <div className="flex justify-between gap-3">
+                <span className="text-muted">
+                  {lang === "ru"
+                    ? "Известные марки"
+                    : lang === "de"
+                      ? "Bekannte Marken"
+                      : "Known stamps"}
+                </span>
+                <span className="text-right font-bold text-text">
+                  {pendingImport.profile.collectedStampIds.length}
+                </span>
               </div>
-
-              {/* Ink */}
-              <div className="grid grid-cols-3 p-2.5 items-center">
-                <div className="font-semibold text-text">{t.passport.statInk}</div>
-                <div className="text-center text-muted">💧 {profile.ink}</div>
-                <div
-                  className={`text-center font-bold ${pendingImport.profile.ink >= profile.ink ? "text-green-400" : "text-amber-400"}`}
-                >
-                  💧 {pendingImport.profile.ink}{" "}
-                  {pendingImport.profile.ink > profile.ink
-                    ? `(+${pendingImport.profile.ink - profile.ink})`
-                    : ""}
-                </div>
-              </div>
-
-              {/* Wax */}
-              <div className="grid grid-cols-3 p-2.5 items-center">
-                <div className="font-semibold text-text">{t.passport.statWax}</div>
-                <div className="text-center text-muted">🕯️ {profile.wax}</div>
-                <div
-                  className={`text-center font-bold ${pendingImport.profile.wax >= profile.wax ? "text-green-400" : "text-amber-400"}`}
-                >
-                  🕯️ {pendingImport.profile.wax}{" "}
-                  {pendingImport.profile.wax > profile.wax
-                    ? `(+${pendingImport.profile.wax - profile.wax})`
-                    : ""}
-                </div>
-              </div>
-
-              {/* Unlocked Stamps */}
-              <div className="grid grid-cols-3 p-2.5 items-center">
-                <div className="font-semibold text-text">{t.passport.statStamps}</div>
-                <div className="text-center text-muted">
-                  💌 {profile.collectedStampIds.length}
-                </div>
-                <div
-                  className={`text-center font-bold ${pendingImport.profile.collectedStampIds.length >= profile.collectedStampIds.length ? "text-green-400" : "text-amber-400"}`}
-                >
-                  💌 {pendingImport.profile.collectedStampIds.length}
-                </div>
+              <div className="flex justify-between gap-3">
+                <span className="text-muted">Seed</span>
+                <span className="max-w-[12rem] truncate text-right font-mono text-[10px] text-text">
+                  {pendingImport.playerSeed ??
+                    (lang === "ru"
+                      ? "не указан"
+                      : lang === "de"
+                        ? "nicht enthalten"
+                        : "not included")}
+                </span>
               </div>
             </div>
+
+            {importError && (
+              <div className="rounded-lg border border-red-500/50 bg-red-950/40 p-2 text-xs text-red-300">
+                ⚠️ {importError}
+              </div>
+            )}
 
             <div className="flex gap-2 pt-1">
               <button
@@ -523,9 +516,21 @@ export function ArchivistPassportModal({
               <button
                 type="button"
                 onClick={handleConfirmReplace}
+                disabled={legacyImportBusy}
                 className="flex-1 py-2.5 rounded-xl border border-accent bg-accent hover:opacity-90 text-white text-xs font-bold uppercase tracking-wider transition-all shadow-md"
+                data-testid="legacy-passport-apply"
               >
-                {t.passport.replaceConfirm}
+                {legacyImportBusy
+                  ? lang === "ru"
+                    ? "Сохранение…"
+                    : lang === "de"
+                      ? "Speichern…"
+                      : "Saving…"
+                  : lang === "ru"
+                    ? "Применить детали"
+                    : lang === "de"
+                      ? "Details anwenden"
+                      : "Apply details"}
               </button>
             </div>
           </div>
@@ -533,7 +538,12 @@ export function ArchivistPassportModal({
 
         {/* Main View: Profile Card Tab */}
         {subView === "none" && activeTab === "passport" && (
-          <div className="space-y-4">
+          <div
+            className="space-y-4"
+            id="passport-panel"
+            role="tabpanel"
+            aria-labelledby="passport-tab"
+          >
             <div className="rounded-xl border border-line bg-surfaceHi/50 p-4 space-y-3">
               <div className="flex items-center justify-between">
                 <div>
@@ -658,57 +668,69 @@ export function ArchivistPassportModal({
               </div>
             </div>
 
-            {/* Zero-Backend Portable Wax Seal Export & Import Actions */}
+            <button
+              type="button"
+              onClick={() => {
+                setProfileTransferOpen(true);
+                feedback("select");
+              }}
+              className="w-full rounded-xl border border-accent bg-accent px-3 py-3 text-xs font-bold uppercase tracking-wider text-white shadow-sm transition-all hover:opacity-90"
+              data-testid="open-profile-transfer"
+            >
+              {lang === "ru"
+                ? "Полный backup / import"
+                : lang === "de"
+                  ? "Vollständiges Backup / Import"
+                  : "Full backup / import"}
+            </button>
+            <p className="-mt-2 text-center text-[10px] text-muted">
+              {lang === "ru"
+                ? "Прогресс, решения, daily и коллекция"
+                : lang === "de"
+                  ? "Fortschritt, Lösungen, Daily-Verlauf und Sammlung"
+                  : "Progress, solves, daily history, and collection"}
+            </p>
+
+            {/* Legacy passport / seed transfer. This is intentionally not a full backup. */}
             <div className="grid grid-cols-2 gap-2 pt-1">
               <button
                 type="button"
                 onClick={() => {
                   setSubView("export");
-                  playSound("select");
-                  triggerHaptic("select");
+                  feedback("select");
                 }}
                 className="py-2.5 px-3 rounded-xl border border-amber-500/40 bg-amber-950/20 hover:bg-amber-950/40 text-amber-200 text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 shadow-sm"
+                data-testid="legacy-passport-open-export"
               >
                 <span>📜</span>
-                <span>{t.passport.sealPassport}</span>
+                <span>
+                  {lang === "ru"
+                    ? "Legacy: паспорт / seed"
+                    : lang === "de"
+                      ? "Legacy: Pass / Seed"
+                      : "Legacy: passport / seed"}
+                </span>
               </button>
 
               <button
                 type="button"
                 onClick={() => {
                   setSubView("import");
-                  playSound("select");
-                  triggerHaptic("select");
+                  feedback("select");
                 }}
                 className="py-2.5 px-3 rounded-xl border border-line bg-surfaceHi hover:bg-surfaceHi/80 text-muted hover:text-text text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 shadow-sm"
+                data-testid="legacy-passport-open-import"
               >
                 <span>📥</span>
-                <span>{t.passport.importSeal}</span>
+                <span>
+                  {lang === "ru"
+                    ? "Legacy: импорт"
+                    : lang === "de"
+                      ? "Legacy: Import"
+                      : "Legacy: import"}
+                </span>
               </button>
             </div>
-
-            {rollbackSuccess && (
-              <div className="p-2.5 rounded-xl border border-green-500/50 bg-green-950/30 text-green-200 text-xs text-center font-bold animate-in fade-in duration-200">
-                ✓ {t.passport.undoSuccess}
-              </div>
-            )}
-
-            {hasBackup && (
-              <div className="p-2.5 rounded-xl border border-amber-500/40 bg-amber-950/25 text-amber-200 text-xs flex items-center justify-between shadow-sm">
-                <div className="flex items-center gap-1.5">
-                  <span>↩️</span>
-                  <span>{t.passport.undoImport}</span>
-                </div>
-                <button
-                  type="button"
-                  onClick={handleUndoRollback}
-                  className="px-2.5 py-1 rounded-lg bg-amber-500/30 hover:bg-amber-500/50 text-amber-100 font-bold text-[11px] uppercase tracking-wider transition-colors"
-                  data-testid="undo-passport-import-main"
-                >
-                  {lang === "ru" ? "Вернуть" : lang === "de" ? "Wiederherstellen" : "Undo"}
-                </button>
-              </div>
-            )}
 
             {/* Iron Contract CTA */}
             {onOpenContract && (
@@ -729,35 +751,113 @@ export function ArchivistPassportModal({
 
         {/* Main View: Stamp Album Tab */}
         {subView === "none" && activeTab === "stamps" && (
-          <div className="space-y-3">
-            <div className="grid grid-cols-4 gap-2">
-              {STAMP_COLLECTION.map((stamp) => {
-                const isCollected = profile.collectedStampIds.includes(stamp.id);
-                return (
-                  <button
-                    key={stamp.id}
-                    type="button"
-                    onClick={() => setSelectedStampId(stamp.id)}
-                    className={`aspect-square rounded-xl border flex flex-col items-center justify-center p-1.5 transition-all ${
-                      isCollected
-                        ? "border-accent/60 bg-surfaceHi/80 hover:scale-105 shadow-sm"
-                        : "border-line/40 opacity-30 bg-surfaceHi/20 cursor-default"
-                    }`}
+          <div
+            className="space-y-3"
+            id="stamps-panel"
+            role="tabpanel"
+            aria-labelledby="stamps-tab"
+          >
+            <section aria-labelledby="passport-pages-title">
+              <div className="mb-2 flex items-end justify-between gap-3 text-left">
+                <div>
+                  <h3
+                    id="passport-pages-title"
+                    className="text-[11px] font-bold uppercase tracking-[0.12em] text-accent"
                   >
-                    <span className="text-2xl">{isCollected ? stamp.icon : "🔒"}</span>
-                    <span className="text-[9px] text-muted font-bold truncate max-w-full mt-1">
-                      {isCollected ? stamp.theme : "???"}
-                    </span>
-                  </button>
-                );
-              })}
+                    {lang === "ru"
+                      ? "Страницы архива"
+                      : lang === "de"
+                        ? "Archivseiten"
+                        : "Archive pages"}
+                  </h3>
+                  <p className="text-[10px] text-muted">
+                    {lang === "ru"
+                      ? "Выдаются за уникальные официальные решения"
+                      : lang === "de"
+                        ? "Für einzigartige offizielle Lösungen"
+                        : "Earned from unique official solutions"}
+                  </p>
+                </div>
+                <span className="text-xs font-bold tabular-nums text-text">{solvedCount}</span>
+              </div>
+              <div className="grid grid-cols-3 gap-2" data-testid="passport-milestone-pages">
+                {COLLECTION_MILESTONES.map((milestone) => {
+                  const earned = solvedCount >= milestone.threshold;
+                  return (
+                    <div
+                      key={milestone.id}
+                      className={`rounded-lg border p-2 text-center ${
+                        earned
+                          ? "border-accent/55 bg-surfaceHi"
+                          : "border-line/50 bg-surface/40"
+                      }`}
+                    >
+                      <StampArtwork
+                        stampId={milestone.id}
+                        color={earned ? milestone.color : "currentColor"}
+                        locked={!earned}
+                        size={32}
+                      />
+                      <div
+                        className={`mt-1 text-[9px] font-bold ${earned ? "text-text" : "text-muted"}`}
+                      >
+                        {milestone.label[lang]}
+                      </div>
+                      <div className="mt-0.5 text-[9px] tabular-nums text-muted">
+                        {Math.min(solvedCount, milestone.threshold)}/{milestone.threshold}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </section>
+
+            <div className="border-t border-line pt-3 text-left">
+              <h3 className="mb-2 text-[11px] font-bold uppercase tracking-[0.12em] text-muted">
+                {lang === "ru"
+                  ? "Ранняя коллекция"
+                  : lang === "de"
+                    ? "Frühe Sammlung"
+                    : "Early collection"}
+              </h3>
+              <div className="grid grid-cols-4 gap-2">
+                {STAMP_COLLECTION.map((stamp) => {
+                  const isCollected = profile.collectedStampIds.includes(stamp.id);
+                  return (
+                    <button
+                      key={stamp.id}
+                      type="button"
+                      onClick={() => setSelectedStampId(stamp.id)}
+                      className={`aspect-square rounded-xl border flex flex-col items-center justify-center p-1.5 transition-all ${
+                        isCollected
+                          ? "border-accent/60 bg-surfaceHi/80 hover:scale-105 shadow-sm"
+                          : "border-line/40 opacity-30 bg-surfaceHi/20 cursor-default"
+                      }`}
+                    >
+                      <StampArtwork
+                        stampId={stamp.id}
+                        color={isCollected ? stamp.color : "currentColor"}
+                        locked={!isCollected}
+                        size={34}
+                      />
+                      <span className="text-[9px] text-muted font-bold truncate max-w-full mt-1">
+                        {isCollected ? stamp.theme : "???"}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
             </div>
 
             {selectedStamp && (
               <div className="p-3 rounded-xl border border-line bg-surfaceHi text-left space-y-1 animate-in fade-in duration-150">
                 <div className="flex items-center justify-between">
                   <div className="font-bold text-xs text-text flex items-center gap-1.5">
-                    <span>{selectedStamp.icon}</span>
+                    <StampArtwork
+                      stampId={selectedStamp.id}
+                      color={selectedStamp.color}
+                      size={24}
+                    />
                     <span>
                       {lang === "ru"
                         ? selectedStamp.nameRu
@@ -784,6 +884,9 @@ export function ArchivistPassportModal({
           </div>
         )}
       </div>
+      {profileTransferOpen && (
+        <ProfileTransferDialog language={lang} onClose={() => setProfileTransferOpen(false)} />
+      )}
     </div>
   );
 }

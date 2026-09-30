@@ -9,10 +9,12 @@ export function LanguageToggle() {
   const { lang, setLang } = useLangStore();
   const t = useT();
   const [loading, setLoading] = useState<Lang | null>(null);
+  const [loadError, setLoadError] = useState(false);
 
   const changeLanguage = async (nextLang: Lang): Promise<void> => {
     if (nextLang === lang || loading) return;
     setLoading(nextLang);
+    setLoadError(false);
     try {
       // Do not switch the interface until its puzzle pool is ready. The old
       // path switched first, then temporarily fell back to English cards
@@ -21,39 +23,47 @@ export function LanguageToggle() {
       setLang(nextLang);
     } catch (error) {
       console.warn(`[lang] failed to load ${nextLang} pool:`, error);
+      setLoadError(true);
     } finally {
       setLoading(null);
     }
   };
 
   return (
-    <div
-      className="inline-flex items-center rounded-full border border-line overflow-hidden"
-      role="group"
-      aria-label={t.menu.languageAria}
-      aria-busy={loading ? "true" : undefined}
-    >
-      {SUPPORTED_LANGS.map((code, i) => (
-        <button
-          key={code}
-          type="button"
-          onClick={() => void changeLanguage(code)}
-          disabled={loading !== null}
-          aria-pressed={lang === code}
-          className={[
-            "px-2.5 py-1 text-[11px] leading-none transition-colors",
-            i > 0 ? "border-l border-line" : "",
-            lang === code
-              ? "text-text bg-line"
-              : "text-muted hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface rounded-sm",
-            loading === code ? "text-accent" : "",
-          ]
-            .filter(Boolean)
-            .join(" ")}
-        >
-          {LABELS[code]}
-        </button>
-      ))}
+    <div>
+      <div
+        className="inline-flex items-center rounded-full border border-line overflow-hidden"
+        role="group"
+        aria-label={t.menu.languageAria}
+        aria-busy={loading ? "true" : undefined}
+      >
+        {SUPPORTED_LANGS.map((code, i) => (
+          <button
+            key={code}
+            type="button"
+            onClick={() => void changeLanguage(code)}
+            disabled={loading !== null}
+            aria-pressed={lang === code}
+            className={[
+              "px-2.5 py-1 text-[11px] leading-none transition-colors",
+              i > 0 ? "border-l border-line" : "",
+              lang === code
+                ? "text-text bg-line"
+                : "text-muted hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface rounded-sm",
+              loading === code ? "text-accent" : "",
+            ]
+              .filter(Boolean)
+              .join(" ")}
+          >
+            {LABELS[code]}
+          </button>
+        ))}
+      </div>
+      {loadError && (
+        <p className="mt-1 text-[10px] text-danger" role="status">
+          {t.menu.contentUnavailableDetail}
+        </p>
+      )}
     </div>
   );
 }

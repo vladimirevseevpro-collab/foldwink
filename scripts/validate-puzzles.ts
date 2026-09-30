@@ -12,6 +12,7 @@
  *   - difficulty in {easy, medium}
  *   - reasonable item length for mobile layout
  *   - medium puzzles: revealHint present, non-empty, and no duplicates
+ *   - hard puzzles: no runtime hint requirement (strict no-Tabs tier)
  *
  * Also emits warnings (non-fatal) for:
  *   - items shared across different puzzles (possibly fine)
@@ -219,8 +220,8 @@ function validatePuzzle(file: string, raw: unknown): Puzzle | null {
     }
   }
 
-  // Validate revealHint fields (Foldwink Tabs mechanic, medium and hard puzzles).
-  if (v.difficulty === "medium" || v.difficulty === "hard") {
+  // Validate revealHint fields for the only active Tabs tier: medium.
+  if (v.difficulty === "medium") {
     const hintSamples: string[] = [];
     for (const gRaw of v.groups as unknown[]) {
       if (!gRaw || typeof gRaw !== "object") continue;
@@ -235,15 +236,6 @@ function validatePuzzle(file: string, raw: unknown): Puzzle | null {
         continue;
       }
       if (typeof g.revealHint !== "string" || !g.revealHint.trim()) {
-        if (v.difficulty === "hard") {
-          warn(
-            file,
-            "group " +
-              String(g.id) +
-              " has an empty revealHint; label fallback needs Foldwink Tab review",
-          );
-          continue;
-        }
         fail(file, `group ${String(g.id)} revealHint must be a non-empty string`);
         continue;
       }
@@ -257,6 +249,17 @@ function validatePuzzle(file: string, raw: unknown): Puzzle | null {
     for (const h of hintSamples) {
       if (seen.has(h)) warn(file, `duplicate revealHint "${h}" on more than one group`);
       seen.add(h);
+    }
+  } else if (v.difficulty === "hard") {
+    for (const gRaw of v.groups as unknown[]) {
+      if (!gRaw || typeof gRaw !== "object") continue;
+      const g = gRaw as Record<string, unknown>;
+      if (
+        g.revealHint !== undefined &&
+        (typeof g.revealHint !== "string" || !g.revealHint.trim())
+      ) {
+        fail(file, `group ${String(g.id)} revealHint must be a non-empty string when present`);
+      }
     }
   } else {
     for (const gRaw of v.groups as unknown[]) {

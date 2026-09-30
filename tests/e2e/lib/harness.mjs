@@ -42,6 +42,7 @@ export async function runCases(suiteName, cases) {
   for (const c of cases) {
     const context = await browser.newContext({
       viewport: c.viewport ?? { width: 1280, height: 800 },
+      ...(c.contextOptions ?? {}),
     });
     const page = await context.newPage();
     const consoleErrors = [];
@@ -122,13 +123,28 @@ export function stubStats({
 }
 
 /**
- * Wait until the menu is rendered. We look for any of the persistent menu
- * buttons — "Play today", "Replay daily", or "Easy puzzle" — because the
- * primary CTA label swaps depending on whether today's daily is done.
+ * Wait until W3's stable Today hero is rendered. Its action label changes
+ * across fresh, replay and unavailable calendar states.
  */
 export async function waitForMenu(page) {
   await page.waitForSelector(
-    "button:has-text('Play today'), button:has-text('Replay daily'), button:has-text('Easy puzzle')",
-    { timeout: 10_000 },
+    '[data-testid="menu-today-card"]',
+    // Cold preview starts also load the localized puzzle chunk. Allow a real browser
+    // enough time so a slow CI disk is not misreported as a gameplay failure.
+    { timeout: 20_000 },
   );
+}
+
+/** Open W3's Practice difficulty picker without toggling it closed. */
+export async function openPracticePicker(page) {
+  const toggle = page.getByTestId("menu-practice-toggle");
+  await toggle.waitFor({ state: "visible" });
+  if ((await toggle.getAttribute("aria-expanded")) !== "true") await toggle.click();
+  await page.getByTestId("menu-practice-easy").waitFor({ state: "visible" });
+}
+
+export async function startEasyPractice(page) {
+  await openPracticePicker(page);
+  await page.getByTestId("menu-practice-easy").click();
+  await page.waitForSelector("header h1");
 }

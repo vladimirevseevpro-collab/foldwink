@@ -25,7 +25,13 @@
 import { readFile, readdir } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
-import { BASE_URL, runCases, seedDismissedOnboarding, waitForMenu } from "./lib/harness.mjs";
+import {
+  BASE_URL,
+  runCases,
+  seedDismissedOnboarding,
+  startEasyPractice,
+  waitForMenu,
+} from "./lib/harness.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const POOL_DIR = path.resolve(__dirname, "../../puzzles/pool");
@@ -82,6 +88,16 @@ async function solveCurrentPuzzle(page, puzzles) {
   }
   // After the last correct submit, the store flips screen -> "result".
   await page.waitForSelector('[data-testid="result-screen"]', { timeout: 5_000 });
+  await assertResultFocus(page, "result transition");
+}
+
+async function assertResultFocus(page, label) {
+  const focused = await page.evaluate(() =>
+    document.activeElement?.getAttribute("data-testid"),
+  );
+  if (focused !== "result-screen") {
+    throw new Error(label + ": expected result screen focus, got " + focused);
+  }
 }
 
 async function assertNextPuzzleReachable(page, label) {
@@ -214,8 +230,7 @@ async function runMobileFlow({ page, context }, profile, puzzles, label) {
 
   await assertSafeAreaPadding(page, `${label}:menu`);
 
-  await page.locator("button", { hasText: "Easy puzzle" }).first().click();
-  await page.waitForSelector("header h1");
+  await startEasyPractice(page);
 
   // Round 1
   await runOnePuzzleRound(page, puzzles, `${label}:round1`);
@@ -243,8 +258,7 @@ await runCases("results-next-flow", [
       await page.goto(BASE_URL);
       await waitForMenu(page);
       await assertSafeAreaPadding(page, "desktop:menu");
-      await page.locator("button", { hasText: "Easy puzzle" }).first().click();
-      await page.waitForSelector("header h1");
+      await startEasyPractice(page);
 
       await runOnePuzzleRound(page, puzzles, "desktop:round1");
       await assertNoScrollTrap(page, "desktop:round1-result");
@@ -279,8 +293,7 @@ await runCases("results-next-flow", [
       await seedDismissedOnboarding(page);
       await page.goto(BASE_URL);
       await waitForMenu(page);
-      await page.locator("button", { hasText: "Easy puzzle" }).first().click();
-      await page.waitForSelector("header h1");
+      await startEasyPractice(page);
 
       await solveCurrentPuzzle(page, puzzles);
       // Scroll the result screen to the very bottom, then tap Next puzzle.
@@ -307,8 +320,7 @@ await runCases("results-next-flow", [
       await seedDismissedOnboarding(page);
       await page.goto(BASE_URL);
       await waitForMenu(page);
-      await page.locator("button", { hasText: "Easy puzzle" }).first().click();
-      await page.waitForSelector("header h1");
+      await startEasyPractice(page);
       await solveCurrentPuzzle(page, puzzles);
       await advanceToNextPuzzle(page);
       await solveCurrentPuzzle(page, puzzles);
