@@ -2,6 +2,23 @@ export type Lang = "en" | "de" | "ru";
 
 export const SUPPORTED_LANGS: Lang[] = ["en", "de", "ru"];
 
+const enPlural = new Intl.PluralRules("en-US");
+const ruPlural = new Intl.PluralRules("ru-RU");
+
+/**
+ * Locale-aware puzzle count for product copy. Russian needs real plural
+ * categories ("1 пазл", "2 пазла", "5 пазлов") rather than a fixed noun.
+ */
+function puzzleCount(locale: "en-US" | "ru-RU", n: number): string {
+  const formatted = n.toLocaleString(locale);
+  if (locale === "ru-RU") {
+    const category = ruPlural.select(n);
+    const word = category === "one" ? "пазл" : category === "few" ? "пазла" : "пазлов";
+    return `${formatted} ${word}`;
+  }
+  return `${formatted} ${enPlural.select(n) === "one" ? "puzzle" : "puzzles"}`;
+}
+
 export interface Strings {
   menu: {
     subtitle: string;
@@ -330,7 +347,7 @@ export const strings: Record<Lang, Strings> = {
       masterLocked: "Master Challenge — locked",
       masterSoon: "Master Challenge — soon",
       stats: "Stats",
-      poolSize: (n) => `${n.toLocaleString("en-US")} puzzles`,
+      poolSize: (n) => puzzleCount("en-US", n),
       emptyPool: "Empty pool",
       emptyPoolDetail:
         "No puzzles are bundled in this build. Drop JSON files into puzzles/pool/ and rebuild.",
@@ -994,7 +1011,7 @@ export const strings: Record<Lang, Strings> = {
       masterLocked: "Мастер — заблокирован",
       masterSoon: "Мастер — скоро",
       stats: "Статистика",
-      poolSize: (n) => `${n.toLocaleString("ru-RU")} пазлов`,
+      poolSize: (n) => puzzleCount("ru-RU", n),
       emptyPool: "Пул пуст",
       emptyPoolDetail:
         "В этой сборке нет пазлов. Добавь JSON-файлы в puzzles/pool/ и пересобери.",
