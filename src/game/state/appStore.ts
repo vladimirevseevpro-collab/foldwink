@@ -194,6 +194,7 @@ const resumed = resumedResult ?? tryResumeSession(pendingResume);
 export const useGameStore = createStore({
   ...defaultDeps,
   getPuzzleById: langGetPuzzleById,
+  ensurePuzzleLoaded: (puzzleId) => ensurePuzzleLoaded(getLangSync(), puzzleId),
   getPuzzleByIndex: langGetPuzzleByIndex,
   getEasyByIndex: langGetEasyByIndex,
   getMediumByIndex: langGetMediumByIndex,

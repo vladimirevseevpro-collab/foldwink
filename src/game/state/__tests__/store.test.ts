@@ -422,6 +422,36 @@ describe("store — daily mode", () => {
     expect(store.getState().active?.daily?.entryId).toBe("daily-en-2026-04-11");
   });
 
+  it("loads an archive-backed Daily board before starting it", async () => {
+    const archivePuzzle = mkPuzzle("archive-daily");
+    let available: Puzzle | undefined;
+    const store = createStore(
+      makeDeps([], {
+        getPuzzleById: () => available,
+        ensurePuzzleLoaded: async () => {
+          available = archivePuzzle;
+        },
+        getDailyEntry: (language, date) => ({
+          entryId: `daily-${language}-${date}`,
+          date,
+          language,
+          puzzleId: archivePuzzle.id,
+          lineageId: archivePuzzle.id,
+          contentVersion: "test-catalog-v1",
+          scheduleVersion: "test-calendar-v1",
+        }),
+      }),
+    );
+
+    store.getState().startDaily();
+    expect(store.getState().puzzle).toBeNull();
+
+    await Promise.resolve();
+    await Promise.resolve();
+    expect(store.getState().puzzle).toEqual(archivePuzzle);
+    expect(store.getState().active?.daily?.entryId).toBe("daily-en-2026-04-11");
+  });
+
   it("does not change the Daily identity when stats or unlocks differ", () => {
     const pool = [
       mkPuzzle("e1"),

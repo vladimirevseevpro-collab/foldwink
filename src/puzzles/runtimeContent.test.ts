@@ -2,6 +2,7 @@ import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
+import { getDailyEntry } from "./catalog";
 import { RuntimeContentCatalog } from "./runtimeContent";
 
 const ROOT = process.cwd();
@@ -33,6 +34,16 @@ describe("runtime content catalog", () => {
     expect(catalog.getPool("en").length).toBeGreaterThan(30);
     expect(catalog.getPool("en").length).toBeLessThanOrEqual(62);
     expect(catalog.getCatalogSize("en")).toBe(1000);
+  });
+
+  it("resolves daily entries across every published schedule", async () => {
+    const catalog = new RuntimeContentCatalog(localFetch(), digest, "/");
+    await catalog.ensureBoot("en");
+    expect(getDailyEntry("en", "2026-09-14")?.puzzleId).toBe("puzzle-0004");
+    expect(getDailyEntry("en", "2026-12-12")?.scheduleVersion).toBe(
+      "daily-2026-10-14-2026-12-12-v1",
+    );
+    expect(getDailyEntry("en", "2026-12-13")).toBeUndefined();
   });
 
   it("rejects a payload whose bytes do not match the manifest hash", async () => {

@@ -935,6 +935,1506 @@
       },
       "playtest": null,
       "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0002",
+        "lineageId": "puzzle-0002",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "objects"
+      ],
+      "anchorGroupId": "teeth_items",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0003",
+        "lineageId": "puzzle-0003",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "craft_and_play"
+      ],
+      "anchorGroupId": "things_that_fold",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0021",
+        "lineageId": "puzzle-0021",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "reds",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0025",
+        "lineageId": "puzzle-0025",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "smart",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0001",
+        "lineageId": "puzzle-0001",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "morning_ritual"
+      ],
+      "anchorGroupId": "coffee_brew",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0007",
+        "lineageId": "puzzle-0007",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "plants"
+      ],
+      "anchorGroupId": "trees",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0008",
+        "lineageId": "puzzle-0008",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "abstract"
+      ],
+      "anchorGroupId": "shapes",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0010",
+        "lineageId": "puzzle-0010",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "geography"
+      ],
+      "anchorGroupId": "continents",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0026",
+        "lineageId": "puzzle-0026",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "europe",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0027",
+        "lineageId": "puzzle-0027",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "shoes",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0012",
+        "lineageId": "puzzle-0012",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "games"
+      ],
+      "anchorGroupId": "suits",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0013",
+        "lineageId": "puzzle-0013",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "geography"
+      ],
+      "anchorGroupId": "countries",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0014",
+        "lineageId": "puzzle-0014",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "sports"
+      ],
+      "anchorGroupId": "dances",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0016",
+        "lineageId": "puzzle-0016",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "fantasy"
+      ],
+      "anchorGroupId": "zodiac",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0017",
+        "lineageId": "puzzle-0017",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "food"
+      ],
+      "anchorGroupId": "pizza",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0018",
+        "lineageId": "puzzle-0018",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "crafts"
+      ],
+      "anchorGroupId": "building",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0030",
+        "lineageId": "puzzle-0030",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "dogs",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0034",
+        "lineageId": "puzzle-0034",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "constellations",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0039",
+        "lineageId": "puzzle-0039",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "islands",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0040",
+        "lineageId": "puzzle-0040",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "percussion",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0041",
+        "lineageId": "puzzle-0041",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "lab-tools",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0028",
+        "lineageId": "puzzle-0028",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "writing",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0043",
+        "lineageId": "puzzle-0043",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "high-clouds",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0044",
+        "lineageId": "puzzle-0044",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "short-pasta",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "hard-001",
+        "lineageId": "hard-001",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "hard",
+      "band": "unrated",
+      "vocabularyFamiliarity": "specialist",
+      "relationTypes": [
+        "thematic"
+      ],
+      "topicTags": [
+        "language"
+      ],
+      "anchorGroupId": "fragile",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "hard-002",
+        "lineageId": "hard-002",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "hard",
+      "band": "unrated",
+      "vocabularyFamiliarity": "specialist",
+      "relationTypes": [
+        "thematic"
+      ],
+      "topicTags": [
+        "language"
+      ],
+      "anchorGroupId": "light",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0045",
+        "lineageId": "puzzle-0045",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "gothic",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0029",
+        "lineageId": "puzzle-0029",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "storm",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0035",
+        "lineageId": "puzzle-0035",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "newspapers",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0036",
+        "lineageId": "puzzle-0036",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "run",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0037",
+        "lineageId": "puzzle-0037",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "frozen-places",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0038",
+        "lineageId": "puzzle-0038",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "coin-sides",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0046",
+        "lineageId": "puzzle-0046",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "terrestrial",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "hard-003",
+        "lineageId": "hard-003",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "hard",
+      "band": "unrated",
+      "vocabularyFamiliarity": "specialist",
+      "relationTypes": [
+        "thematic"
+      ],
+      "topicTags": [
+        "language"
+      ],
+      "anchorGroupId": "river",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "hard-004",
+        "lineageId": "hard-004",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "hard",
+      "band": "unrated",
+      "vocabularyFamiliarity": "specialist",
+      "relationTypes": [
+        "thematic"
+      ],
+      "topicTags": [
+        "abstract"
+      ],
+      "anchorGroupId": "ghost",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0047",
+        "lineageId": "puzzle-0047",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "greek",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0061",
+        "lineageId": "puzzle-0061",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "book",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0062",
+        "lineageId": "puzzle-0062",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "whisper",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0048",
+        "lineageId": "puzzle-0048",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "paradigms",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0049",
+        "lineageId": "puzzle-0049",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "german-food",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0050",
+        "lineageId": "puzzle-0050",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "pieces",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0051",
+        "lineageId": "puzzle-0051",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "tempo-slow",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0052",
+        "lineageId": "puzzle-0052",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "herding",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0053",
+        "lineageId": "puzzle-0053",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "roles",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0054",
+        "lineageId": "puzzle-0054",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "mammals",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0056",
+        "lineageId": "puzzle-0056",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "soccer",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0057",
+        "lineageId": "puzzle-0057",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "poetry",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0059",
+        "lineageId": "puzzle-0059",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "woodworking",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0072",
+        "lineageId": "puzzle-0072",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "impressionists",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0063",
+        "lineageId": "puzzle-0063",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "beer",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0073",
+        "lineageId": "puzzle-0073",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "sushi",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0074",
+        "lineageId": "puzzle-0074",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "ancient-empires",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "hard-005",
+        "lineageId": "hard-005",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "hard",
+      "band": "unrated",
+      "vocabularyFamiliarity": "specialist",
+      "relationTypes": [
+        "thematic"
+      ],
+      "topicTags": [
+        "language"
+      ],
+      "anchorGroupId": "light",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "hard-006",
+        "lineageId": "hard-006",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "hard",
+      "band": "unrated",
+      "vocabularyFamiliarity": "specialist",
+      "relationTypes": [
+        "thematic"
+      ],
+      "topicTags": [
+        "time"
+      ],
+      "anchorGroupId": "musical",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0075",
+        "lineageId": "puzzle-0075",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "face",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0076",
+        "lineageId": "puzzle-0076",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "classics",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0064",
+        "lineageId": "puzzle-0064",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "writing",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0065",
+        "lineageId": "puzzle-0065",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "star-types",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0066",
+        "lineageId": "puzzle-0066",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "chess",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "en",
+        "puzzleId": "puzzle-0067",
+        "lineageId": "puzzle-0067",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "general"
+      ],
+      "anchorGroupId": "errors",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
     }
   ]
 }

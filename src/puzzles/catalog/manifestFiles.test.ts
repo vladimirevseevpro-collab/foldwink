@@ -37,6 +37,59 @@ function puzzleExists(language: PuzzleLanguage, puzzleId: string): boolean {
   });
 }
 
+function dailyManifestFiles(language: PuzzleLanguage): string[] {
+  return fs
+    .readdirSync(MANIFESTS)
+    .filter((file) => file.startsWith(`daily.${language}.`) && file.endsWith(".json"))
+    .sort();
+}
+
+function puzzleIdSet(language: PuzzleLanguage): Set<string> {
+  const directory = puzzleDirectory(language);
+  const ids = new Set<string>();
+  for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+    if (!entry.isFile() || !entry.name.endsWith(".json")) continue;
+    ids.add(JSON.parse(fs.readFileSync(path.join(directory, entry.name), "utf8")).id);
+  }
+  return ids;
+}
+
+describe("published daily horizon", () => {
+  for (const language of ["en", "ru", "de"] as const) {
+    it(`${language} every daily manifest resolves to same-language editorial records`, () => {
+      const editorialResult = validateEditorialManifest(readJson(`editorial.${language}.json`));
+      expect(editorialResult.ok).toBe(true);
+      if (!editorialResult.ok) return;
+
+      const editorialById = new Map(
+        editorialResult.value.records.map((record) => [record.puzzleRef.puzzleId, record]),
+      );
+      const poolIds = puzzleIdSet(language);
+      const dates = new Set<string>();
+      let entries = 0;
+      for (const file of dailyManifestFiles(language)) {
+        const result = validateDailyManifest(readJson(file));
+        expect(result.ok, `${file} is not a valid daily manifest`).toBe(true);
+        if (!result.ok) continue;
+        entries += result.value.entries.length;
+        for (const entry of result.value.entries) {
+          expect(entry.language).toBe(language);
+          expect(dates.has(entry.date), `duplicate daily date ${entry.date}`).toBe(false);
+          dates.add(entry.date);
+          expect(poolIds.has(entry.puzzleId), `missing pool board ${entry.puzzleId}`).toBe(
+            true,
+          );
+          const record = editorialById.get(entry.puzzleId);
+          expect(record, `missing editorial record for ${entry.puzzleId}`).toBeDefined();
+          expect(record?.puzzleRef.language).toBe(language);
+          expect(record?.status).not.toBe("quarantined");
+        }
+      }
+      expect(entries).toBeGreaterThanOrEqual(90);
+    });
+  }
+});
+
 describe("checked-in release-entry manifests", () => {
   for (const language of ["en", "ru", "de"] as const) {
     it(`${language} starters reference reviewed same-language payloads`, () => {
