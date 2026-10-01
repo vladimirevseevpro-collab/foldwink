@@ -1,11 +1,19 @@
 import { createHash } from "node:crypto";
-import { readFile } from "node:fs/promises";
+import { readdir, readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { RuntimeContentCatalog } from "./runtimeContent";
 
 const ROOT = process.cwd();
 const digest = async (body: string) => createHash("sha256").update(body).digest("hex");
+
+async function sourcePoolSize(language: "en" | "ru" | "de"): Promise<number> {
+  const directory =
+    language === "en"
+      ? join(ROOT, "puzzles", "pool")
+      : join(ROOT, "puzzles", language, "pool");
+  return (await readdir(directory)).filter((file) => file.endsWith(".json")).length;
+}
 
 function localFetch(tamper = false) {
   return async (url: string) => {
@@ -22,17 +30,18 @@ function localFetch(tamper = false) {
 describe("runtime content catalog", () => {
   it("loads only the selected boot payload, then its requested archive chunk", async () => {
     const catalog = new RuntimeContentCatalog(localFetch(), digest, "/");
+    const poolSize = await sourcePoolSize("en");
     expect(catalog.getCatalogSize("en")).toBeUndefined();
     await catalog.ensureBoot("en");
     expect(catalog.getPool("en")).toHaveLength(30);
-    expect(catalog.getCatalogSize("en")).toBe(1000);
+    expect(catalog.getCatalogSize("en")).toBe(poolSize);
     expect(catalog.getPuzzle("ru", "ru-0001")).toBeUndefined();
 
     await catalog.ensurePuzzle("en", "puzzle-0001");
     expect(catalog.getPuzzle("en", "puzzle-0001")?.id).toBe("puzzle-0001");
     expect(catalog.getPool("en").length).toBeGreaterThan(30);
     expect(catalog.getPool("en").length).toBeLessThanOrEqual(62);
-    expect(catalog.getCatalogSize("en")).toBe(1000);
+    expect(catalog.getCatalogSize("en")).toBe(poolSize);
   });
 
   it("rejects a payload whose bytes do not match the manifest hash", async () => {

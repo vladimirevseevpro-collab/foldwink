@@ -16,6 +16,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "validate": "tsx scripts/validate-puzzles.ts",
+    "validate:uniqueness": "node scripts/check-corpus-uniqueness.mjs",
     "content:build": "node scripts/build-runtime-content.mjs",
     "content:check": "node scripts/build-runtime-content.mjs --check",
     "notices:build": "node scripts/build-third-party-notices.mjs",

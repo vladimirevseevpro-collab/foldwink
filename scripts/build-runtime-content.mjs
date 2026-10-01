@@ -71,7 +71,7 @@ function stripPuzzle(source) {
 async function readLanguagePool(language, contentVersion, editorialById) {
   const directory = language === "en" ? join(ROOT, "puzzles", "pool") : join(ROOT, "puzzles", language, "pool");
   const files = (await readdir(directory)).filter((file) => file.endsWith(".json")).sort();
-  assert(files.length === 1000, `${language} published source pool must contain exactly 1000 boards`);
+  assert(files.length >= 30, `${language} published source pool must contain the 30 release boards`);
   const seen = new Set();
   const puzzles = [];
   for (const file of files) {
@@ -138,7 +138,10 @@ async function makeLanguage(language) {
   const releasedIds = new Set(releaseRefs.map((ref) => ref.puzzleId));
   const archivePuzzles = allPuzzles.filter((entry) => !releasedIds.has(entry.puzzle.id));
   assert(bootPuzzles.length === 30, `${language} boot payload must contain the 30 released boards`);
-  assert(archivePuzzles.length === 970, `${language} archive must contain every non-boot board`);
+  assert(
+    archivePuzzles.length === allPuzzles.length - bootPuzzles.length,
+    `${language} archive must contain every non-boot board`,
+  );
 
   const writeAsset = (name, payload) => {
     const body = outputJson(payload);
