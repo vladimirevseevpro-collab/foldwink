@@ -12,7 +12,8 @@ This document records the real remaining limits of the current Foldwink web/PWA 
 
 ## Content
 
-- Active local pools contain exactly 1,000 puzzles each in English, Russian, and German. Structural validation passes for all 3,000 records, but the September scale-up inventory is not equivalent to a human editorial sign-off on every board.
+- The local pools are being de-duplicated. A 2026-10-01 audit found that roughly half of the September scale-up consisted of recombined copies of existing boards, so the number of genuinely unique puzzles is lower than the previously quoted per-language inventory and will settle only after quarantine. The active pool size per language is reported by `npm run validate`; do not quote a fixed catalogue count until that quarantine is complete.
+- Earlier inventory confirmation was based on files on disk, not on content uniqueness. A file count is not editorial approval, and it is not a count of distinct boards.
 - The validator enforces structure and catches a defined set of logic risks. It cannot prove that every category feels natural to a human, so future batches still require editorial review before promotion.
 - One review signal remains in the Russian pool: `ru-0205` distinguishes conventional geographic regions of East Asia and Southeast Asia. It was retained after manual review, but belongs on the next editorial revisit list.
 - German Tabs audit classified 33 fallback boards as P0 rebuild/retire candidates. All 33 have now been replaced one-for-one with independently reviewed general-audience boards.
@@ -41,7 +42,7 @@ This document records the real remaining limits of the current Foldwink web/PWA 
 
 ## Build and QA
 
-- Automated gates currently cover formatting, TypeScript, linting, 57 Vitest files / 367 tests, content validation for 1,000 puzzles in each supported language, production build, 74/74 production-browser E2E scenarios and 4/4 strict pilot/release-operations suites. The W8 checker represents all 47 acceptance items, cryptographically binds each pass to gate-specific local evidence, checks the real ZIP entry set against its manifest and requires a matching detached exact-commit rebuild receipt. It intentionally remains NO-GO while physical-device, human, rollback or clean-candidate evidence is absent.
+- Automated gates currently cover formatting, TypeScript, linting, 57 Vitest files / 367 tests, content validation of the active pool in each supported language, production build, 74/74 production-browser E2E scenarios and 4/4 strict pilot/release-operations suites. The W8 checker represents all 47 acceptance items, cryptographically binds each pass to gate-specific local evidence, checks the real ZIP entry set against its manifest and requires a matching detached exact-commit rebuild receipt. It intentionally remains NO-GO while physical-device, human, rollback or clean-candidate evidence is absent.
 - `npm audit --omit=dev` reports zero production vulnerabilities. After the isolated Vite 8/Vitest 5/PostCSS/SDK hardening slice, the full development tree reports four advisories (1 low, 3 moderate; no high or critical). The low item is `tsx`'s pinned development-only esbuild, while the three moderate entries are one Capacitor CLI → xcode → uuid chain used only for future iOS tooling and not shipped in the static web build. npm currently offers a Capacitor CLI downgrade rather than a compatible patched xcode chain. These residuals require an exact macOS/iOS compatibility decision or upstream fix before a native shell release; the clean W8 web candidate must repeat both audits.
 - Browser automation cannot replace physical-device checks for Safari audio unlock, safe areas, install UX, native share sheets, payment redirects, or store review expectations.
 

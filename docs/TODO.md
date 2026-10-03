@@ -5,7 +5,8 @@
 - [x] Produce the requested technical specification: `docs/FOLDWINK_IMPLEMENTATION_SPEC_2026-09-12.md` — architecture/persistence, fair balance, curated onboarding/daily, reward eligibility, Paper Theatre UI, audio/motion, dependencies, privacy-aware measurement, QA and rollout.
 - [x] Specify 39 implementation tasks in waves W0–W8, requirement/test traceability, migration rules and release acceptance gates. This is planning, not completed application implementation.
 - **Current integration wave: W7 — human balance, comprehension and return testing.** The historical CQ6/R\* entries below are preserved as history, not a concurrent current implementation plan.
-- [x] Confirm the live inventory on 2026-09-14: EN 1,000 + RU 1,000 + DE 1,000 JSON puzzles. This is an inventory invariant, not editorial approval.
+- [x] Confirm the live inventory on 2026-09-14: a full per-language set of JSON files was present on disk. This was a file count, not editorial approval and not a count of distinct boards.
+- [ ] De-duplicate the active pools after the 2026-10-01 audit found that roughly half of the September scale-up consisted of recombined copies of existing boards. Report the genuinely unique active pool size with `npm run validate`; do not quote a fixed catalogue count before quarantine completes.
 - [x] Accept `docs/decisions/ADR-001-product-baseline.md` and `docs/decisions/ADR-002-persistence.md`; mark the original mega prompt as historical.
 - [x] Finish W0 regression fixtures and `docs/reports/FOLDWINK_W0_BASELINE_DECISIONS.md`.
 - [x] W1a: add attempt identity/revision/rules, freeze the Daily completion date, make repeated incorrect quartets non-consuming, and add a deterministic 80 XP unique-solve policy.
@@ -21,7 +22,7 @@
 - [x] W2.3: publish immutable 30-day versioned Daily calendars per released language with no unlock/random/English fallback.
 - [x] W2.4: separate seen vs solved, add `selectionSequence`, and implement deterministic band/diversity recommendations from versioned balance config.
 - [x] W2.5: make Retry/Another semantics explicit, keep Tabs/Wink Medium-only, and remove silent RU/DE Hard fallback.
-- [x] Publish `docs/reports/FOLDWINK_W2_CONTENT_DAILY_BALANCE.md` with 320 tests, three 1,000-puzzle validators, 90/90 mobile Daily renders and inspected three-viewport evidence.
+- [x] Publish `docs/reports/FOLDWINK_W2_CONTENT_DAILY_BALANCE.md` with 320 tests, three language validators, 90/90 mobile Daily renders and inspected three-viewport evidence.
 - [x] W3: Today hero + Practice hierarchy, explicit Continue, two-step onboarding, coherent Menu/Game/Result states, common accessible dialog shell and required responsive/keyboard evidence.
 - [x] Publish `docs/reports/FOLDWINK_W3_CORE_UX.md` with 323 unit tests, 60/60 production E2E checks and 43 inspected core-slice screenshots.
 - [x] W4: consolidate motion lifecycle/reduced-motion, accept the dependency-free CSS runtime, strengthen paper/material assets, and unify audio/haptics through one feedback path.
@@ -48,7 +49,7 @@
 - [x] Re-run all 74 production-browser scenarios across the 2026-09-16 Daily rollover; replace the stale “Daily must be Easy” assertion with exact reviewed-calendar puzzle/tier verification while preserving independent Practice locks. The same runner also passes export isolation, observation/denominator validation, a fail-closed frozen-build identity contract and the 47-gate W8 acceptance schema. Full E2E returns to 74/74 browser scenarios plus 4/4 pilot/release-operations suites.
 - [ ] FW-033: freeze an exact pilot commit/staging artifact and run 20–30 real observed first sessions; do not enter E2E/bot data as participants.
 - [x] FW-033 external staging/browser delivery: itch.io **Run game** serves upload `#19242763`, build `#1984826`, version `0.8.4` at `https://html.itch.zone/html/19242763-1984826/index.html`. Automated external EN/DE/RU smoke, live export-version parity, one correct group per locale, zero browser errors and inspected 1440×900 / 1024×768 / 390×844 screenshots pass after the 2026-09-16 reviewed-calendar rollover. Evidence: `docs/reports/assets/FOLDWINK_W7_ITCH_STAGING_VERIFICATION.json`.
-- [x] Itch public-metadata truth gate: public copy now states 3,000 puzzles and the consent-only privacy/export contract; itch AI disclosure is **Yes** for Graphics, Text & Dialog and Code. The anonymous public listing was rendered and inspected at all three required viewports.
+- [x] Itch public-metadata truth gate (superseded 2026-10-01): the public listing previously stated 3,000 puzzles and the consent-only privacy/export contract, with AI disclosure **Yes** for Graphics, Text & Dialog and Code, and was inspected at all three required viewports. The fixed count is now known to be inaccurate because roughly half of the September scale-up were recombined copies; the owner must re-publish the listing without a fixed count — see `docs/ITCH_PAGE_COPY.md`.
 - [ ] FW-033 physical smoke: Windows 11 Chrome `152.0.7977.84` passes against exact `0.8.4/#1984826` (RU correct group, two-step quit, EN/DE/RU localization, zero console errors). Real iOS Safari/PWA and Android Chrome/PWA remain required; no Android device/ADB is currently available on this host.
 - [ ] FW-034: fix only reproduced friction/ambiguity and require independent validation plus repeat usability.
 - [ ] FW-035: complete seven full local-day observation windows and report D1/D7 with raw denominators and organic/invited split.

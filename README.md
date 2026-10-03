@@ -17,8 +17,10 @@ nor Wink; Hard reveals Tabs more slowly and has no Wink.
 - Tactile 2.5D card surface, nine local paper/card/wood/tile audio cues, and
   a canvas share card.
 - Local-first: no accounts, backend, cloud sync, or leaderboard.
-- Active curated pools: EN 1,000 (523 easy, 443 medium, 34 hard), RU 1,000
-  (621 easy, 379 medium), DE 1,000 (577 easy, 423 medium).
+- Active curated pool size is reported per language by `npm run validate`. The
+  pool is being de-duplicated after a 2026-10-01 audit found that roughly half
+  of the September scale-up consisted of recombined copies of existing boards,
+  so no fixed catalogue count is quoted here.
 - Optional Ko-fi and cosmetic Supporter checkout are code-ready but hidden
   until valid public URLs are configured. No core gameplay is paywalled.
 - itch.io playable build `#1984826` and download build `#1984827` are the
