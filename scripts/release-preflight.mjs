@@ -13,6 +13,7 @@
 import { existsSync, statSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { URL } from "node:url";
+import { checkDailyHorizon, formatHorizon } from "./check-daily-horizon.mjs";
 
 const paid = process.argv.includes("--paid");
 const root = resolve(".");
@@ -77,10 +78,17 @@ if (paid) {
   errors.push("FOLDWINK_CANONICAL_URL must be an HTTPS URL when set.");
 }
 
+const horizon = await checkDailyHorizon({ root });
+if (!horizon.ok) {
+  errors.push(`Daily horizon is too short: ${horizon.failures.join("; ")}`);
+}
+
 console.log("Foldwink release preflight");
 console.log(
   "- dist: " + (errors.some((error) => error.startsWith("dist/")) ? "FAIL" : "ready"),
 );
+console.log("- daily horizon: " + (horizon.ok ? "ready" : "FAIL"));
+console.log("  " + formatHorizon(horizon));
 console.log("- tip jar: " + koFiState);
 console.log("- supporter checkout: " + checkoutState);
 console.log("- paid activation: " + (paid ? "requested" : "not requested"));

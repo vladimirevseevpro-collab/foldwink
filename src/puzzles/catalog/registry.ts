@@ -1,6 +1,5 @@
 import type {
   DailyEntry,
-  DailyManifest,
   EditorialManifest,
   EditorialRecord,
   PuzzleLanguage,
@@ -53,8 +52,13 @@ export function createCatalogRegistry(inputs: CatalogInputs): CatalogRegistry {
     getStarterManifest: (language) =>
       findOne<StarterManifest>(inputs.starters, validateStarterManifest, language),
     getDailyEntry: (language, date) => {
-      const manifest = findOne<DailyManifest>(inputs.daily, validateDailyManifest, language);
-      return manifest?.entries.find((entry) => entry.date === date);
+      for (const item of inputs.daily) {
+        const result = validateDailyManifest(item);
+        if (!result.ok || result.value.language !== language) continue;
+        const entry = result.value.entries.find((candidate) => candidate.date === date);
+        if (entry) return entry;
+      }
+      return undefined;
     },
     getEditorialRecord: (language, puzzleId) => {
       const manifest = findOne<EditorialManifest>(
@@ -83,7 +87,7 @@ export function installRuntimeCatalog(inputs: {
     language,
     createCatalogRegistry({
       starters: [inputs.starters],
-      daily: [inputs.daily],
+      daily: Array.isArray(inputs.daily) ? inputs.daily : [inputs.daily],
       editorial: [inputs.editorial],
     }),
   );

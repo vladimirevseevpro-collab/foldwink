@@ -931,6 +931,1506 @@
       },
       "playtest": null,
       "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0001",
+        "lineageId": "de-0001",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "wortspiele_und_alltag"
+      ],
+      "anchorGroupId": "felines",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0002",
+        "lineageId": "de-0002",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "alltagsrituale_und_gemuetlichkeit"
+      ],
+      "anchorGroupId": "german_rituals",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0301",
+        "lineageId": "de-0301",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "Doppeldeutigkeit"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0006",
+        "lineageId": "de-0006",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Wildtiere im Wald"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0007",
+        "lineageId": "de-0007",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Berufe Gesundheit"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0010",
+        "lineageId": "de-0010",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Kleidungsstücke"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0013",
+        "lineageId": "de-0013",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Farben der Natur"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0017",
+        "lineageId": "de-0017",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Küchengeräte"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0018",
+        "lineageId": "de-0018",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Bäume Deutschlands"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0021",
+        "lineageId": "de-0021",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Bundesländer"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0022",
+        "lineageId": "de-0022",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Flüsse Deutschlands"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0024",
+        "lineageId": "de-0024",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Schulfächer"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0025",
+        "lineageId": "de-0025",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Mathematik"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0028",
+        "lineageId": "de-0028",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Meerestiere"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0031",
+        "lineageId": "de-0031",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Getränke"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0032",
+        "lineageId": "de-0032",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Gewürze und Kräuter"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0035",
+        "lineageId": "de-0035",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Käsesorten"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0036",
+        "lineageId": "de-0036",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Wurstsorten"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0037",
+        "lineageId": "de-0037",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Fußball"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0038",
+        "lineageId": "de-0038",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Olympische Sportarten"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0039",
+        "lineageId": "de-0039",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Computerspiele"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0041",
+        "lineageId": "de-0041",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Filmgenres"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0045",
+        "lineageId": "de-0045",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Märchen Grimm"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0046",
+        "lineageId": "de-0046",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Deutsche Geschichte"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0047",
+        "lineageId": "de-0047",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Berlin Sehenswürdigkeiten"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0049",
+        "lineageId": "de-0049",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Hamburg Sehenswürdigkeiten"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0050",
+        "lineageId": "de-0050",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Deutsche Erfindungen"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0052",
+        "lineageId": "de-0052",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Oktoberfest"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0302",
+        "lineageId": "de-0302",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "Umgangssprache Berufe"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0044",
+        "lineageId": "de-0044",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Theater"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0303",
+        "lineageId": "de-0303",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "Stadtspitznamen"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0057",
+        "lineageId": "de-0057",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Flughafen"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0058",
+        "lineageId": "de-0058",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Hafen und Schifffahrt"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0059",
+        "lineageId": "de-0059",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Gartenarbeit"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0060",
+        "lineageId": "de-0060",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Umweltschutz"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0062",
+        "lineageId": "de-0062",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Kochtechniken"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0066",
+        "lineageId": "de-0066",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Mode und Kleidung"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0067",
+        "lineageId": "de-0067",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Schmuck"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0068",
+        "lineageId": "de-0068",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Werkzeug und Handwerk"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0070",
+        "lineageId": "de-0070",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Reparatur und Renovierung"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0071",
+        "lineageId": "de-0071",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Supermarkt"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0072",
+        "lineageId": "de-0072",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Marktplatz"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0073",
+        "lineageId": "de-0073",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Apotheke"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0074",
+        "lineageId": "de-0074",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Krankenhaus"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0076",
+        "lineageId": "de-0076",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Universität"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0080",
+        "lineageId": "de-0080",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Künstliche Intelligenz"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0081",
+        "lineageId": "de-0081",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Deutsche Schlösser"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0082",
+        "lineageId": "de-0082",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Nationalparks Deutschland"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0083",
+        "lineageId": "de-0083",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Schwarzwald"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0084",
+        "lineageId": "de-0084",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Rheintal"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0085",
+        "lineageId": "de-0085",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Nordseeküste"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0086",
+        "lineageId": "de-0086",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Ostseeküste"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0087",
+        "lineageId": "de-0087",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Alpen"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0088",
+        "lineageId": "de-0088",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Deutsche Weinregionen"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0090",
+        "lineageId": "de-0090",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Kaffeesorten"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0091",
+        "lineageId": "de-0091",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Tee"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0307",
+        "lineageId": "de-0307",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "Deutsche Literatur"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0093",
+        "lineageId": "de-0093",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Deutsche Philosophen"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0309",
+        "lineageId": "de-0309",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "Deutsche Geschichte Abk."
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "de",
+        "puzzleId": "de-0094",
+        "lineageId": "de-0094",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Klassische Musik"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
     }
   ]
 }

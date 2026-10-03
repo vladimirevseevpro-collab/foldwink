@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const OUTPUT_ROOT = join(ROOT, "public", "runtime-content", "v1");
+const MANIFEST_ROOT = join(ROOT, "puzzles", "manifests");
 const languages = ["en", "ru", "de"];
 // Archive payloads are intentionally fixed at 32 boards. This keeps the
 // request count bounded without making a language switch download its entire
@@ -91,25 +92,44 @@ async function readLanguagePool(language, contentVersion, editorialById) {
   return puzzles.sort((left, right) => left.puzzle.id.localeCompare(right.puzzle.id));
 }
 
+async function readDailyManifests(language) {
+  const files = (await readdir(MANIFEST_ROOT))
+    .filter((file) => file.startsWith(`daily.${language}.`) && file.endsWith(".json"))
+    .sort();
+  assert(files.length > 0, `${language} has no published daily manifests`);
+  const manifests = [];
+  for (const file of files) {
+    const manifest = await readJson(join(MANIFEST_ROOT, file));
+    assert(manifest.language === language, `${file} declares the wrong language`);
+    assert(Array.isArray(manifest.entries) && manifest.entries.length > 0, `${file} has no entries`);
+    manifests.push(manifest);
+  }
+  return manifests;
+}
+
 async function makeLanguage(language) {
-  const [starters, daily, editorial] = await Promise.all([
-    readJson(join(ROOT, "puzzles", "manifests", `starters.${language}.json`)),
-    readJson(join(ROOT, "puzzles", "manifests", `daily.${language}.2026-09-14.json`)),
-    readJson(join(ROOT, "puzzles", "manifests", `editorial.${language}.json`)),
+  const [starters, dailyManifests, editorial] = await Promise.all([
+    readJson(join(MANIFEST_ROOT, `starters.${language}.json`)),
+    readDailyManifests(language),
+    readJson(join(MANIFEST_ROOT, `editorial.${language}.json`)),
   ]);
+  // The founding manifest is the immutable published release; later manifests
+  // extend the horizon and their boards ship inside the archive payloads.
+  const daily = dailyManifests[0];
   const contentVersion = editorial.catalogVersion;
   assert(typeof contentVersion === "string" && contentVersion, `${language} editorial catalogVersion is required`);
   assert(daily.language === language && starters.language === language && editorial.language === language, `${language} manifests disagree on language`);
-  assert(Array.isArray(daily.entries) && daily.entries.length === 30, `${language} daily release manifest must contain exactly 30 boards`);
+  assert(Array.isArray(daily.entries) && daily.entries.length === 30, `${language} founding daily release manifest must contain exactly 30 boards`);
   assert(Array.isArray(starters.entries) && starters.entries.length === 6, `${language} starter manifest must contain exactly 6 boards`);
   assert(Array.isArray(editorial.records), `${language} editorial records are required`);
 
   const editorialById = new Map();
+  const readyById = new Set();
   for (const record of editorial.records) {
-    assert(record?.status === "ready", `${language} editorial record is not ready`);
     assert(isRef(record.puzzleRef, language, contentVersion), `${language} editorial reference is invalid`);
     assert(!editorialById.has(record.puzzleRef.puzzleId), `${language} editorial manifest repeats ${record.puzzleRef.puzzleId}`);
     editorialById.set(record.puzzleRef.puzzleId, record.puzzleRef);
+    if (record.status === "ready") readyById.add(record.puzzleRef.puzzleId);
   }
 
   const releaseRefs = [];
@@ -119,12 +139,22 @@ async function makeLanguage(language) {
     assert(isRef(ref, language, contentVersion), `${language} release reference is invalid`);
     const canonical = editorialById.get(ref.puzzleId);
     assert(canonical && sameRef(canonical, ref), `${language} release reference does not match editorial identity: ${ref.puzzleId}`);
+    assert(readyById.has(ref.puzzleId), `${language} released board is not editorially ready: ${ref.puzzleId}`);
     if (!seen.has(ref.puzzleId)) {
       seen.add(ref.puzzleId);
       releaseRefs.push(canonical);
     }
   }
   assert(releaseRefs.length === 30, `${language} release manifest must resolve to 30 distinct boards`);
+
+  // Every scheduled day (including unreviewed horizon extensions) must resolve
+  // to an editorial identity so the runtime selection catalog can validate.
+  for (const manifest of dailyManifests) {
+    for (const entry of manifest.entries) {
+      const canonical = editorialById.get(entry.puzzleId);
+      assert(canonical && sameRef(canonical, entry), `${language} daily entry does not match editorial identity: ${entry.puzzleId}`);
+    }
+  }
 
   const allPuzzles = await readLanguagePool(language, contentVersion, editorialById);
   const puzzleById = new Map(allPuzzles.map((entry) => [entry.puzzle.id, entry]));
@@ -191,7 +221,7 @@ async function makeLanguage(language) {
     })),
     publishedRefs: releaseRefs,
     starters,
-    daily,
+    daily: dailyManifests,
     editorial,
   };
   return { language, manifest, assets: [boot, ...chunks] };

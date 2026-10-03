@@ -947,6 +947,1506 @@
       },
       "playtest": null,
       "status": "ready"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0001",
+        "lineageId": "ru-0001",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "омонимы_и_быт"
+      ],
+      "anchorGroupId": "weapons",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0003",
+        "lineageId": "ru-0003",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Пасха и весна"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0004",
+        "lineageId": "ru-0004",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "День Победы"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0005",
+        "lineageId": "ru-0005",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Школьные принадлежности"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0006",
+        "lineageId": "ru-0006",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Школьные предметы"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0007",
+        "lineageId": "ru-0007",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Городской транспорт"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0009",
+        "lineageId": "ru-0009",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Погода и явления природы"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0011",
+        "lineageId": "ru-0011",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Цвета радуги"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0012",
+        "lineageId": "ru-0012",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Фрукты"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0013",
+        "lineageId": "ru-0013",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Овощи"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0014",
+        "lineageId": "ru-0014",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Ягоды"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0015",
+        "lineageId": "ru-0015",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Грибы леса"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0016",
+        "lineageId": "ru-0016",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Домашние животные"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0017",
+        "lineageId": "ru-0017",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Дикие животные"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0002",
+        "lineageId": "ru-0002",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "фразеологизмы_и_ирония"
+      ],
+      "anchorGroupId": "verbs_take_off",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0107",
+        "lineageId": "ru-0107",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "Профессии по специализации"
+      ],
+      "anchorGroupId": "med",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0108",
+        "lineageId": "ru-0108",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "Советские аббревиатуры"
+      ],
+      "anchorGroupId": "security",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0109",
+        "lineageId": "ru-0109",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "Литературные герои по произведению"
+      ],
+      "anchorGroupId": "bulgakov",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0110",
+        "lineageId": "ru-0110",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "Русские изобретения"
+      ],
+      "anchorGroupId": "tsiolkovsky",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0018",
+        "lineageId": "ru-0018",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Птицы России"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0111",
+        "lineageId": "ru-0111",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "Греческие боги"
+      ],
+      "anchorGroupId": "sea",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0019",
+        "lineageId": "ru-0019",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Рыбы рек и озёр"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0020",
+        "lineageId": "ru-0020",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Насекомые"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0021",
+        "lineageId": "ru-0021",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Деревья"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0022",
+        "lineageId": "ru-0022",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Цветы и растения"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0024",
+        "lineageId": "ru-0024",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Строительные инструменты"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0026",
+        "lineageId": "ru-0026",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Мебель"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0028",
+        "lineageId": "ru-0028",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Одежда"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0029",
+        "lineageId": "ru-0029",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Обувь"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0030",
+        "lineageId": "ru-0030",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Завтрак"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0031",
+        "lineageId": "ru-0031",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Супы русской кухни"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0032",
+        "lineageId": "ru-0032",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Вторые блюда"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0033",
+        "lineageId": "ru-0033",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Выпечка и хлеб"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0034",
+        "lineageId": "ru-0034",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Сладости и десерты"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0036",
+        "lineageId": "ru-0036",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Специи и приправы"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0037",
+        "lineageId": "ru-0037",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Части тела"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0038",
+        "lineageId": "ru-0038",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Части лица"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0039",
+        "lineageId": "ru-0039",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Члены семьи"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0040",
+        "lineageId": "ru-0040",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Комнаты в доме"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0042",
+        "lineageId": "ru-0042",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Кухонная техника"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0043",
+        "lineageId": "ru-0043",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Бытовая техника"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0044",
+        "lineageId": "ru-0044",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Виды магазинов"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0148",
+        "lineageId": "ru-0148",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "Коктейли по базовому алкоголю"
+      ],
+      "anchorGroupId": "vodka_c",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0160",
+        "lineageId": "ru-0160",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "Блюда по стране происхождения"
+      ],
+      "anchorGroupId": "france_food",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0168",
+        "lineageId": "ru-0168",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "Советское кино"
+      ],
+      "anchorGroupId": "comedies_sov",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0172",
+        "lineageId": "ru-0172",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "Разделы физики"
+      ],
+      "anchorGroupId": "mechanics",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0185",
+        "lineageId": "ru-0185",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "Великие российские спортсмены"
+      ],
+      "anchorGroupId": "chess_players",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0045",
+        "lineageId": "ru-0045",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Деньги и финансы"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0047",
+        "lineageId": "ru-0047",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Зимние виды спорта"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0049",
+        "lineageId": "ru-0049",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Спортивный инвентарь"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0050",
+        "lineageId": "ru-0050",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Олимпийские виды спорта"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0051",
+        "lineageId": "ru-0051",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Детские игры"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0052",
+        "lineageId": "ru-0052",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Детские игрушки"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0053",
+        "lineageId": "ru-0053",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Настольные игры"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0054",
+        "lineageId": "ru-0054",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Компьютер и интернет"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0186",
+        "lineageId": "ru-0186",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "medium",
+      "band": "unrated",
+      "vocabularyFamiliarity": "mixed",
+      "relationTypes": [
+        "attribute"
+      ],
+      "topicTags": [
+        "Языковые семьи"
+      ],
+      "anchorGroupId": "slavic_langs",
+      "ambiguityRisk": "review",
+      "tabReview": "pending",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0055",
+        "lineageId": "ru-0055",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Смартфон и приложения"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0056",
+        "lineageId": "ru-0056",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Социальные сети"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0057",
+        "lineageId": "ru-0057",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Жанры кино"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
+    },
+    {
+      "puzzleRef": {
+        "language": "ru",
+        "puzzleId": "ru-0058",
+        "lineageId": "ru-0058",
+        "contentVersion": "catalog-2026-09-v1"
+      },
+      "publicTier": "easy",
+      "band": "unrated",
+      "vocabularyFamiliarity": "common",
+      "relationTypes": [
+        "classification"
+      ],
+      "topicTags": [
+        "Музыкальные жанры"
+      ],
+      "anchorGroupId": "group_a",
+      "ambiguityRisk": "review",
+      "tabReview": "not-applicable",
+      "mobileFit": "pending",
+      "authorReview": null,
+      "independentReview": null,
+      "playtest": null,
+      "status": "unreviewed"
     }
   ]
 }

@@ -26,7 +26,7 @@ export type RuntimeManifest = {
   archive: RuntimeAsset[];
   publishedRefs: PuzzleRef[];
   starters: StarterManifest;
-  daily: DailyManifest;
+  daily: DailyManifest[];
   editorial: EditorialManifest;
 };
 
@@ -160,17 +160,24 @@ export function parseRuntimeManifest(input: unknown): RuntimeManifest {
       "Runtime boot references do not match the published release",
     );
   const starters = validateStarterManifest(input.starters);
-  const daily = validateDailyManifest(input.daily);
   const editorial = validateEditorialManifest(input.editorial);
-  if (!starters.ok || !daily.ok || !editorial.ok)
+  const dailyInputs = Array.isArray(input.daily) ? input.daily : [input.daily];
+  const dailyValidation = dailyInputs.map((manifest) => validateDailyManifest(manifest));
+  if (
+    !starters.ok ||
+    !editorial.ok ||
+    dailyInputs.length === 0 ||
+    dailyValidation.some((result) => !result.ok)
+  )
     throw new RuntimeContentError(
       "invalid",
       "Runtime manifest includes an invalid selection catalog",
     );
+  const daily = dailyValidation.flatMap((result) => (result.ok ? [result.value] : []));
   if (
     starters.value.language !== language ||
     starters.value.catalogVersion !== input.contentVersion ||
-    daily.value.language !== language ||
+    daily.some((manifest) => manifest.language !== language) ||
     editorial.value.language !== language ||
     editorial.value.catalogVersion !== input.contentVersion
   )
@@ -181,12 +188,18 @@ export function parseRuntimeManifest(input: unknown): RuntimeManifest {
   const editorialRefs = new Map(
     editorial.value.records.map((record) => [record.puzzleRef.puzzleId, record.puzzleRef]),
   );
+  const dailyEntries = daily.flatMap((manifest) => manifest.entries);
+  const dailyDates = new Set<string>();
+  const repeatedDate = dailyEntries.some((entry) => {
+    if (dailyDates.has(entry.date)) return true;
+    dailyDates.add(entry.date);
+    return false;
+  });
   if (
-    editorial.value.records.length !== 30 ||
+    repeatedDate ||
+    dailyEntries.length < 30 ||
     boot.puzzleRefs.some((ref) => !matchesRef(ref, editorialRefs.get(ref.puzzleId))) ||
-    daily.value.entries.some(
-      (entry) => !matchesRef(entry, editorialRefs.get(entry.puzzleId)),
-    ) ||
+    dailyEntries.some((entry) => !matchesRef(entry, editorialRefs.get(entry.puzzleId))) ||
     starters.value.entries.some(
       (entry) => !matchesRef(entry.puzzleRef, editorialRefs.get(entry.puzzleRef.puzzleId)),
     )
@@ -204,7 +217,7 @@ export function parseRuntimeManifest(input: unknown): RuntimeManifest {
     archive: archive as RuntimeAsset[],
     publishedRefs,
     starters: starters.value,
-    daily: daily.value,
+    daily,
     editorial: editorial.value,
   };
 }

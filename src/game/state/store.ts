@@ -164,6 +164,11 @@ export interface StoreDeps {
   getHardRampedByIndex?: (i: number) => Puzzle | undefined;
   /** Immutable date + language schedule lookup. No pool or unlock fallback. */
   getDailyEntry?: DailyEntryLookup;
+  /**
+   * Fetches the archive payload that owns a horizon-extended Daily board.
+   * Released boot boards never need this; later schedules ship in the archive.
+   */
+  ensurePuzzleLoaded?: (puzzleId: string) => Promise<void>;
   getStarterManifest?: (language: PuzzleLanguage) => StarterManifest | undefined;
   getEditorialRecord?: (
     language: PuzzleLanguage,
@@ -754,7 +759,19 @@ export function createStore(deps: StoreDeps = defaultDeps) {
         : resolveDailyEntry(language, date, deps.getDailyEntry);
       if (!entry) return;
       const puzzle = pinnedReplay?.puzzleSnapshot ?? deps.getPuzzleById(entry.puzzleId);
-      if (!puzzle) return;
+      if (!puzzle) {
+        // Horizon-extended Daily boards live in archive payloads rather than
+        // the boot release. Fetch the owning chunk, then start the exact
+        // published entry once it is present locally.
+        void (deps.ensurePuzzleLoaded?.(entry.puzzleId) ?? Promise.resolve())
+          .then(() => {
+            if (deps.getPuzzleById(entry.puzzleId)) get().startDaily();
+          })
+          .catch(() => {
+            // A failed fetch leaves the menu intact so the player can retry.
+          });
+        return;
+      }
       const alreadyPlayed = previousRecord?.date === date;
       const now = deps.now();
       const active = initialActive(
