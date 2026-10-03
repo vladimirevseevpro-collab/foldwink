@@ -224,6 +224,20 @@ export function GameScreen() {
         />
       )}
       <div className={`transition-shadow rounded-2xl ${flashRingClass}`}>
+        <div className="sticky top-0 z-40 -mx-3 sm:-mx-5 mb-3 border-b border-line/60 bg-bg px-3 sm:px-5 fw-safe-pt">
+          <button
+            type="button"
+            data-testid="game-back-sticky"
+            aria-label={quitArmed ? t.game.quitConfirm : t.game.quitToMenu}
+            onClick={handleQuit}
+            className={`-ml-2 inline-flex min-h-11 min-w-11 items-center gap-1.5 rounded-lg px-2 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent ${
+              quitArmed ? "text-danger" : "text-muted hover:bg-surfaceHi hover:text-text"
+            }`}
+          >
+            <FoldwinkIcon name="back" size={16} />
+            {quitArmed ? t.game.quitConfirm : t.game.quitToMenu}
+          </button>
+        </div>
         <Header
           title={puzzle.title}
           subtitle={
@@ -355,16 +369,6 @@ export function GameScreen() {
               {t.game.submit}
             </Button>
           </div>
-        </div>
-        <div className="mt-6 text-center">
-          <button
-            className={`text-sm underline underline-offset-2 transition-colors ${
-              quitArmed ? "text-danger" : "text-muted hover:text-text"
-            }`}
-            onClick={handleQuit}
-          >
-            {quitArmed ? t.game.quitConfirm : t.game.quitToMenu}
-          </button>
         </div>
       </div>
     </>

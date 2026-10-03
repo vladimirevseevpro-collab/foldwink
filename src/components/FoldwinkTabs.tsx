@@ -4,6 +4,7 @@ import { buildFoldwinkTabs } from "../game/engine/foldwinkTabs";
 import { colorIndexForGroup, SOLVED_COLOR_CLASSES } from "../game/solvedColors";
 import { MOTION_CLASS } from "../styles/motion";
 import { useT } from "../i18n/useLanguage";
+import { markMediumHintSeen, shouldShowMediumHint } from "../stats/firstTimeHints";
 import { FoldedCorner } from "./FoldedCorner";
 import { WinkSparkles } from "./WinkSparkles";
 
@@ -64,12 +65,19 @@ export function FoldwinkTabs({
   const t = useT();
   const [armedGroupId, setArmedGroupId] = useState<string | null>(null);
   const armTimer = useRef<number | null>(null);
+  const [showFirstTimeHint, setShowFirstTimeHint] = useState(
+    () => puzzle.difficulty === "medium" && shouldShowMediumHint(),
+  );
 
   useEffect(() => {
     return () => {
       if (armTimer.current !== null) window.clearTimeout(armTimer.current);
     };
   }, []);
+
+  useEffect(() => {
+    if (showFirstTimeHint) markMediumHintSeen();
+  }, [showFirstTimeHint]);
 
   const handleTabClick = (groupId: string): void => {
     if (armedGroupId === groupId) {
@@ -115,6 +123,18 @@ export function FoldwinkTabs({
           )}
         </span>
       </div>
+      {showFirstTimeHint && (
+        <div className="mb-2 flex items-start justify-between gap-2 rounded-lg border border-accent/50 bg-surfaceHi px-2.5 py-2">
+          <span className="text-[11px] leading-snug text-text">{t.tabs.firstTimeHint}</span>
+          <button
+            type="button"
+            onClick={() => setShowFirstTimeHint(false)}
+            className="shrink-0 rounded-md px-2 py-1 text-[11px] font-bold text-accent hover:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+          >
+            {t.tabs.firstTimeHintDismiss}
+          </button>
+        </div>
+      )}
       <div className="grid grid-cols-2 gap-2">
         {tabs.map((tab, idx) => {
           const colorIdx = colorIndexForGroup(puzzle, tab.groupId);

@@ -91,6 +91,8 @@ export interface Strings {
     clickAria: string;
     concealedAria: string;
     tabsHintAria: string;
+    firstTimeHint: string;
+    firstTimeHintDismiss: string;
   };
   result: {
     noResult: string;
@@ -407,6 +409,9 @@ export const strings: Record<Lang, Strings> = {
       clickAria: "Wink this tab to reveal the full category",
       concealedAria: "Concealed category preview",
       tabsHintAria: "Tabs hint the hidden categories",
+      firstTimeHint:
+        "New here? Once per puzzle you can Wink one tab to reveal its full category.",
+      firstTimeHintDismiss: "Got it",
     },
     result: {
       noResult: "No result.",
@@ -736,6 +741,9 @@ export const strings: Record<Lang, Strings> = {
       clickAria: "Tab antippen, um die Kategorie zu enthüllen",
       concealedAria: "Verborgene Kategorie",
       tabsHintAria: "Tabs geben Hinweise auf die Kategorien",
+      firstTimeHint:
+        "Neu hier? Einmal pro Rätsel kannst du einen Tab verwinken und siehst seine ganze Kategorie.",
+      firstTimeHintDismiss: "Verstanden",
     },
     result: {
       noResult: "Kein Ergebnis.",
@@ -1071,6 +1079,9 @@ export const strings: Record<Lang, Strings> = {
       clickAria: "Нажми на вкладку, чтобы раскрыть категорию",
       concealedAria: "Скрытая категория",
       tabsHintAria: "Вкладки подсказывают скрытые категории",
+      firstTimeHint:
+        "Впервые здесь? Раз за пазл можно сделать Wink одной вкладке и сразу увидеть её категорию.",
+      firstTimeHintDismiss: "Понятно",
     },
     result: {
       noResult: "Нет результата.",

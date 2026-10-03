@@ -1,5 +1,7 @@
 import { clearFoldwinkNamespace, safeRead, safeWrite, safeRemove } from "../utils/storage";
 
+export { safeRead, safeWrite };
+
 import {
   INITIAL_STATS,
   type Stats,
