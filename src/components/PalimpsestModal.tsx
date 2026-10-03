@@ -14,6 +14,7 @@ import {
 } from "../game/state/appStore";
 import type { PersistedPalimpsestSession } from "../persistence/gameRepository";
 import { MistakesDots } from "./MistakesDots";
+import { ENABLE_ARCHIVIST_LAYER } from "../game/config/features";
 
 interface PalimpsestModalProps {
   onClose: () => void;
@@ -264,7 +265,7 @@ export function PalimpsestModal({ onClose, onOpenPassport }: PalimpsestModalProp
             </div>
 
             <div className="flex gap-2 pt-2">
-              {onOpenPassport && (
+              {ENABLE_ARCHIVIST_LAYER && onOpenPassport && (
                 <button
                   type="button"
                   onClick={onOpenPassport}

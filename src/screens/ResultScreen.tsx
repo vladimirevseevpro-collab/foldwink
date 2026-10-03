@@ -16,6 +16,7 @@ import { loadArchivistProfile } from "../progression/archivistProfile";
 import { buildShareString } from "../game/engine/share";
 import { gradeResult } from "../game/engine/grading";
 import { mediumReadiness } from "../game/engine/readiness";
+import { ENABLE_ARCHIVIST_LAYER } from "../game/config/features";
 import { seedFromString } from "../game/engine/shuffle";
 import { todayLocal } from "../utils/date";
 import { isSupporter } from "../monetization/supporter";
@@ -171,8 +172,10 @@ export function ResultScreen() {
 
   const archetype = computePlayerArchetype(summary, puzzle.difficulty, active?.winkedGroupId);
 
-  const profile = loadArchivistProfile();
-  const activeSeal = SEALS.find((s) => s.id === profile.sealId) ?? SEALS[0];
+  const profile = ENABLE_ARCHIVIST_LAYER ? loadArchivistProfile() : null;
+  const activeSeal = profile
+    ? (SEALS.find((s) => s.id === profile.sealId) ?? SEALS[0])
+    : null;
 
   const cardOptions = {
     mode: (isDaily ? "daily" : "standard") as "daily" | "standard",
@@ -190,8 +193,8 @@ export function ResultScreen() {
     difficultyLabel: t.difficulty[puzzle.difficulty],
     supporter: isSupporter(),
     archetype: `${archetype.icon} ${archetype.badge}`,
-    sealIcon: activeSeal.icon,
-    sealLabel: activeSeal.label,
+    sealIcon: activeSeal?.icon,
+    sealLabel: activeSeal?.label,
     dateStr: isDaily ? today : todayLocal(),
     kintsugiRestored: Boolean(
       todayDailyRecord?.graceWaxUsed ||

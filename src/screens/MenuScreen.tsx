@@ -16,6 +16,7 @@ import {
   mediumReadinessDisplay,
   hardReadinessDisplay,
 } from "../game/engine/readiness";
+import { ENABLE_ARCHIVIST_LAYER } from "../game/config/features";
 import { currentBundle, getRuntimeCatalogSize } from "../puzzles/byLang";
 import { getDailyEntry } from "../puzzles/catalog";
 import { isIosSafariInBrowser } from "../utils/platform";
@@ -301,6 +302,14 @@ export function MenuScreen() {
                   >
                     {mediumButtonLabel}
                   </Button>
+                  {!mReadiness.unlocked && (
+                    <p
+                      className="text-center text-[11px] leading-relaxed text-muted"
+                      data-testid="menu-medium-progress-hint"
+                    >
+                      {mDisplay.caption}
+                    </p>
+                  )}
                   {hReadiness.hasContent && (
                     <Button
                       variant={hardButtonVariant}
@@ -313,10 +322,12 @@ export function MenuScreen() {
                     </Button>
                   )}
                   <div className="space-y-1 border-t border-line pt-2 text-center text-[11px] text-muted">
-                    <div>
-                      <span className={mediumLabelClass}>{mDisplay.label}</span> ·{" "}
-                      {mDisplay.caption}
-                    </div>
+                    {mReadiness.unlocked && (
+                      <div>
+                        <span className={mediumLabelClass}>{mDisplay.label}</span> ·{" "}
+                        {mDisplay.caption}
+                      </div>
+                    )}
                     {hReadiness.level !== "hidden" && (
                       <div>
                         {hDisplay.label} · {hDisplay.caption}
@@ -333,14 +344,16 @@ export function MenuScreen() {
                 <FoldwinkIcon name="stats" size={17} className="mr-2 text-accent" />
                 {t.menu.stats}
               </Button>
-              <Button
-                variant="ghost"
-                className="flex-1"
-                onClick={() => setIsPassportOpen(true)}
-              >
-                <FoldwinkIcon name="passport" size={17} className="mr-2 text-accent" />
-                {t.passport.tabPassport}
-              </Button>
+              {ENABLE_ARCHIVIST_LAYER && (
+                <Button
+                  variant="ghost"
+                  className="flex-1"
+                  onClick={() => setIsPassportOpen(true)}
+                >
+                  <FoldwinkIcon name="passport" size={17} className="mr-2 text-accent" />
+                  {t.passport.tabPassport}
+                </Button>
+              )}
             </div>
 
             <section className="rounded-xl border border-line bg-surface/40 p-3 text-left">
@@ -367,27 +380,31 @@ export function MenuScreen() {
                     {lang === "ru" ? "Режим Дзен" : lang === "de" ? "Zen-Modus" : "Zen Streak"}
                     {stats.zenStreak ? ` (${stats.zenStreak})` : ""}
                   </Button>
-                  <Button
-                    variant="secondary"
-                    className="text-xs border-red-900/40 text-red-300 hover:bg-red-950/20"
-                    onClick={() => setIsContractOpen(true)}
-                    data-testid="menu-mastery-button"
-                  >
-                    ⚔️{" "}
-                    {lang === "ru"
-                      ? "Проверка мастерства"
-                      : lang === "de"
-                        ? "Meisterprüfung"
-                        : "Mastery Challenge"}
-                  </Button>
-                  <Button
-                    variant="secondary"
-                    className="text-xs border-amber-500/50 bg-amber-950/20 text-amber-200 hover:bg-amber-950/40"
-                    onClick={() => setIsPalimpsestOpen(true)}
-                    data-testid="menu-palimpsest-button"
-                  >
-                    📜✨ {t.palimpsest.menuButton}
-                  </Button>
+                  {ENABLE_ARCHIVIST_LAYER && (
+                    <Button
+                      variant="secondary"
+                      className="text-xs border-red-900/40 text-red-300 hover:bg-red-950/20"
+                      onClick={() => setIsContractOpen(true)}
+                      data-testid="menu-mastery-button"
+                    >
+                      ⚔️{" "}
+                      {lang === "ru"
+                        ? "Проверка мастерства"
+                        : lang === "de"
+                          ? "Meisterprüfung"
+                          : "Mastery Challenge"}
+                    </Button>
+                  )}
+                  {ENABLE_ARCHIVIST_LAYER && (
+                    <Button
+                      variant="secondary"
+                      className="text-xs border-amber-500/50 bg-amber-950/20 text-amber-200 hover:bg-amber-950/40"
+                      onClick={() => setIsPalimpsestOpen(true)}
+                      data-testid="menu-palimpsest-button"
+                    >
+                      📜✨ {t.palimpsest.menuButton}
+                    </Button>
+                  )}
                 </div>
               )}
             </section>
@@ -403,16 +420,18 @@ export function MenuScreen() {
               </div>
             }
           >
-            {isPassportOpen && (
+            {ENABLE_ARCHIVIST_LAYER && isPassportOpen && (
               <ArchivistPassportModal
                 onClose={() => setIsPassportOpen(false)}
                 onOpenContract={() => setIsContractOpen(true)}
               />
             )}
 
-            {isContractOpen && <IronContractModal onClose={() => setIsContractOpen(false)} />}
+            {ENABLE_ARCHIVIST_LAYER && isContractOpen && (
+              <IronContractModal onClose={() => setIsContractOpen(false)} />
+            )}
 
-            {isPalimpsestOpen && (
+            {ENABLE_ARCHIVIST_LAYER && isPalimpsestOpen && (
               <PalimpsestModal
                 onClose={() => setIsPalimpsestOpen(false)}
                 onOpenPassport={() => {

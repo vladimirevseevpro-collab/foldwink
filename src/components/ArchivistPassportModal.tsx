@@ -634,10 +634,14 @@ export function ArchivistPassportModal({
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="text-[11px] font-bold text-muted uppercase tracking-wider block mb-1">
+                  <label
+                    htmlFor="passport-seal-select"
+                    className="text-[11px] font-bold text-muted uppercase tracking-wider block mb-1"
+                  >
                     {t.passport.waxSealLabel}
                   </label>
                   <select
+                    id="passport-seal-select"
                     value={profile.sealId}
                     onChange={(e) => handleUpdateField("sealId", e.target.value)}
                     className="w-full rounded-lg border border-line bg-surfaceHi p-2 text-xs text-text font-medium"
