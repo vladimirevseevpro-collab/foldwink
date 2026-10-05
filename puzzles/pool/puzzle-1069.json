@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1069",
+  "title": "Around Town",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "places-of-worship",
+      "label": "Places of Worship",
+      "items": [
+        "Church",
+        "Mosque",
+        "Synagogue",
+        "Temple"
+      ]
+    },
+    {
+      "id": "building-parts",
+      "label": "Building Parts",
+      "items": [
+        "Roof",
+        "Window",
+        "Door",
+        "Chimney"
+      ]
+    },
+    {
+      "id": "city-landmarks",
+      "label": "City Landmarks",
+      "items": [
+        "Statue",
+        "Monument",
+        "Fountain",
+        "Obelisk"
+      ]
+    },
+    {
+      "id": "city-nuisances",
+      "label": "City Nuisances",
+      "items": [
+        "Traffic Jam",
+        "Pothole",
+        "Graffiti",
+        "Litter"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "cities",
+    "categoryType": "classification"
+  }
+}

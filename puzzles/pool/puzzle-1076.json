@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1076",
+  "title": "Radio Dial",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "popular-music-genres",
+      "label": "Popular Music Genres",
+      "items": [
+        "Pop",
+        "Rock",
+        "Hip-Hop",
+        "Reggae"
+      ]
+    },
+    {
+      "id": "band-roles",
+      "label": "Band Roles",
+      "items": [
+        "Singer",
+        "Guitarist",
+        "Drummer",
+        "Bassist"
+      ]
+    },
+    {
+      "id": "music-crowd-actions",
+      "label": "Music Crowd Actions",
+      "items": [
+        "Clap",
+        "Cheer",
+        "Whistle",
+        "Stomp"
+      ]
+    },
+    {
+      "id": "concert-souvenirs",
+      "label": "Concert Souvenirs",
+      "items": [
+        "T-Shirt",
+        "Poster",
+        "Lanyard",
+        "Programme"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "music",
+    "categoryType": "classification"
+  }
+}

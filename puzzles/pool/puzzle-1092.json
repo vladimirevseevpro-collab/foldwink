@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1092",
+  "title": "In the Studio",
+  "difficulty": "medium",
+  "editorialSummary": "Palette suggests the pigment group because it holds colours, but it is a physical tool, so only the artist's equipment label fits it.",
+  "meta": {
+    "theme": "painting",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "equipment",
+      "label": "Artist's equipment",
+      "revealHint": "Studio kit",
+      "items": [
+        "Brush",
+        "Palette",
+        "Easel",
+        "Smock"
+      ]
+    },
+    {
+      "id": "media",
+      "label": "Painting media",
+      "revealHint": "Paints",
+      "items": [
+        "Oil",
+        "Watercolour",
+        "Acrylic",
+        "Tempera"
+      ]
+    },
+    {
+      "id": "pigments",
+      "label": "Artist's pigments",
+      "revealHint": "Pigments",
+      "items": [
+        "Crimson",
+        "Ochre",
+        "Azure",
+        "Vermilion"
+      ]
+    },
+    {
+      "id": "genres",
+      "label": "Painting subjects",
+      "revealHint": "Subjects",
+      "items": [
+        "Portrait",
+        "Landscape",
+        "Still life",
+        "Seascape"
+      ]
+    }
+  ]
+}

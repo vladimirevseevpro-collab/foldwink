@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1064",
+  "title": "Market Basket",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "dairy-counter",
+      "label": "Dairy Counter",
+      "items": [
+        "Cream",
+        "Cottage Cheese",
+        "Sour Cream",
+        "Cream Cheese"
+      ]
+    },
+    {
+      "id": "baking-cupboard",
+      "label": "Baking Cupboard",
+      "items": [
+        "Cocoa Powder",
+        "Vanilla Extract",
+        "Cornstarch",
+        "Food Coloring"
+      ]
+    },
+    {
+      "id": "spice-rack",
+      "label": "Spice Rack",
+      "items": [
+        "Cinnamon",
+        "Paprika",
+        "Cumin",
+        "Oregano"
+      ]
+    },
+    {
+      "id": "snack-nuts",
+      "label": "Snack Nuts",
+      "items": [
+        "Almond",
+        "Walnut",
+        "Cashew",
+        "Pistachio"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "food",
+    "categoryType": "classification"
+  }
+}

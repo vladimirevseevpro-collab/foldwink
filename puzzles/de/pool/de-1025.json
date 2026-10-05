@@ -1,0 +1,55 @@
+{
+  "id": "de-1025",
+  "title": "Training im Fitnessstudio",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "fitness"
+  },
+  "editorialSummary": "Falsche Fährte: Der Gewichthebergürtel wirkt wie ein Trainingsgerät, ist aber Kleidung und Schutz.",
+  "groups": [
+    {
+      "id": "kraft",
+      "label": "Geräte für das Krafttraining",
+      "revealHint": "KRAFT",
+      "items": [
+        "Hantel",
+        "Kettlebell",
+        "Beinpresse",
+        "Kabelzug"
+      ]
+    },
+    {
+      "id": "ausdauer",
+      "label": "Ausdauergeräte im Studio",
+      "revealHint": "AUSDAUER",
+      "items": [
+        "Laufband",
+        "Crosstrainer",
+        "Rudergerät",
+        "Fahrradergometer"
+      ]
+    },
+    {
+      "id": "gymnastik",
+      "label": "Kleingeräte für Gymnastik",
+      "revealHint": "GYM",
+      "items": [
+        "Gymnastikball",
+        "Springseil",
+        "Widerstandsband",
+        "Gymnastikmatte"
+      ]
+    },
+    {
+      "id": "schutz",
+      "label": "Kleidung und Schutz im Studio",
+      "revealHint": "SCHUTZ",
+      "items": [
+        "Sportschuhe",
+        "Trainingshandschuhe",
+        "Gewichthebergürtel",
+        "Knieschoner"
+      ]
+    }
+  ]
+}

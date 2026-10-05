@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1018",
+  "title": "Job Titles",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "health-jobs",
+      "label": "Health Jobs",
+      "items": [
+        "Nurse",
+        "Surgeon",
+        "Dentist",
+        "Pharmacist"
+      ]
+    },
+    {
+      "id": "teaching-jobs",
+      "label": "Teaching Jobs",
+      "items": [
+        "Teacher",
+        "Principal",
+        "Librarian",
+        "Coach"
+      ]
+    },
+    {
+      "id": "construction-jobs",
+      "label": "Construction Jobs",
+      "items": [
+        "Carpenter",
+        "Plumber",
+        "Electrician",
+        "Bricklayer"
+      ]
+    },
+    {
+      "id": "emergency-jobs",
+      "label": "Emergency Jobs",
+      "items": [
+        "Firefighter",
+        "Coastguard",
+        "Police Officer",
+        "Lifeguard"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "jobs",
+    "categoryType": "classification"
+  }
+}

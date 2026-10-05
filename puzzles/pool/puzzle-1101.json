@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1101",
+  "title": "Queue at the office",
+  "difficulty": "medium",
+  "editorialSummary": "The fee arrives on official paper so it tempts the document group, but the Application requirements label names what you bring, while the documents are the records themselves.",
+  "meta": {
+    "theme": "bureaucracy",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "docs",
+      "label": "Official documents",
+      "revealHint": "Records",
+      "items": [
+        "Passport",
+        "Birth certificate",
+        "Marriage licence",
+        "Deed"
+      ]
+    },
+    {
+      "id": "application",
+      "label": "Application requirements",
+      "revealHint": "Apply",
+      "items": [
+        "Form",
+        "Photo",
+        "Fee",
+        "Appointment"
+      ]
+    },
+    {
+      "id": "offices",
+      "label": "Government offices",
+      "revealHint": "Desks",
+      "items": [
+        "Town hall",
+        "Post office",
+        "Tax office",
+        "Registry"
+      ]
+    },
+    {
+      "id": "court",
+      "label": "Courtroom players",
+      "revealHint": "Court",
+      "items": [
+        "Judge",
+        "Jury",
+        "Clerk",
+        "Bailiff"
+      ]
+    }
+  ]
+}

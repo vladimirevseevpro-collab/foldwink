@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1057",
+  "title": "Built and woven",
+  "difficulty": "medium",
+  "editorialSummary": "Tile reads like a building stone, but the kiln-fired label is the only defensible home once the building stones label is read.",
+  "meta": {
+    "theme": "materials",
+    "categoryType": "material"
+  },
+  "groups": [
+    {
+      "id": "precious",
+      "label": "Precious metals",
+      "revealHint": "Precious",
+      "items": [
+        "Gold",
+        "Silver",
+        "Platinum",
+        "Palladium"
+      ]
+    },
+    {
+      "id": "stones",
+      "label": "Building stones",
+      "revealHint": "Stone",
+      "items": [
+        "Marble",
+        "Granite",
+        "Limestone",
+        "Sandstone"
+      ]
+    },
+    {
+      "id": "woven",
+      "label": "Woven fabrics",
+      "revealHint": "Woven",
+      "items": [
+        "Denim",
+        "Corduroy",
+        "Satin",
+        "Tweed"
+      ]
+    },
+    {
+      "id": "fired",
+      "label": "Kiln-fired wares",
+      "revealHint": "Fired",
+      "items": [
+        "Porcelain",
+        "Stoneware",
+        "Terracotta",
+        "Tile"
+      ]
+    }
+  ]
+}

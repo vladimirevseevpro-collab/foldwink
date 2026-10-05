@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1075",
+  "title": "Night On The Floor",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "swing-dance-styles",
+      "label": "Swing Dance Styles",
+      "items": [
+        "Lindy Hop",
+        "Jitterbug",
+        "Balboa",
+        "Charleston"
+      ]
+    },
+    {
+      "id": "street-dance-styles",
+      "label": "Street Dance Styles",
+      "items": [
+        "Breakdance",
+        "Popping",
+        "Locking",
+        "Krump"
+      ]
+    },
+    {
+      "id": "electronic-music-genres",
+      "label": "Electronic Music Genres",
+      "items": [
+        "Techno",
+        "House",
+        "Trance",
+        "Dubstep"
+      ]
+    },
+    {
+      "id": "vocal-music-styles",
+      "label": "Vocal Music Styles",
+      "items": [
+        "Opera",
+        "Gospel",
+        "Chant",
+        "A Cappella"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "music",
+    "categoryType": "classification"
+  }
+}

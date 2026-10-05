@@ -1,0 +1,56 @@
+{
+  "id": "de-1018",
+  "title": "Doppeltes und Verstecktes",
+  "difficulty": "hard",
+  "editorialSummary": "One group holds words with two unrelated meanings, three groups are words that all end in the same building block; the shared -stein and -blume endings tempt you to ignore the meaning-based group.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay"
+  },
+  "groups": [
+    {
+      "id": "teekessel",
+      "label": "Teekesselchen: zwei völlig verschiedene Dinge",
+      "items": [
+        "Schloss",
+        "Bank",
+        "Birne",
+        "Kiefer"
+      ],
+      "revealHint": "Doppeldeutig"
+    },
+    {
+      "id": "stein",
+      "label": "Komposita mit -stein",
+      "items": [
+        "Edelstein",
+        "Baustein",
+        "Grenzstein",
+        "Mühlstein"
+      ],
+      "revealHint": "-stein"
+    },
+    {
+      "id": "weg",
+      "label": "Komposita mit -weg",
+      "items": [
+        "Feldweg",
+        "Umweg",
+        "Holzweg",
+        "Reitweg"
+      ],
+      "revealHint": "-weg"
+    },
+    {
+      "id": "blume",
+      "label": "Komposita mit -blume",
+      "items": [
+        "Sonnenblume",
+        "Kornblume",
+        "Kunstblume",
+        "Papierblume"
+      ],
+      "revealHint": "-blume"
+    }
+  ]
+}

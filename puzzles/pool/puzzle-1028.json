@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1028",
+  "title": "Colors Undercover",
+  "difficulty": "hard",
+  "editorialSummary": "Every card hides a colour as a run of letters inside an ordinary word; the false trail is that some words look like they belong together, but only the hidden colour decides the group.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "attribute"
+  },
+  "groups": [
+    {
+      "id": "red",
+      "label": "RED Hidden Inside",
+      "items": [
+        "Hundred",
+        "Credit",
+        "Tired",
+        "Predator"
+      ],
+      "revealHint": "RED"
+    },
+    {
+      "id": "tan",
+      "label": "TAN Hidden Inside",
+      "items": [
+        "Constant",
+        "Instant",
+        "Tandem",
+        "Tangible"
+      ],
+      "revealHint": "TAN"
+    },
+    {
+      "id": "rust",
+      "label": "RUST Hidden Inside",
+      "items": [
+        "Crust",
+        "Trust",
+        "Thrust",
+        "Rustle"
+      ],
+      "revealHint": "RUST"
+    },
+    {
+      "id": "sage",
+      "label": "SAGE Hidden Inside",
+      "items": [
+        "Message",
+        "Sausage",
+        "Usage",
+        "Passage"
+      ],
+      "revealHint": "SAGE"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "de-1019",
+  "title": "Gespiegelt und versteckt",
+  "difficulty": "hard",
+  "editorialSummary": "Three groups hide a fixed block (EIN, UCH, ACH) anywhere in the word, the fourth only becomes meaningful read backwards; the many -ein endings are the false trail.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay"
+  },
+  "groups": [
+    {
+      "id": "ein",
+      "label": "EIN steckt drin",
+      "items": [
+        "Bein",
+        "Stein",
+        "Wein",
+        "Klein"
+      ],
+      "revealHint": "EIN"
+    },
+    {
+      "id": "uch",
+      "label": "UCH steckt drin",
+      "items": [
+        "Buch",
+        "Kuchen",
+        "Tuch",
+        "Fuchs"
+      ],
+      "revealHint": "UCH"
+    },
+    {
+      "id": "ach",
+      "label": "ACH steckt drin",
+      "items": [
+        "Dach",
+        "Bach",
+        "Nacht",
+        "Fach"
+      ],
+      "revealHint": "ACH"
+    },
+    {
+      "id": "rueckwaerts",
+      "label": "Umgedreht sinnvoll",
+      "items": [
+        "Ton",
+        "Not",
+        "Tor",
+        "Rot"
+      ],
+      "revealHint": "umgedreht"
+    }
+  ]
+}

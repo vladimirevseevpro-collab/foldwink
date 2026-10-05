@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1104",
+  "title": "Little Milestones",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "baby-firsts",
+      "label": "Baby Firsts",
+      "items": [
+        "First Steps",
+        "First Word",
+        "First Tooth",
+        "First Haircut"
+      ]
+    },
+    {
+      "id": "childhood-stages",
+      "label": "Childhood Stages",
+      "items": [
+        "Newborn",
+        "Toddler",
+        "Preschooler",
+        "School Age"
+      ]
+    },
+    {
+      "id": "kids-clothing",
+      "label": "Kids' Clothing",
+      "items": [
+        "Overalls",
+        "Sneakers",
+        "Pajamas",
+        "Raincoat"
+      ]
+    },
+    {
+      "id": "playdate-snacks",
+      "label": "Playdate Snacks",
+      "items": [
+        "Apple Slices",
+        "Crackers",
+        "Juice Box",
+        "Grapes"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "baby and childhood",
+    "categoryType": "classification"
+  }
+}

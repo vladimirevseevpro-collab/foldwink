@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1103",
+  "title": "Playtime Years",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "playground-rides",
+      "label": "Playground Rides",
+      "items": [
+        "Swing",
+        "Slide",
+        "Seesaw",
+        "Merry-Go-Round"
+      ]
+    },
+    {
+      "id": "kids-games",
+      "label": "Kids' Games",
+      "items": [
+        "Tag",
+        "Hide-and-Seek",
+        "Hopscotch",
+        "Musical Chairs"
+      ]
+    },
+    {
+      "id": "art-supplies-for-kids",
+      "label": "Art Supplies for Kids",
+      "items": [
+        "Crayons",
+        "Finger Paint",
+        "Play Dough",
+        "Glitter Glue"
+      ]
+    },
+    {
+      "id": "toy-box",
+      "label": "Toy Box",
+      "items": [
+        "Building Blocks",
+        "Doll",
+        "Toy Train",
+        "Teddy Bear"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "baby and childhood",
+    "categoryType": "classification"
+  }
+}

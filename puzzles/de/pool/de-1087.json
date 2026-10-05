@@ -1,0 +1,55 @@
+{
+  "id": "de-1087",
+  "title": "Rund ums Haar",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "friseur"
+  },
+  "editorialSummary": "Falsche Fährte: Trockenshampoo klingt nach Styling, zählt aber zur Haarwäsche und Pflege.",
+  "groups": [
+    {
+      "id": "werkzeug",
+      "label": "Werkzeuge beim Friseur",
+      "revealHint": "FRISEUR",
+      "items": [
+        "Schere",
+        "Kamm",
+        "Föhn",
+        "Glätteisen"
+      ]
+    },
+    {
+      "id": "pflege",
+      "label": "Zum Waschen und Pflegen",
+      "revealHint": "PFLEGE",
+      "items": [
+        "Shampoo",
+        "Spülung",
+        "Haarkur",
+        "Trockenshampoo"
+      ]
+    },
+    {
+      "id": "styling",
+      "label": "Zum Stylen und Festigen",
+      "revealHint": "STYLING",
+      "items": [
+        "Haarspray",
+        "Schaumfestiger",
+        "Haargel",
+        "Haarwachs"
+      ]
+    },
+    {
+      "id": "frisuren",
+      "label": "Typische Frisuren",
+      "revealHint": "FRISUR",
+      "items": [
+        "Zopf",
+        "Pony",
+        "Bob",
+        "Dauerwelle"
+      ]
+    }
+  ]
+}

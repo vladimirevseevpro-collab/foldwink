@@ -1,0 +1,55 @@
+{
+  "id": "de-1023",
+  "title": "Sportlicher Wettkampf",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "sport"
+  },
+  "editorialSummary": "Falsche Fährte: Eishockey wirkt wegen des Schlägers wie ein Rückschlagspiel, fällt aber unter die Sportarten mit Tor.",
+  "groups": [
+    {
+      "id": "rueckschlag",
+      "label": "Rückschlagspiele mit Schläger",
+      "revealHint": "SCHLÄGER",
+      "items": [
+        "Tennis",
+        "Federball",
+        "Squash",
+        "Tischtennis"
+      ]
+    },
+    {
+      "id": "tor",
+      "label": "Sportarten mit Tor",
+      "revealHint": "TOR",
+      "items": [
+        "Fußball",
+        "Handball",
+        "Hockey",
+        "Eishockey"
+      ]
+    },
+    {
+      "id": "zweikampf",
+      "label": "Zweikampfsportarten",
+      "revealHint": "ZWEIKAMPF",
+      "items": [
+        "Judo",
+        "Karate",
+        "Boxen",
+        "Fechten"
+      ]
+    },
+    {
+      "id": "wasser",
+      "label": "Sportarten im Wasser",
+      "revealHint": "WASSER",
+      "items": [
+        "Schwimmen",
+        "Rudern",
+        "Segeln",
+        "Wasserspringen"
+      ]
+    }
+  ]
+}

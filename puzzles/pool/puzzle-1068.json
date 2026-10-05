@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1068",
+  "title": "City Blocks",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "civic-buildings",
+      "label": "Civic Buildings",
+      "items": [
+        "Library",
+        "Hospital",
+        "Museum",
+        "Town Hall"
+      ]
+    },
+    {
+      "id": "street-features",
+      "label": "Street Features",
+      "items": [
+        "Sidewalk",
+        "Crosswalk",
+        "Roundabout",
+        "Traffic Light"
+      ]
+    },
+    {
+      "id": "city-transport",
+      "label": "City Transport",
+      "items": [
+        "Bus",
+        "Tram",
+        "Subway",
+        "Taxi"
+      ]
+    },
+    {
+      "id": "construction-materials",
+      "label": "Construction Materials",
+      "items": [
+        "Brick",
+        "Concrete",
+        "Glass",
+        "Timber"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "cities",
+    "categoryType": "classification"
+  }
+}

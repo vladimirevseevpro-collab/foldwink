@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1081",
+  "title": "Countryside Day",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "harvest-tools",
+      "label": "Harvest Tools",
+      "items": [
+        "Scythe",
+        "Pitchfork",
+        "Rake",
+        "Sickle"
+      ]
+    },
+    {
+      "id": "farmyard-sounds",
+      "label": "Farmyard Sounds",
+      "items": [
+        "Moo",
+        "Neigh",
+        "Cluck",
+        "Oink"
+      ]
+    },
+    {
+      "id": "farm-work-tasks",
+      "label": "Farm Work Tasks",
+      "items": [
+        "Milking",
+        "Ploughing",
+        "Harvesting",
+        "Shearing"
+      ]
+    },
+    {
+      "id": "farm-produce",
+      "label": "Farm Produce",
+      "items": [
+        "Eggs",
+        "Milk",
+        "Wool",
+        "Honey"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "countryside",
+    "categoryType": "action"
+  }
+}

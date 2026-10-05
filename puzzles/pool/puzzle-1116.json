@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1116",
+  "title": "Out in Space",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "famous-astronauts",
+      "label": "Famous Astronauts",
+      "items": [
+        "Neil Armstrong",
+        "Yuri Gagarin",
+        "Buzz Aldrin",
+        "Sally Ride"
+      ]
+    },
+    {
+      "id": "famous-moons",
+      "label": "Famous Moons",
+      "items": [
+        "Callisto",
+        "Europa",
+        "Ganymede",
+        "Titan"
+      ]
+    },
+    {
+      "id": "space-missions",
+      "label": "Famous Space Missions",
+      "items": [
+        "Apollo",
+        "Voyager",
+        "Cassini",
+        "Curiosity"
+      ]
+    },
+    {
+      "id": "spacesuit-parts",
+      "label": "Spacesuit Parts",
+      "items": [
+        "Helmet",
+        "Visor",
+        "Glove",
+        "Boot"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "planets and space",
+    "categoryType": "classification"
+  }
+}

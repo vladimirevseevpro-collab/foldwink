@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1111",
+  "title": "Aisle by Aisle",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "produce-section",
+      "label": "Produce Section",
+      "items": [
+        "Lettuce",
+        "Tomatoes",
+        "Carrots",
+        "Apples"
+      ]
+    },
+    {
+      "id": "dairy-aisle",
+      "label": "Chilled Dairy",
+      "items": [
+        "Cream",
+        "Cottage Cheese",
+        "Greek Yogurt",
+        "Cheddar"
+      ]
+    },
+    {
+      "id": "frozen-aisle",
+      "label": "Freezer Cases",
+      "items": [
+        "Frozen Peas",
+        "Ice Cream",
+        "Frozen Pizza",
+        "Fish Fingers"
+      ]
+    },
+    {
+      "id": "bakery-aisle",
+      "label": "In-Store Bakery",
+      "items": [
+        "Bread Rolls",
+        "Croissants",
+        "Baguette",
+        "Doughnuts"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "supermarket sections",
+    "categoryType": "classification"
+  }
+}

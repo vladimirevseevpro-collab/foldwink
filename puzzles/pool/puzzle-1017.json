@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1017",
+  "title": "Natural Wonders",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "famous-mountains",
+      "label": "Famous Mountains",
+      "items": [
+        "Mount Everest",
+        "Mount Kilimanjaro",
+        "Mont Blanc",
+        "Mount Fuji"
+      ]
+    },
+    {
+      "id": "long-rivers",
+      "label": "Long Rivers",
+      "items": [
+        "Nile",
+        "Amazon",
+        "Yangtze",
+        "Danube"
+      ]
+    },
+    {
+      "id": "famous-deserts",
+      "label": "Famous Deserts",
+      "items": [
+        "Sahara",
+        "Gobi",
+        "Mojave",
+        "Atacama"
+      ]
+    },
+    {
+      "id": "famous-waterfalls",
+      "label": "Famous Waterfalls",
+      "items": [
+        "Niagara Falls",
+        "Victoria Falls",
+        "Iguazu Falls",
+        "Angel Falls"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "nature",
+    "categoryType": "place"
+  }
+}

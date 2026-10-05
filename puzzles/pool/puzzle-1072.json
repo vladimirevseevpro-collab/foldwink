@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1072",
+  "title": "Earth Science",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "rock-types",
+      "label": "Rock Types",
+      "items": [
+        "Granite",
+        "Basalt",
+        "Marble",
+        "Sandstone"
+      ]
+    },
+    {
+      "id": "weather-instruments",
+      "label": "Weather Instruments",
+      "items": [
+        "Rain Gauge",
+        "Wind Vane",
+        "Weather Balloon",
+        "Weather Radar"
+      ]
+    },
+    {
+      "id": "kinds-of-clouds",
+      "label": "Kinds of Clouds",
+      "items": [
+        "Altostratus",
+        "Stratocumulus",
+        "Cirrocumulus",
+        "Altocumulus"
+      ]
+    },
+    {
+      "id": "natural-disasters",
+      "label": "Natural Disasters",
+      "items": [
+        "Earthquake",
+        "Volcano",
+        "Tsunami",
+        "Landslide"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "earth",
+    "categoryType": "classification"
+  }
+}

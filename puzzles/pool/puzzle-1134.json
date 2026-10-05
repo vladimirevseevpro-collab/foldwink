@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1134",
+  "title": "Appliance Features",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "appliance-controls",
+      "label": "Appliance Controls",
+      "items": [
+        "Knob",
+        "Dial",
+        "Button",
+        "Switch"
+      ]
+    },
+    {
+      "id": "appliance-cleaning-tasks",
+      "label": "Appliance Cleaning Tasks",
+      "items": [
+        "Wipe",
+        "Scrub",
+        "Descale",
+        "Rinse"
+      ]
+    },
+    {
+      "id": "appliance-sounds",
+      "label": "Appliance Sounds",
+      "items": [
+        "Beep",
+        "Hum",
+        "Whir",
+        "Ding"
+      ]
+    },
+    {
+      "id": "appliance-warning-signs",
+      "label": "Appliance Warning Signs",
+      "items": [
+        "Overheat",
+        "Leak",
+        "Spark",
+        "Smoke"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "kitchen appliances",
+    "categoryType": "attribute"
+  }
+}

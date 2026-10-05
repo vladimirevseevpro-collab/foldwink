@@ -1,0 +1,55 @@
+{
+  "id": "de-1031",
+  "title": "Pflanzen im Garten",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "garten"
+  },
+  "editorialSummary": "Falsche Fährte: Die Tomate wirkt botanisch wie Obst, steht hier aber beim Gemüse für die Ernte.",
+  "groups": [
+    {
+      "id": "blumen",
+      "label": "Blumen im Beet",
+      "revealHint": "BLUME",
+      "items": [
+        "Tulpe",
+        "Rose",
+        "Sonnenblume",
+        "Dahlie"
+      ]
+    },
+    {
+      "id": "kraeuter",
+      "label": "Küchenkräuter im Garten",
+      "revealHint": "KRÄUTER",
+      "items": [
+        "Basilikum",
+        "Rosmarin",
+        "Thymian",
+        "Salbei"
+      ]
+    },
+    {
+      "id": "gemuese",
+      "label": "Gemüse für die Ernte",
+      "revealHint": "GEMÜSE",
+      "items": [
+        "Tomate",
+        "Gurke",
+        "Zucchini",
+        "Karotte"
+      ]
+    },
+    {
+      "id": "obst",
+      "label": "Obstbäume im Garten",
+      "revealHint": "OBST",
+      "items": [
+        "Apfelbaum",
+        "Kirschbaum",
+        "Pflaumenbaum",
+        "Quittenbaum"
+      ]
+    }
+  ]
+}

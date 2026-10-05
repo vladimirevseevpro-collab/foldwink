@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1059",
+  "title": "Backstage pass",
+  "difficulty": "medium",
+  "editorialSummary": "Box reads like a stage object, but the seating label is the only defensible home once the stage equipment label is read.",
+  "meta": {
+    "theme": "film books theatre",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "crew",
+      "label": "Film set crew",
+      "revealHint": "Crew",
+      "items": [
+        "Director",
+        "Producer",
+        "Cameraman",
+        "Editor"
+      ]
+    },
+    {
+      "id": "bookparts",
+      "label": "Parts of a book",
+      "revealHint": "Book",
+      "items": [
+        "Cover",
+        "Spine",
+        "Chapter",
+        "Index"
+      ]
+    },
+    {
+      "id": "seating",
+      "label": "Theatre seating areas",
+      "revealHint": "Seating",
+      "items": [
+        "Stalls",
+        "Balcony",
+        "Circle",
+        "Box"
+      ]
+    },
+    {
+      "id": "stageset",
+      "label": "Stage equipment",
+      "revealHint": "Stage",
+      "items": [
+        "Curtain",
+        "Spotlight",
+        "Backdrop",
+        "Prop"
+      ]
+    }
+  ]
+}

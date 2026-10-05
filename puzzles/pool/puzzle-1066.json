@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1066",
+  "title": "Family Tree",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "immediate-family",
+      "label": "Immediate Family",
+      "items": [
+        "Mother",
+        "Father",
+        "Sister",
+        "Brother"
+      ]
+    },
+    {
+      "id": "extended-family",
+      "label": "Extended Family",
+      "items": [
+        "Aunt",
+        "Uncle",
+        "Cousin",
+        "Nephew"
+      ]
+    },
+    {
+      "id": "in-laws",
+      "label": "In-Laws",
+      "items": [
+        "Mother-in-law",
+        "Father-in-law",
+        "Brother-in-law",
+        "Sister-in-law"
+      ]
+    },
+    {
+      "id": "wedding-roles",
+      "label": "Wedding Roles",
+      "items": [
+        "Bride",
+        "Groom",
+        "Bridesmaid",
+        "Best Man"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "family",
+    "categoryType": "classification"
+  }
+}

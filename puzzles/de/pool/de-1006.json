@@ -1,0 +1,50 @@
+{
+  "id": "de-1006",
+  "title": "Berufe im Büro",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Berufsfelder"
+  },
+  "groups": [
+    {
+      "id": "computer",
+      "label": "Computerberufe",
+      "items": [
+        "Programmierer",
+        "Netzwerktechniker",
+        "Administrator",
+        "Datenanalyst"
+      ]
+    },
+    {
+      "id": "sozial",
+      "label": "Soziale Berufe",
+      "items": [
+        "Erzieher",
+        "Sozialarbeiter",
+        "Altenpfleger",
+        "Jugendbetreuer"
+      ]
+    },
+    {
+      "id": "kreativ",
+      "label": "Kreative Berufe",
+      "items": [
+        "Grafiker",
+        "Fotograf",
+        "Illustrator",
+        "Designer"
+      ]
+    },
+    {
+      "id": "kaufmaennisch",
+      "label": "Kaufmännische Berufe",
+      "items": [
+        "Buchhalter",
+        "Verkäufer",
+        "Sekretär",
+        "Bankkaufmann"
+      ]
+    }
+  ]
+}

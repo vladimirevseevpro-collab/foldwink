@@ -1,0 +1,50 @@
+{
+  "id": "de-1054",
+  "title": "Vorratsregal",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Küche und Kochen"
+  },
+  "groups": [
+    {
+      "id": "getreide_koerner",
+      "label": "Getreide und Körner",
+      "items": [
+        "Reis",
+        "Bulgur",
+        "Graupen",
+        "Hirse"
+      ]
+    },
+    {
+      "id": "eingemachtes_gemuese",
+      "label": "Eingemachtes Gemüse",
+      "items": [
+        "Sauerkraut",
+        "Essiggurken",
+        "Dosentomaten",
+        "eingelegte Paprika"
+      ]
+    },
+    {
+      "id": "nuesse_knabbern",
+      "label": "Nüsse zum Knabbern",
+      "items": [
+        "Erdnüsse",
+        "Pistazien",
+        "Cashewkerne",
+        "Haselnüsse"
+      ]
+    },
+    {
+      "id": "suessungsmittel_backen",
+      "label": "Süßungsmittel zum Backen",
+      "items": [
+        "Puderzucker",
+        "Honig",
+        "Ahornsirup",
+        "Agavendicksaft"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-1077",
+  "title": "Fahrrad, Flugzeug, Schiff",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "fahrzeuge"
+  },
+  "editorialSummary": "Falsche Fährte: das Fahrwerk gehört hier zum Flugzeug, obwohl das Wort auch beim Auto auftaucht.",
+  "groups": [
+    {
+      "id": "fahrradteile",
+      "label": "Teile eines Fahrrads",
+      "revealHint": "FAHRRAD",
+      "items": [
+        "Lenker",
+        "Sattel",
+        "Pedal",
+        "Kette"
+      ]
+    },
+    {
+      "id": "radsicher",
+      "label": "Sicherheitszubehör am Fahrrad",
+      "revealHint": "SICHER",
+      "items": [
+        "Helm",
+        "Rücklicht",
+        "Klingel",
+        "Speichenreflektor"
+      ]
+    },
+    {
+      "id": "flugzeugteile",
+      "label": "Teile eines Flugzeugs",
+      "revealHint": "FLUGZEUG",
+      "items": [
+        "Tragfläche",
+        "Cockpit",
+        "Fahrwerk",
+        "Leitwerk"
+      ]
+    },
+    {
+      "id": "schiffsteile",
+      "label": "Teile eines Schiffs",
+      "revealHint": "SCHIFF",
+      "items": [
+        "Kajüte",
+        "Anker",
+        "Ruder",
+        "Deck"
+      ]
+    }
+  ]
+}

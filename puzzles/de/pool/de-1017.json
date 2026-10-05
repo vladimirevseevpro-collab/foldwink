@@ -1,0 +1,56 @@
+{
+  "id": "de-1017",
+  "title": "Versteckte Wörter II",
+  "difficulty": "hard",
+  "editorialSummary": "Inside each card sits one fixed letter block (EILE, ALL, ORT, RAN); because the blocks can begin, end or sit in the middle, the obvious rhyming endings are the false trail.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay"
+  },
+  "groups": [
+    {
+      "id": "eile",
+      "label": "EILE steckt drin",
+      "items": [
+        "Weile",
+        "Pfeile",
+        "Feile",
+        "Seile"
+      ],
+      "revealHint": "EILE"
+    },
+    {
+      "id": "all",
+      "label": "ALL steckt drin",
+      "items": [
+        "Ball",
+        "Falle",
+        "Halle",
+        "Kralle"
+      ],
+      "revealHint": "ALL"
+    },
+    {
+      "id": "ort",
+      "label": "ORT steckt drin",
+      "items": [
+        "Sport",
+        "Torte",
+        "Wort",
+        "Pforte"
+      ],
+      "revealHint": "ORT"
+    },
+    {
+      "id": "ran",
+      "label": "RAN steckt drin",
+      "items": [
+        "Rand",
+        "Kran",
+        "Brand",
+        "Trank"
+      ],
+      "revealHint": "RAN"
+    }
+  ]
+}

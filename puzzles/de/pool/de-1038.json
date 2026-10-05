@@ -1,0 +1,55 @@
+{
+  "id": "de-1038",
+  "title": "Baustoffe",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "material"
+  },
+  "editorialSummary": "Falsche Fährte: Klinker und Ziegel sehen wie Naturstein aus, sind aber gebrannter Ton; Marmor und Sandstein sind dagegen echte Gesteine.",
+  "groups": [
+    {
+      "id": "ton",
+      "label": "Baustoffe aus gebranntem Ton",
+      "revealHint": "TON",
+      "items": [
+        "Ziegel",
+        "Dachpfanne",
+        "Klinker",
+        "Terrakotta"
+      ]
+    },
+    {
+      "id": "gestein",
+      "label": "Baustoffe aus Gestein",
+      "revealHint": "GESTEIN",
+      "items": [
+        "Marmor",
+        "Granit",
+        "Sandstein",
+        "Schiefer"
+      ]
+    },
+    {
+      "id": "bindemittel",
+      "label": "Bindemittel am Bau",
+      "revealHint": "BINDEMITTEL",
+      "items": [
+        "Zement",
+        "Kalk",
+        "Gips",
+        "Bitumen"
+      ]
+    },
+    {
+      "id": "holz",
+      "label": "Baustoffe aus Holz",
+      "revealHint": "HOLZ",
+      "items": [
+        "Balken",
+        "Brettschichtholz",
+        "Spanplatte",
+        "Furnier"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "de-1111",
+  "title": "Forscher der Urzeit",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Paläontologie"
+  },
+  "groups": [
+    {
+      "id": "fossilien",
+      "label": "Fossilien",
+      "items": [
+        "Ammonit",
+        "Haifischzahn",
+        "Bernsteineinschluss",
+        "Dinosaurierknochen"
+      ]
+    },
+    {
+      "id": "werkzeuge",
+      "label": "Werkzeuge der Paläontologen",
+      "items": [
+        "Hammer",
+        "Meißel",
+        "Pinsel",
+        "Lupe"
+      ]
+    },
+    {
+      "id": "berufe",
+      "label": "Berufe der Urzeitforschung",
+      "items": [
+        "Paläontologe",
+        "Archäologe",
+        "Geologe",
+        "Fossilienjäger"
+      ]
+    },
+    {
+      "id": "pflanzen",
+      "label": "Urzeitliche Pflanzen",
+      "items": [
+        "Farn",
+        "Schachtelhalm",
+        "Bärlapp",
+        "Ginkgo"
+      ]
+    }
+  ]
+}

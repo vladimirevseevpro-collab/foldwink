@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1023",
+  "title": "Room by Room",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "kitchen-drawer-items",
+      "label": "Kitchen Drawer Items",
+      "items": [
+        "Bottle Opener",
+        "Corkscrew",
+        "Whisk",
+        "Measuring Spoons"
+      ]
+    },
+    {
+      "id": "bathroom-basics",
+      "label": "Bathroom Basics",
+      "items": [
+        "Toothpaste",
+        "Towel",
+        "Mirror",
+        "Bath Mat"
+      ]
+    },
+    {
+      "id": "garage-contents",
+      "label": "Garage Contents",
+      "items": [
+        "Lawnmower",
+        "Toolbox",
+        "Garden Hose",
+        "Paint Cans"
+      ]
+    },
+    {
+      "id": "bedroom-items",
+      "label": "Bedroom Items",
+      "items": [
+        "Pillow",
+        "Duvet",
+        "Alarm Clock",
+        "Bedside Lamp"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "home",
+    "categoryType": "place"
+  }
+}

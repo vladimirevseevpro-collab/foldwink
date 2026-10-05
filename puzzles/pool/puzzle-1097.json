@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1097",
+  "title": "Creepy crawlies",
+  "difficulty": "medium",
+  "editorialSummary": "The firefly glows and flits like a butterfly, but the Beetles label names hard-winged insects, leaving the scaly-winged four in the butterfly group.",
+  "meta": {
+    "theme": "insects",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "beetles",
+      "label": "Beetles",
+      "revealHint": "Shell",
+      "items": [
+        "Ladybug",
+        "Firefly",
+        "Weevil",
+        "Dung beetle"
+      ]
+    },
+    {
+      "id": "butterflies",
+      "label": "Butterfly species",
+      "revealHint": "Wings",
+      "items": [
+        "Monarch",
+        "Swallowtail",
+        "Red Admiral",
+        "Painted Lady"
+      ]
+    },
+    {
+      "id": "social",
+      "label": "Colony insects",
+      "revealHint": "Nest",
+      "items": [
+        "Ant",
+        "Bee",
+        "Termite",
+        "Wasp"
+      ]
+    },
+    {
+      "id": "jumping",
+      "label": "Jumping insects",
+      "revealHint": "Hop",
+      "items": [
+        "Grasshopper",
+        "Cricket",
+        "Flea",
+        "Katydid"
+      ]
+    }
+  ]
+}

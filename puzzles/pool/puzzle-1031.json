@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1031",
+  "title": "Body Parts Within",
+  "difficulty": "hard",
+  "editorialSummary": "Each card conceals a body part as a run of letters, and the trap is that many of the words hide the same run without looking related at all.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "attribute"
+  },
+  "groups": [
+    {
+      "id": "arm",
+      "label": "ARM Hidden Inside",
+      "items": [
+        "Harm",
+        "Charm",
+        "Alarm",
+        "Farmer"
+      ],
+      "revealHint": "ARM"
+    },
+    {
+      "id": "ear",
+      "label": "EAR Hidden Inside",
+      "items": [
+        "Heart",
+        "Search",
+        "Pearl",
+        "Learn"
+      ],
+      "revealHint": "EAR"
+    },
+    {
+      "id": "hip",
+      "label": "HIP Hidden Inside",
+      "items": [
+        "Ship",
+        "Whip",
+        "Chip",
+        "Hipster"
+      ],
+      "revealHint": "HIP"
+    },
+    {
+      "id": "leg",
+      "label": "LEG Hidden Inside",
+      "items": [
+        "Legend",
+        "Legion",
+        "Elegant",
+        "College"
+      ],
+      "revealHint": "LEG"
+    }
+  ]
+}

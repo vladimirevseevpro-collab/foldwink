@@ -1,0 +1,55 @@
+{
+  "id": "de-1083",
+  "title": "Werkzeug im Garten",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "garten"
+  },
+  "editorialSummary": "Falsche Fährte: Die Pflanzschaufel sieht nach einem Grabwerkzeug aus, dient hier aber dem Setzen von Pflanzen.",
+  "groups": [
+    {
+      "id": "boden",
+      "label": "Werkzeuge zum Lockern des Bodens",
+      "revealHint": "BODEN",
+      "items": [
+        "Spaten",
+        "Grabegabel",
+        "Hacke",
+        "Sauzahn"
+      ]
+    },
+    {
+      "id": "schneiden",
+      "label": "Werkzeuge zum Schneiden von Pflanzen",
+      "revealHint": "SCHNEIDEN",
+      "items": [
+        "Gartenschere",
+        "Astschere",
+        "Baumsäge",
+        "Sichel"
+      ]
+    },
+    {
+      "id": "giessen",
+      "label": "Werkzeuge zum Gießen",
+      "revealHint": "GIESSEN",
+      "items": [
+        "Gießkanne",
+        "Gartenschlauch",
+        "Sprühflasche",
+        "Bewässerungskanone"
+      ]
+    },
+    {
+      "id": "saat",
+      "label": "Für Saat und Pflanzung",
+      "revealHint": "SAAT",
+      "items": [
+        "Saatgut",
+        "Pflanzschaufel",
+        "Samenstreuer",
+        "Pflanzholz"
+      ]
+    }
+  ]
+}

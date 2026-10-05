@@ -1,0 +1,50 @@
+{
+  "id": "de-1065",
+  "title": "Putztag",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Putzen"
+  },
+  "groups": [
+    {
+      "id": "bodenreinigung",
+      "label": "Bodenreinigung",
+      "items": [
+        "Besen",
+        "Wischmopp",
+        "Eimer",
+        "Kehrblech"
+      ]
+    },
+    {
+      "id": "fensterputzen",
+      "label": "Fensterputzen",
+      "items": [
+        "Glasreiniger",
+        "Abzieher",
+        "Fensterleder",
+        "Zeitungspapier"
+      ]
+    },
+    {
+      "id": "reinigungsmittel",
+      "label": "Küchenreiniger",
+      "items": [
+        "Spülmittel",
+        "Allzweckreiniger",
+        "Essigreiniger",
+        "Scheuermilch"
+      ]
+    },
+    {
+      "id": "waeschepflege",
+      "label": "Wäschepflege",
+      "items": [
+        "Waschmittel",
+        "Weichspüler",
+        "Wäscheklammer",
+        "Wäschekorb"
+      ]
+    }
+  ]
+}

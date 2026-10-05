@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1037",
+  "title": "Stove and shelf",
+  "difficulty": "medium",
+  "editorialSummary": "Kitchen equipment where Cake server first reads as baking gear, but the baking label covers only dishes that go in the oven, so the server stays among the table utensils.",
+  "meta": {
+    "theme": "kitchen equipment",
+    "categoryType": "function"
+  },
+  "groups": [
+    {
+      "id": "electric",
+      "label": "Countertop electrics",
+      "revealHint": "Plugs in",
+      "items": [
+        "Toaster",
+        "Blender",
+        "Coffee maker",
+        "Rice cooker"
+      ]
+    },
+    {
+      "id": "pans",
+      "label": "Stovetop pans",
+      "revealHint": "On the hob",
+      "items": [
+        "Frying pan",
+        "Saucepan",
+        "Wok",
+        "Crepe pan"
+      ]
+    },
+    {
+      "id": "bake",
+      "label": "Baking dishes",
+      "revealHint": "In the oven",
+      "items": [
+        "Casserole dish",
+        "Baking sheet",
+        "Muffin tin",
+        "Pie plate"
+      ]
+    },
+    {
+      "id": "serve",
+      "label": "Serving utensils",
+      "revealHint": "At the table",
+      "items": [
+        "Ladle",
+        "Salad servers",
+        "Slotted spoon",
+        "Cake server"
+      ]
+    }
+  ]
+}

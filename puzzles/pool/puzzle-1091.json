@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1091",
+  "title": "Garage Time",
+  "difficulty": "medium",
+  "editorialSummary": "Wheel alignment sounds like a tyre term, but the service task label is its only defensible group once the four garage labels are read.",
+  "meta": {
+    "theme": "car maintenance",
+    "categoryType": "function"
+  },
+  "groups": [
+    {
+      "id": "fluids",
+      "label": "Car fluids",
+      "revealHint": "Fluids",
+      "items": [
+        "Engine oil",
+        "Coolant",
+        "Brake fluid",
+        "Wiper fluid"
+      ]
+    },
+    {
+      "id": "tyres",
+      "label": "Tyre terms",
+      "revealHint": "Tyres",
+      "items": [
+        "Tread",
+        "Sidewall",
+        "Valve",
+        "Puncture"
+      ]
+    },
+    {
+      "id": "cleaning",
+      "label": "Car wash items",
+      "revealHint": "Wash",
+      "items": [
+        "Sponge",
+        "Bucket",
+        "Wax",
+        "Hose"
+      ]
+    },
+    {
+      "id": "service",
+      "label": "Service tasks",
+      "revealHint": "Service",
+      "items": [
+        "Oil change",
+        "Tyre rotation",
+        "Brake check",
+        "Wheel alignment"
+      ]
+    }
+  ]
+}

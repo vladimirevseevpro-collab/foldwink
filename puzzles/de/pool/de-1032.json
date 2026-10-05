@@ -1,0 +1,55 @@
+{
+  "id": "de-1032",
+  "title": "Ausstattung im Klassenzimmer",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "schule"
+  },
+  "editorialSummary": "Falsche Fährte: Die Kreide wirkt wie Zubehör zur Tafel, gehört aber zu den Schreibgeräten.",
+  "groups": [
+    {
+      "id": "schreiben",
+      "label": "Schreibgeräte im Klassenzimmer",
+      "revealHint": "SCHREIBEN",
+      "items": [
+        "Füller",
+        "Bleistift",
+        "Kugelschreiber",
+        "Kreide"
+      ]
+    },
+    {
+      "id": "papier",
+      "label": "Papierwaren für die Schule",
+      "revealHint": "PAPIER",
+      "items": [
+        "Heft",
+        "Block",
+        "Mappe",
+        "Karopapier"
+      ]
+    },
+    {
+      "id": "einrichtung",
+      "label": "Einrichtung im Klassenzimmer",
+      "revealHint": "RAUM",
+      "items": [
+        "Schulbank",
+        "Pult",
+        "Regal",
+        "Tafel"
+      ]
+    },
+    {
+      "id": "faecher",
+      "label": "Schulfächer im Stundenplan",
+      "revealHint": "FACH",
+      "items": [
+        "Mathe",
+        "Deutsch",
+        "Biologie",
+        "Erdkunde"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-1026",
+  "title": "Leben im Wald",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "waldtiere"
+  },
+  "editorialSummary": "Falsche Fährte: Der Hirschkäfer trägt den Hirsch im Namen, ist aber ein Insekt und kein Säugetier.",
+  "groups": [
+    {
+      "id": "saeuger",
+      "label": "Säugetiere im Wald",
+      "revealHint": "SÄUGER",
+      "items": [
+        "Reh",
+        "Wildschwein",
+        "Dachs",
+        "Hirsch"
+      ]
+    },
+    {
+      "id": "voegel",
+      "label": "Vogelarten im Wald",
+      "revealHint": "VÖGEL",
+      "items": [
+        "Specht",
+        "Eichelhäher",
+        "Waldkauz",
+        "Buchfink"
+      ]
+    },
+    {
+      "id": "insekten",
+      "label": "Insekten im Wald",
+      "revealHint": "INSEKTEN",
+      "items": [
+        "Ameise",
+        "Borkenkäfer",
+        "Hirschkäfer",
+        "Waldmistkäfer"
+      ]
+    },
+    {
+      "id": "lurche",
+      "label": "Kriechtiere und Lurche im Wald",
+      "revealHint": "LURCHE",
+      "items": [
+        "Ringelnatter",
+        "Blindschleiche",
+        "Waldeidechse",
+        "Feuersalamander"
+      ]
+    }
+  ]
+}

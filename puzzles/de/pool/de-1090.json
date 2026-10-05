@@ -1,0 +1,50 @@
+{
+  "id": "de-1090",
+  "title": "Kinderalltag",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Baby und Kindheit"
+  },
+  "groups": [
+    {
+      "id": "spielplatz",
+      "label": "Auf dem Spielplatz",
+      "items": [
+        "Rutsche",
+        "Schaukel",
+        "Wippe",
+        "Sandkasten"
+      ]
+    },
+    {
+      "id": "sandkasten",
+      "label": "Sandkastenspielzeug",
+      "items": [
+        "Eimer",
+        "Schaufel",
+        "Förmchen",
+        "Sieb"
+      ]
+    },
+    {
+      "id": "fahrzeuge",
+      "label": "Kinderfahrzeuge",
+      "items": [
+        "Dreirad",
+        "Laufrad",
+        "Roller",
+        "Tretauto"
+      ]
+    },
+    {
+      "id": "malen",
+      "label": "Malsachen für Kinder",
+      "items": [
+        "Buntstifte",
+        "Wachsmalstifte",
+        "Filzstifte",
+        "Malkasten"
+      ]
+    }
+  ]
+}

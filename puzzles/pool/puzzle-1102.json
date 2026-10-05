@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1102",
+  "title": "New Arrival",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "nursery-furniture",
+      "label": "Nursery Furniture",
+      "items": [
+        "Crib",
+        "Bassinet",
+        "Changing Table",
+        "Rocking Chair"
+      ]
+    },
+    {
+      "id": "baby-feeding",
+      "label": "Baby Feeding",
+      "items": [
+        "Bottle",
+        "Bib",
+        "Sippy Cup",
+        "Burp Cloth"
+      ]
+    },
+    {
+      "id": "out-and-about-baby",
+      "label": "Out and About Baby",
+      "items": [
+        "Stroller",
+        "Car Seat",
+        "Diaper Bag",
+        "Baby Carrier"
+      ]
+    },
+    {
+      "id": "baby-care",
+      "label": "Baby Care",
+      "items": [
+        "Diaper",
+        "Pacifier",
+        "Onesie",
+        "Baby Wipes"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "baby and childhood",
+    "categoryType": "classification"
+  }
+}

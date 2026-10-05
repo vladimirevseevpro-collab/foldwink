@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1080",
+  "title": "Farmyard Morning",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "farmyard-animals",
+      "label": "Farmyard Animals",
+      "items": [
+        "Cow",
+        "Pig",
+        "Chicken",
+        "Sheep"
+      ]
+    },
+    {
+      "id": "field-crops",
+      "label": "Field Crops",
+      "items": [
+        "Wheat",
+        "Barley",
+        "Corn",
+        "Oats"
+      ]
+    },
+    {
+      "id": "farm-machines",
+      "label": "Farm Machines",
+      "items": [
+        "Tractor",
+        "Plough",
+        "Harvester",
+        "Seeder"
+      ]
+    },
+    {
+      "id": "farm-structures",
+      "label": "Farm Structures",
+      "items": [
+        "Barn",
+        "Silo",
+        "Stable",
+        "Henhouse"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "farm",
+    "categoryType": "classification"
+  }
+}

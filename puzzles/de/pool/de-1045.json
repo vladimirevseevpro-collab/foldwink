@@ -1,0 +1,55 @@
+{
+  "id": "de-1045",
+  "title": "Berufe und Orte",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "berufe"
+  },
+  "editorialSummary": "Falsche Fährte: Der Zimmerer klingt nach einem Raum im Haus, ist aber ein Bauberuf.",
+  "groups": [
+    {
+      "id": "krankenhaus",
+      "label": "Berufe im Krankenhaus",
+      "revealHint": "KLINIK",
+      "items": [
+        "Krankenpfleger",
+        "Chirurg",
+        "Anästhesist",
+        "Hebamme"
+      ]
+    },
+    {
+      "id": "bau",
+      "label": "Berufe auf dem Bau",
+      "revealHint": "BAUSTELLE",
+      "items": [
+        "Maurer",
+        "Zimmerer",
+        "Dachdecker",
+        "Gerüstbauer"
+      ]
+    },
+    {
+      "id": "kueche",
+      "label": "Berufe in der Küche",
+      "revealHint": "KÜCHE",
+      "items": [
+        "Koch",
+        "Bäcker",
+        "Konditor",
+        "Küchenhilfe"
+      ]
+    },
+    {
+      "id": "buero",
+      "label": "Berufe im Büro",
+      "revealHint": "BÜRO",
+      "items": [
+        "Sekretär",
+        "Buchhalter",
+        "Personalreferent",
+        "Empfangsmitarbeiter"
+      ]
+    }
+  ]
+}

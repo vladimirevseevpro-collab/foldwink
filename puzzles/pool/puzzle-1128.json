@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1128",
+  "title": "Creamery Counter",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "unaged-cheeses",
+      "label": "Unaged Cheeses",
+      "items": [
+        "Mozzarella",
+        "Ricotta",
+        "Cottage Cheese",
+        "Mascarpone"
+      ]
+    },
+    {
+      "id": "matured-cheeses",
+      "label": "Matured Cheeses",
+      "items": [
+        "Cheddar",
+        "Parmesan",
+        "Gouda",
+        "Blue Cheese"
+      ]
+    },
+    {
+      "id": "milk-types",
+      "label": "Milk Types",
+      "items": [
+        "Whole Milk",
+        "Skim Milk",
+        "Oat Milk",
+        "Soy Milk"
+      ]
+    },
+    {
+      "id": "yogurt-styles",
+      "label": "Yogurt Styles",
+      "items": [
+        "Greek Yogurt",
+        "Skyr",
+        "Drinking Yogurt",
+        "Frozen Yogurt"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "dairy and eggs",
+    "categoryType": "classification"
+  }
+}

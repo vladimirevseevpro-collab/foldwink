@@ -1,0 +1,55 @@
+{
+  "id": "de-1040",
+  "title": "Auf der Bühne",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "theater"
+  },
+  "editorialSummary": "Falsche Fährte: Die Garderobe ist kein Kleidungsstück, sondern ein Raum im Theater; die Pause steht auf dem Programmzettel und ist kein Akt.",
+  "groups": [
+    {
+      "id": "beruf",
+      "label": "Berufe am Theater",
+      "revealHint": "THEATER",
+      "items": [
+        "Regisseur",
+        "Dramaturg",
+        "Bühnenbildner",
+        "Inspizient"
+      ]
+    },
+    {
+      "id": "haus",
+      "label": "Teile eines Theaterhauses",
+      "revealHint": "HAUS",
+      "items": [
+        "Bühne",
+        "Zuschauerraum",
+        "Foyer",
+        "Garderobe"
+      ]
+    },
+    {
+      "id": "formen",
+      "label": "Theaterformen",
+      "revealHint": "FORMEN",
+      "items": [
+        "Tragödie",
+        "Komödie",
+        "Musical",
+        "Operette"
+      ]
+    },
+    {
+      "id": "programm",
+      "label": "Was auf dem Programmzettel steht",
+      "revealHint": "PROGRAMM",
+      "items": [
+        "Besetzung",
+        "Akt",
+        "Spielzeit",
+        "Pause"
+      ]
+    }
+  ]
+}

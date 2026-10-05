@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1043",
+  "title": "Star chart",
+  "difficulty": "medium",
+  "editorialSummary": "Night-sky board where Venus shines first as a bright star, but the star labels name actual stars and the planet label lists the wandering lights.",
+  "meta": {
+    "theme": "sky and space",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "planets",
+      "label": "Planets visible to the eye",
+      "revealHint": "Wanderers",
+      "items": [
+        "Venus",
+        "Mars",
+        "Jupiter",
+        "Saturn"
+      ]
+    },
+    {
+      "id": "stars",
+      "label": "Named stars",
+      "revealHint": "Twinkle",
+      "items": [
+        "Sirius",
+        "Vega",
+        "Rigel",
+        "Arcturus"
+      ]
+    },
+    {
+      "id": "patterns",
+      "label": "Star patterns",
+      "revealHint": "Shapes",
+      "items": [
+        "Orion",
+        "Leo",
+        "Taurus",
+        "Lyra"
+      ]
+    },
+    {
+      "id": "moon",
+      "label": "Lunar phases",
+      "revealHint": "Moon",
+      "items": [
+        "New moon",
+        "Crescent",
+        "Half moon",
+        "Gibbous moon"
+      ]
+    }
+  ]
+}

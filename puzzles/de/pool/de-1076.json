@@ -1,0 +1,55 @@
+{
+  "id": "de-1076",
+  "title": "Blick durchs Mikroskop",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "wissenschaft"
+  },
+  "editorialSummary": "Falsche Fährte: Pilze galten lange als Pflanzen, bilden aber ein eigenes Reich der Lebewesen.",
+  "groups": [
+    {
+      "id": "zellteile",
+      "label": "Teile einer Pflanzenzelle",
+      "revealHint": "ZELLE",
+      "items": [
+        "Zellkern",
+        "Chloroplast",
+        "Vakuole",
+        "Zellwand"
+      ]
+    },
+    {
+      "id": "blattvorgaenge",
+      "label": "Vorgänge im grünen Blatt",
+      "revealHint": "BLATT",
+      "items": [
+        "Fotosynthese",
+        "Zellatmung",
+        "Wasserverdunstung",
+        "Stofftransport"
+      ]
+    },
+    {
+      "id": "biogeraete",
+      "label": "Werkzeuge der Biologen",
+      "revealHint": "GERÄTE",
+      "items": [
+        "Mikroskop",
+        "Lupe",
+        "Petrischale",
+        "Präpariernadel"
+      ]
+    },
+    {
+      "id": "reiche",
+      "label": "Reiche der Lebewesen",
+      "revealHint": "REICHE",
+      "items": [
+        "Tiere",
+        "Pflanzen",
+        "Pilze",
+        "Bakterien"
+      ]
+    }
+  ]
+}

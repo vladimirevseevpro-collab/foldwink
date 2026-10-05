@@ -1,0 +1,55 @@
+{
+  "id": "de-1043",
+  "title": "In der Werkzeugkiste",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "werkzeug"
+  },
+  "editorialSummary": "Falsche Fährte: Die Feile sieht aus wie ein Schneidwerkzeug, gehört aber zum Schleifen, nicht zum Sägen.",
+  "groups": [
+    {
+      "id": "schrauben",
+      "label": "Zum Anziehen von Schrauben",
+      "revealHint": "SCHRAUBEN",
+      "items": [
+        "Schraubenschlüssel",
+        "Steckschlüssel",
+        "Inbusschlüssel",
+        "Schraubendreher"
+      ]
+    },
+    {
+      "id": "messen",
+      "label": "Zum Messen und Anzeichnen",
+      "revealHint": "MESSEN",
+      "items": [
+        "Maßband",
+        "Zollstock",
+        "Anschlagwinkel",
+        "Wasserwaage"
+      ]
+    },
+    {
+      "id": "saegen",
+      "label": "Zum Sägen",
+      "revealHint": "SÄGEN",
+      "items": [
+        "Fuchsschwanz",
+        "Bügelsäge",
+        "Stichsäge",
+        "Japansäge"
+      ]
+    },
+    {
+      "id": "schleifen",
+      "label": "Zum Schleifen",
+      "revealHint": "SCHLEIFEN",
+      "items": [
+        "Schleifpapier",
+        "Schleifklotz",
+        "Schleifschwamm",
+        "Feile"
+      ]
+    }
+  ]
+}

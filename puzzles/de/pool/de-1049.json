@@ -1,0 +1,55 @@
+{
+  "id": "de-1049",
+  "title": "Landschaften in Deutschland",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "geografie"
+  },
+  "editorialSummary": "Falsche Fährte: Das Erzgebirge ist auch eine bekannte Urlaubsregion, bleibt aber ein Mittelgebirge.",
+  "groups": [
+    {
+      "id": "mittelgebirge",
+      "label": "Deutsche Mittelgebirge",
+      "revealHint": "GEBIRGE",
+      "items": [
+        "Harz",
+        "Schwarzwald",
+        "Erzgebirge",
+        "Eifel"
+      ]
+    },
+    {
+      "id": "fluesse",
+      "label": "Deutsche Flüsse",
+      "revealHint": "FLÜSSE",
+      "items": [
+        "Rhein",
+        "Elbe",
+        "Donau",
+        "Main"
+      ]
+    },
+    {
+      "id": "seen",
+      "label": "Deutsche Seen",
+      "revealHint": "SEEN",
+      "items": [
+        "Müritz",
+        "Chiemsee",
+        "Starnberger See",
+        "Ammersee"
+      ]
+    },
+    {
+      "id": "inseln",
+      "label": "Deutsche Inseln",
+      "revealHint": "INSELN",
+      "items": [
+        "Rügen",
+        "Sylt",
+        "Norderney",
+        "Fehmarn"
+      ]
+    }
+  ]
+}

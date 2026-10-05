@@ -1,0 +1,55 @@
+{
+  "id": "de-1075",
+  "title": "Eine Reise durchs Sonnensystem",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "wissenschaft"
+  },
+  "editorialSummary": "Falsche Fährte: Europa ist hier kein Kontinent, sondern ein Mond des Jupiter.",
+  "groups": [
+    {
+      "id": "wandelsterne",
+      "label": "Wandelsterne am Nachthimmel",
+      "revealHint": "PLANETEN",
+      "items": [
+        "Merkur",
+        "Venus",
+        "Mars",
+        "Jupiter"
+      ]
+    },
+    {
+      "id": "monde",
+      "label": "Bekannte Begleiter von Planeten",
+      "revealHint": "MONDE",
+      "items": [
+        "Titan",
+        "Europa",
+        "Ganymed",
+        "Io"
+      ]
+    },
+    {
+      "id": "geraete",
+      "label": "Geräte der Astronomen",
+      "revealHint": "GERÄTE",
+      "items": [
+        "Teleskop",
+        "Fernglas",
+        "Spektroskop",
+        "Radioantenne"
+      ]
+    },
+    {
+      "id": "himmel",
+      "label": "Erscheinungen am Weltraumhimmel",
+      "revealHint": "HIMMEL",
+      "items": [
+        "Komet",
+        "Sternschnuppe",
+        "Nebel",
+        "Galaxie"
+      ]
+    }
+  ]
+}

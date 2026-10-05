@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1135",
+  "title": "Iced Refreshments",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "fizzy-drinks",
+      "label": "Fizzy Drinks",
+      "items": [
+        "Cola",
+        "Lemonade",
+        "Ginger Ale",
+        "Sparkling Water"
+      ]
+    },
+    {
+      "id": "fresh-juices",
+      "label": "Fresh Juices",
+      "items": [
+        "Orange Juice",
+        "Apple Juice",
+        "Pineapple Juice",
+        "Grape Juice"
+      ]
+    },
+    {
+      "id": "iced-coffee-drinks",
+      "label": "Iced Coffee Drinks",
+      "items": [
+        "Iced Latte",
+        "Cold Brew",
+        "Iced Mocha",
+        "Iced Americano"
+      ]
+    },
+    {
+      "id": "blended-smoothies",
+      "label": "Blended Smoothies",
+      "items": [
+        "Berry Smoothie",
+        "Mango Smoothie",
+        "Green Smoothie",
+        "Banana Smoothie"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "drinks",
+    "categoryType": "classification"
+  }
+}

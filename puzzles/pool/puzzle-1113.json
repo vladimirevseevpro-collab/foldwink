@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1113",
+  "title": "Tool Wall",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "decorating-gear",
+      "label": "Decorating Gear",
+      "items": [
+        "Paintbrush",
+        "Roller",
+        "Paint Tray",
+        "Drop Cloth"
+      ]
+    },
+    {
+      "id": "diy-protection",
+      "label": "DIY Protection",
+      "items": [
+        "Goggles",
+        "Work Gloves",
+        "Dust Mask",
+        "Ear Defenders"
+      ]
+    },
+    {
+      "id": "garden-tool-rack",
+      "label": "Garden Tool Rack",
+      "items": [
+        "Spade",
+        "Rake",
+        "Hoe",
+        "Trowel"
+      ]
+    },
+    {
+      "id": "workshop-storage",
+      "label": "Workshop Storage",
+      "items": [
+        "Pegboard",
+        "Tool Chest",
+        "Shelf Bracket",
+        "Storage Bin"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "garage and workshop",
+    "categoryType": "classification"
+  }
+}

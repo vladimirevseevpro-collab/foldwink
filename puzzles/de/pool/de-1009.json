@@ -1,0 +1,50 @@
+{
+  "id": "de-1009",
+  "title": "Ein neues Zimmer",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Wohnung einrichten"
+  },
+  "groups": [
+    {
+      "id": "aufhaengen",
+      "label": "Zum Aufhängen an der Wand",
+      "items": [
+        "Bilderrahmen",
+        "Wanduhr",
+        "Wandregal",
+        "Garderobenhaken"
+      ]
+    },
+    {
+      "id": "auslegen",
+      "label": "Zum Auslegen",
+      "items": [
+        "Teppich",
+        "Läufer",
+        "Fußmatte",
+        "Bettvorleger"
+      ]
+    },
+    {
+      "id": "beleuchten",
+      "label": "Lampen im Haus",
+      "items": [
+        "Deckenlampe",
+        "Stehlampe",
+        "Tischlampe",
+        "Nachttischlampe"
+      ]
+    },
+    {
+      "id": "umzug",
+      "label": "Beim Umzug brauchen",
+      "items": [
+        "Karton",
+        "Klebeband",
+        "Sackkarre",
+        "Zeitungspapier"
+      ]
+    }
+  ]
+}

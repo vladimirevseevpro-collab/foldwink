@@ -1,0 +1,50 @@
+{
+  "id": "de-1110",
+  "title": "Leben in der Urzeit",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Dinosaurier"
+  },
+  "groups": [
+    {
+      "id": "dinosaurier",
+      "label": "Bekannte Dinosaurier",
+      "items": [
+        "Tyrannosaurus",
+        "Triceratops",
+        "Stegosaurus",
+        "Brachiosaurus"
+      ]
+    },
+    {
+      "id": "meeresriesen",
+      "label": "Urzeitliche Meeresriesen",
+      "items": [
+        "Plesiosaurus",
+        "Ichthyosaurus",
+        "Mosasaurus",
+        "Megalodon"
+      ]
+    },
+    {
+      "id": "flugsaurier",
+      "label": "Flugsaurier und Urvögel",
+      "items": [
+        "Pteranodon",
+        "Rhamphorhynchus",
+        "Quetzalcoatlus",
+        "Archaeopteryx"
+      ]
+    },
+    {
+      "id": "eiszeit",
+      "label": "Eiszeitliche Tiere",
+      "items": [
+        "Mammut",
+        "Wollnashorn",
+        "Säbelzahntiger",
+        "Höhlenbär"
+      ]
+    }
+  ]
+}

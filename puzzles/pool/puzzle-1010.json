@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1010",
+  "title": "Fur and Feathers",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "ape-family",
+      "label": "Ape Family",
+      "items": [
+        "Gorilla",
+        "Chimpanzee",
+        "Orangutan",
+        "Gibbon"
+      ]
+    },
+    {
+      "id": "hoofed-mammals",
+      "label": "Horned and Hoofed Animals",
+      "items": [
+        "Deer",
+        "Antelope",
+        "Buffalo",
+        "Gazelle"
+      ]
+    },
+    {
+      "id": "nighttime-animals",
+      "label": "Nighttime Animals",
+      "items": [
+        "Owl",
+        "Bat",
+        "Raccoon",
+        "Hedgehog"
+      ]
+    },
+    {
+      "id": "animal-homes",
+      "label": "Wild Animal Homes",
+      "items": [
+        "Burrow",
+        "Den",
+        "Nest",
+        "Hive"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "animals",
+    "categoryType": "place"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-1046",
+  "title": "Möbel nach Funktion",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "moebel"
+  },
+  "editorialSummary": "Falsche Fährte: Der Nachttisch hat oft eine Schublade und wirkt wie ein Stauraum, dient aber dem Ablegen.",
+  "groups": [
+    {
+      "id": "sitzen",
+      "label": "Zum Sitzen",
+      "revealHint": "SITZEN",
+      "items": [
+        "Sofa",
+        "Sessel",
+        "Hocker",
+        "Bank"
+      ]
+    },
+    {
+      "id": "schlafen",
+      "label": "Zum Schlafen",
+      "revealHint": "SCHLAFEN",
+      "items": [
+        "Bett",
+        "Matratze",
+        "Lattenrost",
+        "Bettgestell"
+      ]
+    },
+    {
+      "id": "verstauen",
+      "label": "Zum Verstauen",
+      "revealHint": "STAURAUM",
+      "items": [
+        "Kleiderschrank",
+        "Kommode",
+        "Sideboard",
+        "Regal"
+      ]
+    },
+    {
+      "id": "ablegen",
+      "label": "Zum Ablegen",
+      "revealHint": "ABLAGE",
+      "items": [
+        "Nachttisch",
+        "Couchtisch",
+        "Beistelltisch",
+        "Konsolentisch"
+      ]
+    }
+  ]
+}

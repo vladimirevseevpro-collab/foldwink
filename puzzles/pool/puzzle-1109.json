@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1109",
+  "title": "Herb Garden",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "aromatic-seeds",
+      "label": "Aromatic Seeds",
+      "items": [
+        "Coriander Seed",
+        "Fennel Seed",
+        "Mustard Seed",
+        "Celery Seed"
+      ]
+    },
+    {
+      "id": "herbal-teas",
+      "label": "Infusions",
+      "items": [
+        "Chamomile",
+        "Peppermint",
+        "Ginger",
+        "Hibiscus"
+      ]
+    },
+    {
+      "id": "cooking-herbs",
+      "label": "Cooking Herbs",
+      "items": [
+        "Bay Leaf",
+        "Sage",
+        "Tarragon",
+        "Marjoram"
+      ]
+    },
+    {
+      "id": "spice-blends",
+      "label": "Spice Blends",
+      "items": [
+        "Garam Masala",
+        "Curry Powder",
+        "Five-Spice",
+        "Herbes de Provence"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "spices and herbs",
+    "categoryType": "classification"
+  }
+}

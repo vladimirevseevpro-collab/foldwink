@@ -1,0 +1,55 @@
+{
+  "id": "de-1052",
+  "title": "Fahrrad pflegen",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "fahrrad"
+  },
+  "editorialSummary": "Falsche Fährte: Der Dynamo sitzt am Rad und treibt die Kette nicht an, sondern erzeugt Strom fürs Licht.",
+  "groups": [
+    {
+      "id": "reifen",
+      "label": "Am Fahrradreifen",
+      "revealHint": "REIFEN",
+      "items": [
+        "Reifenheber",
+        "Flickzeug",
+        "Ventil",
+        "Pumpe"
+      ]
+    },
+    {
+      "id": "kette",
+      "label": "An der Fahrradkette",
+      "revealHint": "KETTE",
+      "items": [
+        "Kettenöl",
+        "Kettenreiniger",
+        "Kettennieter",
+        "Kettenschloss"
+      ]
+    },
+    {
+      "id": "bremsen",
+      "label": "An den Fahrradbremsen",
+      "revealHint": "BREMSE",
+      "items": [
+        "Bremsbelag",
+        "Bremszug",
+        "Bremshebel",
+        "Bremsscheibe"
+      ]
+    },
+    {
+      "id": "licht",
+      "label": "Am Fahrradlicht",
+      "revealHint": "LICHT",
+      "items": [
+        "Frontscheinwerfer",
+        "Rücklicht",
+        "Dynamo",
+        "Reflektor"
+      ]
+    }
+  ]
+}

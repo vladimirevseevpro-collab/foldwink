@@ -1,0 +1,56 @@
+{
+  "id": "de-1015",
+  "title": "Klang und Fundstücke",
+  "difficulty": "hard",
+  "editorialSummary": "Four words are Teekesselchen with an animal and a thing meaning, three groups are compound builders and one hides TOR at the end; the animal meaning is the false trail that leads away from the suffix groups.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay"
+  },
+  "groups": [
+    {
+      "id": "teekessel",
+      "label": "Teekesselchen: Tier und Ding",
+      "items": [
+        "Hahn",
+        "Fliege",
+        "Maus",
+        "Schlange"
+      ],
+      "revealHint": "Doppeldeutig"
+    },
+    {
+      "id": "zeug",
+      "label": "Komposita mit -zeug",
+      "items": [
+        "Flugzeug",
+        "Feuerzeug",
+        "Spielzeug",
+        "Werkzeug"
+      ],
+      "revealHint": "-zeug"
+    },
+    {
+      "id": "licht",
+      "label": "Komposita mit -licht",
+      "items": [
+        "Sonnenlicht",
+        "Kerzenlicht",
+        "Mondlicht",
+        "Tageslicht"
+      ],
+      "revealHint": "-licht"
+    },
+    {
+      "id": "tor",
+      "label": "TOR steckt drin",
+      "items": [
+        "Motor",
+        "Traktor",
+        "Faktor",
+        "Autor"
+      ],
+      "revealHint": "TOR"
+    }
+  ]
+}

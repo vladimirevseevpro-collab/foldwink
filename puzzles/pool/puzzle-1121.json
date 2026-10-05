@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1121",
+  "title": "Downstream",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "world-waterfalls",
+      "label": "World Waterfalls",
+      "items": [
+        "Niagara Falls",
+        "Iguazu Falls",
+        "Victoria Falls",
+        "Kaieteur Falls"
+      ]
+    },
+    {
+      "id": "wetland-animals",
+      "label": "Wetland Animals",
+      "items": [
+        "Frog",
+        "Turtle",
+        "Dragonfly",
+        "Newt"
+      ]
+    },
+    {
+      "id": "river-boats",
+      "label": "River Boats",
+      "items": [
+        "Canoe",
+        "Kayak",
+        "Raft",
+        "Barge"
+      ]
+    },
+    {
+      "id": "water-safety-gear",
+      "label": "Water Safety Gear",
+      "items": [
+        "Life Jacket",
+        "Whistle",
+        "Throw Rope",
+        "Buoy"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "rivers and lakes",
+    "categoryType": "function"
+  }
+}

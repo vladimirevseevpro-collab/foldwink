@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1100",
+  "title": "Pitch a tent",
+  "difficulty": "medium",
+  "editorialSummary": "Valley sounds like a place to pitch a tent, but the Highland landforms label names terrain, while the camp group is the gear you carry.",
+  "meta": {
+    "theme": "camping",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "camp",
+      "label": "Tent-site gear",
+      "revealHint": "Camp",
+      "items": [
+        "Tent",
+        "Sleeping bag",
+        "Lantern",
+        "Camp stove"
+      ]
+    },
+    {
+      "id": "trail",
+      "label": "Hiking day kit",
+      "revealHint": "Trail",
+      "items": [
+        "Boots",
+        "Backpack",
+        "Water bottle",
+        "Map"
+      ]
+    },
+    {
+      "id": "landform",
+      "label": "Highland landforms",
+      "revealHint": "Terrain",
+      "items": [
+        "Peak",
+        "Ridge",
+        "Valley",
+        "Glacier"
+      ]
+    },
+    {
+      "id": "campfire",
+      "label": "Campfire cooking",
+      "revealHint": "Fire",
+      "items": [
+        "Skewer",
+        "Griddle",
+        "Kettle",
+        "Foil packet"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "de-1115",
+  "title": "Festivalzeit",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Musikfestival"
+  },
+  "groups": [
+    {
+      "id": "genres",
+      "label": "Genres beim Open Air",
+      "items": [
+        "Rock",
+        "Pop",
+        "Elektro",
+        "Metal"
+      ]
+    },
+    {
+      "id": "gelaende",
+      "label": "Festivalgelände",
+      "items": [
+        "Bühne",
+        "Campingplatz",
+        "Eingang",
+        "Getränkestand"
+      ]
+    },
+    {
+      "id": "ausruestung",
+      "label": "Ausrüstung fürs Festival",
+      "items": [
+        "Zelt",
+        "Schlafsack",
+        "Gummistiefel",
+        "Regenponcho"
+      ]
+    },
+    {
+      "id": "berufe",
+      "label": "Wer am Festival arbeitet",
+      "items": [
+        "Tontechniker",
+        "Lichttechniker",
+        "Sicherheitsdienst",
+        "Sanitäter"
+      ]
+    }
+  ]
+}

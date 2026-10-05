@@ -1,0 +1,50 @@
+{
+  "id": "de-1116",
+  "title": "Konzertbesuch",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Musikfestival"
+  },
+  "groups": [
+    {
+      "id": "vorher",
+      "label": "Vor dem Konzert",
+      "items": [
+        "Eintrittskarte",
+        "Einlasskontrolle",
+        "Garderobe",
+        "Sitzplatz"
+      ]
+    },
+    {
+      "id": "technik",
+      "label": "Technik bei der Show",
+      "items": [
+        "Scheinwerfer",
+        "Lautsprecher",
+        "Nebelmaschine",
+        "Verstärker"
+      ]
+    },
+    {
+      "id": "souvenirs",
+      "label": "Souvenirs vom Festival",
+      "items": [
+        "T-Shirt",
+        "Poster",
+        "Aufnäher",
+        "Schlüsselanhänger"
+      ]
+    },
+    {
+      "id": "imbiss",
+      "label": "Festival-Imbiss",
+      "items": [
+        "Pommes",
+        "Bratwurst",
+        "Crêpes",
+        "Popcorn"
+      ]
+    }
+  ]
+}

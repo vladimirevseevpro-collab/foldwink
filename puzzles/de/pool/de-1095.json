@@ -1,0 +1,50 @@
+{
+  "id": "de-1095",
+  "title": "Teezeit",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Tee- und Kaffeekultur"
+  },
+  "groups": [
+    {
+      "id": "teearten",
+      "label": "Teearten",
+      "items": [
+        "Schwarztee",
+        "Grüntee",
+        "Kräutertee",
+        "Früchtetee"
+      ]
+    },
+    {
+      "id": "teezubehoer",
+      "label": "Teezubehör",
+      "items": [
+        "Teebeutel",
+        "Teesieb",
+        "Teekanne",
+        "Stövchen"
+      ]
+    },
+    {
+      "id": "zum_tee",
+      "label": "Zum Tee",
+      "items": [
+        "Makrone",
+        "Biskuit",
+        "Waffel",
+        "Butterkeks"
+      ]
+    },
+    {
+      "id": "anbau",
+      "label": "Tee-Anbaugebiete",
+      "items": [
+        "Assam",
+        "Darjeeling",
+        "Ceylon",
+        "Java"
+      ]
+    }
+  ]
+}

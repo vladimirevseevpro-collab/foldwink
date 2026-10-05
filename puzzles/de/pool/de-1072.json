@@ -1,0 +1,56 @@
+{
+  "id": "de-1072",
+  "title": "Doppelt und einfach",
+  "difficulty": "hard",
+  "editorialSummary": "Aussicht wurde durch Nachsicht ersetzt, weil es sonst zugleich doppel-S und -sicht wäre; Affe und Schiff sehen wie lebendige Themen aus, gehören aber nur zur Doppel-F-Regel.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay"
+  },
+  "groups": [
+    {
+      "id": "auf",
+      "label": "Beginnt mit AUF-",
+      "items": [
+        "Aufzug",
+        "Aufsatz",
+        "Aufnahme",
+        "Aufregung"
+      ],
+      "revealHint": "AUF-"
+    },
+    {
+      "id": "sicht",
+      "label": "Endet auf -sicht",
+      "items": [
+        "Ansicht",
+        "Absicht",
+        "Einsicht",
+        "Nachsicht"
+      ],
+      "revealHint": "-sicht"
+    },
+    {
+      "id": "doppel-s",
+      "label": "Enthält Doppel-S",
+      "items": [
+        "Wasser",
+        "Essen",
+        "Schlüssel",
+        "Fluss"
+      ],
+      "revealHint": "Doppel-S"
+    },
+    {
+      "id": "doppel-f",
+      "label": "Enthält Doppel-F",
+      "items": [
+        "Affe",
+        "Schiff",
+        "Koffer",
+        "offen"
+      ],
+      "revealHint": "Doppel-F"
+    }
+  ]
+}

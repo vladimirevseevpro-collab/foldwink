@@ -1,0 +1,50 @@
+{
+  "id": "de-1113",
+  "title": "Kleintiere",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Kleintiere"
+  },
+  "groups": [
+    {
+      "id": "tiere",
+      "label": "Nagetiere als Haustiere",
+      "items": [
+        "Hamster",
+        "Meerschweinchen",
+        "Rennmaus",
+        "Chinchilla"
+      ]
+    },
+    {
+      "id": "futter",
+      "label": "Futter für Kleintiere",
+      "items": [
+        "Heu",
+        "Körner",
+        "Salatblätter",
+        "Möhren"
+      ]
+    },
+    {
+      "id": "kaefig",
+      "label": "Zubehör für den Käfig",
+      "items": [
+        "Trinkflasche",
+        "Laufrad",
+        "Häuschen",
+        "Nageholz"
+      ]
+    },
+    {
+      "id": "voegel",
+      "label": "Zubehör für Ziervögel",
+      "items": [
+        "Vogelkäfig",
+        "Sitzstange",
+        "Vogeltränke",
+        "Vogelsand"
+      ]
+    }
+  ]
+}

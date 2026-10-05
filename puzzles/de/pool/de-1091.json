@@ -1,0 +1,50 @@
+{
+  "id": "de-1091",
+  "title": "Kleine Welt",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Baby und Kindheit"
+  },
+  "groups": [
+    {
+      "id": "fuettern",
+      "label": "Zum Füttern",
+      "items": [
+        "Fläschchen",
+        "Lätzchen",
+        "Breischale",
+        "Löffel"
+      ]
+    },
+    {
+      "id": "krankheiten",
+      "label": "Kinderkrankheiten",
+      "items": [
+        "Masern",
+        "Mumps",
+        "Röteln",
+        "Windpocken"
+      ]
+    },
+    {
+      "id": "sicherheit",
+      "label": "Kindersicherheit",
+      "items": [
+        "Steckdosenschutz",
+        "Treppengitter",
+        "Eckenschutz",
+        "Türstopper"
+      ]
+    },
+    {
+      "id": "kita_ecken",
+      "label": "Ecken im Kindergarten",
+      "items": [
+        "Bauecke",
+        "Puppenecke",
+        "Malecke",
+        "Kuschelecke"
+      ]
+    }
+  ]
+}

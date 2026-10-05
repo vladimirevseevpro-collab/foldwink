@@ -1,0 +1,50 @@
+{
+  "id": "de-1007",
+  "title": "Mit Pinsel und Farbe",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Kreatives Gestalten"
+  },
+  "groups": [
+    {
+      "id": "malen",
+      "label": "Zum Malen",
+      "items": [
+        "Pinsel",
+        "Leinwand",
+        "Palette",
+        "Acrylfarbe"
+      ]
+    },
+    {
+      "id": "zeichnen",
+      "label": "Zum Zeichnen",
+      "items": [
+        "Bleistift",
+        "Radiergummi",
+        "Lineal",
+        "Zeichenblock"
+      ]
+    },
+    {
+      "id": "basteln",
+      "label": "Zum Basteln",
+      "items": [
+        "Schere",
+        "Kleber",
+        "Buntpapier",
+        "Wackelaugen"
+      ]
+    },
+    {
+      "id": "modellieren",
+      "label": "Zum Modellieren",
+      "items": [
+        "Knete",
+        "Ton",
+        "Modellierholz",
+        "Draht"
+      ]
+    }
+  ]
+}

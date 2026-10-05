@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1049",
+  "title": "Seaside day",
+  "difficulty": "medium",
+  "editorialSummary": "Bay is also a tree and Anemone a flower, but the seaside labels only accept the coastal sense.",
+  "meta": {
+    "theme": "beach holiday",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "coast",
+      "label": "Coastal features",
+      "revealHint": "Coast",
+      "items": [
+        "Cliff",
+        "Dune",
+        "Bay",
+        "Peninsula"
+      ]
+    },
+    {
+      "id": "activities",
+      "label": "Beach activities",
+      "revealHint": "Beach",
+      "items": [
+        "Sunbathing",
+        "Swimming",
+        "Snorkelling",
+        "Sandcastle building"
+      ]
+    },
+    {
+      "id": "bag",
+      "label": "Beach bag items",
+      "revealHint": "Packing",
+      "items": [
+        "Towel",
+        "Sunscreen",
+        "Flip-flops",
+        "Sunglasses"
+      ]
+    },
+    {
+      "id": "rockpool",
+      "label": "Rock pool finds",
+      "revealHint": "Rockpools",
+      "items": [
+        "Crab",
+        "Starfish",
+        "Barnacle",
+        "Anemone"
+      ]
+    }
+  ]
+}

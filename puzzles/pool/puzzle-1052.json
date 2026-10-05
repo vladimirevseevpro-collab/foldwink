@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1052",
+  "title": "Phone screen",
+  "difficulty": "medium",
+  "editorialSummary": "Tap sounds like a faucet and Scroll like an old manuscript, but the phone labels keep both as screen actions.",
+  "meta": {
+    "theme": "everyday phone use",
+    "categoryType": "action"
+  },
+  "groups": [
+    {
+      "id": "gestures",
+      "label": "Phone gestures",
+      "revealHint": "Gestures",
+      "items": [
+        "Swipe",
+        "Tap",
+        "Pinch",
+        "Scroll"
+      ]
+    },
+    {
+      "id": "messaging",
+      "label": "Messaging features",
+      "revealHint": "Chat",
+      "items": [
+        "Emoji",
+        "Status",
+        "Group chat",
+        "Voice note"
+      ]
+    },
+    {
+      "id": "faults",
+      "label": "Phone problems",
+      "revealHint": "Faults",
+      "items": [
+        "Cracked screen",
+        "Dead battery",
+        "No signal",
+        "Slow charging"
+      ]
+    },
+    {
+      "id": "social",
+      "label": "Social media actions",
+      "revealHint": "Social",
+      "items": [
+        "Like",
+        "Share",
+        "Follow",
+        "Comment"
+      ]
+    }
+  ]
+}

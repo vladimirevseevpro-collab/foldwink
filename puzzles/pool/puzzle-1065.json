@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1065",
+  "title": "Pantry Shelf",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "pasta-shapes",
+      "label": "Pasta Shapes",
+      "items": [
+        "Spaghetti",
+        "Penne",
+        "Fusilli",
+        "Macaroni"
+      ]
+    },
+    {
+      "id": "canned-fish",
+      "label": "Canned Fish",
+      "items": [
+        "Tuna",
+        "Sardines",
+        "Anchovies",
+        "Mackerel"
+      ]
+    },
+    {
+      "id": "oils-for-cooking",
+      "label": "Oils for Cooking",
+      "items": [
+        "Canola Oil",
+        "Peanut Oil",
+        "Avocado Oil",
+        "Corn Oil"
+      ]
+    },
+    {
+      "id": "sweet-spreads",
+      "label": "Sweet Spreads",
+      "items": [
+        "Honey",
+        "Jam",
+        "Marmalade",
+        "Maple Syrup"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "food",
+    "categoryType": "classification"
+  }
+}

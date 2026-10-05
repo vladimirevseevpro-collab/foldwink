@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1123",
+  "title": "Bubble tea shop",
+  "difficulty": "medium",
+  "editorialSummary": "Tapioca pearls sound like a base ingredient, but the bases label is brewed tea, so the toppings own the pearls.",
+  "meta": {
+    "theme": "bubble tea",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "topping",
+      "label": "Bubble tea toppings",
+      "revealHint": "Toppings",
+      "items": [
+        "Tapioca pearls",
+        "Popping boba",
+        "Grass jelly",
+        "Coconut jelly"
+      ]
+    },
+    {
+      "id": "base",
+      "label": "Bubble tea bases",
+      "revealHint": "Bases",
+      "items": [
+        "Assam tea",
+        "Jasmine tea",
+        "Matcha",
+        "Earl Grey"
+      ]
+    },
+    {
+      "id": "syrup",
+      "label": "Bubble tea syrups",
+      "revealHint": "Syrups",
+      "items": [
+        "Brown sugar",
+        "Taro",
+        "Mango",
+        "Lychee"
+      ]
+    },
+    {
+      "id": "kit",
+      "label": "Bubble tea serving kit",
+      "revealHint": "Serving",
+      "items": [
+        "Fat straw",
+        "Sealed cup",
+        "Cup sealer",
+        "Drink shaker"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-1022",
+  "title": "Süß, salzig, scharf",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "gewuerze"
+  },
+  "editorialSummary": "Falsche Fährte: Fenchelsamen duftet süß nach Anis, gehört aber zu den Curry-Gewürzen.",
+  "groups": [
+    {
+      "id": "suess",
+      "label": "Gewürze für Süßspeisen",
+      "revealHint": "SÜSS",
+      "items": [
+        "Vanille",
+        "Zimt",
+        "Muskatnuss",
+        "Anis"
+      ]
+    },
+    {
+      "id": "kraeuter",
+      "label": "Frische Kräuter zum Garnieren",
+      "revealHint": "KRÄUTER",
+      "items": [
+        "Petersilie",
+        "Basilikum",
+        "Dill",
+        "Minze"
+      ]
+    },
+    {
+      "id": "scharf",
+      "label": "Scharfe Würzmittel",
+      "revealHint": "SCHARF",
+      "items": [
+        "Chili",
+        "Pfeffer",
+        "Meerrettich",
+        "Wasabi"
+      ]
+    },
+    {
+      "id": "curry",
+      "label": "Gewürze für Curry",
+      "revealHint": "CURRY",
+      "items": [
+        "Kurkuma",
+        "Kreuzkümmel",
+        "Bockshornklee",
+        "Fenchelsamen"
+      ]
+    }
+  ]
+}

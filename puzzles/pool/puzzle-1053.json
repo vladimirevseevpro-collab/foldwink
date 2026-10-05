@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1053",
+  "title": "Home network",
+  "difficulty": "medium",
+  "editorialSummary": "Router also names a woodworking tool and Firewall a real wall, but the network labels only accept the digital meaning.",
+  "meta": {
+    "theme": "home internet",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "boxes",
+      "label": "Home network boxes",
+      "revealHint": "Network",
+      "items": [
+        "Router",
+        "Modem",
+        "Extender",
+        "Hub"
+      ]
+    },
+    {
+      "id": "security",
+      "label": "Online security",
+      "revealHint": "Security",
+      "items": [
+        "Password",
+        "Firewall",
+        "Antivirus",
+        "Two-factor"
+      ]
+    },
+    {
+      "id": "data",
+      "label": "Data units",
+      "revealHint": "Data",
+      "items": [
+        "Byte",
+        "Kilobyte",
+        "Megabyte",
+        "Gigabyte"
+      ]
+    },
+    {
+      "id": "complaints",
+      "label": "Wi-fi complaints",
+      "revealHint": "Wi-fi",
+      "items": [
+        "Buffering",
+        "Lag",
+        "Dropping",
+        "Slow speeds"
+      ]
+    }
+  ]
+}

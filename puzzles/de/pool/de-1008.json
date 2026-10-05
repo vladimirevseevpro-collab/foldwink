@@ -1,0 +1,50 @@
+{
+  "id": "de-1008",
+  "title": "Zimmer für Zimmer",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Wohnräume"
+  },
+  "groups": [
+    {
+      "id": "schlafzimmer",
+      "label": "Im Schlafzimmer",
+      "items": [
+        "Bett",
+        "Kleiderschrank",
+        "Nachttisch",
+        "Schminktisch"
+      ]
+    },
+    {
+      "id": "badezimmer",
+      "label": "Im Badezimmer",
+      "items": [
+        "Waschbecken",
+        "Dusche",
+        "Toilette",
+        "Spiegel"
+      ]
+    },
+    {
+      "id": "wohnzimmer",
+      "label": "Im Wohnzimmer",
+      "items": [
+        "Sofa",
+        "Sessel",
+        "Couchtisch",
+        "Kamin"
+      ]
+    },
+    {
+      "id": "kueche",
+      "label": "In der Küche",
+      "items": [
+        "Herd",
+        "Kühlschrank",
+        "Spüle",
+        "Backofen"
+      ]
+    }
+  ]
+}

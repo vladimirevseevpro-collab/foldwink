@@ -1,0 +1,55 @@
+{
+  "id": "de-1085",
+  "title": "Götter der Völker",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "mythologie"
+  },
+  "editorialSummary": "Falsche Fährte: Minerva und Athene meinen dieselbe Göttin, gehören aber zu unterschiedlichen Pantheons.",
+  "groups": [
+    {
+      "id": "griechisch",
+      "label": "Griechische Götter",
+      "revealHint": "OLYMP",
+      "items": [
+        "Zeus",
+        "Hera",
+        "Poseidon",
+        "Athene"
+      ]
+    },
+    {
+      "id": "roemisch",
+      "label": "Römische Götter",
+      "revealHint": "ROM",
+      "items": [
+        "Jupiter",
+        "Juno",
+        "Neptun",
+        "Minerva"
+      ]
+    },
+    {
+      "id": "indisch",
+      "label": "Hinduistische Götter",
+      "revealHint": "HINDU",
+      "items": [
+        "Shiva",
+        "Vishnu",
+        "Brahma",
+        "Ganesha"
+      ]
+    },
+    {
+      "id": "aegyptisch",
+      "label": "Ägyptische Götter",
+      "revealHint": "AEGYPTEN",
+      "items": [
+        "Ra",
+        "Isis",
+        "Osiris",
+        "Anubis"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "de-1100",
+  "title": "Badezimmer",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Bad und Hygiene"
+  },
+  "groups": [
+    {
+      "id": "mundpflege",
+      "label": "Mundpflege",
+      "items": [
+        "Zahnbürste",
+        "Zahnpasta",
+        "Mundspülung",
+        "Zahnstocher"
+      ]
+    },
+    {
+      "id": "dusche",
+      "label": "Unter der Dusche",
+      "items": [
+        "Duschgel",
+        "Shampoo",
+        "Schwamm",
+        "Duschhaube"
+      ]
+    },
+    {
+      "id": "handtuecher",
+      "label": "Handtücher",
+      "items": [
+        "Handtuch",
+        "Duschtuch",
+        "Waschlappen",
+        "Gästetuch"
+      ]
+    },
+    {
+      "id": "rasur",
+      "label": "Für die Rasur",
+      "items": [
+        "Rasierer",
+        "Rasierschaum",
+        "Rasierklinge",
+        "Rasierpinsel"
+      ]
+    }
+  ]
+}

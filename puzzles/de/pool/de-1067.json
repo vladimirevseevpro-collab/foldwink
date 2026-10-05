@@ -1,0 +1,56 @@
+{
+  "id": "de-1067",
+  "title": "Doppelte Vokale",
+  "difficulty": "hard",
+  "editorialSummary": "Drei Gruppen tragen einen doppelten Selbstlaut, die vierte teilt die Endsilbe -mut; wer nur auf gedehnte Vokale achtet, übersieht die -mut-Reihe aus Armut und Hochmut.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay"
+  },
+  "groups": [
+    {
+      "id": "doppel-a",
+      "label": "Enthält Doppel-A",
+      "items": [
+        "Saal",
+        "Aal",
+        "Haar",
+        "Paar"
+      ],
+      "revealHint": "Doppel-A"
+    },
+    {
+      "id": "doppel-e",
+      "label": "Enthält Doppel-E",
+      "items": [
+        "Meer",
+        "Teer",
+        "Beet",
+        "Schnee"
+      ],
+      "revealHint": "Doppel-E"
+    },
+    {
+      "id": "doppel-o",
+      "label": "Enthält Doppel-O",
+      "items": [
+        "Boot",
+        "Moos",
+        "Zoo",
+        "Moor"
+      ],
+      "revealHint": "Doppel-O"
+    },
+    {
+      "id": "mut",
+      "label": "Endet auf -mut",
+      "items": [
+        "Armut",
+        "Demut",
+        "Wehmut",
+        "Hochmut"
+      ],
+      "revealHint": "-mut"
+    }
+  ]
+}

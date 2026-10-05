@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1036",
+  "title": "Veggie basket",
+  "difficulty": "medium",
+  "editorialSummary": "Vegetable classification where Rhubarb tempts the fruit-vegetable group because it is cooked like fruit, but the wording leaves it only among the stalks and the fruit vegetables are all seed-bearing.",
+  "meta": {
+    "theme": "vegetables",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "roots",
+      "label": "Tubers and taproots",
+      "revealHint": "Underground",
+      "items": [
+        "Carrot",
+        "Beet",
+        "Turnip",
+        "Parsnip"
+      ]
+    },
+    {
+      "id": "greens",
+      "label": "Leafy greens",
+      "revealHint": "Salads",
+      "items": [
+        "Spinach",
+        "Kale",
+        "Lettuce",
+        "Arugula"
+      ]
+    },
+    {
+      "id": "stalks",
+      "label": "Stalk vegetables",
+      "revealHint": "Stalks",
+      "items": [
+        "Celery",
+        "Asparagus",
+        "Rhubarb",
+        "Leek"
+      ]
+    },
+    {
+      "id": "fruitveg",
+      "label": "Fruit vegetables",
+      "revealHint": "Seedy",
+      "items": [
+        "Tomato",
+        "Cucumber",
+        "Zucchini",
+        "Aubergine"
+      ]
+    }
+  ]
+}

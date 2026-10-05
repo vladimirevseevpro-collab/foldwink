@@ -1,0 +1,55 @@
+{
+  "id": "de-1029",
+  "title": "Schmuck und Accessoires",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "schmuck"
+  },
+  "editorialSummary": "Falsche Fährte: Die Krone klingt nach Kopfschmuck, ist aber das Aufziehrad der Armbanduhr.",
+  "groups": [
+    {
+      "id": "schmuck",
+      "label": "Schmuckstücke",
+      "revealHint": "SCHMUCK",
+      "items": [
+        "Halskette",
+        "Armreif",
+        "Ohrring",
+        "Brosche"
+      ]
+    },
+    {
+      "id": "accessoires",
+      "label": "Tragbare Accessoires",
+      "revealHint": "ACCESSOIRE",
+      "items": [
+        "Gürtel",
+        "Hut",
+        "Sonnenbrille",
+        "Handtasche"
+      ]
+    },
+    {
+      "id": "material",
+      "label": "Materialien für Schmuck",
+      "revealHint": "MATERIAL",
+      "items": [
+        "Gold",
+        "Silber",
+        "Perlen",
+        "Bernstein"
+      ]
+    },
+    {
+      "id": "uhr",
+      "label": "Bestandteile einer Armbanduhr",
+      "revealHint": "UHR",
+      "items": [
+        "Zifferblatt",
+        "Zeiger",
+        "Uhrwerk",
+        "Krone"
+      ]
+    }
+  ]
+}

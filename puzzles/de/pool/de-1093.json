@@ -1,0 +1,50 @@
+{
+  "id": "de-1093",
+  "title": "Gute Laune",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Hochzeit und Feiern"
+  },
+  "groups": [
+    {
+      "id": "snacks",
+      "label": "Partysnacks",
+      "items": [
+        "Chips",
+        "Erdnüsse",
+        "Salzstangen",
+        "Popcorn"
+      ]
+    },
+    {
+      "id": "bowle",
+      "label": "Für die Bowle",
+      "items": [
+        "Sekt",
+        "Orangensaft",
+        "Erdbeeren",
+        "Eiswürfel"
+      ]
+    },
+    {
+      "id": "deko",
+      "label": "Partydekoration",
+      "items": [
+        "Luftballons",
+        "Girlande",
+        "Partyhut",
+        "Konfetti"
+      ]
+    },
+    {
+      "id": "anlage",
+      "label": "Musikanlage",
+      "items": [
+        "Lautsprecher",
+        "Verstärker",
+        "Mikrofon",
+        "Mischpult"
+      ]
+    }
+  ]
+}

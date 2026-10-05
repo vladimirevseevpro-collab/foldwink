@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1098",
+  "title": "Exam hall",
+  "difficulty": "medium",
+  "editorialSummary": "Past papers read like exam-desk material, but the label names what is actually sat in the hall; past papers are only study aids.",
+  "meta": {
+    "theme": "exams",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "kit",
+      "label": "In the exam kit",
+      "revealHint": "Stationery",
+      "items": [
+        "Pencil",
+        "Pen",
+        "Eraser",
+        "Sharpener"
+      ]
+    },
+    {
+      "id": "revision",
+      "label": "Revision aids",
+      "revealHint": "Study",
+      "items": [
+        "Flashcards",
+        "Past papers",
+        "Mind map",
+        "Timetable"
+      ]
+    },
+    {
+      "id": "desk",
+      "label": "On the exam desk",
+      "revealHint": "Desk",
+      "items": [
+        "Question paper",
+        "Answer booklet",
+        "Candidate number",
+        "Seat number"
+      ]
+    },
+    {
+      "id": "grades",
+      "label": "Grade bands",
+      "revealHint": "Marks",
+      "items": [
+        "Distinction",
+        "Merit",
+        "Pass",
+        "Fail"
+      ]
+    }
+  ]
+}

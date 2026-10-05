@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1087",
+  "title": "Salon Visit",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "hairdressing-tools",
+      "label": "Hairdressing Tools",
+      "items": [
+        "Blow Dryer",
+        "Straightener",
+        "Curling Iron",
+        "Comb"
+      ]
+    },
+    {
+      "id": "haircut-styles",
+      "label": "Haircut Styles",
+      "items": [
+        "Bob",
+        "Pixie",
+        "Fade",
+        "Shag"
+      ]
+    },
+    {
+      "id": "cosmetic-products",
+      "label": "Cosmetic Products",
+      "items": [
+        "Lipstick",
+        "Mascara",
+        "Foundation",
+        "Blush"
+      ]
+    },
+    {
+      "id": "nail-salon-services",
+      "label": "Nail Salon Services",
+      "items": [
+        "Manicure",
+        "Pedicure",
+        "Gel Nails",
+        "Nail Art"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "beauty",
+    "categoryType": "function"
+  }
+}

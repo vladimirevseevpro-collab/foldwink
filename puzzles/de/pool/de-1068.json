@@ -1,0 +1,56 @@
+{
+  "id": "de-1068",
+  "title": "Vorsilben und Endungen",
+  "difficulty": "hard",
+  "editorialSummary": "Vier substantivierte Verben und die Endung -lein lösen die GE-Reihe auf, während Unfall und Überfall mit ihrer -fall-Endung wie eine eigene Wortfamilie wirken.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay"
+  },
+  "groups": [
+    {
+      "id": "ge",
+      "label": "Beginnt mit GE-",
+      "items": [
+        "Gebirge",
+        "Getränk",
+        "Gemüse",
+        "Geschenk"
+      ],
+      "revealHint": "GE-"
+    },
+    {
+      "id": "fall",
+      "label": "Endet auf -fall",
+      "items": [
+        "Unfall",
+        "Zufall",
+        "Überfall",
+        "Anfall"
+      ],
+      "revealHint": "-fall"
+    },
+    {
+      "id": "infinitiv",
+      "label": "Infinitiv als Nomen",
+      "items": [
+        "Essen",
+        "Trinken",
+        "Lesen",
+        "Schlafen"
+      ],
+      "revealHint": "das Verb"
+    },
+    {
+      "id": "lein",
+      "label": "Endet auf -lein",
+      "items": [
+        "Männlein",
+        "Fräulein",
+        "Büchlein",
+        "Bächlein"
+      ],
+      "revealHint": "-lein"
+    }
+  ]
+}

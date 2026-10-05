@@ -1,0 +1,50 @@
+{
+  "id": "de-1010",
+  "title": "Im Netz unterwegs",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Internetdienste"
+  },
+  "groups": [
+    {
+      "id": "sozial",
+      "label": "Soziale Netzwerke",
+      "items": [
+        "Facebook",
+        "Instagram",
+        "TikTok",
+        "X"
+      ]
+    },
+    {
+      "id": "suche",
+      "label": "Suchmaschinen",
+      "items": [
+        "Google",
+        "Bing",
+        "DuckDuckGo",
+        "Yahoo"
+      ]
+    },
+    {
+      "id": "browser",
+      "label": "Browser",
+      "items": [
+        "Chrome",
+        "Firefox",
+        "Safari",
+        "Edge"
+      ]
+    },
+    {
+      "id": "messenger",
+      "label": "Messenger-Dienste",
+      "items": [
+        "WhatsApp",
+        "Telegram",
+        "Signal",
+        "Threema"
+      ]
+    }
+  ]
+}

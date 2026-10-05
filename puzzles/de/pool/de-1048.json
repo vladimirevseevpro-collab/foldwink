@@ -1,0 +1,55 @@
+{
+  "id": "de-1048",
+  "title": "Beim Renovieren",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "renovierung"
+  },
+  "editorialSummary": "Falsche Fährte: Der Zahnspachtel klingt nach Zahnarzt, ist aber ein Werkzeug zum Fliesenlegen.",
+  "groups": [
+    {
+      "id": "streichen",
+      "label": "Zum Streichen",
+      "revealHint": "FARBE",
+      "items": [
+        "Farbrolle",
+        "Pinsel",
+        "Abklebeband",
+        "Farbwanne"
+      ]
+    },
+    {
+      "id": "tapezieren",
+      "label": "Zum Tapezieren",
+      "revealHint": "TAPETE",
+      "items": [
+        "Tapetenkleister",
+        "Tapezierbürste",
+        "Cutter",
+        "Nahtroller"
+      ]
+    },
+    {
+      "id": "verputzen",
+      "label": "Zum Verputzen",
+      "revealHint": "PUTZ",
+      "items": [
+        "Kelle",
+        "Glättekelle",
+        "Mörtel",
+        "Reibebrett"
+      ]
+    },
+    {
+      "id": "fliesen",
+      "label": "Zum Fliesenlegen",
+      "revealHint": "FLIESEN",
+      "items": [
+        "Fliesenschneider",
+        "Zahnspachtel",
+        "Fugenkreuz",
+        "Fliesenkleber"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1083",
+  "title": "Drawing Class",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "sketching-tools",
+      "label": "Sketching Tools",
+      "items": [
+        "Pencil",
+        "Charcoal",
+        "Eraser",
+        "Ruler"
+      ]
+    },
+    {
+      "id": "shading-techniques",
+      "label": "Shading Techniques",
+      "items": [
+        "Hatching",
+        "Cross-Hatching",
+        "Stippling",
+        "Blending"
+      ]
+    },
+    {
+      "id": "vivid-colour-names",
+      "label": "Vivid Colour Names",
+      "items": [
+        "Crimson",
+        "Azure",
+        "Emerald",
+        "Amber"
+      ]
+    },
+    {
+      "id": "art-class-activities",
+      "label": "Art Class Activities",
+      "items": [
+        "Life Drawing",
+        "Printmaking",
+        "Collage",
+        "Sculpting"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "art",
+    "categoryType": "technique"
+  }
+}

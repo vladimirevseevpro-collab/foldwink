@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1012",
+  "title": "Keep Well",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "vital-signs",
+      "label": "Vital Signs",
+      "items": [
+        "Pulse",
+        "Temperature",
+        "Blood Pressure",
+        "Breathing Rate"
+      ]
+    },
+    {
+      "id": "doctors-instruments",
+      "label": "Doctor's Instruments",
+      "items": [
+        "Stethoscope",
+        "Thermometer",
+        "Reflex Hammer",
+        "Tongue Depressor"
+      ]
+    },
+    {
+      "id": "stay-active",
+      "label": "Ways to Stay Active",
+      "items": [
+        "Jogging",
+        "Swimming",
+        "Cycling",
+        "Dancing"
+      ]
+    },
+    {
+      "id": "hydrating-drinks",
+      "label": "Hydrating Drinks",
+      "items": [
+        "Water",
+        "Herbal Tea",
+        "Orange Juice",
+        "Milk"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "health",
+    "categoryType": "classification"
+  }
+}

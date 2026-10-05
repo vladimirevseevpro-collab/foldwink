@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1124",
+  "title": "Supermarket sweep",
+  "difficulty": "medium",
+  "editorialSummary": "UHT milk tempts the chilled dairy shelves, but the long-life label is the ambient pantry, so it goes there.",
+  "meta": {
+    "theme": "supermarket",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "dairy2",
+      "label": "Chilled dairy shelves",
+      "revealHint": "Chilled",
+      "items": [
+        "Fresh milk",
+        "Cheddar",
+        "Butter",
+        "Yoghurt"
+      ]
+    },
+    {
+      "id": "longlife",
+      "label": "Long-life pantry",
+      "revealHint": "Long-life",
+      "items": [
+        "UHT milk",
+        "Tinned tomatoes",
+        "Dried pasta",
+        "Rice"
+      ]
+    },
+    {
+      "id": "impulse",
+      "label": "Checkout impulse buys",
+      "revealHint": "Impulse",
+      "items": [
+        "Chewing gum",
+        "Chocolate bar",
+        "Magazine",
+        "Batteries"
+      ]
+    },
+    {
+      "id": "signs",
+      "label": "Store floor signs",
+      "revealHint": "Signage",
+      "items": [
+        "Aisle marker",
+        "Shelf label",
+        "Price tag",
+        "Offer sticker"
+      ]
+    }
+  ]
+}

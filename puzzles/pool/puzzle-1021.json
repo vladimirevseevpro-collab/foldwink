@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1021",
+  "title": "Games Evening",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "board-game-classics",
+      "label": "Board Game Classics",
+      "items": [
+        "Chess",
+        "Checkers",
+        "Backgammon",
+        "Snakes and Ladders"
+      ]
+    },
+    {
+      "id": "card-game-classics",
+      "label": "Card Game Classics",
+      "items": [
+        "Poker",
+        "Bridge",
+        "Rummy",
+        "Hearts"
+      ]
+    },
+    {
+      "id": "puzzle-types",
+      "label": "Puzzle Types",
+      "items": [
+        "Jigsaw",
+        "Crossword",
+        "Sudoku",
+        "Word Search"
+      ]
+    },
+    {
+      "id": "party-activities",
+      "label": "Party Activities",
+      "items": [
+        "Charades",
+        "Musical Chairs",
+        "Pass the Parcel",
+        "Pin the Tail"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "games",
+    "categoryType": "classification"
+  }
+}

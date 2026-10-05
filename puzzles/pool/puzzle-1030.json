@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1030",
+  "title": "One Letter from Color",
+  "difficulty": "hard",
+  "editorialSummary": "Changing exactly one letter turns each card into a colour, so the trick is that the four colours are named only by the labels and the words themselves look unrelated.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay"
+  },
+  "groups": [
+    {
+      "id": "blue",
+      "label": "One Change from BLUE",
+      "items": [
+        "Glue",
+        "Clue",
+        "Flue",
+        "Blur"
+      ],
+      "revealHint": "BLUE"
+    },
+    {
+      "id": "red",
+      "label": "One Change from RED",
+      "items": [
+        "Bed",
+        "Fed",
+        "Led",
+        "Wed"
+      ],
+      "revealHint": "RED"
+    },
+    {
+      "id": "gold",
+      "label": "One Change from GOLD",
+      "items": [
+        "Bold",
+        "Cold",
+        "Fold",
+        "Hold"
+      ],
+      "revealHint": "GOLD"
+    },
+    {
+      "id": "gray",
+      "label": "One Change from GRAY",
+      "items": [
+        "Bray",
+        "Pray",
+        "Fray",
+        "Tray"
+      ],
+      "revealHint": "GRAY"
+    }
+  ]
+}

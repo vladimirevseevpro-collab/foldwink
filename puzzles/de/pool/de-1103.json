@@ -1,0 +1,50 @@
+{
+  "id": "de-1103",
+  "title": "Räuber der Meere",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Meerestiere"
+  },
+  "groups": [
+    {
+      "id": "raubfische",
+      "label": "Raubfische mit scharfen Zähnen",
+      "items": [
+        "Weißer Hai",
+        "Tigerhai",
+        "Hammerhai",
+        "Makohai"
+      ]
+    },
+    {
+      "id": "wale",
+      "label": "Riesige Wale",
+      "items": [
+        "Blauwal",
+        "Pottwal",
+        "Buckelwal",
+        "Grauwal"
+      ]
+    },
+    {
+      "id": "krebse",
+      "label": "Krebse und Krabben",
+      "items": [
+        "Hummer",
+        "Languste",
+        "Einsiedlerkrebs",
+        "Strandkrabbe"
+      ]
+    },
+    {
+      "id": "muscheln",
+      "label": "Muscheln im Meer",
+      "items": [
+        "Miesmuschel",
+        "Herzmuschel",
+        "Venusmuschel",
+        "Kammmuschel"
+      ]
+    }
+  ]
+}

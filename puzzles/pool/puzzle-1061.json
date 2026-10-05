@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1061",
+  "title": "Units and solids",
+  "difficulty": "medium",
+  "editorialSummary": "Stone reads like a material, but the imperial weight label is the only defensible home once the solids label is read.",
+  "meta": {
+    "theme": "measurement and shape",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "implength",
+      "label": "Imperial length units",
+      "revealHint": "Length",
+      "items": [
+        "Inch",
+        "Foot",
+        "Yard",
+        "Mile"
+      ]
+    },
+    {
+      "id": "impweight",
+      "label": "Imperial weight units",
+      "revealHint": "Weight",
+      "items": [
+        "Pound",
+        "Stone",
+        "Ton",
+        "Ounce"
+      ]
+    },
+    {
+      "id": "angles",
+      "label": "Types of angle",
+      "revealHint": "Angles",
+      "items": [
+        "Acute",
+        "Obtuse",
+        "Right",
+        "Straight"
+      ]
+    },
+    {
+      "id": "solids",
+      "label": "Geometric solids",
+      "revealHint": "Solids",
+      "items": [
+        "Cube",
+        "Sphere",
+        "Cylinder",
+        "Cone"
+      ]
+    }
+  ]
+}

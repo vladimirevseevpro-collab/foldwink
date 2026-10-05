@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1120",
+  "title": "Rock and Sand",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "volcano-terms",
+      "label": "Volcano Terms",
+      "items": [
+        "Crater",
+        "Lava",
+        "Ash",
+        "Vent"
+      ]
+    },
+    {
+      "id": "iconic-summits",
+      "label": "Iconic Summits",
+      "items": [
+        "Matterhorn",
+        "Denali",
+        "Kilimanjaro",
+        "Mount Fuji"
+      ]
+    },
+    {
+      "id": "desert-birds",
+      "label": "Desert Birds",
+      "items": [
+        "Roadrunner",
+        "Ostrich",
+        "Vulture",
+        "Horned Owl"
+      ]
+    },
+    {
+      "id": "mountain-sports",
+      "label": "Mountain Activities",
+      "items": [
+        "Skiing",
+        "Snowboarding",
+        "Climbing",
+        "Hiking"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "deserts and mountains",
+    "categoryType": "action"
+  }
+}

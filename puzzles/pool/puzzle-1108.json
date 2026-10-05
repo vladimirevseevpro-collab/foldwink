@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1108",
+  "title": "Spice Cupboard",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "whole-spices",
+      "label": "Whole Spices",
+      "items": [
+        "Cinnamon Stick",
+        "Star Anise",
+        "Clove",
+        "Nutmeg"
+      ]
+    },
+    {
+      "id": "ground-spices",
+      "label": "Ground Spices",
+      "items": [
+        "Paprika",
+        "Turmeric",
+        "Cumin",
+        "Black Pepper"
+      ]
+    },
+    {
+      "id": "fresh-herbs",
+      "label": "Fresh Herb Sprigs",
+      "items": [
+        "Basil",
+        "Parsley",
+        "Chives",
+        "Mint"
+      ]
+    },
+    {
+      "id": "dried-herbs",
+      "label": "Dried Herb Jars",
+      "items": [
+        "Oregano",
+        "Thyme",
+        "Rosemary",
+        "Dill"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "spices and herbs",
+    "categoryType": "classification"
+  }
+}

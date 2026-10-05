@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1019",
+  "title": "Office Life",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "workplace-stationery",
+      "label": "Workplace Stationery",
+      "items": [
+        "Stapler",
+        "Hole Punch",
+        "Paper Clips",
+        "Sticky Notes"
+      ]
+    },
+    {
+      "id": "workroom-furniture",
+      "label": "Workroom Furniture",
+      "items": [
+        "Desk",
+        "Swivel Chair",
+        "Filing Cabinet",
+        "Coat Stand"
+      ]
+    },
+    {
+      "id": "workplace-machines",
+      "label": "Workplace Machines",
+      "items": [
+        "Printer",
+        "Photocopier",
+        "Scanner",
+        "Shredder"
+      ]
+    },
+    {
+      "id": "company-positions",
+      "label": "Company Positions",
+      "items": [
+        "Manager",
+        "Receptionist",
+        "Intern",
+        "Supervisor"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "office",
+    "categoryType": "classification"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1002",
+  "title": "Pour and Fry",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "cooking-oils",
+      "label": "Cooking Oils",
+      "items": [
+        "Olive Oil",
+        "Sunflower Oil",
+        "Coconut Oil",
+        "Sesame Oil"
+      ]
+    },
+    {
+      "id": "garden-vegetables",
+      "label": "Garden Vegetables",
+      "items": [
+        "Carrot",
+        "Cucumber",
+        "Spinach",
+        "Radish"
+      ]
+    },
+    {
+      "id": "kitchen-hand-tools",
+      "label": "Kitchen Hand Tools",
+      "items": [
+        "Whisk",
+        "Spatula",
+        "Ladle",
+        "Peeler"
+      ]
+    },
+    {
+      "id": "baking-equipment",
+      "label": "Baking Equipment",
+      "items": [
+        "Mixing Bowl",
+        "Rolling Pin",
+        "Muffin Tin",
+        "Cooling Rack"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "kitchen and cooking",
+    "categoryType": "classification"
+  }
+}

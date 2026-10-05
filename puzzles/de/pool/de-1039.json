@@ -1,0 +1,55 @@
+{
+  "id": "de-1039",
+  "title": "Form und Farbe",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "formen"
+  },
+  "editorialSummary": "Falsche Fährte: Der Kegel ist hier kein Sportgerät, sondern ein geometrischer Körper; Lavendel ist kein Duft, sondern ein Farbton.",
+  "groups": [
+    {
+      "id": "figuren",
+      "label": "Ebene geometrische Figuren",
+      "revealHint": "FIGUREN",
+      "items": [
+        "Dreieck",
+        "Quadrat",
+        "Kreis",
+        "Raute"
+      ]
+    },
+    {
+      "id": "koerper",
+      "label": "Körper in der Geometrie",
+      "revealHint": "KÖRPER",
+      "items": [
+        "Würfel",
+        "Kugel",
+        "Zylinder",
+        "Kegel"
+      ]
+    },
+    {
+      "id": "pastell",
+      "label": "Farbtöne mit Weißanteil",
+      "revealHint": "PASTELL",
+      "items": [
+        "Rosa",
+        "Hellblau",
+        "Mint",
+        "Lavendel"
+      ]
+    },
+    {
+      "id": "laenge",
+      "label": "Maßeinheiten der Länge",
+      "revealHint": "LÄNGE",
+      "items": [
+        "Millimeter",
+        "Zentimeter",
+        "Meter",
+        "Kilometer"
+      ]
+    }
+  ]
+}

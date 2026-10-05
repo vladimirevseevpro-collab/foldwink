@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1006",
+  "title": "What to Wear",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "shoes-boots",
+      "label": "Shoes and Boots",
+      "items": [
+        "Loafer",
+        "Moccasin",
+        "Wellies",
+        "Espadrille"
+      ]
+    },
+    {
+      "id": "hats-caps",
+      "label": "Hats and Caps",
+      "items": [
+        "Beret",
+        "Beanie",
+        "Fedora",
+        "Helmet"
+      ]
+    },
+    {
+      "id": "coats-jackets",
+      "label": "Coats and Jackets",
+      "items": [
+        "Parka",
+        "Trench Coat",
+        "Blazer",
+        "Raincoat"
+      ]
+    },
+    {
+      "id": "fashion-accessories",
+      "label": "Fashion Accessories",
+      "items": [
+        "Belt",
+        "Scarf",
+        "Gloves",
+        "Handbag"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "clothing and accessories",
+    "categoryType": "classification"
+  }
+}

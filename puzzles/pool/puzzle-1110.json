@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1110",
+  "title": "Coffee Break",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "coffee-drinks",
+      "label": "Coffee Bar Menu",
+      "items": [
+        "Mocha",
+        "Macchiato",
+        "Flat White",
+        "Cold Brew"
+      ]
+    },
+    {
+      "id": "coffee-add-ins",
+      "label": "Coffee Add-ins",
+      "items": [
+        "Cream",
+        "Sugar Cubes",
+        "Caramel Syrup",
+        "Cinnamon"
+      ]
+    },
+    {
+      "id": "barista-equipment",
+      "label": "Barista Equipment",
+      "items": [
+        "Espresso Machine",
+        "Grinder",
+        "Tamper",
+        "Milk Frother"
+      ]
+    },
+    {
+      "id": "coffee-roasts",
+      "label": "Coffee Roasts",
+      "items": [
+        "Light Roast",
+        "Medium Roast",
+        "Dark Roast",
+        "French Roast"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "tea and coffee culture",
+    "categoryType": "classification"
+  }
+}

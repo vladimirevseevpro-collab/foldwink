@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1027",
+  "title": "Winter Cheer",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "christmas-decorations",
+      "label": "Christmas Decorations",
+      "items": [
+        "Tinsel",
+        "Baubles",
+        "Wreath",
+        "Fairy Lights"
+      ]
+    },
+    {
+      "id": "christmas-dinner",
+      "label": "Christmas Dinner",
+      "items": [
+        "Roast Turkey",
+        "Stuffing",
+        "Cranberry Sauce",
+        "Christmas Pudding"
+      ]
+    },
+    {
+      "id": "new-year-traditions",
+      "label": "New Year Traditions",
+      "items": [
+        "Fireworks",
+        "Countdown",
+        "Resolution",
+        "Midnight Kiss"
+      ]
+    },
+    {
+      "id": "winter-treats",
+      "label": "Winter Treats",
+      "items": [
+        "Hot Chocolate",
+        "Gingerbread",
+        "Roast Chestnuts",
+        "Mulled Wine"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "winter",
+    "categoryType": "classification"
+  }
+}

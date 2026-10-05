@@ -1,0 +1,50 @@
+{
+  "id": "de-1089",
+  "title": "Babyzubehör",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Baby und Kindheit"
+  },
+  "groups": [
+    {
+      "id": "kleidung",
+      "label": "Babykleidung",
+      "items": [
+        "Strampler",
+        "Body",
+        "Babymütze",
+        "Babysöckchen"
+      ]
+    },
+    {
+      "id": "wickeln",
+      "label": "Fürs Wickeln",
+      "items": [
+        "Windel",
+        "Feuchttücher",
+        "Wundsalbe",
+        "Wickelunterlage"
+      ]
+    },
+    {
+      "id": "spielzeug",
+      "label": "Babyspielzeug",
+      "items": [
+        "Rassel",
+        "Beißring",
+        "Kuscheltier",
+        "Mobile"
+      ]
+    },
+    {
+      "id": "schlafen",
+      "label": "Zum Babyschlaf",
+      "items": [
+        "Gitterbett",
+        "Reisebett",
+        "Wiege",
+        "Nachtlicht"
+      ]
+    }
+  ]
+}

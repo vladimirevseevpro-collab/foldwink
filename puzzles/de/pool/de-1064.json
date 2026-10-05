@@ -1,0 +1,50 @@
+{
+  "id": "de-1064",
+  "title": "Am Auto",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Auto"
+  },
+  "groups": [
+    {
+      "id": "motor",
+      "label": "Teile des Motors",
+      "items": [
+        "Zündkerze",
+        "Kolben",
+        "Kurbelwelle",
+        "Luftfilter"
+      ]
+    },
+    {
+      "id": "raeder",
+      "label": "Räder und Reifen",
+      "items": [
+        "Reifen",
+        "Felge",
+        "Ventil",
+        "Radkappe"
+      ]
+    },
+    {
+      "id": "beleuchtung",
+      "label": "Beleuchtung am Auto",
+      "items": [
+        "Scheinwerfer",
+        "Blinker",
+        "Rücklicht",
+        "Nebelschlussleuchte"
+      ]
+    },
+    {
+      "id": "innenraum",
+      "label": "Innenraum-Ausstattung",
+      "items": [
+        "Lenkrad",
+        "Rückspiegel",
+        "Sitz",
+        "Armaturenbrett"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "de-1114",
+  "title": "Fahrradpflege",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Fahrrad"
+  },
+  "groups": [
+    {
+      "id": "verschleiss",
+      "label": "Verschleißteile am Fahrrad",
+      "items": [
+        "Bremsschuhe",
+        "Fahrradschlauch",
+        "Kettenblatt",
+        "Bremszug"
+      ]
+    },
+    {
+      "id": "werkzeug",
+      "label": "Werkzeug fürs Fahrrad",
+      "items": [
+        "Flickzeug",
+        "Luftpumpe",
+        "Speichenschlüssel",
+        "Kettennieter"
+      ]
+    },
+    {
+      "id": "pflege",
+      "label": "Pflege fürs Rad",
+      "items": [
+        "Kettenöl",
+        "Rostlöser",
+        "Putzlappen",
+        "Fahrradreiniger"
+      ]
+    },
+    {
+      "id": "tour",
+      "label": "Was auf eine Radtour gehört",
+      "items": [
+        "Fahrradkarte",
+        "Routenplan",
+        "Proviant",
+        "Regenjacke"
+      ]
+    }
+  ]
+}

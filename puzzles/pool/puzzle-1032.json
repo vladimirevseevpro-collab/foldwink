@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1032",
+  "title": "Common Endings",
+  "difficulty": "hard",
+  "editorialSummary": "The cards in each group share the same exact ending letters, so the decoy is that the words sound like loose rhyme families until you check the spelling.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay"
+  },
+  "groups": [
+    {
+      "id": "ight",
+      "label": "Ends in IGHT",
+      "items": [
+        "Night",
+        "Fight",
+        "Right",
+        "Sight"
+      ],
+      "revealHint": "IGHT"
+    },
+    {
+      "id": "ound",
+      "label": "Ends in OUND",
+      "items": [
+        "Sound",
+        "Round",
+        "Ground",
+        "Hound"
+      ],
+      "revealHint": "OUND"
+    },
+    {
+      "id": "ane",
+      "label": "Ends in ANE",
+      "items": [
+        "Plane",
+        "Crane",
+        "Lane",
+        "Cane"
+      ],
+      "revealHint": "ANE"
+    },
+    {
+      "id": "ock",
+      "label": "Ends in OCK",
+      "items": [
+        "Rock",
+        "Sock",
+        "Lock",
+        "Shock"
+      ],
+      "revealHint": "OCK"
+    }
+  ]
+}

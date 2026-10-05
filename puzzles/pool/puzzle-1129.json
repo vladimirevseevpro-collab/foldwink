@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1129",
+  "title": "Ways with Eggs",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "egg-cooking-styles",
+      "label": "Egg Cooking Styles",
+      "items": [
+        "Scrambled",
+        "Poached",
+        "Fried",
+        "Boiled"
+      ]
+    },
+    {
+      "id": "egg-breakfast-plates",
+      "label": "Egg Breakfast Plates",
+      "items": [
+        "Omelette",
+        "Eggs Benedict",
+        "Eggs Florentine",
+        "Frittata"
+      ]
+    },
+    {
+      "id": "parts-of-an-egg",
+      "label": "Parts of an Egg",
+      "items": [
+        "Shell",
+        "Yolk",
+        "White",
+        "Membrane"
+      ]
+    },
+    {
+      "id": "egg-based-sauces",
+      "label": "Egg-Based Sauces",
+      "items": [
+        "Mayonnaise",
+        "Hollandaise",
+        "Aioli",
+        "Tartar Sauce"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "dairy and eggs",
+    "categoryType": "classification"
+  }
+}

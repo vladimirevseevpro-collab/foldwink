@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1085",
+  "title": "Gods And Heroes",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "olympian-gods",
+      "label": "Olympian Gods",
+      "items": [
+        "Zeus",
+        "Poseidon",
+        "Apollo",
+        "Hermes"
+      ]
+    },
+    {
+      "id": "norse-deities",
+      "label": "Norse Deities",
+      "items": [
+        "Odin",
+        "Thor",
+        "Loki",
+        "Heimdall"
+      ]
+    },
+    {
+      "id": "legendary-beasts",
+      "label": "Legendary Beasts",
+      "items": [
+        "Dragon",
+        "Griffin",
+        "Phoenix",
+        "Centaur"
+      ]
+    },
+    {
+      "id": "heroic-qualities",
+      "label": "Heroic Qualities",
+      "items": [
+        "Brave",
+        "Cunning",
+        "Loyal",
+        "Strong"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "mythology",
+    "categoryType": "classification"
+  }
+}

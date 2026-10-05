@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1047",
+  "title": "Body basics",
+  "difficulty": "medium",
+  "editorialSummary": "Pelvis looks like a joint and Calves like farm animals, but the four labels leave only one defensible slot for each.",
+  "meta": {
+    "theme": "human body",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "joints",
+      "label": "Where bones meet",
+      "revealHint": "Joints",
+      "items": [
+        "Knee",
+        "Elbow",
+        "Ankle",
+        "Hip"
+      ]
+    },
+    {
+      "id": "muscles",
+      "label": "Muscle groups",
+      "revealHint": "Muscles",
+      "items": [
+        "Biceps",
+        "Triceps",
+        "Quadriceps",
+        "Calves"
+      ]
+    },
+    {
+      "id": "bones",
+      "label": "Torso bones",
+      "revealHint": "Bones",
+      "items": [
+        "Ribs",
+        "Spine",
+        "Sternum",
+        "Pelvis"
+      ]
+    },
+    {
+      "id": "unwell",
+      "label": "Signs you're unwell",
+      "revealHint": "Unwell",
+      "items": [
+        "Fever",
+        "Fatigue",
+        "Nausea",
+        "Dizziness"
+      ]
+    }
+  ]
+}

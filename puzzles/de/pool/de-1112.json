@@ -1,0 +1,50 @@
+{
+  "id": "de-1112",
+  "title": "Hund und Katze",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Haustiere"
+  },
+  "groups": [
+    {
+      "id": "hund",
+      "label": "Hundezubehör",
+      "items": [
+        "Halsband",
+        "Leine",
+        "Maulkorb",
+        "Hundekorb"
+      ]
+    },
+    {
+      "id": "katze",
+      "label": "Katzenzubehör",
+      "items": [
+        "Kratzbaum",
+        "Katzentoilette",
+        "Spielangel",
+        "Katzenbett"
+      ]
+    },
+    {
+      "id": "futter",
+      "label": "Futter für Haustiere",
+      "items": [
+        "Trockenfutter",
+        "Nassfutter",
+        "Leckerli",
+        "Knochen"
+      ]
+    },
+    {
+      "id": "tierarzt",
+      "label": "Tierarztbesuche",
+      "items": [
+        "Impfung",
+        "Entwurmung",
+        "Kastration",
+        "Vorsorgeuntersuchung"
+      ]
+    }
+  ]
+}

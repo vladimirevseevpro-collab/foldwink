@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1089",
+  "title": "Market haul",
+  "difficulty": "medium",
+  "editorialSummary": "Watermelon tempts a berry group because botanists classify it as one, but the melon label is its everyday home.",
+  "meta": {
+    "theme": "fresh produce",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "berries",
+      "label": "Berry punnets",
+      "revealHint": "Berries",
+      "items": [
+        "Strawberry",
+        "Blueberry",
+        "Raspberry",
+        "Blackberry"
+      ]
+    },
+    {
+      "id": "melons",
+      "label": "Melon varieties",
+      "revealHint": "Melons",
+      "items": [
+        "Watermelon",
+        "Cantaloupe",
+        "Honeydew",
+        "Galia melon"
+      ]
+    },
+    {
+      "id": "chilli",
+      "label": "Chilli peppers",
+      "revealHint": "Chilli",
+      "items": [
+        "Jalapeño",
+        "Habanero",
+        "Poblano",
+        "Serrano"
+      ]
+    },
+    {
+      "id": "roots",
+      "label": "Roasting roots",
+      "revealHint": "Roots",
+      "items": [
+        "Beetroot",
+        "Parsnip",
+        "Swede",
+        "Celeriac"
+      ]
+    }
+  ]
+}

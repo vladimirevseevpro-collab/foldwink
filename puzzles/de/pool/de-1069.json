@@ -1,0 +1,56 @@
+{
+  "id": "de-1069",
+  "title": "Vorsilbe und Nachsilbe",
+  "difficulty": "hard",
+  "editorialSummary": "Frühling und Schmetterling sehen wie reine Naturwörter aus, gehören aber zur -ling-Endung; die Doppel-L-Reihe um Ball und Wall tarnt die VER-Vorsilbe.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay"
+  },
+  "groups": [
+    {
+      "id": "ver",
+      "label": "Beginnt mit VER-",
+      "items": [
+        "Verbot",
+        "Verlust",
+        "Verstand",
+        "Verrat"
+      ],
+      "revealHint": "VER-"
+    },
+    {
+      "id": "ling",
+      "label": "Endet auf -ling",
+      "items": [
+        "Frühling",
+        "Schmetterling",
+        "Liebling",
+        "Säugling"
+      ],
+      "revealHint": "-ling"
+    },
+    {
+      "id": "doppel-l",
+      "label": "Enthält Doppel-L",
+      "items": [
+        "Ball",
+        "Fall",
+        "Schall",
+        "Wall"
+      ],
+      "revealHint": "Doppel-L"
+    },
+    {
+      "id": "schaft",
+      "label": "Endet auf -schaft",
+      "items": [
+        "Mannschaft",
+        "Freundschaft",
+        "Landschaft",
+        "Wirtschaft"
+      ],
+      "revealHint": "-schaft"
+    }
+  ]
+}

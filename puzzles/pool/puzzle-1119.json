@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1119",
+  "title": "Night Sky Guide",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "moon-phases",
+      "label": "Lunar Stages",
+      "items": [
+        "New Moon",
+        "Full Moon",
+        "Crescent",
+        "Gibbous"
+      ]
+    },
+    {
+      "id": "constellations",
+      "label": "Constellation Names",
+      "items": [
+        "Orion",
+        "Ursa Major",
+        "Cassiopeia",
+        "Pegasus"
+      ]
+    },
+    {
+      "id": "spaceflight-terms",
+      "label": "Spaceflight Terms",
+      "items": [
+        "Rocket",
+        "Launch",
+        "Orbit",
+        "Capsule"
+      ]
+    },
+    {
+      "id": "space-telescopes",
+      "label": "Space Telescopes",
+      "items": [
+        "Hubble",
+        "Webb",
+        "Kepler",
+        "Chandra"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "planets and space",
+    "categoryType": "classification"
+  }
+}

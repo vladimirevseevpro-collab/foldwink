@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1088",
+  "title": "Mail Run",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "things-you-mail",
+      "label": "Things You Mail",
+      "items": [
+        "Letter",
+        "Parcel",
+        "Postcard",
+        "Greeting Card"
+      ]
+    },
+    {
+      "id": "postal-services",
+      "label": "Postal Services",
+      "items": [
+        "First Class",
+        "Express",
+        "Registered",
+        "Airmail"
+      ]
+    },
+    {
+      "id": "post-office-buys",
+      "label": "Post Office Buys",
+      "items": [
+        "Stamp",
+        "Envelope",
+        "Bubble Wrap",
+        "Address Label"
+      ]
+    },
+    {
+      "id": "tracking-words",
+      "label": "Parcel Tracking Words",
+      "items": [
+        "Tracking",
+        "Signature",
+        "Collection",
+        "Dispatch"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "post",
+    "categoryType": "function"
+  }
+}

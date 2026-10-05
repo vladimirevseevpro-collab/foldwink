@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1114",
+  "title": "Dry and High",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "desert-animals",
+      "label": "Desert Animals",
+      "items": [
+        "Camel",
+        "Fennec Fox",
+        "Scorpion",
+        "Meerkat"
+      ]
+    },
+    {
+      "id": "desert-plants",
+      "label": "Desert Plants",
+      "items": [
+        "Cactus",
+        "Aloe",
+        "Yucca",
+        "Sagebrush"
+      ]
+    },
+    {
+      "id": "named-deserts",
+      "label": "Named Deserts",
+      "items": [
+        "Sahara",
+        "Gobi",
+        "Kalahari",
+        "Namib"
+      ]
+    },
+    {
+      "id": "mountain-terrain",
+      "label": "Mountain Terrain",
+      "items": [
+        "Peak",
+        "Ridge",
+        "Slope",
+        "Foothill"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "deserts and mountains",
+    "categoryType": "classification"
+  }
+}

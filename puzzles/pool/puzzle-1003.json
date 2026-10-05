@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1003",
+  "title": "Pets and Pests",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "household-pets",
+      "label": "Household Pets",
+      "items": [
+        "Hamster",
+        "Goldfish",
+        "Parrot",
+        "Guinea Pig"
+      ]
+    },
+    {
+      "id": "wild-dogs",
+      "label": "Wild Dogs",
+      "items": [
+        "Wolf",
+        "Fox",
+        "Coyote",
+        "Jackal"
+      ]
+    },
+    {
+      "id": "mice-relatives",
+      "label": "Mice and Relatives",
+      "items": [
+        "Mouse",
+        "Rat",
+        "Squirrel",
+        "Beaver"
+      ]
+    },
+    {
+      "id": "garden-pests",
+      "label": "Garden Pests",
+      "items": [
+        "Aphid",
+        "Snail",
+        "Caterpillar",
+        "Beetle"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "animals",
+    "categoryType": "function"
+  }
+}

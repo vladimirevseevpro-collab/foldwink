@@ -1,0 +1,50 @@
+{
+  "id": "de-1012",
+  "title": "Rund um Weihnachten",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Weihnachtszeit"
+  },
+  "groups": [
+    {
+      "id": "deko",
+      "label": "Weihnachtsdekoration",
+      "items": [
+        "Weihnachtsbaum",
+        "Adventskranz",
+        "Lichterkette",
+        "Strohstern"
+      ]
+    },
+    {
+      "id": "suesses",
+      "label": "Süßes zur Weihnachtszeit",
+      "items": [
+        "Lebkuchen",
+        "Zimtstern",
+        "Spekulatius",
+        "Marzipankartoffel"
+      ]
+    },
+    {
+      "id": "lieder",
+      "label": "Weihnachtslieder",
+      "items": [
+        "Stille Nacht",
+        "O Tannenbaum",
+        "Kling Glöckchen",
+        "Es ist ein Ros entsprungen"
+      ]
+    },
+    {
+      "id": "figuren",
+      "label": "Weihnachtsfiguren",
+      "items": [
+        "Nikolaus",
+        "Knecht Ruprecht",
+        "Christkind",
+        "Engel"
+      ]
+    }
+  ]
+}

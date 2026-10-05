@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1125",
+  "title": "Morning routine",
+  "difficulty": "medium",
+  "editorialSummary": "Nail brush looks like a cleaning tool, but the hand care label owns it; the cleaning kit holds the toilet brush and sponge.",
+  "meta": {
+    "theme": "personal care",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "shaving",
+      "label": "Shaving kit",
+      "revealHint": "Shaving",
+      "items": [
+        "Razor",
+        "Shaving foam",
+        "Aftershave",
+        "Shaving brush"
+      ]
+    },
+    {
+      "id": "skincare",
+      "label": "Skincare steps",
+      "revealHint": "Skincare",
+      "items": [
+        "Face wash",
+        "Toner",
+        "Moisturiser",
+        "Eye cream"
+      ]
+    },
+    {
+      "id": "handcare",
+      "label": "Hand care",
+      "revealHint": "Hands",
+      "items": [
+        "Hand soap",
+        "Hand cream",
+        "Nail brush",
+        "Nail clippers"
+      ]
+    },
+    {
+      "id": "cleaning",
+      "label": "Bathroom cleaning kit",
+      "revealHint": "Cleaning",
+      "items": [
+        "Toilet brush",
+        "Bleach",
+        "Sponge",
+        "Rubber gloves"
+      ]
+    }
+  ]
+}

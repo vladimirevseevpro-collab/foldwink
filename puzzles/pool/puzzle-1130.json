@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1130",
+  "title": "Butter and Cream",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "butter-styles",
+      "label": "Butter Styles",
+      "items": [
+        "Salted Butter",
+        "Unsalted Butter",
+        "Cultured Butter",
+        "Clarified Butter"
+      ]
+    },
+    {
+      "id": "cream-types",
+      "label": "Cream Types",
+      "items": [
+        "Heavy Cream",
+        "Sour Cream",
+        "Whipped Cream",
+        "Clotted Cream"
+      ]
+    },
+    {
+      "id": "dairy-desserts",
+      "label": "Dairy Desserts",
+      "items": [
+        "Panna Cotta",
+        "Crème Brûlée",
+        "Rice Pudding",
+        "Cheesecake"
+      ]
+    },
+    {
+      "id": "dairy-drinks",
+      "label": "Dairy Drinks",
+      "items": [
+        "Milkshake",
+        "Eggnog",
+        "Lassi",
+        "Buttermilk"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "dairy and eggs",
+    "categoryType": "classification"
+  }
+}

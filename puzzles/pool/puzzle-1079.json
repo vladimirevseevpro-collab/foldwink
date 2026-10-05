@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1079",
+  "title": "Behind The Wheel",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "car-controls",
+      "label": "Car Controls",
+      "items": [
+        "Steering Wheel",
+        "Brake Pedal",
+        "Clutch",
+        "Accelerator"
+      ]
+    },
+    {
+      "id": "road-signs",
+      "label": "Road Signs",
+      "items": [
+        "Stop",
+        "Yield",
+        "No Parking",
+        "Pedestrian Crossing"
+      ]
+    },
+    {
+      "id": "car-exterior-parts",
+      "label": "Car Exterior Parts",
+      "items": [
+        "Bumper",
+        "Bonnet",
+        "Wing Mirror",
+        "Number Plate"
+      ]
+    },
+    {
+      "id": "road-surface-features",
+      "label": "Road Surface Features",
+      "items": [
+        "Pothole",
+        "Speed Bump",
+        "Manhole",
+        "Gutter"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "driving",
+    "categoryType": "place"
+  }
+}

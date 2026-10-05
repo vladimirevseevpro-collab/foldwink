@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1054",
+  "title": "Birthday party",
+  "difficulty": "medium",
+  "editorialSummary": "Bubbles suggests a drink and Banner an advert, but the party labels keep them as favours and decorations.",
+  "meta": {
+    "theme": "children's birthday",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "decorations",
+      "label": "Things hung up for a party",
+      "revealHint": "Decorations",
+      "items": [
+        "Balloons",
+        "Bunting",
+        "Streamers",
+        "Banner"
+      ]
+    },
+    {
+      "id": "treats",
+      "label": "Birthday treats",
+      "revealHint": "Treats",
+      "items": [
+        "Cake",
+        "Ice cream",
+        "Popcorn",
+        "Sweets"
+      ]
+    },
+    {
+      "id": "games",
+      "label": "Children's party games",
+      "revealHint": "Games",
+      "items": [
+        "Musical chairs",
+        "Piñata",
+        "Pass the parcel",
+        "Treasure hunt"
+      ]
+    },
+    {
+      "id": "favours",
+      "label": "Party favours",
+      "revealHint": "Favours",
+      "items": [
+        "Whistle",
+        "Bubbles",
+        "Party hat",
+        "Temporary tattoo"
+      ]
+    }
+  ]
+}

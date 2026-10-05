@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1095",
+  "title": "Ways to Reach",
+  "difficulty": "medium",
+  "editorialSummary": "Voicemail sounds like a call control, but it is a way to leave a message, so the messaging label is its only home.",
+  "meta": {
+    "theme": "communication",
+    "categoryType": "function"
+  },
+  "groups": [
+    {
+      "id": "call",
+      "label": "Call controls",
+      "revealHint": "Calls",
+      "items": [
+        "Dial",
+        "Answer",
+        "Hold",
+        "Mute"
+      ]
+    },
+    {
+      "id": "radio",
+      "label": "Radio basics",
+      "revealHint": "Radio",
+      "items": [
+        "Frequency",
+        "Antenna",
+        "Signal",
+        "Broadcast"
+      ]
+    },
+    {
+      "id": "letter",
+      "label": "Letter layout",
+      "revealHint": "Letters",
+      "items": [
+        "Salutation",
+        "Heading",
+        "Closing",
+        "Postscript"
+      ]
+    },
+    {
+      "id": "message",
+      "label": "Ways to message",
+      "revealHint": "Messaging",
+      "items": [
+        "Email",
+        "Chat",
+        "Voicemail",
+        "SMS"
+      ]
+    }
+  ]
+}

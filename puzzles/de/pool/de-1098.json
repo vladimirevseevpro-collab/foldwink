@@ -1,0 +1,50 @@
+{
+  "id": "de-1098",
+  "title": "Frischetheke",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Supermarkt-Abteilungen"
+  },
+  "groups": [
+    {
+      "id": "kaese",
+      "label": "An der Käsetheke",
+      "items": [
+        "Gouda",
+        "Camembert",
+        "Mozzarella",
+        "Emmentaler"
+      ]
+    },
+    {
+      "id": "wurst",
+      "label": "An der Wursttheke",
+      "items": [
+        "Salami",
+        "Schinken",
+        "Leberwurst",
+        "Wiener"
+      ]
+    },
+    {
+      "id": "fisch",
+      "label": "An der Fischtheke",
+      "items": [
+        "Lachs",
+        "Forelle",
+        "Kabeljau",
+        "Garnelen"
+      ]
+    },
+    {
+      "id": "brot",
+      "label": "An der Backtheke",
+      "items": [
+        "Baguette",
+        "Brezel",
+        "Croissant",
+        "Vollkornbrot"
+      ]
+    }
+  ]
+}

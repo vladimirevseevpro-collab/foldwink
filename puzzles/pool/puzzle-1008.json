@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1008",
+  "title": "Band Practice",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "marching-band",
+      "label": "Marching Band Lineup",
+      "items": [
+        "Trumpet",
+        "Trombone",
+        "Clarinet",
+        "Snare Drum"
+      ]
+    },
+    {
+      "id": "folk-instruments",
+      "label": "Folk Music Instruments",
+      "items": [
+        "Fiddle",
+        "Bodhran",
+        "Tin Whistle",
+        "Concertina"
+      ]
+    },
+    {
+      "id": "music-actions",
+      "label": "Music Actions",
+      "items": [
+        "Pluck",
+        "Strum",
+        "Blow",
+        "Press"
+      ]
+    },
+    {
+      "id": "concert-venue",
+      "label": "Concert Venue Items",
+      "items": [
+        "Stage",
+        "Spotlight",
+        "Amplifier",
+        "Music Stand"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "musical instruments",
+    "categoryType": "action"
+  }
+}

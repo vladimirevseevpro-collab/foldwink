@@ -1,0 +1,50 @@
+{
+  "id": "de-1107",
+  "title": "In der Wüste",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Wüste"
+  },
+  "groups": [
+    {
+      "id": "wuestentiere",
+      "label": "Wüstentiere",
+      "items": [
+        "Trampeltier",
+        "Dromedar",
+        "Skorpion",
+        "Wüstenfuchs"
+      ]
+    },
+    {
+      "id": "wuestenpflanzen",
+      "label": "Wüstenpflanzen",
+      "items": [
+        "Kaktus",
+        "Aloe",
+        "Agave",
+        "Yucca"
+      ]
+    },
+    {
+      "id": "wuestenarten",
+      "label": "Wüstenarten",
+      "items": [
+        "Sandwüste",
+        "Kieswüste",
+        "Felswüste",
+        "Salzwüste"
+      ]
+    },
+    {
+      "id": "wuestenlandschaft",
+      "label": "Wüstenlandschaft",
+      "items": [
+        "Sanddüne",
+        "Felsformation",
+        "Oase",
+        "Trockental"
+      ]
+    }
+  ]
+}

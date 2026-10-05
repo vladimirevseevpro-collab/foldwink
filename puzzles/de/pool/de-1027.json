@@ -1,0 +1,55 @@
+{
+  "id": "de-1027",
+  "title": "Unterwegs mit dem Auto",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "auto"
+  },
+  "editorialSummary": "Falsche Fährte: Der Wagenheber klingt nach einem Fahrzeugteil, ist aber ein Werkzeug zur Autoreparatur.",
+  "groups": [
+    {
+      "id": "karosserie",
+      "label": "Teile der Karosserie",
+      "revealHint": "KAROSSERIE",
+      "items": [
+        "Motorhaube",
+        "Kotflügel",
+        "Stoßstange",
+        "Seitentür"
+      ]
+    },
+    {
+      "id": "fluessig",
+      "label": "Betriebsflüssigkeiten im Auto",
+      "revealHint": "FLÜSSIG",
+      "items": [
+        "Motoröl",
+        "Kühlwasser",
+        "Scheibenwaschwasser",
+        "Bremsflüssigkeit"
+      ]
+    },
+    {
+      "id": "werkzeug",
+      "label": "Werkzeug für die Autoreparatur",
+      "revealHint": "WERKZEUG",
+      "items": [
+        "Wagenheber",
+        "Radkreuz",
+        "Drehmomentschlüssel",
+        "Schraubenschlüssel"
+      ]
+    },
+    {
+      "id": "innen",
+      "label": "Bedienelemente im Innenraum",
+      "revealHint": "INNEN",
+      "items": [
+        "Lenkrad",
+        "Schaltknüppel",
+        "Gaspedal",
+        "Handbremse"
+      ]
+    }
+  ]
+}

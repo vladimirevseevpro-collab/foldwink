@@ -1,0 +1,55 @@
+{
+  "id": "de-1051",
+  "title": "Räume zu Hause",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "wohnen"
+  },
+  "editorialSummary": "Falsche Fährte: Die Vitrine könnte im Arbeitszimmer stehen, gehört aber ins Esszimmer.",
+  "groups": [
+    {
+      "id": "arbeitszimmer",
+      "label": "Im Arbeitszimmer",
+      "revealHint": "BÜRO",
+      "items": [
+        "Schreibtisch",
+        "Bürostuhl",
+        "Aktenschrank",
+        "Whiteboard"
+      ]
+    },
+    {
+      "id": "kinderzimmer",
+      "label": "Im Kinderzimmer",
+      "revealHint": "KINDER",
+      "items": [
+        "Kinderbett",
+        "Wickelkommode",
+        "Spielteppich",
+        "Kuscheltier"
+      ]
+    },
+    {
+      "id": "esszimmer",
+      "label": "Im Esszimmer",
+      "revealHint": "ESSEN",
+      "items": [
+        "Esstisch",
+        "Stühle",
+        "Anrichte",
+        "Vitrine"
+      ]
+    },
+    {
+      "id": "flur",
+      "label": "Im Flur",
+      "revealHint": "FLUR",
+      "items": [
+        "Garderobe",
+        "Schuhregal",
+        "Spiegel",
+        "Schlüsselbrett"
+      ]
+    }
+  ]
+}

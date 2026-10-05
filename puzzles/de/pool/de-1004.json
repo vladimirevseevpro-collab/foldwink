@@ -1,0 +1,50 @@
+{
+  "id": "de-1004",
+  "title": "Große Wasser",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Gewässer"
+  },
+  "groups": [
+    {
+      "id": "ozeane",
+      "label": "Die großen Ozeane",
+      "items": [
+        "Atlantik",
+        "Pazifik",
+        "Indischer Ozean",
+        "Südlicher Ozean"
+      ]
+    },
+    {
+      "id": "binnen",
+      "label": "Binnenmeere",
+      "items": [
+        "Mittelmeer",
+        "Schwarzes Meer",
+        "Rotes Meer",
+        "Ostsee"
+      ]
+    },
+    {
+      "id": "fluesse",
+      "label": "Lange Flüsse Europas",
+      "items": [
+        "Donau",
+        "Rhein",
+        "Elbe",
+        "Wolga"
+      ]
+    },
+    {
+      "id": "kanaele",
+      "label": "Kanäle",
+      "items": [
+        "Suezkanal",
+        "Panamakanal",
+        "Nord-Ostsee-Kanal",
+        "Korinthkanal"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1034",
+  "title": "Peculiar Word Properties",
+  "difficulty": "hard",
+  "editorialSummary": "Each group gathers words that share one unusual written property, so the trick is that a card may look ordinary until you test it against the label's exact rule.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "palindrome",
+      "label": "Reads the Same Both Ways",
+      "items": [
+        "Level",
+        "Radar",
+        "Kayak",
+        "Civic"
+      ],
+      "revealHint": "PALINDROME"
+    },
+    {
+      "id": "contronym",
+      "label": "Opposite Meanings",
+      "items": [
+        "Cleave",
+        "Sanction",
+        "Dust",
+        "Oversight"
+      ],
+      "revealHint": "CONTRONYM"
+    },
+    {
+      "id": "heteronym",
+      "label": "Two Pronunciations",
+      "items": [
+        "Lead",
+        "Wind",
+        "Tear",
+        "Bow"
+      ],
+      "revealHint": "HETERONYM"
+    },
+    {
+      "id": "onomatopoeia",
+      "label": "Imitate Sounds",
+      "items": [
+        "Buzz",
+        "Hiss",
+        "Bang",
+        "Splash"
+      ],
+      "revealHint": "SOUND WORD"
+    }
+  ]
+}

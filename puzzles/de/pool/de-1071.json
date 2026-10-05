@@ -1,0 +1,56 @@
+{
+  "id": "de-1071",
+  "title": "Erster und letzter",
+  "difficulty": "hard",
+  "editorialSummary": "Löwenzahn sieht aus wie eine Pflanze und nicht wie ein Körperteil, gehört aber zur -zahn-Reihe; Aula und Ebene locken mit gleichem Anfangs- und Endbuchstaben.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay"
+  },
+  "groups": [
+    {
+      "id": "nach",
+      "label": "Beginnt mit NACH-",
+      "items": [
+        "Nachricht",
+        "Nachteil",
+        "Nachname",
+        "Nachwuchs"
+      ],
+      "revealHint": "NACH-"
+    },
+    {
+      "id": "bar",
+      "label": "Endet auf -bar",
+      "items": [
+        "essbar",
+        "trinkbar",
+        "haltbar",
+        "sichtbar"
+      ],
+      "revealHint": "-bar"
+    },
+    {
+      "id": "rahmen",
+      "label": "Gleicher Anfangs- und Endbuchstabe",
+      "items": [
+        "Aula",
+        "Ebene",
+        "Level",
+        "Tritt"
+      ],
+      "revealHint": "Rand-Gleichheit"
+    },
+    {
+      "id": "zahn",
+      "label": "Endet auf -zahn",
+      "items": [
+        "Backenzahn",
+        "Eckzahn",
+        "Schneidezahn",
+        "Löwenzahn"
+      ],
+      "revealHint": "-zahn"
+    }
+  ]
+}

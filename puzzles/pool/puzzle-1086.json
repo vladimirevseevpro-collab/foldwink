@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1086",
+  "title": "Tall Tales",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "mythic-realms",
+      "label": "Mythic Realms",
+      "items": [
+        "Olympus",
+        "Asgard",
+        "Atlantis",
+        "Avalon"
+      ]
+    },
+    {
+      "id": "legendary-weapons",
+      "label": "Legendary Weapons",
+      "items": [
+        "Excalibur",
+        "Mjolnir",
+        "Trident",
+        "Thunderbolt"
+      ]
+    },
+    {
+      "id": "enchanted-beings",
+      "label": "Enchanted Beings",
+      "items": [
+        "Elf",
+        "Dwarf",
+        "Gnome",
+        "Troll"
+      ]
+    },
+    {
+      "id": "fortune-telling-words",
+      "label": "Fortune-Telling Words",
+      "items": [
+        "Omen",
+        "Oracle",
+        "Prophecy",
+        "Destiny"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "mythology",
+    "categoryType": "classification"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1007",
+  "title": "Beach and Bling",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "swimwear",
+      "label": "Swimwear",
+      "items": [
+        "Bikini",
+        "Trunks",
+        "Swimsuit",
+        "Rash Guard"
+      ]
+    },
+    {
+      "id": "jewelry-pieces",
+      "label": "Jewelry Pieces",
+      "items": [
+        "Necklace",
+        "Bracelet",
+        "Earring",
+        "Ring"
+      ]
+    },
+    {
+      "id": "cold-weather-gear",
+      "label": "Cold Weather Gear",
+      "items": [
+        "Mittens",
+        "Earmuffs",
+        "Snow Pants",
+        "Thermal Socks"
+      ]
+    },
+    {
+      "id": "gemstones",
+      "label": "Birthstones",
+      "items": [
+        "Garnet",
+        "Amethyst",
+        "Topaz",
+        "Opal"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "clothing and accessories",
+    "categoryType": "classification"
+  }
+}

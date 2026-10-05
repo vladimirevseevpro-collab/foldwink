@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1009",
+  "title": "Stormy Skies",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "weather-station",
+      "label": "Weather Station Tools",
+      "items": [
+        "Thermometer",
+        "Barometer",
+        "Anemometer",
+        "Rain Gauge"
+      ]
+    },
+    {
+      "id": "natural-catastrophes",
+      "label": "Natural Catastrophes",
+      "items": [
+        "Earthquake",
+        "Volcano",
+        "Tsunami",
+        "Avalanche"
+      ]
+    },
+    {
+      "id": "forest-trees",
+      "label": "Forest Trees",
+      "items": [
+        "Cedar",
+        "Willow",
+        "Elm",
+        "Spruce"
+      ]
+    },
+    {
+      "id": "garden-flowers",
+      "label": "Garden Flowers",
+      "items": [
+        "Rose",
+        "Tulip",
+        "Daisy",
+        "Sunflower"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "weather and nature",
+    "categoryType": "place"
+  }
+}

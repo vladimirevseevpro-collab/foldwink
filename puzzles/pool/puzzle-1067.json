@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1067",
+  "title": "Growing Up",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "relatives-by-blood",
+      "label": "Relatives by Blood",
+      "items": [
+        "Grandmother",
+        "Grandfather",
+        "Aunt",
+        "Niece"
+      ]
+    },
+    {
+      "id": "relatives-by-marriage",
+      "label": "Relatives by Marriage",
+      "items": [
+        "Stepmother",
+        "Stepfather",
+        "Daughter-in-law",
+        "Son-in-law"
+      ]
+    },
+    {
+      "id": "relationship-stages",
+      "label": "Relationship Stages",
+      "items": [
+        "Single",
+        "Dating",
+        "Engaged",
+        "Married"
+      ]
+    },
+    {
+      "id": "family-events",
+      "label": "Family Events",
+      "items": [
+        "Baby Shower",
+        "Christening",
+        "Birthday Party",
+        "Anniversary"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "family",
+    "categoryType": "classification"
+  }
+}

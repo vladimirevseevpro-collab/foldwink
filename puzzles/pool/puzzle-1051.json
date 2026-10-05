@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1051",
+  "title": "Craft room",
+  "difficulty": "medium",
+  "editorialSummary": "Beads tempt the scrapbooking group, but the jewellery-making label is the only craft here that takes them.",
+  "meta": {
+    "theme": "making things",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "crossstitch",
+      "label": "Cross-stitch supplies",
+      "revealHint": "Cross-stitch",
+      "items": [
+        "Hoop",
+        "Pattern",
+        "Floss",
+        "Needle"
+      ]
+    },
+    {
+      "id": "scrapbook",
+      "label": "Scrapbooking items",
+      "revealHint": "Scrapbooking",
+      "items": [
+        "Stickers",
+        "Washi tape",
+        "Photos",
+        "Album"
+      ]
+    },
+    {
+      "id": "candles",
+      "label": "Candle making supplies",
+      "revealHint": "Candles",
+      "items": [
+        "Wax",
+        "Wick",
+        "Mould",
+        "Fragrance"
+      ]
+    },
+    {
+      "id": "jewellery",
+      "label": "Jewellery making supplies",
+      "revealHint": "Beading",
+      "items": [
+        "Beads",
+        "Wire",
+        "Clasp",
+        "Pliers"
+      ]
+    }
+  ]
+}

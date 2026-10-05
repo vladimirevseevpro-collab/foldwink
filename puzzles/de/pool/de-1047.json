@@ -1,0 +1,55 @@
+{
+  "id": "de-1047",
+  "title": "Bräuche im Kalender",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "braeuche"
+  },
+  "editorialSummary": "Falsche Fährte: Feuerwerk und Osterfeuer wirken verwandt, gehören aber zu Silvester und Ostern.",
+  "groups": [
+    {
+      "id": "weihnachten",
+      "label": "Weihnachtsbräuche",
+      "revealHint": "WEIHNACHTEN",
+      "items": [
+        "Adventskranz",
+        "Weihnachtsbaum",
+        "Krippe",
+        "Geschenke"
+      ]
+    },
+    {
+      "id": "ostern",
+      "label": "Osterbräuche",
+      "revealHint": "OSTERN",
+      "items": [
+        "Ostereier",
+        "Osterhase",
+        "Osterfeuer",
+        "Osterlamm"
+      ]
+    },
+    {
+      "id": "silvester",
+      "label": "Silvesterbräuche",
+      "revealHint": "SILVESTER",
+      "items": [
+        "Bleigießen",
+        "Feuerwerk",
+        "Sekt",
+        "Glücksbringer"
+      ]
+    },
+    {
+      "id": "rosenmontag",
+      "label": "Am Rosenmontag",
+      "revealHint": "KARNEVAL",
+      "items": [
+        "Umzugswagen",
+        "Kamelle",
+        "Kostüm",
+        "Büttenrede"
+      ]
+    }
+  ]
+}

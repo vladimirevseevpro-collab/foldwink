@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1074",
+  "title": "Kitchen Duty",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "small-kitchen-appliances",
+      "label": "Small Kitchen Appliances",
+      "items": [
+        "Coffee Maker",
+        "Food Processor",
+        "Rice Cooker",
+        "Slow Cooker"
+      ]
+    },
+    {
+      "id": "kitchen-chores",
+      "label": "Kitchen Chores",
+      "items": [
+        "Peeling",
+        "Chopping",
+        "Stirring",
+        "Serving"
+      ]
+    },
+    {
+      "id": "laundry-room-items",
+      "label": "Laundry Room Items",
+      "items": [
+        "Washing Machine",
+        "Dryer",
+        "Laundry Basket",
+        "Clothesline"
+      ]
+    },
+    {
+      "id": "bathroom-chores",
+      "label": "Bathroom Chores",
+      "items": [
+        "Scrubbing the Tub",
+        "Cleaning the Sink",
+        "Scouring the Toilet",
+        "Wiping the Mirror"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "household",
+    "categoryType": "classification"
+  }
+}

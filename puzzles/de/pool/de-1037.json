@@ -1,0 +1,55 @@
+{
+  "id": "de-1037",
+  "title": "Fasern und Gewebe",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "material"
+  },
+  "editorialSummary": "Falsche Fährte: Seide wirkt wie eine Kunstfaser, stammt aber von der Seidenraupe; Hanf und Jute sind pflanzliche Fasern und keine synthetischen.",
+  "groups": [
+    {
+      "id": "tierfaser",
+      "label": "Tierische Fasern",
+      "revealHint": "TIERFASER",
+      "items": [
+        "Wolle",
+        "Seide",
+        "Kaschmir",
+        "Mohair"
+      ]
+    },
+    {
+      "id": "pflanzenfaser",
+      "label": "Pflanzliche Fasern",
+      "revealHint": "PFLANZENFASER",
+      "items": [
+        "Baumwolle",
+        "Leinen",
+        "Hanf",
+        "Jute"
+      ]
+    },
+    {
+      "id": "kunstfaser",
+      "label": "Synthetische Fasern",
+      "revealHint": "KUNSTFASER",
+      "items": [
+        "Polyester",
+        "Polyacryl",
+        "Elasthan",
+        "Nylon"
+      ]
+    },
+    {
+      "id": "veredelung",
+      "label": "Verfahren der Stoffveredelung",
+      "revealHint": "VEREDELUNG",
+      "items": [
+        "Färben",
+        "Bleichen",
+        "Bedrucken",
+        "Walken"
+      ]
+    }
+  ]
+}

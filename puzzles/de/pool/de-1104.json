@@ -1,0 +1,50 @@
+{
+  "id": "de-1104",
+  "title": "Am Korallenriff",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Korallenriff"
+  },
+  "groups": [
+    {
+      "id": "riffische",
+      "label": "Fische am Korallenriff",
+      "items": [
+        "Clownfisch",
+        "Papageifisch",
+        "Kaiserfisch",
+        "Doktorfisch"
+      ]
+    },
+    {
+      "id": "korallen",
+      "label": "Korallenarten",
+      "items": [
+        "Steinkoralle",
+        "Weichkoralle",
+        "Feuerkoralle",
+        "Hirnkoralle"
+      ]
+    },
+    {
+      "id": "zahnwale",
+      "label": "Zahnwale",
+      "items": [
+        "Großer Tümmler",
+        "Schwertwal",
+        "Beluga",
+        "Narwal"
+      ]
+    },
+    {
+      "id": "schildkroeten",
+      "label": "Meeresschildkröten",
+      "items": [
+        "Lederschildkröte",
+        "Grüne Meeresschildkröte",
+        "Echte Karettschildkröte",
+        "Unechte Karettschildkröte"
+      ]
+    }
+  ]
+}

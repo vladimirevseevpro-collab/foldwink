@@ -1,0 +1,56 @@
+{
+  "id": "de-1020",
+  "title": "Palindrom und Verwandtes",
+  "difficulty": "hard",
+  "editorialSummary": "One group reads the same both ways, one shares the prefix VOR, one are diminutives on -chen and one only sound like a different word; the familiar -chen words are the false trail.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay"
+  },
+  "groups": [
+    {
+      "id": "palindrom",
+      "label": "Vorwärts wie rückwärts",
+      "items": [
+        "Otto",
+        "Anna",
+        "Ebbe",
+        "Uhu"
+      ],
+      "revealHint": "Palindrom"
+    },
+    {
+      "id": "vor",
+      "label": "Beginnt mit VOR-",
+      "items": [
+        "Vorsicht",
+        "Vorteil",
+        "Vorgang",
+        "Vorbild"
+      ],
+      "revealHint": "VOR-"
+    },
+    {
+      "id": "chen",
+      "label": "Verkleinerung mit -chen",
+      "items": [
+        "Mädchen",
+        "Brötchen",
+        "Kätzchen",
+        "Häuschen"
+      ],
+      "revealHint": "-chen"
+    },
+    {
+      "id": "homophon",
+      "label": "Klingt gleich, heißt anders",
+      "items": [
+        "Lehre",
+        "fiel",
+        "Stiel",
+        "Saite"
+      ],
+      "revealHint": "klingt ähnlich"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1127",
+  "title": "Ways to Cook",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "dry-heat-methods",
+      "label": "Dry Heat Methods",
+      "items": [
+        "Bake",
+        "Roast",
+        "Grill",
+        "Char"
+      ]
+    },
+    {
+      "id": "moist-heat-methods",
+      "label": "Moist Heat Methods",
+      "items": [
+        "Boil",
+        "Steam",
+        "Poach",
+        "Blanch"
+      ]
+    },
+    {
+      "id": "fat-based-methods",
+      "label": "Fat-Based Methods",
+      "items": [
+        "Fry",
+        "Sauté",
+        "Sear",
+        "Deep-Fry"
+      ]
+    },
+    {
+      "id": "dough-actions",
+      "label": "Dough Actions",
+      "items": [
+        "Knead",
+        "Roll",
+        "Shape",
+        "Punch"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "cooking verbs",
+    "categoryType": "action"
+  }
+}

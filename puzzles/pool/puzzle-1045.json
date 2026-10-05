@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1045",
+  "title": "Winter check-up",
+  "difficulty": "medium",
+  "editorialSummary": "Cough syrup sounds like a cold symptom, but once the four labels are read it can only sit with the medicines.",
+  "meta": {
+    "theme": "cold and flu season",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "symptoms",
+      "label": "Signs of a cold",
+      "revealHint": "Cold",
+      "items": [
+        "Sneezing",
+        "Sore throat",
+        "Blocked nose",
+        "Chills"
+      ]
+    },
+    {
+      "id": "medicines",
+      "label": "Pharmacy medicines",
+      "revealHint": "Doses",
+      "items": [
+        "Painkillers",
+        "Antibiotics",
+        "Vitamins",
+        "Cough syrup"
+      ]
+    },
+    {
+      "id": "staff",
+      "label": "Clinic staff",
+      "revealHint": "Staff",
+      "items": [
+        "Dentist",
+        "Surgeon",
+        "Midwife",
+        "Pharmacist"
+      ]
+    },
+    {
+      "id": "checkup",
+      "label": "Check-up steps",
+      "revealHint": "Screening",
+      "items": [
+        "Weighing",
+        "Blood pressure",
+        "Urine test",
+        "X-ray"
+      ]
+    }
+  ]
+}

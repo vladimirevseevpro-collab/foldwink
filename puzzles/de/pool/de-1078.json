@@ -1,0 +1,55 @@
+{
+  "id": "de-1078",
+  "title": "Strandfunde und Meer",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "meer"
+  },
+  "editorialSummary": "Falsche Fährte: Bernstein sieht aus wie ein gewöhnlicher Stein, wurde aber vom Meer angespült.",
+  "groups": [
+    {
+      "id": "wellen",
+      "label": "Was die Wellen an den Strand spülen",
+      "revealHint": "WELLEN",
+      "items": [
+        "Seegras",
+        "Treibholz",
+        "Bernstein",
+        "Muschelschale"
+      ]
+    },
+    {
+      "id": "boote",
+      "label": "Kleine Boote am Strand",
+      "revealHint": "BOOTE",
+      "items": [
+        "Segelboot",
+        "Ruderboot",
+        "Schlauchboot",
+        "Katamaran"
+      ]
+    },
+    {
+      "id": "navigieren",
+      "label": "Hilfsmittel zum Navigieren auf See",
+      "revealHint": "NAVIGATION",
+      "items": [
+        "Kompass",
+        "Seekarte",
+        "GPS-Gerät",
+        "Fernglas"
+      ]
+    },
+    {
+      "id": "wetterzeichen",
+      "label": "Wetterzeichen über dem Meer",
+      "revealHint": "WETTER",
+      "items": [
+        "Sturmwolke",
+        "Nebelbank",
+        "Gewitterfront",
+        "Regenschauer"
+      ]
+    }
+  ]
+}

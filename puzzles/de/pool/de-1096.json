@@ -1,0 +1,50 @@
+{
+  "id": "de-1096",
+  "title": "Kaffeezeit",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Tee- und Kaffeekultur"
+  },
+  "groups": [
+    {
+      "id": "getraenke",
+      "label": "Kaffeegetränke",
+      "items": [
+        "Espresso",
+        "Cappuccino",
+        "Latte macchiato",
+        "Americano"
+      ]
+    },
+    {
+      "id": "zubehoer",
+      "label": "Kaffeezubehör",
+      "items": [
+        "Kaffeemühle",
+        "Kaffeefilter",
+        "Kaffeekanne",
+        "Espressokocher"
+      ]
+    },
+    {
+      "id": "kuchen",
+      "label": "Kuchen zum Kaffee",
+      "items": [
+        "Marmorkuchen",
+        "Zitronenkuchen",
+        "Nusskuchen",
+        "Gewürzkuchen"
+      ]
+    },
+    {
+      "id": "laender",
+      "label": "Kaffeeanbau-Länder",
+      "items": [
+        "Brasilien",
+        "Kolumbien",
+        "Äthiopien",
+        "Vietnam"
+      ]
+    }
+  ]
+}

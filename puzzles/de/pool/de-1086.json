@@ -1,0 +1,55 @@
+{
+  "id": "de-1086",
+  "title": "Sagenhafte Wesen",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "fabelwesen"
+  },
+  "editorialSummary": "Falsche Fährte: Der Vampir kann sich in eine Fledermaus verwandeln, zählt aber zu den Nachtwesen.",
+  "groups": [
+    {
+      "id": "gefluegelt",
+      "label": "Geflügelte Fabelwesen",
+      "revealHint": "FLÜGEL",
+      "items": [
+        "Phönix",
+        "Greif",
+        "Pegasus",
+        "Harpyie"
+      ]
+    },
+    {
+      "id": "meer",
+      "label": "Wesen der Meere",
+      "revealHint": "MEER",
+      "items": [
+        "Nixe",
+        "Nereide",
+        "Triton",
+        "Krake"
+      ]
+    },
+    {
+      "id": "wald",
+      "label": "Wesen des Waldes",
+      "revealHint": "WALD",
+      "items": [
+        "Elfe",
+        "Troll",
+        "Faun",
+        "Dryade"
+      ]
+    },
+    {
+      "id": "nacht",
+      "label": "Wesen der Nacht",
+      "revealHint": "NACHT",
+      "items": [
+        "Vampir",
+        "Werwolf",
+        "Gespenst",
+        "Nachtmahr"
+      ]
+    }
+  ]
+}

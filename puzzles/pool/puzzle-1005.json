@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1005",
+  "title": "Wheels and Motors",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "bikes-scooters",
+      "label": "Bikes and Scooters",
+      "items": [
+        "Bicycle",
+        "Scooter",
+        "Moped",
+        "Unicycle"
+      ]
+    },
+    {
+      "id": "site-vehicles",
+      "label": "Building Site Vehicles",
+      "items": [
+        "Backhoe",
+        "Forklift",
+        "Road Roller",
+        "Dump Truck"
+      ]
+    },
+    {
+      "id": "spacecraft",
+      "label": "Spacecraft",
+      "items": [
+        "Rocket",
+        "Space Shuttle",
+        "Satellite",
+        "Space Probe"
+      ]
+    },
+    {
+      "id": "bike-components",
+      "label": "Bike Components",
+      "items": [
+        "Handlebar",
+        "Pedal",
+        "Chain",
+        "Saddle"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "transport",
+    "categoryType": "classification"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-1035",
+  "title": "Nützlinge und Schädlinge",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "garten"
+  },
+  "editorialSummary": "Falsche Fährte: Der Kartoffelkäfer ist wie der Marienkäfer ein Käfer und die Schwebfliege sieht wie eine Biene aus, doch nur die einen nützen, die anderen schaden.",
+  "groups": [
+    {
+      "id": "nuetzlinge",
+      "label": "Tiere, die Schädlinge fressen",
+      "revealHint": "NÜTZLICH",
+      "items": [
+        "Marienkäfer",
+        "Laufkäfer",
+        "Kreuzspinne",
+        "Ohrwurm"
+      ]
+    },
+    {
+      "id": "schaedlinge",
+      "label": "Schädlinge an Nutzpflanzen",
+      "revealHint": "SCHÄDLING",
+      "items": [
+        "Blattlaus",
+        "Weiße Fliege",
+        "Spinnmilbe",
+        "Kartoffelkäfer"
+      ]
+    },
+    {
+      "id": "bestaeuber",
+      "label": "Bestäuber im Obstgarten",
+      "revealHint": "BESTÄUBER",
+      "items": [
+        "Honigbiene",
+        "Erdhummel",
+        "Mauerbiene",
+        "Schwebfliege"
+      ]
+    },
+    {
+      "id": "wachstum",
+      "label": "Was Pflanzen zum Wachsen brauchen",
+      "revealHint": "WACHSTUM",
+      "items": [
+        "Licht",
+        "Wasser",
+        "Nährstoffe",
+        "Wärme"
+      ]
+    }
+  ]
+}

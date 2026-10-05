@@ -1,0 +1,50 @@
+{
+  "id": "de-1094",
+  "title": "Süßwaren",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Bäckerei und Desserts"
+  },
+  "groups": [
+    {
+      "id": "fuellungen",
+      "label": "Pralinenfüllungen",
+      "items": [
+        "Nougat",
+        "Marzipan",
+        "Karamell",
+        "Kokos"
+      ]
+    },
+    {
+      "id": "schokosorten",
+      "label": "Schokoladensorten",
+      "items": [
+        "Vollmilchschokolade",
+        "Zartbitterschokolade",
+        "Weiße Schokolade",
+        "Haselnussschokolade"
+      ]
+    },
+    {
+      "id": "formen",
+      "label": "Pralinenformen",
+      "items": [
+        "Kugel",
+        "Herz",
+        "Quadrat",
+        "Stern"
+      ]
+    },
+    {
+      "id": "regal",
+      "label": "Süßigkeiten im Regal",
+      "items": [
+        "Bonbon",
+        "Lutscher",
+        "Gummibärchen",
+        "Lakritz"
+      ]
+    }
+  ]
+}

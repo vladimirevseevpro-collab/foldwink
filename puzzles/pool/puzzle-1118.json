@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1118",
+  "title": "By the Riverside",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "lake-birds",
+      "label": "Lake Birds",
+      "items": [
+        "Swan",
+        "Mallard",
+        "Grebe",
+        "Coot"
+      ]
+    },
+    {
+      "id": "river-features",
+      "label": "River Landscapes",
+      "items": [
+        "Rapids",
+        "Delta",
+        "Meander",
+        "Estuary"
+      ]
+    },
+    {
+      "id": "fishing-tackle",
+      "label": "Fishing Tackle",
+      "items": [
+        "Rod",
+        "Reel",
+        "Hook",
+        "Bobber"
+      ]
+    },
+    {
+      "id": "riverbank-plants",
+      "label": "Riverbank Plants",
+      "items": [
+        "Reed",
+        "Cattail",
+        "Willow",
+        "Lily"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "rivers and lakes",
+    "categoryType": "classification"
+  }
+}

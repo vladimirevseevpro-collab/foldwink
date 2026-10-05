@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1038",
+  "title": "Farmyard round",
+  "difficulty": "medium",
+  "editorialSummary": "Farm classification where Egg and Wool tempt the animal groups they come from, but only the animal labels name creatures, so both stay with the products.",
+  "meta": {
+    "theme": "farm",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "dairy",
+      "label": "Dairy animals",
+      "revealHint": "Milked",
+      "items": [
+        "Cow",
+        "Goat",
+        "Sheep",
+        "Buffalo"
+      ]
+    },
+    {
+      "id": "birds",
+      "label": "Barnyard birds",
+      "revealHint": "Coop",
+      "items": [
+        "Chicken",
+        "Duck",
+        "Goose",
+        "Guinea fowl"
+      ]
+    },
+    {
+      "id": "work",
+      "label": "Work animals",
+      "revealHint": "Draft",
+      "items": [
+        "Horse",
+        "Donkey",
+        "Ox",
+        "Mule"
+      ]
+    },
+    {
+      "id": "product",
+      "label": "Farm products",
+      "revealHint": "Fresh",
+      "items": [
+        "Milk",
+        "Egg",
+        "Wool",
+        "Honey"
+      ]
+    }
+  ]
+}

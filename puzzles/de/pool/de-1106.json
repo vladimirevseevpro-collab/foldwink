@@ -1,0 +1,50 @@
+{
+  "id": "de-1106",
+  "title": "Waldbewohner",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Waldtiere und -pflanzen"
+  },
+  "groups": [
+    {
+      "id": "spechte",
+      "label": "Spechtarten",
+      "items": [
+        "Buntspecht",
+        "Grünspecht",
+        "Schwarzspecht",
+        "Mittelspecht"
+      ]
+    },
+    {
+      "id": "eulen",
+      "label": "Eulenarten",
+      "items": [
+        "Waldkauz",
+        "Waldohreule",
+        "Sumpfohreule",
+        "Schleiereule"
+      ]
+    },
+    {
+      "id": "pilze",
+      "label": "Waldpilze",
+      "items": [
+        "Steinpilz",
+        "Pfifferling",
+        "Fliegenpilz",
+        "Maronenröhrling"
+      ]
+    },
+    {
+      "id": "bodenpflanzen",
+      "label": "Pflanzen am Waldboden",
+      "items": [
+        "Farn",
+        "Moos",
+        "Walderdbeere",
+        "Sauerklee"
+      ]
+    }
+  ]
+}

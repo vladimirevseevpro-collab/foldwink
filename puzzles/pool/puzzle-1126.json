@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1126",
+  "title": "Verbs in the Kitchen",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "cutting-techniques",
+      "label": "Cutting Techniques",
+      "items": [
+        "Chop",
+        "Slice",
+        "Dice",
+        "Carve"
+      ]
+    },
+    {
+      "id": "mixing-techniques",
+      "label": "Mixing Techniques",
+      "items": [
+        "Stir",
+        "Whisk",
+        "Fold",
+        "Whip"
+      ]
+    },
+    {
+      "id": "heating-techniques",
+      "label": "Heating Techniques",
+      "items": [
+        "Boil",
+        "Simmer",
+        "Fry",
+        "Roast"
+      ]
+    },
+    {
+      "id": "prep-techniques",
+      "label": "Prep Techniques",
+      "items": [
+        "Peel",
+        "Grate",
+        "Knead",
+        "Season"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "cooking verbs",
+    "categoryType": "action"
+  }
+}

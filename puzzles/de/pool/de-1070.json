@@ -1,0 +1,56 @@
+{
+  "id": "de-1070",
+  "title": "Gemischte Wortbausteine",
+  "difficulty": "hard",
+  "editorialSummary": "Ausgang wurde gemieden, weil er AUS- und -gang zugleich wäre; so bleibt die -gang-Reihe um Eingang und Untergang der scheinbar naheliegende, aber falsche Anschluss an die AUS-Vorsilbe.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay"
+  },
+  "groups": [
+    {
+      "id": "aus",
+      "label": "Beginnt mit AUS-",
+      "items": [
+        "Ausflug",
+        "Ausnahme",
+        "Ausdruck",
+        "Ausweis"
+      ],
+      "revealHint": "AUS-"
+    },
+    {
+      "id": "gang",
+      "label": "Endet auf -gang",
+      "items": [
+        "Eingang",
+        "Übergang",
+        "Durchgang",
+        "Untergang"
+      ],
+      "revealHint": "-gang"
+    },
+    {
+      "id": "doppel-t",
+      "label": "Enthält Doppel-T",
+      "items": [
+        "Bitte",
+        "Mitte",
+        "Latte",
+        "Mutter"
+      ],
+      "revealHint": "Doppel-T"
+    },
+    {
+      "id": "voll",
+      "label": "Endet auf -voll",
+      "items": [
+        "liebevoll",
+        "hoffnungsvoll",
+        "kraftvoll",
+        "sinnvoll"
+      ],
+      "revealHint": "-voll"
+    }
+  ]
+}

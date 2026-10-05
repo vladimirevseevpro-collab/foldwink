@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1107",
+  "title": "Sweet Bakery",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "bakery-breads",
+      "label": "Bakery Breads",
+      "items": [
+        "Baguette",
+        "Sourdough Loaf",
+        "Rye Bread",
+        "Ciabatta"
+      ]
+    },
+    {
+      "id": "pastry-case",
+      "label": "Pastry Case",
+      "items": [
+        "Croissant",
+        "Danish",
+        "Doughnut",
+        "Eclair"
+      ]
+    },
+    {
+      "id": "cake-decorating",
+      "label": "Cake Decorating",
+      "items": [
+        "Frosting",
+        "Sprinkles",
+        "Icing Bag",
+        "Cake Topper"
+      ]
+    },
+    {
+      "id": "baking-basics",
+      "label": "Dough Ingredients",
+      "items": [
+        "Flour",
+        "Yeast",
+        "Sugar",
+        "Butter"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "bakery and desserts",
+    "categoryType": "classification"
+  }
+}

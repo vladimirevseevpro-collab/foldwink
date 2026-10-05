@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1020",
+  "title": "Craft Table",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "sewing-notions",
+      "label": "Sewing Notions",
+      "items": [
+        "Thimble",
+        "Pins",
+        "Thread",
+        "Buttons"
+      ]
+    },
+    {
+      "id": "knitting-gear",
+      "label": "Knitting Gear",
+      "items": [
+        "Yarn",
+        "Knitting Needles",
+        "Stitch Holder",
+        "Row Counter"
+      ]
+    },
+    {
+      "id": "art-studio-gear",
+      "label": "Art Studio Gear",
+      "items": [
+        "Easel",
+        "Palette",
+        "Sketchbook",
+        "Paintbrush"
+      ]
+    },
+    {
+      "id": "pottery-gear",
+      "label": "Pottery Gear",
+      "items": [
+        "Clay",
+        "Potter's Wheel",
+        "Kiln",
+        "Glaze"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "crafts",
+    "categoryType": "classification"
+  }
+}

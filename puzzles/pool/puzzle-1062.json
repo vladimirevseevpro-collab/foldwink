@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1062",
+  "title": "Bargain hunt",
+  "difficulty": "medium",
+  "editorialSummary": "Haggle reads like a money verb, but the shopping actions label is the only defensible home once the money verbs label is read.",
+  "meta": {
+    "theme": "money and shopping",
+    "categoryType": "action"
+  },
+  "groups": [
+    {
+      "id": "highstreet",
+      "label": "High street shops",
+      "revealHint": "Shops",
+      "items": [
+        "Butcher",
+        "Baker",
+        "Florist",
+        "Chemist"
+      ]
+    },
+    {
+      "id": "moneyverbs",
+      "label": "Money verbs",
+      "revealHint": "Money acts",
+      "items": [
+        "Save",
+        "Spend",
+        "Borrow",
+        "Lend"
+      ]
+    },
+    {
+      "id": "shopverbs",
+      "label": "Shopping actions",
+      "revealHint": "Shopping",
+      "items": [
+        "Browse",
+        "Compare",
+        "Haggle",
+        "Return"
+      ]
+    },
+    {
+      "id": "purse",
+      "label": "Purse contents",
+      "revealHint": "In a purse",
+      "items": [
+        "Cash",
+        "Coins",
+        "Receipt",
+        "Coupon"
+      ]
+    }
+  ]
+}

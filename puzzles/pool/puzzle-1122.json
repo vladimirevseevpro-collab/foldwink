@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1122",
+  "title": "Reception night",
+  "difficulty": "medium",
+  "editorialSummary": "Lemon slice and lime wedge look like drinks, but the drinks label is the poured glass; these are cocktail garnishes.",
+  "meta": {
+    "theme": "wedding reception",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "dances",
+      "label": "Classic ballroom dances",
+      "revealHint": "Dances",
+      "items": [
+        "Waltz",
+        "Foxtrot",
+        "Cha-cha",
+        "Tango"
+      ]
+    },
+    {
+      "id": "drinks",
+      "label": "Evening party drinks",
+      "revealHint": "Drinks",
+      "items": [
+        "Champagne",
+        "Fruit punch",
+        "Sparkling cider",
+        "Ginger ale"
+      ]
+    },
+    {
+      "id": "props",
+      "label": "Photo booth props",
+      "revealHint": "Props",
+      "items": [
+        "Moustache",
+        "Feather boa",
+        "Top hat",
+        "Giant glasses"
+      ]
+    },
+    {
+      "id": "garnish",
+      "label": "Cocktail garnishes",
+      "revealHint": "Garnish",
+      "items": [
+        "Lemon slice",
+        "Lime wedge",
+        "Maraschino cherry",
+        "Mint sprig"
+      ]
+    }
+  ]
+}

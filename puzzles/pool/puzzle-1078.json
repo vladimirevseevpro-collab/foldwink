@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1078",
+  "title": "Medicine Shelf",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "vitamin-letters",
+      "label": "Vitamin Letters",
+      "items": [
+        "Vitamin A",
+        "Vitamin B12",
+        "Vitamin C",
+        "Vitamin D"
+      ]
+    },
+    {
+      "id": "antibiotic-names",
+      "label": "Antibiotic Names",
+      "items": [
+        "Penicillin",
+        "Amoxicillin",
+        "Erythromycin",
+        "Tetracycline"
+      ]
+    },
+    {
+      "id": "allergy-reactions",
+      "label": "Allergy Reactions",
+      "items": [
+        "Sneezing",
+        "Itching",
+        "Swelling",
+        "Watery Eyes"
+      ]
+    },
+    {
+      "id": "vital-measurements",
+      "label": "Vital Measurements",
+      "items": [
+        "Pulse",
+        "Blood Pressure",
+        "Temperature",
+        "Oxygen Level"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "medicine",
+    "categoryType": "attribute"
+  }
+}

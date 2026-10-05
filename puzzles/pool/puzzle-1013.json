@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1013",
+  "title": "Looking Good",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "hair-care-products",
+      "label": "Hair Care Products",
+      "items": [
+        "Conditioner",
+        "Hair Gel",
+        "Hairspray",
+        "Hair Oil"
+      ]
+    },
+    {
+      "id": "skin-complaints",
+      "label": "Skin Complaints",
+      "items": [
+        "Acne",
+        "Rash",
+        "Blister",
+        "Sunburn"
+      ]
+    },
+    {
+      "id": "makeup-items",
+      "label": "Makeup Items",
+      "items": [
+        "Mascara",
+        "Lipstick",
+        "Blush",
+        "Eyeliner"
+      ]
+    },
+    {
+      "id": "grooming-tools",
+      "label": "Grooming Tools",
+      "items": [
+        "Razor",
+        "Comb",
+        "Nail Clipper",
+        "Nail File"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "personal care",
+    "categoryType": "classification"
+  }
+}

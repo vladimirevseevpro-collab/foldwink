@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1077",
+  "title": "Dance School",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "ballet-steps",
+      "label": "Ballet Steps",
+      "items": [
+        "Plie",
+        "Pirouette",
+        "Arabesque",
+        "Jete"
+      ]
+    },
+    {
+      "id": "ballroom-latin-dances",
+      "label": "Ballroom Latin Dances",
+      "items": [
+        "Salsa",
+        "Rumba",
+        "Cha-Cha",
+        "Jive"
+      ]
+    },
+    {
+      "id": "folk-dance-traditions",
+      "label": "Folk Dance Traditions",
+      "items": [
+        "Flamenco",
+        "Polka",
+        "Square Dance",
+        "Hora"
+      ]
+    },
+    {
+      "id": "dance-company-roles",
+      "label": "Dance Company Roles",
+      "items": [
+        "Choreographer",
+        "Principal Dancer",
+        "Understudy",
+        "Stage Manager"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "dance",
+    "categoryType": "classification"
+  }
+}

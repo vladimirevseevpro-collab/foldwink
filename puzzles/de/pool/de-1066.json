@@ -1,0 +1,50 @@
+{
+  "id": "de-1066",
+  "title": "Schulalltag",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Schule"
+  },
+  "groups": [
+    {
+      "id": "schreibgeraete",
+      "label": "Schreibutensilien",
+      "items": [
+        "Füller",
+        "Bleistift",
+        "Kugelschreiber",
+        "Wachsmalstift"
+      ]
+    },
+    {
+      "id": "hefte",
+      "label": "Hefte und Blöcke",
+      "items": [
+        "Schulheft",
+        "Hausaufgabenheft",
+        "Notizblock",
+        "Vokabelheft"
+      ]
+    },
+    {
+      "id": "zeichengeraete",
+      "label": "Zeichengeräte",
+      "items": [
+        "Lineal",
+        "Geodreieck",
+        "Zirkel",
+        "Winkelmesser"
+      ]
+    },
+    {
+      "id": "buecher",
+      "label": "Schulbücher",
+      "items": [
+        "Mathebuch",
+        "Lesebuch",
+        "Atlas",
+        "Wörterbuch"
+      ]
+    }
+  ]
+}

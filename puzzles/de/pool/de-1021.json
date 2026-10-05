@@ -1,0 +1,56 @@
+{
+  "id": "de-1021",
+  "title": "Nachsilben im Alltag",
+  "difficulty": "hard",
+  "editorialSummary": "Every group is a set of words sharing one final building block (-uhr, -fisch, -kuchen, -heit); the animal names Goldfisch and Walfisch are the false trail towards a zoological reading.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay"
+  },
+  "groups": [
+    {
+      "id": "uhr",
+      "label": "Komposita mit -uhr",
+      "items": [
+        "Armbanduhr",
+        "Wanduhr",
+        "Standuhr",
+        "Taschenuhr"
+      ],
+      "revealHint": "-uhr"
+    },
+    {
+      "id": "fisch",
+      "label": "Endet auf -fisch",
+      "items": [
+        "Goldfisch",
+        "Tintenfisch",
+        "Walfisch",
+        "Kugelfisch"
+      ],
+      "revealHint": "-fisch"
+    },
+    {
+      "id": "kuchen",
+      "label": "Komposita mit -kuchen",
+      "items": [
+        "Käsekuchen",
+        "Marmorkuchen",
+        "Obstkuchen",
+        "Nusskuchen"
+      ],
+      "revealHint": "-kuchen"
+    },
+    {
+      "id": "heit",
+      "label": "Wörter mit Nachsilbe -heit",
+      "items": [
+        "Freiheit",
+        "Kindheit",
+        "Wahrheit",
+        "Sicherheit"
+      ],
+      "revealHint": "-heit"
+    }
+  ]
+}

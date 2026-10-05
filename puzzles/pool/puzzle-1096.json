@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1096",
+  "title": "Training corner",
+  "difficulty": "medium",
+  "editorialSummary": "The jump rope tempts the cardio machines, but the Gym machines label names powered equipment, so rope work stays in the boxing-fitness group.",
+  "meta": {
+    "theme": "gym equipment",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "weights",
+      "label": "Weight rack staples",
+      "revealHint": "Iron",
+      "items": [
+        "Barbell",
+        "Dumbbell",
+        "Kettlebell",
+        "Weight plate"
+      ]
+    },
+    {
+      "id": "machines",
+      "label": "Gym machines",
+      "revealHint": "Cardio",
+      "items": [
+        "Treadmill",
+        "Rowing machine",
+        "Elliptical",
+        "Exercise bike"
+      ]
+    },
+    {
+      "id": "boxing",
+      "label": "Boxing fitness",
+      "revealHint": "Sparring",
+      "items": [
+        "Heavy bag",
+        "Speed bag",
+        "Jump rope",
+        "Focus mitts"
+      ]
+    },
+    {
+      "id": "yoga",
+      "label": "Yoga session",
+      "revealHint": "Zen",
+      "items": [
+        "Mat",
+        "Block",
+        "Strap",
+        "Bolster"
+      ]
+    }
+  ]
+}

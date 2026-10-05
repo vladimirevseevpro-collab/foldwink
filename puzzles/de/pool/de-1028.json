@@ -1,0 +1,55 @@
+{
+  "id": "de-1028",
+  "title": "Für den Winter angezogen",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "winterkleidung"
+  },
+  "editorialSummary": "Falsche Fährte: Leder wirkt wie ein Schuhmaterial, steht hier aber bei den Materialien für Winterkleidung.",
+  "groups": [
+    {
+      "id": "warm",
+      "label": "Warme Kleidung für draußen",
+      "revealHint": "WARM",
+      "items": [
+        "Daunenjacke",
+        "Wollpullover",
+        "Thermostrumpfhose",
+        "Schneehose"
+      ]
+    },
+    {
+      "id": "kopf",
+      "label": "Kopf- und Halswärmer",
+      "revealHint": "KOPF",
+      "items": [
+        "Wollmütze",
+        "Schal",
+        "Ohrenschützer",
+        "Kapuze"
+      ]
+    },
+    {
+      "id": "haende",
+      "label": "Handschuhe und Wärmer",
+      "revealHint": "HÄNDE",
+      "items": [
+        "Fäustlinge",
+        "Fingerhandschuhe",
+        "Pulswärmer",
+        "Muff"
+      ]
+    },
+    {
+      "id": "material",
+      "label": "Materialien für Winterkleidung",
+      "revealHint": "MATERIAL",
+      "items": [
+        "Wolle",
+        "Fleece",
+        "Filz",
+        "Leder"
+      ]
+    }
+  ]
+}

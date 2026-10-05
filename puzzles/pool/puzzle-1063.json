@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1063",
+  "title": "Final curtain",
+  "difficulty": "medium",
+  "editorialSummary": "Conductor reads like a performer, but the theatre roles label is the only defensible home once the play genres label is read.",
+  "meta": {
+    "theme": "film books theatre",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "plays",
+      "label": "Types of play",
+      "revealHint": "Plays",
+      "items": [
+        "Tragedy",
+        "Comedy",
+        "Farce",
+        "Melodrama"
+      ]
+    },
+    {
+      "id": "story",
+      "label": "Story elements",
+      "revealHint": "Story",
+      "items": [
+        "Plot",
+        "Setting",
+        "Theme",
+        "Conflict"
+      ]
+    },
+    {
+      "id": "filmterms",
+      "label": "Film production terms",
+      "revealHint": "Film terms",
+      "items": [
+        "Script",
+        "Scene",
+        "Take",
+        "Cut"
+      ]
+    },
+    {
+      "id": "roles",
+      "label": "Theatre roles",
+      "revealHint": "Theatre jobs",
+      "items": [
+        "Usher",
+        "Stagehand",
+        "Dresser",
+        "Conductor"
+      ]
+    }
+  ]
+}

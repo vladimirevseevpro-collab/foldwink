@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1117",
+  "title": "Coastal Waters",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "shellfish",
+      "label": "Shellfish Catch",
+      "items": [
+        "Crab",
+        "Lobster",
+        "Shrimp",
+        "Mussel"
+      ]
+    },
+    {
+      "id": "coastal-birds",
+      "label": "Coastal Birds",
+      "items": [
+        "Pelican",
+        "Seagull",
+        "Cormorant",
+        "Puffin"
+      ]
+    },
+    {
+      "id": "marine-reptiles",
+      "label": "Sea Reptiles",
+      "items": [
+        "Sea Turtle",
+        "Marine Iguana",
+        "Sea Snake",
+        "Saltwater Crocodile"
+      ]
+    },
+    {
+      "id": "stinging-sea-life",
+      "label": "Stinging Sea Life",
+      "items": [
+        "Jellyfish",
+        "Stingray",
+        "Sea Anemone",
+        "Fire Coral"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "ocean",
+    "categoryType": "classification"
+  }
+}

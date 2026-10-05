@@ -1,0 +1,50 @@
+{
+  "id": "de-1063",
+  "title": "Der menschliche Körper",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Körper"
+  },
+  "groups": [
+    {
+      "id": "sinnesorgane",
+      "label": "Sinnesorgane",
+      "items": [
+        "Auge",
+        "Ohr",
+        "Nase",
+        "Haut"
+      ]
+    },
+    {
+      "id": "knochen",
+      "label": "Knochen",
+      "items": [
+        "Schädel",
+        "Rippe",
+        "Wirbel",
+        "Schlüsselbein"
+      ]
+    },
+    {
+      "id": "muskeln",
+      "label": "Muskeln",
+      "items": [
+        "Bizeps",
+        "Trizeps",
+        "Bauchmuskel",
+        "Wadenmuskel"
+      ]
+    },
+    {
+      "id": "blutgefaesse",
+      "label": "Blutgefäße",
+      "items": [
+        "Arterie",
+        "Vene",
+        "Kapillare",
+        "Aorta"
+      ]
+    }
+  ]
+}

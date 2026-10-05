@@ -1,0 +1,50 @@
+{
+  "id": "de-1057",
+  "title": "Instrumente zum Lernen",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Musikinstrumente"
+  },
+  "groups": [
+    {
+      "id": "tasteninstrumente",
+      "label": "Instrumente mit Tasten",
+      "items": [
+        "Klavier",
+        "Keyboard",
+        "Orgel",
+        "Akkordeon"
+      ]
+    },
+    {
+      "id": "zupfinstrumente",
+      "label": "Gezupfte Saiteninstrumente",
+      "items": [
+        "Gitarre",
+        "Ukulele",
+        "Banjo",
+        "Mandoline"
+      ]
+    },
+    {
+      "id": "kinderinstrumente",
+      "label": "Instrumente für Kinder",
+      "items": [
+        "Blockflöte",
+        "Xylophon",
+        "Triangel",
+        "Handtrommel"
+      ]
+    },
+    {
+      "id": "musikerzubehoer",
+      "label": "Was Musiker brauchen",
+      "items": [
+        "Notenständer",
+        "Metronom",
+        "Stimmgerät",
+        "Instrumentenkoffer"
+      ]
+    }
+  ]
+}

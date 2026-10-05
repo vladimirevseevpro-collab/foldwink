@@ -1,0 +1,55 @@
+{
+  "id": "de-1036",
+  "title": "Kräuter und Blüten",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "garten"
+  },
+  "editorialSummary": "Falsche Fährte: Sonnenblumenkerne und Mohnsamen tragen den Namen einer Blüte, sind hier aber Vogelfutter; Karotte und Rote Bete zählen dagegen als Wurzelgemüse.",
+  "groups": [
+    {
+      "id": "trocknen",
+      "label": "Küchenkräuter zum Trocknen",
+      "revealHint": "TROCKNEN",
+      "items": [
+        "Oregano",
+        "Thymian",
+        "Salbei",
+        "Estragon"
+      ]
+    },
+    {
+      "id": "balkon",
+      "label": "Blüten für den Balkonkasten",
+      "revealHint": "BALKON",
+      "items": [
+        "Geranie",
+        "Petunie",
+        "Begonie",
+        "Fuchsie"
+      ]
+    },
+    {
+      "id": "vogelfutter",
+      "label": "Samen, die Vögel fressen",
+      "revealHint": "VOGELFUTTER",
+      "items": [
+        "Sonnenblumenkerne",
+        "Hanfsamen",
+        "Mohnsamen",
+        "Kürbiskerne"
+      ]
+    },
+    {
+      "id": "wurzel",
+      "label": "Wurzeln als Gemüse",
+      "revealHint": "WURZEL",
+      "items": [
+        "Karotte",
+        "Pastinake",
+        "Rote Bete",
+        "Radieschen"
+      ]
+    }
+  ]
+}

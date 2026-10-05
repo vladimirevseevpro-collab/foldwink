@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1042",
+  "title": "Orchestra seats",
+  "difficulty": "medium",
+  "editorialSummary": "Orchestra board where Saxophone gleams like brass, but the woodwind label owns its single reed and the brass label lists only lip-vibrated instruments.",
+  "meta": {
+    "theme": "orchestral instruments",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "woodwind",
+      "label": "Woodwind family",
+      "revealHint": "Reeds",
+      "items": [
+        "Oboe",
+        "Bassoon",
+        "Piccolo",
+        "Saxophone"
+      ]
+    },
+    {
+      "id": "brass",
+      "label": "Brass family",
+      "revealHint": "Shiny",
+      "items": [
+        "Cornet",
+        "Euphonium",
+        "Tuba",
+        "French horn"
+      ]
+    },
+    {
+      "id": "strings",
+      "label": "Orchestral strings",
+      "revealHint": "Strings",
+      "items": [
+        "Violin",
+        "Viola",
+        "Double bass",
+        "Harp"
+      ]
+    },
+    {
+      "id": "percussion",
+      "label": "Percussion kit",
+      "revealHint": "Struck",
+      "items": [
+        "Timpani",
+        "Snare drum",
+        "Cymbals",
+        "Triangle"
+      ]
+    }
+  ]
+}

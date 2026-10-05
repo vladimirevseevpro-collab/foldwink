@@ -1,0 +1,55 @@
+{
+  "id": "de-1042",
+  "title": "Kalender und Uhr",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "zeit"
+  },
+  "editorialSummary": "Falsche Fährte: Das Armband gehört hier zur Uhr und nicht zum Schmuck; 'August' ist ein Monat und kein Vorname.",
+  "groups": [
+    {
+      "id": "woche",
+      "label": "Wochentage vor dem Wochenende",
+      "revealHint": "WOCHE",
+      "items": [
+        "Montag",
+        "Dienstag",
+        "Mittwoch",
+        "Donnerstag"
+      ]
+    },
+    {
+      "id": "halbjahr",
+      "label": "Monate des zweiten Halbjahres",
+      "revealHint": "2. HALBJAHR",
+      "items": [
+        "Juli",
+        "August",
+        "September",
+        "Oktober"
+      ]
+    },
+    {
+      "id": "uhr",
+      "label": "Teile einer Uhr",
+      "revealHint": "UHR",
+      "items": [
+        "Zifferblatt",
+        "Zeiger",
+        "Armband",
+        "Uhrwerk"
+      ]
+    },
+    {
+      "id": "jahr",
+      "label": "Wörter mit der Endung -jahr",
+      "revealHint": "-JAHR",
+      "items": [
+        "Schuljahr",
+        "Kalenderjahr",
+        "Haushaltsjahr",
+        "Lebensjahr"
+      ]
+    }
+  ]
+}

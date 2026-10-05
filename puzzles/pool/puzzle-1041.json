@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1041",
+  "title": "Winter wardrobe",
+  "difficulty": "medium",
+  "editorialSummary": "Winter wardrobe where Beanie knits like a jumper and Fleece layers like a coat, but the accessory and top labels split them by what the garment covers.",
+  "meta": {
+    "theme": "winter clothing",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "tops",
+      "label": "Warm tops",
+      "revealHint": "Layer",
+      "items": [
+        "Jumper",
+        "Cardigan",
+        "Turtleneck",
+        "Fleece"
+      ]
+    },
+    {
+      "id": "coats",
+      "label": "Winter coats",
+      "revealHint": "Outer",
+      "items": [
+        "Parka",
+        "Peacoat",
+        "Overcoat",
+        "Duffel coat"
+      ]
+    },
+    {
+      "id": "accessories",
+      "label": "Winter accessories",
+      "revealHint": "Extras",
+      "items": [
+        "Scarf",
+        "Beanie",
+        "Gloves",
+        "Earmuffs"
+      ]
+    },
+    {
+      "id": "footwear",
+      "label": "Winter footwear",
+      "revealHint": "Grip",
+      "items": [
+        "Ski boots",
+        "Snow boots",
+        "Mukluks",
+        "Moon boots"
+      ]
+    }
+  ]
+}

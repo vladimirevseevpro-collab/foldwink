@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1004",
+  "title": "Ways to Travel",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "air-machines",
+      "label": "Air Travel Machines",
+      "items": [
+        "Biplane",
+        "Seaplane",
+        "Airship",
+        "Drone"
+      ]
+    },
+    {
+      "id": "boats-ships",
+      "label": "Boats and Ships",
+      "items": [
+        "Tugboat",
+        "Barge",
+        "Yacht",
+        "Gondola"
+      ]
+    },
+    {
+      "id": "trains-trams",
+      "label": "Trains and Trams",
+      "items": [
+        "Locomotive",
+        "Tram",
+        "Monorail",
+        "Cable Car"
+      ]
+    },
+    {
+      "id": "cars-trucks",
+      "label": "Cars and Trucks",
+      "items": [
+        "Sedan",
+        "Pickup",
+        "Van",
+        "Taxi"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "transport",
+    "categoryType": "classification"
+  }
+}

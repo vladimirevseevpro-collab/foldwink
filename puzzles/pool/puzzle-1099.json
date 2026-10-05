@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1099",
+  "title": "Filled backpack",
+  "difficulty": "medium",
+  "editorialSummary": "The set square looks like a drawing tool for the art room, but the Art class kit label names painting gear, so it stays with geometry.",
+  "meta": {
+    "theme": "school supplies",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "science",
+      "label": "Science class kit",
+      "revealHint": "Lab",
+      "items": [
+        "Beaker",
+        "Goggles",
+        "Microscope",
+        "Test tube"
+      ]
+    },
+    {
+      "id": "art",
+      "label": "Art class kit",
+      "revealHint": "Studio",
+      "items": [
+        "Paint",
+        "Brush",
+        "Palette",
+        "Easel"
+      ]
+    },
+    {
+      "id": "maths",
+      "label": "Maths tools",
+      "revealHint": "Geometry",
+      "items": [
+        "Compass",
+        "Protractor",
+        "Set square",
+        "Calculator"
+      ]
+    },
+    {
+      "id": "bag",
+      "label": "In the school bag",
+      "revealHint": "Carry",
+      "items": [
+        "Notebook",
+        "Textbook",
+        "Lunchbox",
+        "Pencil case"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "de-1056",
+  "title": "Rund um den Flug",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Verkehr"
+  },
+  "groups": [
+    {
+      "id": "flugzeugarten",
+      "label": "Arten von Flugzeugen",
+      "items": [
+        "Verkehrsflugzeug",
+        "Frachtflugzeug",
+        "Privatjet",
+        "Segelflugzeug"
+      ]
+    },
+    {
+      "id": "flughafenbereiche",
+      "label": "Bereiche im Flughafen",
+      "items": [
+        "Abflughalle",
+        "Sicherheitskontrolle",
+        "Gepäckausgabe",
+        "Flugsteig"
+      ]
+    },
+    {
+      "id": "reisedokumente",
+      "label": "Reisedokumente",
+      "items": [
+        "Reisepass",
+        "Personalausweis",
+        "Visum",
+        "Bordkarte"
+      ]
+    },
+    {
+      "id": "flughafenpersonal",
+      "label": "Personal am Flughafen",
+      "items": [
+        "Pilot",
+        "Fluglotse",
+        "Flugbegleiter",
+        "Zollbeamter"
+      ]
+    }
+  ]
+}

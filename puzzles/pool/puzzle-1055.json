@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1055",
+  "title": "Allotment harvest",
+  "difficulty": "medium",
+  "editorialSummary": "Radish reads like a leafy salad green, but the leafy label is the only defensible home once the root crops label is read.",
+  "meta": {
+    "theme": "garden harvest",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "leafy",
+      "label": "Leafy salad crops",
+      "revealHint": "Salad",
+      "items": [
+        "Lettuce",
+        "Spinach",
+        "Rocket",
+        "Watercress"
+      ]
+    },
+    {
+      "id": "roots",
+      "label": "Root crops",
+      "revealHint": "Underground",
+      "items": [
+        "Carrot",
+        "Beetroot",
+        "Radish",
+        "Parsnip"
+      ]
+    },
+    {
+      "id": "berries",
+      "label": "Sweet garden berries",
+      "revealHint": "Berries",
+      "items": [
+        "Strawberry",
+        "Raspberry",
+        "Gooseberry",
+        "Blackcurrant"
+      ]
+    },
+    {
+      "id": "herbs",
+      "label": "Kitchen herbs",
+      "revealHint": "Herbs",
+      "items": [
+        "Basil",
+        "Thyme",
+        "Rosemary",
+        "Parsley"
+      ]
+    }
+  ]
+}

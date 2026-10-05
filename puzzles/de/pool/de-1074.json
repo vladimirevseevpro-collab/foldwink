@@ -1,0 +1,55 @@
+{
+  "id": "de-1074",
+  "title": "Einkaufszettel für die Küche",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "lebensmittel"
+  },
+  "editorialSummary": "Falsche Fährte: die Butter wirkt wie ein Brotaufstrich, ist aber nicht süß und gehört ins Kühlregal.",
+  "groups": [
+    {
+      "id": "getreide",
+      "label": "Grundnahrungsmittel aus Getreide",
+      "revealHint": "GETREIDE",
+      "items": [
+        "Mehl",
+        "Reis",
+        "Haferflocken",
+        "Nudeln"
+      ]
+    },
+    {
+      "id": "kuehlregal",
+      "label": "Milchprodukte im Kühlregal",
+      "revealHint": "KÜHLREGAL",
+      "items": [
+        "Joghurt",
+        "Quark",
+        "Butter",
+        "Käse"
+      ]
+    },
+    {
+      "id": "aufstrich",
+      "label": "Süßes zum Streichen aufs Brot",
+      "revealHint": "AUFSTRICH",
+      "items": [
+        "Marmelade",
+        "Honig",
+        "Nussnougatcreme",
+        "Gelee"
+      ]
+    },
+    {
+      "id": "salat",
+      "label": "Frischgemüse für den Salat",
+      "revealHint": "SALAT",
+      "items": [
+        "Gurke",
+        "Tomate",
+        "Paprika",
+        "Kopfsalat"
+      ]
+    }
+  ]
+}

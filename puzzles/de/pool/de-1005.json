@@ -1,0 +1,50 @@
+{
+  "id": "de-1005",
+  "title": "Wer arbeitet wo?",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Arbeitsorte"
+  },
+  "groups": [
+    {
+      "id": "krankenhaus",
+      "label": "Im Krankenhaus arbeiten",
+      "items": [
+        "Arzt",
+        "Krankenpfleger",
+        "Chirurg",
+        "Hebamme"
+      ]
+    },
+    {
+      "id": "schule",
+      "label": "In der Schule arbeiten",
+      "items": [
+        "Lehrer",
+        "Hausmeister",
+        "Direktor",
+        "Schulpsychologe"
+      ]
+    },
+    {
+      "id": "restaurant",
+      "label": "Im Restaurant arbeiten",
+      "items": [
+        "Koch",
+        "Kellner",
+        "Barkeeper",
+        "Sommelier"
+      ]
+    },
+    {
+      "id": "bau",
+      "label": "Auf dem Bau arbeiten",
+      "items": [
+        "Maurer",
+        "Dachdecker",
+        "Gerüstbauer",
+        "Bauleiter"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1039",
+  "title": "Woodland walk",
+  "difficulty": "medium",
+  "editorialSummary": "Woodland board where Otter swims and fishes like an amphibian, but the mammal label owns it once all four animal classes are read.",
+  "meta": {
+    "theme": "woodland animals",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "mammals",
+      "label": "Woodland mammals",
+      "revealHint": "Fur",
+      "items": [
+        "Badger",
+        "Otter",
+        "Weasel",
+        "Hedgehog"
+      ]
+    },
+    {
+      "id": "raptors",
+      "label": "Raptors",
+      "revealHint": "Hunters",
+      "items": [
+        "Kestrel",
+        "Buzzard",
+        "Osprey",
+        "Kite"
+      ]
+    },
+    {
+      "id": "amphibians",
+      "label": "Amphibians",
+      "revealHint": "Pond",
+      "items": [
+        "Frog",
+        "Toad",
+        "Newt",
+        "Salamander"
+      ]
+    },
+    {
+      "id": "reptiles",
+      "label": "Scaly reptiles",
+      "revealHint": "Basking",
+      "items": [
+        "Snake",
+        "Lizard",
+        "Tortoise",
+        "Crocodile"
+      ]
+    }
+  ]
+}

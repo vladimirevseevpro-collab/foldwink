@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1040",
+  "title": "Garage bay",
+  "difficulty": "medium",
+  "editorialSummary": "Car parts board where Battery and Indicator both relate to the lighting circuit, but the lights label lists only lamps and the battery stays in the engine bay.",
+  "meta": {
+    "theme": "car parts",
+    "categoryType": "place"
+  },
+  "groups": [
+    {
+      "id": "wheels",
+      "label": "Wheels and tyres",
+      "revealHint": "Rolling",
+      "items": [
+        "Tyre",
+        "Rim",
+        "Hubcap",
+        "Spoke"
+      ]
+    },
+    {
+      "id": "lights",
+      "label": "Lights",
+      "revealHint": "Glow",
+      "items": [
+        "Headlight",
+        "Taillight",
+        "Indicator",
+        "Fog light"
+      ]
+    },
+    {
+      "id": "glass",
+      "label": "Mirrors and glass",
+      "revealHint": "See-through",
+      "items": [
+        "Windscreen",
+        "Side mirror",
+        "Rear window",
+        "Sunroof"
+      ]
+    },
+    {
+      "id": "engine",
+      "label": "Under the bonnet",
+      "revealHint": "Engine bay",
+      "items": [
+        "Engine",
+        "Battery",
+        "Radiator",
+        "Alternator"
+      ]
+    }
+  ]
+}

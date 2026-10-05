@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1050",
+  "title": "Road trip",
+  "difficulty": "medium",
+  "editorialSummary": "Boot and Bonnet sound like clothing, but on a car they are body parts and the road-trip labels leave no alternative.",
+  "meta": {
+    "theme": "driving holiday",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "car",
+      "label": "Parts of a car",
+      "revealHint": "Car",
+      "items": [
+        "Bonnet",
+        "Boot",
+        "Bumper",
+        "Windscreen"
+      ]
+    },
+    {
+      "id": "roads",
+      "label": "Road features",
+      "revealHint": "Roads",
+      "items": [
+        "Roundabout",
+        "Layby",
+        "Speed bump",
+        "Zebra crossing"
+      ]
+    },
+    {
+      "id": "offences",
+      "label": "Driving offences",
+      "revealHint": "Offences",
+      "items": [
+        "Speeding",
+        "Tailgating",
+        "Drink-driving",
+        "Jumping a red light"
+      ]
+    },
+    {
+      "id": "services",
+      "label": "Service station offerings",
+      "revealHint": "Services",
+      "items": [
+        "Petrol",
+        "Coffee",
+        "Toilets",
+        "Charger"
+      ]
+    }
+  ]
+}

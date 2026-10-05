@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1001",
+  "title": "Heat and Mix",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "cooking-actions",
+      "label": "Cooking Actions",
+      "items": [
+        "Boil",
+        "Fry",
+        "Bake",
+        "Grill"
+      ]
+    },
+    {
+      "id": "baking-staples",
+      "label": "Baking Staples",
+      "items": [
+        "Flour",
+        "Yeast",
+        "Baking Powder",
+        "Cocoa Powder"
+      ]
+    },
+    {
+      "id": "cookware",
+      "label": "Pots and Skillets",
+      "items": [
+        "Saucepan",
+        "Saute Pan",
+        "Dutch Oven",
+        "Griddle"
+      ]
+    },
+    {
+      "id": "spice-rack",
+      "label": "From the Spice Rack",
+      "items": [
+        "Cinnamon",
+        "Paprika",
+        "Cumin",
+        "Turmeric"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "kitchen and cooking",
+    "categoryType": "classification"
+  }
+}

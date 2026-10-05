@@ -1,0 +1,50 @@
+{
+  "id": "de-1013",
+  "title": "Feiern und Feste",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Feste im Jahreslauf"
+  },
+  "groups": [
+    {
+      "id": "silvester",
+      "label": "An Silvester",
+      "items": [
+        "Feuerwerk",
+        "Sekt",
+        "Bleigießen",
+        "Glücksklee"
+      ]
+    },
+    {
+      "id": "karneval",
+      "label": "An Karneval",
+      "items": [
+        "Kostüm",
+        "Kamelle",
+        "Konfetti",
+        "Büttenrede"
+      ]
+    },
+    {
+      "id": "ostern",
+      "label": "Zu Ostern",
+      "items": [
+        "Ostereier",
+        "Osterhase",
+        "Osterfeuer",
+        "Osternest"
+      ]
+    },
+    {
+      "id": "geburtstag",
+      "label": "Zum Geburtstag",
+      "items": [
+        "Torte",
+        "Kerzen",
+        "Geschenke",
+        "Luftballons"
+      ]
+    }
+  ]
+}

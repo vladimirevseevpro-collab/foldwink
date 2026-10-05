@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1071",
+  "title": "Science Lesson",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "laboratory-equipment",
+      "label": "Laboratory Equipment",
+      "items": [
+        "Beaker",
+        "Test Tube",
+        "Flask",
+        "Bunsen Burner"
+      ]
+    },
+    {
+      "id": "science-concepts",
+      "label": "Science Concepts",
+      "items": [
+        "Gravity",
+        "Energy",
+        "Friction",
+        "Magnetism"
+      ]
+    },
+    {
+      "id": "measuring-instruments",
+      "label": "Measuring Instruments",
+      "items": [
+        "Thermometer",
+        "Barometer",
+        "Anemometer",
+        "Hygrometer"
+      ]
+    },
+    {
+      "id": "science-fields",
+      "label": "Science Fields",
+      "items": [
+        "Physics",
+        "Chemistry",
+        "Geology",
+        "Astronomy"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "science",
+    "categoryType": "classification"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1094",
+  "title": "Going Postal",
+  "difficulty": "medium",
+  "editorialSummary": "Air mail sounds like a mailing item, but it is a marking printed on an envelope, so only the envelope markings label fits.",
+  "meta": {
+    "theme": "post",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "items",
+      "label": "Mailing items",
+      "revealHint": "Mail",
+      "items": [
+        "Stamp",
+        "Envelope",
+        "Parcel",
+        "Letter"
+      ]
+    },
+    {
+      "id": "workers",
+      "label": "Postal workers",
+      "revealHint": "Staff",
+      "items": [
+        "Postman",
+        "Postmaster",
+        "Mail sorter",
+        "Courier"
+      ]
+    },
+    {
+      "id": "address",
+      "label": "Address lines",
+      "revealHint": "Address",
+      "items": [
+        "Street",
+        "City",
+        "Postcode",
+        "Country"
+      ]
+    },
+    {
+      "id": "markings",
+      "label": "Envelope markings",
+      "revealHint": "Labels",
+      "items": [
+        "Fragile",
+        "Confidential",
+        "Air mail",
+        "Return to sender"
+      ]
+    }
+  ]
+}

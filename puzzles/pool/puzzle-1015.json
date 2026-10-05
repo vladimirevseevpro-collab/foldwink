@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1015",
+  "title": "Trip Ready",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "inside-an-airport",
+      "label": "Inside an Airport",
+      "items": [
+        "Terminal",
+        "Departure Lounge",
+        "Check-in Desk",
+        "Baggage Reclaim"
+      ]
+    },
+    {
+      "id": "holiday-papers",
+      "label": "Holiday Papers",
+      "items": [
+        "Passport",
+        "Boarding Pass",
+        "Travel Insurance",
+        "Visa"
+      ]
+    },
+    {
+      "id": "sun-safety-kit",
+      "label": "Sun Safety Kit",
+      "items": [
+        "Sunscreen",
+        "Sunglasses",
+        "Sun Hat",
+        "Lip Balm"
+      ]
+    },
+    {
+      "id": "travel-comforts",
+      "label": "Travel Comforts",
+      "items": [
+        "Neck Pillow",
+        "Eye Mask",
+        "Earplugs",
+        "Travel Socks"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "travel",
+    "categoryType": "place"
+  }
+}

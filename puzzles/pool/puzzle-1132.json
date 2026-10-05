@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1132",
+  "title": "Movie Night Snacks",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "savoury-snacks",
+      "label": "Savoury Snacks",
+      "items": [
+        "Pretzels",
+        "Potato Chips",
+        "Popcorn",
+        "Crackers"
+      ]
+    },
+    {
+      "id": "sweet-snacks",
+      "label": "Sweet Snacks",
+      "items": [
+        "Cookies",
+        "Marshmallows",
+        "Fudge",
+        "Candy Floss"
+      ]
+    },
+    {
+      "id": "dips-for-chips",
+      "label": "Dips for Chips",
+      "items": [
+        "Salsa",
+        "Guacamole",
+        "Queso",
+        "Onion Dip"
+      ]
+    },
+    {
+      "id": "roasted-nuts",
+      "label": "Roasted Nuts",
+      "items": [
+        "Almonds",
+        "Cashews",
+        "Peanuts",
+        "Walnuts"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "snacks and sweets",
+    "categoryType": "classification"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1033",
+  "title": "Common Beginnings",
+  "difficulty": "hard",
+  "editorialSummary": "The cards in each group start with the same exact prefix, and the false trail is that another common prefix looks plausible until the label fixes which one counts.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay"
+  },
+  "groups": [
+    {
+      "id": "fore",
+      "label": "Starts with FORE",
+      "items": [
+        "Forearm",
+        "Forecast",
+        "Foresight",
+        "Foreword"
+      ],
+      "revealHint": "FORE"
+    },
+    {
+      "id": "mis",
+      "label": "Starts with MIS",
+      "items": [
+        "Mistake",
+        "Misplace",
+        "Mislead",
+        "Misprint"
+      ],
+      "revealHint": "MIS"
+    },
+    {
+      "id": "dis",
+      "label": "Starts with DIS",
+      "items": [
+        "Disagree",
+        "Dislike",
+        "Disappear",
+        "Disconnect"
+      ],
+      "revealHint": "DIS"
+    },
+    {
+      "id": "pre",
+      "label": "Starts with PRE",
+      "items": [
+        "Preview",
+        "Preheat",
+        "Prepay",
+        "Preorder"
+      ],
+      "revealHint": "PRE"
+    }
+  ]
+}

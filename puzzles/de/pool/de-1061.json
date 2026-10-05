@@ -1,0 +1,50 @@
+{
+  "id": "de-1061",
+  "title": "Gebäude und ihre Funktion",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Gebäude"
+  },
+  "groups": [
+    {
+      "id": "bildung",
+      "label": "Bildungsstätten",
+      "items": [
+        "Schule",
+        "Universität",
+        "Volkshochschule",
+        "Bibliothek"
+      ]
+    },
+    {
+      "id": "verwaltung",
+      "label": "Verwaltungsgebäude",
+      "items": [
+        "Rathaus",
+        "Finanzamt",
+        "Bürgerbüro",
+        "Standesamt"
+      ]
+    },
+    {
+      "id": "gesundheit",
+      "label": "Gesundheitseinrichtungen",
+      "items": [
+        "Krankenhaus",
+        "Arztpraxis",
+        "Zahnarztpraxis",
+        "Apotheke"
+      ]
+    },
+    {
+      "id": "gotteshaeuser",
+      "label": "Gotteshäuser",
+      "items": [
+        "Kirche",
+        "Kapelle",
+        "Moschee",
+        "Synagoge"
+      ]
+    }
+  ]
+}

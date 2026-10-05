@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1133",
+  "title": "Morning Meal",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "cereals-in-a-bowl",
+      "label": "Cereals in a Bowl",
+      "items": [
+        "Cornflakes",
+        "Granola",
+        "Muesli",
+        "Bran Flakes"
+      ]
+    },
+    {
+      "id": "breakfast-meats",
+      "label": "Breakfast Meats",
+      "items": [
+        "Bacon",
+        "Sausage",
+        "Ham",
+        "Black Pudding"
+      ]
+    },
+    {
+      "id": "breakfast-breads",
+      "label": "Breakfast Breads",
+      "items": [
+        "Croissant",
+        "Bagel",
+        "Muffin",
+        "Toast"
+      ]
+    },
+    {
+      "id": "morning-fruit",
+      "label": "Morning Fruit",
+      "items": [
+        "Banana",
+        "Blueberries",
+        "Strawberries",
+        "Melon"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "breakfast foods",
+    "categoryType": "classification"
+  }
+}

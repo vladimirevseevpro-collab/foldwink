@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1035",
+  "title": "Sounds Like Something",
+  "difficulty": "hard",
+  "editorialSummary": "Every card is a homophone of a word in the category named by its label, so the false trail is that each card is itself a normal word with an unrelated meaning.",
+  "meta": {
+    "theme": "sound",
+    "categoryType": "wordplay"
+  },
+  "groups": [
+    {
+      "id": "food",
+      "label": "Sounds Like a Food",
+      "items": [
+        "Flower",
+        "Meet",
+        "Pare",
+        "Beat"
+      ],
+      "revealHint": "FOOD"
+    },
+    {
+      "id": "place",
+      "label": "Sounds Like a Place",
+      "items": [
+        "Grease",
+        "Roam",
+        "Niece",
+        "Burn"
+      ],
+      "revealHint": "PLACE"
+    },
+    {
+      "id": "creature",
+      "label": "Sounds Like a Creature",
+      "items": [
+        "Flee",
+        "Hoarse",
+        "Wail",
+        "Bares"
+      ],
+      "revealHint": "CREATURE"
+    },
+    {
+      "id": "weather",
+      "label": "Sounds Like Weather",
+      "items": [
+        "Son",
+        "Reigned",
+        "Whether",
+        "Missed"
+      ],
+      "revealHint": "WEATHER"
+    }
+  ]
+}

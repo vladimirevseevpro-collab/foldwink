@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1073",
+  "title": "Tidy Up Day",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "cleaning-kit",
+      "label": "Cleaning Kit",
+      "items": [
+        "Duster",
+        "Squeegee",
+        "Scrub Brush",
+        "Dustpan"
+      ]
+    },
+    {
+      "id": "cleaning-products",
+      "label": "Cleaning Products",
+      "items": [
+        "Bleach",
+        "Detergent",
+        "Disinfectant",
+        "Polish"
+      ]
+    },
+    {
+      "id": "laundry-steps",
+      "label": "Laundry Steps",
+      "items": [
+        "Sorting",
+        "Washing",
+        "Drying",
+        "Folding"
+      ]
+    },
+    {
+      "id": "household-chores",
+      "label": "Household Chores",
+      "items": [
+        "Vacuuming",
+        "Dusting",
+        "Ironing",
+        "Mopping"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "household",
+    "categoryType": "classification"
+  }
+}

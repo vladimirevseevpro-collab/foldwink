@@ -1,0 +1,56 @@
+{
+  "id": "de-1073",
+  "title": "Beistand und Schuhe",
+  "difficulty": "hard",
+  "editorialSummary": "Beifall klingt wie die -fall-Familie eines anderen Rätsels, ist aber reines BEI-Wort; die Doppel-P-Reihe um Pappe und Puppe wird leicht für Kinderwörter gehalten.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay"
+  },
+  "groups": [
+    {
+      "id": "bei",
+      "label": "Beginnt mit BEI-",
+      "items": [
+        "Beispiel",
+        "Beitrag",
+        "Beilage",
+        "Beifall"
+      ],
+      "revealHint": "BEI-"
+    },
+    {
+      "id": "blut",
+      "label": "Endet auf -blut",
+      "items": [
+        "Vollblut",
+        "Kaltblut",
+        "Warmblut",
+        "Halbblut"
+      ],
+      "revealHint": "-blut"
+    },
+    {
+      "id": "schuh",
+      "label": "Endet auf -schuh",
+      "items": [
+        "Handschuh",
+        "Turnschuh",
+        "Schneeschuh",
+        "Wanderschuh"
+      ],
+      "revealHint": "-schuh"
+    },
+    {
+      "id": "doppel-p",
+      "label": "Enthält Doppel-P",
+      "items": [
+        "Pappe",
+        "Puppe",
+        "Appetit",
+        "Kappe"
+      ],
+      "revealHint": "Doppel-P"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1090",
+  "title": "Inside and Out",
+  "difficulty": "medium",
+  "editorialSummary": "Steering wheel suggests the outside group because of the word wheel, but it sits only in the cabin once the four car labels are read.",
+  "meta": {
+    "theme": "car parts",
+    "categoryType": "place"
+  },
+  "groups": [
+    {
+      "id": "dash",
+      "label": "Dashboard displays",
+      "revealHint": "Gauges",
+      "items": [
+        "Speedometer",
+        "Tachometer",
+        "Odometer",
+        "Fuel gauge"
+      ]
+    },
+    {
+      "id": "cabin",
+      "label": "Cabin controls",
+      "revealHint": "Controls",
+      "items": [
+        "Steering wheel",
+        "Gear stick",
+        "Handbrake",
+        "Indicator stalk"
+      ]
+    },
+    {
+      "id": "exterior",
+      "label": "Outside the car",
+      "revealHint": "Exterior",
+      "items": [
+        "Bumper",
+        "Headlight",
+        "Wing mirror",
+        "Exhaust pipe"
+      ]
+    },
+    {
+      "id": "bonnet",
+      "label": "Parts beneath the hood",
+      "revealHint": "Engine bay",
+      "items": [
+        "Engine",
+        "Radiator",
+        "Battery",
+        "Spark plug"
+      ]
+    }
+  ]
+}

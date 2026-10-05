@@ -1,0 +1,50 @@
+{
+  "id": "de-1002",
+  "title": "Gesund durch den Tag",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Gesunde Ernährung"
+  },
+  "groups": [
+    {
+      "id": "obst",
+      "label": "Frisches Obst",
+      "items": [
+        "Apfel",
+        "Banane",
+        "Kirsche",
+        "Pflaume"
+      ]
+    },
+    {
+      "id": "gemuese",
+      "label": "Buntes Gemüse",
+      "items": [
+        "Brokkoli",
+        "Paprika",
+        "Karotte",
+        "Gurke"
+      ]
+    },
+    {
+      "id": "getraenke",
+      "label": "Gesunde Getränke",
+      "items": [
+        "Wasser",
+        "Kräutertee",
+        "Saftschorle",
+        "Buttermilch"
+      ]
+    },
+    {
+      "id": "snacks",
+      "label": "Gesunde Snacks",
+      "items": [
+        "Mandel",
+        "Walnuss",
+        "Erdnuss",
+        "Cashewkern"
+      ]
+    }
+  ]
+}

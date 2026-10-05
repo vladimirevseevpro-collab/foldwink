@@ -1,0 +1,50 @@
+{
+  "id": "de-1108",
+  "title": "Flüsse und Bäche",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Fluss und Bach"
+  },
+  "groups": [
+    {
+      "id": "bachtiere",
+      "label": "Tiere am Bach",
+      "items": [
+        "Bachforelle",
+        "Wasseramsel",
+        "Bachstelze",
+        "Feuersalamander"
+      ]
+    },
+    {
+      "id": "flussteile",
+      "label": "Teile eines Flusses",
+      "items": [
+        "Quelle",
+        "Stromschnelle",
+        "Mündung",
+        "Delta"
+      ]
+    },
+    {
+      "id": "flussberufe",
+      "label": "Berufe am Fluss",
+      "items": [
+        "Fischer",
+        "Flößer",
+        "Binnenschiffer",
+        "Schleusenwärter"
+      ]
+    },
+    {
+      "id": "fluesse",
+      "label": "Große Flüsse Europas",
+      "items": [
+        "Donau",
+        "Rhein",
+        "Elbe",
+        "Oder"
+      ]
+    }
+  ]
+}

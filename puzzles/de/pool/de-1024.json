@@ -1,0 +1,55 @@
+{
+  "id": "de-1024",
+  "title": "Spielabend mit Freunden",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "spiele"
+  },
+  "editorialSummary": "Falsche Fährte: Backgammon sieht wie ein reines Brettspiel aus, ist aber eindeutig ein Würfelspiel.",
+  "groups": [
+    {
+      "id": "karten",
+      "label": "Klassische Kartenspiele",
+      "revealHint": "KARTEN",
+      "items": [
+        "Skat",
+        "Doppelkopf",
+        "Rommé",
+        "Bridge"
+      ]
+    },
+    {
+      "id": "wuerfel",
+      "label": "Würfelspiele",
+      "revealHint": "WÜRFEL",
+      "items": [
+        "Kniffel",
+        "Zehntausend",
+        "Backgammon",
+        "Würfelpoker"
+      ]
+    },
+    {
+      "id": "brett",
+      "label": "Brettspiele ohne Würfel",
+      "revealHint": "BRETT",
+      "items": [
+        "Dame",
+        "Mühle",
+        "Go",
+        "Halma"
+      ]
+    },
+    {
+      "id": "draussen",
+      "label": "Spiele für draußen",
+      "revealHint": "DRAUSSEN",
+      "items": [
+        "Fangen",
+        "Verstecken",
+        "Hüpfekästchen",
+        "Seilspringen"
+      ]
+    }
+  ]
+}

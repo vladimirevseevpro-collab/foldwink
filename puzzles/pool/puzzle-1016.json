@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1016",
+  "title": "Capital Tour",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "europe-capitals",
+      "label": "Capitals of Europe",
+      "items": [
+        "Paris",
+        "Berlin",
+        "Madrid",
+        "Rome"
+      ]
+    },
+    {
+      "id": "asia-capitals",
+      "label": "Capitals of Asia",
+      "items": [
+        "Tokyo",
+        "Beijing",
+        "Seoul",
+        "Bangkok"
+      ]
+    },
+    {
+      "id": "africa-capitals",
+      "label": "Capitals of Africa",
+      "items": [
+        "Cairo",
+        "Nairobi",
+        "Rabat",
+        "Accra"
+      ]
+    },
+    {
+      "id": "south-america-capitals",
+      "label": "Capitals of South America",
+      "items": [
+        "Lima",
+        "Bogotá",
+        "Santiago",
+        "Montevideo"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "geography",
+    "categoryType": "place"
+  }
+}

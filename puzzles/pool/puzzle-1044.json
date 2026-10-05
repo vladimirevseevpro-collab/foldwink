@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1044",
+  "title": "Morning bell",
+  "difficulty": "medium",
+  "editorialSummary": "Classroom board where Compass belongs with Maths and Geography at first glance, but the stationery label owns the drawing tool and the subject label lists only lessons.",
+  "meta": {
+    "theme": "school",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "subjects",
+      "label": "Subjects we study",
+      "revealHint": "Lessons",
+      "items": [
+        "Maths",
+        "Science",
+        "History",
+        "Geography"
+      ]
+    },
+    {
+      "id": "pencilcase",
+      "label": "Pencil-case contents",
+      "revealHint": "Kit",
+      "items": [
+        "Pencil",
+        "Eraser",
+        "Ruler",
+        "Compass"
+      ]
+    },
+    {
+      "id": "furniture",
+      "label": "Classroom furniture",
+      "revealHint": "Fittings",
+      "items": [
+        "Desk",
+        "Chair",
+        "Whiteboard",
+        "Bookshelf"
+      ]
+    },
+    {
+      "id": "staff",
+      "label": "Adults in the school",
+      "revealHint": "Staff",
+      "items": [
+        "Teacher",
+        "Janitor",
+        "Librarian",
+        "Headteacher"
+      ]
+    }
+  ]
+}

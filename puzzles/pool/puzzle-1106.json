@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1106",
+  "title": "Garden Party",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "garden-party-food",
+      "label": "Garden Party Food",
+      "items": [
+        "Finger Sandwiches",
+        "Scones",
+        "Fruit Salad",
+        "Lemonade"
+      ]
+    },
+    {
+      "id": "lawn-games",
+      "label": "Lawn Games",
+      "items": [
+        "Croquet",
+        "Bocce",
+        "Badminton",
+        "Ring Toss"
+      ]
+    },
+    {
+      "id": "garden-decorations",
+      "label": "Garden Decorations",
+      "items": [
+        "Fairy Lights",
+        "Paper Lanterns",
+        "Bunting",
+        "Potted Flowers"
+      ]
+    },
+    {
+      "id": "picnic-setup",
+      "label": "Picnic Setup",
+      "items": [
+        "Blanket",
+        "Cooler",
+        "Folding Chair",
+        "Picnic Basket"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "weddings and parties",
+    "categoryType": "classification"
+  }
+}

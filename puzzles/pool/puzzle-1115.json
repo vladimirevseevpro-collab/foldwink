@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1115",
+  "title": "Freshwater Trails",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "famous-rivers",
+      "label": "Famous Rivers",
+      "items": [
+        "Nile",
+        "Amazon",
+        "Mississippi",
+        "Danube"
+      ]
+    },
+    {
+      "id": "world-lakes",
+      "label": "World Lakes",
+      "items": [
+        "Baikal",
+        "Victoria",
+        "Superior",
+        "Titicaca"
+      ]
+    },
+    {
+      "id": "river-creatures",
+      "label": "River Creatures",
+      "items": [
+        "Otter",
+        "Beaver",
+        "Salmon",
+        "Heron"
+      ]
+    },
+    {
+      "id": "river-activities",
+      "label": "River Activities",
+      "items": [
+        "Rafting",
+        "Kayaking",
+        "Canoeing",
+        "Fishing"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "rivers and lakes",
+    "categoryType": "classification"
+  }
+}

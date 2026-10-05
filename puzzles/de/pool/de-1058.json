@@ -1,0 +1,50 @@
+{
+  "id": "de-1058",
+  "title": "Frühstückstheke",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Frühstück"
+  },
+  "groups": [
+    {
+      "id": "broetchen",
+      "label": "Brötchensorten",
+      "items": [
+        "Körnerbrötchen",
+        "Laugenbrötchen",
+        "Milchbrötchen",
+        "Roggenbrötchen"
+      ]
+    },
+    {
+      "id": "aufstriche",
+      "label": "Aufstriche fürs Brot",
+      "items": [
+        "Marmelade",
+        "Leberwurst",
+        "Erdnussbutter",
+        "Nussnougatcreme"
+      ]
+    },
+    {
+      "id": "getraenke",
+      "label": "Kalte Frühstücksgetränke",
+      "items": [
+        "Orangensaft",
+        "Apfelsaft",
+        "Traubensaft",
+        "Mineralwasser"
+      ]
+    },
+    {
+      "id": "muesli",
+      "label": "Zutaten für Müsli",
+      "items": [
+        "Haferflocken",
+        "Rosinen",
+        "Mandeln",
+        "Sonnenblumenkerne"
+      ]
+    }
+  ]
+}

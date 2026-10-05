@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1093",
+  "title": "Beauty Routine",
+  "difficulty": "medium",
+  "editorialSummary": "Sponge can be used in nail art, but the nail label names manicure tools only, so the beauty tools group is its true place.",
+  "meta": {
+    "theme": "beauty routine",
+    "categoryType": "function"
+  },
+  "groups": [
+    {
+      "id": "skincare",
+      "label": "Skincare products",
+      "revealHint": "Skincare",
+      "items": [
+        "Cleanser",
+        "Toner",
+        "Moisturiser",
+        "Serum"
+      ]
+    },
+    {
+      "id": "tools",
+      "label": "Beauty tools",
+      "revealHint": "Tools",
+      "items": [
+        "Tweezers",
+        "Brush",
+        "Sponge",
+        "Eyelash curler"
+      ]
+    },
+    {
+      "id": "nails",
+      "label": "Nail kit items",
+      "revealHint": "Nails",
+      "items": [
+        "File",
+        "Clipper",
+        "Buffer",
+        "Polish"
+      ]
+    },
+    {
+      "id": "hairacc",
+      "label": "Hair ornaments",
+      "revealHint": "Hair",
+      "items": [
+        "Clip",
+        "Hairband",
+        "Bobby pin",
+        "Scrunchie"
+      ]
+    }
+  ]
+}

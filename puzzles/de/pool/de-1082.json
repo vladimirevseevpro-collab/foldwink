@@ -1,0 +1,55 @@
+{
+  "id": "de-1082",
+  "title": "Leben auf dem Hof",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "bauernhof"
+  },
+  "editorialSummary": "Falsche Fährte: Stroh sieht aus wie Heu und landet oft im Futtertrog, dient hier aber als Einstreu.",
+  "groups": [
+    {
+      "id": "nutztiere",
+      "label": "Nutztiere auf dem Hof",
+      "revealHint": "TIERE",
+      "items": [
+        "Kuh",
+        "Schwein",
+        "Schaf",
+        "Ziege"
+      ]
+    },
+    {
+      "id": "futter",
+      "label": "Futter für die Tiere",
+      "revealHint": "FUTTER",
+      "items": [
+        "Heu",
+        "Silage",
+        "Kraftfutter",
+        "Futterrüben"
+      ]
+    },
+    {
+      "id": "einstreu",
+      "label": "Einstreu für den Stall",
+      "revealHint": "EINSTREU",
+      "items": [
+        "Stroh",
+        "Sägespäne",
+        "Torfmull",
+        "Sand"
+      ]
+    },
+    {
+      "id": "maschinen",
+      "label": "Maschinen und Geräte auf dem Hof",
+      "revealHint": "MASCHINEN",
+      "items": [
+        "Pflug",
+        "Egge",
+        "Mähdrescher",
+        "Traktor"
+      ]
+    }
+  ]
+}

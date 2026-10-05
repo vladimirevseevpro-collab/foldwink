@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1070",
+  "title": "Maths Lesson",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "geometric-shapes",
+      "label": "Geometric Shapes",
+      "items": [
+        "Circle",
+        "Square",
+        "Triangle",
+        "Rectangle"
+      ]
+    },
+    {
+      "id": "math-operations",
+      "label": "Math Operations",
+      "items": [
+        "Addition",
+        "Subtraction",
+        "Multiplication",
+        "Division"
+      ]
+    },
+    {
+      "id": "math-symbols",
+      "label": "Math Symbols",
+      "items": [
+        "Plus",
+        "Minus",
+        "Equals",
+        "Percent"
+      ]
+    },
+    {
+      "id": "units-of-measure",
+      "label": "Units of Measure",
+      "items": [
+        "Meter",
+        "Kilogram",
+        "Liter",
+        "Second"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "maths",
+    "categoryType": "classification"
+  }
+}

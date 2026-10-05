@@ -1,0 +1,55 @@
+{
+  "id": "de-1034",
+  "title": "Beet und Topf",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "garten"
+  },
+  "editorialSummary": "Falsche Fährte: „Schnittlauch“ klingt nach Schneiden und „Rosenschere“ nach Rosen, doch beide Karten gehören fest in ihre jeweilige Gruppe.",
+  "groups": [
+    {
+      "id": "schneiden",
+      "label": "Schneiden im Garten",
+      "revealHint": "SCHNEIDEN",
+      "items": [
+        "Rosenschere",
+        "Heckenschere",
+        "Astschere",
+        "Baumsäge"
+      ]
+    },
+    {
+      "id": "stauden",
+      "label": "Blühende Stauden",
+      "revealHint": "STAUDEN",
+      "items": [
+        "Sonnenhut",
+        "Rittersporn",
+        "Phlox",
+        "Storchschnabel"
+      ]
+    },
+    {
+      "id": "kraeuter",
+      "label": "Kräuter für Töpfe",
+      "revealHint": "KRÄUTER",
+      "items": [
+        "Basilikum",
+        "Rosmarin",
+        "Petersilie",
+        "Schnittlauch"
+      ]
+    },
+    {
+      "id": "ranken",
+      "label": "Rankende Pflanzen",
+      "revealHint": "RANKEN",
+      "items": [
+        "Efeu",
+        "Clematis",
+        "Geißblatt",
+        "Blauregen"
+      ]
+    }
+  ]
+}

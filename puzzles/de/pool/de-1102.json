@@ -1,0 +1,50 @@
+{
+  "id": "de-1102",
+  "title": "In der Garage",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Garage und Werkstatt"
+  },
+  "groups": [
+    {
+      "id": "auto_innen",
+      "label": "Autoinnenraum",
+      "items": [
+        "Lenkrad",
+        "Rückspiegel",
+        "Handbremse",
+        "Tacho"
+      ]
+    },
+    {
+      "id": "einrichtung",
+      "label": "Werkstatt-Einrichtung",
+      "items": [
+        "Werkbank",
+        "Schraubstock",
+        "Werkzeugkasten",
+        "Werkzeugwagen"
+      ]
+    },
+    {
+      "id": "motor",
+      "label": "Was der Motor braucht",
+      "items": [
+        "Motoröl",
+        "Kühlmittel",
+        "Zündkerze",
+        "Keilriemen"
+      ]
+    },
+    {
+      "id": "reifen",
+      "label": "Für den Reifenwechsel",
+      "items": [
+        "Wagenheber",
+        "Radkreuz",
+        "Drehmomentschlüssel",
+        "Unterlegkeil"
+      ]
+    }
+  ]
+}

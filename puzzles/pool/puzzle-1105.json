@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1105",
+  "title": "Wedding Bells",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "wedding-party-roles",
+      "label": "Wedding Party Roles",
+      "items": [
+        "Best Man",
+        "Maid of Honor",
+        "Ring Bearer",
+        "Flower Girl"
+      ]
+    },
+    {
+      "id": "wedding-venue-details",
+      "label": "Wedding Venue Details",
+      "items": [
+        "Altar",
+        "Aisle",
+        "Arch",
+        "Pews"
+      ]
+    },
+    {
+      "id": "reception-setup",
+      "label": "Reception Setup",
+      "items": [
+        "Seating Chart",
+        "Place Card",
+        "Guest Book",
+        "Table Number"
+      ]
+    },
+    {
+      "id": "wedding-flowers",
+      "label": "Wedding Flowers",
+      "items": [
+        "Bouquet",
+        "Boutonniere",
+        "Corsage",
+        "Flower Crown"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "weddings and parties",
+    "categoryType": "classification"
+  }
+}

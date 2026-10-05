@@ -1,0 +1,50 @@
+{
+  "id": "de-1060",
+  "title": "Rund um die Familie",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Familie"
+  },
+  "groups": [
+    {
+      "id": "kernfamilie",
+      "label": "Kernfamilie",
+      "items": [
+        "Mutter",
+        "Vater",
+        "Sohn",
+        "Tochter"
+      ]
+    },
+    {
+      "id": "angeheiratet",
+      "label": "Angeheiratete Verwandte",
+      "items": [
+        "Schwiegermutter",
+        "Schwiegervater",
+        "Schwager",
+        "Schwägerin"
+      ]
+    },
+    {
+      "id": "vorfahren",
+      "label": "Vorfahren",
+      "items": [
+        "Großmutter",
+        "Großvater",
+        "Urgroßmutter",
+        "Urgroßvater"
+      ]
+    },
+    {
+      "id": "feiern",
+      "label": "Familienfeiern",
+      "items": [
+        "Hochzeit",
+        "Taufe",
+        "Geburtstag",
+        "Jubiläum"
+      ]
+    }
+  ]
+}

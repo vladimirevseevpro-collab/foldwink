@@ -1,0 +1,50 @@
+{
+  "id": "de-1011",
+  "title": "Am Computer",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Computer-Hardware"
+  },
+  "groups": [
+    {
+      "id": "eingabe",
+      "label": "Eingabegeräte",
+      "items": [
+        "Tastatur",
+        "Maus",
+        "Mikrofon",
+        "Webcam"
+      ]
+    },
+    {
+      "id": "ausgabe",
+      "label": "Ausgabegeräte",
+      "items": [
+        "Monitor",
+        "Drucker",
+        "Lautsprecher",
+        "Kopfhörer"
+      ]
+    },
+    {
+      "id": "speicher",
+      "label": "Speichermedien",
+      "items": [
+        "USB-Stick",
+        "Festplatte",
+        "Speicherkarte",
+        "CD"
+      ]
+    },
+    {
+      "id": "anschluss",
+      "label": "Anschlüsse",
+      "items": [
+        "USB",
+        "HDMI",
+        "LAN-Buchse",
+        "Klinkenbuchse"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1082",
+  "title": "In The Gallery",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "modern-art-movements",
+      "label": "Modern Art Movements",
+      "items": [
+        "Impressionism",
+        "Cubism",
+        "Surrealism",
+        "Pop Art"
+      ]
+    },
+    {
+      "id": "museum-jobs",
+      "label": "Museum Jobs",
+      "items": [
+        "Curator",
+        "Restorer",
+        "Tour Guide",
+        "Security Guard"
+      ]
+    },
+    {
+      "id": "statue-materials",
+      "label": "Statue Materials",
+      "items": [
+        "Marble",
+        "Bronze",
+        "Clay",
+        "Granite"
+      ]
+    },
+    {
+      "id": "picture-frame-parts",
+      "label": "Picture Frame Parts",
+      "items": [
+        "Moulding",
+        "Mat",
+        "Glass",
+        "Backing"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "art",
+    "categoryType": "classification"
+  }
+}

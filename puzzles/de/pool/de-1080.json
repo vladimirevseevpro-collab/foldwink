@@ -1,0 +1,55 @@
+{
+  "id": "de-1080",
+  "title": "Hausapotheke",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "medizin"
+  },
+  "editorialSummary": "Falsche Fährte: Die Kohletablette sieht aus wie ein Schmerzmittel, gehört aber zu den Mitteln gegen Magen-Darm-Beschwerden.",
+  "groups": [
+    {
+      "id": "schmerz",
+      "label": "Rezeptfreie Schmerzmittel",
+      "revealHint": "SCHMERZ",
+      "items": [
+        "Aspirin",
+        "Ibuprofen",
+        "Paracetamol",
+        "Naproxen"
+      ]
+    },
+    {
+      "id": "magen",
+      "label": "Mittel gegen Magen-Darm-Beschwerden",
+      "revealHint": "MAGEN",
+      "items": [
+        "Kohletabletten",
+        "Elektrolytpulver",
+        "Magentropfen",
+        "Säureblocker"
+      ]
+    },
+    {
+      "id": "wunde",
+      "label": "Wundversorgung für zu Hause",
+      "revealHint": "WUNDE",
+      "items": [
+        "Mullbinde",
+        "Pflaster",
+        "Kompresse",
+        "Dreieckstuch"
+      ]
+    },
+    {
+      "id": "messen",
+      "label": "Geräte zum Messen von Körperwerten",
+      "revealHint": "MESSEN",
+      "items": [
+        "Fieberthermometer",
+        "Blutdruckmessgerät",
+        "Blutzuckermessgerät",
+        "Pulsoximeter"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1058",
+  "title": "Measure and shape",
+  "difficulty": "medium",
+  "editorialSummary": "Set square sounds four-sided, but it is a triangle, so it fits only the drafting tools once the shapes label is read.",
+  "meta": {
+    "theme": "measurement and shape",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "length",
+      "label": "Units of length",
+      "revealHint": "Length",
+      "items": [
+        "Metre",
+        "Inch",
+        "Foot",
+        "Yard"
+      ]
+    },
+    {
+      "id": "volume",
+      "label": "Units of volume",
+      "revealHint": "Volume",
+      "items": [
+        "Litre",
+        "Quart",
+        "Pint",
+        "Gallon"
+      ]
+    },
+    {
+      "id": "quads",
+      "label": "Four-sided shapes",
+      "revealHint": "Four sides",
+      "items": [
+        "Rectangle",
+        "Kite",
+        "Rhombus",
+        "Trapezium"
+      ]
+    },
+    {
+      "id": "drafting",
+      "label": "Drafting tools",
+      "revealHint": "Drawing",
+      "items": [
+        "Ruler",
+        "Protractor",
+        "Compass",
+        "Set square"
+      ]
+    }
+  ]
+}

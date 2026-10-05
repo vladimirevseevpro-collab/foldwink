@@ -1,0 +1,50 @@
+{
+  "id": "de-1097",
+  "title": "Einkaufswagen",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Supermarkt-Abteilungen"
+  },
+  "groups": [
+    {
+      "id": "frisch",
+      "label": "Obst- und Gemüseabteilung",
+      "items": [
+        "Äpfel",
+        "Tomaten",
+        "Gurken",
+        "Bananen"
+      ]
+    },
+    {
+      "id": "molkerei",
+      "label": "Molkereiabteilung",
+      "items": [
+        "Milch",
+        "Joghurt",
+        "Butter",
+        "Käse"
+      ]
+    },
+    {
+      "id": "tiefkuehl",
+      "label": "Tiefkühlabteilung",
+      "items": [
+        "Pizza",
+        "Pommes",
+        "Fischstäbchen",
+        "Speiseeis"
+      ]
+    },
+    {
+      "id": "getraenke",
+      "label": "Getränkeabteilung",
+      "items": [
+        "Mineralwasser",
+        "Limonade",
+        "Bier",
+        "Fruchtsaft"
+      ]
+    }
+  ]
+}

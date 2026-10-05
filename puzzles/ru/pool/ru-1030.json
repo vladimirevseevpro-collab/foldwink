@@ -1,0 +1,56 @@
+{
+  "id": "ru-1030",
+  "title": "В интернете",
+  "difficulty": "medium",
+  "editorialSummary": "ВКонтакте крутит видео не хуже Rutube, но остаётся соцсетью; ярлык видеохостингов её не берёт.",
+  "meta": {
+    "theme": "Интернет-сервисы",
+    "categoryType": "mixed"
+  },
+  "groups": [
+    {
+      "id": "search",
+      "label": "Поисковые системы",
+      "revealHint": "ПОИСК",
+      "items": [
+        "Google",
+        "Яндекс",
+        "Bing",
+        "DuckDuckGo"
+      ]
+    },
+    {
+      "id": "social",
+      "label": "Социальные сети",
+      "revealHint": "СОЦСЕТЬ",
+      "items": [
+        "ВКонтакте",
+        "Одноклассники",
+        "Facebook",
+        "Instagram"
+      ]
+    },
+    {
+      "id": "video",
+      "label": "Видеохостинги",
+      "revealHint": "ВИДЕО",
+      "items": [
+        "YouTube",
+        "Rutube",
+        "Vimeo",
+        "Dailymotion"
+      ]
+    },
+    {
+      "id": "cloud",
+      "label": "Облачные хранилища",
+      "revealHint": "ОБЛАКО",
+      "items": [
+        "Dropbox",
+        "OneDrive",
+        "iCloud",
+        "Mega"
+      ]
+    }
+  ]
+}

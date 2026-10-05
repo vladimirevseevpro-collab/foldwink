@@ -1,0 +1,55 @@
+{
+  "id": "de-1041",
+  "title": "Wortwahl der Gefühle",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "emotionen"
+  },
+  "editorialSummary": "Falsche Fährte: 'Schrecken' klingt nach einem Filmgenre, benennt hier aber ein Angstwort; 'Groll' ist stille Wut und keine Traurigkeit.",
+  "groups": [
+    {
+      "id": "freude",
+      "label": "Wörter für Freude",
+      "revealHint": "FREUDE",
+      "items": [
+        "Jubel",
+        "Euphorie",
+        "Wonne",
+        "Entzücken"
+      ]
+    },
+    {
+      "id": "wut",
+      "label": "Wörter für Wut",
+      "revealHint": "WUT",
+      "items": [
+        "Zorn",
+        "Raserei",
+        "Groll",
+        "Empörung"
+      ]
+    },
+    {
+      "id": "angst",
+      "label": "Wörter für Angst",
+      "revealHint": "ANGST",
+      "items": [
+        "Furcht",
+        "Panik",
+        "Beklemmung",
+        "Schrecken"
+      ]
+    },
+    {
+      "id": "trauer",
+      "label": "Wörter für Trauer",
+      "revealHint": "TRAUER",
+      "items": [
+        "Kummer",
+        "Gram",
+        "Schwermut",
+        "Niedergeschlagenheit"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1056",
+  "title": "Corner roastery",
+  "difficulty": "medium",
+  "editorialSummary": "Chamomile reads like a tea, but the label about the tea plant is the only defensible home once the herbal infusions label is read.",
+  "meta": {
+    "theme": "coffee and tea",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "espresso",
+      "label": "Espresso bar orders",
+      "revealHint": "Espresso",
+      "items": [
+        "Espresso",
+        "Cappuccino",
+        "Latte",
+        "Macchiato"
+      ]
+    },
+    {
+      "id": "trueTea",
+      "label": "Drinks from the tea plant",
+      "revealHint": "True tea",
+      "items": [
+        "Earl Grey",
+        "Oolong",
+        "Darjeeling",
+        "Ceylon"
+      ]
+    },
+    {
+      "id": "herbal",
+      "label": "Herbal infusions",
+      "revealHint": "Herbal",
+      "items": [
+        "Peppermint",
+        "Chamomile",
+        "Hibiscus",
+        "Lemongrass"
+      ]
+    },
+    {
+      "id": "cold",
+      "label": "Cold blended treats",
+      "revealHint": "Blended",
+      "items": [
+        "Smoothie",
+        "Milkshake",
+        "Slushie",
+        "Frozen lemonade"
+      ]
+    }
+  ]
+}

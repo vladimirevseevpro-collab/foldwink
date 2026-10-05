@@ -1,0 +1,50 @@
+{
+  "id": "de-1092",
+  "title": "Ja-Wort",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Hochzeit und Feiern"
+  },
+  "groups": [
+    {
+      "id": "kleidung",
+      "label": "Hochzeitskleidung",
+      "items": [
+        "Brautkleid",
+        "Brautschleier",
+        "Hochzeitsanzug",
+        "Brautschuhe"
+      ]
+    },
+    {
+      "id": "rollen",
+      "label": "Hochzeitsrollen",
+      "items": [
+        "Trauzeuge",
+        "Brautjungfer",
+        "Blumenkind",
+        "Standesbeamter"
+      ]
+    },
+    {
+      "id": "tisch",
+      "label": "Auf dem Hochzeitstisch",
+      "items": [
+        "Tischkarte",
+        "Blumengesteck",
+        "Sektglas",
+        "Menükarte"
+      ]
+    },
+    {
+      "id": "braeuche",
+      "label": "Bräuche zur Hochzeit",
+      "items": [
+        "Polterabend",
+        "Autokorso",
+        "Baumpflanzung",
+        "Brautstraußwurf"
+      ]
+    }
+  ]
+}

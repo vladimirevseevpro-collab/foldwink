@@ -1,0 +1,56 @@
+{
+  "id": "de-1016",
+  "title": "Versteckte Wörter I",
+  "difficulty": "hard",
+  "editorialSummary": "Every card carries a three-letter string inside it (AST, EIS, ARM, EID) that is never the stem or the meaning of the word; the shared endings -st and -is are the false trail.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay"
+  },
+  "groups": [
+    {
+      "id": "ast",
+      "label": "AST steckt drin",
+      "items": [
+        "Last",
+        "Gast",
+        "Rast",
+        "Mast"
+      ],
+      "revealHint": "AST"
+    },
+    {
+      "id": "eis",
+      "label": "EIS steckt drin",
+      "items": [
+        "Fleisch",
+        "Meise",
+        "Kreis",
+        "Preis"
+      ],
+      "revealHint": "EIS"
+    },
+    {
+      "id": "arm",
+      "label": "ARM steckt drin",
+      "items": [
+        "Warm",
+        "Farm",
+        "Schwarm",
+        "Alarm"
+      ],
+      "revealHint": "ARM"
+    },
+    {
+      "id": "eid",
+      "label": "EID steckt drin",
+      "items": [
+        "Kleid",
+        "Neid",
+        "Weide",
+        "Bescheid"
+      ],
+      "revealHint": "EID"
+    }
+  ]
+}

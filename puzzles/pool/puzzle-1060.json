@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1060",
+  "title": "Raw material rack",
+  "difficulty": "medium",
+  "editorialSummary": "Bamboo reads like a hardwood, but it is a grass, so the plant fabrics label is its only defensible home.",
+  "meta": {
+    "theme": "materials",
+    "categoryType": "material"
+  },
+  "groups": [
+    {
+      "id": "hardwoods",
+      "label": "Hardwoods",
+      "revealHint": "Hardwood",
+      "items": [
+        "Oak",
+        "Maple",
+        "Walnut",
+        "Cherry"
+      ]
+    },
+    {
+      "id": "metals",
+      "label": "Metals in a workshop",
+      "revealHint": "Metals",
+      "items": [
+        "Iron",
+        "Copper",
+        "Zinc",
+        "Tin"
+      ]
+    },
+    {
+      "id": "plantfibres",
+      "label": "Plant fabrics",
+      "revealHint": "Plant fibre",
+      "items": [
+        "Cotton",
+        "Linen",
+        "Hemp",
+        "Bamboo"
+      ]
+    },
+    {
+      "id": "plastics",
+      "label": "Plastics",
+      "revealHint": "Plastics",
+      "items": [
+        "PVC",
+        "Polystyrene",
+        "Polyethylene",
+        "Bakelite"
+      ]
+    }
+  ]
+}

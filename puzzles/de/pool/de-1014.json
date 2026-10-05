@@ -1,0 +1,56 @@
+{
+  "id": "de-1014",
+  "title": "Zahl, Farbe, Körper",
+  "difficulty": "hard",
+  "editorialSummary": "Each word is built from a hidden word at its start: a number, a colour or a body part; the food-and-drink cards like Rotwein and Grünkohl are the false trail, and the fourth group only works when read backwards.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay"
+  },
+  "groups": [
+    {
+      "id": "zahl",
+      "label": "Zahl am Wortanfang",
+      "items": [
+        "Einhorn",
+        "Zweifel",
+        "Dreieck",
+        "Vierbeiner"
+      ],
+      "revealHint": "Zahl"
+    },
+    {
+      "id": "farbe",
+      "label": "Farbe am Wortanfang",
+      "items": [
+        "Blaukraut",
+        "Rotwein",
+        "Grünkohl",
+        "Schwarztee"
+      ],
+      "revealHint": "Farbe"
+    },
+    {
+      "id": "koerper",
+      "label": "Körperteil am Wortanfang",
+      "items": [
+        "Handschuh",
+        "Fußball",
+        "Zahnbürste",
+        "Nasenloch"
+      ],
+      "revealHint": "Körperteil"
+    },
+    {
+      "id": "rueckwaerts",
+      "label": "Rückwärts ein neues Wort",
+      "items": [
+        "Lager",
+        "Regal",
+        "Nebel",
+        "Leben"
+      ],
+      "revealHint": "umgedreht"
+    }
+  ]
+}

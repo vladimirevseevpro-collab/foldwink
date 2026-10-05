@@ -1,0 +1,55 @@
+{
+  "id": "de-1044",
+  "title": "Städte an Flüssen",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "geografie"
+  },
+  "editorialSummary": "Falsche Fährte: Meißen wird leicht mit den Rheinstädten verwechselt, und Regensburg liegt an mehreren Gewässern, gehört aber klar zur Donau.",
+  "groups": [
+    {
+      "id": "rhein",
+      "label": "Städte am Rhein",
+      "revealHint": "RHEIN",
+      "items": [
+        "Köln",
+        "Mainz",
+        "Bonn",
+        "Straßburg"
+      ]
+    },
+    {
+      "id": "donau",
+      "label": "Städte an der Donau",
+      "revealHint": "DONAU",
+      "items": [
+        "Wien",
+        "Budapest",
+        "Regensburg",
+        "Passau"
+      ]
+    },
+    {
+      "id": "elbe",
+      "label": "Städte an der Elbe",
+      "revealHint": "ELBE",
+      "items": [
+        "Dresden",
+        "Hamburg",
+        "Magdeburg",
+        "Meißen"
+      ]
+    },
+    {
+      "id": "isar",
+      "label": "Städte an der Isar",
+      "revealHint": "ISAR",
+      "items": [
+        "München",
+        "Freising",
+        "Landshut",
+        "Bad Tölz"
+      ]
+    }
+  ]
+}

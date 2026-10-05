@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1046",
+  "title": "Dental visit",
+  "difficulty": "medium",
+  "editorialSummary": "Crown and Root read like royalty or a plant, but inside a mouth they are tooth anatomy and belong to no other label.",
+  "meta": {
+    "theme": "dentist chair",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "tooth",
+      "label": "Parts of a tooth",
+      "revealHint": "Molar",
+      "items": [
+        "Crown",
+        "Root",
+        "Enamel",
+        "Dentine"
+      ]
+    },
+    {
+      "id": "tools",
+      "label": "Dental tools",
+      "revealHint": "Surgery",
+      "items": [
+        "Drill",
+        "Mirror",
+        "Pick",
+        "Scaler"
+      ]
+    },
+    {
+      "id": "cleaning",
+      "label": "Dental hygiene habits",
+      "revealHint": "Routine",
+      "items": [
+        "Brushing",
+        "Flossing",
+        "Rinsing",
+        "Regular check-ups"
+      ]
+    },
+    {
+      "id": "problems",
+      "label": "Dental problems",
+      "revealHint": "Decay",
+      "items": [
+        "Cavity",
+        "Plaque",
+        "Abscess",
+        "Sensitivity"
+      ]
+    }
+  ]
+}

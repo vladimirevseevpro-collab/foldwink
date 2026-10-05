@@ -1,0 +1,55 @@
+{
+  "id": "de-1053",
+  "title": "Sicher online",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "sicherheit"
+  },
+  "editorialSummary": "Falsche Fährte: Der Werbeblocker wirkt wie ein Sicherheitsprogramm, schützt aber nur vor Tracking.",
+  "groups": [
+    {
+      "id": "passwort",
+      "label": "Für ein sicheres Passwort",
+      "revealHint": "PASSWORT",
+      "items": [
+        "Sonderzeichen",
+        "Ziffern",
+        "Großbuchstaben",
+        "Mindestlänge"
+      ]
+    },
+    {
+      "id": "viren",
+      "label": "Zum Schutz vor Viren",
+      "revealHint": "VIREN",
+      "items": [
+        "Antivirenprogramm",
+        "Firewall",
+        "regelmäßige Updates",
+        "Virenscan"
+      ]
+    },
+    {
+      "id": "tracking",
+      "label": "Gegen Tracking im Web",
+      "revealHint": "TRACKING",
+      "items": [
+        "Datenschutzeinstellungen",
+        "Cookies löschen",
+        "Inkognito-Modus",
+        "Werbeblocker"
+      ]
+    },
+    {
+      "id": "phishing",
+      "label": "Erkennungsmerkmale von Phishing",
+      "revealHint": "PHISHING",
+      "items": [
+        "gefälschte Absender",
+        "Dringlichkeit",
+        "Rechtschreibfehler",
+        "verdächtige Links"
+      ]
+    }
+  ]
+}

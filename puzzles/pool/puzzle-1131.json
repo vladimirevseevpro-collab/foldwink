@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1131",
+  "title": "Sweet Treats",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "chocolate-types",
+      "label": "Chocolate Types",
+      "items": [
+        "Milk Chocolate",
+        "Dark Chocolate",
+        "White Chocolate",
+        "Ruby Chocolate"
+      ]
+    },
+    {
+      "id": "chewy-candies",
+      "label": "Chewy Candies",
+      "items": [
+        "Gummy Bears",
+        "Jelly Beans",
+        "Licorice",
+        "Gummy Worms"
+      ]
+    },
+    {
+      "id": "hard-candies",
+      "label": "Hard Candies",
+      "items": [
+        "Lollipop",
+        "Peppermint",
+        "Butterscotch",
+        "Rock Candy"
+      ]
+    },
+    {
+      "id": "bakery-sweets",
+      "label": "Bakery Sweets",
+      "items": [
+        "Brownie",
+        "Cookie",
+        "Cupcake",
+        "Doughnut"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "snacks and sweets",
+    "categoryType": "classification"
+  }
+}

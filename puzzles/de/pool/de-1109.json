@@ -1,0 +1,50 @@
+{
+  "id": "de-1109",
+  "title": "Forschung im Weltraum",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Weltraum"
+  },
+  "groups": [
+    {
+      "id": "zwergplaneten",
+      "label": "Zwergplaneten",
+      "items": [
+        "Pluto",
+        "Ceres",
+        "Eris",
+        "Makemake"
+      ]
+    },
+    {
+      "id": "rakete",
+      "label": "Teile einer Rakete",
+      "items": [
+        "Triebwerk",
+        "Stufen",
+        "Nutzlast",
+        "Booster"
+      ]
+    },
+    {
+      "id": "monde",
+      "label": "Natürliche Monde",
+      "items": [
+        "Phobos",
+        "Deimos",
+        "Titan",
+        "Enceladus"
+      ]
+    },
+    {
+      "id": "teleskope",
+      "label": "Weltraumteleskope",
+      "items": [
+        "Hubble",
+        "James Webb",
+        "Kepler",
+        "TESS"
+      ]
+    }
+  ]
+}

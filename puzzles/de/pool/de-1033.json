@@ -1,0 +1,55 @@
+{
+  "id": "de-1033",
+  "title": "Büroalltag",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "buero"
+  },
+  "editorialSummary": "Falsche Fährte: Der Ablagekorb wirkt wie Büromaterial, dient hier aber der Organisation.",
+  "groups": [
+    {
+      "id": "moebel",
+      "label": "Möbel im Büro",
+      "revealHint": "MÖBEL",
+      "items": [
+        "Schreibtisch",
+        "Bürostuhl",
+        "Aktenschrank",
+        "Rollcontainer"
+      ]
+    },
+    {
+      "id": "material",
+      "label": "Klassisches Büromaterial",
+      "revealHint": "MATERIAL",
+      "items": [
+        "Tacker",
+        "Locher",
+        "Büroklammern",
+        "Klebeband"
+      ]
+    },
+    {
+      "id": "technik",
+      "label": "Bürogeräte",
+      "revealHint": "TECHNIK",
+      "items": [
+        "Drucker",
+        "Scanner",
+        "Kopierer",
+        "Faxgerät"
+      ]
+    },
+    {
+      "id": "organisation",
+      "label": "Hilfsmittel zur Organisation",
+      "revealHint": "ORDNUNG",
+      "items": [
+        "Kalender",
+        "Adressbuch",
+        "Ablagekorb",
+        "Pinnwand"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-1050",
+  "title": "Draußen im Garten",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "garten"
+  },
+  "editorialSummary": "Falsche Fährte: Spaten und Grabegabel wirken wie Werkzeuge zum Auflockern, gehören aber zur Gruppe Graben.",
+  "groups": [
+    {
+      "id": "graben",
+      "label": "Gartengeräte zum Graben",
+      "revealHint": "GRABEN",
+      "items": [
+        "Spaten",
+        "Grabegabel",
+        "Schaufel",
+        "Spitzhacke"
+      ]
+    },
+    {
+      "id": "schneiden",
+      "label": "Gartengeräte zum Schneiden",
+      "revealHint": "SCHNEIDEN",
+      "items": [
+        "Heckenschere",
+        "Gartenschere",
+        "Astschere",
+        "Baumsäge"
+      ]
+    },
+    {
+      "id": "giessen",
+      "label": "Gartengeräte zum Gießen",
+      "revealHint": "GIESSEN",
+      "items": [
+        "Gießkanne",
+        "Gartenschlauch",
+        "Sprühflasche",
+        "Rasensprenger"
+      ]
+    },
+    {
+      "id": "unkraut",
+      "label": "Gartengeräte zum Unkrautjäten",
+      "revealHint": "UNKRAUT",
+      "items": [
+        "Unkrautstecher",
+        "Jäteisen",
+        "Fugenkratzer",
+        "Wurzelstecher"
+      ]
+    }
+  ]
+}

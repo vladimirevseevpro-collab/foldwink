@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1014",
+  "title": "Build a Shelf",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "woodworking-tools",
+      "label": "Woodworking Tools",
+      "items": [
+        "Chisel",
+        "Hand Plane",
+        "Wood Rasp",
+        "Coping Saw"
+      ]
+    },
+    {
+      "id": "shelf-hardware",
+      "label": "Shelf Hardware",
+      "items": [
+        "Dowel",
+        "Bracket",
+        "Corner Brace",
+        "Shelf Pin"
+      ]
+    },
+    {
+      "id": "sanding-supplies",
+      "label": "Sanding Supplies",
+      "items": [
+        "Sandpaper",
+        "Sanding Block",
+        "Steel Wool",
+        "Sanding Sponge"
+      ]
+    },
+    {
+      "id": "finishing-products",
+      "label": "Finishing Products",
+      "items": [
+        "Wood Stain",
+        "Varnish",
+        "Wood Filler",
+        "Furniture Wax"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "woodworking",
+    "categoryType": "material"
+  }
+}

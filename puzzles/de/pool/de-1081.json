@@ -1,0 +1,55 @@
+{
+  "id": "de-1081",
+  "title": "Rund ums Auto",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "auto"
+  },
+  "editorialSummary": "Falsche Fährte: Motoröl klingt nach einem festen Motorteil, gehört aber zu den Verschleiß- und Betriebsstoffen.",
+  "groups": [
+    {
+      "id": "motor",
+      "label": "Feste Teile im Motor",
+      "revealHint": "MOTOR",
+      "items": [
+        "Kolben",
+        "Kurbelwelle",
+        "Nockenwelle",
+        "Zylinderkopf"
+      ]
+    },
+    {
+      "id": "verschleiss",
+      "label": "Verschleißteile und Betriebsstoffe",
+      "revealHint": "VERSCHLEISS",
+      "items": [
+        "Motoröl",
+        "Bremsbelag",
+        "Reifen",
+        "Scheibenwischer"
+      ]
+    },
+    {
+      "id": "warnleuchten",
+      "label": "Warnleuchten im Cockpit",
+      "revealHint": "WARNUNG",
+      "items": [
+        "Tankwarnleuchte",
+        "Öldruckleuchte",
+        "Batterieleuchte",
+        "Kühlmittelwarnleuchte"
+      ]
+    },
+    {
+      "id": "verkehrszeichen",
+      "label": "Verkehrszeichen an der Straße",
+      "revealHint": "SCHILDER",
+      "items": [
+        "Stoppschild",
+        "Vorfahrt-gewähren-Schild",
+        "Einbahnstraße",
+        "Andreaskreuz"
+      ]
+    }
+  ]
+}

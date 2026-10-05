@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1029",
+  "title": "Same Letters Shuffled",
+  "difficulty": "hard",
+  "editorialSummary": "The four cards in each group are anagrams of one another, so the decoy is that unrelated-looking words share exactly the same letters once you shuffle them.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay"
+  },
+  "groups": [
+    {
+      "id": "evil",
+      "label": "Anagrams of EVIL",
+      "items": [
+        "Evil",
+        "Live",
+        "Vile",
+        "Veil"
+      ],
+      "revealHint": "EVIL"
+    },
+    {
+      "id": "stone",
+      "label": "Anagrams of STONE",
+      "items": [
+        "Stone",
+        "Notes",
+        "Onset",
+        "Tones"
+      ],
+      "revealHint": "STONE"
+    },
+    {
+      "id": "time",
+      "label": "Anagrams of TIME",
+      "items": [
+        "Time",
+        "Item",
+        "Mite",
+        "Emit"
+      ],
+      "revealHint": "TIME"
+    },
+    {
+      "id": "trace",
+      "label": "Anagrams of TRACE",
+      "items": [
+        "Trace",
+        "Crate",
+        "React",
+        "Cater"
+      ],
+      "revealHint": "TRACE"
+    }
+  ]
+}

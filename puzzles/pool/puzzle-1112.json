@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1112",
+  "title": "Garage Bench",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "hand-tools",
+      "label": "Hand Tool Set",
+      "items": [
+        "Mallet",
+        "Screwdriver",
+        "Spanner",
+        "Pliers"
+      ]
+    },
+    {
+      "id": "electric-workshop-tools",
+      "label": "Powered Bench Tools",
+      "items": [
+        "Drill",
+        "Jigsaw",
+        "Orbital Sander",
+        "Angle Grinder"
+      ]
+    },
+    {
+      "id": "hardware-fasteners",
+      "label": "Nuts and Bolts Aisle",
+      "items": [
+        "Screws",
+        "Nails",
+        "Rivets",
+        "Washers"
+      ]
+    },
+    {
+      "id": "measuring-tools",
+      "label": "Workshop Measures",
+      "items": [
+        "Tape Measure",
+        "Spirit Level",
+        "Calipers",
+        "Try Square"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "garage and workshop",
+    "categoryType": "classification"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-1088",
+  "title": "Auf der Post",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "post"
+  },
+  "editorialSummary": "Falsche Fährte: Das Einschreiben klingt nach einem Beleg, ist aber eine Postdienstleistung.",
+  "groups": [
+    {
+      "id": "versenden",
+      "label": "Dinge zum Versenden",
+      "revealHint": "VERSAND",
+      "items": [
+        "Brief",
+        "Paket",
+        "Päckchen",
+        "Postkarte"
+      ]
+    },
+    {
+      "id": "belege",
+      "label": "Wertzeichen und Belege",
+      "revealHint": "BELEGE",
+      "items": [
+        "Briefmarke",
+        "Poststempel",
+        "Einlieferungsbeleg",
+        "Rückschein"
+      ]
+    },
+    {
+      "id": "dienstleistungen",
+      "label": "Postdienstleistungen",
+      "revealHint": "SERVICE",
+      "items": [
+        "Einschreiben",
+        "Nachnahme",
+        "Expressversand",
+        "Postlagernd"
+      ]
+    },
+    {
+      "id": "verpackung",
+      "label": "Verpackungsmaterial",
+      "revealHint": "VERPACKUNG",
+      "items": [
+        "Umschlag",
+        "Karton",
+        "Klebeband",
+        "Luftpolsterfolie"
+      ]
+    }
+  ]
+}

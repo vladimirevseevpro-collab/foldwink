@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1026",
+  "title": "Web Life",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "website-areas",
+      "label": "Website Areas",
+      "items": [
+        "Homepage",
+        "Sidebar",
+        "Footer",
+        "Search Bar"
+      ]
+    },
+    {
+      "id": "youtube-buttons",
+      "label": "YouTube Buttons",
+      "items": [
+        "Like",
+        "Subscribe",
+        "Share",
+        "Comment"
+      ]
+    },
+    {
+      "id": "online-shopping-steps",
+      "label": "Online Shopping Steps",
+      "items": [
+        "Add to Cart",
+        "Checkout",
+        "Enter Payment",
+        "Track Order"
+      ]
+    },
+    {
+      "id": "mailbox-folders",
+      "label": "Mailbox Folders",
+      "items": [
+        "Inbox",
+        "Drafts",
+        "Sent",
+        "Archive"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "internet",
+    "categoryType": "action"
+  }
+}

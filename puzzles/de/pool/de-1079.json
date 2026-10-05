@@ -1,0 +1,55 @@
+{
+  "id": "de-1079",
+  "title": "Leben an der Küste",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "meer"
+  },
+  "editorialSummary": "Falsche Fährte: der Rettungsschwimmer passt zur Wasserrettung, ist aber ein Beruf am Meer.",
+  "groups": [
+    {
+      "id": "meerberufe",
+      "label": "Berufe am Meer",
+      "revealHint": "BERUFE",
+      "items": [
+        "Fischer",
+        "Matrose",
+        "Rettungsschwimmer",
+        "Kapitän"
+      ]
+    },
+    {
+      "id": "kuestenbau",
+      "label": "Bauwerke an der Küste",
+      "revealHint": "KÜSTE",
+      "items": [
+        "Leuchtturm",
+        "Hafenmole",
+        "Strandpromenade",
+        "Seebrücke"
+      ]
+    },
+    {
+      "id": "nordseetiere",
+      "label": "Tiere an der Nordsee",
+      "revealHint": "NORDSEE",
+      "items": [
+        "Möwe",
+        "Robbe",
+        "Wattwurm",
+        "Krabbe"
+      ]
+    },
+    {
+      "id": "rettung",
+      "label": "Ausrüstung der Wasserrettung",
+      "revealHint": "RETTUNG",
+      "items": [
+        "Rettungsring",
+        "Rettungsboot",
+        "Rettungsboje",
+        "Signalpfeife"
+      ]
+    }
+  ]
+}

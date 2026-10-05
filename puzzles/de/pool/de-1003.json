@@ -1,0 +1,50 @@
+{
+  "id": "de-1003",
+  "title": "Gartengeräte",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Gartenarbeit"
+  },
+  "groups": [
+    {
+      "id": "graben",
+      "label": "Zum Graben",
+      "items": [
+        "Spaten",
+        "Schaufel",
+        "Grabegabel",
+        "Hacke"
+      ]
+    },
+    {
+      "id": "schneiden",
+      "label": "Zum Schneiden im Garten",
+      "items": [
+        "Gartenschere",
+        "Heckenschere",
+        "Astsäge",
+        "Sichel"
+      ]
+    },
+    {
+      "id": "giessen",
+      "label": "Zum Gießen",
+      "items": [
+        "Gießkanne",
+        "Gartenschlauch",
+        "Sprühflasche",
+        "Eimer"
+      ]
+    },
+    {
+      "id": "rechen",
+      "label": "Zum Harken und Fegen",
+      "items": [
+        "Laubrechen",
+        "Harke",
+        "Besen",
+        "Handfeger"
+      ]
+    }
+  ]
+}

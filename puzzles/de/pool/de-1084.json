@@ -1,0 +1,55 @@
+{
+  "id": "de-1084",
+  "title": "Es war einmal",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "maerchen"
+  },
+  "editorialSummary": "Falsche Fährte: Die Schneekönigin klingt nach einem Fabelwesen, ist aber der Titel eines Andersen-Märchens.",
+  "groups": [
+    {
+      "id": "grimm",
+      "label": "Märchen der Brüder Grimm",
+      "revealHint": "GRIMM",
+      "items": [
+        "Aschenputtel",
+        "Dornröschen",
+        "Rumpelstilzchen",
+        "Frau Holle"
+      ]
+    },
+    {
+      "id": "andersen",
+      "label": "Märchen von Hans Christian Andersen",
+      "revealHint": "ANDERSEN",
+      "items": [
+        "Die kleine Meerjungfrau",
+        "Das hässliche Entlein",
+        "Die Schneekönigin",
+        "Des Kaisers neue Kleider"
+      ]
+    },
+    {
+      "id": "gestalten",
+      "label": "Gestalten aus Märchen",
+      "revealHint": "GESTALTEN",
+      "items": [
+        "Hexe",
+        "Riese",
+        "Zwerg",
+        "Fee"
+      ]
+    },
+    {
+      "id": "helden",
+      "label": "Helden der griechischen Mythologie",
+      "revealHint": "HELDEN",
+      "items": [
+        "Herakles",
+        "Odysseus",
+        "Perseus",
+        "Achilles"
+      ]
+    }
+  ]
+}

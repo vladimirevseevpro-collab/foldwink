@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1024",
+  "title": "Getting Online",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "web-words",
+      "label": "Web Words",
+      "items": [
+        "Browser",
+        "Bookmark",
+        "Hyperlink",
+        "Download"
+      ]
+    },
+    {
+      "id": "computer-parts",
+      "label": "Computer Parts",
+      "items": [
+        "Keyboard",
+        "Mouse",
+        "Monitor",
+        "Speakers"
+      ]
+    },
+    {
+      "id": "email-actions",
+      "label": "Email Actions",
+      "items": [
+        "Compose",
+        "Reply",
+        "Forward",
+        "Delete"
+      ]
+    },
+    {
+      "id": "social-platforms",
+      "label": "Social Platforms",
+      "items": [
+        "Instagram",
+        "Facebook",
+        "TikTok",
+        "LinkedIn"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "internet",
+    "categoryType": "classification"
+  }
+}

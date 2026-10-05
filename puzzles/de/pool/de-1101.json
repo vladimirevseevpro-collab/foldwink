@@ -1,0 +1,50 @@
+{
+  "id": "de-1101",
+  "title": "Pflegeroutine",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Bad und Hygiene"
+  },
+  "groups": [
+    {
+      "id": "badezusatz",
+      "label": "Badezusätze",
+      "items": [
+        "Badesalz",
+        "Schaumbad",
+        "Badeöl",
+        "Badeperlen"
+      ]
+    },
+    {
+      "id": "haar",
+      "label": "Rund ums Haar",
+      "items": [
+        "Shampoo",
+        "Spülung",
+        "Haarkur",
+        "Haarspray"
+      ]
+    },
+    {
+      "id": "waschbecken",
+      "label": "Am Waschbecken",
+      "items": [
+        "Seife",
+        "Seifenspender",
+        "Zahnputzbecher",
+        "Handtuchhalter"
+      ]
+    },
+    {
+      "id": "verband",
+      "label": "Verbandszeug",
+      "items": [
+        "Pflaster",
+        "Mullbinde",
+        "Desinfektionsmittel",
+        "Wundkompresse"
+      ]
+    }
+  ]
+}

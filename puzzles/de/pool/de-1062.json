@@ -1,0 +1,50 @@
+{
+  "id": "de-1062",
+  "title": "Mathe-Stunde",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Mathematik"
+  },
+  "groups": [
+    {
+      "id": "rechenarten",
+      "label": "Rechenarten",
+      "items": [
+        "Addition",
+        "Subtraktion",
+        "Multiplikation",
+        "Division"
+      ]
+    },
+    {
+      "id": "formen",
+      "label": "Flächenformen",
+      "items": [
+        "Dreieck",
+        "Viereck",
+        "Kreis",
+        "Raute"
+      ]
+    },
+    {
+      "id": "einheiten",
+      "label": "Maßeinheiten",
+      "items": [
+        "Meter",
+        "Liter",
+        "Gramm",
+        "Sekunde"
+      ]
+    },
+    {
+      "id": "werkzeuge",
+      "label": "Mathe-Werkzeuge",
+      "items": [
+        "Lineal",
+        "Zirkel",
+        "Taschenrechner",
+        "Rechenschieber"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1022",
+  "title": "Weekend Hobbies",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "gardening-kit",
+      "label": "Gardening Kit",
+      "items": [
+        "Trowel",
+        "Hand Fork",
+        "Watering Can",
+        "Pruning Shears"
+      ]
+    },
+    {
+      "id": "fishing-gear",
+      "label": "Fishing Gear",
+      "items": [
+        "Fishing Rod",
+        "Reel",
+        "Landing Net",
+        "Tackle Box"
+      ]
+    },
+    {
+      "id": "bike-gear",
+      "label": "Bike Gear",
+      "items": [
+        "Bicycle Helmet",
+        "Bike Pump",
+        "Bike Bell",
+        "Bike Lock"
+      ]
+    },
+    {
+      "id": "birdwatching-kit",
+      "label": "Birdwatching Kit",
+      "items": [
+        "Binoculars",
+        "Field Guide",
+        "Notebook",
+        "Spotting Scope"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "hobbies",
+    "categoryType": "function"
+  }
+}

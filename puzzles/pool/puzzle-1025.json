@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1025",
+  "title": "Digital Devices",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "phone-extras",
+      "label": "Phone Extras",
+      "items": [
+        "Charger",
+        "Phone Case",
+        "Power Bank",
+        "Screen Protector"
+      ]
+    },
+    {
+      "id": "smart-home-devices",
+      "label": "Smart Home Devices",
+      "items": [
+        "Smart Speaker",
+        "Robot Vacuum",
+        "Smart Bulb",
+        "Video Doorbell"
+      ]
+    },
+    {
+      "id": "wearable-tech",
+      "label": "Wearable Tech",
+      "items": [
+        "Smartwatch",
+        "Fitness Tracker",
+        "VR Headset",
+        "Wireless Earbuds"
+      ]
+    },
+    {
+      "id": "computer-storage",
+      "label": "Computer Storage",
+      "items": [
+        "USB Stick",
+        "Memory Card",
+        "External Hard Drive",
+        "Solid State Drive"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "technology",
+    "categoryType": "classification"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1011",
+  "title": "Health Basics",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "common-cold-signs",
+      "label": "Common Cold Signs",
+      "items": [
+        "Runny Nose",
+        "Sore Throat",
+        "Cough",
+        "Sneezing"
+      ]
+    },
+    {
+      "id": "first-aid-kit-items",
+      "label": "First Aid Kit Items",
+      "items": [
+        "Bandage",
+        "Gauze Pad",
+        "Antiseptic Cream",
+        "Tweezers"
+      ]
+    },
+    {
+      "id": "bathroom-toiletries",
+      "label": "Bathroom Toiletries",
+      "items": [
+        "Toothbrush",
+        "Soap",
+        "Shampoo",
+        "Deodorant"
+      ]
+    },
+    {
+      "id": "face-features",
+      "label": "Features of the Face",
+      "items": [
+        "Nose",
+        "Ears",
+        "Chin",
+        "Cheeks"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "health",
+    "categoryType": "classification"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "de-1099",
+  "title": "Vorratsschrank",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Supermarkt-Abteilungen"
+  },
+  "groups": [
+    {
+      "id": "fruehstueck",
+      "label": "Frühstücksregal",
+      "items": [
+        "Cornflakes",
+        "Haferflocken",
+        "Müsli",
+        "Marmelade"
+      ]
+    },
+    {
+      "id": "nudeln",
+      "label": "Nudelregal",
+      "items": [
+        "Spaghetti",
+        "Penne",
+        "Tagliatelle",
+        "Lasagneplatten"
+      ]
+    },
+    {
+      "id": "reis",
+      "label": "Reisregal",
+      "items": [
+        "Basmatireis",
+        "Milchreis",
+        "Risottoreis",
+        "Wildreis"
+      ]
+    },
+    {
+      "id": "konserven",
+      "label": "Konservenregal",
+      "items": [
+        "Mais",
+        "Kidneybohnen",
+        "Thunfisch",
+        "Kokosmilch"
+      ]
+    }
+  ]
+}

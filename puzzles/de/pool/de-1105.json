@@ -1,0 +1,50 @@
+{
+  "id": "de-1105",
+  "title": "Tief im Wald",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Wald"
+  },
+  "groups": [
+    {
+      "id": "nadelbaeume",
+      "label": "Nadelbäume des Waldes",
+      "items": [
+        "Fichte",
+        "Tanne",
+        "Zeder",
+        "Zypresse"
+      ]
+    },
+    {
+      "id": "laubbaeume",
+      "label": "Laubbäume des Waldes",
+      "items": [
+        "Esche",
+        "Ulme",
+        "Linde",
+        "Pappel"
+      ]
+    },
+    {
+      "id": "waldtiere",
+      "label": "Waldtiere mit Fell",
+      "items": [
+        "Reh",
+        "Fuchs",
+        "Dachs",
+        "Marder"
+      ]
+    },
+    {
+      "id": "beeren",
+      "label": "Beeren im Wald",
+      "items": [
+        "Himbeere",
+        "Brombeere",
+        "Heidelbeere",
+        "Preiselbeere"
+      ]
+    }
+  ]
+}

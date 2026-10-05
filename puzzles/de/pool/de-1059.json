@@ -1,0 +1,50 @@
+{
+  "id": "de-1059",
+  "title": "Gewürzregal",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Gewürze"
+  },
+  "groups": [
+    {
+      "id": "backgewuerze",
+      "label": "Süße Backgewürze",
+      "items": [
+        "Zimt",
+        "Vanille",
+        "Muskatnuss",
+        "Kardamom"
+      ]
+    },
+    {
+      "id": "scharf",
+      "label": "Würzmittel mit Schärfe",
+      "items": [
+        "Chili",
+        "Pfeffer",
+        "Ingwer",
+        "Meerrettich"
+      ]
+    },
+    {
+      "id": "trockenkraeuter",
+      "label": "Getrocknete Küchenkräuter",
+      "items": [
+        "Oregano",
+        "Thymian",
+        "Rosmarin",
+        "Estragon"
+      ]
+    },
+    {
+      "id": "curry",
+      "label": "Currygewürze",
+      "items": [
+        "Kurkuma",
+        "Koriander",
+        "Kreuzkümmel",
+        "Curryblätter"
+      ]
+    }
+  ]
+}

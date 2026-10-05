@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1048",
+  "title": "Landmark tour",
+  "difficulty": "medium",
+  "editorialSummary": "Tower Bridge tempts the towers group and Little Mermaid a fairy tale, but each belongs to exactly one landmark list.",
+  "meta": {
+    "theme": "world landmarks",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "bridges",
+      "label": "Famous bridges",
+      "revealHint": "Spans",
+      "items": [
+        "Tower Bridge",
+        "Golden Gate",
+        "Brooklyn Bridge",
+        "Rialto Bridge"
+      ]
+    },
+    {
+      "id": "towers",
+      "label": "Landmark towers",
+      "revealHint": "Towers",
+      "items": [
+        "Eiffel Tower",
+        "Big Ben",
+        "Leaning Tower of Pisa",
+        "CN Tower"
+      ]
+    },
+    {
+      "id": "statues",
+      "label": "Famous statues",
+      "revealHint": "Statues",
+      "items": [
+        "Statue of Liberty",
+        "Christ the Redeemer",
+        "The Thinker",
+        "Little Mermaid"
+      ]
+    },
+    {
+      "id": "squares",
+      "label": "Famous public squares",
+      "revealHint": "Plazas",
+      "items": [
+        "Times Square",
+        "Trafalgar Square",
+        "Red Square",
+        "Tahrir Square"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1084",
+  "title": "Storybook Land",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "fairy-tale-figures",
+      "label": "Fairy Tale Figures",
+      "items": [
+        "Witch",
+        "Giant",
+        "Prince",
+        "Fairy"
+      ]
+    },
+    {
+      "id": "fairy-tale-objects",
+      "label": "Fairy Tale Objects",
+      "items": [
+        "Wand",
+        "Glass Slipper",
+        "Spinning Wheel",
+        "Magic Mirror"
+      ]
+    },
+    {
+      "id": "fairy-tale-settings",
+      "label": "Fairy Tale Settings",
+      "items": [
+        "Castle",
+        "Cottage",
+        "Enchanted Forest",
+        "Tower"
+      ]
+    },
+    {
+      "id": "story-openers",
+      "label": "Story Openers",
+      "items": [
+        "Once Upon a Time",
+        "Long Ago",
+        "Far Away",
+        "In a Kingdom"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "fairy tales",
+    "categoryType": "classification"
+  }
+}

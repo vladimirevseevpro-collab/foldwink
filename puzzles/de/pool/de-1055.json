@@ -1,0 +1,50 @@
+{
+  "id": "de-1055",
+  "title": "Beim Sportfest",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Sport und Spiele"
+  },
+  "groups": [
+    {
+      "id": "wasser_wettkaempfe",
+      "label": "Wettkämpfe im Wasser",
+      "items": [
+        "Rückenschwimmen",
+        "Brustschwimmen",
+        "Turmspringen",
+        "Synchronschwimmen"
+      ]
+    },
+    {
+      "id": "kampfsport_guertel",
+      "label": "Kampfsportarten mit Gürteln",
+      "items": [
+        "Judo",
+        "Karate",
+        "Taekwondo",
+        "Jiu-Jitsu"
+      ]
+    },
+    {
+      "id": "sport_rollen",
+      "label": "Sport auf Rollen",
+      "items": [
+        "Inlineskaten",
+        "Skateboarden",
+        "Rollschuhlaufen",
+        "Einradfahren"
+      ]
+    },
+    {
+      "id": "wettbewerbe_schnee",
+      "label": "Wettbewerbe im Schnee",
+      "items": [
+        "Skilanglauf",
+        "Abfahrtslauf",
+        "Snowboarden",
+        "Rodeln"
+      ]
+    }
+  ]
+}

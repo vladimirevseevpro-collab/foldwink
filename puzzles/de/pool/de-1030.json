@@ -1,0 +1,55 @@
+{
+  "id": "de-1030",
+  "title": "Instrumentenkunde",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "musikinstrumente"
+  },
+  "editorialSummary": "Falsche Fährte: Das Saxophon besteht aus Messing, zählt nach Instrumentenkunde aber zu den Holzblasinstrumenten.",
+  "groups": [
+    {
+      "id": "bogen",
+      "label": "Mit dem Bogen gestrichen",
+      "revealHint": "BOGEN",
+      "items": [
+        "Violine",
+        "Bratsche",
+        "Cello",
+        "Kontrabass"
+      ]
+    },
+    {
+      "id": "holz",
+      "label": "Flöten und Rohrblattinstrumente",
+      "revealHint": "HOLZ",
+      "items": [
+        "Querflöte",
+        "Klarinette",
+        "Oboe",
+        "Saxophon"
+      ]
+    },
+    {
+      "id": "blech",
+      "label": "Blechblasinstrumente",
+      "revealHint": "BLECH",
+      "items": [
+        "Kornett",
+        "Flügelhorn",
+        "Waldhorn",
+        "Tuba"
+      ]
+    },
+    {
+      "id": "schlag",
+      "label": "Schlaginstrumente im Orchester",
+      "revealHint": "SCHLAG",
+      "items": [
+        "Pauke",
+        "Trommel",
+        "Triangel",
+        "Xylophon"
+      ]
+    }
+  ]
+}
