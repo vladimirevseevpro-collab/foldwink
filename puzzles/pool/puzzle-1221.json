@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1221",
+  "title": "Timber yard",
+  "difficulty": "medium",
+  "editorialSummary": "Cedar feels dense and weather-proof and tempts the hardwood group, but it is a softwood alongside pine and larch.",
+  "meta": {
+    "theme": "carpentry",
+    "categoryType": "material"
+  },
+  "groups": [
+    {
+      "id": "hardwoods",
+      "label": "Hardwood species",
+      "revealHint": "Dense timber",
+      "items": [
+        "Oak",
+        "Teak",
+        "Mahogany",
+        "Cherry"
+      ]
+    },
+    {
+      "id": "softwoods",
+      "label": "Softwoods",
+      "revealHint": "Pine family",
+      "items": [
+        "Pine",
+        "Cedar",
+        "Larch",
+        "Hemlock"
+      ]
+    },
+    {
+      "id": "boards",
+      "label": "Manufactured boards",
+      "revealHint": "Engineered",
+      "items": [
+        "Plywood",
+        "MDF",
+        "Particle board",
+        "OSB"
+      ]
+    },
+    {
+      "id": "finishes",
+      "label": "Wood finishes",
+      "revealHint": "Coatings",
+      "items": [
+        "Varnish",
+        "Lacquer",
+        "Wood stain",
+        "Linseed oil"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1206",
+  "title": "Call Out",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "emergencies",
+      "label": "Call-Out Incidents",
+      "items": [
+        "Bushfire",
+        "Flood",
+        "Road Crash",
+        "Chemical Spill"
+      ]
+    },
+    {
+      "id": "actions",
+      "label": "Fire Scene Actions",
+      "items": [
+        "Extinguish",
+        "Evacuate",
+        "Rescue",
+        "Secure"
+      ]
+    },
+    {
+      "id": "vehicles",
+      "label": "Response Vehicles",
+      "items": [
+        "Fire Engine",
+        "Ladder Truck",
+        "Ambulance",
+        "Police Car"
+      ]
+    },
+    {
+      "id": "signals",
+      "label": "Alert Signals",
+      "items": [
+        "Siren",
+        "Flashing Lights",
+        "Station Bell",
+        "Radio Call"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "fire station",
+    "categoryType": "classification"
+  }
+}

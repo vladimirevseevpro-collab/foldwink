@@ -1,0 +1,50 @@
+{
+  "id": "de-1186",
+  "title": "Frische Waren",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Wochenmarkt"
+  },
+  "groups": [
+    {
+      "id": "obst",
+      "label": "Obststand",
+      "items": [
+        "Erdbeeren",
+        "Kirschen",
+        "Pflaumen",
+        "Weintrauben"
+      ]
+    },
+    {
+      "id": "gemuese",
+      "label": "Gemüsestand",
+      "items": [
+        "Tomaten",
+        "Gurken",
+        "Paprika",
+        "Zucchini"
+      ]
+    },
+    {
+      "id": "kaese",
+      "label": "Käsestand",
+      "items": [
+        "Gouda",
+        "Camembert",
+        "Feta",
+        "Emmentaler"
+      ]
+    },
+    {
+      "id": "wurst",
+      "label": "Wurststand",
+      "items": [
+        "Salami",
+        "Schinken",
+        "Leberwurst",
+        "Bratwurst"
+      ]
+    }
+  ]
+}

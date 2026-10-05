@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1208",
+  "title": "Roadworks Ahead",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "machines",
+      "label": "Roadwork Machines",
+      "items": [
+        "Steamroller",
+        "Excavator",
+        "Asphalt Paver",
+        "Tar Sprayer"
+      ]
+    },
+    {
+      "id": "materials",
+      "label": "Road Materials",
+      "items": [
+        "Asphalt",
+        "Concrete",
+        "Gravel",
+        "Cobblestone"
+      ]
+    },
+    {
+      "id": "control",
+      "label": "Traffic Control",
+      "items": [
+        "Traffic Cone",
+        "Warning Sign",
+        "Flashing Beacon",
+        "Barrier"
+      ]
+    },
+    {
+      "id": "roles",
+      "label": "Roadwork Roles",
+      "items": [
+        "Traffic Marshall",
+        "Digger Driver",
+        "Surveyor",
+        "Site Engineer"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "bridges and roads",
+    "categoryType": "material"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "de-1182",
+  "title": "In der Feuerwache",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Feuerwehr"
+  },
+  "groups": [
+    {
+      "id": "fahrzeughalle",
+      "label": "Fahrzeughalle",
+      "items": [
+        "Löschfahrzeug",
+        "Drehleiter",
+        "Rüstwagen",
+        "Mannschaftswagen"
+      ]
+    },
+    {
+      "id": "leitstelle",
+      "label": "Leitstelle",
+      "items": [
+        "Telefon",
+        "Funkgerät",
+        "Bildschirm",
+        "Lagekarte"
+      ]
+    },
+    {
+      "id": "umkleide",
+      "label": "Umkleide",
+      "items": [
+        "Spind",
+        "Stiefel",
+        "Jacke",
+        "Helm"
+      ]
+    },
+    {
+      "id": "kueche",
+      "label": "Küche",
+      "items": [
+        "Kaffeemaschine",
+        "Herd",
+        "Töpfe",
+        "Geschirr"
+      ]
+    }
+  ]
+}

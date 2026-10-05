@@ -1,0 +1,50 @@
+{
+  "id": "de-1178",
+  "title": "Besuch im Zoo",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Zoo"
+  },
+  "groups": [
+    {
+      "id": "eingang",
+      "label": "Zoo-Eingang",
+      "items": [
+        "Kasse",
+        "Eintrittskarte",
+        "Drehkreuz",
+        "Lageplan"
+      ]
+    },
+    {
+      "id": "souvenirs",
+      "label": "Zoo-Souvenirs",
+      "items": [
+        "Plüschtier",
+        "Schlüsselanhänger",
+        "Postkarte",
+        "Poster"
+      ]
+    },
+    {
+      "id": "kiosk",
+      "label": "Im Zoo-Kiosk",
+      "items": [
+        "Eis",
+        "Brezel",
+        "Limonade",
+        "Popcorn"
+      ]
+    },
+    {
+      "id": "streichelzoo",
+      "label": "Im Streichelzoo",
+      "items": [
+        "Ziege",
+        "Kaninchen",
+        "Meerschweinchen",
+        "Zwergesel"
+      ]
+    }
+  ]
+}

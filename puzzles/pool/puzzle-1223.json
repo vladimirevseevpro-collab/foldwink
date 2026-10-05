@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1223",
+  "title": "Workshop floor",
+  "difficulty": "medium",
+  "editorialSummary": "The cyclone separator looks like a machine, tempting the workshop-machines group, but the dust-extraction label claims the air-cleaning gear.",
+  "meta": {
+    "theme": "carpentry",
+    "categoryType": "place"
+  },
+  "groups": [
+    {
+      "id": "bench",
+      "label": "Workbench parts",
+      "revealHint": "Bench bits",
+      "items": [
+        "Bench top",
+        "Front vice",
+        "Bench dog",
+        "Tool well"
+      ]
+    },
+    {
+      "id": "safety",
+      "label": "Workshop safety",
+      "revealHint": "Protects you",
+      "items": [
+        "Safety goggles",
+        "Dust mask",
+        "Ear defenders",
+        "Work gloves"
+      ]
+    },
+    {
+      "id": "dust",
+      "label": "Dust extraction",
+      "revealHint": "Clears the air",
+      "items": [
+        "Dust extractor",
+        "Cyclone separator",
+        "Extraction hose",
+        "Filter bag"
+      ]
+    },
+    {
+      "id": "machines",
+      "label": "Workshop machines",
+      "revealHint": "Big tools",
+      "items": [
+        "Circular saw",
+        "Router",
+        "Drill press",
+        "Belt sander"
+      ]
+    }
+  ]
+}

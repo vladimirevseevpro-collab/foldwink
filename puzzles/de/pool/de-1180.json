@@ -1,0 +1,50 @@
+{
+  "id": "de-1180",
+  "title": "Feuer und Rauch",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Feuerwehr"
+  },
+  "groups": [
+    {
+      "id": "loeschmittel",
+      "label": "Löschmittel",
+      "items": [
+        "Wasser",
+        "Schaum",
+        "Pulver",
+        "Sand"
+      ]
+    },
+    {
+      "id": "anzeichen",
+      "label": "Brandanzeichen",
+      "items": [
+        "Rauch",
+        "Flammen",
+        "Hitze",
+        "Ruß"
+      ]
+    },
+    {
+      "id": "anzuenden",
+      "label": "Zum Anzünden",
+      "items": [
+        "Streichholz",
+        "Feuerzeug",
+        "Feuerstein",
+        "Zunder"
+      ]
+    },
+    {
+      "id": "brandschutz",
+      "label": "Brandschutz",
+      "items": [
+        "Rauchmelder",
+        "Sprinkler",
+        "Brandschutztür",
+        "Fluchtplan"
+      ]
+    }
+  ]
+}

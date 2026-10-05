@@ -1,0 +1,50 @@
+{
+  "id": "de-1163",
+  "title": "Frisch aus dem Beet",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Garten"
+  },
+  "groups": [
+    {
+      "id": "beeren",
+      "label": "Beerenobst",
+      "items": [
+        "Erdbeere",
+        "Himbeere",
+        "Johannisbeere",
+        "Stachelbeere"
+      ]
+    },
+    {
+      "id": "kraeuter",
+      "label": "Frische Kräuter",
+      "items": [
+        "Basilikum",
+        "Petersilie",
+        "Schnittlauch",
+        "Thymian"
+      ]
+    },
+    {
+      "id": "wurzelgemuese",
+      "label": "Wurzeln und Knollen",
+      "items": [
+        "Karotte",
+        "Radieschen",
+        "Rote Bete",
+        "Sellerie"
+      ]
+    },
+    {
+      "id": "blattgemuese",
+      "label": "Blättriges Gemüse",
+      "items": [
+        "Salat",
+        "Spinat",
+        "Mangold",
+        "Rucola"
+      ]
+    }
+  ]
+}

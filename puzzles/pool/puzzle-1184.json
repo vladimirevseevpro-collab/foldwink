@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1184",
+  "title": "Oven Warmth",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "cake-textures",
+      "label": "Cake Textures",
+      "items": [
+        "Moist",
+        "Fluffy",
+        "Dense",
+        "Crumbly"
+      ]
+    },
+    {
+      "id": "batter-mixing-actions",
+      "label": "Batter Mixing Actions",
+      "items": [
+        "Stir",
+        "Fold",
+        "Beat",
+        "Whip"
+      ]
+    },
+    {
+      "id": "warm-desserts",
+      "label": "Warm Desserts",
+      "items": [
+        "Cobbler",
+        "Crumble",
+        "Bread Pudding",
+        "Baked Apples"
+      ]
+    },
+    {
+      "id": "bakery-aromas",
+      "label": "Bakery Aromas",
+      "items": [
+        "Cinnamon",
+        "Vanilla",
+        "Nutmeg",
+        "Almond"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "bakery",
+    "categoryType": "attribute"
+  }
+}

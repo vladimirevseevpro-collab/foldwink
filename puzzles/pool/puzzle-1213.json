@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1213",
+  "title": "Running gear",
+  "difficulty": "medium",
+  "editorialSummary": "The tie rod links to the suspension arms, tempting the suspension group, but the steering label claims the rods that actually turn the wheels.",
+  "meta": {
+    "theme": "car parts",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "brakes",
+      "label": "Brake components",
+      "revealHint": "Stops the car",
+      "items": [
+        "Brake disc",
+        "Brake pad",
+        "Caliper",
+        "Brake drum"
+      ]
+    },
+    {
+      "id": "suspension",
+      "label": "Suspension parts",
+      "revealHint": "Ride and bumps",
+      "items": [
+        "Shock absorber",
+        "Coil spring",
+        "Control arm",
+        "Anti-roll bar"
+      ]
+    },
+    {
+      "id": "wheels",
+      "label": "Wheel and tyre",
+      "revealHint": "Rolling",
+      "items": [
+        "Alloy wheel",
+        "Tyre valve",
+        "Wheel nut",
+        "Hubcap"
+      ]
+    },
+    {
+      "id": "steering",
+      "label": "Steering parts",
+      "revealHint": "Turns wheels",
+      "items": [
+        "Steering rack",
+        "Tie rod",
+        "Track rod end",
+        "Power steering pump"
+      ]
+    }
+  ]
+}

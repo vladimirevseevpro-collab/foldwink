@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1193",
+  "title": "Bubble Bath",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "bath-products",
+      "label": "Bath Products",
+      "items": [
+        "Bubble Bath",
+        "Bath Bomb",
+        "Bath Salts",
+        "Body Wash"
+      ]
+    },
+    {
+      "id": "bath-toys",
+      "label": "Bath Toys",
+      "items": [
+        "Rubber Duck",
+        "Foam Letters",
+        "Squirt Toy",
+        "Toy Boat"
+      ]
+    },
+    {
+      "id": "bathroom-linens",
+      "label": "Bathroom Linens",
+      "items": [
+        "Hand Towel",
+        "Washcloth",
+        "Bath Towel",
+        "Bath Robe"
+      ]
+    },
+    {
+      "id": "drain-care",
+      "label": "Drain Care",
+      "items": [
+        "Plunger",
+        "Drain Snake",
+        "Drain Cleaner",
+        "Hair Catcher"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "bathroom",
+    "categoryType": "classification"
+  }
+}

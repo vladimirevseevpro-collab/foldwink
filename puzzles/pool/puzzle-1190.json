@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1190",
+  "title": "Fold and Stack",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "fabric-types",
+      "label": "Fabric Types",
+      "items": [
+        "Cotton",
+        "Wool",
+        "Silk",
+        "Polyester"
+      ]
+    },
+    {
+      "id": "garment-fasteners",
+      "label": "Garment Fasteners",
+      "items": [
+        "Button",
+        "Zipper",
+        "Drawstring",
+        "Buckle"
+      ]
+    },
+    {
+      "id": "laundry-basket-contents",
+      "label": "Laundry Basket Contents",
+      "items": [
+        "Socks",
+        "Shirts",
+        "Underwear",
+        "Pajamas"
+      ]
+    },
+    {
+      "id": "laundry-chores",
+      "label": "Laundry Chores",
+      "items": [
+        "Sort",
+        "Wash",
+        "Dry",
+        "Fold"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "laundry",
+    "categoryType": "classification"
+  }
+}

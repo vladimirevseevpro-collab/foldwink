@@ -1,0 +1,50 @@
+{
+  "id": "de-1169",
+  "title": "Alles fürs Bad",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Badezimmer"
+  },
+  "groups": [
+    {
+      "id": "duschbereich",
+      "label": "Duschbereich",
+      "items": [
+        "Duschgel",
+        "Duschvorhang",
+        "Duschkopf",
+        "Duschregal"
+      ]
+    },
+    {
+      "id": "nachduschen",
+      "label": "Nach dem Duschen",
+      "items": [
+        "Handtuch",
+        "Waschlappen",
+        "Badematte",
+        "Badeschlappen"
+      ]
+    },
+    {
+      "id": "keramik",
+      "label": "Sanitärkeramik",
+      "items": [
+        "Toilette",
+        "Waschbecken",
+        "Badewanne",
+        "Bidet"
+      ]
+    },
+    {
+      "id": "spiegelschrank",
+      "label": "Im Spiegelkästchen",
+      "items": [
+        "Pflaster",
+        "Wundsalbe",
+        "Wattestäbchen",
+        "Fieberthermometer"
+      ]
+    }
+  ]
+}

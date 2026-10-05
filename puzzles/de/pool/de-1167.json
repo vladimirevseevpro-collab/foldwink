@@ -1,0 +1,50 @@
+{
+  "id": "de-1167",
+  "title": "Frisch gemacht",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Badezimmer"
+  },
+  "groups": [
+    {
+      "id": "zaehne",
+      "label": "Zum Zähneputzen",
+      "items": [
+        "Zahnbürste",
+        "Zahnpasta",
+        "Zahnbecher",
+        "Mundspülung"
+      ]
+    },
+    {
+      "id": "rasur",
+      "label": "Beim Rasieren",
+      "items": [
+        "Rasierer",
+        "Rasierschaum",
+        "Rasierklinge",
+        "Rasieröl"
+      ]
+    },
+    {
+      "id": "duschen",
+      "label": "Zum Duschen",
+      "items": [
+        "Duschgel",
+        "Shampoo",
+        "Duschschwamm",
+        "Duschhaube"
+      ]
+    },
+    {
+      "id": "hautpflege",
+      "label": "Zur Hautpflege",
+      "items": [
+        "Creme",
+        "Lotion",
+        "Gesichtswasser",
+        "Sonnenmilch"
+      ]
+    }
+  ]
+}

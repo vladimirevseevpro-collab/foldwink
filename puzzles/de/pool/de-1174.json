@@ -1,0 +1,50 @@
+{
+  "id": "de-1174",
+  "title": "Strandkiosk am Abend",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Strand"
+  },
+  "groups": [
+    {
+      "id": "kiosk",
+      "label": "Am Kiosk",
+      "items": [
+        "Eis",
+        "Limonade",
+        "Pommes",
+        "Bratwurst"
+      ]
+    },
+    {
+      "id": "strandgepaeck",
+      "label": "Strandgepäck",
+      "items": [
+        "Strandtasche",
+        "Handtuch",
+        "Sonnenmilch",
+        "Bademantel"
+      ]
+    },
+    {
+      "id": "meeresfunde",
+      "label": "Meeresfunde",
+      "items": [
+        "Seestern",
+        "Herzmuschel",
+        "Auster",
+        "Schneckenhaus"
+      ]
+    },
+    {
+      "id": "strandlektuere",
+      "label": "Strandlektüre",
+      "items": [
+        "Roman",
+        "Zeitschrift",
+        "Zeitung",
+        "Comic"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1200",
+  "title": "Harbour Town",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "finds",
+      "label": "Shoreline Treasures",
+      "items": [
+        "Seashell",
+        "Driftwood",
+        "Sea Glass",
+        "Smooth Pebble"
+      ]
+    },
+    {
+      "id": "boats",
+      "label": "Moored Boats",
+      "items": [
+        "Fishing Boat",
+        "Sailboat",
+        "Ferry",
+        "Tugboat"
+      ]
+    },
+    {
+      "id": "snacks",
+      "label": "Seafront Snacks",
+      "items": [
+        "Candy Floss",
+        "Doughnut",
+        "Hot Dog",
+        "Ice Cream Cone"
+      ]
+    },
+    {
+      "id": "landmarks",
+      "label": "Seafront Landmarks",
+      "items": [
+        "Lighthouse",
+        "Pier",
+        "Boathouse",
+        "Bandstand"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "beach",
+    "categoryType": "classification"
+  }
+}

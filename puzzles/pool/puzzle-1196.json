@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1196",
+  "title": "Produce Corner",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "root-vegetable-types",
+      "label": "Root Vegetable Types",
+      "items": [
+        "Carrot",
+        "Potato",
+        "Beet",
+        "Turnip"
+      ]
+    },
+    {
+      "id": "salad-leaves",
+      "label": "Salad Leaves",
+      "items": [
+        "Spinach",
+        "Arugula",
+        "Lettuce",
+        "Watercress"
+      ]
+    },
+    {
+      "id": "citrus-fruit-types",
+      "label": "Citrus Fruit Types",
+      "items": [
+        "Orange",
+        "Lemon",
+        "Lime",
+        "Grapefruit"
+      ]
+    },
+    {
+      "id": "stone-fruit-types",
+      "label": "Stone Fruit Types",
+      "items": [
+        "Peach",
+        "Plum",
+        "Nectarine",
+        "Apricot"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "supermarket",
+    "categoryType": "classification"
+  }
+}

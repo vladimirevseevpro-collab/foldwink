@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1201",
+  "title": "Pebble and Foam",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "shells",
+      "label": "Seashell Varieties",
+      "items": [
+        "Scallop",
+        "Conch",
+        "Cowrie",
+        "Clam"
+      ]
+    },
+    {
+      "id": "birds",
+      "label": "Shoreline Birds",
+      "items": [
+        "Pelican",
+        "Puffin",
+        "Cormorant",
+        "Heron"
+      ]
+    },
+    {
+      "id": "sunny",
+      "label": "Sunny Day Objects",
+      "items": [
+        "Parasol",
+        "Deckchair",
+        "Cooler Box",
+        "Picnic Blanket"
+      ]
+    },
+    {
+      "id": "drinks",
+      "label": "Cold Beach Drinks",
+      "items": [
+        "Lemonade",
+        "Iced Tea",
+        "Coconut Water",
+        "Slushie"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "beach",
+    "categoryType": "classification"
+  }
+}

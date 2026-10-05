@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1209",
+  "title": "On the Motorway",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "features",
+      "label": "Motorway Features",
+      "items": [
+        "Slip Road",
+        "Hard Shoulder",
+        "Central Reservation",
+        "Overhead Gantry"
+      ]
+    },
+    {
+      "id": "services",
+      "label": "Service Station",
+      "items": [
+        "Fuel Pumps",
+        "Car Wash",
+        "Food Court",
+        "Toilets"
+      ]
+    },
+    {
+      "id": "signs",
+      "label": "Motorway Signs",
+      "items": [
+        "Exit Sign",
+        "Distance Sign",
+        "Lane Sign",
+        "Variable Speed Sign"
+      ]
+    },
+    {
+      "id": "vehicles",
+      "label": "Motorway Vehicles",
+      "items": [
+        "Lorry",
+        "Coach",
+        "Caravan",
+        "Motorbike"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "bridges and roads",
+    "categoryType": "place"
+  }
+}

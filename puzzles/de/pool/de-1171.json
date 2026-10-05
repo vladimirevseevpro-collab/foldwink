@@ -1,0 +1,50 @@
+{
+  "id": "de-1171",
+  "title": "Frische Abteilung",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Supermarkt"
+  },
+  "groups": [
+    {
+      "id": "fleisch",
+      "label": "Fleisch",
+      "items": [
+        "Hähnchen",
+        "Rindfleisch",
+        "Schweinefleisch",
+        "Lammfleisch"
+      ]
+    },
+    {
+      "id": "fisch",
+      "label": "Fisch",
+      "items": [
+        "Lachs",
+        "Forelle",
+        "Kabeljau",
+        "Hering"
+      ]
+    },
+    {
+      "id": "kaese",
+      "label": "Käse",
+      "items": [
+        "Gouda",
+        "Camembert",
+        "Mozzarella",
+        "Parmesan"
+      ]
+    },
+    {
+      "id": "wurst",
+      "label": "Wurst",
+      "items": [
+        "Salami",
+        "Bratwurst",
+        "Wiener",
+        "Leberwurst"
+      ]
+    }
+  ]
+}

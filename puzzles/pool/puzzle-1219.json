@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1219",
+  "title": "Studio shoot",
+  "difficulty": "medium",
+  "editorialSummary": "The apple box looks like a stand you could climb on, tempting the supports group, but the props label claims the wooden riser.",
+  "meta": {
+    "theme": "photography",
+    "categoryType": "place"
+  },
+  "groups": [
+    {
+      "id": "modifiers",
+      "label": "Light modifiers",
+      "revealHint": "Shapes light",
+      "items": [
+        "Softbox",
+        "Beauty dish",
+        "Umbrella",
+        "Snoot"
+      ]
+    },
+    {
+      "id": "stands",
+      "label": "Studio stands and supports",
+      "revealHint": "Holds lights",
+      "items": [
+        "Light stand",
+        "C-stand",
+        "Boom arm",
+        "Sandbag"
+      ]
+    },
+    {
+      "id": "props",
+      "label": "Backdrops and props",
+      "revealHint": "Set dressing",
+      "items": [
+        "Seamless paper",
+        "Muslin",
+        "Posing stool",
+        "Apple box"
+      ]
+    },
+    {
+      "id": "triggers",
+      "label": "Tethering and triggers",
+      "revealHint": "Fires camera",
+      "items": [
+        "Sync cable",
+        "Radio trigger",
+        "Hot shoe",
+        "Tether cable"
+      ]
+    }
+  ]
+}

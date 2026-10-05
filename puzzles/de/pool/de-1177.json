@@ -1,0 +1,50 @@
+{
+  "id": "de-1177",
+  "title": "Kontinente im Zoo",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Zoo"
+  },
+  "groups": [
+    {
+      "id": "australien",
+      "label": "Tiere aus Australien",
+      "items": [
+        "Känguru",
+        "Koala",
+        "Wombat",
+        "Emu"
+      ]
+    },
+    {
+      "id": "afrika",
+      "label": "Tiere aus Afrika",
+      "items": [
+        "Giraffe",
+        "Zebra",
+        "Warzenschwein",
+        "Antilope"
+      ]
+    },
+    {
+      "id": "suedamerika",
+      "label": "Tiere aus Südamerika",
+      "items": [
+        "Lama",
+        "Alpaka",
+        "Leguan",
+        "Piranha"
+      ]
+    },
+    {
+      "id": "arktis",
+      "label": "Tiere aus der Arktis",
+      "items": [
+        "Eisbär",
+        "Walross",
+        "Robbe",
+        "Schneeeule"
+      ]
+    }
+  ]
+}

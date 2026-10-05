@@ -1,0 +1,50 @@
+{
+  "id": "de-1162",
+  "title": "Rund ums Blumenbeet",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Garten"
+  },
+  "groups": [
+    {
+      "id": "fruehblueher",
+      "label": "Frühblüher",
+      "items": [
+        "Krokus",
+        "Narzisse",
+        "Tulpe",
+        "Hyazinthe"
+      ]
+    },
+    {
+      "id": "sommerblumen",
+      "label": "Sommerblumen",
+      "items": [
+        "Sonnenblume",
+        "Rose",
+        "Dahlie",
+        "Margerite"
+      ]
+    },
+    {
+      "id": "nuetzlinge",
+      "label": "Nützlinge",
+      "items": [
+        "Marienkäfer",
+        "Biene",
+        "Regenwurm",
+        "Hummel"
+      ]
+    },
+    {
+      "id": "schaedlinge",
+      "label": "Schädlinge",
+      "items": [
+        "Blattlaus",
+        "Schnecke",
+        "Raupe",
+        "Wühlmaus"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "de-1176",
+  "title": "Tierklassen im Zoo",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Zoo"
+  },
+  "groups": [
+    {
+      "id": "saeugetiere",
+      "label": "Säugetiere im Zoo",
+      "items": [
+        "Zebra",
+        "Giraffe",
+        "Kamel",
+        "Antilope"
+      ]
+    },
+    {
+      "id": "voegel",
+      "label": "Vogelarten",
+      "items": [
+        "Pinguin",
+        "Strauß",
+        "Eule",
+        "Pelikan"
+      ]
+    },
+    {
+      "id": "kriechtiere",
+      "label": "Kriechtiere",
+      "items": [
+        "Schlange",
+        "Echse",
+        "Krokodil",
+        "Schildkröte"
+      ]
+    },
+    {
+      "id": "amphibien",
+      "label": "Amphibien",
+      "items": [
+        "Frosch",
+        "Kröte",
+        "Salamander",
+        "Molch"
+      ]
+    }
+  ]
+}

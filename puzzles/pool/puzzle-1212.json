@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1212",
+  "title": "Under the bonnet",
+  "difficulty": "medium",
+  "editorialSummary": "The water pump shares the word pump with the fuel pump, so it tempts the fuel-and-air group, but the wording puts cooling hardware apart from fuel delivery.",
+  "meta": {
+    "theme": "car parts",
+    "categoryType": "function"
+  },
+  "groups": [
+    {
+      "id": "internals",
+      "label": "Engine internals",
+      "revealHint": "Inside engine",
+      "items": [
+        "Piston",
+        "Crankshaft",
+        "Camshaft",
+        "Connecting rod"
+      ]
+    },
+    {
+      "id": "cooling",
+      "label": "Cooling system",
+      "revealHint": "Keeps it cool",
+      "items": [
+        "Radiator",
+        "Water pump",
+        "Thermostat",
+        "Coolant hose"
+      ]
+    },
+    {
+      "id": "fuelair",
+      "label": "Fuel and air",
+      "revealHint": "Burns fuel",
+      "items": [
+        "Fuel injector",
+        "Air filter",
+        "Throttle body",
+        "Fuel pump"
+      ]
+    },
+    {
+      "id": "electrical",
+      "label": "Charging and ignition",
+      "revealHint": "Sparks and power",
+      "items": [
+        "Spark plug",
+        "Ignition coil",
+        "Alternator",
+        "Battery"
+      ]
+    }
+  ]
+}

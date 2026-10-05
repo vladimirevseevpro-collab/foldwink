@@ -1,0 +1,50 @@
+{
+  "id": "de-1173",
+  "title": "Urlaub am Wasser",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Strand"
+  },
+  "groups": [
+    {
+      "id": "wassersport",
+      "label": "Sport auf dem Wasser",
+      "items": [
+        "Surfen",
+        "Segeln",
+        "Tauchen",
+        "Wasserski"
+      ]
+    },
+    {
+      "id": "strandspiele",
+      "label": "Strandspiele",
+      "items": [
+        "Beachvolleyball",
+        "Frisbee",
+        "Federball",
+        "Boccia"
+      ]
+    },
+    {
+      "id": "tauchausruestung",
+      "label": "Tauchausrüstung",
+      "items": [
+        "Schnorchel",
+        "Taucherbrille",
+        "Flossen",
+        "Neoprenanzug"
+      ]
+    },
+    {
+      "id": "picknick",
+      "label": "Picknick am Strand",
+      "items": [
+        "Decke",
+        "Korb",
+        "Kühltasche",
+        "Thermoskanne"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "de-1166",
+  "title": "Große Wäsche",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Wäsche"
+  },
+  "groups": [
+    {
+      "id": "stoffe",
+      "label": "Stoffarten",
+      "items": [
+        "Baumwolle",
+        "Leinen",
+        "Wolle",
+        "Viskose"
+      ]
+    },
+    {
+      "id": "nachwaschen",
+      "label": "Nach dem Waschen",
+      "items": [
+        "Aufhängen",
+        "Trocknen",
+        "Bügeln",
+        "Falten"
+      ]
+    },
+    {
+      "id": "bettwaesche",
+      "label": "Bettwäsche",
+      "items": [
+        "Bettbezug",
+        "Kissenbezug",
+        "Bettlaken",
+        "Bettdecke"
+      ]
+    },
+    {
+      "id": "handtuecher",
+      "label": "Frottierwäsche",
+      "items": [
+        "Handtuch",
+        "Duschtuch",
+        "Waschlappen",
+        "Bademantel"
+      ]
+    }
+  ]
+}

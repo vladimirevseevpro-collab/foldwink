@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1215",
+  "title": "On the desk",
+  "difficulty": "medium",
+  "editorialSummary": "The smart speaker streams over Wi-Fi and looks like network gear, but the networking label claims only the router, modem, switch and extender.",
+  "meta": {
+    "theme": "computers",
+    "categoryType": "function"
+  },
+  "groups": [
+    {
+      "id": "typing",
+      "label": "Typing and pointing",
+      "revealHint": "Hands on",
+      "items": [
+        "Keyboard",
+        "Mouse",
+        "Trackpad",
+        "Graphics tablet"
+      ]
+    },
+    {
+      "id": "screensound",
+      "label": "Screen and sound",
+      "revealHint": "Watch and hear",
+      "items": [
+        "Monitor",
+        "Projector",
+        "Smart speaker",
+        "Headphones"
+      ]
+    },
+    {
+      "id": "portable",
+      "label": "Portable storage",
+      "revealHint": "Removable",
+      "items": [
+        "USB flash drive",
+        "Memory card",
+        "External SSD",
+        "Optical disc"
+      ]
+    },
+    {
+      "id": "networking",
+      "label": "Home networking",
+      "revealHint": "Connects you",
+      "items": [
+        "Router",
+        "Modem",
+        "Ethernet switch",
+        "Wi-Fi extender"
+      ]
+    }
+  ]
+}

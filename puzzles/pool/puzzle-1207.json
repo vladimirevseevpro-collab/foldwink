@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1207",
+  "title": "Crossing the River",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "bridges",
+      "label": "Bridge Types",
+      "items": [
+        "Suspension Bridge",
+        "Arch Bridge",
+        "Beam Bridge",
+        "Cable-Stayed Bridge"
+      ]
+    },
+    {
+      "id": "markings",
+      "label": "Road Markings",
+      "items": [
+        "Centre Line",
+        "Zebra Crossing",
+        "Lane Divider",
+        "Stop Line"
+      ]
+    },
+    {
+      "id": "roadside",
+      "label": "Roadside Features",
+      "items": [
+        "Guardrail",
+        "Streetlight",
+        "Milestone",
+        "Lay-by"
+      ]
+    },
+    {
+      "id": "signs",
+      "label": "Traffic Signs",
+      "items": [
+        "Stop Sign",
+        "Give Way Sign",
+        "Speed Limit Sign",
+        "No Entry Sign"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "bridges and roads",
+    "categoryType": "classification"
+  }
+}

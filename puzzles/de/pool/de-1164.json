@@ -1,0 +1,50 @@
+{
+  "id": "de-1164",
+  "title": "Tiere im Garten",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Garten"
+  },
+  "groups": [
+    {
+      "id": "voegel",
+      "label": "Vögel im Garten",
+      "items": [
+        "Amsel",
+        "Spatz",
+        "Meise",
+        "Elster"
+      ]
+    },
+    {
+      "id": "insekten",
+      "label": "Insekten im Garten",
+      "items": [
+        "Schmetterling",
+        "Libelle",
+        "Ameise",
+        "Grille"
+      ]
+    },
+    {
+      "id": "teich",
+      "label": "Im Teich",
+      "items": [
+        "Frosch",
+        "Molch",
+        "Goldfisch",
+        "Teichmuschel"
+      ]
+    },
+    {
+      "id": "untererde",
+      "label": "Unter der Erde",
+      "items": [
+        "Regenwurm",
+        "Maulwurf",
+        "Wühlmaus",
+        "Engerling"
+      ]
+    }
+  ]
+}

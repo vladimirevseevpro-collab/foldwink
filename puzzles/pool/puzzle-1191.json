@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1191",
+  "title": "Tumble Dry",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "washing-machine-parts",
+      "label": "Washing Machine Parts",
+      "items": [
+        "Drum",
+        "Filter",
+        "Door Seal",
+        "Detergent Drawer"
+      ]
+    },
+    {
+      "id": "laundry-hamper-materials",
+      "label": "Laundry Hamper Materials",
+      "items": [
+        "Wicker",
+        "Plastic",
+        "Canvas",
+        "Mesh"
+      ]
+    },
+    {
+      "id": "stain-removal-actions",
+      "label": "Stain Removal Actions",
+      "items": [
+        "Soak",
+        "Blot",
+        "Scrub",
+        "Rinse"
+      ]
+    },
+    {
+      "id": "fresh-laundry-scents",
+      "label": "Fresh Laundry Scents",
+      "items": [
+        "Lavender",
+        "Fresh Linen",
+        "Spring Rain",
+        "Ocean Breeze"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "laundry",
+    "categoryType": "material"
+  }
+}

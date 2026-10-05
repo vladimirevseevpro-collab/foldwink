@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1222",
+  "title": "Joining wood",
+  "difficulty": "medium",
+  "editorialSummary": "A dowel works like a fastener, tempting the metal-fastener group, but the joints label claims the dowel joint it forms.",
+  "meta": {
+    "theme": "carpentry",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "joints",
+      "label": "Wood joints",
+      "revealHint": "Join two parts",
+      "items": [
+        "Dovetail",
+        "Mortise and tenon",
+        "Lap joint",
+        "Dowel joint"
+      ]
+    },
+    {
+      "id": "fasteners",
+      "label": "Metal fasteners",
+      "revealHint": "Holds with metal",
+      "items": [
+        "Screw",
+        "Nail",
+        "Bolt",
+        "Washer"
+      ]
+    },
+    {
+      "id": "glues",
+      "label": "Wood glues",
+      "revealHint": "Sticky",
+      "items": [
+        "PVA glue",
+        "Hide glue",
+        "Contact adhesive",
+        "Polyurethane glue"
+      ]
+    },
+    {
+      "id": "sanding",
+      "label": "Sanding tools",
+      "revealHint": "Smooths",
+      "items": [
+        "Sandpaper",
+        "Sanding block",
+        "Orbital sander",
+        "Steel wool"
+      ]
+    }
+  ]
+}

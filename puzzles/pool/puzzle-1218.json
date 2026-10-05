@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1218",
+  "title": "Dialing it in",
+  "difficulty": "medium",
+  "editorialSummary": "Depth of field is set by the aperture, tempting the exposure group, but the focus label claims it as a focusing concept.",
+  "meta": {
+    "theme": "photography",
+    "categoryType": "attribute"
+  },
+  "groups": [
+    {
+      "id": "exposure",
+      "label": "Exposure settings",
+      "revealHint": "Brightness dials",
+      "items": [
+        "Aperture",
+        "Shutter speed",
+        "ISO",
+        "Exposure compensation"
+      ]
+    },
+    {
+      "id": "focus",
+      "label": "Focus terms",
+      "revealHint": "Sharpness",
+      "items": [
+        "Autofocus",
+        "Manual focus",
+        "Depth of field",
+        "Focus point"
+      ]
+    },
+    {
+      "id": "whitebalance",
+      "label": "White balance presets",
+      "revealHint": "Colour of light",
+      "items": [
+        "Daylight",
+        "Tungsten",
+        "Fluorescent",
+        "Shade"
+      ]
+    },
+    {
+      "id": "modes",
+      "label": "Shooting modes",
+      "revealHint": "How it fires",
+      "items": [
+        "Single shot",
+        "Burst mode",
+        "Self-timer",
+        "Interval timer"
+      ]
+    }
+  ]
+}

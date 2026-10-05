@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1205",
+  "title": "Training Day",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "drills",
+      "label": "Drill Exercises",
+      "items": [
+        "Ladder Climb",
+        "Hose Drill",
+        "Casualty Carry",
+        "Door Breach"
+      ]
+    },
+    {
+      "id": "structures",
+      "label": "Training Structures",
+      "items": [
+        "Drill Tower",
+        "Burn Building",
+        "Practice Wall",
+        "Obstacle Course"
+      ]
+    },
+    {
+      "id": "fitness",
+      "label": "Fitness Drills",
+      "items": [
+        "Sprints",
+        "Push-ups",
+        "Stair Runs",
+        "Tire Flips"
+      ]
+    },
+    {
+      "id": "kit",
+      "label": "Kit Checks",
+      "items": [
+        "Air Tank",
+        "Radio",
+        "Torch",
+        "Rope"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "fire station",
+    "categoryType": "action"
+  }
+}

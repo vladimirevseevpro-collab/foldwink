@@ -1,0 +1,50 @@
+{
+  "id": "de-1160",
+  "title": "Backtag zu Hause",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Bäckerei"
+  },
+  "groups": [
+    {
+      "id": "getreide",
+      "label": "Getreidesorten",
+      "items": [
+        "Weizen",
+        "Roggen",
+        "Dinkel",
+        "Hafer"
+      ]
+    },
+    {
+      "id": "formen",
+      "label": "Formen zum Backen",
+      "items": [
+        "Kastenform",
+        "Springform",
+        "Muffinform",
+        "Gugelhupfform"
+      ]
+    },
+    {
+      "id": "verzieren",
+      "label": "Zum Verzieren",
+      "items": [
+        "Puderzucker",
+        "Mandelblättchen",
+        "Kokosraspeln",
+        "Schokostreusel"
+      ]
+    },
+    {
+      "id": "koernerbrote",
+      "label": "Körnerbrote",
+      "items": [
+        "Körnerbrot",
+        "Sesambrot",
+        "Mohnbrot",
+        "Kürbiskernbrot"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1216",
+  "title": "Laptop anatomy",
+  "difficulty": "medium",
+  "editorialSummary": "The SD card slot holds removable memory and reads like storage, but the ports label claims the openings while the internals group keeps parts fixed inside.",
+  "meta": {
+    "theme": "computers",
+    "categoryType": "place"
+  },
+  "groups": [
+    {
+      "id": "lid",
+      "label": "Lid and screen",
+      "revealHint": "Folds open",
+      "items": [
+        "Screen panel",
+        "Webcam",
+        "Microphone",
+        "Hinge"
+      ]
+    },
+    {
+      "id": "deck",
+      "label": "Keyboard deck",
+      "revealHint": "Under fingers",
+      "items": [
+        "Keyboard",
+        "Touchpad",
+        "Palm rest",
+        "Power button"
+      ]
+    },
+    {
+      "id": "ports",
+      "label": "Laptop ports",
+      "revealHint": "Plug holes",
+      "items": [
+        "USB-C port",
+        "Headphone jack",
+        "SD card slot",
+        "Ethernet port"
+      ]
+    },
+    {
+      "id": "internals",
+      "label": "Laptop internals",
+      "revealHint": "Fixed inside",
+      "items": [
+        "Motherboard",
+        "SSD",
+        "Cooling fan",
+        "Battery"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1186",
+  "title": "Greenhouse Shelf",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "leafy-houseplants",
+      "label": "Leafy Houseplants",
+      "items": [
+        "Spider Plant",
+        "Pothos",
+        "Boston Fern",
+        "Peace Lily"
+      ]
+    },
+    {
+      "id": "succulent-plants",
+      "label": "Succulent Plants",
+      "items": [
+        "Aloe Vera",
+        "Jade Plant",
+        "Echeveria",
+        "Haworthia"
+      ]
+    },
+    {
+      "id": "gardening-hand-tools",
+      "label": "Gardening Hand Tools",
+      "items": [
+        "Trowel",
+        "Hand Fork",
+        "Weeder",
+        "Pruning Shears"
+      ]
+    },
+    {
+      "id": "plant-pot-materials",
+      "label": "Plant Pot Materials",
+      "items": [
+        "Terracotta",
+        "Ceramic",
+        "Plastic",
+        "Concrete"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "gardening",
+    "categoryType": "material"
+  }
+}

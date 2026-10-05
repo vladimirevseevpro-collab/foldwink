@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1202",
+  "title": "Boardwalk Afternoon",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "rides",
+      "label": "Amusement Rides",
+      "items": [
+        "Ferris Wheel",
+        "Carousel",
+        "Roller Coaster",
+        "Bumper Cars"
+      ]
+    },
+    {
+      "id": "arcade",
+      "label": "Pier Arcade Games",
+      "items": [
+        "Whack-a-Mole",
+        "Air Hockey",
+        "Claw Machine",
+        "Pinball"
+      ]
+    },
+    {
+      "id": "treats",
+      "label": "Stall Treats",
+      "items": [
+        "Waffle",
+        "Funnel Cake",
+        "Toffee Apple",
+        "Popcorn"
+      ]
+    },
+    {
+      "id": "sports",
+      "label": "Beach Games",
+      "items": [
+        "Volleyball",
+        "Paddleball",
+        "Frisbee",
+        "Beach Soccer"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "beach",
+    "categoryType": "classification"
+  }
+}

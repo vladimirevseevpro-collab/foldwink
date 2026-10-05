@@ -1,0 +1,50 @@
+{
+  "id": "de-1161",
+  "title": "Im Garten werkeln",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Garten"
+  },
+  "groups": [
+    {
+      "id": "geraete",
+      "label": "Werkzeug im Garten",
+      "items": [
+        "Spaten",
+        "Rechen",
+        "Hacke",
+        "Gartenschere"
+      ]
+    },
+    {
+      "id": "blueten",
+      "label": "Blüten im Beet",
+      "items": [
+        "Tulpe",
+        "Rose",
+        "Gänseblümchen",
+        "Sonnenblume"
+      ]
+    },
+    {
+      "id": "gemuese",
+      "label": "Gemüse im Beet",
+      "items": [
+        "Tomate",
+        "Gurke",
+        "Aubergine",
+        "Zucchini"
+      ]
+    },
+    {
+      "id": "obst",
+      "label": "Obst aus dem Garten",
+      "items": [
+        "Apfel",
+        "Birne",
+        "Quitte",
+        "Kirsche"
+      ]
+    }
+  ]
+}

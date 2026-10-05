@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1189",
+  "title": "Laundry Day",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "detergent-forms",
+      "label": "Detergent Forms",
+      "items": [
+        "Powder",
+        "Liquid",
+        "Pods",
+        "Sheets"
+      ]
+    },
+    {
+      "id": "common-stains",
+      "label": "Common Stains",
+      "items": [
+        "Grass",
+        "Grease",
+        "Ink",
+        "Coffee"
+      ]
+    },
+    {
+      "id": "wash-cycle-settings",
+      "label": "Wash Cycle Settings",
+      "items": [
+        "Normal",
+        "Delicate",
+        "Quick Wash",
+        "Heavy Duty"
+      ]
+    },
+    {
+      "id": "drying-methods",
+      "label": "Drying Methods",
+      "items": [
+        "Line Dry",
+        "Tumble Dry",
+        "Flat Dry",
+        "Drip Dry"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "laundry",
+    "categoryType": "classification"
+  }
+}

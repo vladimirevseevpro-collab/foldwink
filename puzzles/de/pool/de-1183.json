@@ -1,0 +1,50 @@
+{
+  "id": "de-1183",
+  "title": "Straßen der Stadt",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Brücken und Straßen"
+  },
+  "groups": [
+    {
+      "id": "belaege",
+      "label": "Straßenbeläge",
+      "items": [
+        "Asphalt",
+        "Beton",
+        "Pflaster",
+        "Kies"
+      ]
+    },
+    {
+      "id": "fahrzeuge",
+      "label": "Fahrzeuge im Verkehr",
+      "items": [
+        "Auto",
+        "Bus",
+        "Lastwagen",
+        "Motorrad"
+      ]
+    },
+    {
+      "id": "teile",
+      "label": "Straßenteile",
+      "items": [
+        "Fahrbahn",
+        "Gehweg",
+        "Bordstein",
+        "Mittelstreifen"
+      ]
+    },
+    {
+      "id": "regelung",
+      "label": "Verkehrsregelung",
+      "items": [
+        "Stoppschild",
+        "Vorfahrtsschild",
+        "Ampel",
+        "Zebrastreifen"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "de-1159",
+  "title": "Omas Kuchentheke",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Bäckerei"
+  },
+  "groups": [
+    {
+      "id": "torten",
+      "label": "Torten",
+      "items": [
+        "Obsttorte",
+        "Sahnetorte",
+        "Schokoladentorte",
+        "Erdbeertorte"
+      ]
+    },
+    {
+      "id": "plaetzchen",
+      "label": "Plätzchen",
+      "items": [
+        "Butterkeks",
+        "Haferkeks",
+        "Kokoskeks",
+        "Schokokeks"
+      ]
+    },
+    {
+      "id": "nuesse",
+      "label": "Nüsse und Trockenobst",
+      "items": [
+        "Mandeln",
+        "Haselnüsse",
+        "Rosinen",
+        "Datteln"
+      ]
+    },
+    {
+      "id": "hefekuchen",
+      "label": "Hefekuchen",
+      "items": [
+        "Zwetschgenkuchen",
+        "Rosinenkuchen",
+        "Butterkuchen",
+        "Bienenstich"
+      ]
+    }
+  ]
+}

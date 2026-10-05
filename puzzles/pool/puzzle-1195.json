@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1195",
+  "title": "Supermarket Aisles",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "dairy-section",
+      "label": "Dairy Section",
+      "items": [
+        "Milk",
+        "Cheese",
+        "Yogurt",
+        "Cream"
+      ]
+    },
+    {
+      "id": "bakery-section",
+      "label": "Bakery Section",
+      "items": [
+        "Baguette",
+        "Croissant",
+        "Doughnut",
+        "Muffin"
+      ]
+    },
+    {
+      "id": "meat-counter",
+      "label": "Meat Counter",
+      "items": [
+        "Beef",
+        "Chicken",
+        "Pork",
+        "Lamb"
+      ]
+    },
+    {
+      "id": "seafood-counter",
+      "label": "Seafood Counter",
+      "items": [
+        "Salmon",
+        "Prawns",
+        "Mussels",
+        "Cod"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "supermarket",
+    "categoryType": "place"
+  }
+}

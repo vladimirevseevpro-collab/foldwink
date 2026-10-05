@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1188",
+  "title": "Hedge Row",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "evergreen-shrubs",
+      "label": "Evergreen Shrubs",
+      "items": [
+        "Boxwood",
+        "Holly",
+        "Yew",
+        "Juniper"
+      ]
+    },
+    {
+      "id": "climbing-plants",
+      "label": "Climbing Plants",
+      "items": [
+        "Ivy",
+        "Clematis",
+        "Wisteria",
+        "Honeysuckle"
+      ]
+    },
+    {
+      "id": "garden-mulches",
+      "label": "Garden Mulches",
+      "items": [
+        "Bark Chips",
+        "Straw",
+        "Pine Needles",
+        "Cocoa Shells"
+      ]
+    },
+    {
+      "id": "garden-lighting",
+      "label": "Garden Lighting",
+      "items": [
+        "Path Light",
+        "String Lights",
+        "Lantern",
+        "Spotlight"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "gardening",
+    "categoryType": "classification"
+  }
+}

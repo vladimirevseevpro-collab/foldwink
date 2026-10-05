@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1198",
+  "title": "Store Layout",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "supermarket-jobs",
+      "label": "Supermarket Jobs",
+      "items": [
+        "Cashier",
+        "Butcher",
+        "Baker",
+        "Deli Assistant"
+      ]
+    },
+    {
+      "id": "shopping-equipment",
+      "label": "Shopping Equipment",
+      "items": [
+        "Cart",
+        "Basket",
+        "Scanner",
+        "Reusable Bags"
+      ]
+    },
+    {
+      "id": "aisle-sign-words",
+      "label": "Aisle Sign Words",
+      "items": [
+        "Cereal",
+        "Pasta",
+        "Sauces",
+        "Snacks"
+      ]
+    },
+    {
+      "id": "store-facilities",
+      "label": "Store Facilities",
+      "items": [
+        "Pharmacy",
+        "Cafe",
+        "Restrooms",
+        "Parking Lot"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "supermarket",
+    "categoryType": "place"
+  }
+}

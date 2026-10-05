@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1210",
+  "title": "Craft and Flea",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "crafts",
+      "label": "Handmade Crafts",
+      "items": [
+        "Candle",
+        "Soap",
+        "Woven Basket",
+        "Ceramic Mug"
+      ]
+    },
+    {
+      "id": "vintage",
+      "label": "Vintage Finds",
+      "items": [
+        "Vinyl Record",
+        "Pocket Watch",
+        "Postcard",
+        "Brooch"
+      ]
+    },
+    {
+      "id": "materials",
+      "label": "Craft Materials",
+      "items": [
+        "Yarn",
+        "Felt",
+        "Beeswax",
+        "Clay"
+      ]
+    },
+    {
+      "id": "bargaining",
+      "label": "Bargaining Words",
+      "items": [
+        "Haggle",
+        "Offer",
+        "Deal",
+        "Discount"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "market stalls",
+    "categoryType": "classification"
+  }
+}

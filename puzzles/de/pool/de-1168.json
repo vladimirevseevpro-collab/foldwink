@@ -1,0 +1,50 @@
+{
+  "id": "de-1168",
+  "title": "Gepflegt von Kopf bis Fuß",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Badezimmer"
+  },
+  "groups": [
+    {
+      "id": "haare",
+      "label": "Für die Haare",
+      "items": [
+        "Haarspülung",
+        "Haarkur",
+        "Haargel",
+        "Haarspray"
+      ]
+    },
+    {
+      "id": "naegel",
+      "label": "Nagelpflege",
+      "items": [
+        "Nagelknipser",
+        "Nagelfeile",
+        "Nagelhautschere",
+        "Nagelöl"
+      ]
+    },
+    {
+      "id": "fuesse",
+      "label": "Für die Füße",
+      "items": [
+        "Fußbad",
+        "Fußcreme",
+        "Hornhautfeile",
+        "Fußspray"
+      ]
+    },
+    {
+      "id": "mund",
+      "label": "Für den Mund",
+      "items": [
+        "Zahnseide",
+        "Mundwasser",
+        "Zahnstocher",
+        "Zungenreiniger"
+      ]
+    }
+  ]
+}

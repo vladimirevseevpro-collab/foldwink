@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1217",
+  "title": "File endings",
+  "difficulty": "medium",
+  "editorialSummary": "GIF is mostly seen as a moving picture, tempting the video group, but the image label claims it as a still format.",
+  "meta": {
+    "theme": "computers",
+    "categoryType": "attribute"
+  },
+  "groups": [
+    {
+      "id": "docs",
+      "label": "Document files",
+      "revealHint": "Text files",
+      "items": [
+        "PDF",
+        "DOCX",
+        "TXT",
+        "RTF"
+      ]
+    },
+    {
+      "id": "images",
+      "label": "Image files",
+      "revealHint": "Pictures",
+      "items": [
+        "JPG",
+        "PNG",
+        "GIF",
+        "SVG"
+      ]
+    },
+    {
+      "id": "audio",
+      "label": "Audio files",
+      "revealHint": "Sound files",
+      "items": [
+        "MP3",
+        "WAV",
+        "FLAC",
+        "AAC"
+      ]
+    },
+    {
+      "id": "video",
+      "label": "Video files",
+      "revealHint": "Moving pictures",
+      "items": [
+        "MP4",
+        "AVI",
+        "MOV",
+        "MKV"
+      ]
+    }
+  ]
+}

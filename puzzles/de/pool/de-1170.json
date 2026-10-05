@@ -1,0 +1,50 @@
+{
+  "id": "de-1170",
+  "title": "An der Kasse",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Supermarkt"
+  },
+  "groups": [
+    {
+      "id": "bezahlen",
+      "label": "Bezahlen",
+      "items": [
+        "Bargeld",
+        "EC-Karte",
+        "Kreditkarte",
+        "Gutschein"
+      ]
+    },
+    {
+      "id": "kasse",
+      "label": "An der Kasse",
+      "items": [
+        "Kassenband",
+        "Kassenbon",
+        "Münzfach",
+        "Kartenlesegerät"
+      ]
+    },
+    {
+      "id": "einkaufen",
+      "label": "Einkaufen",
+      "items": [
+        "Einkaufswagen",
+        "Einkaufskorb",
+        "Einkaufstasche",
+        "Einkaufsliste"
+      ]
+    },
+    {
+      "id": "angebote",
+      "label": "Angebote",
+      "items": [
+        "Rabatt",
+        "Sonderangebot",
+        "Prospekt",
+        "Coupon"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1214",
+  "title": "Desktop innards",
+  "difficulty": "medium",
+  "editorialSummary": "RAM sits on the motherboard and reads like core hardware, but the memory-and-storage label claims it, leaving chips, board and power supply as the core.",
+  "meta": {
+    "theme": "computers",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "core",
+      "label": "Core hardware",
+      "revealHint": "Heart of the PC",
+      "items": [
+        "CPU",
+        "GPU",
+        "Motherboard",
+        "Power supply"
+      ]
+    },
+    {
+      "id": "memory",
+      "label": "Memory and storage",
+      "revealHint": "Remembers",
+      "items": [
+        "RAM",
+        "SSD",
+        "Hard drive",
+        "USB flash drive"
+      ]
+    },
+    {
+      "id": "ports",
+      "label": "Ports and slots",
+      "revealHint": "Connect here",
+      "items": [
+        "USB port",
+        "HDMI port",
+        "Ethernet port",
+        "PCIe slot"
+      ]
+    },
+    {
+      "id": "cooling",
+      "label": "Cooling and case",
+      "revealHint": "Stays cool",
+      "items": [
+        "CPU fan",
+        "Heatsink",
+        "Thermal paste",
+        "Case fan"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1226",
+  "title": "Studio instruments",
+  "difficulty": "medium",
+  "editorialSummary": "The grand piano carries strings like a guitar, tempting the guitars group, but the keyboards label claims it as a player's key instrument.",
+  "meta": {
+    "theme": "music studio",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "guitars",
+      "label": "Studio guitars",
+      "revealHint": "Six strings",
+      "items": [
+        "Electric guitar",
+        "Bass guitar",
+        "Acoustic guitar",
+        "Lap steel guitar"
+      ]
+    },
+    {
+      "id": "drums",
+      "label": "Studio drums",
+      "revealHint": "Kit pieces",
+      "items": [
+        "Kick drum",
+        "Snare drum",
+        "Hi-hat",
+        "Tom-tom"
+      ]
+    },
+    {
+      "id": "keyboards",
+      "label": "Studio keyboards",
+      "revealHint": "Black and white",
+      "items": [
+        "Grand piano",
+        "Electric piano",
+        "Synthesizer",
+        "Organ"
+      ]
+    },
+    {
+      "id": "percussion",
+      "label": "Hand percussion",
+      "revealHint": "Shake it",
+      "items": [
+        "Congas",
+        "Tambourine",
+        "Shaker",
+        "Bongos"
+      ]
+    }
+  ]
+}

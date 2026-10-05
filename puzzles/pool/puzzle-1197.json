@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1197",
+  "title": "Frozen Aisle",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "frozen-vegetables",
+      "label": "Frozen Vegetables",
+      "items": [
+        "Peas",
+        "Sweetcorn",
+        "Spinach",
+        "Broccoli"
+      ]
+    },
+    {
+      "id": "frozen-sweet-treats",
+      "label": "Frozen Sweet Treats",
+      "items": [
+        "Ice Cream",
+        "Sorbet",
+        "Frozen Yogurt",
+        "Popsicle"
+      ]
+    },
+    {
+      "id": "frozen-prepared-meals",
+      "label": "Frozen Prepared Meals",
+      "items": [
+        "Pizza",
+        "Lasagne",
+        "Fish Fingers",
+        "Curry"
+      ]
+    },
+    {
+      "id": "frozen-breakfast-items",
+      "label": "Frozen Breakfast Items",
+      "items": [
+        "Waffles",
+        "Pancakes",
+        "Hash Browns",
+        "Breakfast Burritos"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "supermarket",
+    "categoryType": "classification"
+  }
+}

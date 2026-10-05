@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1187",
+  "title": "Potting Bench",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "long-handled-garden-tools",
+      "label": "Long-Handled Garden Tools",
+      "items": [
+        "Spade",
+        "Garden Fork",
+        "Rake",
+        "Hoe"
+      ]
+    },
+    {
+      "id": "composting-ingredients",
+      "label": "Composting Ingredients",
+      "items": [
+        "Grass Clippings",
+        "Vegetable Scraps",
+        "Dry Leaves",
+        "Cardboard"
+      ]
+    },
+    {
+      "id": "garden-watering-equipment",
+      "label": "Garden Watering Equipment",
+      "items": [
+        "Garden Hose",
+        "Sprinkler",
+        "Watering Can",
+        "Spray Nozzle"
+      ]
+    },
+    {
+      "id": "lawn-care-tasks",
+      "label": "Lawn Care Tasks",
+      "items": [
+        "Mowing",
+        "Weeding",
+        "Edging",
+        "Aerating"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "gardening",
+    "categoryType": "function"
+  }
+}

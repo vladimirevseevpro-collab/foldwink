@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1225",
+  "title": "Session flow",
+  "difficulty": "medium",
+  "editorialSummary": "Clipping sounds like a distortion effect, tempting the effects group, but the signal label claims it as a level problem.",
+  "meta": {
+    "theme": "music studio",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "effects",
+      "label": "Recording effects",
+      "revealHint": "Wet sound",
+      "items": [
+        "Reverb",
+        "Delay",
+        "Chorus",
+        "Distortion"
+      ]
+    },
+    {
+      "id": "signal",
+      "label": "Signal terms",
+      "revealHint": "Audio levels",
+      "items": [
+        "Gain",
+        "Level",
+        "Headroom",
+        "Clipping"
+      ]
+    },
+    {
+      "id": "tracks",
+      "label": "Session tracks",
+      "revealHint": "Recorded parts",
+      "items": [
+        "Vocal track",
+        "Guitar track",
+        "Click track",
+        "Backing track"
+      ]
+    },
+    {
+      "id": "roles",
+      "label": "Studio roles",
+      "revealHint": "People in the room",
+      "items": [
+        "Producer",
+        "Engineer",
+        "Session musician",
+        "Mixer"
+      ]
+    }
+  ]
+}

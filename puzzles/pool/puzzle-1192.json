@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1192",
+  "title": "Sink Side",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "dental-care-items",
+      "label": "Dental Care Items",
+      "items": [
+        "Toothbrush",
+        "Toothpaste",
+        "Dental Floss",
+        "Mouthwash"
+      ]
+    },
+    {
+      "id": "shaving-supplies",
+      "label": "Shaving Supplies",
+      "items": [
+        "Razor",
+        "Shaving Cream",
+        "Aftershave",
+        "Shaving Brush"
+      ]
+    },
+    {
+      "id": "hair-styling-products",
+      "label": "Hair Styling Products",
+      "items": [
+        "Hair Gel",
+        "Mousse",
+        "Hairspray",
+        "Pomade"
+      ]
+    },
+    {
+      "id": "bathroom-accessories",
+      "label": "Bathroom Accessories",
+      "items": [
+        "Soap Dish",
+        "Toothbrush Holder",
+        "Towel Ring",
+        "Toilet Roll Holder"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "bathroom",
+    "categoryType": "classification"
+  }
+}

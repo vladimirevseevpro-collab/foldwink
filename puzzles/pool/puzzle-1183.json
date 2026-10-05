@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1183",
+  "title": "Bakery Counter",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "baking-leaveners",
+      "label": "Baking Leaveners",
+      "items": [
+        "Yeast",
+        "Baking Soda",
+        "Baking Powder",
+        "Sourdough Starter"
+      ]
+    },
+    {
+      "id": "cookie-types",
+      "label": "Cookie Types",
+      "items": [
+        "Chocolate Chip Cookie",
+        "Oatmeal Raisin Cookie",
+        "Sugar Cookie",
+        "Peanut Butter Cookie"
+      ]
+    },
+    {
+      "id": "pie-fillings",
+      "label": "Pie Fillings",
+      "items": [
+        "Apple",
+        "Cherry",
+        "Pecan",
+        "Pumpkin"
+      ]
+    },
+    {
+      "id": "pastry-tools",
+      "label": "Pastry Tools",
+      "items": [
+        "Rolling Pin",
+        "Pastry Brush",
+        "Dough Scraper",
+        "Piping Bag"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "bakery",
+    "categoryType": "classification"
+  }
+}

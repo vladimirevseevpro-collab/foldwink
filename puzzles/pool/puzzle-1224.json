@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1224",
+  "title": "Control room gear",
+  "difficulty": "medium",
+  "editorialSummary": "The monitor controller adjusts levels like a console, tempting the console-parts group, but the monitoring label claims it with the speakers and headphones.",
+  "meta": {
+    "theme": "music studio",
+    "categoryType": "function"
+  },
+  "groups": [
+    {
+      "id": "mics",
+      "label": "Types of microphone",
+      "revealHint": "Mics",
+      "items": [
+        "Condenser",
+        "Dynamic",
+        "Ribbon",
+        "Shotgun"
+      ]
+    },
+    {
+      "id": "monitoring",
+      "label": "Studio monitoring",
+      "revealHint": "What you hear",
+      "items": [
+        "Near-field monitor",
+        "Subwoofer",
+        "Studio headphones",
+        "Monitor controller"
+      ]
+    },
+    {
+      "id": "console",
+      "label": "Mixing console parts",
+      "revealHint": "On the desk",
+      "items": [
+        "Fader",
+        "Channel strip",
+        "Master bus",
+        "Aux send"
+      ]
+    },
+    {
+      "id": "accessories",
+      "label": "Studio accessories",
+      "revealHint": "Extra bits",
+      "items": [
+        "Mic stand",
+        "Boom arm",
+        "XLR cable",
+        "Pop filter"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "de-1175",
+  "title": "Große Tiere im Zoo",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Zoo"
+  },
+  "groups": [
+    {
+      "id": "katzen",
+      "label": "Große Katzen",
+      "items": [
+        "Löwe",
+        "Tiger",
+        "Leopard",
+        "Jaguar"
+      ]
+    },
+    {
+      "id": "menschenaffen",
+      "label": "Menschenaffen",
+      "items": [
+        "Schimpanse",
+        "Gorilla",
+        "Orang-Utan",
+        "Bonobo"
+      ]
+    },
+    {
+      "id": "voegel",
+      "label": "Exotische Vögel",
+      "items": [
+        "Papagei",
+        "Pelikan",
+        "Flamingo",
+        "Strauß"
+      ]
+    },
+    {
+      "id": "dickhaeuter",
+      "label": "Dickhäuter",
+      "items": [
+        "Elefant",
+        "Nashorn",
+        "Flusspferd",
+        "Tapir"
+      ]
+    }
+  ]
+}

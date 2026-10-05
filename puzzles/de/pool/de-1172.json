@@ -1,0 +1,50 @@
+{
+  "id": "de-1172",
+  "title": "Sonnenbad am Meer",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Strand"
+  },
+  "groups": [
+    {
+      "id": "sonnenschutz",
+      "label": "Sonnenschutz",
+      "items": [
+        "Sonnencreme",
+        "Sonnenhut",
+        "Sonnenbrille",
+        "Strandmuschel"
+      ]
+    },
+    {
+      "id": "meeresboden",
+      "label": "Am Meeresboden",
+      "items": [
+        "Seestern",
+        "Muschel",
+        "Krabbe",
+        "Seeigel"
+      ]
+    },
+    {
+      "id": "seevoegel",
+      "label": "Seevögel",
+      "items": [
+        "Möwe",
+        "Kormoran",
+        "Sturmvogel",
+        "Albatros"
+      ]
+    },
+    {
+      "id": "boote",
+      "label": "Arten von Booten",
+      "items": [
+        "Segelboot",
+        "Ruderboot",
+        "Motorboot",
+        "Kanu"
+      ]
+    }
+  ]
+}

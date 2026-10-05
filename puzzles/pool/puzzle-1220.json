@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1220",
+  "title": "Bench basics",
+  "difficulty": "medium",
+  "editorialSummary": "The marking gauge scratches a line into the wood, tempting the shaping group, but the layout label claims the marking tools.",
+  "meta": {
+    "theme": "carpentry",
+    "categoryType": "function"
+  },
+  "groups": [
+    {
+      "id": "sawing",
+      "label": "Sawing tools",
+      "revealHint": "Cuts wood",
+      "items": [
+        "Hand saw",
+        "Tenon saw",
+        "Coping saw",
+        "Jigsaw"
+      ]
+    },
+    {
+      "id": "shaping",
+      "label": "Shaping tools",
+      "revealHint": "Shaves wood",
+      "items": [
+        "Plane",
+        "Chisel",
+        "Rasp",
+        "File"
+      ]
+    },
+    {
+      "id": "layout",
+      "label": "Layout tools",
+      "revealHint": "Marks sizes",
+      "items": [
+        "Tape measure",
+        "Try square",
+        "Marking gauge",
+        "Ruler"
+      ]
+    },
+    {
+      "id": "holding",
+      "label": "Holding tools",
+      "revealHint": "Grips work",
+      "items": [
+        "F-clamp",
+        "Bench vice",
+        "Bar clamp",
+        "Bench dog"
+      ]
+    }
+  ]
+}

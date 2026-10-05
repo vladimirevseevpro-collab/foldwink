@@ -1,0 +1,50 @@
+{
+  "id": "de-1165",
+  "title": "Saubere Kleidung",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Wäsche"
+  },
+  "groups": [
+    {
+      "id": "oberkoerper",
+      "label": "Für den Oberkörper",
+      "items": [
+        "Hemd",
+        "Pullover",
+        "Jacke",
+        "T-Shirt"
+      ]
+    },
+    {
+      "id": "beine",
+      "label": "Für die Beine",
+      "items": [
+        "Hose",
+        "Rock",
+        "Leggings",
+        "Strumpfhose"
+      ]
+    },
+    {
+      "id": "buegeln",
+      "label": "Beim Bügeln",
+      "items": [
+        "Bügeleisen",
+        "Bügelbrett",
+        "Sprühflasche",
+        "Wäschestärke"
+      ]
+    },
+    {
+      "id": "aufbewahrung",
+      "label": "Zur Aufbewahrung",
+      "items": [
+        "Kleiderbügel",
+        "Schublade",
+        "Regal",
+        "Wäschekorb"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "de-1181",
+  "title": "Alarm bei der Feuerwehr",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Feuerwehr"
+  },
+  "groups": [
+    {
+      "id": "alarmierung",
+      "label": "Alarmierung",
+      "items": [
+        "Sirene",
+        "Blaulicht",
+        "Funkgerät",
+        "Melder"
+      ]
+    },
+    {
+      "id": "rettung",
+      "label": "Menschenrettung",
+      "items": [
+        "Leiter",
+        "Sprungtuch",
+        "Trage",
+        "Rettungsseil"
+      ]
+    },
+    {
+      "id": "absicherung",
+      "label": "Absicherung",
+      "items": [
+        "Absperrband",
+        "Pylone",
+        "Warndreieck",
+        "Warnweste"
+      ]
+    },
+    {
+      "id": "danach",
+      "label": "Nach dem Einsatz",
+      "items": [
+        "Säubern",
+        "Aufräumen",
+        "Trocknen",
+        "Einlagern"
+      ]
+    }
+  ]
+}

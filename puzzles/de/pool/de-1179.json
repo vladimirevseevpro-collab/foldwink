@@ -1,0 +1,50 @@
+{
+  "id": "de-1179",
+  "title": "Einsatz der Feuerwehr",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Feuerwehr"
+  },
+  "groups": [
+    {
+      "id": "fahrzeuge",
+      "label": "Feuerwehrautos",
+      "items": [
+        "Löschfahrzeug",
+        "Drehleiter",
+        "Rüstwagen",
+        "Tankwagen"
+      ]
+    },
+    {
+      "id": "werkzeuge",
+      "label": "Feuerwehr-Werkzeuge",
+      "items": [
+        "Axt",
+        "Brechstange",
+        "Bolzenschneider",
+        "Motorsäge"
+      ]
+    },
+    {
+      "id": "schutz",
+      "label": "Schutzausrüstung der Feuerwehr",
+      "items": [
+        "Helm",
+        "Atemschutzmaske",
+        "Schutzanzug",
+        "Handschuhe"
+      ]
+    },
+    {
+      "id": "wasser",
+      "label": "Wasserversorgung",
+      "items": [
+        "Hydrant",
+        "Schlauch",
+        "Strahlrohr",
+        "Pumpe"
+      ]
+    }
+  ]
+}

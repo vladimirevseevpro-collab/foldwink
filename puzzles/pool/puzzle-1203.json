@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1203",
+  "title": "Feeding Round",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "chores",
+      "label": "Keeper Chores",
+      "items": [
+        "Feeding",
+        "Cleaning",
+        "Mucking Out",
+        "Grooming"
+      ]
+    },
+    {
+      "id": "herb",
+      "label": "Herbivore Meals",
+      "items": [
+        "Hay",
+        "Vegetables",
+        "Leaves",
+        "Pellets"
+      ]
+    },
+    {
+      "id": "pred",
+      "label": "Predator Meals",
+      "items": [
+        "Meat",
+        "Fish",
+        "Mice",
+        "Eggs"
+      ]
+    },
+    {
+      "id": "kit",
+      "label": "Keeper Kit",
+      "items": [
+        "Wheelbarrow",
+        "Broom",
+        "Hose",
+        "Pitchfork"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "zoo keeper",
+    "categoryType": "function"
+  }
+}

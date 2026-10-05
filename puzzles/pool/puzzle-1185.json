@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1185",
+  "title": "Seed Packets",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "seed-starting-supplies",
+      "label": "Seed Starting Supplies",
+      "items": [
+        "Seed Tray",
+        "Grow Light",
+        "Peat Pot",
+        "Potting Mix"
+      ]
+    },
+    {
+      "id": "common-garden-pests",
+      "label": "Common Garden Pests",
+      "items": [
+        "Aphid",
+        "Slug",
+        "Caterpillar",
+        "Whitefly"
+      ]
+    },
+    {
+      "id": "spring-flowering-bulbs",
+      "label": "Spring Flowering Bulbs",
+      "items": [
+        "Tulip",
+        "Daffodil",
+        "Hyacinth",
+        "Snowdrop"
+      ]
+    },
+    {
+      "id": "garden-weeds",
+      "label": "Garden Weeds",
+      "items": [
+        "Dandelion",
+        "Nettle",
+        "Chickweed",
+        "Thistle"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "gardening",
+    "categoryType": "classification"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "de-1185",
+  "title": "Stadtstraße",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Brücken und Straßen"
+  },
+  "groups": [
+    {
+      "id": "stadtstrassen",
+      "label": "Stadtstraßen",
+      "items": [
+        "Hauptstraße",
+        "Nebenstraße",
+        "Einbahnstraße",
+        "Fußgängerzone"
+      ]
+    },
+    {
+      "id": "moebel",
+      "label": "Straßenmöbel",
+      "items": [
+        "Laterne",
+        "Parkbank",
+        "Mülleimer",
+        "Hydrant"
+      ]
+    },
+    {
+      "id": "verkehrsmittel",
+      "label": "Verkehrsmittel",
+      "items": [
+        "Straßenbahn",
+        "Bus",
+        "Taxi",
+        "Fahrrad"
+      ]
+    },
+    {
+      "id": "baustelle",
+      "label": "Auf der Baustelle",
+      "items": [
+        "Bagger",
+        "Absperrgitter",
+        "Warnschild",
+        "Bauhelm"
+      ]
+    }
+  ]
+}

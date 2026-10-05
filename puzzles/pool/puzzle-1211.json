@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1211",
+  "title": "Car bodywork tour",
+  "difficulty": "medium",
+  "editorialSummary": "The wing mirror reads like a body panel because of the word wing, but the body-panel group holds only stamped sheet metal, leaving mirrors to the exterior fittings.",
+  "meta": {
+    "theme": "car parts",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "panels",
+      "label": "Stamped panels",
+      "revealHint": "Outer shell",
+      "items": [
+        "Bonnet",
+        "Boot lid",
+        "Front wing",
+        "Rear quarter panel"
+      ]
+    },
+    {
+      "id": "lights",
+      "label": "Light clusters",
+      "revealHint": "Lamps",
+      "items": [
+        "Headlamp",
+        "Tail light",
+        "Indicator",
+        "Fog light"
+      ]
+    },
+    {
+      "id": "glazing",
+      "label": "Glazing",
+      "revealHint": "Glass panels",
+      "items": [
+        "Windscreen",
+        "Rear window",
+        "Side window",
+        "Quarter glass"
+      ]
+    },
+    {
+      "id": "fittings",
+      "label": "Exterior fittings",
+      "revealHint": "Trim pieces",
+      "items": [
+        "Wing mirror",
+        "Door handle",
+        "Grille",
+        "Number plate"
+      ]
+    }
+  ]
+}

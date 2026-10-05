@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1199",
+  "title": "Shoreline Packing",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "beach-bag",
+      "label": "Beach Bag Basics",
+      "items": [
+        "Towel",
+        "Sunscreen",
+        "Sunglasses",
+        "Sun Hat"
+      ]
+    },
+    {
+      "id": "sand-toys",
+      "label": "Sandcastle Gear",
+      "items": [
+        "Bucket",
+        "Spade",
+        "Sieve",
+        "Mould"
+      ]
+    },
+    {
+      "id": "shore-wildlife",
+      "label": "Seaside Wildlife",
+      "items": [
+        "Seagull",
+        "Crab",
+        "Starfish",
+        "Jellyfish"
+      ]
+    },
+    {
+      "id": "water-fun",
+      "label": "Water Fun",
+      "items": [
+        "Swimming",
+        "Snorkelling",
+        "Paddling",
+        "Bodyboarding"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "beach",
+    "categoryType": "classification"
+  }
+}

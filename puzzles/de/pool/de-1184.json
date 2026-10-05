@@ -1,0 +1,50 @@
+{
+  "id": "de-1184",
+  "title": "Brücken und Tunnel",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Brücken und Straßen"
+  },
+  "groups": [
+    {
+      "id": "brueckenarten",
+      "label": "Brückenarten",
+      "items": [
+        "Steinbrücke",
+        "Holzbrücke",
+        "Hängebrücke",
+        "Bogenbrücke"
+      ]
+    },
+    {
+      "id": "brueckenteile",
+      "label": "Brückenteile",
+      "items": [
+        "Pfeiler",
+        "Bogen",
+        "Geländer",
+        "Fahrbahn"
+      ]
+    },
+    {
+      "id": "verkehrswege",
+      "label": "Verkehrswege",
+      "items": [
+        "Landstraße",
+        "Autobahn",
+        "Feldweg",
+        "Radweg"
+      ]
+    },
+    {
+      "id": "tunnelarten",
+      "label": "Tunnelarten",
+      "items": [
+        "Straßentunnel",
+        "Eisenbahntunnel",
+        "Fußgängertunnel",
+        "Kanaltunnel"
+      ]
+    }
+  ]
+}

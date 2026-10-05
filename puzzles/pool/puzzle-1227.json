@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1227",
+  "title": "Reading music",
+  "difficulty": "medium",
+  "editorialSummary": "Cut time sounds like it shortens notes, tempting the note-length group, but the time-signatures label claims it as a metre.",
+  "meta": {
+    "theme": "music studio",
+    "categoryType": "attribute"
+  },
+  "groups": [
+    {
+      "id": "notelengths",
+      "label": "Note lengths",
+      "revealHint": "How long",
+      "items": [
+        "Whole note",
+        "Half note",
+        "Quarter note",
+        "Sixteenth note"
+      ]
+    },
+    {
+      "id": "clefs",
+      "label": "Clefs",
+      "revealHint": "Staff symbols",
+      "items": [
+        "Treble clef",
+        "Bass clef",
+        "Alto clef",
+        "Tenor clef"
+      ]
+    },
+    {
+      "id": "timesigs",
+      "label": "Time signatures",
+      "revealHint": "Beats per bar",
+      "items": [
+        "Common time",
+        "Cut time",
+        "Three-four time",
+        "Six-eight time"
+      ]
+    },
+    {
+      "id": "tempo",
+      "label": "Tempo terms",
+      "revealHint": "Speed words",
+      "items": [
+        "Allegro",
+        "Andante",
+        "Vivace",
+        "Largo"
+      ]
+    }
+  ]
+}

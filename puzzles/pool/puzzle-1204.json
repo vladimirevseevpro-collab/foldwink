@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1204",
+  "title": "Zoo Vet Visit",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "tools",
+      "label": "Vet's Tools",
+      "items": [
+        "Stethoscope",
+        "Sedation Dart",
+        "X-Ray Machine",
+        "Tweezers"
+      ]
+    },
+    {
+      "id": "checks",
+      "label": "Health Checks",
+      "items": [
+        "Weighing",
+        "Vaccinating",
+        "Examining",
+        "Bandaging"
+      ]
+    },
+    {
+      "id": "isolation",
+      "label": "Isolation Items",
+      "items": [
+        "Incubator",
+        "Heat Lamp",
+        "Blanket",
+        "Feeding Bottle"
+      ]
+    },
+    {
+      "id": "diets",
+      "label": "Recovery Diets",
+      "items": [
+        "Soft Food",
+        "Electrolytes",
+        "Vitamin Drops",
+        "Warm Milk"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "zoo keeper",
+    "categoryType": "function"
+  }
+}

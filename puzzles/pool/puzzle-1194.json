@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1194",
+  "title": "Tub Side",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "bathtub-accessories",
+      "label": "Bathtub Accessories",
+      "items": [
+        "Bath Pillow",
+        "Bath Caddy",
+        "Non-Slip Mat",
+        "Loofah"
+      ]
+    },
+    {
+      "id": "facial-care-items",
+      "label": "Facial Care Items",
+      "items": [
+        "Face Wash",
+        "Facial Toner",
+        "Moisturizer",
+        "Facial Scrub"
+      ]
+    },
+    {
+      "id": "bathroom-odor-control",
+      "label": "Bathroom Odor Control",
+      "items": [
+        "Air Freshener",
+        "Reed Diffuser",
+        "Scented Candle",
+        "Exhaust Fan"
+      ]
+    },
+    {
+      "id": "personal-grooming-tools",
+      "label": "Personal Grooming Tools",
+      "items": [
+        "Nail Clippers",
+        "Tweezers",
+        "Scissors",
+        "Comb"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "bathroom",
+    "categoryType": "function"
+  }
+}

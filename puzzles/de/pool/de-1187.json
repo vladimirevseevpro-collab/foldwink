@@ -1,0 +1,50 @@
+{
+  "id": "de-1187",
+  "title": "Gewürze und Tee",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Wochenmarkt"
+  },
+  "groups": [
+    {
+      "id": "gewuerz",
+      "label": "Am Gewürzstand",
+      "items": [
+        "Pfeffer",
+        "Paprikapulver",
+        "Zimt",
+        "Currypulver"
+      ]
+    },
+    {
+      "id": "honig",
+      "label": "Honigsorten",
+      "items": [
+        "Blütenhonig",
+        "Waldhonig",
+        "Löwenzahnhonig",
+        "Rapshonig"
+      ]
+    },
+    {
+      "id": "tee",
+      "label": "Tee am Stand",
+      "items": [
+        "Schwarztee",
+        "Grüntee",
+        "Pfefferminztee",
+        "Kamillentee"
+      ]
+    },
+    {
+      "id": "nuesse",
+      "label": "Nusssorten",
+      "items": [
+        "Walnüsse",
+        "Haselnüsse",
+        "Cashewkerne",
+        "Pekannüsse"
+      ]
+    }
+  ]
+}
