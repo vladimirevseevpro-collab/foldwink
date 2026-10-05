@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1228",
+  "title": "Pirate Ship Life",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "pirate-ship-parts",
+      "label": "Pirate Ship Parts",
+      "items": [
+        "Mast",
+        "Hull",
+        "Deck",
+        "Anchor"
+      ]
+    },
+    {
+      "id": "pirate-weapons",
+      "label": "Pirate Weapons",
+      "items": [
+        "Cutlass",
+        "Dagger",
+        "Blunderbuss",
+        "Cannon"
+      ]
+    },
+    {
+      "id": "pirate-treasure",
+      "label": "Pirate Treasure",
+      "items": [
+        "Gold Coins",
+        "Jewels",
+        "Pearls",
+        "Silver Bars"
+      ]
+    },
+    {
+      "id": "pirate-crew-roles",
+      "label": "Pirate Crew Roles",
+      "items": [
+        "Captain",
+        "Quartermaster",
+        "Bosun",
+        "Lookout"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "pirates",
+    "categoryType": "classification"
+  }
+}

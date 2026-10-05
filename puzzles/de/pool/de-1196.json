@@ -1,0 +1,50 @@
+{
+  "id": "de-1196",
+  "title": "In den Bergen",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Berge"
+  },
+  "groups": [
+    {
+      "id": "wandern",
+      "label": "Beim Wandern",
+      "items": [
+        "Wanderstock",
+        "Rucksack",
+        "Wanderschuhe",
+        "Wanderkarte"
+      ]
+    },
+    {
+      "id": "alm",
+      "label": "Auf der Alm",
+      "items": [
+        "Kuh",
+        "Ziege",
+        "Sennerin",
+        "Alphorn"
+      ]
+    },
+    {
+      "id": "bergsee",
+      "label": "Am Bergsee",
+      "items": [
+        "Forelle",
+        "Ruderboot",
+        "Steg",
+        "Schilf"
+      ]
+    },
+    {
+      "id": "gipfel",
+      "label": "Auf dem Gipfel",
+      "items": [
+        "Gipfelkreuz",
+        "Gipfelbuch",
+        "Steinmann",
+        "Panorama"
+      ]
+    }
+  ]
+}

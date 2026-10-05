@@ -1,0 +1,50 @@
+{
+  "id": "de-1191",
+  "title": "Auf dem Schulweg",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Schulsachen"
+  },
+  "groups": [
+    {
+      "id": "schulweg",
+      "label": "Auf dem Weg zur Schule",
+      "items": [
+        "Ampel",
+        "Zebrastreifen",
+        "Schulbus",
+        "Fahrrad"
+      ]
+    },
+    {
+      "id": "aula",
+      "label": "In der Aula",
+      "items": [
+        "Bühne",
+        "Stuhlreihen",
+        "Mikrofon",
+        "Vorhang"
+      ]
+    },
+    {
+      "id": "sekretariat",
+      "label": "Im Sekretariat",
+      "items": [
+        "Fotokopierer",
+        "Telefon",
+        "Formular",
+        "Stempel"
+      ]
+    },
+    {
+      "id": "turnhalle",
+      "label": "In der Turnhalle",
+      "items": [
+        "Sprossenwand",
+        "Basketballkorb",
+        "Kletterseil",
+        "Turnringe"
+      ]
+    }
+  ]
+}

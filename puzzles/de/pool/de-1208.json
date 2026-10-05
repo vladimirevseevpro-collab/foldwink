@@ -1,0 +1,50 @@
+{
+  "id": "de-1208",
+  "title": "Erntezeit",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Landmaschinen"
+  },
+  "groups": [
+    {
+      "id": "getreide",
+      "label": "Getreidearten",
+      "items": [
+        "Weizen",
+        "Gerste",
+        "Hafer",
+        "Dinkel"
+      ]
+    },
+    {
+      "id": "hackfruechte",
+      "label": "Hackfrüchte",
+      "items": [
+        "Kartoffel",
+        "Zuckerrübe",
+        "Futterrübe",
+        "Steckrübe"
+      ]
+    },
+    {
+      "id": "geraete",
+      "label": "Erntegeräte",
+      "items": [
+        "Sichel",
+        "Sense",
+        "Rechen",
+        "Heugabel"
+      ]
+    },
+    {
+      "id": "maschinen",
+      "label": "Erntetechnik",
+      "items": [
+        "Mähdrescher",
+        "Kartoffelroder",
+        "Rübenroder",
+        "Feldhäcksler"
+      ]
+    }
+  ]
+}

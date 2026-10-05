@@ -1,0 +1,50 @@
+{
+  "id": "de-1199",
+  "title": "Wüste und Klima",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Wüste"
+  },
+  "groups": [
+    {
+      "id": "sand",
+      "label": "Im Sand",
+      "items": [
+        "Düne",
+        "Sandkorn",
+        "Sandsturm",
+        "Sandwehe"
+      ]
+    },
+    {
+      "id": "klima",
+      "label": "Wüstenklima",
+      "items": [
+        "Hitze",
+        "Trockenheit",
+        "Temperaturschwankung",
+        "Niederschlagsmangel"
+      ]
+    },
+    {
+      "id": "himmel",
+      "label": "Am Wüstenhimmel",
+      "items": [
+        "Sonne",
+        "Sternenhimmel",
+        "Fata Morgana",
+        "Mond"
+      ]
+    },
+    {
+      "id": "wadi",
+      "label": "Im Wadi",
+      "items": [
+        "Flussbett",
+        "Kieselstein",
+        "Wasserloch",
+        "Tamariske"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1236",
+  "title": "Roll and Deal",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "role-playing-dice",
+      "label": "Role-Playing Dice",
+      "items": [
+        "D4",
+        "D6",
+        "D8",
+        "D20"
+      ]
+    },
+    {
+      "id": "board-game-tokens",
+      "label": "Board Game Tokens",
+      "items": [
+        "Meeple",
+        "Pawn",
+        "Chip",
+        "Marker"
+      ]
+    },
+    {
+      "id": "high-cards",
+      "label": "High Cards",
+      "items": [
+        "Ace",
+        "King",
+        "Queen",
+        "Jack"
+      ]
+    },
+    {
+      "id": "tabletop-actions",
+      "label": "Tabletop Actions",
+      "items": [
+        "Draft",
+        "Trade",
+        "Bluff",
+        "Bid"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "chess and board games",
+    "categoryType": "classification"
+  }
+}

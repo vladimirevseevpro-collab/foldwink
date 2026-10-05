@@ -1,0 +1,50 @@
+{
+  "id": "de-1198",
+  "title": "Wintersport",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Berge"
+  },
+  "groups": [
+    {
+      "id": "skipiste",
+      "label": "Auf der Skipiste",
+      "items": [
+        "Piste",
+        "Schlepplift",
+        "Schneekanone",
+        "Fangnetz"
+      ]
+    },
+    {
+      "id": "skiausruestung",
+      "label": "Für die Ski-Ausrüstung",
+      "items": [
+        "Ski",
+        "Skischuhe",
+        "Skistöcke",
+        "Skibrille"
+      ]
+    },
+    {
+      "id": "schneeschuh",
+      "label": "Beim Schneeschuhwandern",
+      "items": [
+        "Schneeschuhe",
+        "Winterjacke",
+        "Gamaschen",
+        "Thermoskanne"
+      ]
+    },
+    {
+      "id": "apres",
+      "label": "Beim Après-Ski",
+      "items": [
+        "Glühwein",
+        "Punsch",
+        "Hüttenmusik",
+        "Tanzfläche"
+      ]
+    }
+  ]
+}

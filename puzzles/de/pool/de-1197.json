@@ -1,0 +1,50 @@
+{
+  "id": "de-1197",
+  "title": "Klettern am Fels",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Berge"
+  },
+  "groups": [
+    {
+      "id": "klettern",
+      "label": "Beim Klettern",
+      "items": [
+        "Seil",
+        "Karabiner",
+        "Klettergurt",
+        "Helm"
+      ]
+    },
+    {
+      "id": "kletterhalle",
+      "label": "In der Kletterhalle",
+      "items": [
+        "Klettergriff",
+        "Boulderwand",
+        "Weichbodenmatte",
+        "Magnesia"
+      ]
+    },
+    {
+      "id": "bergtour",
+      "label": "Für die Bergtour",
+      "items": [
+        "Karte",
+        "Kompass",
+        "Proviant",
+        "Trinkflasche"
+      ]
+    },
+    {
+      "id": "gipfel",
+      "label": "Bekannte Gipfel",
+      "items": [
+        "Matterhorn",
+        "Zugspitze",
+        "Mont Blanc",
+        "Eiger"
+      ]
+    }
+  ]
+}

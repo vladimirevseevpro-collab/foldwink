@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1233",
+  "title": "Farm Machinery",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "harvesting-machines",
+      "label": "Harvesting Machines",
+      "items": [
+        "Combine Harvester",
+        "Baler",
+        "Forage Harvester",
+        "Cotton Picker"
+      ]
+    },
+    {
+      "id": "soil-preparation-tools",
+      "label": "Soil Preparation Tools",
+      "items": [
+        "Plough",
+        "Harrow",
+        "Cultivator",
+        "Roller"
+      ]
+    },
+    {
+      "id": "field-grains",
+      "label": "Field Grains",
+      "items": [
+        "Rye",
+        "Millet",
+        "Sorghum",
+        "Buckwheat"
+      ]
+    },
+    {
+      "id": "farm-birds",
+      "label": "Farm Birds",
+      "items": [
+        "Turkey",
+        "Duck",
+        "Goose",
+        "Quail"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "farm machines",
+    "categoryType": "classification"
+  }
+}

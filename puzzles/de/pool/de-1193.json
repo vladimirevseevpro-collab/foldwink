@@ -1,0 +1,50 @@
+{
+  "id": "de-1193",
+  "title": "Im Schwimmbad",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Schwimmbad"
+  },
+  "groups": [
+    {
+      "id": "beckenrand",
+      "label": "Am Beckenrand",
+      "items": [
+        "Beckenleiter",
+        "Startsockel",
+        "Absperrseil",
+        "Rettungsring"
+      ]
+    },
+    {
+      "id": "schwimmsachen",
+      "label": "Zum Schwimmen dabei",
+      "items": [
+        "Badeanzug",
+        "Badehose",
+        "Schwimmbrille",
+        "Badekappe"
+      ]
+    },
+    {
+      "id": "liegewiese",
+      "label": "Auf der Liegewiese",
+      "items": [
+        "Liegestuhl",
+        "Sonnenschirm",
+        "Badetuch",
+        "Strandmatte"
+      ]
+    },
+    {
+      "id": "kiosk",
+      "label": "Am Schwimmbadkiosk",
+      "items": [
+        "Eis",
+        "Pommes",
+        "Limonade",
+        "Kaugummi"
+      ]
+    }
+  ]
+}

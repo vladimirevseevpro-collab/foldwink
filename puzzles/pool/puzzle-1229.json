@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1229",
+  "title": "Pirate Port",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "harbour-places",
+      "label": "Harbour Places",
+      "items": [
+        "Tavern",
+        "Warehouse",
+        "Lighthouse",
+        "Pier"
+      ]
+    },
+    {
+      "id": "pirate-sayings",
+      "label": "Pirate Sayings",
+      "items": [
+        "Avast",
+        "Ahoy",
+        "Aye",
+        "Arrr"
+      ]
+    },
+    {
+      "id": "pirate-rations",
+      "label": "Pirate Rations",
+      "items": [
+        "Hardtack",
+        "Salted Beef",
+        "Dried Fish",
+        "Rum"
+      ]
+    },
+    {
+      "id": "cargo-goods",
+      "label": "Cargo Goods",
+      "items": [
+        "Spices",
+        "Timber",
+        "Sugar",
+        "Gunpowder"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "pirates",
+    "categoryType": "classification"
+  }
+}

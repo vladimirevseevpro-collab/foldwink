@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1238",
+  "title": "Precious Stones",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "ornamental-stones",
+      "label": "Ornamental Stones",
+      "items": [
+        "Amethyst",
+        "Topaz",
+        "Opal",
+        "Turquoise"
+      ]
+    },
+    {
+      "id": "jewellery-items",
+      "label": "Jewellery Items",
+      "items": [
+        "Brooch",
+        "Pendant",
+        "Anklet",
+        "Tiara"
+      ]
+    },
+    {
+      "id": "jewellery-metals",
+      "label": "Jewellery Metals",
+      "items": [
+        "Gold",
+        "Silver",
+        "Platinum",
+        "Titanium"
+      ]
+    },
+    {
+      "id": "ring-parts",
+      "label": "Ring Parts",
+      "items": [
+        "Band",
+        "Setting",
+        "Prong",
+        "Bezel"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "jewellery",
+    "categoryType": "classification"
+  }
+}

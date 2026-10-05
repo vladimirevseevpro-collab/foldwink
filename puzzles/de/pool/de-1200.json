@@ -1,0 +1,50 @@
+{
+  "id": "de-1200",
+  "title": "Wüstenreise",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Wüste"
+  },
+  "groups": [
+    {
+      "id": "wuestenreise",
+      "label": "Für die Wüstenreise",
+      "items": [
+        "Kopftuch",
+        "Wasserflasche",
+        "Sonnenbrille",
+        "Kompass"
+      ]
+    },
+    {
+      "id": "kamelreiten",
+      "label": "Beim Kamelreiten",
+      "items": [
+        "Sattel",
+        "Zügel",
+        "Höcker",
+        "Kameltreiber"
+      ]
+    },
+    {
+      "id": "sonnenuntergang",
+      "label": "Beim Sonnenuntergang",
+      "items": [
+        "Dämmerung",
+        "Abendrot",
+        "Kühle",
+        "Lagerfeuer"
+      ]
+    },
+    {
+      "id": "forschung",
+      "label": "In der Wüstenforschung",
+      "items": [
+        "Forscher",
+        "Messstation",
+        "Gesteinsprobe",
+        "Bohrkern"
+      ]
+    }
+  ]
+}

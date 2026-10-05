@@ -1,0 +1,50 @@
+{
+  "id": "de-1195",
+  "title": "Sicher im Bad",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Schwimmbad"
+  },
+  "groups": [
+    {
+      "id": "sicherheit",
+      "label": "Für die Sicherheit im Bad",
+      "items": [
+        "Rettungsboje",
+        "Bademeister",
+        "Trillerpfeife",
+        "Rettungsschwimmer"
+      ]
+    },
+    {
+      "id": "regeln",
+      "label": "Regeln am Becken",
+      "items": [
+        "Nicht rennen",
+        "Nicht springen",
+        "Vorher duschen",
+        "Badekappe tragen"
+      ]
+    },
+    {
+      "id": "wassersport",
+      "label": "Sport im Wasser",
+      "items": [
+        "Schwimmen",
+        "Tauchen",
+        "Wasserball",
+        "Synchronschwimmen"
+      ]
+    },
+    {
+      "id": "techniken",
+      "label": "Techniken im Wasser",
+      "items": [
+        "Brustschwimmen",
+        "Kraulschwimmen",
+        "Rückenschwimmen",
+        "Delfinschwimmen"
+      ]
+    }
+  ]
+}

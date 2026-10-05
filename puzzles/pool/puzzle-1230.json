@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1230",
+  "title": "Pirate Legends",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "sea-legends",
+      "label": "Sea Legends",
+      "items": [
+        "Kraken",
+        "Mermaid",
+        "Sea Serpent",
+        "Ghost Ship"
+      ]
+    },
+    {
+      "id": "pirate-marks",
+      "label": "Pirate Marks",
+      "items": [
+        "Hook Hand",
+        "Wooden Leg",
+        "Gold Tooth",
+        "Tattoo"
+      ]
+    },
+    {
+      "id": "deck-tools",
+      "label": "Deck Tools",
+      "items": [
+        "Mop",
+        "Bucket",
+        "Rope",
+        "Whistle"
+      ]
+    },
+    {
+      "id": "shipbuilding-materials",
+      "label": "Shipbuilding Materials",
+      "items": [
+        "Oak",
+        "Pine",
+        "Iron",
+        "Tar"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "pirates",
+    "categoryType": "classification"
+  }
+}

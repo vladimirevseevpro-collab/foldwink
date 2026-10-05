@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1240",
+  "title": "Timepieces",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "timepiece-components",
+      "label": "Timepiece Components",
+      "items": [
+        "Case",
+        "Crown",
+        "Dial",
+        "Strap"
+      ]
+    },
+    {
+      "id": "pendant-shapes",
+      "label": "Pendant Shapes",
+      "items": [
+        "Heart",
+        "Star",
+        "Moon",
+        "Cross"
+      ]
+    },
+    {
+      "id": "bracelet-types",
+      "label": "Bracelet Types",
+      "items": [
+        "Chain",
+        "Bangle",
+        "Cuff",
+        "Charm"
+      ]
+    },
+    {
+      "id": "jewellery-materials",
+      "label": "Jewellery Materials",
+      "items": [
+        "Leather",
+        "Silk Cord",
+        "Velvet",
+        "Glass Bead"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "jewellery",
+    "categoryType": "classification"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "de-1203",
+  "title": "Die Piratencrew",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Piraten"
+  },
+  "groups": [
+    {
+      "id": "kleidung",
+      "label": "Kleidung der Piraten",
+      "items": [
+        "Dreispitz",
+        "Augenklappe",
+        "Kopftuch",
+        "Stiefel"
+      ]
+    },
+    {
+      "id": "raenge",
+      "label": "Ränge an Bord",
+      "items": [
+        "Kapitän",
+        "Steuermann",
+        "Bootsmann",
+        "Maat"
+      ]
+    },
+    {
+      "id": "waffen",
+      "label": "Waffen an Bord",
+      "items": [
+        "Säbel",
+        "Dolch",
+        "Pistole",
+        "Kanone"
+      ]
+    },
+    {
+      "id": "tiere",
+      "label": "Tiere der Piraten",
+      "items": [
+        "Papagei",
+        "Affe",
+        "Ratte",
+        "Möwe"
+      ]
+    }
+  ]
+}

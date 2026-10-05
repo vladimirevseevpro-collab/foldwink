@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1237",
+  "title": "Winning Moves",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "casino-games",
+      "label": "Casino Games",
+      "items": [
+        "Poker",
+        "Blackjack",
+        "Roulette",
+        "Baccarat"
+      ]
+    },
+    {
+      "id": "game-rewards",
+      "label": "Game Rewards",
+      "items": [
+        "Trophy",
+        "Medal",
+        "Crown",
+        "Ribbon"
+      ]
+    },
+    {
+      "id": "pencil-puzzles",
+      "label": "Pencil Puzzles",
+      "items": [
+        "Crossword",
+        "Sudoku",
+        "Maze",
+        "Word Search"
+      ]
+    },
+    {
+      "id": "board-game-terms",
+      "label": "Board Game Terms",
+      "items": [
+        "Turn",
+        "Round",
+        "Move",
+        "Score"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "chess and board games",
+    "categoryType": "classification"
+  }
+}

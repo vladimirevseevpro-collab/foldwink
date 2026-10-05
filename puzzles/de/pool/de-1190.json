@@ -1,0 +1,50 @@
+{
+  "id": "de-1190",
+  "title": "Pause und Spiel",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Schulsachen"
+  },
+  "groups": [
+    {
+      "id": "schulhof",
+      "label": "Auf dem Schulhof",
+      "items": [
+        "Klettergerüst",
+        "Rutsche",
+        "Wippe",
+        "Schaukel"
+      ]
+    },
+    {
+      "id": "sportunterricht",
+      "label": "Für den Sportunterricht",
+      "items": [
+        "Turnhose",
+        "Turnschuhe",
+        "Trikot",
+        "Sporttasche"
+      ]
+    },
+    {
+      "id": "bibliothek",
+      "label": "In der Schulbibliothek",
+      "items": [
+        "Bücherregal",
+        "Lexikon",
+        "Bilderbuch",
+        "Lesezeichen"
+      ]
+    },
+    {
+      "id": "mensa",
+      "label": "In der Schulmensa",
+      "items": [
+        "Tablett",
+        "Gabel",
+        "Löffel",
+        "Serviette"
+      ]
+    }
+  ]
+}

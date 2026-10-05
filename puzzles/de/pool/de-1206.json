@@ -1,0 +1,50 @@
+{
+  "id": "de-1206",
+  "title": "Wappen und Orden",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Burg und Ritter"
+  },
+  "groups": [
+    {
+      "id": "tiere",
+      "label": "Wappentiere",
+      "items": [
+        "Löwe",
+        "Adler",
+        "Bär",
+        "Wolf"
+      ]
+    },
+    {
+      "id": "farben",
+      "label": "Wappenfarben",
+      "items": [
+        "Rot",
+        "Blau",
+        "Gold",
+        "Silber"
+      ]
+    },
+    {
+      "id": "tugenden",
+      "label": "Ritterliche Tugenden",
+      "items": [
+        "Mut",
+        "Treue",
+        "Ehre",
+        "Tapferkeit"
+      ]
+    },
+    {
+      "id": "raenge",
+      "label": "Ränge am Hof",
+      "items": [
+        "König",
+        "Graf",
+        "Ritter",
+        "Knappe"
+      ]
+    }
+  ]
+}

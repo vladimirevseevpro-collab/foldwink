@@ -1,0 +1,50 @@
+{
+  "id": "de-1189",
+  "title": "Ein Schultag",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Schulsachen"
+  },
+  "groups": [
+    {
+      "id": "stundenplan",
+      "label": "Was auf dem Stundenplan steht",
+      "items": [
+        "Mathematik",
+        "Erdkunde",
+        "Musik",
+        "Sport"
+      ]
+    },
+    {
+      "id": "klassenzimmer",
+      "label": "Im Klassenzimmer hängt",
+      "items": [
+        "Tafel",
+        "Landkarte",
+        "Uhr",
+        "Pinnwand"
+      ]
+    },
+    {
+      "id": "lehrerpult",
+      "label": "Auf dem Lehrerpult",
+      "items": [
+        "Kreide",
+        "Klassenbuch",
+        "Schwamm",
+        "Zeigestock"
+      ]
+    },
+    {
+      "id": "pause",
+      "label": "In der Pause dabei",
+      "items": [
+        "Pausenbrot",
+        "Müsliriegel",
+        "Apfel",
+        "Banane"
+      ]
+    }
+  ]
+}

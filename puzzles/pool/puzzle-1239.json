@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1239",
+  "title": "Jeweller's Workshop",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "jewellers-tools",
+      "label": "Jeweller's Tools",
+      "items": [
+        "Pliers",
+        "File",
+        "Torch",
+        "Polisher"
+      ]
+    },
+    {
+      "id": "bead-types",
+      "label": "Bead Types",
+      "items": [
+        "Glass",
+        "Seed",
+        "Pearl",
+        "Wooden"
+      ]
+    },
+    {
+      "id": "necklace-lengths",
+      "label": "Necklace Lengths",
+      "items": [
+        "Choker",
+        "Princess",
+        "Matinee",
+        "Opera"
+      ]
+    },
+    {
+      "id": "jewellery-finishes",
+      "label": "Jewellery Finishes",
+      "items": [
+        "Polished",
+        "Matte",
+        "Hammered",
+        "Antique"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "jewellery",
+    "categoryType": "classification"
+  }
+}

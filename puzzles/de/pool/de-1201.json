@@ -1,0 +1,50 @@
+{
+  "id": "de-1201",
+  "title": "An Bord der Piraten",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Piraten"
+  },
+  "groups": [
+    {
+      "id": "mast",
+      "label": "Am Mast",
+      "items": [
+        "Segel",
+        "Rahe",
+        "Wimpel",
+        "Tauwerk"
+      ]
+    },
+    {
+      "id": "deck",
+      "label": "Unter Deck",
+      "items": [
+        "Kajüte",
+        "Kombüse",
+        "Frachtraum",
+        "Pulvermagazin"
+      ]
+    },
+    {
+      "id": "nav",
+      "label": "Für die Navigation",
+      "items": [
+        "Kompass",
+        "Seekarte",
+        "Fernrohr",
+        "Steuerrad"
+      ]
+    },
+    {
+      "id": "entern",
+      "label": "Zum Entern",
+      "items": [
+        "Enterhaken",
+        "Planke",
+        "Säbel",
+        "Pistole"
+      ]
+    }
+  ]
+}

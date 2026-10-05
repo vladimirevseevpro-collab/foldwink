@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1235",
+  "title": "Chess Basics",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "chess-tactics",
+      "label": "Chess Tactics",
+      "items": [
+        "Fork",
+        "Pin",
+        "Skewer",
+        "Discovered Attack"
+      ]
+    },
+    {
+      "id": "chess-equipment",
+      "label": "Chess Equipment",
+      "items": [
+        "Chessboard",
+        "Chess Clock",
+        "Scoresheet",
+        "Chess Bag"
+      ]
+    },
+    {
+      "id": "chess-outcomes",
+      "label": "Chess Outcomes",
+      "items": [
+        "Checkmate",
+        "Stalemate",
+        "Draw",
+        "Resignation"
+      ]
+    },
+    {
+      "id": "chess-board-terms",
+      "label": "Chess Board Terms",
+      "items": [
+        "File",
+        "Rank",
+        "Square",
+        "Diagonal"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "chess and board games",
+    "categoryType": "classification"
+  }
+}

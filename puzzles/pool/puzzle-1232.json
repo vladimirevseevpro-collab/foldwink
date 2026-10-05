@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1232",
+  "title": "Tournament Day",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "knights-gear",
+      "label": "Knight's Gear",
+      "items": [
+        "Lance",
+        "Shield",
+        "Saddle",
+        "Spur"
+      ]
+    },
+    {
+      "id": "castle-defences",
+      "label": "Castle Defences",
+      "items": [
+        "Portcullis",
+        "Rampart",
+        "Arrow Slit",
+        "Moat"
+      ]
+    },
+    {
+      "id": "banquet-fare",
+      "label": "Banquet Fare",
+      "items": [
+        "Roast Boar",
+        "Venison Pie",
+        "Mead",
+        "Honey Cake"
+      ]
+    },
+    {
+      "id": "court-roles",
+      "label": "Court Roles",
+      "items": [
+        "King",
+        "Queen",
+        "Jester",
+        "Herald"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "castle and knights",
+    "categoryType": "classification"
+  }
+}

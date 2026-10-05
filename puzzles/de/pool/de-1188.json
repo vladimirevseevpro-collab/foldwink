@@ -1,0 +1,50 @@
+{
+  "id": "de-1188",
+  "title": "Rund um die Schule",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Schulsachen"
+  },
+  "groups": [
+    {
+      "id": "feddermaeppchen",
+      "label": "Im Federmäppchen",
+      "items": [
+        "Bleistift",
+        "Radiergummi",
+        "Anspitzer",
+        "Füller"
+      ]
+    },
+    {
+      "id": "werken",
+      "label": "Für den Werkunterricht",
+      "items": [
+        "Laubsäge",
+        "Hammer",
+        "Nagel",
+        "Holzbrett"
+      ]
+    },
+    {
+      "id": "hefte",
+      "label": "Hefte für den Unterricht",
+      "items": [
+        "Schreibheft",
+        "Notizblock",
+        "Hausaufgabenheft",
+        "Vokabelheft"
+      ]
+    },
+    {
+      "id": "kunst",
+      "label": "Zum Malen im Kunstunterricht",
+      "items": [
+        "Pinsel",
+        "Wasserfarben",
+        "Wachsmalkreide",
+        "Malkasten"
+      ]
+    }
+  ]
+}

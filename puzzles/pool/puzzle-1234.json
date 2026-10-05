@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1234",
+  "title": "Farm Machinery Shed",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "farm-machine-parts",
+      "label": "Farm Machine Parts",
+      "items": [
+        "Tyre",
+        "Engine",
+        "Cab",
+        "Hitch"
+      ]
+    },
+    {
+      "id": "poultry-equipment",
+      "label": "Poultry Equipment",
+      "items": [
+        "Hen House",
+        "Incubator",
+        "Feed Trough",
+        "Nesting Box"
+      ]
+    },
+    {
+      "id": "beekeeping-equipment",
+      "label": "Beekeeping Equipment",
+      "items": [
+        "Hive",
+        "Smoker",
+        "Honey Extractor",
+        "Bee Suit"
+      ]
+    },
+    {
+      "id": "sheep-farming-tools",
+      "label": "Sheep Farming Tools",
+      "items": [
+        "Shears",
+        "Crook",
+        "Wool Sack",
+        "Ear Tag"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "farm machines",
+    "categoryType": "classification"
+  }
+}

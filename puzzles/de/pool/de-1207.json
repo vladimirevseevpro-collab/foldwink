@@ -1,0 +1,50 @@
+{
+  "id": "de-1207",
+  "title": "Maschinen auf dem Feld",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Landmaschinen"
+  },
+  "groups": [
+    {
+      "id": "boden",
+      "label": "Bodenbearbeitung",
+      "items": [
+        "Pflug",
+        "Egge",
+        "Grubber",
+        "Walze"
+      ]
+    },
+    {
+      "id": "aussaat",
+      "label": "Aussaat und Pflege",
+      "items": [
+        "Sämaschine",
+        "Düngerstreuer",
+        "Feldspritze",
+        "Hackgerät"
+      ]
+    },
+    {
+      "id": "ernte",
+      "label": "Erntemaschinen",
+      "items": [
+        "Mähdrescher",
+        "Mähwerk",
+        "Ballenpresse",
+        "Kartoffelroder"
+      ]
+    },
+    {
+      "id": "transport",
+      "label": "Zum Abtransport",
+      "items": [
+        "Anhänger",
+        "Kipper",
+        "Ladewagen",
+        "Güllefass"
+      ]
+    }
+  ]
+}

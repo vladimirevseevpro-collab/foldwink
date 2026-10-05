@@ -1,0 +1,50 @@
+{
+  "id": "de-1192",
+  "title": "Büro und Papierkram",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Büro"
+  },
+  "groups": [
+    {
+      "id": "empfang",
+      "label": "Am Empfang",
+      "items": [
+        "Besucherstuhl",
+        "Klingel",
+        "Gästebuch",
+        "Telefon"
+      ]
+    },
+    {
+      "id": "versenden",
+      "label": "Zum Versenden",
+      "items": [
+        "Briefumschlag",
+        "Briefmarke",
+        "Paket",
+        "Adressaufkleber"
+      ]
+    },
+    {
+      "id": "buchhaltung",
+      "label": "Für die Buchhaltung",
+      "items": [
+        "Rechnung",
+        "Quittung",
+        "Kontoauszug",
+        "Taschenrechner"
+      ]
+    },
+    {
+      "id": "bewerbung",
+      "label": "Beim Bewerbungsgespräch",
+      "items": [
+        "Lebenslauf",
+        "Zeugnis",
+        "Anschreiben",
+        "Bewerbungsmappe"
+      ]
+    }
+  ]
+}

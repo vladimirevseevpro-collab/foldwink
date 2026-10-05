@@ -1,0 +1,50 @@
+{
+  "id": "de-1204",
+  "title": "Leben auf der Burg",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Burg und Ritter"
+  },
+  "groups": [
+    {
+      "id": "teile",
+      "label": "Teile der Burg",
+      "items": [
+        "Zugbrücke",
+        "Wehrturm",
+        "Ringmauer",
+        "Burggraben"
+      ]
+    },
+    {
+      "id": "raeume",
+      "label": "Räume der Burg",
+      "items": [
+        "Rittersaal",
+        "Waffenkammer",
+        "Kerker",
+        "Kapelle"
+      ]
+    },
+    {
+      "id": "burghof",
+      "label": "Im Burghof",
+      "items": [
+        "Brunnen",
+        "Pferdestall",
+        "Wagen",
+        "Fahne"
+      ]
+    },
+    {
+      "id": "kueche",
+      "label": "In der Burgküche",
+      "items": [
+        "Kessel",
+        "Backofen",
+        "Herd",
+        "Kochlöffel"
+      ]
+    }
+  ]
+}

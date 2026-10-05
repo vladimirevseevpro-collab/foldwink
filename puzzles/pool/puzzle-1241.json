@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1241",
+  "title": "Diamond Cuts",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "diamond-shapes",
+      "label": "Diamond Shapes",
+      "items": [
+        "Round",
+        "Oval",
+        "Marquise",
+        "Pear"
+      ]
+    },
+    {
+      "id": "jewellery-fastenings",
+      "label": "Jewellery Fastenings",
+      "items": [
+        "Clasp",
+        "Hook",
+        "Latch",
+        "Magnet"
+      ]
+    },
+    {
+      "id": "ring-styles",
+      "label": "Ring Styles",
+      "items": [
+        "Engagement",
+        "Wedding",
+        "Signet",
+        "Cocktail"
+      ]
+    },
+    {
+      "id": "jewellery-services",
+      "label": "Jewellery Services",
+      "items": [
+        "Engraving",
+        "Resizing",
+        "Cleaning",
+        "Valuation"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "jewellery",
+    "categoryType": "classification"
+  }
+}

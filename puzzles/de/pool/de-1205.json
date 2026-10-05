@@ -1,0 +1,50 @@
+{
+  "id": "de-1205",
+  "title": "Ritter und Turnier",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Burg und Ritter"
+  },
+  "groups": [
+    {
+      "id": "ausruestung",
+      "label": "Ausrüstung des Ritters",
+      "items": [
+        "Helm",
+        "Kettenhemd",
+        "Schild",
+        "Handschuh"
+      ]
+    },
+    {
+      "id": "waffen",
+      "label": "Waffen des Ritters",
+      "items": [
+        "Schwert",
+        "Lanze",
+        "Streitaxt",
+        "Dolch"
+      ]
+    },
+    {
+      "id": "turnier",
+      "label": "Beim Turnier",
+      "items": [
+        "Stechen",
+        "Schranke",
+        "Tribüne",
+        "Ritterzelt"
+      ]
+    },
+    {
+      "id": "pferd",
+      "label": "Pferdeausrüstung",
+      "items": [
+        "Sattel",
+        "Zaumzeug",
+        "Steigbügel",
+        "Hufeisen"
+      ]
+    }
+  ]
+}

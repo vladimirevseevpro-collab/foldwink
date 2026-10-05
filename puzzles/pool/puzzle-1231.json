@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1231",
+  "title": "Castle Life",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "castle-parts",
+      "label": "Castle Features",
+      "items": [
+        "Battlements",
+        "Turret",
+        "Drawbridge",
+        "Moat"
+      ]
+    },
+    {
+      "id": "knights-armour",
+      "label": "Knight's Armour",
+      "items": [
+        "Helmet",
+        "Gauntlet",
+        "Breastplate",
+        "Shield"
+      ]
+    },
+    {
+      "id": "castle-rooms",
+      "label": "Castle Rooms",
+      "items": [
+        "Great Hall",
+        "Dungeon",
+        "Chapel",
+        "Armoury"
+      ]
+    },
+    {
+      "id": "medieval-weapons",
+      "label": "Medieval Weapons",
+      "items": [
+        "Sword",
+        "Lance",
+        "Mace",
+        "Crossbow"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "castle and knights",
+    "categoryType": "classification"
+  }
+}

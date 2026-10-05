@@ -1,0 +1,50 @@
+{
+  "id": "de-1194",
+  "title": "Wasser und Sprung",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Schwimmbad"
+  },
+  "groups": [
+    {
+      "id": "sprungturm",
+      "label": "Auf dem Sprungturm",
+      "items": [
+        "Einmeterbrett",
+        "Dreimeterbrett",
+        "Geländer",
+        "Leiter"
+      ]
+    },
+    {
+      "id": "kopfsprung",
+      "label": "Beim Kopfsprung",
+      "items": [
+        "Anlauf",
+        "Absprung",
+        "Flug",
+        "Eintauchen"
+      ]
+    },
+    {
+      "id": "kleine",
+      "label": "Für kleine Badegäste",
+      "items": [
+        "Schwimmflügel",
+        "Badeente",
+        "Wasserspielzeug",
+        "Planschbecken"
+      ]
+    },
+    {
+      "id": "rutsche",
+      "label": "An der Wasserrutsche",
+      "items": [
+        "Röhre",
+        "Auslauf",
+        "Treppe",
+        "Matte"
+      ]
+    }
+  ]
+}

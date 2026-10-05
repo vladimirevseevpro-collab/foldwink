@@ -1,0 +1,50 @@
+{
+  "id": "de-1202",
+  "title": "Der Piratenschatz",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Piraten"
+  },
+  "groups": [
+    {
+      "id": "kiste",
+      "label": "In der Schatzkiste",
+      "items": [
+        "Goldmünzen",
+        "Silberkelch",
+        "Perlenkette",
+        "Edelstein"
+      ]
+    },
+    {
+      "id": "karte",
+      "label": "Auf der Schatzkarte",
+      "items": [
+        "Insel",
+        "Palme",
+        "Kreuz",
+        "Höhle"
+      ]
+    },
+    {
+      "id": "graben",
+      "label": "Zum Ausgraben",
+      "items": [
+        "Spaten",
+        "Schaufel",
+        "Hacke",
+        "Sieb"
+      ]
+    },
+    {
+      "id": "strand",
+      "label": "Am Strand",
+      "items": [
+        "Muschel",
+        "Seestern",
+        "Treibholz",
+        "Krabbe"
+      ]
+    }
+  ]
+}
