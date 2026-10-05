@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1137",
+  "title": "Out on the Water",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "boat-directions",
+      "label": "Boat Directions",
+      "items": [
+        "Bow",
+        "Stern",
+        "Port",
+        "Starboard"
+      ]
+    },
+    {
+      "id": "sea-creatures",
+      "label": "Sea Creatures",
+      "items": [
+        "Dolphin",
+        "Jellyfish",
+        "Starfish",
+        "Crab"
+      ]
+    },
+    {
+      "id": "boat-actions",
+      "label": "Boat Actions",
+      "items": [
+        "Row",
+        "Paddle",
+        "Sail",
+        "Steer"
+      ]
+    },
+    {
+      "id": "beachcombing-finds",
+      "label": "Beachcombing Finds",
+      "items": [
+        "Seashell",
+        "Driftwood",
+        "Sea Glass",
+        "Pebble"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "sailing and boats",
+    "categoryType": "attribute"
+  }
+}

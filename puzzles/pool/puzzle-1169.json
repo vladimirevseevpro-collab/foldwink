@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1169",
+  "title": "Stage Door",
+  "difficulty": "medium",
+  "editorialSummary": "Box Office tempts the seating group, but a box office is a ticket counter while the seat called Box is a tiered compartment.",
+  "meta": {
+    "theme": "theatre",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "lobby",
+      "label": "Theatre lobby features",
+      "revealHint": "Lobby",
+      "items": [
+        "Box Office",
+        "Cloakroom",
+        "Bar",
+        "Foyer"
+      ]
+    },
+    {
+      "id": "seating",
+      "label": "Theatre auditorium seating",
+      "revealHint": "Seating",
+      "items": [
+        "Balcony",
+        "Stalls",
+        "Box",
+        "Gallery"
+      ]
+    },
+    {
+      "id": "layouts",
+      "label": "Stage layout types",
+      "revealHint": "Stages",
+      "items": [
+        "Proscenium",
+        "Thrust",
+        "Traverse",
+        "Arena"
+      ]
+    },
+    {
+      "id": "etiquette",
+      "label": "Theatre audience etiquette",
+      "revealHint": "Etiquette",
+      "items": [
+        "No Photography",
+        "Silence Phones",
+        "Arrive Early",
+        "No Eating"
+      ]
+    }
+  ]
+}

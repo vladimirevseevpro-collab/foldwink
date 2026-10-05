@@ -1,0 +1,50 @@
+{
+  "id": "de-1137",
+  "title": "Hinter den Kulissen",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Zirkus"
+  },
+  "groups": [
+    {
+      "id": "zelt",
+      "label": "Bestandteile des Zeltes",
+      "items": [
+        "Zeltplane",
+        "Zeltboden",
+        "Zeltstange",
+        "Hering"
+      ]
+    },
+    {
+      "id": "kostueme",
+      "label": "Kostüme der Artisten",
+      "items": [
+        "Trikot",
+        "Strumpfhose",
+        "Tutu",
+        "Umhang"
+      ]
+    },
+    {
+      "id": "gehege",
+      "label": "Im Tiergehege",
+      "items": [
+        "Stroh",
+        "Zaun",
+        "Tränke",
+        "Futtertrog"
+      ]
+    },
+    {
+      "id": "clown",
+      "label": "Clownszubehör",
+      "items": [
+        "Clownsnase",
+        "Perücke",
+        "Riesenschuhe",
+        "Wasserpistole"
+      ]
+    }
+  ]
+}

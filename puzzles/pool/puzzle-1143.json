@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1143",
+  "title": "Campsite Life",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "campsite-features",
+      "label": "Campsite Features",
+      "items": [
+        "Fire Pit",
+        "Picnic Table",
+        "Tent Pad",
+        "Woodpile"
+      ]
+    },
+    {
+      "id": "campfire-cooking",
+      "label": "Cooking over Fire",
+      "items": [
+        "Skewer",
+        "Foil",
+        "Dutch Oven",
+        "Grate"
+      ]
+    },
+    {
+      "id": "pond-activities",
+      "label": "Pond Activities",
+      "items": [
+        "Fishing",
+        "Swimming",
+        "Canoeing",
+        "Rowing"
+      ]
+    },
+    {
+      "id": "bug-encounters",
+      "label": "Bug Encounters",
+      "items": [
+        "Mosquito",
+        "Ant",
+        "Tick",
+        "Beetle"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "camping",
+    "categoryType": "place"
+  }
+}

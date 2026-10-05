@@ -1,0 +1,50 @@
+{
+  "id": "de-1157",
+  "title": "Handwerkszeug",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Sanitär und Werkzeug"
+  },
+  "groups": [
+    {
+      "id": "saegen",
+      "label": "Werkzeuge zum Sägen",
+      "items": [
+        "Handsäge",
+        "Fuchsschwanz",
+        "Stichsäge",
+        "Bügelsäge"
+      ]
+    },
+    {
+      "id": "schrauben",
+      "label": "Schraubwerkzeuge",
+      "items": [
+        "Schraubendreher",
+        "Inbusschlüssel",
+        "Maulschlüssel",
+        "Ringschlüssel"
+      ]
+    },
+    {
+      "id": "zangen",
+      "label": "Zangen",
+      "items": [
+        "Kombizange",
+        "Wasserpumpenzange",
+        "Kneifzange",
+        "Spitzzange"
+      ]
+    },
+    {
+      "id": "messen",
+      "label": "Werkzeuge zum Messen",
+      "items": [
+        "Maßband",
+        "Wasserwaage",
+        "Winkelmesser",
+        "Messschieber"
+      ]
+    }
+  ]
+}

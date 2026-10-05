@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1146",
+  "title": "Tools and Gear",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "safety-gear",
+      "label": "Protective Gear",
+      "items": [
+        "Hard Hat",
+        "Safety Vest",
+        "Goggles",
+        "Work Gloves"
+      ]
+    },
+    {
+      "id": "power-tools",
+      "label": "Electric Tools",
+      "items": [
+        "Drill",
+        "Circular Saw",
+        "Nail Gun",
+        "Sander"
+      ]
+    },
+    {
+      "id": "fasteners",
+      "label": "Fixing Hardware",
+      "items": [
+        "Nails",
+        "Screws",
+        "Bolts",
+        "Rivets"
+      ]
+    },
+    {
+      "id": "around-the-site",
+      "label": "Around the Site",
+      "items": [
+        "Scaffolding",
+        "Blueprint",
+        "Wheelbarrow",
+        "Ladder"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "construction site",
+    "categoryType": "classification"
+  }
+}

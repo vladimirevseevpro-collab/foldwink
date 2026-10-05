@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1177",
+  "title": "Harvest Table",
+  "difficulty": "medium",
+  "editorialSummary": "Quiche tempts the dairy group because it is full of cheese and milk, but the label asks for egg dishes.",
+  "meta": {
+    "theme": "farm life",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "dairy",
+      "label": "Dairy products",
+      "revealHint": "Dairy",
+      "items": [
+        "Milk",
+        "Cheese",
+        "Butter",
+        "Yogurt"
+      ]
+    },
+    {
+      "id": "preserves",
+      "label": "Fruit preserves",
+      "revealHint": "Preserves",
+      "items": [
+        "Jam",
+        "Jelly",
+        "Marmalade",
+        "Compote"
+      ]
+    },
+    {
+      "id": "eggdishes",
+      "label": "Egg-based dishes",
+      "revealHint": "Egg dishes",
+      "items": [
+        "Omelette",
+        "Frittata",
+        "Quiche",
+        "Boiled Eggs"
+      ]
+    },
+    {
+      "id": "meat",
+      "label": "Meat from farm animals",
+      "revealHint": "Meat",
+      "items": [
+        "Beef",
+        "Pork",
+        "Lamb",
+        "Mutton"
+      ]
+    }
+  ]
+}

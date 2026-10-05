@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1172",
+  "title": "Pharmacy Shelves",
+  "difficulty": "medium",
+  "editorialSummary": "Chest Rub tempts the pain-relief group because rubs soothe sore muscles, but the label reserves it for cold and flu relief.",
+  "meta": {
+    "theme": "pharmacy",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "cold",
+      "label": "Cold and flu remedies",
+      "revealHint": "Cold care",
+      "items": [
+        "Cough Syrup",
+        "Decongestant",
+        "Throat Lozenge",
+        "Chest Rub"
+      ]
+    },
+    {
+      "id": "vitamins",
+      "label": "Vitamins and minerals",
+      "revealHint": "Supplements",
+      "items": [
+        "Vitamin C",
+        "Iron",
+        "Calcium",
+        "Zinc"
+      ]
+    },
+    {
+      "id": "pain",
+      "label": "Pain relief products",
+      "revealHint": "Painkillers",
+      "items": [
+        "Aspirin",
+        "Ibuprofen",
+        "Paracetamol",
+        "Muscle Rub"
+      ]
+    },
+    {
+      "id": "dressings",
+      "label": "Bandages and dressings",
+      "revealHint": "Dressings",
+      "items": [
+        "Plaster",
+        "Gauze",
+        "Bandage",
+        "Tape"
+      ]
+    }
+  ]
+}

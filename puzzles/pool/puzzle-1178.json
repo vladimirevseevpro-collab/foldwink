@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1178",
+  "title": "Cabin Service",
+  "difficulty": "medium",
+  "editorialSummary": "Blanket tempts the cabin-items group because it feels like part of the cabin, but the label lists what crew hand out during the flight.",
+  "meta": {
+    "theme": "airport",
+    "categoryType": "function"
+  },
+  "groups": [
+    {
+      "id": "cockpit",
+      "label": "Aircraft cockpit roles",
+      "revealHint": "Cockpit",
+      "items": [
+        "Captain",
+        "First Officer",
+        "Flight Engineer",
+        "Navigator"
+      ]
+    },
+    {
+      "id": "cabin",
+      "label": "Passenger cabin items",
+      "revealHint": "Cabin",
+      "items": [
+        "Tray Table",
+        "Overhead Bin",
+        "Reading Light",
+        "Armrest"
+      ]
+    },
+    {
+      "id": "service",
+      "label": "In-flight service items",
+      "revealHint": "Service",
+      "items": [
+        "Meal Cart",
+        "Pillow",
+        "Headphones",
+        "Blanket"
+      ]
+    },
+    {
+      "id": "safety",
+      "label": "Safety equipment on a plane",
+      "revealHint": "Safety",
+      "items": [
+        "Life Jacket",
+        "Oxygen Mask",
+        "Seat Belt",
+        "Safety Card"
+      ]
+    }
+  ]
+}

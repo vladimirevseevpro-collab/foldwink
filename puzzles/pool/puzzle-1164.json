@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1164",
+  "title": "Recess Time",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "jungle-gym-parts",
+      "label": "Jungle Gym Parts",
+      "items": [
+        "Monkey Bars",
+        "Climbing Net",
+        "Balance Beam",
+        "Slide Pole"
+      ]
+    },
+    {
+      "id": "wheels-in-the-yard",
+      "label": "Wheels in the Yard",
+      "items": [
+        "Scooter",
+        "Skateboard",
+        "Roller Skates",
+        "Balance Bike"
+      ]
+    },
+    {
+      "id": "recess-actions",
+      "label": "Recess Actions",
+      "items": [
+        "Run",
+        "Skip",
+        "Climb",
+        "Chase"
+      ]
+    },
+    {
+      "id": "playground-finds",
+      "label": "Playground Finds",
+      "items": [
+        "Pebble",
+        "Acorn",
+        "Feather",
+        "Fallen Leaf"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "schoolyard play",
+    "categoryType": "action"
+  }
+}

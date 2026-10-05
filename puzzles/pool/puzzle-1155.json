@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1155",
+  "title": "Ink and Paper",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "paper-supplies",
+      "label": "Paper Supplies",
+      "items": [
+        "Notebook",
+        "Index Card",
+        "Sticky Note",
+        "Envelope"
+      ]
+    },
+    {
+      "id": "writing-implements",
+      "label": "Writing Implements",
+      "items": [
+        "Pencil",
+        "Ballpoint Pen",
+        "Highlighter",
+        "Marker"
+      ]
+    },
+    {
+      "id": "reference-volumes",
+      "label": "Reference Volumes",
+      "items": [
+        "Dictionary",
+        "Encyclopedia",
+        "Almanac",
+        "Thesaurus"
+      ]
+    },
+    {
+      "id": "save-your-place",
+      "label": "Ways to Save Your Place",
+      "items": [
+        "Bookmark",
+        "Paper Clip",
+        "Ribbon",
+        "Dog-Ear"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "print and paper",
+    "categoryType": "material"
+  }
+}

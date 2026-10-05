@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1174",
+  "title": "Barnyard Roundup",
+  "difficulty": "medium",
+  "editorialSummary": "Cluck and Moo tempt the animal groups, but the label lists the sounds while the animal names stand on their own.",
+  "meta": {
+    "theme": "farm life",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "birds",
+      "label": "Birds kept on a farm",
+      "revealHint": "Poultry",
+      "items": [
+        "Hen",
+        "Goose",
+        "Turkey",
+        "Quail"
+      ]
+    },
+    {
+      "id": "wool",
+      "label": "Animals kept for wool",
+      "revealHint": "Wool",
+      "items": [
+        "Sheep",
+        "Alpaca",
+        "Angora Rabbit",
+        "Cashmere Goat"
+      ]
+    },
+    {
+      "id": "burden",
+      "label": "Beasts of burden",
+      "revealHint": "Work animals",
+      "items": [
+        "Horse",
+        "Donkey",
+        "Ox",
+        "Yak"
+      ]
+    },
+    {
+      "id": "sounds",
+      "label": "Animal calls on a farm",
+      "revealHint": "Sounds",
+      "items": [
+        "Cluck",
+        "Quack",
+        "Moo",
+        "Neigh"
+      ]
+    }
+  ]
+}

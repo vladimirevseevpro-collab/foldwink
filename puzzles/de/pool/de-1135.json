@@ -1,0 +1,50 @@
+{
+  "id": "de-1135",
+  "title": "Unter dem Zirkuszelt",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Zirkus"
+  },
+  "groups": [
+    {
+      "id": "artisten",
+      "label": "Zirkusartisten",
+      "items": [
+        "Fakir",
+        "Feuerschlucker",
+        "Messerwerfer",
+        "Zauberkünstler"
+      ]
+    },
+    {
+      "id": "jonglieren",
+      "label": "Jonglierrequisiten",
+      "items": [
+        "Keulen",
+        "Bälle",
+        "Ringe",
+        "Diabolo"
+      ]
+    },
+    {
+      "id": "tiere",
+      "label": "Dressierte Tiere",
+      "items": [
+        "Kamel",
+        "Ziege",
+        "Hund",
+        "Papagei"
+      ]
+    },
+    {
+      "id": "manege",
+      "label": "Rund um die Manege",
+      "items": [
+        "Manege",
+        "Sägemehl",
+        "Scheinwerfer",
+        "Zeltdach"
+      ]
+    }
+  ]
+}

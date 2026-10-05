@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1136",
+  "title": "Aboard and Afloat",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "sailboat-anatomy",
+      "label": "Sailboat Anatomy",
+      "items": [
+        "Mast",
+        "Sail",
+        "Rudder",
+        "Keel"
+      ]
+    },
+    {
+      "id": "boat-types",
+      "label": "Boat Types",
+      "items": [
+        "Ferry",
+        "Canoe",
+        "Kayak",
+        "Raft"
+      ]
+    },
+    {
+      "id": "nautical-equipment",
+      "label": "Nautical Equipment",
+      "items": [
+        "Anchor",
+        "Compass",
+        "Lifebuoy",
+        "Oar"
+      ]
+    },
+    {
+      "id": "harbor-sights",
+      "label": "Harbor Sights",
+      "items": [
+        "Dock",
+        "Pier",
+        "Lighthouse",
+        "Breakwater"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "sailing and boats",
+    "categoryType": "classification"
+  }
+}

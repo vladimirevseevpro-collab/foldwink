@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1179",
+  "title": "Wedding Day",
+  "difficulty": "medium",
+  "editorialSummary": "Recessional tempts the music group, but the label names the ceremony moment while the recessional tune is only its soundtrack.",
+  "meta": {
+    "theme": "wedding",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "ceremony",
+      "label": "Wedding ceremony moments",
+      "revealHint": "Ceremony",
+      "items": [
+        "Vows",
+        "Ring Exchange",
+        "First Kiss",
+        "Recessional"
+      ]
+    },
+    {
+      "id": "party",
+      "label": "People in the wedding party",
+      "revealHint": "Wedding party",
+      "items": [
+        "Best Man",
+        "Maid of Honor",
+        "Usher",
+        "Page Boy"
+      ]
+    },
+    {
+      "id": "flowers",
+      "label": "Floral wedding pieces",
+      "revealHint": "Flowers",
+      "items": [
+        "Bouquet",
+        "Boutonniere",
+        "Corsage",
+        "Centerpiece"
+      ]
+    },
+    {
+      "id": "music",
+      "label": "Wedding music choices",
+      "revealHint": "Music",
+      "items": [
+        "Entrance March",
+        "First Dance Song",
+        "Recessional Tune",
+        "Party Playlist"
+      ]
+    }
+  ]
+}

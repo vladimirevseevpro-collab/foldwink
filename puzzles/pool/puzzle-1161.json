@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1161",
+  "title": "By the Lake",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "lake-shore-wildlife",
+      "label": "Lake Shore Wildlife",
+      "items": [
+        "Frog",
+        "Turtle",
+        "Dragonfly",
+        "Snail"
+      ]
+    },
+    {
+      "id": "boat-accessories",
+      "label": "Boat Accessories",
+      "items": [
+        "Paddle",
+        "Life Jacket",
+        "Anchor",
+        "Mooring Rope"
+      ]
+    },
+    {
+      "id": "bank-side-plants",
+      "label": "Bank Side Plants",
+      "items": [
+        "Reed",
+        "Cattail",
+        "Lily Pad",
+        "Water Weed"
+      ]
+    },
+    {
+      "id": "fishing-weather",
+      "label": "Fishing Weather",
+      "items": [
+        "Overcast",
+        "Breezy",
+        "Drizzly",
+        "Misty"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "fishing lakeside",
+    "categoryType": "place"
+  }
+}

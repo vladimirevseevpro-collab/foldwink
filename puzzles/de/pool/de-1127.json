@@ -1,0 +1,50 @@
+{
+  "id": "de-1127",
+  "title": "Rohbau und Technik",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Baustelle"
+  },
+  "groups": [
+    {
+      "id": "maurer",
+      "label": "Werkzeuge des Maurers",
+      "items": [
+        "Kelle",
+        "Wasserwaage",
+        "Hammer",
+        "Meißel"
+      ]
+    },
+    {
+      "id": "beton",
+      "label": "Zutaten des Betons",
+      "items": [
+        "Zement",
+        "Sand",
+        "Kies",
+        "Wasser"
+      ]
+    },
+    {
+      "id": "dach",
+      "label": "Auf dem Dach",
+      "items": [
+        "Dachziegel",
+        "Dachrinne",
+        "Schornstein",
+        "Solaranlage"
+      ]
+    },
+    {
+      "id": "elektro",
+      "label": "Elektroinstallation",
+      "items": [
+        "Kabel",
+        "Steckdose",
+        "Schalter",
+        "Sicherung"
+      ]
+    }
+  ]
+}

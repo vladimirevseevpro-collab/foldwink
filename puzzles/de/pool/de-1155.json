@@ -1,0 +1,50 @@
+{
+  "id": "de-1155",
+  "title": "Kunst im Museum",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Museum"
+  },
+  "groups": [
+    {
+      "id": "malerei",
+      "label": "Arten der Malerei",
+      "items": [
+        "Aquarell",
+        "Ölmalerei",
+        "Gouache",
+        "Pastell"
+      ]
+    },
+    {
+      "id": "haeuser",
+      "label": "Berühmte Kunstmuseen",
+      "items": [
+        "Louvre",
+        "Prado",
+        "Uffizien",
+        "Eremitage"
+      ]
+    },
+    {
+      "id": "gattungen",
+      "label": "Bildgattungen",
+      "items": [
+        "Porträt",
+        "Landschaft",
+        "Stillleben",
+        "Akt"
+      ]
+    },
+    {
+      "id": "material",
+      "label": "Kunstmaterialien",
+      "items": [
+        "Leinwand",
+        "Pinsel",
+        "Palette",
+        "Farbe"
+      ]
+    }
+  ]
+}

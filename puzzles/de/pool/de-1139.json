@@ -1,0 +1,50 @@
+{
+  "id": "de-1139",
+  "title": "Turnen und Toben",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Spielplatz"
+  },
+  "groups": [
+    {
+      "id": "turngeraete",
+      "label": "Turngeräte",
+      "items": [
+        "Reck",
+        "Barren",
+        "Trampolin",
+        "Sprungbrett"
+      ]
+    },
+    {
+      "id": "turnuebungen",
+      "label": "Turnübungen",
+      "items": [
+        "Purzelbaum",
+        "Handstand",
+        "Rad",
+        "Spagat"
+      ]
+    },
+    {
+      "id": "bolzplatz",
+      "label": "Auf dem Bolzplatz",
+      "items": [
+        "Tor",
+        "Tornetz",
+        "Eckfahne",
+        "Spielfeldlinie"
+      ]
+    },
+    {
+      "id": "sportkleidung",
+      "label": "Sportanziehsachen",
+      "items": [
+        "Turnhose",
+        "Turnschuhe",
+        "Trikot",
+        "Schienbeinschoner"
+      ]
+    }
+  ]
+}

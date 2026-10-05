@@ -1,0 +1,50 @@
+{
+  "id": "de-1119",
+  "title": "Kurs aufs Meer",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Segeln und Boote"
+  },
+  "groups": [
+    {
+      "id": "anbordgesagt",
+      "label": "An Bord gesagt",
+      "items": [
+        "Backbord",
+        "Steuerbord",
+        "Achtern",
+        "Luv"
+      ]
+    },
+    {
+      "id": "ohneMotor",
+      "label": "Boote ohne Motor",
+      "items": [
+        "Ruderboot",
+        "Paddelboot",
+        "Segelboot",
+        "Tretboot"
+      ]
+    },
+    {
+      "id": "voegel",
+      "label": "Vögel am Wasser",
+      "items": [
+        "Möwe",
+        "Ente",
+        "Schwan",
+        "Kormoran"
+      ]
+    },
+    {
+      "id": "strand",
+      "label": "Was am Strand liegt",
+      "items": [
+        "Muschel",
+        "Seestern",
+        "Kieselstein",
+        "Strandgut"
+      ]
+    }
+  ]
+}

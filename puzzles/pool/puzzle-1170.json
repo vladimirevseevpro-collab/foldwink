@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1170",
+  "title": "Over the Counter",
+  "difficulty": "medium",
+  "editorialSummary": "The Antiseptic tempts the medicine-forms group, but that label names physical dosage forms while an antiseptic is a substance class.",
+  "meta": {
+    "theme": "pharmacy",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "forms",
+      "label": "Medicine forms",
+      "revealHint": "Dosage forms",
+      "items": [
+        "Tablet",
+        "Capsule",
+        "Syrup",
+        "Powder"
+      ]
+    },
+    {
+      "id": "instructions",
+      "label": "Dosage instruction phrases",
+      "revealHint": "Instructions",
+      "items": [
+        "Twice Daily",
+        "With Food",
+        "As Needed",
+        "Before Bed"
+      ]
+    },
+    {
+      "id": "jobs",
+      "label": "Pharmacy job titles",
+      "revealHint": "Staff",
+      "items": [
+        "Pharmacist",
+        "Pharmacy Technician",
+        "Counter Assistant",
+        "Store Manager"
+      ]
+    },
+    {
+      "id": "firstaid",
+      "label": "Wound care supplies",
+      "revealHint": "First aid",
+      "items": [
+        "Plaster",
+        "Bandage",
+        "Gauze",
+        "Antiseptic"
+      ]
+    }
+  ]
+}

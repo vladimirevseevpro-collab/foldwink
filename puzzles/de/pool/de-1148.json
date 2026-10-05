@@ -1,0 +1,50 @@
+{
+  "id": "de-1148",
+  "title": "Gleise und Schilder",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Bahnhof"
+  },
+  "groups": [
+    {
+      "id": "gebaeude",
+      "label": "Bahngebäude",
+      "items": [
+        "Stellwerk",
+        "Lokschuppen",
+        "Empfangsgebäude",
+        "Güterschuppen"
+      ]
+    },
+    {
+      "id": "schilder",
+      "label": "Schilder am Bahnsteig",
+      "items": [
+        "Gleisnummer",
+        "Ausgang",
+        "Umstiegshinweis",
+        "Wagenstandsanzeiger"
+      ]
+    },
+    {
+      "id": "papiere",
+      "label": "Papiere für die Reise",
+      "items": [
+        "Fahrkarte",
+        "Platzreservierung",
+        "BahnCard",
+        "Ausweis"
+      ]
+    },
+    {
+      "id": "berufe",
+      "label": "Berufe bei der Bahn",
+      "items": [
+        "Fahrdienstleiter",
+        "Wagenmeister",
+        "Schaffner",
+        "Bahnpolizist"
+      ]
+    }
+  ]
+}

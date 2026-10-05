@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1175",
+  "title": "Field and Orchard",
+  "difficulty": "medium",
+  "editorialSummary": "Plum tempts the berries group by size and shape, but the label confines berries to soft fruits while a plum is a stone fruit from a tree.",
+  "meta": {
+    "theme": "farm life",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "grains",
+      "label": "Cereal grains",
+      "revealHint": "Grains",
+      "items": [
+        "Wheat",
+        "Barley",
+        "Oats",
+        "Maize"
+      ]
+    },
+    {
+      "id": "roots",
+      "label": "Underground vegetables",
+      "revealHint": "Roots",
+      "items": [
+        "Carrot",
+        "Potato",
+        "Onion",
+        "Beet"
+      ]
+    },
+    {
+      "id": "treefruit",
+      "label": "Tree fruits",
+      "revealHint": "Orchard",
+      "items": [
+        "Apple",
+        "Pear",
+        "Plum",
+        "Apricot"
+      ]
+    },
+    {
+      "id": "berries",
+      "label": "Soft fruit berries",
+      "revealHint": "Berries",
+      "items": [
+        "Strawberry",
+        "Raspberry",
+        "Blueberry",
+        "Cranberry"
+      ]
+    }
+  ]
+}

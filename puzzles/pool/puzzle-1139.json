@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1139",
+  "title": "Along the Coast",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "coastal-features",
+      "label": "Seaside Landforms",
+      "items": [
+        "Cape",
+        "Cliff",
+        "Dune",
+        "Reef"
+      ]
+    },
+    {
+      "id": "fishing-trip-items",
+      "label": "Fishing Trip Items",
+      "items": [
+        "Bait",
+        "Tackle Box",
+        "Cooler",
+        "Bucket"
+      ]
+    },
+    {
+      "id": "sea-verbs",
+      "label": "Sea Verbs",
+      "items": [
+        "Swim",
+        "Dive",
+        "Float",
+        "Drift"
+      ]
+    },
+    {
+      "id": "water-bodies",
+      "label": "Natural Waters",
+      "items": [
+        "River",
+        "Lake",
+        "Pond",
+        "Ocean"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "sailing and boats",
+    "categoryType": "place"
+  }
+}

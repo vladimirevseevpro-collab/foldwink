@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1153",
+  "title": "Library Stacks",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "library-furniture",
+      "label": "Library Furniture",
+      "items": [
+        "Bookshelf",
+        "Reading Table",
+        "Study Carrel",
+        "Book Cart"
+      ]
+    },
+    {
+      "id": "shelf-items",
+      "label": "Things on a Library Shelf",
+      "items": [
+        "Hardback Novel",
+        "Paperback",
+        "Reference Book",
+        "Magazine"
+      ]
+    },
+    {
+      "id": "card-terms",
+      "label": "Library Card Terms",
+      "items": [
+        "Due Date",
+        "Renewal",
+        "Hold",
+        "Fine"
+      ]
+    },
+    {
+      "id": "library-jobs",
+      "label": "Jobs in a Library",
+      "items": [
+        "Librarian",
+        "Shelver",
+        "Archivist",
+        "Cataloguer"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "library",
+    "categoryType": "place"
+  }
+}

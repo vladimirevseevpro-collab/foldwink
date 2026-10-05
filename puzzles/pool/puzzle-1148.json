@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1148",
+  "title": "Finishing Up",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "finishing-touches",
+      "label": "Finishing Touches",
+      "items": [
+        "Baseboard",
+        "Wallpaper",
+        "Crown Molding",
+        "Door Handle"
+      ]
+    },
+    {
+      "id": "roofing-materials",
+      "label": "Roofing Materials",
+      "items": [
+        "Shingles",
+        "Tar Paper",
+        "Gutters",
+        "Flashing"
+      ]
+    },
+    {
+      "id": "electrical-work",
+      "label": "Electrical Work",
+      "items": [
+        "Wire",
+        "Outlet",
+        "Light Switch",
+        "Circuit Breaker"
+      ]
+    },
+    {
+      "id": "demolition-tools",
+      "label": "Demolition Tools",
+      "items": [
+        "Sledgehammer",
+        "Crowbar",
+        "Wrecking Ball",
+        "Jackhammer"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "construction site",
+    "categoryType": "material"
+  }
+}

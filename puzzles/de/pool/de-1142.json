@@ -1,0 +1,50 @@
+{
+  "id": "de-1142",
+  "title": "Rund ums Angeln",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Angeln"
+  },
+  "groups": [
+    {
+      "id": "gewaesser",
+      "label": "Angelgewässer",
+      "items": [
+        "Bach",
+        "Fluss",
+        "See",
+        "Teich"
+      ]
+    },
+    {
+      "id": "boote",
+      "label": "Boote zum Angeln",
+      "items": [
+        "Ruderboot",
+        "Schlauchboot",
+        "Kanu",
+        "Tretboot"
+      ]
+    },
+    {
+      "id": "raeucherofen",
+      "label": "Zum Räuchern",
+      "items": [
+        "Räucherofen",
+        "Buchenholz",
+        "Wacholder",
+        "Salz"
+      ]
+    },
+    {
+      "id": "wetter",
+      "label": "Wetter beim Angeln",
+      "items": [
+        "Regen",
+        "Nebel",
+        "Windstille",
+        "Sonnenschein"
+      ]
+    }
+  ]
+}

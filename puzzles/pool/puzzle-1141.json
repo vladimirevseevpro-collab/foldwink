@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1141",
+  "title": "Signs and Scans",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "vital-signs",
+      "label": "Health Measurements",
+      "items": [
+        "Blood Pressure",
+        "Temperature",
+        "Oxygen Level",
+        "Heart Rate"
+      ]
+    },
+    {
+      "id": "common-symptoms",
+      "label": "Common Symptoms",
+      "items": [
+        "Fever",
+        "Cough",
+        "Rash",
+        "Nausea"
+      ]
+    },
+    {
+      "id": "medical-scans",
+      "label": "Medical Scans",
+      "items": [
+        "X-Ray",
+        "MRI",
+        "Ultrasound",
+        "CT Scan"
+      ]
+    },
+    {
+      "id": "pharmacy-products",
+      "label": "Pharmacy Products",
+      "items": [
+        "Pills",
+        "Syrup",
+        "Ointment",
+        "Lozenges"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "hospital",
+    "categoryType": "classification"
+  }
+}

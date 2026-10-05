@@ -1,0 +1,50 @@
+{
+  "id": "de-1146",
+  "title": "Frühmorgens am Bahnhof",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Bahnhof"
+  },
+  "groups": [
+    {
+      "id": "orte",
+      "label": "Orte im Bahnhof",
+      "items": [
+        "Schalterhalle",
+        "Unterführung",
+        "Wartesaal",
+        "Bahnsteig"
+      ]
+    },
+    {
+      "id": "personen",
+      "label": "Personen im Bahnhof",
+      "items": [
+        "Lokführer",
+        "Zugbegleiter",
+        "Gepäckträger",
+        "Reisender"
+      ]
+    },
+    {
+      "id": "tafel",
+      "label": "Auf der Anzeigetafel",
+      "items": [
+        "Abfahrt",
+        "Ankunft",
+        "Umstieg",
+        "Verspätung"
+      ]
+    },
+    {
+      "id": "gepaeck",
+      "label": "Im Reisegepäck",
+      "items": [
+        "Koffer",
+        "Rucksack",
+        "Reisetasche",
+        "Handtasche"
+      ]
+    }
+  ]
+}

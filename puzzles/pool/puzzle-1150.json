@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1150",
+  "title": "Packing and Posting",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "sending-a-package",
+      "label": "Sending a Package",
+      "items": [
+        "Box",
+        "Tape",
+        "Bubble Wrap",
+        "Address Label"
+      ]
+    },
+    {
+      "id": "tracking-a-package",
+      "label": "Tracking a Package",
+      "items": [
+        "Tracking Number",
+        "Barcode",
+        "Scanner",
+        "Receipt"
+      ]
+    },
+    {
+      "id": "mailbox-parts",
+      "label": "Mailbox Parts",
+      "items": [
+        "Flag",
+        "Slot",
+        "Door",
+        "Post"
+      ]
+    },
+    {
+      "id": "stamp-collecting",
+      "label": "Stamp Collecting",
+      "items": [
+        "Album",
+        "Tweezers",
+        "Magnifying Glass",
+        "Catalogue"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "post office",
+    "categoryType": "classification"
+  }
+}

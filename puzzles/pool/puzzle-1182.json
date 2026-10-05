@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1182",
+  "title": "Wedding Prep",
+  "difficulty": "medium",
+  "editorialSummary": "Garter tempts the reception-traditions group through the garter toss, but the label names what the bride wears.",
+  "meta": {
+    "theme": "wedding",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "bridal",
+      "label": "Bridal accessories",
+      "revealHint": "Bridal",
+      "items": [
+        "Veil",
+        "Tiara",
+        "Garter",
+        "Hairpin"
+      ]
+    },
+    {
+      "id": "groom",
+      "label": "Groom's accessories",
+      "revealHint": "Groom",
+      "items": [
+        "Cufflinks",
+        "Bow Tie",
+        "Pocket Square",
+        "Cummerbund"
+      ]
+    },
+    {
+      "id": "transport",
+      "label": "Wedding transport",
+      "revealHint": "Transport",
+      "items": [
+        "Limousine",
+        "Vintage Car",
+        "Horse and Carriage",
+        "Shuttle Bus"
+      ]
+    },
+    {
+      "id": "traditions",
+      "label": "Reception traditions",
+      "revealHint": "Traditions",
+      "items": [
+        "Bouquet Toss",
+        "Garter Toss",
+        "First Dance",
+        "Cake Cutting"
+      ]
+    }
+  ]
+}

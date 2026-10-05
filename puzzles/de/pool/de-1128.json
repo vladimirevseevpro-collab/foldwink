@@ -1,0 +1,50 @@
+{
+  "id": "de-1128",
+  "title": "Innenausbau",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Baustelle"
+  },
+  "groups": [
+    {
+      "id": "trockenbau",
+      "label": "Trockenbau",
+      "items": [
+        "Gipskarton",
+        "Ständerwerk",
+        "Dämmwolle",
+        "Spachtelmasse"
+      ]
+    },
+    {
+      "id": "fliesen",
+      "label": "Beim Fliesenlegen",
+      "items": [
+        "Fliesenkreuz",
+        "Fliesenkleber",
+        "Fugenmörtel",
+        "Fliesenschneider"
+      ]
+    },
+    {
+      "id": "malern",
+      "label": "Beim Malern",
+      "items": [
+        "Farbe",
+        "Pinsel",
+        "Rolle",
+        "Abdeckfolie"
+      ]
+    },
+    {
+      "id": "boden",
+      "label": "Bodenbeläge",
+      "items": [
+        "Parkett",
+        "Laminat",
+        "Teppich",
+        "Vinyl"
+      ]
+    }
+  ]
+}

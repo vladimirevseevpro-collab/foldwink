@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1149",
+  "title": "Mail on the Move",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "things-you-mail",
+      "label": "Items You Post",
+      "items": [
+        "Letter",
+        "Postcard",
+        "Parcel",
+        "Envelope"
+      ]
+    },
+    {
+      "id": "on-an-envelope",
+      "label": "On an Envelope",
+      "items": [
+        "Stamp",
+        "Address",
+        "Return Address",
+        "Postmark"
+      ]
+    },
+    {
+      "id": "postal-workers",
+      "label": "Mail Staff",
+      "items": [
+        "Mail Carrier",
+        "Mail Sorter",
+        "Postal Clerk",
+        "Postmaster"
+      ]
+    },
+    {
+      "id": "mail-vehicles",
+      "label": "Mail Vehicles",
+      "items": [
+        "Mail Truck",
+        "Delivery Van",
+        "Bicycle",
+        "Scooter"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "post office",
+    "categoryType": "classification"
+  }
+}

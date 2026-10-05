@@ -1,0 +1,50 @@
+{
+  "id": "de-1118",
+  "title": "Im Hafen",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Segeln und Boote"
+  },
+  "groups": [
+    {
+      "id": "anleger",
+      "label": "Am Anleger",
+      "items": [
+        "Steg",
+        "Mole",
+        "Poller",
+        "Kaimauer"
+      ]
+    },
+    {
+      "id": "bootstypen",
+      "label": "Bootsarten",
+      "items": [
+        "Jolle",
+        "Yacht",
+        "Katamaran",
+        "Schlauchboot"
+      ]
+    },
+    {
+      "id": "rettung",
+      "label": "Rettung auf See",
+      "items": [
+        "Rettungsring",
+        "Rettungsinsel",
+        "Seenotsignal",
+        "Rettungsweste"
+      ]
+    },
+    {
+      "id": "bruecke",
+      "label": "Auf der Kommandobrücke",
+      "items": [
+        "Kompass",
+        "Steuerrad",
+        "Seekarte",
+        "Funkgerät"
+      ]
+    }
+  ]
+}

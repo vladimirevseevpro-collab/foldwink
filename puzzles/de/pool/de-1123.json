@@ -1,0 +1,50 @@
+{
+  "id": "de-1123",
+  "title": "Beim Camping",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Camping"
+  },
+  "groups": [
+    {
+      "id": "zeltaufbau",
+      "label": "Beim Zeltaufbau",
+      "items": [
+        "Zelt",
+        "Hering",
+        "Zeltstange",
+        "Bodenplane"
+      ]
+    },
+    {
+      "id": "schlafen",
+      "label": "Zum Schlafen im Zelt",
+      "items": [
+        "Schlafsack",
+        "Isomatte",
+        "Kissen",
+        "Pyjama"
+      ]
+    },
+    {
+      "id": "kochen",
+      "label": "Kochen beim Camping",
+      "items": [
+        "Campingkocher",
+        "Gaskartusche",
+        "Topf",
+        "Besteck"
+      ]
+    },
+    {
+      "id": "rucksack",
+      "label": "Im Wanderrucksack",
+      "items": [
+        "Trinkflasche",
+        "Taschenlampe",
+        "Regenjacke",
+        "Erste-Hilfe-Set"
+      ]
+    }
+  ]
+}

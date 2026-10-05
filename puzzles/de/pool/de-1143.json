@@ -1,0 +1,50 @@
+{
+  "id": "de-1143",
+  "title": "Beim Friseur",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Friseur"
+  },
+  "groups": [
+    {
+      "id": "schnitt",
+      "label": "Werkzeuge für den Haarschnitt",
+      "items": [
+        "Friseurschere",
+        "Haarschneidemaschine",
+        "Rasiermesser",
+        "Barttrimmer"
+      ]
+    },
+    {
+      "id": "waschen",
+      "label": "Beim Haarewaschen",
+      "items": [
+        "Waschbecken",
+        "Duschkopf",
+        "Frisierumhang",
+        "Handtuch"
+      ]
+    },
+    {
+      "id": "salon",
+      "label": "Im Friseursalon",
+      "items": [
+        "Frisierstuhl",
+        "Frisierspiegel",
+        "Wartebereich",
+        "Kasse"
+      ]
+    },
+    {
+      "id": "haarschmuck",
+      "label": "Haarschmuck",
+      "items": [
+        "Haargummi",
+        "Haarklammer",
+        "Haarnadel",
+        "Haarreif"
+      ]
+    }
+  ]
+}

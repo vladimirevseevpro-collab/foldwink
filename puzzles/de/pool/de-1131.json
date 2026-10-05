@@ -1,0 +1,50 @@
+{
+  "id": "de-1131",
+  "title": "In der Postfiliale",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Post"
+  },
+  "groups": [
+    {
+      "id": "schalter",
+      "label": "Am Postschalter",
+      "items": [
+        "Frankieren",
+        "Wiegen",
+        "Bezahlen",
+        "Abholen"
+      ]
+    },
+    {
+      "id": "dienstleistungen",
+      "label": "Zusatzleistungen der Post",
+      "items": [
+        "Einschreiben",
+        "Nachnahme",
+        "Express",
+        "Postlagernd"
+      ]
+    },
+    {
+      "id": "gebaeude",
+      "label": "Post-Gebäude",
+      "items": [
+        "Filiale",
+        "Briefzentrum",
+        "Sortierhalle",
+        "Lagerhalle"
+      ]
+    },
+    {
+      "id": "wartebereich",
+      "label": "Im Wartebereich",
+      "items": [
+        "Sitzbank",
+        "Wartemarke",
+        "Zeitschrift",
+        "Infotafel"
+      ]
+    }
+  ]
+}

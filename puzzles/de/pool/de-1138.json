@@ -1,0 +1,50 @@
+{
+  "id": "de-1138",
+  "title": "Spielen und Bewegen",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Spielplatz"
+  },
+  "groups": [
+    {
+      "id": "rollgeraete",
+      "label": "Rollgeräte für Kinder",
+      "items": [
+        "Skateboard",
+        "Waveboard",
+        "Inlineskates",
+        "Kettcar"
+      ]
+    },
+    {
+      "id": "wurfspiele",
+      "label": "Wurf- und Zielspiele",
+      "items": [
+        "Frisbee",
+        "Ringwurf",
+        "Boccia",
+        "Wurfball"
+      ]
+    },
+    {
+      "id": "wettspiele",
+      "label": "Wettspiele im Freien",
+      "items": [
+        "Sackhüpfen",
+        "Tauziehen",
+        "Wettlauf",
+        "Staffellauf"
+      ]
+    },
+    {
+      "id": "pause",
+      "label": "Für die Pause",
+      "items": [
+        "Picknickdecke",
+        "Brotkorb",
+        "Trinkflasche",
+        "Brotdose"
+      ]
+    }
+  ]
+}

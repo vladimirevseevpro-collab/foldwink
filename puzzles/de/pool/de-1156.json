@@ -1,0 +1,50 @@
+{
+  "id": "de-1156",
+  "title": "Eintritt ins Museum",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Museum"
+  },
+  "groups": [
+    {
+      "id": "eintritt",
+      "label": "Eintrittsarten",
+      "items": [
+        "Einzelticket",
+        "Familienticket",
+        "Jahreskarte",
+        "Gruppenticket"
+      ]
+    },
+    {
+      "id": "fuehrungen",
+      "label": "Führungen",
+      "items": [
+        "Themenführung",
+        "Kinderführung",
+        "Abendführung",
+        "Sonderführung"
+      ]
+    },
+    {
+      "id": "schilder",
+      "label": "Museumsschilder",
+      "items": [
+        "Öffnungszeiten",
+        "Eintrittspreise",
+        "Wegbeschreibung",
+        "Hausordnung"
+      ]
+    },
+    {
+      "id": "funde",
+      "label": "Archäologische Funde",
+      "items": [
+        "Münze",
+        "Amphore",
+        "Tonscherbe",
+        "Schmuckstück"
+      ]
+    }
+  ]
+}

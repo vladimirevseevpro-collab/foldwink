@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1166",
+  "title": "Hair Today",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "washing-hair-steps",
+      "label": "Washing Hair Steps",
+      "items": [
+        "Wet",
+        "Lather",
+        "Rinse",
+        "Towel Dry"
+      ]
+    },
+    {
+      "id": "hair-styling-actions",
+      "label": "Hair Styling Actions",
+      "items": [
+        "Brush",
+        "Comb",
+        "Tease",
+        "Pin"
+      ]
+    },
+    {
+      "id": "hair-fasteners",
+      "label": "Hair Fasteners",
+      "items": [
+        "Bobby Pin",
+        "Hair Tie",
+        "Claw Clip",
+        "Barrette"
+      ]
+    },
+    {
+      "id": "bad-hair-day-fixes",
+      "label": "Bad Hair Day Fixes",
+      "items": [
+        "Dry Shampoo",
+        "Detangler",
+        "Leave-in Conditioner",
+        "Heat Protectant"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "hair care",
+    "categoryType": "action"
+  }
+}

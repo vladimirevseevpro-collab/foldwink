@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1165",
+  "title": "Salon Chair",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "salon-furniture",
+      "label": "Salon Furniture",
+      "items": [
+        "Styling Chair",
+        "Mirror",
+        "Wash Basin",
+        "Trolley"
+      ]
+    },
+    {
+      "id": "salon-implements",
+      "label": "Salon Implements",
+      "items": [
+        "Scissors",
+        "Rat-tail Comb",
+        "Blow Dryer",
+        "Flat Iron"
+      ]
+    },
+    {
+      "id": "hair-products",
+      "label": "Hair Products",
+      "items": [
+        "Shampoo",
+        "Conditioner",
+        "Hairspray",
+        "Mousse"
+      ]
+    },
+    {
+      "id": "salon-services",
+      "label": "Salon Services",
+      "items": [
+        "Haircut",
+        "Colour",
+        "Blow Dry",
+        "Perm"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "hair salon",
+    "categoryType": "place"
+  }
+}

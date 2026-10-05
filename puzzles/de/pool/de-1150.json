@@ -1,0 +1,50 @@
+{
+  "id": "de-1150",
+  "title": "Im Nähkorb",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Nähen"
+  },
+  "groups": [
+    {
+      "id": "knoepfe",
+      "label": "Knopfarten",
+      "items": [
+        "Perlmuttknopf",
+        "Hornknopf",
+        "Holzknopf",
+        "Stoffknopf"
+      ]
+    },
+    {
+      "id": "naturfasern",
+      "label": "Naturfasern",
+      "items": [
+        "Baumwolle",
+        "Schafwolle",
+        "Leinen",
+        "Seide"
+      ]
+    },
+    {
+      "id": "nadelarten",
+      "label": "Nadelarten",
+      "items": [
+        "Nähnadel",
+        "Sticknadel",
+        "Stopfnadel",
+        "Maschinennadel"
+      ]
+    },
+    {
+      "id": "naehte",
+      "label": "Nähte am Kleidungsstück",
+      "items": [
+        "Saumnaht",
+        "Seitennaht",
+        "Schulternaht",
+        "Ziernaht"
+      ]
+    }
+  ]
+}

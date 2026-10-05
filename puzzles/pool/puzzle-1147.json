@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1147",
+  "title": "Heavy Groundwork",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "earthmoving-materials",
+      "label": "Earthmoving Materials",
+      "items": [
+        "Dirt",
+        "Gravel",
+        "Sand",
+        "Clay"
+      ]
+    },
+    {
+      "id": "construction-vehicles",
+      "label": "Site Vehicles",
+      "items": [
+        "Dump Truck",
+        "Forklift",
+        "Road Roller",
+        "Cherry Picker"
+      ]
+    },
+    {
+      "id": "plumbing-supplies",
+      "label": "Plumbing Supplies",
+      "items": [
+        "Pipe",
+        "Faucet",
+        "Drain",
+        "Valve"
+      ]
+    },
+    {
+      "id": "painting-supplies",
+      "label": "Painting Kit",
+      "items": [
+        "Paint Roller",
+        "Paint Brush",
+        "Paint Can",
+        "Drop Cloth"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "construction site",
+    "categoryType": "material"
+  }
+}

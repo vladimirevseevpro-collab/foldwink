@@ -1,0 +1,50 @@
+{
+  "id": "de-1117",
+  "title": "Segel setzen",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Segeln und Boote"
+  },
+  "groups": [
+    {
+      "id": "bootsteile",
+      "label": "Teile des Segelboots",
+      "items": [
+        "Mast",
+        "Segel",
+        "Kiel",
+        "Deck"
+      ]
+    },
+    {
+      "id": "kleidung",
+      "label": "Kleidung beim Segeln",
+      "items": [
+        "Regenjacke",
+        "Bootsschuhe",
+        "Segelhandschuhe",
+        "Südwester"
+      ]
+    },
+    {
+      "id": "wetter",
+      "label": "Wind und Wetter auf See",
+      "items": [
+        "Böe",
+        "Flaute",
+        "Sturm",
+        "Nebel"
+      ]
+    },
+    {
+      "id": "knoten",
+      "label": "Seemannsknoten",
+      "items": [
+        "Palstek",
+        "Achtknoten",
+        "Webleinstek",
+        "Schotstek"
+      ]
+    }
+  ]
+}

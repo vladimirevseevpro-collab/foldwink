@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1138",
+  "title": "Signals and Tackle",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "sea-weather",
+      "label": "Sea Weather",
+      "items": [
+        "Wind",
+        "Wave",
+        "Squall",
+        "Fog"
+      ]
+    },
+    {
+      "id": "ship-signals",
+      "label": "Ship Signals",
+      "items": [
+        "Flag",
+        "Bell",
+        "Whistle",
+        "Horn"
+      ]
+    },
+    {
+      "id": "fishing-gear",
+      "label": "Angling Tackle",
+      "items": [
+        "Rod",
+        "Reel",
+        "Hook",
+        "Net"
+      ]
+    },
+    {
+      "id": "ship-crew",
+      "label": "Ship Crew",
+      "items": [
+        "Captain",
+        "Sailor",
+        "Deckhand",
+        "Navigator"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "sailing and boats",
+    "categoryType": "classification"
+  }
+}

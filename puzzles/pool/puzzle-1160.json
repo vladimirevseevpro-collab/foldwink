@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1160",
+  "title": "High Wire Act",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "aerial-acts",
+      "label": "Aerial Acts",
+      "items": [
+        "Trapeze Artist",
+        "Aerial Silks",
+        "Aerial Hoop",
+        "Cloud Swing"
+      ]
+    },
+    {
+      "id": "acrobat-moves",
+      "label": "Acrobat Moves",
+      "items": [
+        "Somersault",
+        "Cartwheel",
+        "Handstand",
+        "Backflip"
+      ]
+    },
+    {
+      "id": "circus-costumes",
+      "label": "Circus Costumes",
+      "items": [
+        "Leotard",
+        "Feather Headdress",
+        "Tights",
+        "Cape"
+      ]
+    },
+    {
+      "id": "circus-lights-music",
+      "label": "Circus Lights and Music",
+      "items": [
+        "Spotlight",
+        "Calliope",
+        "Drum Roll",
+        "Fanfare"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "circus acrobatics",
+    "categoryType": "action"
+  }
+}

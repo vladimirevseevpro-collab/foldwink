@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1173",
+  "title": "Checkup Visit",
+  "difficulty": "medium",
+  "editorialSummary": "Sensitivity tempts the products group because toothpaste is sold for sensitive teeth, but the label asks for reasons to visit.",
+  "meta": {
+    "theme": "dentist",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "staff",
+      "label": "Dental practice staff",
+      "revealHint": "Staff",
+      "items": [
+        "Dentist",
+        "Dental Hygienist",
+        "Dental Nurse",
+        "Receptionist"
+      ]
+    },
+    {
+      "id": "equipment",
+      "label": "Dental surgery equipment",
+      "revealHint": "Equipment",
+      "items": [
+        "Dental Chair",
+        "X-ray Unit",
+        "Autoclave",
+        "Curing Light"
+      ]
+    },
+    {
+      "id": "reasons",
+      "label": "Reasons for a dental appointment",
+      "revealHint": "Complaints",
+      "items": [
+        "Toothache",
+        "Sensitivity",
+        "Bleeding Gums",
+        "Broken Tooth"
+      ]
+    },
+    {
+      "id": "products",
+      "label": "Everyday dental products",
+      "revealHint": "Products",
+      "items": [
+        "Toothpaste",
+        "Mouthwash",
+        "Dental Floss",
+        "Interdental Brush"
+      ]
+    }
+  ]
+}

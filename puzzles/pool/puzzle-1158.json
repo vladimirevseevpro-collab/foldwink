@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1158",
+  "title": "Sideshow Alley",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "sideshow-acts",
+      "label": "Sideshow Acts",
+      "items": [
+        "Sword Swallower",
+        "Fire Eater",
+        "Fortune Teller",
+        "Contortionist"
+      ]
+    },
+    {
+      "id": "clown-costume",
+      "label": "Clown Costume",
+      "items": [
+        "Red Nose",
+        "Bow Tie",
+        "Oversized Shoes",
+        "Rainbow Wig"
+      ]
+    },
+    {
+      "id": "circus-sounds",
+      "label": "Circus Sounds",
+      "items": [
+        "Drum Roll",
+        "Fanfare",
+        "Applause",
+        "Whip Crack"
+      ]
+    },
+    {
+      "id": "circus-seating",
+      "label": "Circus Seating",
+      "items": [
+        "Grandstand",
+        "Bleachers",
+        "Box Seat",
+        "Standing Room"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "circus sideshow",
+    "categoryType": "classification"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "de-1144",
+  "title": "Rasur und Bart",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Friseur"
+  },
+  "groups": [
+    {
+      "id": "rasieren",
+      "label": "Zum Rasieren",
+      "items": [
+        "Rasierpinsel",
+        "Rasierschaum",
+        "Rasierklinge",
+        "Rasierhobel"
+      ]
+    },
+    {
+      "id": "bartformen",
+      "label": "Bartformen",
+      "items": [
+        "Vollbart",
+        "Schnurrbart",
+        "Koteletten",
+        "Dreitagebart"
+      ]
+    },
+    {
+      "id": "nachrasur",
+      "label": "Nach der Rasur",
+      "items": [
+        "Aftershave",
+        "Rasierbalsam",
+        "Gesichtscreme",
+        "Handtuch"
+      ]
+    },
+    {
+      "id": "bartpflege",
+      "label": "Bartpflege",
+      "items": [
+        "Bartkamm",
+        "Bartbürste",
+        "Bartschere",
+        "Bartöl"
+      ]
+    }
+  ]
+}

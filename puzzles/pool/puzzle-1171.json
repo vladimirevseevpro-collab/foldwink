@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1171",
+  "title": "Dental Chair",
+  "difficulty": "medium",
+  "editorialSummary": "The Filling sounds like the cure for a cavity in the conditions group, but a filling is itself a restoration placed in the tooth.",
+  "meta": {
+    "theme": "dentist",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "tools",
+      "label": "Dentist's chairside tools",
+      "revealHint": "Tools",
+      "items": [
+        "Mirror",
+        "Probe",
+        "Scaler",
+        "Suction"
+      ]
+    },
+    {
+      "id": "conditions",
+      "label": "Teeth and gum conditions",
+      "revealHint": "Conditions",
+      "items": [
+        "Cavity",
+        "Plaque",
+        "Gingivitis",
+        "Bad Breath"
+      ]
+    },
+    {
+      "id": "restorations",
+      "label": "Dental restorations",
+      "revealHint": "Restorations",
+      "items": [
+        "Filling",
+        "Crown",
+        "Bridge",
+        "Veneer"
+      ]
+    },
+    {
+      "id": "procedures",
+      "label": "Dental procedures",
+      "revealHint": "Procedures",
+      "items": [
+        "Cleaning",
+        "Extraction",
+        "Whitening",
+        "X-ray"
+      ]
+    }
+  ]
+}

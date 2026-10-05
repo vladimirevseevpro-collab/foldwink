@@ -1,0 +1,50 @@
+{
+  "id": "de-1145",
+  "title": "Farbe und Pflege",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Friseur"
+  },
+  "groups": [
+    {
+      "id": "frisuren",
+      "label": "Frisuren",
+      "items": [
+        "Pferdeschwanz",
+        "Dutt",
+        "Zöpfe",
+        "Locken"
+      ]
+    },
+    {
+      "id": "faerben",
+      "label": "Zum Färben",
+      "items": [
+        "Haarfarbe",
+        "Blondierung",
+        "Färbeschale",
+        "Färbepinsel"
+      ]
+    },
+    {
+      "id": "haarfarben",
+      "label": "Natürliche Haarfarben",
+      "items": [
+        "Blond",
+        "Brünett",
+        "Rot",
+        "Schwarz"
+      ]
+    },
+    {
+      "id": "pflege",
+      "label": "Pflege nach dem Waschen",
+      "items": [
+        "Haarmaske",
+        "Haaröl",
+        "Spülung",
+        "Hitzeschutzspray"
+      ]
+    }
+  ]
+}

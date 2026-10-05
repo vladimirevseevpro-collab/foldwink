@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1181",
+  "title": "Party Games Night",
+  "difficulty": "medium",
+  "editorialSummary": "Musical Chairs tempts the music-styles group through its first word, but the label asks for the games themselves.",
+  "meta": {
+    "theme": "party",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "wordgames",
+      "label": "Word and guessing party games",
+      "revealHint": "Word games",
+      "items": [
+        "Charades",
+        "Taboo",
+        "Pictionary",
+        "Articulate"
+      ]
+    },
+    {
+      "id": "activegames",
+      "label": "Active party games",
+      "revealHint": "Active games",
+      "items": [
+        "Musical Chairs",
+        "Pass the Parcel",
+        "Limbo",
+        "Twister"
+      ]
+    },
+    {
+      "id": "prizes",
+      "label": "Party prizes",
+      "revealHint": "Prizes",
+      "items": [
+        "Medal",
+        "Certificate",
+        "Trophy",
+        "Badge"
+      ]
+    },
+    {
+      "id": "musicstyles",
+      "label": "Party music styles",
+      "revealHint": "Music",
+      "items": [
+        "Disco",
+        "Pop",
+        "Salsa",
+        "House"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "de-1134",
+  "title": "Bücher und Dichter",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Bibliothek"
+  },
+  "groups": [
+    {
+      "id": "buchformen",
+      "label": "Formen des Buches",
+      "items": [
+        "Hardcover",
+        "Taschenbuch",
+        "Hörbuch",
+        "E-Book"
+      ]
+    },
+    {
+      "id": "dichter",
+      "label": "Deutsche Dichter",
+      "items": [
+        "Goethe",
+        "Schiller",
+        "Heine",
+        "Fontane"
+      ]
+    },
+    {
+      "id": "maerchenfiguren",
+      "label": "Märchenfiguren",
+      "items": [
+        "Hexe",
+        "Zwerg",
+        "Riese",
+        "Prinzessin"
+      ]
+    },
+    {
+      "id": "kinderbuecher",
+      "label": "Bekannte Kinderbücher",
+      "items": [
+        "Pippi Langstrumpf",
+        "Peter Pan",
+        "Alice im Wunderland",
+        "Räuber Hotzenplotz"
+      ]
+    }
+  ]
+}

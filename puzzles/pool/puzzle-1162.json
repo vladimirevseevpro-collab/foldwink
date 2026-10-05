@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1162",
+  "title": "Catch of the Day",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "cook-fish",
+      "label": "Ways to Cook Fish",
+      "items": [
+        "Grill",
+        "Fry",
+        "Bake",
+        "Poach"
+      ]
+    },
+    {
+      "id": "bait-shop-items",
+      "label": "Bait Shop Items",
+      "items": [
+        "Bobber",
+        "Sinker",
+        "Swivel",
+        "Leader Line"
+      ]
+    },
+    {
+      "id": "license-terms",
+      "label": "Fishing License Terms",
+      "items": [
+        "Permit",
+        "Season",
+        "Limit",
+        "Size Rule"
+      ]
+    },
+    {
+      "id": "cleaning-steps",
+      "label": "Fish Cleaning Steps",
+      "items": [
+        "Scale",
+        "Gut",
+        "Fillet",
+        "Rinse"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "fishing day",
+    "categoryType": "action"
+  }
+}

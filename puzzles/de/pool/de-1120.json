@@ -1,0 +1,50 @@
+{
+  "id": "de-1120",
+  "title": "Bei der Untersuchung",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Krankenhaus"
+  },
+  "groups": [
+    {
+      "id": "messwerte",
+      "label": "Was gemessen wird",
+      "items": [
+        "Puls",
+        "Blutdruck",
+        "Temperatur",
+        "Sauerstoffsättigung"
+      ]
+    },
+    {
+      "id": "zimmer",
+      "label": "Im Untersuchungszimmer",
+      "items": [
+        "Liege",
+        "Hocker",
+        "Lampe",
+        "Waage"
+      ]
+    },
+    {
+      "id": "papiere",
+      "label": "Papiere vom Arzt",
+      "items": [
+        "Rezept",
+        "Überweisung",
+        "Befund",
+        "Krankschreibung"
+      ]
+    },
+    {
+      "id": "symptome",
+      "label": "Symptome schildern",
+      "items": [
+        "Schmerzen",
+        "Übelkeit",
+        "Husten",
+        "Schwindel"
+      ]
+    }
+  ]
+}

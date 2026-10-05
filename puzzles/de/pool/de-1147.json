@@ -1,0 +1,50 @@
+{
+  "id": "de-1147",
+  "title": "Der Zug fährt ab",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Bahnhof"
+  },
+  "groups": [
+    {
+      "id": "wagen",
+      "label": "Zugwagentypen",
+      "items": [
+        "Speisewagen",
+        "Schlafwagen",
+        "Liegewagen",
+        "Gepäckwagen"
+      ]
+    },
+    {
+      "id": "steig",
+      "label": "Auf dem Bahnsteig",
+      "items": [
+        "Sitzbank",
+        "Bahnhofsuhr",
+        "Fahrkartenautomat",
+        "Zuganzeiger"
+      ]
+    },
+    {
+      "id": "karten",
+      "label": "Fahrkartenarten",
+      "items": [
+        "Einzelfahrschein",
+        "Tageskarte",
+        "Monatskarte",
+        "Gruppenkarte"
+      ]
+    },
+    {
+      "id": "signale",
+      "label": "Signale an der Strecke",
+      "items": [
+        "Hauptsignal",
+        "Vorsignal",
+        "Rangiersignal",
+        "Einfahrsignal"
+      ]
+    }
+  ]
+}

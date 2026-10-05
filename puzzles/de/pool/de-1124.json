@@ -1,0 +1,50 @@
+{
+  "id": "de-1124",
+  "title": "Am Lagerfeuer",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Camping"
+  },
+  "groups": [
+    {
+      "id": "feuermachen",
+      "label": "Zum Feuer machen",
+      "items": [
+        "Holz",
+        "Anzündhütchen",
+        "Streichhölzer",
+        "Feuerzeug"
+      ]
+    },
+    {
+      "id": "grillen",
+      "label": "Am Lagerfeuer gegrillt",
+      "items": [
+        "Würstchen",
+        "Stockbrot",
+        "Maiskolben",
+        "Marshmallows"
+      ]
+    },
+    {
+      "id": "moebel",
+      "label": "Campingmöbel",
+      "items": [
+        "Klappstuhl",
+        "Campingtisch",
+        "Feldbett",
+        "Hängematte"
+      ]
+    },
+    {
+      "id": "musik",
+      "label": "Instrumente am Lagerfeuer",
+      "items": [
+        "Gitarre",
+        "Mundharmonika",
+        "Trommel",
+        "Ukulele"
+      ]
+    }
+  ]
+}

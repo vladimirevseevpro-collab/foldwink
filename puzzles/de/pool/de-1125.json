@@ -1,0 +1,50 @@
+{
+  "id": "de-1125",
+  "title": "Wandern und Natur",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Camping"
+  },
+  "groups": [
+    {
+      "id": "wanderung",
+      "label": "Auf der Wanderung",
+      "items": [
+        "Wanderweg",
+        "Schutzhütte",
+        "Picknickplatz",
+        "Aussichtspunkt"
+      ]
+    },
+    {
+      "id": "waldtiere",
+      "label": "Tiere im Wald",
+      "items": [
+        "Reh",
+        "Fuchs",
+        "Eichhörnchen",
+        "Wildschwein"
+      ]
+    },
+    {
+      "id": "waldboden",
+      "label": "Am Waldboden",
+      "items": [
+        "Farn",
+        "Moos",
+        "Pilz",
+        "Laub"
+      ]
+    },
+    {
+      "id": "orientierung",
+      "label": "Orientierung beim Wandern",
+      "items": [
+        "Karte",
+        "Kompass",
+        "Wegweiser",
+        "GPS-Gerät"
+      ]
+    }
+  ]
+}

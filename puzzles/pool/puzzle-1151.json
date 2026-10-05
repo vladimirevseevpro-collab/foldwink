@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1151",
+  "title": "Through the Mail",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "mail-room-equipment",
+      "label": "Mail Room Equipment",
+      "items": [
+        "Bin",
+        "Tray",
+        "Sack",
+        "Cart"
+      ]
+    },
+    {
+      "id": "post-office-counter",
+      "label": "Post Office Counter",
+      "items": [
+        "Scale",
+        "P.O. Box",
+        "Mail Slot",
+        "Stamp Dispenser"
+      ]
+    },
+    {
+      "id": "types-of-mail",
+      "label": "Types of Mail",
+      "items": [
+        "First Class",
+        "Airmail",
+        "Certified",
+        "Express"
+      ]
+    },
+    {
+      "id": "address-components",
+      "label": "Address Components",
+      "items": [
+        "Street",
+        "City",
+        "State",
+        "Zip Code"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "post office",
+    "categoryType": "classification"
+  }
+}

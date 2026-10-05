@@ -1,0 +1,50 @@
+{
+  "id": "de-1149",
+  "title": "Kleidung ausbessern",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Nähen"
+  },
+  "groups": [
+    {
+      "id": "handarbeit",
+      "label": "Handarbeitstechniken",
+      "items": [
+        "Stricken",
+        "Häkeln",
+        "Sticken",
+        "Stopfen"
+      ]
+    },
+    {
+      "id": "kleidungsteile",
+      "label": "Teile der Kleidung",
+      "items": [
+        "Kragen",
+        "Ärmel",
+        "Saum",
+        "Bündchen"
+      ]
+    },
+    {
+      "id": "muster",
+      "label": "Stoffmuster",
+      "items": [
+        "Karo",
+        "Streifen",
+        "Punkte",
+        "Blumen"
+      ]
+    },
+    {
+      "id": "maschinenteile",
+      "label": "Nähmaschinenteile",
+      "items": [
+        "Spule",
+        "Nähfuß",
+        "Schwungrad",
+        "Nadelstange"
+      ]
+    }
+  ]
+}

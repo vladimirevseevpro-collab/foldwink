@@ -1,0 +1,50 @@
+{
+  "id": "de-1132",
+  "title": "In der Bibliothek",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Bibliothek"
+  },
+  "groups": [
+    {
+      "id": "gattungen",
+      "label": "Buchgattungen",
+      "items": [
+        "Krimi",
+        "Roman",
+        "Sachbuch",
+        "Gedichtband"
+      ]
+    },
+    {
+      "id": "lesesaal",
+      "label": "Im Lesesaal",
+      "items": [
+        "Lesetisch",
+        "Lesesessel",
+        "Zeitungsständer",
+        "Leselampe"
+      ]
+    },
+    {
+      "id": "ausleihe",
+      "label": "Beim Ausleihen",
+      "items": [
+        "Bibliotheksausweis",
+        "Leihschein",
+        "Stempel",
+        "Rückgabekasten"
+      ]
+    },
+    {
+      "id": "buchteile",
+      "label": "Teile des Buches",
+      "items": [
+        "Buchrücken",
+        "Buchdeckel",
+        "Schutzumschlag",
+        "Lesebändchen"
+      ]
+    }
+  ]
+}

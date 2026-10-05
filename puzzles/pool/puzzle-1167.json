@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1167",
+  "title": "Cinema Counter",
+  "difficulty": "medium",
+  "editorialSummary": "The Concession Stand tempts the snack group because that is where the treats are sold, but the label names a space, not food.",
+  "meta": {
+    "theme": "cinema",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "showings",
+      "label": "Types of cinema showing",
+      "revealHint": "Showings",
+      "items": [
+        "Matinee",
+        "Premiere",
+        "Double Feature",
+        "Sneak Preview"
+      ]
+    },
+    {
+      "id": "spaces",
+      "label": "Movie theatre spaces",
+      "revealHint": "Rooms",
+      "items": [
+        "Foyer",
+        "Auditorium",
+        "Projection Booth",
+        "Concession Stand"
+      ]
+    },
+    {
+      "id": "makers",
+      "label": "People who make a film",
+      "revealHint": "Filmmakers",
+      "items": [
+        "Director",
+        "Producer",
+        "Editor",
+        "Screenwriter"
+      ]
+    },
+    {
+      "id": "snacks",
+      "label": "Cinema counter snacks",
+      "revealHint": "Treats",
+      "items": [
+        "Popcorn",
+        "Nachos",
+        "Soft Drink",
+        "Candy"
+      ]
+    }
+  ]
+}

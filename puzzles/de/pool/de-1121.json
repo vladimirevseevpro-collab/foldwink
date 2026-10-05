@@ -1,0 +1,50 @@
+{
+  "id": "de-1121",
+  "title": "Behandlung und Medizin",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Krankenhaus"
+  },
+  "groups": [
+    {
+      "id": "formen",
+      "label": "Medikamentenformen",
+      "items": [
+        "Tabletten",
+        "Kapseln",
+        "Tropfen",
+        "Salbe"
+      ]
+    },
+    {
+      "id": "hausapotheke",
+      "label": "In der Hausapotheke",
+      "items": [
+        "Pflaster",
+        "Verband",
+        "Desinfektionsmittel",
+        "Kühlkompresse"
+      ]
+    },
+    {
+      "id": "behandlungen",
+      "label": "Behandlungen im Krankenhaus",
+      "items": [
+        "Impfung",
+        "Infusion",
+        "Operation",
+        "Bestrahlung"
+      ]
+    },
+    {
+      "id": "abteilungen",
+      "label": "Fachabteilungen",
+      "items": [
+        "Chirurgie",
+        "Innere Medizin",
+        "Kinderheilkunde",
+        "Orthopädie"
+      ]
+    }
+  ]
+}

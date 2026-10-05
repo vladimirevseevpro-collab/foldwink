@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1145",
+  "title": "On the Build",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "construction-machines",
+      "label": "Construction Machines",
+      "items": [
+        "Crane",
+        "Bulldozer",
+        "Backhoe",
+        "Cement Mixer"
+      ]
+    },
+    {
+      "id": "building-trades",
+      "label": "Building Trades",
+      "items": [
+        "Carpenter",
+        "Plumber",
+        "Roofer",
+        "Painter"
+      ]
+    },
+    {
+      "id": "hand-tools",
+      "label": "Manual Tools",
+      "items": [
+        "Hammer",
+        "Pliers",
+        "Wrench",
+        "Tape Measure"
+      ]
+    },
+    {
+      "id": "building-materials",
+      "label": "Site Materials",
+      "items": [
+        "Bricks",
+        "Cement",
+        "Lumber",
+        "Steel Beams"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "construction site",
+    "categoryType": "classification"
+  }
+}

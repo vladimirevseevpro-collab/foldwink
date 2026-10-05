@@ -1,0 +1,50 @@
+{
+  "id": "de-1130",
+  "title": "Rund um die Briefmarke",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Post"
+  },
+  "groups": [
+    {
+      "id": "marke",
+      "label": "Auf der Briefmarke",
+      "items": [
+        "Wert",
+        "Motiv",
+        "Land",
+        "Jahr"
+      ]
+    },
+    {
+      "id": "sammler",
+      "label": "Für Briefmarkensammler",
+      "items": [
+        "Album",
+        "Pinzette",
+        "Lupe",
+        "Katalog"
+      ]
+    },
+    {
+      "id": "versandarten",
+      "label": "Versandarten",
+      "items": [
+        "Standardbrief",
+        "Einschreiben",
+        "Express",
+        "Nachnahme"
+      ]
+    },
+    {
+      "id": "hauseingang",
+      "label": "Am Hauseingang",
+      "items": [
+        "Klingel",
+        "Briefkasten",
+        "Haustür",
+        "Namensschild"
+      ]
+    }
+  ]
+}

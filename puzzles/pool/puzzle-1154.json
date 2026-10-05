@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1154",
+  "title": "Between the Covers",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "book-formats",
+      "label": "Book Formats",
+      "items": [
+        "Hardcover",
+        "Paperback",
+        "E-Book",
+        "Audiobook"
+      ]
+    },
+    {
+      "id": "book-anatomy",
+      "label": "Book Anatomy",
+      "items": [
+        "Dust Jacket",
+        "Spine",
+        "Title Page",
+        "Table of Contents"
+      ]
+    },
+    {
+      "id": "narrative-genres",
+      "label": "Narrative Genres",
+      "items": [
+        "Adventure",
+        "Mystery",
+        "Romance",
+        "Fantasy"
+      ]
+    },
+    {
+      "id": "reading-skills",
+      "label": "Reading Skills",
+      "items": [
+        "Skim",
+        "Scan",
+        "Annotate",
+        "Summarise"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "books and reading",
+    "categoryType": "classification"
+  }
+}

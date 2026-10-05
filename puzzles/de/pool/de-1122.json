@@ -1,0 +1,50 @@
+{
+  "id": "de-1122",
+  "title": "Genesung im Krankenhaus",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Krankenhaus"
+  },
+  "groups": [
+    {
+      "id": "krankenzimmer",
+      "label": "Im Krankenzimmer",
+      "items": [
+        "Bett",
+        "Nachttisch",
+        "Klingel",
+        "Vorhang"
+      ]
+    },
+    {
+      "id": "genesung",
+      "label": "Was bei der Genesung hilft",
+      "items": [
+        "Ruhe",
+        "Schlaf",
+        "Bewegung",
+        "frische Luft"
+      ]
+    },
+    {
+      "id": "geschenke",
+      "label": "Geschenke für den Patienten",
+      "items": [
+        "Blumen",
+        "Obstkorb",
+        "Zeitschrift",
+        "Schokolade"
+      ]
+    },
+    {
+      "id": "kontrollen",
+      "label": "Untersuchungen in der Klinik",
+      "items": [
+        "Blutabnahme",
+        "Ultraschall",
+        "EKG",
+        "Röntgen"
+      ]
+    }
+  ]
+}

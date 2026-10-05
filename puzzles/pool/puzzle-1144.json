@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1144",
+  "title": "Stars and Berries",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "night-sky-watching",
+      "label": "Night Sky Watching",
+      "items": [
+        "Stars",
+        "Moon",
+        "Telescope",
+        "Milky Way"
+      ]
+    },
+    {
+      "id": "tent-interior",
+      "label": "Tent Interior",
+      "items": [
+        "Air Mattress",
+        "Pillow",
+        "Flashlight",
+        "Groundsheet"
+      ]
+    },
+    {
+      "id": "mountain-wildlife",
+      "label": "Mountain Wildlife",
+      "items": [
+        "Bear",
+        "Moose",
+        "Eagle",
+        "Wolf"
+      ]
+    },
+    {
+      "id": "wild-berries",
+      "label": "Wild Berries",
+      "items": [
+        "Blueberry",
+        "Cranberry",
+        "Gooseberry",
+        "Mulberry"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "camping",
+    "categoryType": "action"
+  }
+}

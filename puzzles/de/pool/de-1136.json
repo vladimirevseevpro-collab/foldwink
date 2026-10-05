@@ -1,0 +1,50 @@
+{
+  "id": "de-1136",
+  "title": "Zirkusbesuch",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Zirkus"
+  },
+  "groups": [
+    {
+      "id": "eingang",
+      "label": "Am Eingang",
+      "items": [
+        "Eintrittskarte",
+        "Kassenhäuschen",
+        "Warteschlange",
+        "Platzanweiser"
+      ]
+    },
+    {
+      "id": "imbiss",
+      "label": "Am Imbissstand",
+      "items": [
+        "Popcorn",
+        "Zuckerwatte",
+        "gebrannte Mandeln",
+        "Limonade"
+      ]
+    },
+    {
+      "id": "musik",
+      "label": "Musik im Zirkus",
+      "items": [
+        "Trommel",
+        "Trompete",
+        "Becken",
+        "Fanfare"
+      ]
+    },
+    {
+      "id": "plaetze",
+      "label": "Zuschauerplätze",
+      "items": [
+        "Tribüne",
+        "Rang",
+        "Loge",
+        "Stehplatz"
+      ]
+    }
+  ]
+}

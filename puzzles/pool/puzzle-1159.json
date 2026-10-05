@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1159",
+  "title": "Circus Roustabouts",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "circus-crew",
+      "label": "Circus Crew",
+      "items": [
+        "Ringmaster",
+        "Roustabout",
+        "Ticket Seller",
+        "Animal Trainer"
+      ]
+    },
+    {
+      "id": "trainer-kit",
+      "label": "Animal Trainer's Kit",
+      "items": [
+        "Whip",
+        "Hoop",
+        "Stool",
+        "Treat Pouch"
+      ]
+    },
+    {
+      "id": "circus-transport",
+      "label": "Circus Transport",
+      "items": [
+        "Wagon",
+        "Trailer",
+        "Train Car",
+        "Truck"
+      ]
+    },
+    {
+      "id": "circus-souvenirs",
+      "label": "Circus Souvenirs",
+      "items": [
+        "Programme",
+        "Pennant",
+        "Toy Nose",
+        "Poster"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "circus crew",
+    "categoryType": "function"
+  }
+}

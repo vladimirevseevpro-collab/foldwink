@@ -1,0 +1,50 @@
+{
+  "id": "de-1129",
+  "title": "Bei der Post",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Post"
+  },
+  "groups": [
+    {
+      "id": "sendungen",
+      "label": "Postsendungen",
+      "items": [
+        "Brief",
+        "Paket",
+        "Großbrief",
+        "Postkarte"
+      ]
+    },
+    {
+      "id": "umschlag",
+      "label": "Auf dem Umschlag",
+      "items": [
+        "Briefmarke",
+        "Adresse",
+        "Absender",
+        "Poststempel"
+      ]
+    },
+    {
+      "id": "filiale",
+      "label": "In der Postfiliale",
+      "items": [
+        "Schalter",
+        "Briefkasten",
+        "Wartemarke",
+        "Waage"
+      ]
+    },
+    {
+      "id": "verpacken",
+      "label": "Zum Verpacken",
+      "items": [
+        "Karton",
+        "Klebeband",
+        "Luftpolsterfolie",
+        "Schnur"
+      ]
+    }
+  ]
+}

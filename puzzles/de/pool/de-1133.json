@@ -1,0 +1,50 @@
+{
+  "id": "de-1133",
+  "title": "Nachschlagen und Stöbern",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Bibliothek"
+  },
+  "groups": [
+    {
+      "id": "nachschlagewerke",
+      "label": "Nachschlagewerke",
+      "items": [
+        "Wörterbuch",
+        "Lexikon",
+        "Atlas",
+        "Enzyklopädie"
+      ]
+    },
+    {
+      "id": "kinderbuecher",
+      "label": "Kinderbucharten",
+      "items": [
+        "Bilderbuch",
+        "Vorlesebuch",
+        "Wimmelbuch",
+        "Pappbilderbuch"
+      ]
+    },
+    {
+      "id": "computer",
+      "label": "Am Computerplatz",
+      "items": [
+        "Tastatur",
+        "Mauspad",
+        "Webcam",
+        "Kopfhörer"
+      ]
+    },
+    {
+      "id": "digital",
+      "label": "Digitale Bibliothek",
+      "items": [
+        "E-Book-Reader",
+        "Online-Katalog",
+        "Hörbuch-App",
+        "Datenbank"
+      ]
+    }
+  ]
+}

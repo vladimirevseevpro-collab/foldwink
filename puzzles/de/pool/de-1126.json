@@ -1,0 +1,50 @@
+{
+  "id": "de-1126",
+  "title": "Baustelle in Aktion",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Baustelle"
+  },
+  "groups": [
+    {
+      "id": "maschinen",
+      "label": "Maschinen auf der Baustelle",
+      "items": [
+        "Kran",
+        "Bagger",
+        "Betonmischer",
+        "Walze"
+      ]
+    },
+    {
+      "id": "material",
+      "label": "Material für den Rohbau",
+      "items": [
+        "Ziegel",
+        "Beton",
+        "Holz",
+        "Stahl"
+      ]
+    },
+    {
+      "id": "handwerker",
+      "label": "Handwerker auf der Baustelle",
+      "items": [
+        "Maurer",
+        "Dachdecker",
+        "Zimmerer",
+        "Elektriker"
+      ]
+    },
+    {
+      "id": "schutz",
+      "label": "Schutz auf der Baustelle",
+      "items": [
+        "Helm",
+        "Warnweste",
+        "Sicherheitsschuhe",
+        "Absperrband"
+      ]
+    }
+  ]
+}

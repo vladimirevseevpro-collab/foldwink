@@ -1,0 +1,50 @@
+{
+  "id": "de-1151",
+  "title": "Ab auf die Piste",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Wintersport"
+  },
+  "groups": [
+    {
+      "id": "sportarten",
+      "label": "Wintersportarten",
+      "items": [
+        "Skifahren",
+        "Snowboarden",
+        "Rodeln",
+        "Eislaufen"
+      ]
+    },
+    {
+      "id": "ausruestung",
+      "label": "Ausrüstung für die Piste",
+      "items": [
+        "Skier",
+        "Snowboard",
+        "Skistöcke",
+        "Skibrille"
+      ]
+    },
+    {
+      "id": "kleidung",
+      "label": "Warme Winterkleidung",
+      "items": [
+        "Anorak",
+        "Skihose",
+        "Mütze",
+        "Handschuhe"
+      ]
+    },
+    {
+      "id": "orte",
+      "label": "Winterliche Orte",
+      "items": [
+        "Skipiste",
+        "Eishalle",
+        "Rodelhang",
+        "Loipe"
+      ]
+    }
+  ]
+}

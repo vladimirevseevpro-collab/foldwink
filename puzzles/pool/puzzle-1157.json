@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1157",
+  "title": "Big Top Wonders",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "big-top-acts",
+      "label": "Big Top Acts",
+      "items": [
+        "Acrobat",
+        "Juggler",
+        "Clown",
+        "Ringmaster"
+      ]
+    },
+    {
+      "id": "ring-beasts",
+      "label": "Beasts in the Ring",
+      "items": [
+        "Elephant",
+        "Lion",
+        "Pony",
+        "Camel"
+      ]
+    },
+    {
+      "id": "circus-apparatus",
+      "label": "Circus Apparatus",
+      "items": [
+        "Trapeze",
+        "Tightrope",
+        "Unicycle",
+        "Stilts"
+      ]
+    },
+    {
+      "id": "circus-snacks",
+      "label": "Circus Snacks",
+      "items": [
+        "Popcorn",
+        "Candy Floss",
+        "Toffee Apple",
+        "Peanuts"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "circus",
+    "categoryType": "classification"
+  }
+}

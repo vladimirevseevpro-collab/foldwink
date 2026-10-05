@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1168",
+  "title": "Behind the Curtain",
+  "difficulty": "medium",
+  "editorialSummary": "The Lantern glows and tempts the lighting group, but that label names fixed fixtures while a lantern is a carried prop.",
+  "meta": {
+    "theme": "theatre",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "directions",
+      "label": "Stage direction words",
+      "revealHint": "Directions",
+      "items": [
+        "Upstage",
+        "Downstage",
+        "Stage Left",
+        "Stage Right"
+      ]
+    },
+    {
+      "id": "rooms",
+      "label": "Backstage rooms",
+      "revealHint": "Backstage",
+      "items": [
+        "Green Room",
+        "Dressing Room",
+        "Prop Room",
+        "Rehearsal Room"
+      ]
+    },
+    {
+      "id": "lighting",
+      "label": "Theatre lighting fixtures",
+      "revealHint": "Lighting",
+      "items": [
+        "Spotlight",
+        "Floodlight",
+        "Follow Spot",
+        "Footlights"
+      ]
+    },
+    {
+      "id": "props",
+      "label": "Hand-held stage props",
+      "revealHint": "Props",
+      "items": [
+        "Sword",
+        "Crown",
+        "Fan",
+        "Lantern"
+      ]
+    }
+  ]
+}

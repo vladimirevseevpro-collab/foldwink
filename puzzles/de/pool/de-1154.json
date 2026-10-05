@@ -1,0 +1,50 @@
+{
+  "id": "de-1154",
+  "title": "Im Museum",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Museum"
+  },
+  "groups": [
+    {
+      "id": "arten",
+      "label": "Museumsarten",
+      "items": [
+        "Kunstmuseum",
+        "Technikmuseum",
+        "Naturkundemuseum",
+        "Geschichtsmuseum"
+      ]
+    },
+    {
+      "id": "personal",
+      "label": "Museumspersonal",
+      "items": [
+        "Kurator",
+        "Restaurator",
+        "Aufsicht",
+        "Kassenkraft"
+      ]
+    },
+    {
+      "id": "stuecke",
+      "label": "Ausstellungsstücke",
+      "items": [
+        "Gemälde",
+        "Skulptur",
+        "Fossil",
+        "Rüstung"
+      ]
+    },
+    {
+      "id": "shop",
+      "label": "Im Museumsshop",
+      "items": [
+        "Postkarte",
+        "Ausstellungskatalog",
+        "Miniatur",
+        "Tasse"
+      ]
+    }
+  ]
+}

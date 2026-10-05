@@ -1,0 +1,50 @@
+{
+  "id": "de-1152",
+  "title": "Rund um den Schnee",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Wintersport"
+  },
+  "groups": [
+    {
+      "id": "schneearten",
+      "label": "Schneearten",
+      "items": [
+        "Pulverschnee",
+        "Neuschnee",
+        "Altschnee",
+        "Pappschnee"
+      ]
+    },
+    {
+      "id": "gebautes",
+      "label": "Aus Schnee gebaut",
+      "items": [
+        "Schneemann",
+        "Iglu",
+        "Schneeball",
+        "Schneeengel"
+      ]
+    },
+    {
+      "id": "wetter",
+      "label": "Winterwetter",
+      "items": [
+        "Schneefall",
+        "Frost",
+        "Glätte",
+        "Eisregen"
+      ]
+    },
+    {
+      "id": "geraete",
+      "label": "Geräte für den Winter",
+      "items": [
+        "Schlitten",
+        "Schlittschuhe",
+        "Schneeschuhe",
+        "Skier"
+      ]
+    }
+  ]
+}

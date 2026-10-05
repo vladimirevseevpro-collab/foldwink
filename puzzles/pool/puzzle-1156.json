@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1156",
+  "title": "Once Upon a Shelf",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "fairy-tale-characters",
+      "label": "Fairy Tale Characters",
+      "items": [
+        "Witch",
+        "Giant",
+        "Fairy",
+        "Wizard"
+      ]
+    },
+    {
+      "id": "picture-book-animals",
+      "label": "Picture Book Animals",
+      "items": [
+        "Bear",
+        "Rabbit",
+        "Duck",
+        "Mouse"
+      ]
+    },
+    {
+      "id": "nursery-rhyme-figures",
+      "label": "Nursery Rhyme Figures",
+      "items": [
+        "Humpty Dumpty",
+        "Old King Cole",
+        "Little Bo Peep",
+        "Jack Sprat"
+      ]
+    },
+    {
+      "id": "story-time-actions",
+      "label": "Story Time Actions",
+      "items": [
+        "Listen",
+        "Share",
+        "Retell",
+        "Predict"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "story time",
+    "categoryType": "classification"
+  }
+}

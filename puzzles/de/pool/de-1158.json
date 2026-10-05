@@ -1,0 +1,50 @@
+{
+  "id": "de-1158",
+  "title": "In der Werkstatt",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Sanitär und Werkzeug"
+  },
+  "groups": [
+    {
+      "id": "maschinen",
+      "label": "Maschinen in der Werkstatt",
+      "items": [
+        "Bohrmaschine",
+        "Schleifmaschine",
+        "Kreissäge",
+        "Drehbank"
+      ]
+    },
+    {
+      "id": "haemmern",
+      "label": "Werkzeuge zum Hämmern",
+      "items": [
+        "Hammer",
+        "Gummihammer",
+        "Vorschlaghammer",
+        "Holzhammer"
+      ]
+    },
+    {
+      "id": "verbindungen",
+      "label": "Schrauben und Verbindungen",
+      "items": [
+        "Schraube",
+        "Mutter",
+        "Unterlegscheibe",
+        "Dübel"
+      ]
+    },
+    {
+      "id": "anzeichnen",
+      "label": "Werkzeuge zum Anzeichnen",
+      "items": [
+        "Bleistift",
+        "Zollstock",
+        "Anschlagwinkel",
+        "Reißnadel"
+      ]
+    }
+  ]
+}

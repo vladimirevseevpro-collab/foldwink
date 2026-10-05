@@ -1,0 +1,50 @@
+{
+  "id": "de-1140",
+  "title": "Am Seeufer",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Angeln"
+  },
+  "groups": [
+    {
+      "id": "angelplaetze",
+      "label": "Angelplätze",
+      "items": [
+        "Seeufer",
+        "Bootssteg",
+        "Flussmündung",
+        "Seerosenfeld"
+      ]
+    },
+    {
+      "id": "natuerliche",
+      "label": "Natürliche Köder",
+      "items": [
+        "Wurm",
+        "Made",
+        "Mais",
+        "Teig"
+      ]
+    },
+    {
+      "id": "kuenstliche",
+      "label": "Künstliche Köder",
+      "items": [
+        "Blinker",
+        "Wobbler",
+        "Twister",
+        "Gummifisch"
+      ]
+    },
+    {
+      "id": "fische",
+      "label": "Fangbare Fische",
+      "items": [
+        "Zander",
+        "Schleie",
+        "Wels",
+        "Aal"
+      ]
+    }
+  ]
+}

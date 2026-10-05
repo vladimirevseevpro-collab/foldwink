@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1152",
+  "title": "Last Mile",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "letter-writing",
+      "label": "Letter Writing",
+      "items": [
+        "Pen",
+        "Paper",
+        "Ink",
+        "Seal"
+      ]
+    },
+    {
+      "id": "delivery-route",
+      "label": "Delivery Route",
+      "items": [
+        "Doorstep",
+        "Mailbox",
+        "Gate",
+        "Porch"
+      ]
+    },
+    {
+      "id": "packing-materials",
+      "label": "Packing Materials",
+      "items": [
+        "Cardboard",
+        "Foam",
+        "Packing Peanuts",
+        "Tissue Paper"
+      ]
+    },
+    {
+      "id": "postal-services",
+      "label": "Postal Operations",
+      "items": [
+        "Delivery",
+        "Collection",
+        "Forwarding",
+        "Sorting"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "post office",
+    "categoryType": "classification"
+  }
+}

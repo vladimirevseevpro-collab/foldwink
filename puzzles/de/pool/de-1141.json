@@ -1,0 +1,50 @@
+{
+  "id": "de-1141",
+  "title": "Ausrüstung für Angler",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Angeln"
+  },
+  "groups": [
+    {
+      "id": "ausruestung",
+      "label": "Angelausrüstung",
+      "items": [
+        "Angelrute",
+        "Angelrolle",
+        "Schnurspule",
+        "Kescher"
+      ]
+    },
+    {
+      "id": "vorfach",
+      "label": "Kleinteile am Vorfach",
+      "items": [
+        "Haken",
+        "Blei",
+        "Wirbel",
+        "Pose"
+      ]
+    },
+    {
+      "id": "kleidung",
+      "label": "Angelkleidung",
+      "items": [
+        "Wathose",
+        "Watstiefel",
+        "Anglerweste",
+        "Fischerhut"
+      ]
+    },
+    {
+      "id": "ansitze",
+      "label": "Für lange Ansitze",
+      "items": [
+        "Klappstuhl",
+        "Sonnenschirm",
+        "Thermoskanne",
+        "Sitzkissen"
+      ]
+    }
+  ]
+}

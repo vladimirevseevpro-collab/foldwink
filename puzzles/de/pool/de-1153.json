@@ -1,0 +1,50 @@
+{
+  "id": "de-1153",
+  "title": "Kalt und eisig",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Wintersport"
+  },
+  "groups": [
+    {
+      "id": "eissport",
+      "label": "Eissportarten",
+      "items": [
+        "Eishockey",
+        "Eiskunstlauf",
+        "Eisschnelllauf",
+        "Curling"
+      ]
+    },
+    {
+      "id": "loipe",
+      "label": "Langlauf-Ausrüstung",
+      "items": [
+        "Langlaufski",
+        "Skistöcke",
+        "Wachse",
+        "Felle"
+      ]
+    },
+    {
+      "id": "skihuette",
+      "label": "In der Skihütte",
+      "items": [
+        "Glühwein",
+        "Kakao",
+        "Grog",
+        "Suppe"
+      ]
+    },
+    {
+      "id": "landschaft",
+      "label": "Winterlandschaft",
+      "items": [
+        "Schneeflocke",
+        "Eiszapfen",
+        "Raureif",
+        "Schneewehe"
+      ]
+    }
+  ]
+}

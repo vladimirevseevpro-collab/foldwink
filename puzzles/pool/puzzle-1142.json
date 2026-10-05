@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1142",
+  "title": "Specialists and Supplies",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "medical-specialists",
+      "label": "Kinds of Doctors",
+      "items": [
+        "Pediatrician",
+        "Cardiologist",
+        "Dermatologist",
+        "Radiologist"
+      ]
+    },
+    {
+      "id": "ambulance-supplies",
+      "label": "Ambulance Supplies",
+      "items": [
+        "Defibrillator",
+        "Oxygen Tank",
+        "Stretcher",
+        "Siren"
+      ]
+    },
+    {
+      "id": "hospital-paperwork",
+      "label": "Hospital Paperwork",
+      "items": [
+        "Chart",
+        "Prescription",
+        "Referral",
+        "Insurance Form"
+      ]
+    },
+    {
+      "id": "recovery-aids",
+      "label": "Recovery Aids",
+      "items": [
+        "Ice Pack",
+        "Walking Frame",
+        "Sling",
+        "Neck Brace"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "hospital",
+    "categoryType": "classification"
+  }
+}

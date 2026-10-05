@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1180",
+  "title": "Party Table",
+  "difficulty": "medium",
+  "editorialSummary": "Bubbles tempts the drinks group because bubbly means sparkling, but the label asks for little gifts and a bottle of bubbles is a toy.",
+  "meta": {
+    "theme": "party",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "decor",
+      "label": "Party decorating items",
+      "revealHint": "Decor",
+      "items": [
+        "Balloons",
+        "Streamers",
+        "Bunting",
+        "Confetti"
+      ]
+    },
+    {
+      "id": "fingerfood",
+      "label": "Finger food for a party",
+      "revealHint": "Finger food",
+      "items": [
+        "Sandwiches",
+        "Sausage Rolls",
+        "Crisps",
+        "Dip"
+      ]
+    },
+    {
+      "id": "drinks",
+      "label": "Party refreshments",
+      "revealHint": "Drinks",
+      "items": [
+        "Punch",
+        "Lemonade",
+        "Cola",
+        "Sparkling Water"
+      ]
+    },
+    {
+      "id": "favours",
+      "label": "Little gifts for guests",
+      "revealHint": "Favours",
+      "items": [
+        "Party Bag",
+        "Bubbles",
+        "Stickers",
+        "Whistle"
+      ]
+    }
+  ]
+}

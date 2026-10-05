@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1163",
+  "title": "Outdoor Play",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "sandbox-toys",
+      "label": "Sandbox Toys",
+      "items": [
+        "Bucket",
+        "Spade",
+        "Rake",
+        "Mould"
+      ]
+    },
+    {
+      "id": "playground-surfaces",
+      "label": "Playground Surfaces",
+      "items": [
+        "Grass",
+        "Asphalt",
+        "Rubber Tiles",
+        "Wood Chips"
+      ]
+    },
+    {
+      "id": "safety-gear",
+      "label": "Playground Safety Gear",
+      "items": [
+        "Helmet",
+        "Knee Pads",
+        "Elbow Pads",
+        "Wrist Guards"
+      ]
+    },
+    {
+      "id": "things-to-climb",
+      "label": "Things to Climb",
+      "items": [
+        "Ladder",
+        "Rope",
+        "Rock Wall",
+        "Net"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "playground safety",
+    "categoryType": "material"
+  }
+}

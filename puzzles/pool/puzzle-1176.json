@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1176",
+  "title": "Barn and Silo",
+  "difficulty": "medium",
+  "editorialSummary": "Sprayer tempts the hand-tool group because knapsack sprayers are carried, but the label lists the machines kept on the farm.",
+  "meta": {
+    "theme": "farm life",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "buildings",
+      "label": "Farm buildings",
+      "revealHint": "Buildings",
+      "items": [
+        "Barn",
+        "Silo",
+        "Stable",
+        "Granary"
+      ]
+    },
+    {
+      "id": "machinery",
+      "label": "Farm machinery",
+      "revealHint": "Machines",
+      "items": [
+        "Tractor",
+        "Combine",
+        "Baler",
+        "Sprayer"
+      ]
+    },
+    {
+      "id": "tools",
+      "label": "Field hand tools",
+      "revealHint": "Hand tools",
+      "items": [
+        "Scythe",
+        "Pitchfork",
+        "Rake",
+        "Hoe"
+      ]
+    },
+    {
+      "id": "fencing",
+      "label": "Fencing supplies",
+      "revealHint": "Fencing",
+      "items": [
+        "Post",
+        "Wire",
+        "Rail",
+        "Gate"
+      ]
+    }
+  ]
+}
