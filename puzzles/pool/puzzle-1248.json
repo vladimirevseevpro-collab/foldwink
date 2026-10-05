@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1248",
+  "title": "Bedtime Habits",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "bedtime-routine",
+      "label": "Bedtime Routine",
+      "items": [
+        "Brush Teeth",
+        "Wash Face",
+        "Set Alarm",
+        "Read a Book"
+      ]
+    },
+    {
+      "id": "waking-up",
+      "label": "Waking Up",
+      "items": [
+        "Snooze Alarm",
+        "Make the Bed",
+        "Open Curtains",
+        "Drink Coffee"
+      ]
+    },
+    {
+      "id": "cozy-bedroom-decor",
+      "label": "Cozy Bedroom Decor",
+      "items": [
+        "Throw Blanket",
+        "Area Rug",
+        "Wall Tapestry",
+        "Scented Candle"
+      ]
+    },
+    {
+      "id": "under-bed-storage",
+      "label": "Under-Bed Storage",
+      "items": [
+        "Suitcases",
+        "Shoe Boxes",
+        "Board Games",
+        "Winter Clothes"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "bedroom",
+    "categoryType": "action"
+  }
+}

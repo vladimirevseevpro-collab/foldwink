@@ -1,0 +1,50 @@
+{
+  "id": "de-1228",
+  "title": "Eis selbst machen",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Eisdiele"
+  },
+  "groups": [
+    {
+      "id": "zutaten",
+      "label": "Zutaten für Eis",
+      "items": [
+        "Milch",
+        "Sahne",
+        "Zucker",
+        "Eigelb"
+      ]
+    },
+    {
+      "id": "geraete",
+      "label": "Geräte in der Eisdiele",
+      "items": [
+        "Eismaschine",
+        "Mixer",
+        "Eisportionierer",
+        "Küchenwaage"
+      ]
+    },
+    {
+      "id": "garnieren",
+      "label": "Zum Garnieren",
+      "items": [
+        "Minzblätter",
+        "Schokoraspel",
+        "Obstscheiben",
+        "Waffelröllchen"
+      ]
+    },
+    {
+      "id": "aufbewahren",
+      "label": "Eis aufbewahren",
+      "items": [
+        "Gefrierfach",
+        "Kühltruhe",
+        "Eisdose",
+        "Kühltasche"
+      ]
+    }
+  ]
+}

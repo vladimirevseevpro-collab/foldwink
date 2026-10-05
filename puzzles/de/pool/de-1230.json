@@ -1,0 +1,50 @@
+{
+  "id": "de-1230",
+  "title": "Das Orchester probt",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Orchester"
+  },
+  "groups": [
+    {
+      "id": "streicher",
+      "label": "Streicher im Orchester",
+      "items": [
+        "Violine",
+        "Viola",
+        "Violoncello",
+        "Kontrabass"
+      ]
+    },
+    {
+      "id": "holz",
+      "label": "Holzbläser im Orchester",
+      "items": [
+        "Querflöte",
+        "Oboe",
+        "Klarinette",
+        "Fagott"
+      ]
+    },
+    {
+      "id": "blech",
+      "label": "Blechbläser im Orchester",
+      "items": [
+        "Trompete",
+        "Posaune",
+        "Waldhorn",
+        "Tuba"
+      ]
+    },
+    {
+      "id": "schlag",
+      "label": "Schlagwerk im Orchester",
+      "items": [
+        "Pauke",
+        "Trommel",
+        "Becken",
+        "Triangel"
+      ]
+    }
+  ]
+}

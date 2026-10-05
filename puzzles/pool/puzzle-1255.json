@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1255",
+  "title": "Afternoon Tea",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "tea-service-items",
+      "label": "Tea Service Items",
+      "items": [
+        "Teapot",
+        "Teacup",
+        "Saucer",
+        "Strainer"
+      ]
+    },
+    {
+      "id": "cafe-tea-selection",
+      "label": "Cafe Tea Selection",
+      "items": [
+        "English Breakfast",
+        "Earl Grey",
+        "Green Tea",
+        "Chai"
+      ]
+    },
+    {
+      "id": "cafe-sandwiches",
+      "label": "Cafe Sandwiches",
+      "items": [
+        "Panini",
+        "Bagel",
+        "Wrap",
+        "Focaccia"
+      ]
+    },
+    {
+      "id": "cafe-desserts",
+      "label": "Cafe Desserts",
+      "items": [
+        "Cheesecake",
+        "Tiramisu",
+        "Carrot Cake",
+        "Lemon Tart"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "cafe",
+    "categoryType": "classification"
+  }
+}

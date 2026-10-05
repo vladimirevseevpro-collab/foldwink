@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1252",
+  "title": "Garage and Yard Chores",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "lawn-care-equipment",
+      "label": "Lawn Care Equipment",
+      "items": [
+        "Lawn Mower",
+        "Weed Trimmer",
+        "Leaf Blower",
+        "Hedge Trimmer"
+      ]
+    },
+    {
+      "id": "household-cleaning",
+      "label": "Household Cleaning",
+      "items": [
+        "Broom",
+        "Mop",
+        "Bucket",
+        "Dustpan"
+      ]
+    },
+    {
+      "id": "waste-containers",
+      "label": "Waste Containers",
+      "items": [
+        "Trash Can",
+        "Recycling Bin",
+        "Compost Bin",
+        "Yard Waste Bag"
+      ]
+    },
+    {
+      "id": "garden-handheld-tools",
+      "label": "Garden Handheld Tools",
+      "items": [
+        "Trowel",
+        "Pruner",
+        "Weeder",
+        "Hand Cultivator"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "garage",
+    "categoryType": "function"
+  }
+}

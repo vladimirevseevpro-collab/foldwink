@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1264",
+  "title": "The Palette",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "oil-paint-colors",
+      "label": "Oil Paint Colors",
+      "items": [
+        "Cadmium Red",
+        "Ultramarine",
+        "Yellow Ochre",
+        "Titanium White"
+      ]
+    },
+    {
+      "id": "watercolor-techniques",
+      "label": "Watercolor Techniques",
+      "items": [
+        "Wet-on-Wet",
+        "Dry Brush",
+        "Wash",
+        "Glazing"
+      ]
+    },
+    {
+      "id": "paintbrush-shapes",
+      "label": "Paintbrush Shapes",
+      "items": [
+        "Flat",
+        "Round",
+        "Filbert",
+        "Fan"
+      ]
+    },
+    {
+      "id": "color-mixing-terms",
+      "label": "Color Mixing Terms",
+      "items": [
+        "Primary",
+        "Secondary",
+        "Tertiary",
+        "Complementary"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "painting studio",
+    "categoryType": "classification"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1272",
+  "title": "Jewel box",
+  "difficulty": "medium",
+  "editorialSummary": "Accessory sort where a hair Band tempts the jewelry group because a band is a ring shape, but that group lists solid ornaments worn as decoration while a Band is a plain holder.",
+  "meta": {
+    "theme": "fashion",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "jewelry",
+      "label": "Fine jewelry",
+      "revealHint": "Jewels",
+      "items": [
+        "Ring",
+        "Brooch",
+        "Necklace",
+        "Earring"
+      ]
+    },
+    {
+      "id": "hair",
+      "label": "Hair decorations",
+      "revealHint": "Hair",
+      "items": [
+        "Clip",
+        "Band",
+        "Pin",
+        "Comb"
+      ]
+    },
+    {
+      "id": "foot",
+      "label": "Shoes",
+      "revealHint": "On the feet",
+      "items": [
+        "Slipper",
+        "Loafer",
+        "Sandal",
+        "Boot"
+      ]
+    },
+    {
+      "id": "bags",
+      "label": "Bag types",
+      "revealHint": "Carry",
+      "items": [
+        "Tote",
+        "Clutch",
+        "Backpack",
+        "Satchel"
+      ]
+    }
+  ]
+}

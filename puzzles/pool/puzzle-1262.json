@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1262",
+  "title": "Symphony Night",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "string-playing-techniques",
+      "label": "String Playing Techniques",
+      "items": [
+        "Pizzicato",
+        "Arco",
+        "Vibrato",
+        "Tremolo"
+      ]
+    },
+    {
+      "id": "musical-dynamics",
+      "label": "Musical Dynamics",
+      "items": [
+        "Pianissimo",
+        "Piano",
+        "Forte",
+        "Fortissimo"
+      ]
+    },
+    {
+      "id": "orchestra-rehearsal-actions",
+      "label": "Orchestra Rehearsal Actions",
+      "items": [
+        "Tune",
+        "Rehearse",
+        "Sight-Read",
+        "Warm Up"
+      ]
+    },
+    {
+      "id": "stage-crew-tasks",
+      "label": "Stage Crew Tasks",
+      "items": [
+        "Set Up Chairs",
+        "Place Stands",
+        "Dim Lights",
+        "Raise Curtain"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "orchestra",
+    "categoryType": "classification"
+  }
+}

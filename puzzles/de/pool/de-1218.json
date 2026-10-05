@@ -1,0 +1,50 @@
+{
+  "id": "de-1218",
+  "title": "Rund ums Bett",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Schlafzimmer"
+  },
+  "groups": [
+    {
+      "id": "imbett",
+      "label": "Im Bett",
+      "items": [
+        "Kopfkissen",
+        "Kuscheltier",
+        "Wärmflasche",
+        "Lesekissen"
+      ]
+    },
+    {
+      "id": "zeit",
+      "label": "Zeit im Schlafzimmer",
+      "items": [
+        "Wecker",
+        "Radiowecker",
+        "Wanduhr",
+        "Sanduhr"
+      ]
+    },
+    {
+      "id": "vorschlafen",
+      "label": "Vor dem Schlafen",
+      "items": [
+        "Tagebuch",
+        "Kräutertee",
+        "Hörspiel",
+        "Gute-Nacht-Geschichte"
+      ]
+    },
+    {
+      "id": "nachaufwachen",
+      "label": "Nach dem Aufwachen",
+      "items": [
+        "Aufstehen",
+        "Gähnen",
+        "Strecken",
+        "Wecker ausschalten"
+      ]
+    }
+  ]
+}

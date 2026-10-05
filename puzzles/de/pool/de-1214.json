@@ -1,0 +1,50 @@
+{
+  "id": "de-1214",
+  "title": "Geräte und Reinigung",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Küchengeräte"
+  },
+  "groups": [
+    {
+      "id": "putzen",
+      "label": "Zum Putzen in der Küche",
+      "items": [
+        "Backofenreiniger",
+        "Scheuermilch",
+        "Entkalker",
+        "Abflussreiniger"
+      ]
+    },
+    {
+      "id": "kuehlschrank",
+      "label": "Im Kühlschrank",
+      "items": [
+        "Milch",
+        "Butter",
+        "Käse",
+        "Wurst"
+      ]
+    },
+    {
+      "id": "gefriertruhe",
+      "label": "In der Gefriertruhe",
+      "items": [
+        "Tiefkühlpizza",
+        "Eiscreme",
+        "Pommes",
+        "Erbsen"
+      ]
+    },
+    {
+      "id": "arbeitsplatte",
+      "label": "Auf der Arbeitsplatte",
+      "items": [
+        "Brotkasten",
+        "Obstschale",
+        "Küchenrolle",
+        "Messerblock"
+      ]
+    }
+  ]
+}

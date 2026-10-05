@@ -1,0 +1,50 @@
+{
+  "id": "de-1213",
+  "title": "Küchenarbeit",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Küchengeräte"
+  },
+  "groups": [
+    {
+      "id": "kochen",
+      "label": "Zum Kochen",
+      "items": [
+        "Kochtopf",
+        "Pfanne",
+        "Kochlöffel",
+        "Topfdeckel"
+      ]
+    },
+    {
+      "id": "schneiden",
+      "label": "Zum Schneiden",
+      "items": [
+        "Küchenmesser",
+        "Schneidebrett",
+        "Küchenschere",
+        "Reibe"
+      ]
+    },
+    {
+      "id": "abwaschen",
+      "label": "Zum Abwaschen",
+      "items": [
+        "Spülbecken",
+        "Spülmittel",
+        "Schwamm",
+        "Geschirrtuch"
+      ]
+    },
+    {
+      "id": "aufbewahren",
+      "label": "Zum Aufbewahren",
+      "items": [
+        "Frischhaltedose",
+        "Einmachglas",
+        "Gewürzregal",
+        "Gefrierbeutel"
+      ]
+    }
+  ]
+}

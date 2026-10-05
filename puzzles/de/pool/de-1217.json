@@ -1,0 +1,50 @@
+{
+  "id": "de-1217",
+  "title": "Anziehen am Morgen",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Schlafzimmer"
+  },
+  "groups": [
+    {
+      "id": "oberkoerper",
+      "label": "Kleidung für den Oberkörper",
+      "items": [
+        "Hemd",
+        "Pullover",
+        "Weste",
+        "Jacke"
+      ]
+    },
+    {
+      "id": "beine",
+      "label": "Kleidung für die Beine",
+      "items": [
+        "Jeans",
+        "Shorts",
+        "Rock",
+        "Strumpfhose"
+      ]
+    },
+    {
+      "id": "fuesse",
+      "label": "An den Füßen",
+      "items": [
+        "Socken",
+        "Hausschuhe",
+        "Stiefeletten",
+        "Turnschuhe"
+      ]
+    },
+    {
+      "id": "aufhaengen",
+      "label": "Zum Aufhängen",
+      "items": [
+        "Kleiderbügel",
+        "Kleiderstange",
+        "Haken",
+        "Wäscheklammer"
+      ]
+    }
+  ]
+}

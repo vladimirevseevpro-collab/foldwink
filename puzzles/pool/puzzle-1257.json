@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1257",
+  "title": "Scoop Shop",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "classic-ice-cream-flavors",
+      "label": "Classic Ice Cream Flavors",
+      "items": [
+        "Vanilla",
+        "Chocolate",
+        "Strawberry",
+        "Mint Chip"
+      ]
+    },
+    {
+      "id": "sundae-toppings",
+      "label": "Sundae Toppings",
+      "items": [
+        "Sprinkles",
+        "Hot Fudge",
+        "Whipped Cream",
+        "Cherry"
+      ]
+    },
+    {
+      "id": "ice-cream-containers",
+      "label": "Ice Cream Containers",
+      "items": [
+        "Waffle Cone",
+        "Sugar Cone",
+        "Cup",
+        "Waffle Bowl"
+      ]
+    },
+    {
+      "id": "ice-cream-shop-equipment",
+      "label": "Ice Cream Shop Equipment",
+      "items": [
+        "Ice Cream Scoop",
+        "Freezer",
+        "Blender",
+        "Cash Register"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "ice cream shop",
+    "categoryType": "classification"
+  }
+}

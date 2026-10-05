@@ -1,0 +1,50 @@
+{
+  "id": "de-1224",
+  "title": "Kaffeestunde",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Café"
+  },
+  "groups": [
+    {
+      "id": "kaffee",
+      "label": "Warme Kaffeespezialitäten",
+      "items": [
+        "Espresso",
+        "Cappuccino",
+        "Latte macchiato",
+        "Milchkaffee"
+      ]
+    },
+    {
+      "id": "tee",
+      "label": "Tee am Nachmittag",
+      "items": [
+        "Früchtetee",
+        "Hagebuttentee",
+        "Fencheltee",
+        "Ingwertee"
+      ]
+    },
+    {
+      "id": "gebaeck",
+      "label": "Gebäck zur Kaffeestunde",
+      "items": [
+        "Croissant",
+        "Muffin",
+        "Donut",
+        "Zimtschnecke"
+      ]
+    },
+    {
+      "id": "tisch",
+      "label": "Auf dem Cafétisch",
+      "items": [
+        "Tasse",
+        "Untertasse",
+        "Teelöffel",
+        "Zuckerdose"
+      ]
+    }
+  ]
+}

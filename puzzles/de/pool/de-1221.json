@@ -1,0 +1,50 @@
+{
+  "id": "de-1221",
+  "title": "Ersatzteile und Vorrat",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Garage"
+  },
+  "groups": [
+    {
+      "id": "ersatzteile",
+      "label": "Ersatzteile fürs Auto",
+      "items": [
+        "Bremsscheibe",
+        "Auspuff",
+        "Stoßdämpfer",
+        "Batterie"
+      ]
+    },
+    {
+      "id": "fluessigkeiten",
+      "label": "Flüssigkeiten im Auto",
+      "items": [
+        "Bremsflüssigkeit",
+        "Scheibenwaschwasser",
+        "Frostschutz",
+        "Getriebeöl"
+      ]
+    },
+    {
+      "id": "kleinteile",
+      "label": "Kleinteile in der Werkzeugkiste",
+      "items": [
+        "Schrauben",
+        "Nägel",
+        "Dübel",
+        "Unterlegscheiben"
+      ]
+    },
+    {
+      "id": "winter",
+      "label": "Für den Winter bereithalten",
+      "items": [
+        "Schneeschaufel",
+        "Eiskratzer",
+        "Streusalz",
+        "Schneeketten"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1267",
+  "title": "Editorial desk",
+  "difficulty": "medium",
+  "editorialSummary": "Article sorting where Exclusive tempts the format group although it names how a story is obtained, while the format group lists standing genres a paper runs again and again.",
+  "meta": {
+    "theme": "newspaper",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "formats",
+      "label": "Article formats",
+      "revealHint": "Story kinds",
+      "items": [
+        "Feature",
+        "Profile",
+        "Review",
+        "Interview"
+      ]
+    },
+    {
+      "id": "opinion",
+      "label": "Opinion-page pieces",
+      "revealHint": "Opinion",
+      "items": [
+        "Editorial",
+        "Column",
+        "Letter",
+        "Cartoon"
+      ]
+    },
+    {
+      "id": "beats",
+      "label": "Newsroom beats",
+      "revealHint": "Rounds",
+      "items": [
+        "Politics",
+        "Crime",
+        "Health",
+        "Finance"
+      ]
+    },
+    {
+      "id": "breaks",
+      "label": "Ways a story surfaces",
+      "revealHint": "Scoops",
+      "items": [
+        "Scoop",
+        "Exclusive",
+        "Leak",
+        "Tip-off"
+      ]
+    }
+  ]
+}

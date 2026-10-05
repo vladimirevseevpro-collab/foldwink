@@ -1,0 +1,50 @@
+{
+  "id": "de-1212",
+  "title": "Nach dem Training",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Fitnessstudio"
+  },
+  "groups": [
+    {
+      "id": "duschen",
+      "label": "Zum Duschen nach dem Sport",
+      "items": [
+        "Duschgel",
+        "Shampoo",
+        "Handtuch",
+        "Badeschlappen"
+      ]
+    },
+    {
+      "id": "umkleide",
+      "label": "In der Umkleide",
+      "items": [
+        "Spind",
+        "Kleiderhaken",
+        "Bank",
+        "Spiegel"
+      ]
+    },
+    {
+      "id": "regeneration",
+      "label": "Für die Regeneration",
+      "items": [
+        "Dehnübung",
+        "Massagepistole",
+        "Wärmflasche",
+        "Proteinshake"
+      ]
+    },
+    {
+      "id": "sporttasche",
+      "label": "In der Sporttasche",
+      "items": [
+        "Trinkflasche",
+        "Kopfhörer",
+        "Schweißband",
+        "Deo"
+      ]
+    }
+  ]
+}

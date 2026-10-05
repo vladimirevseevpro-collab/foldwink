@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1278",
+  "title": "Report card",
+  "difficulty": "medium",
+  "editorialSummary": "Subject classification where Geography tempts the natural-sciences group as an earth science, but that group lists laboratory physical and life sciences while Geography studies people and places.",
+  "meta": {
+    "theme": "school subjects",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "naturalsci",
+      "label": "Natural sciences",
+      "revealHint": "Lab",
+      "items": [
+        "Physics",
+        "Chemistry",
+        "Biology",
+        "Astronomy"
+      ]
+    },
+    {
+      "id": "social",
+      "label": "Social studies subjects",
+      "revealHint": "Society",
+      "items": [
+        "History",
+        "Geography",
+        "Economics",
+        "Civics"
+      ]
+    },
+    {
+      "id": "language",
+      "label": "Language arts subjects",
+      "revealHint": "Words",
+      "items": [
+        "Grammar",
+        "Spelling",
+        "Reading",
+        "Composition"
+      ]
+    },
+    {
+      "id": "practical",
+      "label": "Practical subjects",
+      "revealHint": "Hands-on",
+      "items": [
+        "Cooking",
+        "Woodwork",
+        "Gardening",
+        "Sewing"
+      ]
+    }
+  ]
+}

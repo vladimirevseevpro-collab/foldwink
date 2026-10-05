@@ -1,0 +1,50 @@
+{
+  "id": "de-1211",
+  "title": "Trainingsplan",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Fitnessstudio"
+  },
+  "groups": [
+    {
+      "id": "beine",
+      "label": "Übungen für die Beine",
+      "items": [
+        "Kniebeugen",
+        "Ausfallschritte",
+        "Wadenheben",
+        "Step-Ups"
+      ]
+    },
+    {
+      "id": "oberkoerper",
+      "label": "Übungen für den Oberkörper",
+      "items": [
+        "Liegestütze",
+        "Klimmzüge",
+        "Bankdrücken",
+        "Schulterdrücken"
+      ]
+    },
+    {
+      "id": "bauch",
+      "label": "Bauchübungen",
+      "items": [
+        "Sit-ups",
+        "Crunches",
+        "Unterarmstütz",
+        "Seitstütz"
+      ]
+    },
+    {
+      "id": "aufwaermen",
+      "label": "Aufwärmen vor dem Training",
+      "items": [
+        "Hampelmann",
+        "Seilspringen",
+        "Joggen",
+        "Dehnen"
+      ]
+    }
+  ]
+}

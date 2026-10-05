@@ -1,0 +1,50 @@
+{
+  "id": "de-1225",
+  "title": "Frühstück im Café",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Café"
+  },
+  "groups": [
+    {
+      "id": "eier",
+      "label": "Zubereitung von Eiern",
+      "items": [
+        "Rührei",
+        "Spiegelei",
+        "Omelett",
+        "Pochiertes Ei"
+      ]
+    },
+    {
+      "id": "brot",
+      "label": "Brötchen und Brot",
+      "items": [
+        "Brötchen",
+        "Baguette",
+        "Toast",
+        "Vollkornbrot"
+      ]
+    },
+    {
+      "id": "aufstrich",
+      "label": "Für das Brot",
+      "items": [
+        "Butter",
+        "Marmelade",
+        "Honig",
+        "Quark"
+      ]
+    },
+    {
+      "id": "getraenke",
+      "label": "Zum Frühstück getrunken",
+      "items": [
+        "Orangensaft",
+        "Kaffee",
+        "Kakao",
+        "Milch"
+      ]
+    }
+  ]
+}

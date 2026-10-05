@@ -1,0 +1,50 @@
+{
+  "id": "de-1210",
+  "title": "Rad in Schuss",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Fahrrad"
+  },
+  "groups": [
+    {
+      "id": "radtour",
+      "label": "Für die Radtour",
+      "items": [
+        "Fahrradkarte",
+        "Trinkflasche",
+        "Proviant",
+        "Regenjacke"
+      ]
+    },
+    {
+      "id": "pannenhilfe",
+      "label": "Pannenhilfe unterwegs",
+      "items": [
+        "Flickzeug",
+        "Reifenheber",
+        "Luftpumpe",
+        "Multitool"
+      ]
+    },
+    {
+      "id": "verbaut",
+      "label": "Fest am Rad verbaut",
+      "items": [
+        "Flaschenhalter",
+        "Schutzblech",
+        "Fahrradständer",
+        "Kettenschutz"
+      ]
+    },
+    {
+      "id": "arten",
+      "label": "Arten von Fahrrädern",
+      "items": [
+        "Cityrad",
+        "Mountainbike",
+        "Rennrad",
+        "Lastenrad"
+      ]
+    }
+  ]
+}

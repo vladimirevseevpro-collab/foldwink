@@ -1,0 +1,50 @@
+{
+  "id": "de-1222",
+  "title": "Tanzturnier",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Ballett und Tanz"
+  },
+  "groups": [
+    {
+      "id": "bewertung",
+      "label": "Bei der Bewertung",
+      "items": [
+        "Haltung",
+        "Takt",
+        "Ausdruck",
+        "Technik"
+      ]
+    },
+    {
+      "id": "wettbewerb",
+      "label": "Beim Tanzwettbewerb",
+      "items": [
+        "Paare",
+        "Jury",
+        "Zuschauer",
+        "Startnummer"
+      ]
+    },
+    {
+      "id": "auftritt",
+      "label": "Vor dem Auftritt",
+      "items": [
+        "Schminke",
+        "Aufwärmübung",
+        "Kostüm",
+        "Einlaufen"
+      ]
+    },
+    {
+      "id": "siegespreis",
+      "label": "Der Siegespreis",
+      "items": [
+        "Pokal",
+        "Urkunde",
+        "Medaille",
+        "Blumenstrauß"
+      ]
+    }
+  ]
+}

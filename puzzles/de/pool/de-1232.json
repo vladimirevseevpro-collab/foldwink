@@ -1,0 +1,50 @@
+{
+  "id": "de-1232",
+  "title": "Malfarben mischen",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Malerwerkstatt"
+  },
+  "groups": [
+    {
+      "id": "warm",
+      "label": "Warme Farbtöne",
+      "items": [
+        "Rot",
+        "Orange",
+        "Gelb",
+        "Ocker"
+      ]
+    },
+    {
+      "id": "kalt",
+      "label": "Kalte Farbtöne",
+      "items": [
+        "Blau",
+        "Grün",
+        "Violett",
+        "Türkis"
+      ]
+    },
+    {
+      "id": "neutral",
+      "label": "Neutrale Töne",
+      "items": [
+        "Schwarz",
+        "Weiß",
+        "Grau",
+        "Beige"
+      ]
+    },
+    {
+      "id": "mischen",
+      "label": "Zum Mischen",
+      "items": [
+        "Farbtuben",
+        "Mischgefäß",
+        "Wasserbecher",
+        "Lappen"
+      ]
+    }
+  ]
+}

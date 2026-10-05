@@ -1,0 +1,50 @@
+{
+  "id": "de-1209",
+  "title": "Rund ums Rad",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Fahrrad"
+  },
+  "groups": [
+    {
+      "id": "lenker",
+      "label": "Am Lenker",
+      "items": [
+        "Klingel",
+        "Lenkergriff",
+        "Bremshebel",
+        "Lenkerband"
+      ]
+    },
+    {
+      "id": "sattel",
+      "label": "Am Sattel",
+      "items": [
+        "Satteltasche",
+        "Sattelstütze",
+        "Satteldecke",
+        "Sattelfeder"
+      ]
+    },
+    {
+      "id": "laufrad",
+      "label": "Am Laufrad",
+      "items": [
+        "Felge",
+        "Speiche",
+        "Nabe",
+        "Ventil"
+      ]
+    },
+    {
+      "id": "kleidung",
+      "label": "Radfahrer-Kleidung",
+      "items": [
+        "Helm",
+        "Radhandschuhe",
+        "Radhose",
+        "Radtrikot"
+      ]
+    }
+  ]
+}

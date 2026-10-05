@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1273",
+  "title": "The brigade",
+  "difficulty": "medium",
+  "editorialSummary": "Kitchen-team sort where Griddle tempts the station group because grill and griddle are both heated surfaces, but the station group lists crew posts while cookware lists the pans themselves.",
+  "meta": {
+    "theme": "restaurant kitchen",
+    "categoryType": "roles"
+  },
+  "groups": [
+    {
+      "id": "jobs",
+      "label": "Restaurant kitchen jobs",
+      "revealHint": "The team",
+      "items": [
+        "Head chef",
+        "Sous-chef",
+        "Line cook",
+        "Prep cook"
+      ]
+    },
+    {
+      "id": "stations",
+      "label": "Kitchen stations",
+      "revealHint": "Posts",
+      "items": [
+        "Sauté",
+        "Grill",
+        "Fry",
+        "Pantry"
+      ]
+    },
+    {
+      "id": "utensils",
+      "label": "Kitchen utensils",
+      "revealHint": "Hand items",
+      "items": [
+        "Peeler",
+        "Grater",
+        "Colander",
+        "Masher"
+      ]
+    },
+    {
+      "id": "cookware",
+      "label": "Cookware",
+      "revealHint": "Pots and pans",
+      "items": [
+        "Skillet",
+        "Saucepan",
+        "Stockpot",
+        "Griddle"
+      ]
+    }
+  ]
+}

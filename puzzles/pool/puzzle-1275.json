@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1275",
+  "title": "Pantry sort",
+  "difficulty": "medium",
+  "editorialSummary": "Pantry sort where Cream tempts the oil group because both are liquid fats used in cooking, but the oil group lists pressed plant oils while Cream is a milk product.",
+  "meta": {
+    "theme": "restaurant kitchen",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "staples",
+      "label": "Pantry staples",
+      "revealHint": "Dry goods",
+      "items": [
+        "Flour",
+        "Sugar",
+        "Salt",
+        "Rice"
+      ]
+    },
+    {
+      "id": "herbs",
+      "label": "Garden herbs",
+      "revealHint": "Herbs",
+      "items": [
+        "Basil",
+        "Parsley",
+        "Thyme",
+        "Mint"
+      ]
+    },
+    {
+      "id": "dairy",
+      "label": "Milk products",
+      "revealHint": "Dairy",
+      "items": [
+        "Butter",
+        "Cream",
+        "Yogurt",
+        "Cheese"
+      ]
+    },
+    {
+      "id": "oils",
+      "label": "Plant cooking oils",
+      "revealHint": "Oils",
+      "items": [
+        "Olive oil",
+        "Sunflower oil",
+        "Canola oil",
+        "Sesame oil"
+      ]
+    }
+  ]
+}

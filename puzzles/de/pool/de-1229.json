@@ -1,0 +1,50 @@
+{
+  "id": "de-1229",
+  "title": "Eis für die Party",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Eisdiele"
+  },
+  "groups": [
+    {
+      "id": "milcheis",
+      "label": "Milcheissorten",
+      "items": [
+        "Vanille",
+        "Schokolade",
+        "Stracciatella",
+        "Nuss"
+      ]
+    },
+    {
+      "id": "fruchteis",
+      "label": "Fruchteissorten",
+      "items": [
+        "Erdbeere",
+        "Zitrone",
+        "Himbeere",
+        "Mango"
+      ]
+    },
+    {
+      "id": "verzierung",
+      "label": "Als Verzierung",
+      "items": [
+        "Schokostreusel",
+        "Zuckerperlen",
+        "Waffelröllchen",
+        "Sahne"
+      ]
+    },
+    {
+      "id": "getraenke",
+      "label": "Kühle Getränke dazu",
+      "items": [
+        "Limonade",
+        "Eistee",
+        "Sirup",
+        "Wasser"
+      ]
+    }
+  ]
+}

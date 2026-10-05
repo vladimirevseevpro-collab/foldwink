@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1268",
+  "title": "Print run",
+  "difficulty": "medium",
+  "editorialSummary": "Print production sort where Plate tempts the stage group because a press uses a plate, but the stage group lists actions while Plate is a material.",
+  "meta": {
+    "theme": "newspaper",
+    "categoryType": "process"
+  },
+  "groups": [
+    {
+      "id": "stages",
+      "label": "Printing stages",
+      "revealHint": "Steps",
+      "items": [
+        "Typesetting",
+        "Pressing",
+        "Folding",
+        "Binding"
+      ]
+    },
+    {
+      "id": "supplies",
+      "label": "Printing supplies",
+      "revealHint": "Materials",
+      "items": [
+        "Ink",
+        "Paper",
+        "Plate",
+        "Roll"
+      ]
+    },
+    {
+      "id": "formats",
+      "label": "Newspaper formats",
+      "revealHint": "Sizes",
+      "items": [
+        "Broadsheet",
+        "Tabloid",
+        "Compact",
+        "Berliner"
+      ]
+    },
+    {
+      "id": "sold",
+      "label": "Ways the paper is sold",
+      "revealHint": "Sales",
+      "items": [
+        "Delivery",
+        "Newsstand",
+        "Subscription",
+        "Mail"
+      ]
+    }
+  ]
+}

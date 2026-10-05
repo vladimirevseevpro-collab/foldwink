@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1254",
+  "title": "Behind the Counter",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "coffee-shop-equipment",
+      "label": "Coffee Shop Equipment",
+      "items": [
+        "Espresso Machine",
+        "Coffee Grinder",
+        "Milk Frother",
+        "Blender"
+      ]
+    },
+    {
+      "id": "cafe-seating",
+      "label": "Cafe Seating",
+      "items": [
+        "Bar Stool",
+        "Armchair",
+        "Bench",
+        "Booth"
+      ]
+    },
+    {
+      "id": "coffee-condiments",
+      "label": "Coffee Condiments",
+      "items": [
+        "Sugar",
+        "Cream",
+        "Cinnamon",
+        "Cocoa Powder"
+      ]
+    },
+    {
+      "id": "pastry-display-case",
+      "label": "Pastry Display Case",
+      "items": [
+        "Croissant",
+        "Pain au Chocolat",
+        "Cinnamon Roll",
+        "Cheese Danish"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "cafe",
+    "categoryType": "classification"
+  }
+}

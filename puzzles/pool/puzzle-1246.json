@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1246",
+  "title": "Inside the Appliances",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "refrigerator-parts",
+      "label": "Refrigerator Parts",
+      "items": [
+        "Crisper Drawer",
+        "Door Bin",
+        "Glass Shelf",
+        "Ice Maker"
+      ]
+    },
+    {
+      "id": "dishwasher-parts",
+      "label": "Dishwasher Parts",
+      "items": [
+        "Dish Rack",
+        "Spray Arm",
+        "Detergent Dispenser",
+        "Silverware Basket"
+      ]
+    },
+    {
+      "id": "coffee-maker-parts",
+      "label": "Coffee Maker Parts",
+      "items": [
+        "Carafe",
+        "Filter Basket",
+        "Water Reservoir",
+        "Warming Plate"
+      ]
+    },
+    {
+      "id": "blender-parts",
+      "label": "Blender Parts",
+      "items": [
+        "Pitcher",
+        "Blade Assembly",
+        "Lid",
+        "Base"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "kitchen appliances",
+    "categoryType": "classification"
+  }
+}

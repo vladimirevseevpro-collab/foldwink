@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1274",
+  "title": "Front and back",
+  "difficulty": "medium",
+  "editorialSummary": "Restaurant roles sort where Butcher reads like a food word, but it names a kitchen job while the course group lists dishes, not people.",
+  "meta": {
+    "theme": "restaurant kitchen",
+    "categoryType": "roles"
+  },
+  "groups": [
+    {
+      "id": "front",
+      "label": "Dining room jobs",
+      "revealHint": "Front of house",
+      "items": [
+        "Server",
+        "Host",
+        "Busser",
+        "Runner"
+      ]
+    },
+    {
+      "id": "back",
+      "label": "Kitchen jobs",
+      "revealHint": "Back of house",
+      "items": [
+        "Chef",
+        "Cook",
+        "Baker",
+        "Butcher"
+      ]
+    },
+    {
+      "id": "table",
+      "label": "Table items",
+      "revealHint": "On the table",
+      "items": [
+        "Plate",
+        "Glass",
+        "Cutlery",
+        "Napkin"
+      ]
+    },
+    {
+      "id": "courses",
+      "label": "Menu courses",
+      "revealHint": "Courses",
+      "items": [
+        "Starter",
+        "Main",
+        "Dessert",
+        "Side"
+      ]
+    }
+  ]
+}

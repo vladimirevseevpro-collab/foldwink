@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1258",
+  "title": "Frozen Favorites",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "ice-cream-alternatives",
+      "label": "Ice Cream Alternatives",
+      "items": [
+        "Gelato",
+        "Sorbet",
+        "Sherbet",
+        "Frozen Yogurt"
+      ]
+    },
+    {
+      "id": "milkshake-flavors",
+      "label": "Milkshake Flavors",
+      "items": [
+        "Vanilla",
+        "Chocolate",
+        "Strawberry",
+        "Banana"
+      ]
+    },
+    {
+      "id": "ice-cream-sauces",
+      "label": "Ice Cream Sauces",
+      "items": [
+        "Caramel Sauce",
+        "Strawberry Syrup",
+        "Chocolate Syrup",
+        "Butterscotch"
+      ]
+    },
+    {
+      "id": "ice-cream-shop-sections",
+      "label": "Ice Cream Shop Sections",
+      "items": [
+        "Toppings Bar",
+        "Cone Station",
+        "Checkout Counter",
+        "Freezer Aisle"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "ice cream shop",
+    "categoryType": "classification"
+  }
+}

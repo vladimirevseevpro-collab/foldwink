@@ -1,0 +1,50 @@
+{
+  "id": "de-1216",
+  "title": "Schlafzimmer einrichten",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Schlafzimmer"
+  },
+  "groups": [
+    {
+      "id": "guter_schlaf",
+      "label": "Für guten Schlaf",
+      "items": [
+        "Matratze",
+        "Lattenrost",
+        "Bettgestell",
+        "Topper"
+      ]
+    },
+    {
+      "id": "licht",
+      "label": "Licht im Schlafzimmer",
+      "items": [
+        "Deckenlampe",
+        "Stehlampe",
+        "Leselampe",
+        "Nachtlicht"
+      ]
+    },
+    {
+      "id": "aufbewahrung",
+      "label": "Aufbewahrung im Schlafzimmer",
+      "items": [
+        "Kleiderbügel",
+        "Schublade",
+        "Wäschekorb",
+        "Schmuckschatulle"
+      ]
+    },
+    {
+      "id": "fenster",
+      "label": "Fensterdekoration",
+      "items": [
+        "Vorhang",
+        "Rollo",
+        "Jalousie",
+        "Gardinenstange"
+      ]
+    }
+  ]
+}

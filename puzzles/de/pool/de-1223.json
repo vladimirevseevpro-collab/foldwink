@@ -1,0 +1,50 @@
+{
+  "id": "de-1223",
+  "title": "Tanz auf der Bühne",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Ballett und Tanz"
+  },
+  "groups": [
+    {
+      "id": "technik",
+      "label": "Bühnentechnik",
+      "items": [
+        "Scheinwerfer",
+        "Tonanlage",
+        "Nebelmaschine",
+        "Mischpult"
+      ]
+    },
+    {
+      "id": "kostueme",
+      "label": "Kostüme der Tänzer",
+      "items": [
+        "Federboa",
+        "Umhang",
+        "Krone",
+        "Handschuhe"
+      ]
+    },
+    {
+      "id": "musik",
+      "label": "Musik auf der Bühne",
+      "items": [
+        "Geige",
+        "Trommel",
+        "Flöte",
+        "Akkordeon"
+      ]
+    },
+    {
+      "id": "publikum",
+      "label": "Für das Publikum",
+      "items": [
+        "Programmheft",
+        "Fernglas",
+        "Sitzplatz",
+        "Bonbon"
+      ]
+    }
+  ]
+}

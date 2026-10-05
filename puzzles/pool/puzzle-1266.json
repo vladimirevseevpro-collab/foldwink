@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1266",
+  "title": "Morning edition",
+  "difficulty": "medium",
+  "editorialSummary": "Newspaper classification where Columnist tempts the page-part group because the name echoes a printed column, but that group lists only printed elements while Columnist is a person.",
+  "meta": {
+    "theme": "newspaper",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "depts",
+      "label": "Newspaper departments",
+      "revealHint": "Sections",
+      "items": [
+        "Sports",
+        "Business",
+        "Culture",
+        "Travel"
+      ]
+    },
+    {
+      "id": "jobs",
+      "label": "Newsroom jobs",
+      "revealHint": "The staff",
+      "items": [
+        "Editor",
+        "Reporter",
+        "Columnist",
+        "Photographer"
+      ]
+    },
+    {
+      "id": "page",
+      "label": "Parts of a printed page",
+      "revealHint": "On the page",
+      "items": [
+        "Headline",
+        "Byline",
+        "Caption",
+        "Dateline"
+      ]
+    },
+    {
+      "id": "src",
+      "label": "News sources",
+      "revealHint": "Where from",
+      "items": [
+        "Radio",
+        "Television",
+        "Podcast",
+        "Website"
+      ]
+    }
+  ]
+}

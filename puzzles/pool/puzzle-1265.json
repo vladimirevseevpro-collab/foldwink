@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1265",
+  "title": "Gallery Wall",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "painting-genres",
+      "label": "Painting Genres",
+      "items": [
+        "Portrait",
+        "Landscape",
+        "Abstract",
+        "Mural"
+      ]
+    },
+    {
+      "id": "picture-frame-parts",
+      "label": "Frame Components",
+      "items": [
+        "Moulding",
+        "Mat",
+        "Glass",
+        "Backing Board"
+      ]
+    },
+    {
+      "id": "gallery-roles",
+      "label": "Art Gallery Staff",
+      "items": [
+        "Curator",
+        "Docent",
+        "Art Dealer",
+        "Registrar"
+      ]
+    },
+    {
+      "id": "art-critique-words",
+      "label": "Art Critique Words",
+      "items": [
+        "Composition",
+        "Perspective",
+        "Texture",
+        "Contrast"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "painting studio",
+    "categoryType": "classification"
+  }
+}

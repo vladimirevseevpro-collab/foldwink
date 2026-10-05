@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1263",
+  "title": "At the Easel",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "studio-painting-tools",
+      "label": "Studio Painting Tools",
+      "items": [
+        "Paintbrush",
+        "Palette Knife",
+        "Sponge",
+        "Rag"
+      ]
+    },
+    {
+      "id": "art-studio-furniture",
+      "label": "Art Studio Furniture",
+      "items": [
+        "Easel",
+        "Stool",
+        "Work Table",
+        "Drying Rack"
+      ]
+    },
+    {
+      "id": "paint-types",
+      "label": "Paint Types",
+      "items": [
+        "Oil",
+        "Acrylic",
+        "Watercolor",
+        "Gouache"
+      ]
+    },
+    {
+      "id": "canvas-prep-materials",
+      "label": "Canvas Prep Materials",
+      "items": [
+        "Gesso",
+        "Primer",
+        "Sandpaper",
+        "Stretcher Bar"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "painting studio",
+    "categoryType": "classification"
+  }
+}

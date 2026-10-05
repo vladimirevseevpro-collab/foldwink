@@ -1,0 +1,50 @@
+{
+  "id": "de-1227",
+  "title": "Hinter dem Cafétresen",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Café"
+  },
+  "groups": [
+    {
+      "id": "maschinen",
+      "label": "Kaffeemaschinen",
+      "items": [
+        "Espressomaschine",
+        "Vollautomat",
+        "Filtermaschine",
+        "Pressstempelkanne"
+      ]
+    },
+    {
+      "id": "zubehoer",
+      "label": "Zubehör für den Kaffee",
+      "items": [
+        "Kaffeemühle",
+        "Siebträger",
+        "Milchkännchen",
+        "Kaffeefilter"
+      ]
+    },
+    {
+      "id": "suessen",
+      "label": "Zum Süßen",
+      "items": [
+        "Zuckerwürfel",
+        "Ahornsirup",
+        "Honig",
+        "Stevia"
+      ]
+    },
+    {
+      "id": "schaufenster",
+      "label": "Im Schaufenster",
+      "items": [
+        "Torten",
+        "Pralinen",
+        "Macarons",
+        "Cupcakes"
+      ]
+    }
+  ]
+}

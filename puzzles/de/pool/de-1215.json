@@ -1,0 +1,50 @@
+{
+  "id": "de-1215",
+  "title": "Schlafenszeit",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Schlafzimmer"
+  },
+  "groups": [
+    {
+      "id": "moebel",
+      "label": "Möbel im Schlafzimmer",
+      "items": [
+        "Doppelbett",
+        "Kleiderschrank",
+        "Kommode",
+        "Nachttisch"
+      ]
+    },
+    {
+      "id": "bezuege",
+      "label": "Bezüge fürs Bett",
+      "items": [
+        "Bettlaken",
+        "Kissenbezug",
+        "Bettdeckenbezug",
+        "Spannbettlaken"
+      ]
+    },
+    {
+      "id": "nacht",
+      "label": "Für die Nacht",
+      "items": [
+        "Pyjama",
+        "Nachthemd",
+        "Schlafmaske",
+        "Ohrenstöpsel"
+      ]
+    },
+    {
+      "id": "ambett",
+      "label": "Am Bett",
+      "items": [
+        "Nachttischlampe",
+        "Wecker",
+        "Buch",
+        "Glas Wasser"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1276",
+  "title": "Freight line",
+  "difficulty": "medium",
+  "editorialSummary": "Freight-yard sort where Sleeper tempts the track group because a sleeper is a rail tie, but the passenger group lists onboard cars while the track group lists ways the rails are arranged.",
+  "meta": {
+    "theme": "trains",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "freights",
+      "label": "Freight cars",
+      "revealHint": "Goods",
+      "items": [
+        "Boxcar",
+        "Flatcar",
+        "Hopper",
+        "Tank car"
+      ]
+    },
+    {
+      "id": "passenger",
+      "label": "Passenger cars",
+      "revealHint": "People cars",
+      "items": [
+        "Coach",
+        "Sleeper",
+        "Diner",
+        "Observation car"
+      ]
+    },
+    {
+      "id": "layouts",
+      "label": "Track layouts",
+      "revealHint": "Arrangements",
+      "items": [
+        "Siding",
+        "Loop",
+        "Junction",
+        "Crossover"
+      ]
+    },
+    {
+      "id": "signals",
+      "label": "Railway signals",
+      "revealHint": "Warnings",
+      "items": [
+        "Semaphore",
+        "Signal",
+        "Beacon",
+        "Whistle"
+      ]
+    }
+  ]
+}

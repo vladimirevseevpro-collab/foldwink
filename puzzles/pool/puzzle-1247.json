@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1247",
+  "title": "Appliance Brands and Care",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "appliance-brands",
+      "label": "Appliance Brands",
+      "items": [
+        "KitchenAid",
+        "Cuisinart",
+        "Breville",
+        "Ninja"
+      ]
+    },
+    {
+      "id": "appliance-upkeep",
+      "label": "Appliance Upkeep",
+      "items": [
+        "Descale the Kettle",
+        "Clean the Filter",
+        "Empty the Crumb Tray",
+        "Wipe the Coils"
+      ]
+    },
+    {
+      "id": "appliance-materials",
+      "label": "Appliance Materials",
+      "items": [
+        "Stainless Steel",
+        "Glass",
+        "Plastic",
+        "Ceramic"
+      ]
+    },
+    {
+      "id": "frozen-foods",
+      "label": "Frozen Foods",
+      "items": [
+        "Ice Cream",
+        "Frozen Peas",
+        "Fish Sticks",
+        "Popsicles"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "kitchen appliances",
+    "categoryType": "material"
+  }
+}

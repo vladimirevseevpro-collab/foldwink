@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1277",
+  "title": "Timetable",
+  "difficulty": "medium",
+  "editorialSummary": "Subject classification where Statistics tempts the science group because it handles data, but the science group lists experimental natural sciences while Statistics is a branch of maths.",
+  "meta": {
+    "theme": "school subjects",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "science",
+      "label": "Science subjects",
+      "revealHint": "Labs",
+      "items": [
+        "Physics",
+        "Chemistry",
+        "Biology",
+        "Ecology"
+      ]
+    },
+    {
+      "id": "humanities",
+      "label": "Humanities subjects",
+      "revealHint": "Reading",
+      "items": [
+        "History",
+        "Geography",
+        "Literature",
+        "Philosophy"
+      ]
+    },
+    {
+      "id": "maths",
+      "label": "Maths topics",
+      "revealHint": "Numbers",
+      "items": [
+        "Algebra",
+        "Geometry",
+        "Calculus",
+        "Statistics"
+      ]
+    },
+    {
+      "id": "arts",
+      "label": "Arts subjects",
+      "revealHint": "Studio",
+      "items": [
+        "Music",
+        "Art",
+        "Drama",
+        "Dance"
+      ]
+    }
+  ]
+}

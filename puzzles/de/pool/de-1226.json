@@ -1,0 +1,50 @@
+{
+  "id": "de-1226",
+  "title": "Kuchen backen",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Café"
+  },
+  "groups": [
+    {
+      "id": "teig",
+      "label": "Zutaten für den Kuchenteig",
+      "items": [
+        "Mehl",
+        "Backpulver",
+        "Vanillezucker",
+        "Speisestärke"
+      ]
+    },
+    {
+      "id": "geraete",
+      "label": "Backgeräte",
+      "items": [
+        "Backofen",
+        "Rührgerät",
+        "Backblech",
+        "Nudelholz"
+      ]
+    },
+    {
+      "id": "formen",
+      "label": "Kuchenformen",
+      "items": [
+        "Springform",
+        "Muffinform",
+        "Tarteform",
+        "Herzform"
+      ]
+    },
+    {
+      "id": "servieren",
+      "label": "Zum Servieren",
+      "items": [
+        "Tortenheber",
+        "Kuchenteller",
+        "Kuchengabel",
+        "Serviette"
+      ]
+    }
+  ]
+}

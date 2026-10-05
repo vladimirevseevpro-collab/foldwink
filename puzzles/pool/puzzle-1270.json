@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1270",
+  "title": "Runway show",
+  "difficulty": "medium",
+  "editorialSummary": "Fashion classification where Belt tempts the fastener group because it holds clothing shut, but that group lists the small hardware itself while Belt is a worn accessory.",
+  "meta": {
+    "theme": "fashion",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "cat",
+      "label": "Catwalk show words",
+      "revealHint": "Showtime",
+      "items": [
+        "Runway",
+        "Backstage",
+        "Model",
+        "Designer"
+      ]
+    },
+    {
+      "id": "cloth",
+      "label": "Cloth materials",
+      "revealHint": "Cloth",
+      "items": [
+        "Silk",
+        "Denim",
+        "Linen",
+        "Wool"
+      ]
+    },
+    {
+      "id": "fast",
+      "label": "Fasteners on clothes",
+      "revealHint": "Closures",
+      "items": [
+        "Button",
+        "Zipper",
+        "Snap",
+        "Hook"
+      ]
+    },
+    {
+      "id": "extras",
+      "label": "Outfit extras",
+      "revealHint": "Accessories",
+      "items": [
+        "Belt",
+        "Scarf",
+        "Hat",
+        "Gloves"
+      ]
+    }
+  ]
+}

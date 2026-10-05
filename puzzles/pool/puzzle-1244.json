@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1244",
+  "title": "Cardio Day",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "indoor-cardio-machines",
+      "label": "Indoor Cardio Machines",
+      "items": [
+        "Treadmill",
+        "Elliptical",
+        "Rowing Machine",
+        "Stair Climber"
+      ]
+    },
+    {
+      "id": "cardio-activities",
+      "label": "Cardio Activities",
+      "items": [
+        "Running",
+        "Swimming",
+        "Cycling",
+        "Jumping Rope"
+      ]
+    },
+    {
+      "id": "yoga-poses",
+      "label": "Yoga Poses",
+      "items": [
+        "Downward Dog",
+        "Child's Pose",
+        "Warrior Pose",
+        "Cobra Pose"
+      ]
+    },
+    {
+      "id": "cool-down-stretches",
+      "label": "Cool-Down Stretches",
+      "items": [
+        "Hamstring Stretch",
+        "Quad Stretch",
+        "Calf Stretch",
+        "Hip Flexor Stretch"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "gym and fitness",
+    "categoryType": "classification"
+  }
+}

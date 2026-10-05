@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1269",
+  "title": "Reader's desk",
+  "difficulty": "medium",
+  "editorialSummary": "Reader-services sort where Clarification tempts the submissions group because it reads like a reader's question, but the corrections group lists notices the paper publishes while submissions are sent in by readers.",
+  "meta": {
+    "theme": "newspaper",
+    "categoryType": "function"
+  },
+  "groups": [
+    {
+      "id": "sections",
+      "label": "Sections you turn to",
+      "revealHint": "Sections",
+      "items": [
+        "Obituaries",
+        "Classifieds",
+        "Crossword",
+        "Weather"
+      ]
+    },
+    {
+      "id": "reader",
+      "label": "What readers send in",
+      "revealHint": "From readers",
+      "items": [
+        "Letter",
+        "Tip",
+        "Photo",
+        "Question"
+      ]
+    },
+    {
+      "id": "subs",
+      "label": "Subscription actions",
+      "revealHint": "Account",
+      "items": [
+        "Subscribe",
+        "Renew",
+        "Cancel",
+        "Gift"
+      ]
+    },
+    {
+      "id": "notices",
+      "label": "Published corrections notices",
+      "revealHint": "Notices",
+      "items": [
+        "Erratum",
+        "Retraction",
+        "Apology",
+        "Clarification"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1249",
+  "title": "Bedroom Nooks",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "closet-basics",
+      "label": "Closet Basics",
+      "items": [
+        "Hangers",
+        "Shoe Rack",
+        "Storage Bin",
+        "Drawer Divider"
+      ]
+    },
+    {
+      "id": "dresser-drawer-contents",
+      "label": "Dresser Drawer Contents",
+      "items": [
+        "Socks",
+        "Underwear",
+        "T-Shirts",
+        "Sweaters"
+      ]
+    },
+    {
+      "id": "bedroom-lighting",
+      "label": "Bedroom Lighting",
+      "items": [
+        "Ceiling Light",
+        "Wall Sconce",
+        "Fairy Lights",
+        "Night Light"
+      ]
+    },
+    {
+      "id": "baby-nursery-items",
+      "label": "Baby Nursery Items",
+      "items": [
+        "Crib",
+        "Changing Table",
+        "Rocking Chair",
+        "Mobile"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "bedroom",
+    "categoryType": "place"
+  }
+}

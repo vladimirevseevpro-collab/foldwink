@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1242",
+  "title": "Bicycle Anatomy",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "wheel-parts",
+      "label": "Wheel Parts",
+      "items": [
+        "Rim",
+        "Spokes",
+        "Hub",
+        "Tire"
+      ]
+    },
+    {
+      "id": "drivetrain-parts",
+      "label": "Drivetrain Parts",
+      "items": [
+        "Chain",
+        "Cassette",
+        "Derailleur",
+        "Crankset"
+      ]
+    },
+    {
+      "id": "brake-system-parts",
+      "label": "Brake System Parts",
+      "items": [
+        "Brake Pads",
+        "Rotor",
+        "Caliper",
+        "Brake Cable"
+      ]
+    },
+    {
+      "id": "handlebar-accessories",
+      "label": "Handlebar Accessories",
+      "items": [
+        "Grips",
+        "Bell",
+        "Mirror",
+        "Basket"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "bicycle",
+    "categoryType": "classification"
+  }
+}

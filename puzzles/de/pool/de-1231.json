@@ -1,0 +1,50 @@
+{
+  "id": "de-1231",
+  "title": "In der Malerwerkstatt",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Malerwerkstatt"
+  },
+  "groups": [
+    {
+      "id": "farben",
+      "label": "Malfarben",
+      "items": [
+        "Ölfarbe",
+        "Acrylfarbe",
+        "Wasserfarbe",
+        "Temperafarbe"
+      ]
+    },
+    {
+      "id": "pinsel",
+      "label": "Pinselarten",
+      "items": [
+        "Flachpinsel",
+        "Rundpinsel",
+        "Fächerpinsel",
+        "Borstenpinsel"
+      ]
+    },
+    {
+      "id": "untergruende",
+      "label": "Maluntergründe",
+      "items": [
+        "Leinwand",
+        "Holztafel",
+        "Pappe",
+        "Papier"
+      ]
+    },
+    {
+      "id": "geraete",
+      "label": "Geräte am Arbeitsplatz",
+      "items": [
+        "Palette",
+        "Malmesser",
+        "Staffelei",
+        "Farbwanne"
+      ]
+    }
+  ]
+}

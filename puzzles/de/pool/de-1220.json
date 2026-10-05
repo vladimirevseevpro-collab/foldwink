@@ -1,0 +1,50 @@
+{
+  "id": "de-1220",
+  "title": "Unter der Motorhaube",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Garage"
+  },
+  "groups": [
+    {
+      "id": "reifen",
+      "label": "Autoreifen",
+      "items": [
+        "Sommerreifen",
+        "Winterreifen",
+        "Ganzjahresreifen",
+        "Reservereifen"
+      ]
+    },
+    {
+      "id": "aussen",
+      "label": "Am Auto außen",
+      "items": [
+        "Stoßstange",
+        "Motorhaube",
+        "Kotflügel",
+        "Seitenspiegel"
+      ]
+    },
+    {
+      "id": "innen",
+      "label": "Im Autoinnenraum",
+      "items": [
+        "Lenkrad",
+        "Rückspiegel",
+        "Handschuhfach",
+        "Sicherheitsgurt"
+      ]
+    },
+    {
+      "id": "motor",
+      "label": "Für den Motor",
+      "items": [
+        "Motoröl",
+        "Kühlwasser",
+        "Zündkerze",
+        "Luftfilter"
+      ]
+    }
+  ]
+}

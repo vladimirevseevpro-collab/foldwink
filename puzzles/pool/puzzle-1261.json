@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1261",
+  "title": "Concert Evening",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "concert-hall-sections",
+      "label": "Concert Hall Sections",
+      "items": [
+        "Stalls",
+        "Balcony",
+        "Box Seats",
+        "Gallery"
+      ]
+    },
+    {
+      "id": "orchestra-concert-roles",
+      "label": "Orchestra Concert Roles",
+      "items": [
+        "Conductor",
+        "Concertmaster",
+        "Soloist",
+        "Section Leader"
+      ]
+    },
+    {
+      "id": "concert-program-items",
+      "label": "Concert Program Items",
+      "items": [
+        "Overture",
+        "Concerto",
+        "Intermission",
+        "Encore"
+      ]
+    },
+    {
+      "id": "concert-etiquette",
+      "label": "Concert Etiquette",
+      "items": [
+        "Applause",
+        "Bravo",
+        "Curtain Call",
+        "Standing Ovation"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "orchestra",
+    "categoryType": "classification"
+  }
+}

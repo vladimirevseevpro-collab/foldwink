@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1271",
+  "title": "Fashion house",
+  "difficulty": "medium",
+  "editorialSummary": "Fashion workshop sort where Inseam tempts the sewing-tools group because it contains 'seam', but that group lists implements while Inseam is a body measurement.",
+  "meta": {
+    "theme": "fashion",
+    "categoryType": "function"
+  },
+  "groups": [
+    {
+      "id": "house",
+      "label": "Jobs in a fashion house",
+      "revealHint": "The team",
+      "items": [
+        "Designer",
+        "Stylist",
+        "Model",
+        "Tailor"
+      ]
+    },
+    {
+      "id": "tools",
+      "label": "Sewing tools",
+      "revealHint": "Hand items",
+      "items": [
+        "Needle",
+        "Thread",
+        "Thimble",
+        "Scissors"
+      ]
+    },
+    {
+      "id": "patterns",
+      "label": "Patterns on cloth",
+      "revealHint": "Prints",
+      "items": [
+        "Stripes",
+        "Plaid",
+        "Polka dots",
+        "Floral"
+      ]
+    },
+    {
+      "id": "measures",
+      "label": "Clothing measurements",
+      "revealHint": "Sizes",
+      "items": [
+        "Chest",
+        "Waist",
+        "Hip",
+        "Inseam"
+      ]
+    }
+  ]
+}

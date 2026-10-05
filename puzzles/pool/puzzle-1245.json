@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1245",
+  "title": "Group Fitness",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "group-exercise-classes",
+      "label": "Group Exercise Classes",
+      "items": [
+        "Spin Class",
+        "Step Class",
+        "Aqua Aerobics",
+        "Boot Camp"
+      ]
+    },
+    {
+      "id": "bodyweight-exercises",
+      "label": "Bodyweight Exercises",
+      "items": [
+        "Push-Up",
+        "Squat",
+        "Lunge",
+        "Burpee"
+      ]
+    },
+    {
+      "id": "dumbbell-exercises",
+      "label": "Dumbbell Exercises",
+      "items": [
+        "Bicep Curl",
+        "Shoulder Press",
+        "Lateral Raise",
+        "Bent-Over Row"
+      ]
+    },
+    {
+      "id": "workout-metrics",
+      "label": "Workout Metrics",
+      "items": [
+        "Sets",
+        "Reps",
+        "Rest Period",
+        "Heart Rate"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "gym and fitness",
+    "categoryType": "action"
+  }
+}

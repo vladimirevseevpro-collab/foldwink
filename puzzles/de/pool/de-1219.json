@@ -1,0 +1,50 @@
+{
+  "id": "de-1219",
+  "title": "Meine Garage",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Garage"
+  },
+  "groups": [
+    {
+      "id": "autoreparatur",
+      "label": "Werkzeuge für die Autoreparatur",
+      "items": [
+        "Schraubenschlüssel",
+        "Steckschlüssel",
+        "Drehmomentschlüssel",
+        "Zange"
+      ]
+    },
+    {
+      "id": "maschinen",
+      "label": "Maschinen in der Garage",
+      "items": [
+        "Bohrmaschine",
+        "Schleifmaschine",
+        "Kompressor",
+        "Schweißgerät"
+      ]
+    },
+    {
+      "id": "regal",
+      "label": "Im Regal in der Garage",
+      "items": [
+        "Farbeimer",
+        "Pinsel",
+        "Schraubensortiment",
+        "Arbeitshandschuhe"
+      ]
+    },
+    {
+      "id": "aufraeumen",
+      "label": "Zum Aufräumen in der Garage",
+      "items": [
+        "Besen",
+        "Kehrblech",
+        "Müllsack",
+        "Putzeimer"
+      ]
+    }
+  ]
+}

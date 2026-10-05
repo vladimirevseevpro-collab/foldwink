@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1259",
+  "title": "The Parlor",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "ice-cream-parlor-furniture",
+      "label": "Ice Cream Parlor Furniture",
+      "items": [
+        "Booth",
+        "Marble Counter",
+        "Swivel Stool",
+        "Checkered Table"
+      ]
+    },
+    {
+      "id": "ice-cream-parlor-roles",
+      "label": "Ice Cream Parlor Roles",
+      "items": [
+        "Scooper",
+        "Cashier",
+        "Shift Manager",
+        "Server"
+      ]
+    },
+    {
+      "id": "ice-cream-parlor-decor",
+      "label": "Ice Cream Parlor Decor",
+      "items": [
+        "Neon Sign",
+        "Checkered Floor",
+        "Mirror",
+        "Pendant Light"
+      ]
+    },
+    {
+      "id": "ice-cream-parlor-menu",
+      "label": "Ice Cream Parlor Menu",
+      "items": [
+        "Float",
+        "Shake",
+        "Sundae",
+        "Banana Split"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "ice cream shop",
+    "categoryType": "classification"
+  }
+}

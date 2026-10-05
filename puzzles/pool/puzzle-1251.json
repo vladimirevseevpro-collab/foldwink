@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1251",
+  "title": "Garage Workshop",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "nuts-and-bolts",
+      "label": "Nuts and Bolts",
+      "items": [
+        "Bolt",
+        "Nut",
+        "Washer",
+        "Rivet"
+      ]
+    },
+    {
+      "id": "workshop-safety-gear",
+      "label": "Workshop Safety Gear",
+      "items": [
+        "Safety Goggles",
+        "Work Gloves",
+        "Ear Plugs",
+        "Dust Mask"
+      ]
+    },
+    {
+      "id": "painting-gear",
+      "label": "Painting Gear",
+      "items": [
+        "Paint Roller",
+        "Paintbrush",
+        "Drop Cloth",
+        "Paint Tray"
+      ]
+    },
+    {
+      "id": "workbench-tools",
+      "label": "Workbench Tools",
+      "items": [
+        "Vise",
+        "C-Clamp",
+        "Bench Grinder",
+        "Work Light"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "garage",
+    "categoryType": "classification"
+  }
+}

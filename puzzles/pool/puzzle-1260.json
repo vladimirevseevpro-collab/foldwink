@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1260",
+  "title": "Orchestra Sections",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "orchestra-instrument-families",
+      "label": "Orchestra Instrument Families",
+      "items": [
+        "Strings",
+        "Woodwinds",
+        "Brass",
+        "Percussion"
+      ]
+    },
+    {
+      "id": "string-section-instruments",
+      "label": "String Section Instruments",
+      "items": [
+        "Violin",
+        "Viola",
+        "Cello",
+        "Double Bass"
+      ]
+    },
+    {
+      "id": "woodwind-section",
+      "label": "Woodwind Section",
+      "items": [
+        "Flute",
+        "Piccolo",
+        "Clarinet",
+        "Bassoon"
+      ]
+    },
+    {
+      "id": "brass-section",
+      "label": "Brass Section",
+      "items": [
+        "Trumpet",
+        "French Horn",
+        "Trombone",
+        "Euphonium"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "orchestra",
+    "categoryType": "classification"
+  }
+}

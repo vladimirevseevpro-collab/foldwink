@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1256",
+  "title": "Roast and Grind",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "barista-tasks",
+      "label": "Barista Tasks",
+      "items": [
+        "Tamp",
+        "Steam Milk",
+        "Pull Shots",
+        "Grind Beans"
+      ]
+    },
+    {
+      "id": "cafe-areas",
+      "label": "Cafe Areas",
+      "items": [
+        "Counter",
+        "Bar",
+        "Patio",
+        "Reading Nook"
+      ]
+    },
+    {
+      "id": "coffee-roast-levels",
+      "label": "Coffee Roast Levels",
+      "items": [
+        "Light Roast",
+        "Medium Roast",
+        "Medium-Dark Roast",
+        "Dark Roast"
+      ]
+    },
+    {
+      "id": "coffee-bean-origins",
+      "label": "Coffee Bean Origins",
+      "items": [
+        "Ethiopian",
+        "Colombian",
+        "Brazilian",
+        "Sumatran"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "cafe",
+    "categoryType": "classification"
+  }
+}

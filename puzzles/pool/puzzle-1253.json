@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1253",
+  "title": "Dance Company",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "dance-company-roles",
+      "label": "Dance Troupe Roles",
+      "items": [
+        "Choreographer",
+        "Soloist",
+        "Principal Dancer",
+        "Understudy"
+      ]
+    },
+    {
+      "id": "dance-rehearsal-spaces",
+      "label": "Dance Rehearsal Spaces",
+      "items": [
+        "Ballroom",
+        "Dance Studio",
+        "Stage",
+        "Dance Floor"
+      ]
+    },
+    {
+      "id": "rehearsal-room-fixtures",
+      "label": "Rehearsal Room Fixtures",
+      "items": [
+        "Barre",
+        "Wall Mirror",
+        "Marley Floor",
+        "Upright Piano"
+      ]
+    },
+    {
+      "id": "dance-recital-keepsakes",
+      "label": "Dance Recital Keepsakes",
+      "items": [
+        "Program",
+        "Ticket Stub",
+        "Bouquet",
+        "Ribbon Award"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "ballet and dance",
+    "categoryType": "classification"
+  }
+}
