@@ -1,0 +1,50 @@
+{
+  "id": "de-1234",
+  "title": "Kindergarten-Aktivitäten",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Kindergarten"
+  },
+  "groups": [
+    {
+      "id": "bewegung",
+      "label": "Im Bewegungsraum",
+      "items": [
+        "Klettergerüst",
+        "Turnmatte",
+        "Ball",
+        "Reifen"
+      ]
+    },
+    {
+      "id": "musik",
+      "label": "Beim Musizieren",
+      "items": [
+        "Gitarre",
+        "Tambourin",
+        "Klanghölzer",
+        "Triangel"
+      ]
+    },
+    {
+      "id": "malen",
+      "label": "Beim Malen",
+      "items": [
+        "Pinsel",
+        "Wasserfarben",
+        "Wachsmalkreide",
+        "Malkittel"
+      ]
+    },
+    {
+      "id": "bauecke",
+      "label": "In der Bauecke",
+      "items": [
+        "Bauklötze",
+        "Spielzeugkran",
+        "Holzeisenbahn",
+        "Spielzeugbagger"
+      ]
+    }
+  ]
+}

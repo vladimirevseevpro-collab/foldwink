@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1280",
+  "title": "Snack and Nap",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "nap-time-items",
+      "label": "Nap Time Items",
+      "items": [
+        "Cot",
+        "Blanket",
+        "Pillow",
+        "Sleep Sack"
+      ]
+    },
+    {
+      "id": "snack-time-foods",
+      "label": "Snack Time Foods",
+      "items": [
+        "Apple Slices",
+        "Cheese Cubes",
+        "Crackers",
+        "Grapes"
+      ]
+    },
+    {
+      "id": "cleanup-supplies",
+      "label": "Cleanup Supplies",
+      "items": [
+        "Paper Towel",
+        "Wet Wipe",
+        "Trash Bin",
+        "Hand Broom"
+      ]
+    },
+    {
+      "id": "quiet-time-activities",
+      "label": "Quiet Time Activities",
+      "items": [
+        "Puzzle",
+        "Coloring Book",
+        "Playdough",
+        "Bead Stringing"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "kindergarten",
+    "categoryType": "function"
+  }
+}

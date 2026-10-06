@@ -1,0 +1,50 @@
+{
+  "id": "de-1236",
+  "title": "Der Müller im Alltag",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Windmühle"
+  },
+  "groups": [
+    {
+      "id": "kleidung",
+      "label": "Kleidung des Müllers",
+      "items": [
+        "Mütze",
+        "Schürze",
+        "Kittel",
+        "Stiefel"
+      ]
+    },
+    {
+      "id": "tiere",
+      "label": "Tiere auf dem Mühlenhof",
+      "items": [
+        "Huhn",
+        "Katze",
+        "Hund",
+        "Ziege"
+      ]
+    },
+    {
+      "id": "laden",
+      "label": "Im Mühlenladen",
+      "items": [
+        "Mehlsack",
+        "Brotlaib",
+        "Kuchen",
+        "Kekse"
+      ]
+    },
+    {
+      "id": "fahrzeuge",
+      "label": "Fahrzeuge auf dem Land",
+      "items": [
+        "Traktor",
+        "Pferdewagen",
+        "Karren",
+        "Fahrrad"
+      ]
+    }
+  ]
+}

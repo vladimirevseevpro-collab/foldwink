@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1279",
+  "title": "Spa Getaway",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "spa-treatments",
+      "label": "Spa Treatments",
+      "items": [
+        "Massage",
+        "Facial",
+        "Body Scrub",
+        "Manicure"
+      ]
+    },
+    {
+      "id": "spa-accessories",
+      "label": "Spa Accessories",
+      "items": [
+        "Bathrobe",
+        "Slippers",
+        "Locker Key",
+        "Headband"
+      ]
+    },
+    {
+      "id": "towel-types",
+      "label": "Towel Types",
+      "items": [
+        "Washcloth",
+        "Hand Towel",
+        "Bath Towel",
+        "Bath Sheet"
+      ]
+    },
+    {
+      "id": "relaxation-scents",
+      "label": "Relaxation Scents",
+      "items": [
+        "Lavender",
+        "Eucalyptus",
+        "Vanilla",
+        "Chamomile"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "hotel",
+    "categoryType": "classification"
+  }
+}

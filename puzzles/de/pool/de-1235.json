@@ -1,0 +1,50 @@
+{
+  "id": "de-1235",
+  "title": "In der Windmühle",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Windmühle"
+  },
+  "groups": [
+    {
+      "id": "teile",
+      "label": "Teile der Windmühle",
+      "items": [
+        "Flügel",
+        "Achse",
+        "Mühlstein",
+        "Getriebe"
+      ]
+    },
+    {
+      "id": "getreide",
+      "label": "Getreide im Mühlenlager",
+      "items": [
+        "Roggen",
+        "Gerste",
+        "Hafer",
+        "Mais"
+      ]
+    },
+    {
+      "id": "produkte",
+      "label": "Mühlenprodukte",
+      "items": [
+        "Mehl",
+        "Grieß",
+        "Kleie",
+        "Schrot"
+      ]
+    },
+    {
+      "id": "werkzeug",
+      "label": "Werkzeuge des Müllers",
+      "items": [
+        "Sieb",
+        "Waage",
+        "Schaufel",
+        "Besen"
+      ]
+    }
+  ]
+}

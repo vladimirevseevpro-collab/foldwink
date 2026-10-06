@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1282",
+  "title": "Outdoor Recess",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "playground-structures",
+      "label": "Playground Structures",
+      "items": [
+        "Slide",
+        "Swing Set",
+        "Climbing Wall",
+        "See-Saw"
+      ]
+    },
+    {
+      "id": "sandbox-tools",
+      "label": "Sandbox Tools",
+      "items": [
+        "Bucket",
+        "Shovel",
+        "Rake",
+        "Sifter"
+      ]
+    },
+    {
+      "id": "sports-day-gear",
+      "label": "Sports Day Gear",
+      "items": [
+        "Beanbag",
+        "Hula Hoop",
+        "Parachute",
+        "Relay Baton"
+      ]
+    },
+    {
+      "id": "outdoor-weather",
+      "label": "Outdoor Weather",
+      "items": [
+        "Sunny",
+        "Rainy",
+        "Windy",
+        "Snowy"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "kindergarten",
+    "categoryType": "classification"
+  }
+}

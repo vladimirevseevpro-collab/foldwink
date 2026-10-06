@@ -1,0 +1,50 @@
+{
+  "id": "de-1237",
+  "title": "Beim Imker",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Imkerei"
+  },
+  "groups": [
+    {
+      "id": "bienenstock",
+      "label": "Im Bienenstock",
+      "items": [
+        "Wabe",
+        "Honig",
+        "Pollen",
+        "Wachs"
+      ]
+    },
+    {
+      "id": "werkzeug",
+      "label": "Werkzeug des Imkers",
+      "items": [
+        "Smoker",
+        "Stockmeißel",
+        "Wabenzange",
+        "Abkehrbesen"
+      ]
+    },
+    {
+      "id": "kleidung",
+      "label": "Kleidung des Imkers",
+      "items": [
+        "Schleier",
+        "Hut",
+        "Handschuhe",
+        "Overall"
+      ]
+    },
+    {
+      "id": "beute",
+      "label": "Teile der Bienenbeute",
+      "items": [
+        "Rähmchen",
+        "Honigraum",
+        "Flugloch",
+        "Deckel"
+      ]
+    }
+  ]
+}

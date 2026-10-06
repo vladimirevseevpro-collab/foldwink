@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1281",
+  "title": "Classroom Helpers",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "classroom-jobs",
+      "label": "Classroom Jobs",
+      "items": [
+        "Line Leader",
+        "Plant Waterer",
+        "Door Holder",
+        "Board Cleaner"
+      ]
+    },
+    {
+      "id": "block-corner",
+      "label": "Block Corner",
+      "items": [
+        "Wooden Blocks",
+        "Cardboard Bricks",
+        "Toy Cars",
+        "Traffic Signs"
+      ]
+    },
+    {
+      "id": "dress-up-box",
+      "label": "Dress-Up Box",
+      "items": [
+        "Firefighter Helmet",
+        "Tutu",
+        "Cape",
+        "Fairy Wings"
+      ]
+    },
+    {
+      "id": "music-time-instruments",
+      "label": "Music Time Instruments",
+      "items": [
+        "Tambourine",
+        "Triangle",
+        "Rhythm Sticks",
+        "Xylophone"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "kindergarten",
+    "categoryType": "action"
+  }
+}

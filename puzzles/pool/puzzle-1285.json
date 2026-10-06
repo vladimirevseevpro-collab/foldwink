@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1285",
+  "title": "The Kiosk",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "hot-food",
+      "label": "Hot Food",
+      "items": [
+        "Hot Dog",
+        "Corn Dog",
+        "Nachos",
+        "Soft Pretzel"
+      ]
+    },
+    {
+      "id": "automotive-fluids",
+      "label": "Automotive Fluids",
+      "items": [
+        "Transmission Fluid",
+        "Brake Fluid",
+        "Power Steering Fluid",
+        "Windshield Washer Fluid"
+      ]
+    },
+    {
+      "id": "lottery-corner",
+      "label": "Lottery Corner",
+      "items": [
+        "Scratch Ticket",
+        "Lotto Slip",
+        "Lucky Numbers",
+        "Jackpot Poster"
+      ]
+    },
+    {
+      "id": "car-accessories",
+      "label": "Car Accessories",
+      "items": [
+        "Phone Charger",
+        "Air Freshener",
+        "Windshield Shade",
+        "Trash Bag"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "gas station",
+    "categoryType": "classification"
+  }
+}

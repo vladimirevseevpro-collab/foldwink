@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1283",
+  "title": "Fix the Sink",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "plumbing-parts",
+      "label": "Plumbing Parts",
+      "items": [
+        "Pipe",
+        "Valve",
+        "Flange",
+        "Drain Trap"
+      ]
+    },
+    {
+      "id": "plumbing-tools",
+      "label": "Plumbing Tools",
+      "items": [
+        "Pipe Wrench",
+        "Plunger",
+        "Drain Snake",
+        "Basin Wrench"
+      ]
+    },
+    {
+      "id": "adhesives-and-sealants",
+      "label": "Adhesives and Sealants",
+      "items": [
+        "Wood Glue",
+        "Epoxy",
+        "Caulk",
+        "Duct Tape"
+      ]
+    },
+    {
+      "id": "marking-and-measuring",
+      "label": "Marking and Measuring",
+      "items": [
+        "Tape Measure",
+        "Spirit Level",
+        "Carpenter's Square",
+        "Calipers"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "hardware store",
+    "categoryType": "function"
+  }
+}

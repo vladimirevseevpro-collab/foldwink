@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1284",
+  "title": "Paperback Picks",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "fiction-categories",
+      "label": "Fiction Categories",
+      "items": [
+        "Mystery",
+        "Thriller",
+        "Romance",
+        "Science Fiction"
+      ]
+    },
+    {
+      "id": "kids-book-sections",
+      "label": "Kids' Book Sections",
+      "items": [
+        "Picture Books",
+        "Chapter Books",
+        "Early Readers",
+        "Board Books"
+      ]
+    },
+    {
+      "id": "bookstore-tasks",
+      "label": "Bookstore Tasks",
+      "items": [
+        "Shelving",
+        "Stocking",
+        "Recommending",
+        "Cashiering"
+      ]
+    },
+    {
+      "id": "reading-accessories",
+      "label": "Reading Accessories",
+      "items": [
+        "Bookmark",
+        "Reading Light",
+        "Page Holder",
+        "Book Sleeve"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "bookstore",
+    "categoryType": "classification"
+  }
+}

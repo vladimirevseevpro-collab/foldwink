@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1287",
+  "title": "Rock shop",
+  "difficulty": "medium",
+  "editorialSummary": "A rock shop where Calcite seems sedimentary because limestone contains it, yet the mineral group lists minerals, so Calcite stays a rock-forming mineral.",
+  "meta": {
+    "theme": "geology",
+    "categoryType": "classification"
+  },
+  "groups": [
+    {
+      "id": "igneous",
+      "label": "Igneous rocks",
+      "revealHint": "From magma",
+      "items": [
+        "Granite",
+        "Basalt",
+        "Obsidian",
+        "Pumice"
+      ]
+    },
+    {
+      "id": "sedimentary",
+      "label": "Sedimentary rocks",
+      "revealHint": "Layered",
+      "items": [
+        "Sandstone",
+        "Limestone",
+        "Shale",
+        "Conglomerate"
+      ]
+    },
+    {
+      "id": "metamorphic",
+      "label": "Metamorphic rocks",
+      "revealHint": "Squeezed",
+      "items": [
+        "Marble",
+        "Slate",
+        "Gneiss",
+        "Schist"
+      ]
+    },
+    {
+      "id": "minerals",
+      "label": "Rock-forming minerals",
+      "revealHint": "Minerals",
+      "items": [
+        "Quartz",
+        "Feldspar",
+        "Mica",
+        "Calcite"
+      ]
+    }
+  ]
+}

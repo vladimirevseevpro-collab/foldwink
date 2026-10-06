@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1286",
+  "title": "Closing Time",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "litter-to-clear",
+      "label": "Litter to Clear",
+      "items": [
+        "Candy Wrapper",
+        "Coffee Cup",
+        "Cigarette Butt",
+        "Gas Receipt"
+      ]
+    },
+    {
+      "id": "closing-tasks",
+      "label": "Closing Tasks",
+      "items": [
+        "Mop Floor",
+        "Wipe Counters",
+        "Empty Bins",
+        "Stock Shelves"
+      ]
+    },
+    {
+      "id": "restock-items",
+      "label": "Restock Items",
+      "items": [
+        "Soda Cases",
+        "Snack Boxes",
+        "Ice Bags",
+        "Propane Tanks"
+      ]
+    },
+    {
+      "id": "gas-station-fixtures",
+      "label": "Gas Station Fixtures",
+      "items": [
+        "Pump",
+        "Nozzle",
+        "Air Hose",
+        "Vending Machine"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "gas station",
+    "categoryType": "action"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "de-1239",
+  "title": "Der Winzer",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Weinberg"
+  },
+  "groups": [
+    {
+      "id": "aufgaben",
+      "label": "Aufgaben des Winzers",
+      "items": [
+        "Anbauen",
+        "Pflegen",
+        "Ernten",
+        "Keltern"
+      ]
+    },
+    {
+      "id": "werkzeuge",
+      "label": "Werkzeuge des Winzers",
+      "items": [
+        "Rebmesser",
+        "Schere",
+        "Tragekorb",
+        "Mostwaage"
+      ]
+    },
+    {
+      "id": "anbaugebiete",
+      "label": "Anbaugebiete in Deutschland",
+      "items": [
+        "Mosel",
+        "Rheingau",
+        "Pfalz",
+        "Baden"
+      ]
+    },
+    {
+      "id": "verkauf",
+      "label": "Was der Winzer verkauft",
+      "items": [
+        "Weißwein",
+        "Rotwein",
+        "Rosé",
+        "Sekt"
+      ]
+    }
+  ]
+}

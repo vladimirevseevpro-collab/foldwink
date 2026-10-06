@@ -1,0 +1,50 @@
+{
+  "id": "de-1233",
+  "title": "Ankunft im Hotel",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Hotel"
+  },
+  "groups": [
+    {
+      "id": "rezeption",
+      "label": "An der Rezeption",
+      "items": [
+        "Schlüssel",
+        "Meldeschein",
+        "Ausweis",
+        "Kreditkarte"
+      ]
+    },
+    {
+      "id": "hotelzimmer",
+      "label": "Im Hotelzimmer",
+      "items": [
+        "Bett",
+        "Nachttisch",
+        "Kleiderschrank",
+        "Schreibtisch"
+      ]
+    },
+    {
+      "id": "hotelbad",
+      "label": "Im Hotelbad",
+      "items": [
+        "Föhn",
+        "Bademantel",
+        "Duschgel",
+        "Handtuch"
+      ]
+    },
+    {
+      "id": "fruehstueck",
+      "label": "Beim Frühstücksbuffet",
+      "items": [
+        "Brötchen",
+        "Marmelade",
+        "Rührei",
+        "Orangensaft"
+      ]
+    }
+  ]
+}

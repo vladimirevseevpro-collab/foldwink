@@ -1,0 +1,50 @@
+{
+  "id": "de-1238",
+  "title": "Das Bienenvolk",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Imkerei"
+  },
+  "groups": [
+    {
+      "id": "bewohner",
+      "label": "Bewohner des Stocks",
+      "items": [
+        "Königin",
+        "Arbeiterin",
+        "Drohne",
+        "Larve"
+      ]
+    },
+    {
+      "id": "koerper",
+      "label": "Körperteile der Biene",
+      "items": [
+        "Fühler",
+        "Flügel",
+        "Beine",
+        "Rüssel"
+      ]
+    },
+    {
+      "id": "wohnungen",
+      "label": "Typische Bienenwohnungen",
+      "items": [
+        "Bienenstock",
+        "Bienenkorb",
+        "Baumhöhle",
+        "Mauerritze"
+      ]
+    },
+    {
+      "id": "sammeln",
+      "label": "Was Bienen sammeln",
+      "items": [
+        "Nektar",
+        "Pollen",
+        "Harz",
+        "Wasser"
+      ]
+    }
+  ]
+}

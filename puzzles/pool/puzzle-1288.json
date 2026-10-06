@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1288",
+  "title": "Pool safety",
+  "difficulty": "medium",
+  "editorialSummary": "A pool-safety set where Rescue tube seems like a rescue step, but the steps group lists actions, so the tube stays lifeguard equipment.",
+  "meta": {
+    "theme": "swimming",
+    "categoryType": "function"
+  },
+  "groups": [
+    {
+      "id": "equip",
+      "label": "Lifeguard equipment",
+      "revealHint": "Rescue kit",
+      "items": [
+        "Rescue tube",
+        "Whistle",
+        "Backboard",
+        "First-aid kit"
+      ]
+    },
+    {
+      "id": "rules",
+      "label": "Pool rules",
+      "revealHint": "Safety rules",
+      "items": [
+        "No running",
+        "No diving",
+        "Shower first",
+        "Children supervised"
+      ]
+    },
+    {
+      "id": "rescue",
+      "label": "Rescue steps",
+      "revealHint": "Rescue steps",
+      "items": [
+        "Spot the swimmer",
+        "Reach with a pole",
+        "Throw a float",
+        "Enter the water"
+      ]
+    },
+    {
+      "id": "hazards",
+      "label": "Water hazards",
+      "revealHint": "Hazards",
+      "items": [
+        "Rip current",
+        "Deep water",
+        "Cold shock",
+        "Slippery deck"
+      ]
+    }
+  ]
+}
