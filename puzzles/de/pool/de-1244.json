@@ -1,0 +1,55 @@
+{
+  "id": "de-1244",
+  "title": "Wäsche trocknen",
+  "difficulty": "easy",
+  "tags": [
+    "Waschsalon",
+    "Alltag"
+  ],
+  "groups": [
+    {
+      "id": "drying_equipment",
+      "label": "Dinge zum Trocknen von Wäsche",
+      "items": [
+        "Wäscheständer",
+        "Wäscheleine",
+        "Wäscheklammer",
+        "Wäschetrockner"
+      ]
+    },
+    {
+      "id": "striped_animals",
+      "label": "Tiere mit auffälligen Streifen",
+      "items": [
+        "Zebra",
+        "Tiger",
+        "Okapi",
+        "Streifenhörnchen"
+      ]
+    },
+    {
+      "id": "sewing_tools",
+      "label": "Werkzeuge zum Nähen",
+      "items": [
+        "Nähnadel",
+        "Fingerhut",
+        "Nahttrenner",
+        "Stecknadeln"
+      ]
+    },
+    {
+      "id": "school_supplies",
+      "label": "Dinge im Federmäppchen",
+      "items": [
+        "Bleistift",
+        "Radiergummi",
+        "Lineal",
+        "Spitzer"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Waschsalon",
+    "categoryType": "function"
+  }
+}

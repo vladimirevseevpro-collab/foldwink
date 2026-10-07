@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1352",
+  "title": "Counter Service",
+  "difficulty": "medium",
+  "editorialSummary": "A mailing label carries an address, so it can resemble an address component. The labels distinguish the physical mailing item from the parts of an address itself.",
+  "groups": [
+    {
+      "id": "mailing_items",
+      "label": "Mail preparation items",
+      "revealHint": "MAIL",
+      "items": [
+        "Envelope",
+        "Stamp",
+        "Parcel",
+        "Label"
+      ]
+    },
+    {
+      "id": "counter_tools",
+      "label": "Tools at a mail counter",
+      "revealHint": "COUNTER",
+      "items": [
+        "Scale",
+        "Tape",
+        "Scissors",
+        "Pen"
+      ]
+    },
+    {
+      "id": "address_parts",
+      "label": "Parts of an address",
+      "revealHint": "ADDRESS",
+      "items": [
+        "Name",
+        "Street",
+        "City",
+        "Postcode"
+      ]
+    },
+    {
+      "id": "delivery_updates",
+      "label": "Delivery status words",
+      "revealHint": "STATUS",
+      "items": [
+        "Sent",
+        "Delayed",
+        "Returned",
+        "Delivered"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "postal counter",
+    "categoryType": "function"
+  }
+}

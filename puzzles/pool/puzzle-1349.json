@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1349",
+  "title": "Clear Vision",
+  "difficulty": "medium",
+  "editorialSummary": "A lens is one optical component, while socks, shoes, gloves, and earrings are whole goods commonly sold as pairs. The narrower label resolves the overlap.",
+  "groups": [
+    {
+      "id": "eyewear_parts",
+      "label": "Parts of eyeglasses",
+      "revealHint": "EYEWEAR",
+      "items": [
+        "Lens",
+        "Frame",
+        "Hinge",
+        "Nose pad"
+      ]
+    },
+    {
+      "id": "eye_colors",
+      "label": "Common eye colors",
+      "revealHint": "EYE COLORS",
+      "items": [
+        "Blue",
+        "Green",
+        "Hazel",
+        "Brown"
+      ]
+    },
+    {
+      "id": "eye_chart_directions",
+      "label": "Eye-chart directions",
+      "revealHint": "DIRECTIONS",
+      "items": [
+        "Up",
+        "Down",
+        "Left",
+        "Right"
+      ]
+    },
+    {
+      "id": "paired_wearables",
+      "label": "Whole goods sold as pairs",
+      "revealHint": "PAIRS",
+      "items": [
+        "Socks",
+        "Shoes",
+        "Gloves",
+        "Earrings"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "optician",
+    "categoryType": "part"
+  }
+}

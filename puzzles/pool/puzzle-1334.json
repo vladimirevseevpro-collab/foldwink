@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1334",
+  "title": "Clay or Covering",
+  "difficulty": "medium",
+  "editorialSummary": "A ceramic floor tile looks like pottery by material, but the labels distinguish vessels from floor coverings.",
+  "groups": [
+    {
+      "id": "ceramic_vessels",
+      "label": "Ceramic vessels for the home",
+      "revealHint": "VESSELS",
+      "items": [
+        "Flower vase",
+        "Planter",
+        "Coffee cup",
+        "Cereal bowl"
+      ]
+    },
+    {
+      "id": "floor_coverings",
+      "label": "Floor coverings for a home",
+      "revealHint": "FLOORS",
+      "items": [
+        "Ceramic floor tile",
+        "Parquet flooring",
+        "Laminate flooring",
+        "Cork flooring"
+      ]
+    },
+    {
+      "id": "baking_spices",
+      "label": "Spices used in baking",
+      "revealHint": "SPICES",
+      "items": [
+        "Cinnamon",
+        "Nutmeg",
+        "Ground ginger",
+        "Allspice"
+      ]
+    },
+    {
+      "id": "clock_parts",
+      "label": "Parts you can see on a wall clock",
+      "revealHint": "CLOCK",
+      "items": [
+        "Clock face",
+        "Hour hand",
+        "Minute hand",
+        "Frame"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "pottery",
+    "categoryType": "material_and_use"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-1251",
+  "title": "Der gepackte Schulranzen",
+  "difficulty": "easy",
+  "tags": [
+    "Schulranzen",
+    "Schule"
+  ],
+  "groups": [
+    {
+      "id": "school_bag_items",
+      "label": "Dinge im Schulranzen",
+      "items": [
+        "Federmäppchen",
+        "Brotdose",
+        "Hausaufgabenheft",
+        "Regenhülle"
+      ]
+    },
+    {
+      "id": "garden_tools",
+      "label": "Werkzeuge im Garten",
+      "items": [
+        "Spaten",
+        "Harke",
+        "Laubbläser",
+        "Gartenschere"
+      ]
+    },
+    {
+      "id": "stone_fruits",
+      "label": "Früchte mit hartem Steinkern",
+      "items": [
+        "Pfirsich",
+        "Aprikose",
+        "Nektarine",
+        "Kirsche"
+      ]
+    },
+    {
+      "id": "card_games",
+      "label": "Kartenspiele",
+      "items": [
+        "Skat",
+        "Doppelkopf",
+        "Uno",
+        "Quartett"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Schulranzen",
+    "categoryType": "location"
+  }
+}

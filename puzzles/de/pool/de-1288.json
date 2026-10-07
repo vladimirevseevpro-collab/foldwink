@@ -1,0 +1,56 @@
+{
+  "id": "de-1288",
+  "title": "In der Glaserei",
+  "difficulty": "medium",
+  "editorialSummary": "Spiegelglas bezeichnet Glas für Spiegel, während ein Spiegel ein fertiger Gegenstand ist. Die Labels trennen Materialarten von hergestellten Glasprodukten.",
+  "groups": [
+    {
+      "id": "glass_types",
+      "label": "Glassorten",
+      "revealHint": "GLASSORTEN",
+      "items": [
+        "Fensterglas",
+        "Milchglas",
+        "Sicherheitsglas",
+        "Spiegelglas"
+      ]
+    },
+    {
+      "id": "glass_products",
+      "label": "Fertige Glasprodukte",
+      "revealHint": "PRODUKTE",
+      "items": [
+        "Spiegel",
+        "Trinkglas",
+        "Vase",
+        "Glasschale"
+      ]
+    },
+    {
+      "id": "glass_tools",
+      "label": "Werkzeuge der Glaserei",
+      "revealHint": "WERKZEUGE",
+      "items": [
+        "Glasschneider",
+        "Saugnapf",
+        "Maßband",
+        "Schraubendreher"
+      ]
+    },
+    {
+      "id": "glazing_work",
+      "label": "Arbeiten mit Glas",
+      "revealHint": "ARBEITEN",
+      "items": [
+        "Messen",
+        "Zuschneiden",
+        "Abdichten",
+        "Einsetzen"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Glaserei",
+    "categoryType": "function"
+  }
+}

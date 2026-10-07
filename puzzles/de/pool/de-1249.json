@@ -1,0 +1,55 @@
+{
+  "id": "de-1249",
+  "title": "Im Kräutergarten",
+  "difficulty": "easy",
+  "tags": [
+    "Kräutergarten",
+    "Garten"
+  ],
+  "groups": [
+    {
+      "id": "culinary_herbs",
+      "label": "Kräuter zum Kochen",
+      "items": [
+        "Basilikum",
+        "Schnittlauch",
+        "Petersilie",
+        "Kresse"
+      ]
+    },
+    {
+      "id": "citrus_fruits",
+      "label": "Früchte aus der Zitrusfamilie",
+      "items": [
+        "Zitrone",
+        "Limette",
+        "Orange",
+        "Grapefruit"
+      ]
+    },
+    {
+      "id": "baking_nuts",
+      "label": "Nüsse zum Backen",
+      "items": [
+        "Haselnuss",
+        "Mandel",
+        "Walnuss",
+        "Pistazie"
+      ]
+    },
+    {
+      "id": "kitchen_appliances",
+      "label": "Elektrische Geräte in der Küche",
+      "items": [
+        "Toaster",
+        "Wasserkocher",
+        "Handmixer",
+        "Mikrowelle"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Kräutergarten",
+    "categoryType": "use"
+  }
+}

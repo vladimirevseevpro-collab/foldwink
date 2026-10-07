@@ -1,0 +1,56 @@
+{
+  "id": "de-1276",
+  "title": "Pflanzen für den Garten",
+  "difficulty": "medium",
+  "editorialSummary": "Ein Steckling wächst später selbstständig, ist aber noch kein ausgewachsener Gartenstrauch. Die Markierungen unterscheiden junge Pflanzen von fertigen Gehölzen.",
+  "groups": [
+    {
+      "id": "young_garden_plants",
+      "label": "Junge Pflanzen zum Einsetzen",
+      "revealHint": "JUNGPFLANZEN",
+      "items": [
+        "Tomatensetzling",
+        "Erdbeerableger",
+        "Rosensteckling",
+        "Kräuterjungpflanze"
+      ]
+    },
+    {
+      "id": "garden_shrubs",
+      "label": "Ausgewachsene Gartensträucher",
+      "revealHint": "STRÄUCHER",
+      "items": [
+        "Flieder",
+        "Hortensie",
+        "Johannisbeerstrauch",
+        "Buchsbaum"
+      ]
+    },
+    {
+      "id": "soil_additives",
+      "label": "Zusätze zur Verbesserung der Erde",
+      "revealHint": "ERDE",
+      "items": [
+        "Kompost",
+        "Perlit",
+        "Blähton",
+        "Hornspäne"
+      ]
+    },
+    {
+      "id": "garden_tools",
+      "label": "Handwerkzeuge für die Gartenarbeit",
+      "revealHint": "WERKZEUGE",
+      "items": [
+        "Handschaufel",
+        "Gartenkralle",
+        "Unkrautstecher",
+        "Pflanzholz"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Gärtnerei",
+    "categoryType": "life_stage_and_function"
+  }
+}

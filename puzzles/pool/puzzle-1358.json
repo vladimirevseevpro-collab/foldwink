@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1358",
+  "title": "Airport Security",
+  "difficulty": "medium",
+  "editorialSummary": "A security tray temporarily holds a passenger's belongings, so it may suggest the bag group. It is screening equipment, not a bag carried through the airport.",
+  "groups": [
+    {
+      "id": "screening_equipment",
+      "label": "Equipment at a security checkpoint",
+      "revealHint": "SCREENING",
+      "items": [
+        "Security tray",
+        "X-ray scanner",
+        "Metal detector",
+        "Conveyor belt"
+      ]
+    },
+    {
+      "id": "travel_bags",
+      "label": "Types of bags carried by air travelers",
+      "revealHint": "TRAVEL BAGS",
+      "items": [
+        "Suitcase",
+        "Backpack",
+        "Duffel bag",
+        "Tote bag"
+      ]
+    },
+    {
+      "id": "screening_pocket_items",
+      "label": "Small items removed before screening",
+      "revealHint": "POCKET ITEMS",
+      "items": [
+        "Belt",
+        "Wristwatch",
+        "Loose coins",
+        "Keys"
+      ]
+    },
+    {
+      "id": "travel_documents",
+      "label": "Documents used for air travel",
+      "revealHint": "TRAVEL PAPERS",
+      "items": [
+        "Passport",
+        "ID card",
+        "Boarding pass",
+        "Travel itinerary"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "airport security",
+    "categoryType": "function"
+  }
+}

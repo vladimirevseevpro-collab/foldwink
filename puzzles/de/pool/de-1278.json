@@ -1,0 +1,56 @@
+{
+  "id": "de-1278",
+  "title": "Im Bürgerzentrum",
+  "difficulty": "medium",
+  "editorialSummary": "Eine Werkstatt ist ein Raum und kann zugleich an einen praktischen Workshop denken lassen. Die Labels unterscheiden einen Ort von einer Veranstaltung.",
+  "groups": [
+    {
+      "id": "community_rooms",
+      "label": "Räume im Bürgerzentrum",
+      "revealHint": "RÄUME",
+      "items": [
+        "Saal",
+        "Küche",
+        "Büro",
+        "Werkstatt"
+      ]
+    },
+    {
+      "id": "community_events",
+      "label": "Veranstaltungen im Bürgerzentrum",
+      "revealHint": "TERMINE",
+      "items": [
+        "Kurs",
+        "Sitzung",
+        "Vortrag",
+        "Ausstellung"
+      ]
+    },
+    {
+      "id": "community_staff",
+      "label": "Beschäftigte im Bürgerzentrum",
+      "revealHint": "PERSONAL",
+      "items": [
+        "Hausmeister",
+        "Empfangskraft",
+        "Verwalter",
+        "Zentrumsleiter"
+      ]
+    },
+    {
+      "id": "visitor_belongings",
+      "label": "Persönliche Dinge von Besuchern",
+      "revealHint": "BESITZ",
+      "items": [
+        "Schlüsselbund",
+        "Tasche",
+        "Regenschirm",
+        "Trinkflasche"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Bürgerzentrum",
+    "categoryType": "place"
+  }
+}

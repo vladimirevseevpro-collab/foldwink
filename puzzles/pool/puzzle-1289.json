@@ -1,0 +1,55 @@
+{
+  "id": "puzzle-1289",
+  "title": "Packing Day",
+  "difficulty": "easy",
+  "tags": [
+    "moving",
+    "everyday"
+  ],
+  "groups": [
+    {
+      "id": "box_cushioning",
+      "label": "Materials that cushion fragile items in a box",
+      "items": [
+        "Bubble wrap",
+        "Packing paper",
+        "Foam peanuts",
+        "Corrugated inserts"
+      ]
+    },
+    {
+      "id": "cardinal_directions",
+      "label": "Months with exactly 30 days",
+      "items": [
+        "April",
+        "June",
+        "September",
+        "November"
+      ]
+    },
+    {
+      "id": "punctuation",
+      "label": "Common punctuation marks",
+      "items": [
+        "Comma",
+        "Period",
+        "Question mark",
+        "Exclamation mark"
+      ]
+    },
+    {
+      "id": "kitchen_knives",
+      "label": "Common kitchen knives",
+      "items": [
+        "Chef's knife",
+        "Paring knife",
+        "Bread knife",
+        "Carving knife"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "moving_house",
+    "categoryType": "classification"
+  }
+}

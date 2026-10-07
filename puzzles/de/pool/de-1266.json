@@ -1,0 +1,55 @@
+{
+  "id": "de-1266",
+  "title": "Im Tanzstudio",
+  "difficulty": "easy",
+  "tags": [
+    "Tanzstudio",
+    "Tanzunterricht"
+  ],
+  "groups": [
+    {
+      "id": "dance_styles",
+      "label": "Tanzstile",
+      "items": [
+        "Ballett",
+        "Walzer",
+        "Tango",
+        "Hip-Hop"
+      ]
+    },
+    {
+      "id": "dance_clothes",
+      "label": "Kleidung für den Tanzunterricht",
+      "items": [
+        "Tanzschuhe",
+        "Trikot",
+        "Leggings",
+        "Haarband"
+      ]
+    },
+    {
+      "id": "dance_moves",
+      "label": "Bewegungen beim Tanzen",
+      "items": [
+        "Drehen",
+        "Springen",
+        "Schwingen",
+        "Klatschen"
+      ]
+    },
+    {
+      "id": "studio_fixtures",
+      "label": "Ausstattung eines Tanzstudios",
+      "items": [
+        "Spiegelwand",
+        "Ballettstange",
+        "Musikanlage",
+        "Parkettboden"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Tanzstudio",
+    "categoryType": "activity"
+  }
+}

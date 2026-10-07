@@ -1,0 +1,55 @@
+{
+  "id": "puzzle-1319",
+  "title": "At The Kitchen Sink",
+  "difficulty": "easy",
+  "tags": [
+    "kitchen sink",
+    "cleaning"
+  ],
+  "groups": [
+    {
+      "id": "washing_tools",
+      "label": "Tools for washing dishes by hand",
+      "items": [
+        "Sponge",
+        "Brush",
+        "Scouring pad",
+        "Rubber glove"
+      ]
+    },
+    {
+      "id": "sink_plumbing",
+      "label": "Parts of a sink's plumbing",
+      "items": [
+        "Faucet",
+        "Drain",
+        "Pipe",
+        "Strainer"
+      ]
+    },
+    {
+      "id": "dishware",
+      "label": "Everyday drinking and serving dishes",
+      "items": [
+        "Plate",
+        "Bowl",
+        "Cup",
+        "Glass"
+      ]
+    },
+    {
+      "id": "washing_actions",
+      "label": "Actions used to wash dishes",
+      "items": [
+        "Rinse",
+        "Soak",
+        "Scrub",
+        "Dry"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "kitchen sink",
+    "categoryType": "function"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-1256",
+  "title": "Im Bauernhofladen",
+  "difficulty": "easy",
+  "tags": [
+    "Bauernhofladen",
+    "Einkauf"
+  ],
+  "groups": [
+    {
+      "id": "farm_dairy",
+      "label": "Frische Produkte vom Bauernhof",
+      "items": [
+        "Frische Eier",
+        "Rohmilch",
+        "Bauernbutter",
+        "Ziegenkäse"
+      ]
+    },
+    {
+      "id": "sewing_kit",
+      "label": "Dinge in einem Nähset",
+      "items": [
+        "Nadel",
+        "Faden",
+        "Fingerhut",
+        "Nahttrenner"
+      ]
+    },
+    {
+      "id": "bridge_types",
+      "label": "Bauformen von Brücken",
+      "items": [
+        "Bogenbrücke",
+        "Hängebrücke",
+        "Balkenbrücke",
+        "Schrägseilbrücke"
+      ]
+    },
+    {
+      "id": "zodiac_signs",
+      "label": "Sternzeichen",
+      "items": [
+        "Widder",
+        "Stier",
+        "Zwillinge",
+        "Krebs"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Bauernhofladen",
+    "categoryType": "source"
+  }
+}

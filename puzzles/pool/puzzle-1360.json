@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1360",
+  "title": "At The Chess Club",
+  "difficulty": "medium",
+  "editorialSummary": "A score sheet is part of a tournament's paperwork, even though it records moves made with the board and clock. The labels separate records from objects in the club room.",
+  "groups": [
+    {
+      "id": "chess_pieces",
+      "label": "Pieces on a chessboard",
+      "revealHint": "CHESS PIECES",
+      "items": [
+        "King",
+        "Queen",
+        "Rook",
+        "Knight"
+      ]
+    },
+    {
+      "id": "board_geometry",
+      "label": "Spaces and directions on a chessboard",
+      "revealHint": "BOARD GEOMETRY",
+      "items": [
+        "Square",
+        "Row",
+        "Column",
+        "Diagonal"
+      ]
+    },
+    {
+      "id": "tournament_paperwork",
+      "label": "Records and paperwork at a tournament",
+      "revealHint": "TOURNAMENT RECORDS",
+      "items": [
+        "Pairing sheet",
+        "Score sheet",
+        "Result slip",
+        "Name tag"
+      ]
+    },
+    {
+      "id": "club_room_objects",
+      "label": "Objects found in a chess club room",
+      "revealHint": "CLUB ROOM",
+      "items": [
+        "Chessboard",
+        "Chess clock",
+        "Wall clock",
+        "Trophy"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "chess club",
+    "categoryType": "function"
+  }
+}

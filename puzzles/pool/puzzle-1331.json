@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1331",
+  "title": "Tattoo Studio",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "tattoo_equipment",
+      "label": "Equipment used by a tattoo artist",
+      "items": [
+        "Tattoo machine",
+        "Needle",
+        "Power supply",
+        "Ink cup"
+      ]
+    },
+    {
+      "id": "tattoo_artwork",
+      "label": "Elements of a tattoo design",
+      "items": [
+        "Outline",
+        "Lettering",
+        "Shading",
+        "Color"
+      ]
+    },
+    {
+      "id": "tattoo_aftercare",
+      "label": "Tattoo aftercare supplies",
+      "items": [
+        "Ointment",
+        "Bandage",
+        "Cleanser",
+        "Lotion"
+      ]
+    },
+    {
+      "id": "tattoo_paperwork",
+      "label": "Paperwork at a tattoo studio",
+      "items": [
+        "Consent form",
+        "Intake form",
+        "Appointment card",
+        "Aftercare sheet"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Tattoo studio",
+    "categoryType": "place"
+  }
+}

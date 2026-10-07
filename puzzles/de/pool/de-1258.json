@@ -1,0 +1,55 @@
+{
+  "id": "de-1258",
+  "title": "Vorrat im Haus",
+  "difficulty": "easy",
+  "tags": [
+    "Speisekammer",
+    "Vorräte"
+  ],
+  "groups": [
+    {
+      "id": "baking_ingredients",
+      "label": "Grundzutaten zum Kuchenbacken",
+      "items": [
+        "Mehl",
+        "Zucker",
+        "Hefe",
+        "Kakao"
+      ]
+    },
+    {
+      "id": "dry_spices",
+      "label": "Trockene Gewürze",
+      "items": [
+        "Salz",
+        "Pfeffer",
+        "Currypulver",
+        "Oregano"
+      ]
+    },
+    {
+      "id": "canned_food",
+      "label": "Gemüse aus der Konservendose",
+      "items": [
+        "Erbsen",
+        "Mais",
+        "Bohnen",
+        "Tomaten"
+      ]
+    },
+    {
+      "id": "pasta_types",
+      "label": "Nudelsorten im Vorratsschrank",
+      "items": [
+        "Spaghetti",
+        "Tortellini",
+        "Tagliatelle",
+        "Makkaroni"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Speisekammer",
+    "categoryType": "type"
+  }
+}

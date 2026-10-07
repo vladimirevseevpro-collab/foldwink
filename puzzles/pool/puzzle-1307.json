@@ -1,0 +1,55 @@
+{
+  "id": "puzzle-1307",
+  "title": "Choosing New Shoes",
+  "difficulty": "easy",
+  "tags": [
+    "shoe store",
+    "shopping"
+  ],
+  "groups": [
+    {
+      "id": "shoe_care",
+      "label": "Products for caring for shoes",
+      "items": [
+        "Shoe polish",
+        "Shoe brush",
+        "Shoe tree",
+        "Waterproofing spray"
+      ]
+    },
+    {
+      "id": "garden_birds",
+      "label": "Backyard birds that visit feeders",
+      "items": [
+        "Robin",
+        "Blue tit",
+        "House sparrow",
+        "Greenfinch"
+      ]
+    },
+    {
+      "id": "kitchen_bowls",
+      "label": "Dishes used to serve soup",
+      "items": [
+        "Soup bowl",
+        "Broth cup",
+        "Serving tureen",
+        "Ramen bowl"
+      ]
+    },
+    {
+      "id": "rock_types",
+      "label": "Common types of rock",
+      "items": [
+        "Granite",
+        "Basalt",
+        "Marble",
+        "Slate"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "shoe store",
+    "categoryType": "function"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1345",
+  "title": "Under The Stars",
+  "difficulty": "medium",
+  "editorialSummary": "A constellation chart shows star patterns but is a printed guide, not a constellation. The labels separate represented patterns from paper materials.",
+  "groups": [
+    {
+      "id": "constellations",
+      "label": "Recognized constellations",
+      "revealHint": "PATTERNS",
+      "items": [
+        "Orion",
+        "Cassiopeia",
+        "Ursa Major",
+        "Lyra"
+      ]
+    },
+    {
+      "id": "astronomy_prints",
+      "label": "Printed astronomy guides",
+      "revealHint": "PRINTED",
+      "items": [
+        "Constellation chart",
+        "Star atlas",
+        "Moon map",
+        "Planetarium program"
+      ]
+    },
+    {
+      "id": "solar_system_bodies",
+      "label": "Bodies in our solar system",
+      "revealHint": "SOLAR SYSTEM",
+      "items": [
+        "Mars",
+        "Jupiter",
+        "Europa",
+        "Ceres"
+      ]
+    },
+    {
+      "id": "night_sky_tools",
+      "label": "Tools for observing the night sky",
+      "revealHint": "OBSERVE",
+      "items": [
+        "Telescope",
+        "Binoculars",
+        "Tripod",
+        "Red-light torch"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "planetarium",
+    "categoryType": "object_and_representation"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "puzzle-1295",
+  "title": "Roadside Pause",
+  "difficulty": "easy",
+  "tags": [
+    "road-trip",
+    "everyday"
+  ],
+  "groups": [
+    {
+      "id": "rest_area_amenities",
+      "label": "Amenities at a rest area",
+      "items": [
+        "Public restroom",
+        "Picnic table",
+        "Vending machine",
+        "Drinking fountain"
+      ]
+    },
+    {
+      "id": "kitchen_herbs",
+      "label": "Common juice flavors",
+      "items": [
+        "Apple",
+        "Orange",
+        "Grape",
+        "Cranberry"
+      ]
+    },
+    {
+      "id": "beans_and_pulses",
+      "label": "Common beans and pulses",
+      "items": [
+        "Kidney bean",
+        "Chickpea",
+        "Black bean",
+        "Lentil"
+      ]
+    },
+    {
+      "id": "dance_styles",
+      "label": "Partner dance styles",
+      "items": [
+        "Waltz",
+        "Tango",
+        "Salsa",
+        "Foxtrot"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "road_trip",
+    "categoryType": "place"
+  }
+}

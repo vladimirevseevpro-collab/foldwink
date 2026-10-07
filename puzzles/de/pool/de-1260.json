@@ -1,0 +1,55 @@
+{
+  "id": "de-1260",
+  "title": "Bezahlen im Laden",
+  "difficulty": "easy",
+  "tags": [
+    "Supermarktkasse",
+    "Einkauf"
+  ],
+  "groups": [
+    {
+      "id": "payment_methods",
+      "label": "Zahlungsarten an der Kasse",
+      "items": [
+        "Bargeld",
+        "Girokarte",
+        "Kreditkarte",
+        "Geschenkgutschein"
+      ]
+    },
+    {
+      "id": "checkout_steps",
+      "label": "Schritte an der Supermarktkasse",
+      "items": [
+        "Scannen",
+        "Wiegen",
+        "Bezahlen",
+        "Einpacken"
+      ]
+    },
+    {
+      "id": "shopping_containers",
+      "label": "Behälter für den Einkauf",
+      "items": [
+        "Einkaufskorb",
+        "Einkaufswagen",
+        "Stoffbeutel",
+        "Papiertüte"
+      ]
+    },
+    {
+      "id": "basic_groceries",
+      "label": "Einfache Lebensmittel vom Kassenband",
+      "items": [
+        "Brot",
+        "Milch",
+        "Eier",
+        "Käse"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Supermarktkasse",
+    "categoryType": "function"
+  }
+}

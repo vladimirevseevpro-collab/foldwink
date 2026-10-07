@@ -1,0 +1,55 @@
+{
+  "id": "puzzle-1305",
+  "title": "Inside The Greenhouse",
+  "difficulty": "easy",
+  "tags": [
+    "greenhouse plants",
+    "gardening"
+  ],
+  "groups": [
+    {
+      "id": "greenhouse_crops",
+      "label": "Vegetables commonly grown in greenhouses",
+      "items": [
+        "Tomato",
+        "Cucumber",
+        "Sweet pepper",
+        "Eggplant"
+      ]
+    },
+    {
+      "id": "kitchen_spices",
+      "label": "Spices used in savory cooking",
+      "items": [
+        "Black pepper",
+        "Cumin",
+        "Turmeric",
+        "Coriander"
+      ]
+    },
+    {
+      "id": "musical_strings",
+      "label": "String instruments played with a bow",
+      "items": [
+        "Violin",
+        "Viola",
+        "Cello",
+        "Erhu"
+      ]
+    },
+    {
+      "id": "weather_events",
+      "label": "Common weather conditions",
+      "items": [
+        "Rain",
+        "Snow",
+        "Fog",
+        "Hail"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "greenhouse plants",
+    "categoryType": "habitat_and_use"
+  }
+}

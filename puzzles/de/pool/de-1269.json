@@ -1,0 +1,55 @@
+{
+  "id": "de-1269",
+  "title": "Auf der Terrasse",
+  "difficulty": "easy",
+  "tags": [
+    "Terrasse",
+    "Draußen"
+  ],
+  "groups": [
+    {
+      "id": "terrace_furniture",
+      "label": "Möbel und Sonnenschutz auf der Terrasse",
+      "items": [
+        "Gartentisch",
+        "Gartenstuhl",
+        "Liegestuhl",
+        "Sonnenschirm"
+      ]
+    },
+    {
+      "id": "plant_containers",
+      "label": "Gefäße für Pflanzen",
+      "items": [
+        "Blumentopf",
+        "Kräutertopf",
+        "Pflanzkübel",
+        "Blumenkasten"
+      ]
+    },
+    {
+      "id": "outdoor_conditions",
+      "label": "Bedingungen im Freien",
+      "items": [
+        "Sonnenschein",
+        "Schatten",
+        "Wind",
+        "Regen"
+      ]
+    },
+    {
+      "id": "outdoor_dining",
+      "label": "Dinge für eine Mahlzeit im Freien",
+      "items": [
+        "Grill",
+        "Teller",
+        "Glas",
+        "Serviette"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Terrasse",
+    "categoryType": "place"
+  }
+}

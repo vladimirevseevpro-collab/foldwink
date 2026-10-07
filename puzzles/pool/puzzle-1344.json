@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1344",
+  "title": "Picking The Orchard",
+  "difficulty": "medium",
+  "editorialSummary": "An orchard ladder is used during a harvest, but it is equipment rather than fruit. The label for the first group names tools for picking fruit.",
+  "groups": [
+    {
+      "id": "fruit_picking_tools",
+      "label": "Tools for picking orchard fruit",
+      "revealHint": "PICKING",
+      "items": [
+        "Fruit-picking pole",
+        "Harvest bag",
+        "Orchard ladder",
+        "Fruit picker basket"
+      ]
+    },
+    {
+      "id": "orchard_fruit",
+      "label": "Fruit commonly grown in orchards",
+      "revealHint": "FRUIT",
+      "items": [
+        "Apricot",
+        "Pear",
+        "Plum",
+        "Quince"
+      ]
+    },
+    {
+      "id": "garden_pollinators",
+      "label": "Animals that pollinate garden flowers",
+      "revealHint": "POLLINATORS",
+      "items": [
+        "Honeybee",
+        "Bumblebee",
+        "Butterfly",
+        "Hoverfly"
+      ]
+    },
+    {
+      "id": "pie_baking_gear",
+      "label": "Tools used to bake a pie",
+      "revealHint": "BAKING",
+      "items": [
+        "Pie dish",
+        "Rolling pin",
+        "Pastry brush",
+        "Baking tray"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "orchard",
+    "categoryType": "tool_and_product"
+  }
+}

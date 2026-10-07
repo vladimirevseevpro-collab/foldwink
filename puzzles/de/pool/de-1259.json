@@ -1,0 +1,55 @@
+{
+  "id": "de-1259",
+  "title": "Sauberes Auto",
+  "difficulty": "easy",
+  "tags": [
+    "Autowäsche",
+    "Autopflege"
+  ],
+  "groups": [
+    {
+      "id": "wash_tools",
+      "label": "Werkzeuge für die Autowäsche",
+      "items": [
+        "Schwamm",
+        "Eimer",
+        "Schlauch",
+        "Bürste"
+      ]
+    },
+    {
+      "id": "exterior_parts",
+      "label": "Äußere Teile eines Autos",
+      "items": [
+        "Reifen",
+        "Stoßfänger",
+        "Seitenspiegel",
+        "Windschutzscheibe"
+      ]
+    },
+    {
+      "id": "car_care_products",
+      "label": "Pflegemittel fürs Auto",
+      "items": [
+        "Autoshampoo",
+        "Glasreiniger",
+        "Autowachs",
+        "Autopolitur"
+      ]
+    },
+    {
+      "id": "wash_steps",
+      "label": "Schritte bei der Handwäsche",
+      "items": [
+        "abspülen",
+        "einseifen",
+        "schrubben",
+        "trocknen"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Autowäsche",
+    "categoryType": "action"
+  }
+}

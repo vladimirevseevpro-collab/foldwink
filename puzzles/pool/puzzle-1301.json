@@ -1,0 +1,55 @@
+{
+  "id": "puzzle-1301",
+  "title": "Farmers Market Morning",
+  "difficulty": "easy",
+  "tags": [
+    "farmers market",
+    "food"
+  ],
+  "groups": [
+    {
+      "id": "salad_greens",
+      "label": "Leafy greens for salads",
+      "items": [
+        "Spinach",
+        "Arugula",
+        "Watercress",
+        "Romaine lettuce"
+      ]
+    },
+    {
+      "id": "sewing_tools",
+      "label": "Tools used for sewing",
+      "items": [
+        "Thimble",
+        "Seam ripper",
+        "Pincushion",
+        "Tailor's chalk"
+      ]
+    },
+    {
+      "id": "percussion_instruments",
+      "label": "Instruments played by striking",
+      "items": [
+        "Snare drum",
+        "Cymbals",
+        "Tambourine",
+        "Triangle"
+      ]
+    },
+    {
+      "id": "flower_parts",
+      "label": "Parts of a typical flower",
+      "items": [
+        "Petal",
+        "Sepal",
+        "Stamen",
+        "Pistil"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "farmers market",
+    "categoryType": "food"
+  }
+}

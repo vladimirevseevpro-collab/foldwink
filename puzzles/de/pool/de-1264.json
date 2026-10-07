@@ -1,0 +1,55 @@
+{
+  "id": "de-1264",
+  "title": "Im Juweliergeschäft",
+  "difficulty": "easy",
+  "tags": [
+    "Juweliergeschäft",
+    "Schmuck"
+  ],
+  "groups": [
+    {
+      "id": "jewelry_pieces",
+      "label": "Schmuckstücke beim Juwelier",
+      "items": [
+        "Ring",
+        "Halskette",
+        "Armband",
+        "Brosche"
+      ]
+    },
+    {
+      "id": "gemstones",
+      "label": "Edelsteine im Schmuck",
+      "items": [
+        "Diamant",
+        "Rubin",
+        "Opal",
+        "Smaragd"
+      ]
+    },
+    {
+      "id": "jewelry_tools",
+      "label": "Werkzeuge und Hilfsmittel für die Schmuckarbeit",
+      "items": [
+        "Lupe",
+        "Pinzette",
+        "Feile",
+        "Poliertuch"
+      ]
+    },
+    {
+      "id": "jewelry_documents",
+      "label": "Belege für Kauf und Reparatur",
+      "items": [
+        "Preisschild",
+        "Echtheitszertifikat",
+        "Reparaturauftrag",
+        "Garantiekarte"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Juweliergeschäft",
+    "categoryType": "function"
+  }
+}

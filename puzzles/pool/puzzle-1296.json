@@ -1,0 +1,55 @@
+{
+  "id": "puzzle-1296",
+  "title": "Ready for Trouble",
+  "difficulty": "easy",
+  "tags": [
+    "road-trip",
+    "everyday"
+  ],
+  "groups": [
+    {
+      "id": "car_emergency_kit",
+      "label": "Emergency items carried in a car",
+      "items": [
+        "Jumper cables",
+        "Reflective warning triangle",
+        "Spare tire",
+        "First-aid kit"
+      ]
+    },
+    {
+      "id": "bus_stop_visuals",
+      "label": "Fixtures outside a city bus stop",
+      "items": [
+        "Bench",
+        "Shelter",
+        "Stop pole",
+        "Litter bin"
+      ]
+    },
+    {
+      "id": "music_notes",
+      "label": "Fingers other than the thumb",
+      "items": [
+        "Index finger",
+        "Middle finger",
+        "Ring finger",
+        "Little finger"
+      ]
+    },
+    {
+      "id": "tableware",
+      "label": "Items used to set a table",
+      "items": [
+        "Dinner plate",
+        "Fork",
+        "Water glass",
+        "Napkin"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "road_trip",
+    "categoryType": "use_and_place"
+  }
+}

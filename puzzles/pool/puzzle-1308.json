@@ -1,0 +1,55 @@
+{
+  "id": "puzzle-1308",
+  "title": "A Camping Tent",
+  "difficulty": "easy",
+  "tags": [
+    "camping tent",
+    "outdoors"
+  ],
+  "groups": [
+    {
+      "id": "tent_parts",
+      "label": "Parts used to pitch a tent",
+      "items": [
+        "Tent poles",
+        "Groundsheet",
+        "Tent pegs",
+        "Guy lines"
+      ]
+    },
+    {
+      "id": "breakfast_drinks",
+      "label": "Drinks served at breakfast",
+      "items": [
+        "Tea",
+        "Coffee",
+        "Cocoa",
+        "Orange juice"
+      ]
+    },
+    {
+      "id": "school_subjects",
+      "label": "Subjects taught at school",
+      "items": [
+        "Mathematics",
+        "History",
+        "Biology",
+        "Art"
+      ]
+    },
+    {
+      "id": "kitchen_herbs",
+      "label": "Fresh herbs that season food",
+      "items": [
+        "Sage",
+        "Oregano",
+        "Dill",
+        "Chervil"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "camping tent",
+    "categoryType": "part_and_function"
+  }
+}

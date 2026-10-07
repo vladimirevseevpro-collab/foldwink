@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1329",
+  "title": "Coin Purse",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "purse_closures",
+      "label": "Coin purse closures",
+      "items": [
+        "Buckle",
+        "Clasp",
+        "Toggle",
+        "Drawstring"
+      ]
+    },
+    {
+      "id": "purse_materials",
+      "label": "Materials used for small purses",
+      "items": [
+        "Leather",
+        "Canvas",
+        "Nylon",
+        "Vinyl"
+      ]
+    },
+    {
+      "id": "purse_shapes",
+      "label": "Shapes of small purses",
+      "items": [
+        "Round",
+        "Oval",
+        "Rectangular",
+        "Flat"
+      ]
+    },
+    {
+      "id": "purse_care",
+      "label": "Ways to care for a purse",
+      "items": [
+        "Wipe",
+        "Air-dry",
+        "Polish",
+        "Mend"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Coin purse",
+    "categoryType": "object"
+  }
+}

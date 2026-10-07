@@ -1,0 +1,56 @@
+{
+  "id": "de-1286",
+  "title": "Im Tonstudio",
+  "difficulty": "medium",
+  "editorialSummary": "Hall kann als gewünschter Audioeffekt dienen oder eine Aufnahme stören. Die Labels trennen bewusst erzeugten Klang von einer technischen Aufnahmestörung.",
+  "groups": [
+    {
+      "id": "room_effects",
+      "label": "Bewusste Audioeffekte",
+      "revealHint": "AUDIOEFFEKTE",
+      "items": [
+        "Hall",
+        "Zeitlupe",
+        "Rückwärtswiedergabe",
+        "Stimmverfremdung"
+      ]
+    },
+    {
+      "id": "recording_faults",
+      "label": "Technische Aufnahmestörungen",
+      "revealHint": "STÖRUNGEN",
+      "items": [
+        "Brummen",
+        "Knacken",
+        "Übersteuern",
+        "Aussetzer"
+      ]
+    },
+    {
+      "id": "studio_equipment",
+      "label": "Geräte im Tonstudio",
+      "revealHint": "GERÄTE",
+      "items": [
+        "Mikrofon",
+        "Kopfhörer",
+        "Mischpult",
+        "Recorder"
+      ]
+    },
+    {
+      "id": "editing_steps",
+      "label": "Schritte der Audiobearbeitung",
+      "revealHint": "BEARBEITUNG",
+      "items": [
+        "Schneiden",
+        "Abmischen",
+        "Speichern",
+        "Exportieren"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Tonstudio",
+    "categoryType": "function"
+  }
+}

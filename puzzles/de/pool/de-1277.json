@@ -1,0 +1,56 @@
+{
+  "id": "de-1277",
+  "title": "Im Wahllokal",
+  "difficulty": "medium",
+  "editorialSummary": "Ein Kandidat ist eine Person im Wahlprozess und kann zunächst auch wie ein Wahlbegriff wirken. Die Labels trennen Teilnehmer von abstrakten politischen Begriffen.",
+  "groups": [
+    {
+      "id": "election_material",
+      "label": "Material für die Stimmabgabe",
+      "revealHint": "WAHLMATERIAL",
+      "items": [
+        "Stimmzettel",
+        "Umschlag",
+        "Wahlurne",
+        "Kugelschreiber"
+      ]
+    },
+    {
+      "id": "election_roles",
+      "label": "Personen mit einer Rolle bei der Wahl",
+      "revealHint": "WAHLROLLEN",
+      "items": [
+        "Wähler",
+        "Wahlhelfer",
+        "Kandidat",
+        "Beobachter"
+      ]
+    },
+    {
+      "id": "election_terms",
+      "label": "Begriffe aus dem Wahlergebnis",
+      "revealHint": "WAHLBEGRIFFE",
+      "items": [
+        "Stimme",
+        "Stimmenzahl",
+        "Ergebnis",
+        "Mehrheit"
+      ]
+    },
+    {
+      "id": "building_parts",
+      "label": "Bauteile eines Gebäudes",
+      "revealHint": "GEBÄUDE",
+      "items": [
+        "Eingang",
+        "Flur",
+        "Treppe",
+        "Tür"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Wahllokal",
+    "categoryType": "function"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "puzzle-1313",
+  "title": "On The Soccer Field",
+  "difficulty": "easy",
+  "tags": [
+    "soccer field",
+    "sports"
+  ],
+  "groups": [
+    {
+      "id": "field_markings",
+      "label": "Markings on a soccer field",
+      "items": [
+        "Goal line",
+        "Touchline",
+        "Corner arc",
+        "Center circle"
+      ]
+    },
+    {
+      "id": "player_gear",
+      "label": "Soccer player gear",
+      "items": [
+        "Jersey",
+        "Cleats",
+        "Shin guards",
+        "Socks"
+      ]
+    },
+    {
+      "id": "match_roles",
+      "label": "People with roles in a match",
+      "items": [
+        "Striker",
+        "Goalkeeper",
+        "Referee",
+        "Captain"
+      ]
+    },
+    {
+      "id": "match_actions",
+      "label": "Actions during play",
+      "items": [
+        "Pass",
+        "Shoot",
+        "Dribble",
+        "Tackle"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "soccer field",
+    "categoryType": "sports"
+  }
+}

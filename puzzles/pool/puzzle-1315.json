@@ -1,0 +1,55 @@
+{
+  "id": "puzzle-1315",
+  "title": "In A Parking Garage",
+  "difficulty": "easy",
+  "tags": [
+    "parking garage",
+    "driving"
+  ],
+  "groups": [
+    {
+      "id": "garage_routes",
+      "label": "Routes and spaces in a parking garage",
+      "items": [
+        "Ramp",
+        "Level",
+        "Aisle",
+        "Exit"
+      ]
+    },
+    {
+      "id": "garage_equipment",
+      "label": "Equipment used to enter or pay",
+      "items": [
+        "Barrier",
+        "Gate",
+        "Ticket machine",
+        "Pay station"
+      ]
+    },
+    {
+      "id": "car_body",
+      "label": "Parts of a car body",
+      "items": [
+        "Tire",
+        "Hood",
+        "Trunk",
+        "Windshield"
+      ]
+    },
+    {
+      "id": "parking_records",
+      "label": "Parking tickets and proof of payment",
+      "items": [
+        "Parking ticket",
+        "Validation code",
+        "Parking permit",
+        "Receipt"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "parking garage",
+    "categoryType": "place"
+  }
+}

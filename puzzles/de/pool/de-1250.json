@@ -1,0 +1,55 @@
+{
+  "id": "de-1250",
+  "title": "Vögel beobachten",
+  "difficulty": "easy",
+  "tags": [
+    "Vogelbeobachtung",
+    "Natur"
+  ],
+  "groups": [
+    {
+      "id": "birdwatching_gear",
+      "label": "Ausrüstung zur Vogelbeobachtung",
+      "items": [
+        "Fernglas",
+        "Spektiv",
+        "Bestimmungsbuch",
+        "Beobachtungsnotizbuch"
+      ]
+    },
+    {
+      "id": "winter_clothes",
+      "label": "Kleidung für den Winter",
+      "items": [
+        "Mantel",
+        "Mütze",
+        "Schal",
+        "Ohrenschützer"
+      ]
+    },
+    {
+      "id": "pasta_shapes",
+      "label": "Beliebte Nudelformen",
+      "items": [
+        "Penne",
+        "Fusilli",
+        "Farfalle",
+        "Rigatoni"
+      ]
+    },
+    {
+      "id": "bathroom_fixtures",
+      "label": "Sanitärobjekte im Bad",
+      "items": [
+        "Waschbecken",
+        "Badewanne",
+        "Dusche",
+        "Bidet"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Vogelbeobachtung",
+    "categoryType": "function"
+  }
+}

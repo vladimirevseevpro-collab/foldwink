@@ -1,0 +1,56 @@
+{
+  "id": "de-1275",
+  "title": "Räder im Fahrradkeller",
+  "difficulty": "medium",
+  "editorialSummary": "Ein Rücklicht kann mit einem Rückstrahler verwechselt werden. Die Markierung trennt aktive Beleuchtung von passiver Reflexion.",
+  "groups": [
+    {
+      "id": "bike_lights",
+      "label": "Aktive Beleuchtung am Fahrrad",
+      "revealHint": "LICHT",
+      "items": [
+        "Frontscheinwerfer",
+        "Rücklicht",
+        "Dynamolicht",
+        "Batterielampe"
+      ]
+    },
+    {
+      "id": "bike_reflectors",
+      "label": "Passive Reflektoren am Fahrrad",
+      "revealHint": "REFLEKTOREN",
+      "items": [
+        "Speichenreflektor",
+        "Pedalreflektor",
+        "Rückstrahler",
+        "Reflektorband"
+      ]
+    },
+    {
+      "id": "bike_locks",
+      "label": "Sicherungen gegen Fahrraddiebstahl",
+      "revealHint": "SCHLOSS",
+      "items": [
+        "Bügelschloss",
+        "Kettenschloss",
+        "Faltschloss",
+        "Rahmenschloss"
+      ]
+    },
+    {
+      "id": "bike_carrying",
+      "label": "Zubehör für Gepäck am Fahrrad",
+      "revealHint": "GEPÄCK",
+      "items": [
+        "Gepäckträger",
+        "Lenkertasche",
+        "Fahrradkorb",
+        "Packtasche"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Fahrradkeller",
+    "categoryType": "function"
+  }
+}

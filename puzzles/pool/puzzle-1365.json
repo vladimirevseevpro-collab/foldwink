@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1365",
+  "title": "Ferry Terminal",
+  "difficulty": "medium",
+  "editorialSummary": "Deck number can suggest an onboard amenity, but the labels distinguish a ticket detail from a place to spend time.",
+  "groups": [
+    {
+      "items": [
+        "Departure port",
+        "Arrival port",
+        "Sailing time",
+        "Deck number"
+      ],
+      "id": "ticket_details",
+      "revealHint": "TICKET DETAILS",
+      "label": "Ferry ticket details"
+    },
+    {
+      "items": [
+        "Café",
+        "Lounge",
+        "Gift shop",
+        "Sun deck"
+      ],
+      "id": "amenities",
+      "revealHint": "FERRY AMENITIES",
+      "label": "Ferry amenities"
+    },
+    {
+      "items": [
+        "Life jacket",
+        "Lifeboat",
+        "Flare",
+        "Muster station"
+      ],
+      "id": "emergency_arrangements",
+      "revealHint": "EMERGENCY ARRANGEMENTS",
+      "label": "Ferry emergency arrangements"
+    },
+    {
+      "items": [
+        "Car",
+        "Van",
+        "Motorcycle",
+        "Camper"
+      ],
+      "id": "car_ferry_vehicles",
+      "revealHint": "CARRIED VEHICLES",
+      "label": "Vehicles carried on a car ferry"
+    }
+  ],
+  "meta": {
+    "theme": "ferry terminal",
+    "categoryType": "function"
+  }
+}

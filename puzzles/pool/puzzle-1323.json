@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1323",
+  "title": "Sleepover Night",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "sleep_setup",
+      "label": "Things for a sleep setup",
+      "items": [
+        "Pillow",
+        "Blanket",
+        "Sleeping bag",
+        "Air mattress"
+      ]
+    },
+    {
+      "id": "sleepwear",
+      "label": "Things worn at bedtime",
+      "items": [
+        "Pajamas",
+        "Robe",
+        "Nightshirt",
+        "Slippers"
+      ]
+    },
+    {
+      "id": "wash_up",
+      "label": "Bedtime wash-up items",
+      "items": [
+        "Toothbrush",
+        "Toothpaste",
+        "Hairbrush",
+        "Face wash"
+      ]
+    },
+    {
+      "id": "breakfast",
+      "label": "Breakfast foods after the sleepover",
+      "items": [
+        "Cereal",
+        "Toast",
+        "Pancakes",
+        "Yogurt"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Sleepover",
+    "categoryType": "event"
+  }
+}

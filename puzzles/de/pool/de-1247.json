@@ -1,0 +1,55 @@
+{
+  "id": "de-1247",
+  "title": "Fahrrad reparieren",
+  "difficulty": "easy",
+  "tags": [
+    "Fahrradwerkstatt",
+    "Alltag"
+  ],
+  "groups": [
+    {
+      "id": "bike_repair_tools",
+      "label": "Dinge zur Fahrradreparatur",
+      "items": [
+        "Flickzeug",
+        "Reifenheber",
+        "Fahrradpumpe",
+        "Inbusschlüssel"
+      ]
+    },
+    {
+      "id": "baking_ingredients",
+      "label": "Zutaten zum Backen",
+      "items": [
+        "Mehl",
+        "Backpulver",
+        "Vanillezucker",
+        "Kakaopulver"
+      ]
+    },
+    {
+      "id": "bathroom_fixtures",
+      "label": "Ausstattung im Badezimmer",
+      "items": [
+        "Waschbecken",
+        "Badewanne",
+        "Dusche",
+        "Toilette"
+      ]
+    },
+    {
+      "id": "weather_events",
+      "label": "Wettererscheinungen",
+      "items": [
+        "Regen",
+        "Schnee",
+        "Nebel",
+        "Hagel"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Fahrradwerkstatt",
+    "categoryType": "function"
+  }
+}

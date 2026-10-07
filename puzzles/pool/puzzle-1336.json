@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1336",
+  "title": "Rain or Bath",
+  "difficulty": "medium",
+  "editorialSummary": "A bathrobe first looks like clothing, but the competing label is specifically for rainy-weather gear; the other group contains bathroom textiles.",
+  "groups": [
+    {
+      "id": "rain_gear",
+      "label": "Clothing and gear for rainy weather",
+      "revealHint": "RAIN GEAR",
+      "items": [
+        "Raincoat",
+        "Rain pants",
+        "Wellington boots",
+        "Rain hat"
+      ]
+    },
+    {
+      "id": "bath_textiles",
+      "label": "Textiles kept by a bathtub",
+      "revealHint": "BATH",
+      "items": [
+        "Bathrobe",
+        "Bath towel",
+        "Washcloth",
+        "Bath mat"
+      ]
+    },
+    {
+      "id": "liquid_sweeteners",
+      "label": "Common zippered bags and cases",
+      "revealHint": "ZIPPER",
+      "items": [
+        "Backpack",
+        "Suitcase",
+        "Pencil case",
+        "Toiletry bag"
+      ]
+    },
+    {
+      "id": "basic_math",
+      "label": "Jewelry worn as accessories",
+      "revealHint": "JEWELRY",
+      "items": [
+        "Ring",
+        "Necklace",
+        "Bracelet",
+        "Earrings"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "clothesline",
+    "categoryType": "place_and_use"
+  }
+}

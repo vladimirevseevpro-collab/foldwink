@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1325",
+  "title": "Wedding Reception",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "wedding_roles",
+      "label": "People with wedding roles",
+      "items": [
+        "Bride",
+        "Groom",
+        "Officiant",
+        "Witness"
+      ]
+    },
+    {
+      "id": "ceremony_moments",
+      "label": "Moments in the ceremony",
+      "items": [
+        "Processional",
+        "Vows",
+        "Ring exchange",
+        "First kiss"
+      ]
+    },
+    {
+      "id": "reception_moments",
+      "label": "Moments at the reception",
+      "items": [
+        "Grand entrance",
+        "First dance",
+        "Toast",
+        "Cake cutting"
+      ]
+    },
+    {
+      "id": "reception_details",
+      "label": "Printed details for guests",
+      "items": [
+        "Menu",
+        "Welcome sign",
+        "Dietary label",
+        "Place card"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Wedding reception",
+    "categoryType": "event"
+  }
+}

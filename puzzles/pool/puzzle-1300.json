@@ -1,0 +1,55 @@
+{
+  "id": "puzzle-1300",
+  "title": "A Backyard Birdhouse",
+  "difficulty": "easy",
+  "tags": [
+    "birdhouse",
+    "garden"
+  ],
+  "groups": [
+    {
+      "id": "cavity_nesting_birds",
+      "label": "Birds that nest in cavities",
+      "items": [
+        "Bluebird",
+        "Woodpecker",
+        "Chickadee",
+        "Nuthatch"
+      ]
+    },
+    {
+      "id": "school_subjects",
+      "label": "Subjects taught in school",
+      "items": [
+        "Mathematics",
+        "History",
+        "Geography",
+        "Biology"
+      ]
+    },
+    {
+      "id": "hot_drinks",
+      "label": "Warm drinks",
+      "items": [
+        "Tea",
+        "Coffee",
+        "Hot chocolate",
+        "Herbal infusion"
+      ]
+    },
+    {
+      "id": "hand_tools",
+      "label": "Tools with a cutting edge",
+      "items": [
+        "Scissors",
+        "Kitchen knife",
+        "Pruning shears",
+        "Utility knife"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "birdhouse",
+    "categoryType": "habitat"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-1253",
+  "title": "Die Waldhütte",
+  "difficulty": "easy",
+  "tags": [
+    "Waldhütte",
+    "Ausflug"
+  ],
+  "groups": [
+    {
+      "id": "fireplace_items",
+      "label": "Dinge für ein Kaminfeuer",
+      "items": [
+        "Brennholz",
+        "Anzündholz",
+        "Feuerhaken",
+        "Anzündwürfel"
+      ]
+    },
+    {
+      "id": "flower_parts",
+      "label": "Teile einer Pflanze",
+      "items": [
+        "Wurzel",
+        "Stängel",
+        "Blatt",
+        "Blüte"
+      ]
+    },
+    {
+      "id": "school_subjects",
+      "label": "Schulfächer",
+      "items": [
+        "Mathematik",
+        "Geschichte",
+        "Biologie",
+        "Geografie"
+      ]
+    },
+    {
+      "id": "musical_brass",
+      "label": "Instrumente aus der Blechbläserfamilie",
+      "items": [
+        "Trompete",
+        "Posaune",
+        "Tuba",
+        "Flügelhorn"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Waldhütte",
+    "categoryType": "function"
+  }
+}

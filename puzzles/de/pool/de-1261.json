@@ -1,0 +1,55 @@
+{
+  "id": "de-1261",
+  "title": "Am Gartenzaun",
+  "difficulty": "easy",
+  "tags": [
+    "Gartenzaun",
+    "Garten"
+  ],
+  "groups": [
+    {
+      "id": "fence_types",
+      "label": "Arten von Gartenzäunen",
+      "items": [
+        "Lattenzaun",
+        "Maschendrahtzaun",
+        "Gabionenzaun",
+        "Sichtschutzzaun"
+      ]
+    },
+    {
+      "id": "fence_materials",
+      "label": "Materialien für einen Zaun",
+      "items": [
+        "Holzlatte",
+        "Drahtrolle",
+        "Metallpfosten",
+        "Kunststoffbrett"
+      ]
+    },
+    {
+      "id": "gate_hardware",
+      "label": "Beschläge an einem Gartentor",
+      "items": [
+        "Scharnier",
+        "Riegel",
+        "Türgriff",
+        "Vorhängeschloss"
+      ]
+    },
+    {
+      "id": "fence_tools",
+      "label": "Werkzeuge für den Zaunbau",
+      "items": [
+        "Hammer",
+        "Akkuschrauber",
+        "Wasserwaage",
+        "Zange"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Gartenzaun",
+    "categoryType": "type"
+  }
+}

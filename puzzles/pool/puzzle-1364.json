@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1364",
+  "title": "At The Paintball Arena",
+  "difficulty": "medium",
+  "editorialSummary": "A barrel can be a component of a paintball marker or a field obstacle used as cover. The labels distinguish marker equipment from arena features.",
+  "groups": [
+    {
+      "id": "marker_equipment",
+      "label": "Equipment for using and cleaning a paintball marker",
+      "revealHint": "MARKER GEAR",
+      "items": [
+        "Marker",
+        "Hopper",
+        "Barrel squeegee",
+        "Air tank"
+      ]
+    },
+    {
+      "id": "protective_gear",
+      "label": "Protective gear worn by players",
+      "revealHint": "PROTECTION",
+      "items": [
+        "Mask",
+        "Chest protector",
+        "Gloves",
+        "Neck guard"
+      ]
+    },
+    {
+      "id": "arena_features",
+      "label": "Features used as cover in an arena",
+      "revealHint": "ARENA COVER",
+      "items": [
+        "Barrel",
+        "Inflatable bunker",
+        "Wall",
+        "Hay bale"
+      ]
+    },
+    {
+      "id": "player_actions",
+      "label": "Actions during a paintball match",
+      "revealHint": "MATCH ACTIONS",
+      "items": [
+        "Aim",
+        "Reload",
+        "Hide",
+        "Tag"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "paintball arena",
+    "categoryType": "activity"
+  }
+}

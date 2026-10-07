@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1356",
+  "title": "Coat Closet",
+  "difficulty": "medium",
+  "editorialSummary": "A zipper is commonly found on a coat, so it can suggest the outerwear group. The labels distinguish a fastening part from the whole garments themselves.",
+  "groups": [
+    {
+      "id": "outerwear",
+      "label": "Outer garments for going outside",
+      "revealHint": "OUTERWEAR",
+      "items": [
+        "Coat",
+        "Jacket",
+        "Anorak",
+        "Parka"
+      ]
+    },
+    {
+      "id": "cold_weather_accessories",
+      "label": "Accessories worn in cold weather",
+      "revealHint": "COLD ACCESSORIES",
+      "items": [
+        "Hat",
+        "Scarf",
+        "Gloves",
+        "Earmuffs"
+      ]
+    },
+    {
+      "id": "footwear",
+      "label": "Types of footwear",
+      "revealHint": "FOOTWEAR",
+      "items": [
+        "Boots",
+        "Sneakers",
+        "Sandals",
+        "Loafers"
+      ]
+    },
+    {
+      "id": "fasteners",
+      "label": "Closures found on clothing",
+      "revealHint": "FASTENERS",
+      "items": [
+        "Zipper",
+        "Button",
+        "Buckle",
+        "Snap"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "coat closet",
+    "categoryType": "part"
+  }
+}

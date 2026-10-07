@@ -1,0 +1,55 @@
+{
+  "id": "puzzle-1318",
+  "title": "At A Job Interview",
+  "difficulty": "easy",
+  "tags": [
+    "job interview",
+    "work"
+  ],
+  "groups": [
+    {
+      "id": "application_materials",
+      "label": "Materials brought to a job interview",
+      "items": [
+        "Resume",
+        "Cover letter",
+        "Reference letter",
+        "Portfolio"
+      ]
+    },
+    {
+      "id": "interview_roles",
+      "label": "People involved in an interview",
+      "items": [
+        "Candidate",
+        "Interviewer",
+        "Recruiter",
+        "Hiring manager"
+      ]
+    },
+    {
+      "id": "interview_clothes",
+      "label": "Clothes often worn to an interview",
+      "items": [
+        "Suit",
+        "Tie",
+        "Blouse",
+        "Shoes"
+      ]
+    },
+    {
+      "id": "conversation_actions",
+      "label": "Actions during an interview conversation",
+      "items": [
+        "Greet",
+        "Answer",
+        "Listen",
+        "Ask"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "job interview",
+    "categoryType": "work"
+  }
+}

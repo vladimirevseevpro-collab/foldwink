@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1348",
+  "title": "Meter Stop",
+  "difficulty": "medium",
+  "editorialSummary": "A coin is inserted into a parking meter, so it can resemble a meter component. The labels distinguish the payment from the slot that accepts it.",
+  "groups": [
+    {
+      "id": "meter_parts",
+      "label": "Parking meter parts",
+      "revealHint": "METER PARTS",
+      "items": [
+        "Coin slot",
+        "Display",
+        "Keypad",
+        "Receipt printer"
+      ]
+    },
+    {
+      "id": "payment_methods",
+      "label": "Meter payment methods",
+      "revealHint": "PAYMENT",
+      "items": [
+        "Coin",
+        "Bank card",
+        "Phone app",
+        "Parking voucher"
+      ]
+    },
+    {
+      "id": "car_parts",
+      "label": "Common car parts",
+      "revealHint": "CAR PARTS",
+      "items": [
+        "Tire",
+        "Mirror",
+        "Bumper",
+        "Windshield"
+      ]
+    },
+    {
+      "id": "parking_signs",
+      "label": "Parking and traffic signs",
+      "revealHint": "ROAD SIGNS",
+      "items": [
+        "Stop",
+        "No entry",
+        "One-way",
+        "Speed limit"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "parking meter",
+    "categoryType": "function"
+  }
+}

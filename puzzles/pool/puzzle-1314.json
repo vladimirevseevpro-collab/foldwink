@@ -1,0 +1,55 @@
+{
+  "id": "puzzle-1314",
+  "title": "At The Courthouse",
+  "difficulty": "easy",
+  "tags": [
+    "courthouse",
+    "law"
+  ],
+  "groups": [
+    {
+      "id": "court_participants",
+      "label": "People in a court case",
+      "items": [
+        "Judge",
+        "Lawyer",
+        "Witness",
+        "Juror"
+      ]
+    },
+    {
+      "id": "courtroom_objects",
+      "label": "Objects and places in a courtroom",
+      "items": [
+        "Gavel",
+        "Jury box",
+        "Witness stand",
+        "Judge's bench"
+      ]
+    },
+    {
+      "id": "court_documents",
+      "label": "Documents filed in court",
+      "items": [
+        "Summons",
+        "Affidavit",
+        "Subpoena",
+        "Motion"
+      ]
+    },
+    {
+      "id": "court_outcomes",
+      "label": "Possible outcomes of a court case",
+      "items": [
+        "Verdict",
+        "Sentence",
+        "Acquittal",
+        "Dismissal"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "courthouse",
+    "categoryType": "civic"
+  }
+}

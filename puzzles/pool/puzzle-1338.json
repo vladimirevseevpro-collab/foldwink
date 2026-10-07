@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1338",
+  "title": "Farm Stand Finds",
+  "difficulty": "medium",
+  "editorialSummary": "Tomato is botanically a fruit, but it belongs with savory vegetables here; the other group is specifically fruit baked into sweet pies.",
+  "groups": [
+    {
+      "id": "sweet_pie_fruit",
+      "label": "Fruits commonly baked into sweet pies",
+      "revealHint": "SWEET PIES",
+      "items": [
+        "Apple",
+        "Peach",
+        "Cherry",
+        "Blueberry"
+      ]
+    },
+    {
+      "id": "savory_vegetables",
+      "label": "Vegetables used in savory dishes",
+      "revealHint": "SAVORY",
+      "items": [
+        "Tomato",
+        "Zucchini",
+        "Bell pepper",
+        "Eggplant"
+      ]
+    },
+    {
+      "id": "farmstand_sales",
+      "label": "Tools and supplies for selling produce",
+      "revealHint": "FOR SELLING",
+      "items": [
+        "Hanging scale",
+        "Cash box",
+        "Price tags",
+        "Paper produce bags"
+      ]
+    },
+    {
+      "id": "food_preservation",
+      "label": "Ways to preserve food",
+      "revealHint": "PRESERVE",
+      "items": [
+        "Freezing",
+        "Drying",
+        "Pickling",
+        "Canning"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "farmstand",
+    "categoryType": "culinary_classification"
+  }
+}

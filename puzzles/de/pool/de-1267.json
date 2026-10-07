@@ -1,0 +1,55 @@
+{
+  "id": "de-1267",
+  "title": "Beim Laternenumzug",
+  "difficulty": "easy",
+  "tags": [
+    "Laternenumzug",
+    "Herbst"
+  ],
+  "groups": [
+    {
+      "id": "lantern_craft_materials",
+      "label": "Bastelmaterial für eine Laterne",
+      "items": [
+        "Papier",
+        "Draht",
+        "Klebstoff",
+        "Transparentpapier"
+      ]
+    },
+    {
+      "id": "lantern_lights",
+      "label": "Lichter für den Umzug",
+      "items": [
+        "Kerze",
+        "LED-Licht",
+        "Taschenlampe",
+        "Knicklicht"
+      ]
+    },
+    {
+      "id": "lantern_parts",
+      "label": "Teile einer Laterne",
+      "items": [
+        "Laternenschirm",
+        "Griff",
+        "Stab",
+        "Trageband"
+      ]
+    },
+    {
+      "id": "parade_actions",
+      "label": "Handlungen beim Umzug",
+      "items": [
+        "Singen",
+        "Marschieren",
+        "Winken",
+        "Klatschen"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Laternenumzug",
+    "categoryType": "event"
+  }
+}

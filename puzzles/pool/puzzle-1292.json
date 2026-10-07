@@ -1,0 +1,55 @@
+{
+  "id": "puzzle-1292",
+  "title": "A Good Find",
+  "difficulty": "easy",
+  "tags": [
+    "garage-sale",
+    "everyday"
+  ],
+  "groups": [
+    {
+      "id": "sale_payments",
+      "label": "Ways a buyer can pay at a garage sale",
+      "items": [
+        "Cash",
+        "Debit card",
+        "Mobile payment",
+        "Cheque"
+      ]
+    },
+    {
+      "id": "common_breads",
+      "label": "Common kinds of bread",
+      "items": [
+        "Baguette",
+        "Pita",
+        "Rye bread",
+        "Sourdough"
+      ]
+    },
+    {
+      "id": "pet_accessories",
+      "label": "Everyday pet accessories",
+      "items": [
+        "Leash",
+        "Collar",
+        "Food bowl",
+        "Scratching post"
+      ]
+    },
+    {
+      "id": "write_on_paper",
+      "label": "Tools for writing or drawing on paper",
+      "items": [
+        "Pencil",
+        "Ballpoint pen",
+        "Marker",
+        "Crayon"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "garage_sale",
+    "categoryType": "everyday_use"
+  }
+}

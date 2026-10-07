@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1340",
+  "title": "Measuring Weather",
+  "difficulty": "medium",
+  "editorialSummary": "A sundial is a measuring instrument, so it can resemble station equipment. The labels distinguish telling time from measuring weather.",
+  "groups": [
+    {
+      "id": "weather_instruments",
+      "label": "Instruments that measure weather",
+      "revealHint": "WEATHER",
+      "items": [
+        "Hygrometer",
+        "Barometer",
+        "Rain gauge",
+        "Anemometer"
+      ]
+    },
+    {
+      "id": "cloud_types",
+      "label": "Common types of cloud",
+      "revealHint": "CLOUDS",
+      "items": [
+        "Cirrus",
+        "Cumulus",
+        "Stratus",
+        "Cumulonimbus"
+      ]
+    },
+    {
+      "id": "rain_gear",
+      "label": "Things worn or carried in rain",
+      "revealHint": "RAIN GEAR",
+      "items": [
+        "Raincoat",
+        "Umbrella",
+        "Wellington boots",
+        "Poncho"
+      ]
+    },
+    {
+      "id": "timepieces",
+      "label": "Devices that show the time",
+      "revealHint": "TIME",
+      "items": [
+        "Sundial",
+        "Hourglass",
+        "Stopwatch",
+        "Wall clock"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "weather station",
+    "categoryType": "function"
+  }
+}

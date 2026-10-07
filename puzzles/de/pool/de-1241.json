@@ -1,0 +1,55 @@
+{
+  "id": "de-1241",
+  "title": "Fester Halt",
+  "difficulty": "easy",
+  "tags": [
+    "Schuhreparatur",
+    "Alltag"
+  ],
+  "groups": [
+    {
+      "id": "shoe_fasteners",
+      "label": "Verschlüsse an Schuhen",
+      "items": [
+        "Schnürsenkel",
+        "Klettverschluss",
+        "Schnalle",
+        "Reißverschluss"
+      ]
+    },
+    {
+      "id": "pasta_shapes",
+      "label": "Bekannte Nudelsorten",
+      "items": [
+        "Spaghetti",
+        "Penne",
+        "Fusilli",
+        "Farfalle"
+      ]
+    },
+    {
+      "id": "thirty_day_months",
+      "label": "Monate mit genau 30 Tagen",
+      "items": [
+        "April",
+        "Juni",
+        "September",
+        "November"
+      ]
+    },
+    {
+      "id": "seasons",
+      "label": "Die vier Jahreszeiten",
+      "items": [
+        "Frühling",
+        "Sommer",
+        "Herbst",
+        "Winter"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Schuhreparatur",
+    "categoryType": "classification"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "de-1270",
+  "title": "Wetter wird gemessen",
+  "difficulty": "medium",
+  "editorialSummary": "Eine Sonnenuhr ist ebenfalls ein Messinstrument und wirkt deshalb passend. Die Markierung trennt Zeitmessung von Wetterdaten.",
+  "groups": [
+    {
+      "id": "weather_instruments",
+      "label": "Geräte zur Wettermessung",
+      "revealHint": "WETTER",
+      "items": [
+        "Thermometer",
+        "Barometer",
+        "Regenmesser",
+        "Windmesser"
+      ]
+    },
+    {
+      "id": "cloud_types",
+      "label": "Häufige Wolkenarten",
+      "revealHint": "WOLKEN",
+      "items": [
+        "Cirrus",
+        "Cumulus",
+        "Stratus",
+        "Cumulonimbus"
+      ]
+    },
+    {
+      "id": "rain_clothes",
+      "label": "Kleidung und Schutz bei Regen",
+      "revealHint": "REGEN",
+      "items": [
+        "Regenjacke",
+        "Regenschirm",
+        "Gummistiefel",
+        "Poncho"
+      ]
+    },
+    {
+      "id": "timepieces",
+      "label": "Geräte zur Zeitmessung",
+      "revealHint": "ZEIT",
+      "items": [
+        "Sonnenuhr",
+        "Sanduhr",
+        "Stoppuhr",
+        "Pendeluhr"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Wetterstation",
+    "categoryType": "function"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "puzzle-1290",
+  "title": "Load It Safely",
+  "difficulty": "easy",
+  "tags": [
+    "moving",
+    "everyday"
+  ],
+  "groups": [
+    {
+      "id": "cargo_ties",
+      "label": "Ways to secure a load for moving",
+      "items": [
+        "Ratchet strap",
+        "Rope",
+        "Bungee cord",
+        "Cargo net"
+      ]
+    },
+    {
+      "id": "tree_nuts",
+      "label": "Common tree nuts",
+      "items": [
+        "Almond",
+        "Cashew",
+        "Hazelnut",
+        "Pistachio"
+      ]
+    },
+    {
+      "id": "arithmetic",
+      "label": "Common percussion instruments",
+      "items": [
+        "Snare drum",
+        "Bass drum",
+        "Tambourine",
+        "Cymbal"
+      ]
+    },
+    {
+      "id": "dairy",
+      "label": "Vegetables often used in a stir-fry",
+      "items": [
+        "Broccoli",
+        "Bell pepper",
+        "Snow pea",
+        "Bok choy"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "moving_house",
+    "categoryType": "function"
+  }
+}

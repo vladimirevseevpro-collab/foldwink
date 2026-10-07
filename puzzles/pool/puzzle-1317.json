@@ -1,0 +1,55 @@
+{
+  "id": "puzzle-1317",
+  "title": "On The Factory Floor",
+  "difficulty": "easy",
+  "tags": [
+    "factory floor",
+    "manufacturing"
+  ],
+  "groups": [
+    {
+      "id": "protective_gear",
+      "label": "Protective gear worn on a factory floor",
+      "items": [
+        "Helmet",
+        "Safety vest",
+        "Earplugs",
+        "Safety glasses"
+      ]
+    },
+    {
+      "id": "factory_machines",
+      "label": "Machines used in a factory",
+      "items": [
+        "Conveyor belt",
+        "Forklift",
+        "Crane",
+        "Press"
+      ]
+    },
+    {
+      "id": "raw_materials",
+      "label": "Materials used in manufacturing",
+      "items": [
+        "Steel",
+        "Timber",
+        "Plastic",
+        "Rubber"
+      ]
+    },
+    {
+      "id": "factory_roles",
+      "label": "People who work in a factory",
+      "items": [
+        "Operator",
+        "Supervisor",
+        "Technician",
+        "Inspector"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "factory floor",
+    "categoryType": "work"
+  }
+}

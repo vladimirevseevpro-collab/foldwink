@@ -1,0 +1,56 @@
+{
+  "id": "de-1285",
+  "title": "Im Malerbetrieb",
+  "difficulty": "medium",
+  "editorialSummary": "Ein Spachtel ist ein Werkzeug, während Spachteln einen vorbereitenden Arbeitsschritt bezeichnet. Die Labels lösen den Nomen-Verb-Lock zwischen Gegenstand und Tätigkeit.",
+  "groups": [
+    {
+      "id": "painter_tools",
+      "label": "Malerwerkzeuge",
+      "revealHint": "WERKZEUGE",
+      "items": [
+        "Pinsel",
+        "Farbrolle",
+        "Spachtel",
+        "Abstreifgitter"
+      ]
+    },
+    {
+      "id": "paint_surfaces",
+      "label": "Anstrichflächen",
+      "revealHint": "UNTERGRÜNDE",
+      "items": [
+        "Putz",
+        "Holz",
+        "Beton",
+        "Gipskarton"
+      ]
+    },
+    {
+      "id": "paint_shades",
+      "label": "Farbtöne",
+      "revealHint": "FARBTÖNE",
+      "items": [
+        "Weiß",
+        "Beige",
+        "Ocker",
+        "Türkis"
+      ]
+    },
+    {
+      "id": "prep_work",
+      "label": "Vorarbeiten beim Streichen",
+      "revealHint": "VORBEREITUNG",
+      "items": [
+        "Abkleben",
+        "Schleifen",
+        "Grundieren",
+        "Spachteln"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Malerbetrieb",
+    "categoryType": "function"
+  }
+}

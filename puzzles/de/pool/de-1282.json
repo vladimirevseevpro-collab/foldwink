@@ -1,0 +1,56 @@
+{
+  "id": "de-1282",
+  "title": "Saubere Fenster",
+  "difficulty": "medium",
+  "editorialSummary": "Ein Tuch kann zum Trocknen eines Fensters dienen und daher an den Arbeitsschritt erinnern. Die Labels unterscheiden ein Reinigungsgerät von einer Tätigkeit.",
+  "groups": [
+    {
+      "id": "cleaning_tools",
+      "label": "Geräte und Hilfsmittel zum Fensterputzen",
+      "revealHint": "HILFSMITTEL",
+      "items": [
+        "Abzieher",
+        "Schwamm",
+        "Eimer",
+        "Tuch"
+      ]
+    },
+    {
+      "id": "window_parts",
+      "label": "Teile eines Fensters",
+      "revealHint": "FENSTERTEILE",
+      "items": [
+        "Scheibe",
+        "Rahmen",
+        "Fensterbank",
+        "Griff"
+      ]
+    },
+    {
+      "id": "room_types",
+      "label": "Räume im Haus",
+      "revealHint": "RÄUME",
+      "items": [
+        "Küche",
+        "Schlafzimmer",
+        "Bad",
+        "Büro"
+      ]
+    },
+    {
+      "id": "cleaning_steps",
+      "label": "Arbeitsschritte beim Fensterputzen",
+      "revealHint": "ARBEITSSCHRITTE",
+      "items": [
+        "Einseifen",
+        "Wischen",
+        "Spülen",
+        "Trocknen"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Fensterreinigung",
+    "categoryType": "function"
+  }
+}

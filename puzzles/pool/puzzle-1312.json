@@ -1,0 +1,55 @@
+{
+  "id": "puzzle-1312",
+  "title": "At The Farm Stand",
+  "difficulty": "easy",
+  "tags": [
+    "farm stand",
+    "food"
+  ],
+  "groups": [
+    {
+      "id": "root_vegetables",
+      "label": "Vegetables that grow underground",
+      "items": [
+        "Carrot",
+        "Parsnip",
+        "Beetroot",
+        "Turnip"
+      ]
+    },
+    {
+      "id": "weather_instruments",
+      "label": "Atmospheric measurement devices",
+      "items": [
+        "Thermometer",
+        "Hygrometer",
+        "Rain gauge",
+        "Anemometer"
+      ]
+    },
+    {
+      "id": "musical_percussion",
+      "label": "Instruments that sound when struck",
+      "items": [
+        "Snare drum",
+        "Cymbals",
+        "Tambourine",
+        "Castanets"
+      ]
+    },
+    {
+      "id": "paper_formats",
+      "label": "Common sizes of paper",
+      "items": [
+        "Letter",
+        "Legal",
+        "A4",
+        "A3"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "farm stand",
+    "categoryType": "product"
+  }
+}

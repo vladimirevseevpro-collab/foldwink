@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1359",
+  "title": "At The Sewing Table",
+  "difficulty": "medium",
+  "editorialSummary": "Pins can look like permanent clothing fasteners, but they hold fabric temporarily during sewing. The labels distinguish construction parts from marking supplies.",
+  "groups": [
+    {
+      "id": "fabric_cutting_tools",
+      "label": "Tools for cutting fabric",
+      "revealHint": "CUTTING TOOLS",
+      "items": [
+        "Fabric scissors",
+        "Rotary cutter",
+        "Pinking shears",
+        "Thread snips"
+      ]
+    },
+    {
+      "id": "fabric_types",
+      "label": "Common types of fabric",
+      "revealHint": "FABRICS",
+      "items": [
+        "Denim",
+        "Felt",
+        "Satin",
+        "Corduroy"
+      ]
+    },
+    {
+      "id": "clothing_fasteners",
+      "label": "Fasteners attached to clothing",
+      "revealHint": "FASTENERS",
+      "items": [
+        "Drawstring",
+        "Snap",
+        "Hook-and-loop",
+        "Buckle"
+      ]
+    },
+    {
+      "id": "sewing_marking_supplies",
+      "label": "Supplies for measuring and marking fabric",
+      "revealHint": "MARK AND MEASURE",
+      "items": [
+        "Pins",
+        "Tailor's chalk",
+        "Measuring tape",
+        "Fabric marker"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "sewing room",
+    "categoryType": "function"
+  }
+}

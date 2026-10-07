@@ -1,0 +1,55 @@
+{
+  "id": "de-1246",
+  "title": "Schnitt und Stil",
+  "difficulty": "easy",
+  "tags": [
+    "Friseursalon",
+    "Alltag"
+  ],
+  "groups": [
+    {
+      "id": "haircut_tools",
+      "label": "Werkzeuge zum Haareschneiden",
+      "items": [
+        "Friseurschere",
+        "Haarschneidemaschine",
+        "Effilierschere",
+        "Rasiermesser"
+      ]
+    },
+    {
+      "id": "breakfast_food",
+      "label": "Typisches Frühstück",
+      "items": [
+        "Brötchen",
+        "Müsli",
+        "Marmelade",
+        "Rührei"
+      ]
+    },
+    {
+      "id": "writing_materials",
+      "label": "Schreibwaren aus Papier",
+      "items": [
+        "Notizblock",
+        "Briefumschlag",
+        "Karteikarte",
+        "Zeichenpapier"
+      ]
+    },
+    {
+      "id": "bird_types",
+      "label": "Bekannte Vögel",
+      "items": [
+        "Amsel",
+        "Spatz",
+        "Eule",
+        "Storch"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Friseursalon",
+    "categoryType": "function"
+  }
+}

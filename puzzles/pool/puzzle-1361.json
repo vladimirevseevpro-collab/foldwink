@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1361",
+  "title": "At An Emergency Shelter",
+  "difficulty": "medium",
+  "editorialSummary": "A cot is furniture in a shared room, but its defining use here is sleeping. The label distinguishes sleeping gear from general shared-room items.",
+  "groups": [
+    {
+      "id": "sleeping_gear",
+      "label": "Gear for sleeping at a shelter",
+      "revealHint": "SLEEPING GEAR",
+      "items": [
+        "Blanket",
+        "Pillow",
+        "Cot",
+        "Sleeping bag"
+      ]
+    },
+    {
+      "id": "hygiene_supplies",
+      "label": "Personal hygiene supplies",
+      "revealHint": "HYGIENE",
+      "items": [
+        "Soap",
+        "Toothbrush",
+        "Towel",
+        "Shampoo"
+      ]
+    },
+    {
+      "id": "shelter_registration",
+      "label": "Details collected at shelter intake",
+      "revealHint": "INTAKE DETAILS",
+      "items": [
+        "Form",
+        "Photo ID",
+        "Signature",
+        "Address"
+      ]
+    },
+    {
+      "id": "shared_room_items",
+      "label": "Items for a shelter's shared room",
+      "revealHint": "SHARED ROOM",
+      "items": [
+        "Kettle",
+        "Cup",
+        "Chair",
+        "Charger"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "emergency shelter",
+    "categoryType": "function"
+  }
+}

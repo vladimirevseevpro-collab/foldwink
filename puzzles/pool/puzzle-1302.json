@@ -1,0 +1,55 @@
+{
+  "id": "puzzle-1302",
+  "title": "Inside The Aquarium",
+  "difficulty": "easy",
+  "tags": [
+    "aquarium",
+    "hobby"
+  ],
+  "groups": [
+    {
+      "id": "aquarium_equipment",
+      "label": "Equipment for a fish aquarium",
+      "items": [
+        "Water filter",
+        "Aquarium heater",
+        "Air pump",
+        "Aquarium thermometer"
+      ]
+    },
+    {
+      "id": "stone_fruit",
+      "label": "Fruits with a hard stone",
+      "items": [
+        "Peach",
+        "Apricot",
+        "Nectarine",
+        "Cherry"
+      ]
+    },
+    {
+      "id": "kitchen_bread",
+      "label": "Types of bread",
+      "items": [
+        "Baguette",
+        "Pita",
+        "Sourdough loaf",
+        "Ciabatta"
+      ]
+    },
+    {
+      "id": "paper_shapes",
+      "label": "Basic shapes in geometry",
+      "items": [
+        "Circle",
+        "Triangle",
+        "Rhombus",
+        "Rectangle"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "aquarium",
+    "categoryType": "function"
+  }
+}

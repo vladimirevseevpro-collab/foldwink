@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1326",
+  "title": "Science Fair",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "science_safety",
+      "label": "Lab safety gear",
+      "items": [
+        "Lab coat",
+        "Goggles",
+        "Face shield",
+        "Ear defenders"
+      ]
+    },
+    {
+      "id": "measurement_units",
+      "label": "Common units of measure",
+      "items": [
+        "Meter",
+        "Gram",
+        "Liter",
+        "Second"
+      ]
+    },
+    {
+      "id": "graph_types",
+      "label": "Types of graphs",
+      "items": [
+        "Bar graph",
+        "Line graph",
+        "Pie chart",
+        "Scatter plot"
+      ]
+    },
+    {
+      "id": "experiment_actions",
+      "label": "Actions in an experiment",
+      "items": [
+        "Observe",
+        "Predict",
+        "Record",
+        "Compare"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Science fair",
+    "categoryType": "event"
+  }
+}

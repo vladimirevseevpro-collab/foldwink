@@ -1,0 +1,55 @@
+{
+  "id": "puzzle-1306",
+  "title": "At The Craft Fair",
+  "difficulty": "easy",
+  "tags": [
+    "craft fair",
+    "hobby"
+  ],
+  "groups": [
+    {
+      "id": "knitting_supplies",
+      "label": "Supplies for knitting",
+      "items": [
+        "Yarn",
+        "Knitting needles",
+        "Stitch marker",
+        "Row counter"
+      ]
+    },
+    {
+      "id": "baking_fruit",
+      "label": "Fruit often used in baking",
+      "items": [
+        "Raisin",
+        "Dried apricot",
+        "Dried cranberry",
+        "Date"
+      ]
+    },
+    {
+      "id": "kitchen_cutlery",
+      "label": "Cutlery used at a meal",
+      "items": [
+        "Fork",
+        "Dinner knife",
+        "Soup spoon",
+        "Dessert spoon"
+      ]
+    },
+    {
+      "id": "river_features",
+      "label": "Features of a river",
+      "items": [
+        "Riverbank",
+        "Waterfall",
+        "Rapids",
+        "River bend"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "craft fair",
+    "categoryType": "function"
+  }
+}

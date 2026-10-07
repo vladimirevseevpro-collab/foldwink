@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1321",
+  "title": "Canal Lock",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "lock_parts",
+      "label": "Parts of a canal lock",
+      "items": [
+        "Gate",
+        "Chamber",
+        "Sluice",
+        "Lock ladder"
+      ]
+    },
+    {
+      "id": "lock_operations",
+      "label": "Lock operations",
+      "items": [
+        "Fill",
+        "Drain",
+        "Open",
+        "Close"
+      ]
+    },
+    {
+      "id": "canal_side",
+      "label": "Canal-side structures",
+      "items": [
+        "Towpath",
+        "Weir",
+        "Quay",
+        "Footbridge"
+      ]
+    },
+    {
+      "id": "canal_vessels",
+      "label": "Canal vessels",
+      "items": [
+        "Barge",
+        "Canal boat",
+        "Tugboat",
+        "Houseboat"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Canal lock",
+    "categoryType": "place"
+  }
+}

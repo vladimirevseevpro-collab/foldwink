@@ -1,0 +1,55 @@
+{
+  "id": "de-1252",
+  "title": "Heimkino am Abend",
+  "difficulty": "easy",
+  "tags": [
+    "Heimkino",
+    "Freizeit"
+  ],
+  "groups": [
+    {
+      "id": "home_cinema_gear",
+      "label": "Ausrüstung für ein Heimkino",
+      "items": [
+        "Projektor",
+        "Leinwand",
+        "AV-Receiver",
+        "Surround-Lautsprecher"
+      ]
+    },
+    {
+      "id": "flower_parts",
+      "label": "Teile einer Blüte",
+      "items": [
+        "Blütenblatt",
+        "Kelchblatt",
+        "Staubblatt",
+        "Stempel"
+      ]
+    },
+    {
+      "id": "water_transport",
+      "label": "Fahrzeuge auf dem Wasser",
+      "items": [
+        "Segelboot",
+        "Fähre",
+        "Kajak",
+        "Motorboot"
+      ]
+    },
+    {
+      "id": "paper_shapes",
+      "label": "Einfache geometrische Formen",
+      "items": [
+        "Kreis",
+        "Dreieck",
+        "Raute",
+        "Rechteck"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Heimkino",
+    "categoryType": "function"
+  }
+}

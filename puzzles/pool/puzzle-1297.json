@@ -1,0 +1,55 @@
+{
+  "id": "puzzle-1297",
+  "title": "Laundry Spin Cycle",
+  "difficulty": "easy",
+  "tags": [
+    "laundromat",
+    "home"
+  ],
+  "groups": [
+    {
+      "id": "laundry_products",
+      "label": "Products used to wash clothes",
+      "items": [
+        "Laundry detergent",
+        "Stain remover",
+        "Fabric softener",
+        "Laundry sanitizer"
+      ]
+    },
+    {
+      "id": "kitchen_herbs",
+      "label": "Fresh herbs used in cooking",
+      "items": [
+        "Sage",
+        "Oregano",
+        "Dill",
+        "Tarragon"
+      ]
+    },
+    {
+      "id": "tree_fruits",
+      "label": "Fruits that grow on trees",
+      "items": [
+        "Mango",
+        "Avocado",
+        "Fig",
+        "Pomegranate"
+      ]
+    },
+    {
+      "id": "weather_events",
+      "label": "Types of precipitation",
+      "items": [
+        "Rain",
+        "Snow",
+        "Sleet",
+        "Hail"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "laundromat",
+    "categoryType": "function"
+  }
+}

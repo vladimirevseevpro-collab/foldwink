@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1343",
+  "title": "Platform Safety",
+  "difficulty": "medium",
+  "editorialSummary": "A yellow safety line resembles road markings, but this group names safety features for rail platforms. The other label names markings used on roads.",
+  "groups": [
+    {
+      "id": "platform_edge_markings",
+      "label": "Safety features on rail platforms",
+      "revealHint": "PLATFORM",
+      "items": [
+        "Yellow safety line",
+        "Platform screen doors",
+        "Platform edge fence",
+        "Emergency stop button"
+      ]
+    },
+    {
+      "id": "road_markings",
+      "label": "Markings painted on roads",
+      "revealHint": "ROADS",
+      "items": [
+        "Stop line",
+        "Center line",
+        "Crosswalk stripes",
+        "Bike lane symbol"
+      ]
+    },
+    {
+      "id": "station_fixtures",
+      "label": "Fixtures in a train station",
+      "revealHint": "STATION",
+      "items": [
+        "Platform bench",
+        "Waiting shelter",
+        "Litter bin",
+        "Ticket validator"
+      ]
+    },
+    {
+      "id": "luggage",
+      "label": "Items used to carry luggage",
+      "revealHint": "LUGGAGE",
+      "items": [
+        "Suitcase",
+        "Duffel bag",
+        "Backpack",
+        "Travel trunk"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "train platform",
+    "categoryType": "place_and_function"
+  }
+}

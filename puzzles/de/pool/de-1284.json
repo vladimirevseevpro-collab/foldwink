@@ -1,0 +1,56 @@
+{
+  "id": "de-1284",
+  "title": "Im Kletterpark",
+  "difficulty": "medium",
+  "editorialSummary": "Ein Netz kann Teil der Ausrüstung sein oder als Hindernis im Parcours dienen. Die Labels unterscheiden getragenes Material vom fest eingebauten Streckenelement.",
+  "groups": [
+    {
+      "id": "climbing_gear",
+      "label": "Kletterausrüstung",
+      "revealHint": "AUSRÜSTUNG",
+      "items": [
+        "Klettergurt",
+        "Kletterhandschuhe",
+        "Karabiner",
+        "Seilrolle"
+      ]
+    },
+    {
+      "id": "course_obstacles",
+      "label": "Parcours-Hindernisse",
+      "revealHint": "HINDERNISSE",
+      "items": [
+        "Hängebrücke",
+        "Netz",
+        "Seilrutsche",
+        "Trittbalken"
+      ]
+    },
+    {
+      "id": "safety_rules",
+      "label": "Sicherheitsregeln",
+      "revealHint": "REGELN",
+      "items": [
+        "Gurt prüfen",
+        "Abstand halten",
+        "Partner sichern",
+        "Nicht drängeln"
+      ]
+    },
+    {
+      "id": "natural_features",
+      "label": "Naturmerkmale am Park",
+      "revealHint": "NATUR",
+      "items": [
+        "Waldlichtung",
+        "Zweig",
+        "Fels",
+        "Schlucht"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Kletterpark",
+    "categoryType": "place"
+  }
+}

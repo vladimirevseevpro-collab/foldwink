@@ -1,0 +1,56 @@
+{
+  "id": "de-1271",
+  "title": "In der Schneiderei",
+  "difficulty": "medium",
+  "editorialSummary": "Ein Dampfbügeleisen kommt auch beim Nähen zum Einsatz, dient aber der Pflege fertiger Kleidung. Die erste Markierung nennt Handwerkzeuge fürs Nähen.",
+  "groups": [
+    {
+      "id": "sewing_tools",
+      "label": "Handwerkzeuge zum Nähen",
+      "revealHint": "NÄHEN",
+      "items": [
+        "Rollschneider",
+        "Nahttrenner",
+        "Schneiderkreide",
+        "Stoffschere"
+      ]
+    },
+    {
+      "id": "clothing_fasteners",
+      "label": "Verschlüsse an Kleidungsstücken",
+      "revealHint": "VERSCHLÜSSE",
+      "items": [
+        "Knopf",
+        "Reißverschluss",
+        "Druckknopf",
+        "Haken und Öse"
+      ]
+    },
+    {
+      "id": "fabric_types",
+      "label": "Arten von Bekleidungsstoff",
+      "revealHint": "STOFF",
+      "items": [
+        "Jeansstoff",
+        "Cord",
+        "Flanell",
+        "Satin"
+      ]
+    },
+    {
+      "id": "garment_care",
+      "label": "Geräte zur Kleiderpflege",
+      "revealHint": "PFLEGE",
+      "items": [
+        "Dampfbügeleisen",
+        "Fusselrolle",
+        "Kleiderbürste",
+        "Dampfglätter"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Schneiderei",
+    "categoryType": "function"
+  }
+}

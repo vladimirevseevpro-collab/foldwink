@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1341",
+  "title": "At The Tailor",
+  "difficulty": "medium",
+  "editorialSummary": "A steam iron is often used while tailoring, but it cares for finished garments. The first label names hand tools for sewing and fitting.",
+  "groups": [
+    {
+      "id": "sewing_tools",
+      "label": "Hand tools used for sewing",
+      "revealHint": "SEWING",
+      "items": [
+        "Thimble",
+        "Seam ripper",
+        "Tailor's chalk",
+        "Dressmaker's shears"
+      ]
+    },
+    {
+      "id": "garment_closures",
+      "label": "Fasteners attached to garments",
+      "revealHint": "FASTENERS",
+      "items": [
+        "Button",
+        "Zipper",
+        "Snap fastener",
+        "Hook-and-eye"
+      ]
+    },
+    {
+      "id": "fabric_types",
+      "label": "Types of fabric",
+      "revealHint": "FABRIC",
+      "items": [
+        "Denim",
+        "Corduroy",
+        "Flannel",
+        "Satin"
+      ]
+    },
+    {
+      "id": "garment_care",
+      "label": "Tools for garment care",
+      "revealHint": "GARMENT CARE",
+      "items": [
+        "Steam iron",
+        "Lint roller",
+        "Clothes brush",
+        "Fabric steamer"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "tailor shop",
+    "categoryType": "function"
+  }
+}

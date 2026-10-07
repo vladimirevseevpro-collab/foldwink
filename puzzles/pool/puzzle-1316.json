@@ -1,0 +1,55 @@
+{
+  "id": "puzzle-1316",
+  "title": "At Driving School",
+  "difficulty": "easy",
+  "tags": [
+    "driving school",
+    "road safety"
+  ],
+  "groups": [
+    {
+      "id": "car_controls",
+      "label": "Controls inside a car",
+      "items": [
+        "Brake",
+        "Clutch",
+        "Steering wheel",
+        "Gearshift"
+      ]
+    },
+    {
+      "id": "car_lights",
+      "label": "Lights on a car",
+      "items": [
+        "Headlight",
+        "Brake light",
+        "Indicator",
+        "Hazard light"
+      ]
+    },
+    {
+      "id": "learner_documents",
+      "label": "Documents for learner drivers",
+      "items": [
+        "Learner permit",
+        "Lesson schedule",
+        "Practice logbook",
+        "Progress checklist"
+      ]
+    },
+    {
+      "id": "driving_maneuvers",
+      "label": "Actions practiced while driving",
+      "items": [
+        "Reverse",
+        "Turn",
+        "Signal",
+        "Parallel park"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "driving school",
+    "categoryType": "education"
+  }
+}

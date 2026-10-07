@@ -1,0 +1,55 @@
+{
+  "id": "puzzle-1293",
+  "title": "Waiting for the Bus",
+  "difficulty": "easy",
+  "tags": [
+    "bus-stop",
+    "everyday"
+  ],
+  "groups": [
+    {
+      "id": "stop_information",
+      "label": "Information shown at a bus stop",
+      "items": [
+        "Stop name",
+        "Timetable",
+        "Route map",
+        "Service notice"
+      ]
+    },
+    {
+      "id": "liquid_sweeteners",
+      "label": "Liquid sweeteners",
+      "items": [
+        "Honey",
+        "Maple syrup",
+        "Agave syrup",
+        "Molasses"
+      ]
+    },
+    {
+      "id": "seasons",
+      "label": "Frequently used computer keys",
+      "items": [
+        "Escape key",
+        "Space bar",
+        "Enter key",
+        "Shift key"
+      ]
+    },
+    {
+      "id": "hand_tools",
+      "label": "Fats used for cooking",
+      "items": [
+        "Olive oil",
+        "Vegetable oil",
+        "Butter",
+        "Coconut oil"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "bus_stop",
+    "categoryType": "information"
+  }
+}

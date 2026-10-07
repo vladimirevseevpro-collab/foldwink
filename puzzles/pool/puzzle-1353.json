@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1353",
+  "title": "Arcade Night",
+  "difficulty": "medium",
+  "editorialSummary": "A flipper is a pinball part, but it is also a dolphin limb. The label Dolphin body parts resolves the animal meaning and distinguishes it from machine components.",
+  "groups": [
+    {
+      "id": "pinball_parts",
+      "label": "Pinball machine parts",
+      "revealHint": "PINBALL",
+      "items": [
+        "Bumper",
+        "Plunger",
+        "Ramp",
+        "Target"
+      ]
+    },
+    {
+      "id": "dolphin_parts",
+      "label": "Dolphin body parts",
+      "revealHint": "DOLPHIN",
+      "items": [
+        "Flipper",
+        "Blowhole",
+        "Beak",
+        "Dorsal fin"
+      ]
+    },
+    {
+      "id": "arcade_sounds",
+      "label": "Arcade sounds",
+      "revealHint": "SOUNDS",
+      "items": [
+        "Bell",
+        "Buzzer",
+        "Chime",
+        "Siren"
+      ]
+    },
+    {
+      "id": "basic_shapes",
+      "label": "Basic shapes",
+      "revealHint": "SHAPES",
+      "items": [
+        "Circle",
+        "Square",
+        "Hexagon",
+        "Star"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "pinball machine",
+    "categoryType": "part"
+  }
+}

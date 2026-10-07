@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1337",
+  "title": "Powered or Handheld",
+  "difficulty": "medium",
+  "editorialSummary": "The electric coffee grinder suggests hand-operated grinding tools, but the label explicitly limits that group to manual tools.",
+  "groups": [
+    {
+      "id": "corded_appliances",
+      "label": "Small kitchen appliances with a power cord",
+      "revealHint": "POWER CORD",
+      "items": [
+        "Rice cooker",
+        "Electric kettle",
+        "Blender",
+        "Electric coffee grinder"
+      ]
+    },
+    {
+      "id": "manual_tools",
+      "label": "Hand-operated kitchen tools",
+      "revealHint": "BY HAND",
+      "items": [
+        "Mortar and pestle",
+        "Manual pepper mill",
+        "Garlic press",
+        "Citrus reamer"
+      ]
+    },
+    {
+      "id": "wall_hangings",
+      "label": "Things commonly hung on a wall",
+      "revealHint": "ON A WALL",
+      "items": [
+        "Framed photo",
+        "Wall clock",
+        "Mirror",
+        "Canvas print"
+      ]
+    },
+    {
+      "id": "cold_cereals",
+      "label": "Breakfast cereals often eaten cold",
+      "revealHint": "CEREAL",
+      "items": [
+        "Corn flakes",
+        "Muesli",
+        "Granola",
+        "Bran flakes"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "housewarming",
+    "categoryType": "power_source"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1335",
+  "title": "Line Drying",
+  "difficulty": "medium",
+  "editorialSummary": "The labels separate wearable clothes from household linens. A bedsheet is hung to dry like clothing, but it is not a garment.",
+  "groups": [
+    {
+      "id": "garments",
+      "label": "Garments commonly dried on a clothesline",
+      "revealHint": "GARMENTS",
+      "items": [
+        "Shirt",
+        "Blouse",
+        "Jeans",
+        "Socks"
+      ]
+    },
+    {
+      "id": "household_linen",
+      "label": "Household linens, not clothing",
+      "revealHint": "LINENS",
+      "items": [
+        "Bedsheet",
+        "Bath towel",
+        "Tablecloth",
+        "Dish towel"
+      ]
+    },
+    {
+      "id": "clothing_fasteners",
+      "label": "Fasteners used on clothing",
+      "revealHint": "FASTENERS",
+      "items": [
+        "Button",
+        "Zipper",
+        "Snap",
+        "Hook-and-loop tape"
+      ]
+    },
+    {
+      "id": "tree_fruits",
+      "label": "Common fruits that grow on trees",
+      "revealHint": "TREE FRUIT",
+      "items": [
+        "Apple",
+        "Pear",
+        "Peach",
+        "Plum"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "clothesline",
+    "categoryType": "use_and_material"
+  }
+}

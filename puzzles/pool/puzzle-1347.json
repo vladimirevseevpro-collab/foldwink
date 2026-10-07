@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1347",
+  "title": "Feeding The Birds",
+  "difficulty": "medium",
+  "editorialSummary": "Peanuts can be a human snack, but this set is defined by foods placed in a bird feeder. The remaining labels separate birds, feeder parts, and garden plants.",
+  "groups": [
+    {
+      "id": "bird_feeder_food",
+      "label": "Foods put in bird feeders",
+      "revealHint": "BIRD FOOD",
+      "items": [
+        "Black-oil sunflower seeds",
+        "Nyjer seed",
+        "Suet cake",
+        "Unsalted peanuts"
+      ]
+    },
+    {
+      "id": "garden_birds",
+      "label": "Small birds seen in gardens",
+      "revealHint": "BIRDS",
+      "items": [
+        "House sparrow",
+        "Blue tit",
+        "Goldfinch",
+        "Robin"
+      ]
+    },
+    {
+      "id": "feeder_parts",
+      "label": "Parts of a hanging bird feeder",
+      "revealHint": "FEEDER",
+      "items": [
+        "Feeding port",
+        "Perch",
+        "Hopper",
+        "Rain guard"
+      ]
+    },
+    {
+      "id": "garden_bulbs",
+      "label": "Flowers that bloom in early spring",
+      "revealHint": "FLOWERS",
+      "items": [
+        "Snowdrop",
+        "Bluebell",
+        "Primrose",
+        "Lily of the valley"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "bird feeder",
+    "categoryType": "function"
+  }
+}

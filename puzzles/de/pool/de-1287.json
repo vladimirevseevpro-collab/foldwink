@@ -1,0 +1,56 @@
+{
+  "id": "de-1287",
+  "title": "Auf der Bowlingbahn",
+  "difficulty": "medium",
+  "editorialSummary": "Anlauf kann den Bereich an der Bahn oder die Bewegung des Spielers dorthin bezeichnen. Die Labels trennen eine Einrichtung des Ortes von einer Spielaktion.",
+  "groups": [
+    {
+      "id": "bowling_lane_parts",
+      "label": "Einrichtungen an der Bowlingbahn",
+      "revealHint": "BAHNTEILE",
+      "items": [
+        "Anlauf",
+        "Rinne",
+        "Kugelrücklauf",
+        "Anzeigetafel"
+      ]
+    },
+    {
+      "id": "bowling_gear",
+      "label": "Ausrüstung beim Bowling",
+      "revealHint": "AUSRÜSTUNG",
+      "items": [
+        "Bowlingkugel",
+        "Bowlingschuhe",
+        "Handtuch",
+        "Kugeltasche"
+      ]
+    },
+    {
+      "id": "bowling_actions",
+      "label": "Aktionen beim Bowling",
+      "revealHint": "SPIELAKTIONEN",
+      "items": [
+        "Werfen",
+        "Zielen",
+        "Abrollen",
+        "Nachfassen"
+      ]
+    },
+    {
+      "id": "bowling_results",
+      "label": "Ergebnisse eines Wurfs",
+      "revealHint": "ERGEBNISSE",
+      "items": [
+        "Strike",
+        "Spare",
+        "Split",
+        "Fehlwurf"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Bowlingbahn",
+    "categoryType": "activity"
+  }
+}

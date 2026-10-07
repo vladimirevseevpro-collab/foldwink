@@ -1,0 +1,55 @@
+{
+  "id": "de-1243",
+  "title": "Waschtag",
+  "difficulty": "easy",
+  "tags": [
+    "Waschsalon",
+    "Alltag"
+  ],
+  "groups": [
+    {
+      "id": "laundry_detergents",
+      "label": "Mittel für die Wäsche",
+      "items": [
+        "Waschmittel",
+        "Fleckentferner",
+        "Weichspüler",
+        "Wäscheparfüm"
+      ]
+    },
+    {
+      "id": "pesto_ingredients",
+      "label": "Zutaten für grünes Pesto",
+      "items": [
+        "Basilikum",
+        "Pinienkerne",
+        "Parmesan",
+        "Olivenöl"
+      ]
+    },
+    {
+      "id": "kitchen_utensils",
+      "label": "Küchenutensilien aus Holz",
+      "items": [
+        "Kochlöffel",
+        "Pfannenwender",
+        "Schneidebrett",
+        "Nudelholz"
+      ]
+    },
+    {
+      "id": "paper_shapes",
+      "label": "Geometrische Formen",
+      "items": [
+        "Kreis",
+        "Dreieck",
+        "Quadrat",
+        "Rechteck"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Waschsalon",
+    "categoryType": "function"
+  }
+}

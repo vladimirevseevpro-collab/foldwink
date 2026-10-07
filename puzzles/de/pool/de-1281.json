@@ -1,0 +1,56 @@
+{
+  "id": "de-1281",
+  "title": "In der Polizeiwache",
+  "difficulty": "medium",
+  "editorialSummary": "Ein Bericht steht in engem Zusammenhang mit dem Melden eines Vorfalls und kann deshalb zunächst zur Handlungsgruppe passen. Die Labels trennen eine Aktenunterlage von einer Tätigkeit des Besuchers.",
+  "groups": [
+    {
+      "id": "police_equipment",
+      "label": "Ausrüstung der Polizei",
+      "revealHint": "AUSRÜSTUNG",
+      "items": [
+        "Uniform",
+        "Funkgerät",
+        "Handschellen",
+        "Taschenlampe"
+      ]
+    },
+    {
+      "id": "station_rooms",
+      "label": "Räume einer Polizeiwache",
+      "revealHint": "RÄUME",
+      "items": [
+        "Zelle",
+        "Flur",
+        "Empfang",
+        "Umkleide"
+      ]
+    },
+    {
+      "id": "visitor_actions",
+      "label": "Handlungen eines Besuchers",
+      "revealHint": "HANDLUNGEN",
+      "items": [
+        "Melden",
+        "Warten",
+        "Fragen",
+        "Platz nehmen"
+      ]
+    },
+    {
+      "id": "case_file_contents",
+      "label": "Bestandteile einer Ermittlungsakte",
+      "revealHint": "AKTENINHALT",
+      "items": [
+        "Bericht",
+        "Fingerabdruck",
+        "Foto",
+        "Protokoll"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Polizeiwache",
+    "categoryType": "function"
+  }
+}

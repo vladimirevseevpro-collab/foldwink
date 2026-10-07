@@ -1,0 +1,55 @@
+{
+  "id": "de-1263",
+  "title": "Am Imbisswagen",
+  "difficulty": "easy",
+  "tags": [
+    "Imbisswagen",
+    "Essen unterwegs"
+  ],
+  "groups": [
+    {
+      "id": "hot_snacks",
+      "label": "Warme Imbissgerichte",
+      "items": [
+        "Currywurst",
+        "Bratwurst",
+        "Pommes",
+        "Frikadelle"
+      ]
+    },
+    {
+      "id": "condiments",
+      "label": "Soßen und Würzmittel",
+      "items": [
+        "Ketchup",
+        "Mayonnaise",
+        "Senf",
+        "Currysauce"
+      ]
+    },
+    {
+      "id": "disposable_serving",
+      "label": "Einwegartikel zum Servieren",
+      "items": [
+        "Papiertüte",
+        "Pappschale",
+        "Holzgabel",
+        "Serviette"
+      ]
+    },
+    {
+      "id": "cooking_equipment",
+      "label": "Ausrüstung zum Zubereiten von Essen",
+      "items": [
+        "Fritteuse",
+        "Grillplatte",
+        "Küchenzange",
+        "Schneidebrett"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Imbisswagen",
+    "categoryType": "function"
+  }
+}

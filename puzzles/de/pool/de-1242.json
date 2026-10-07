@@ -1,0 +1,55 @@
+{
+  "id": "de-1242",
+  "title": "Noch vor der Tür",
+  "difficulty": "easy",
+  "tags": [
+    "Hausflur",
+    "Zuhause"
+  ],
+  "groups": [
+    {
+      "id": "things_worn_outside",
+      "label": "Kleidung, die man vor dem Rausgehen anzieht",
+      "items": [
+        "Jacke",
+        "Schal",
+        "Mütze",
+        "Handschuhe"
+      ]
+    },
+    {
+      "id": "keys",
+      "label": "Tasten, die man oft am Computer benutzt",
+      "items": [
+        "Leertaste",
+        "Eingabetaste",
+        "Umschalttaste",
+        "Esc-Taste"
+      ]
+    },
+    {
+      "id": "dairy",
+      "label": "Lebensmittel aus Milch",
+      "items": [
+        "Joghurt",
+        "Butter",
+        "Käse",
+        "Sahne"
+      ]
+    },
+    {
+      "id": "hand_tools",
+      "label": "Einfache Handwerkzeuge",
+      "items": [
+        "Hammer",
+        "Zange",
+        "Schraubendreher",
+        "Schraubenschlüssel"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Hausflur",
+    "categoryType": "use"
+  }
+}

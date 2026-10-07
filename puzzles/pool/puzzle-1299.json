@@ -1,0 +1,55 @@
+{
+  "id": "puzzle-1299",
+  "title": "Fixing A Flat",
+  "difficulty": "easy",
+  "tags": [
+    "bike repair",
+    "transport"
+  ],
+  "groups": [
+    {
+      "id": "bike_puncture_repair",
+      "label": "Items for fixing a bicycle puncture",
+      "items": [
+        "Patch kit",
+        "Tire levers",
+        "Spare inner tube",
+        "Hand pump"
+      ]
+    },
+    {
+      "id": "bedroom_furniture",
+      "label": "Kinds of pillows for sleeping",
+      "items": [
+        "Bed pillow",
+        "Bolster pillow",
+        "Neck pillow",
+        "Body pillow"
+      ]
+    },
+    {
+      "id": "birds_of_prey",
+      "label": "Hunting birds with hooked beaks",
+      "items": [
+        "Eagle",
+        "Falcon",
+        "Osprey",
+        "Hawk"
+      ]
+    },
+    {
+      "id": "citrus_fruit",
+      "label": "Fruits from citrus trees",
+      "items": [
+        "Lemon",
+        "Lime",
+        "Mandarin",
+        "Pomelo"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "bike repair",
+    "categoryType": "function"
+  }
+}

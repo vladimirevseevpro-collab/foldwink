@@ -1,0 +1,55 @@
+{
+  "id": "puzzle-1304",
+  "title": "Rainy Day Plans",
+  "difficulty": "easy",
+  "tags": [
+    "rainy day",
+    "home"
+  ],
+  "groups": [
+    {
+      "id": "rain_protection",
+      "label": "Things that protect you from rain",
+      "items": [
+        "Umbrella",
+        "Raincoat",
+        "Waterproof boots",
+        "Poncho"
+      ]
+    },
+    {
+      "id": "dairy_foods",
+      "label": "Foods made from milk",
+      "items": [
+        "Cheese",
+        "Yogurt",
+        "Buttermilk",
+        "Kefir"
+      ]
+    },
+    {
+      "id": "writing_supplies",
+      "label": "Supplies for writing",
+      "items": [
+        "Pen",
+        "Pencil",
+        "Notebook",
+        "Eraser"
+      ]
+    },
+    {
+      "id": "garden_birds",
+      "label": "Birds often seen in a garden",
+      "items": [
+        "Robin",
+        "Blue tit",
+        "House sparrow",
+        "Wren"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "rainy day",
+    "categoryType": "function"
+  }
+}

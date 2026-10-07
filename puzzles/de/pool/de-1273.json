@@ -1,0 +1,56 @@
+{
+  "id": "de-1273",
+  "title": "Das Erste-Hilfe-Set",
+  "difficulty": "medium",
+  "editorialSummary": "Medizinisches Klebeband erinnert an normales Haushaltstape. Das Etikett ordnet es als Material zum Befestigen eines Wundverbands ein.",
+  "groups": [
+    {
+      "id": "wound_dressings",
+      "label": "Material für kleine Wundverbände",
+      "revealHint": "VERBÄNDE",
+      "items": [
+        "Pflaster",
+        "Mullkompresse",
+        "Verbandbinde",
+        "Medizinisches Klebeband"
+      ]
+    },
+    {
+      "id": "first_aid_tools",
+      "label": "Werkzeuge im Erste-Hilfe-Set",
+      "revealHint": "WERKZEUGE",
+      "items": [
+        "Verbandschere",
+        "Pinzette",
+        "Fieberthermometer",
+        "Sicherheitsnadeln"
+      ]
+    },
+    {
+      "id": "cold_medicines",
+      "label": "Mittel gegen Erkältung",
+      "revealHint": "ERKÄLTUNG",
+      "items": [
+        "Hustensaft",
+        "Halstablette",
+        "Nasenspray",
+        "Erkältungskapsel"
+      ]
+    },
+    {
+      "id": "protective_supplies",
+      "label": "Einweg-Schutzartikel",
+      "revealHint": "SCHUTZ",
+      "items": [
+        "Nitrilhandschuhe",
+        "Gesichtsmaske",
+        "Schutzschürze",
+        "Einweg-Augenschutz"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Erste-Hilfe-Kasten",
+    "categoryType": "function"
+  }
+}

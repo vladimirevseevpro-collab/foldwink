@@ -1,0 +1,55 @@
+{
+  "id": "puzzle-1311",
+  "title": "On The Library Shelf",
+  "difficulty": "easy",
+  "tags": [
+    "library shelf",
+    "reading"
+  ],
+  "groups": [
+    {
+      "id": "reference_books",
+      "label": "Common reference books",
+      "items": [
+        "Dictionary",
+        "Atlas",
+        "Encyclopedia",
+        "Thesaurus"
+      ]
+    },
+    {
+      "id": "bike_parts",
+      "label": "Parts of a bicycle",
+      "items": [
+        "Saddle",
+        "Handlebar",
+        "Chain",
+        "Pedals"
+      ]
+    },
+    {
+      "id": "red_vegetables",
+      "label": "Red vegetables",
+      "items": [
+        "Tomato",
+        "Red pepper",
+        "Radish",
+        "Red cabbage"
+      ]
+    },
+    {
+      "id": "time_units",
+      "label": "Units of time",
+      "items": [
+        "Second",
+        "Minute",
+        "Hour",
+        "Day"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "library shelf",
+    "categoryType": "purpose"
+  }
+}

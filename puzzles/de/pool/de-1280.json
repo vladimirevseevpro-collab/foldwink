@@ -1,0 +1,56 @@
+{
+  "id": "de-1280",
+  "title": "Im Kunstmuseum",
+  "difficulty": "medium",
+  "editorialSummary": "Eine Eintrittskarte hängt mit der Zulassung zum Museum zusammen und kann daher an eine Hausregel erinnern. Das Label nennt sie als Unterlage für Besucher, nicht als Verhaltensregel.",
+  "groups": [
+    {
+      "id": "artworks",
+      "label": "Kunstwerke in einer Ausstellung",
+      "revealHint": "KUNSTWERKE",
+      "items": [
+        "Gemälde",
+        "Skulptur",
+        "Installation",
+        "Druckgrafik"
+      ]
+    },
+    {
+      "id": "visitor_materials",
+      "label": "Unterlagen und Hilfen für Besucher",
+      "revealHint": "BESUCHER",
+      "items": [
+        "Eintrittskarte",
+        "Museumsplan",
+        "Audioguide",
+        "Broschüre"
+      ]
+    },
+    {
+      "id": "museum_spaces",
+      "label": "Bereiche eines Museumsgebäudes",
+      "revealHint": "RÄUME",
+      "items": [
+        "Eingangsbereich",
+        "Ausstellungssaal",
+        "Treppe",
+        "Garderobe"
+      ]
+    },
+    {
+      "id": "museum_rules",
+      "label": "Verhaltensregeln im Museum",
+      "revealHint": "REGELN",
+      "items": [
+        "Ruhe bewahren",
+        "Abstand halten",
+        "Nichts berühren",
+        "Fotografieren verboten"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Kunstmuseum",
+    "categoryType": "place"
+  }
+}

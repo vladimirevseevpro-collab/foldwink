@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1332",
+  "title": "At the Polls",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "polling_equipment",
+      "label": "Equipment at a polling place",
+      "items": [
+        "Voting booth",
+        "Ballot box",
+        "Privacy screen",
+        "Ballot scanner"
+      ]
+    },
+    {
+      "id": "polling_documents",
+      "label": "Documents for voters",
+      "items": [
+        "Ballot",
+        "Voter guide",
+        "Registration card",
+        "Sample ballot"
+      ]
+    },
+    {
+      "id": "election_roles",
+      "label": "People with roles at a polling place",
+      "items": [
+        "Voter",
+        "Poll worker",
+        "Observer",
+        "Election clerk"
+      ]
+    },
+    {
+      "id": "voting_actions",
+      "label": "Actions in the voting process",
+      "items": [
+        "Check in",
+        "Mark",
+        "Cast",
+        "Count"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Polling place",
+    "categoryType": "place"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-1255",
+  "title": "Leben im Fischteich",
+  "difficulty": "easy",
+  "tags": [
+    "Fischteich",
+    "Natur"
+  ],
+  "groups": [
+    {
+      "id": "pond_fish",
+      "label": "Fische in einem Gartenteich",
+      "items": [
+        "Koi",
+        "Goldfisch",
+        "Schleie",
+        "Rotfeder"
+      ]
+    },
+    {
+      "id": "german_speaking_capitals",
+      "label": "Hauptstädte deutschsprachiger Länder",
+      "items": [
+        "Berlin",
+        "Wien",
+        "Bern",
+        "Vaduz"
+      ]
+    },
+    {
+      "id": "german_cases",
+      "label": "Vier Fälle der deutschen Grammatik",
+      "items": [
+        "Nominativ",
+        "Genitiv",
+        "Dativ",
+        "Akkusativ"
+      ]
+    },
+    {
+      "id": "pond_plants",
+      "label": "Pflanzen am Teichrand",
+      "items": [
+        "Schilf",
+        "Rohrkolben",
+        "Sumpfdotterblume",
+        "Iris"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Fischteich",
+    "categoryType": "habitat"
+  }
+}

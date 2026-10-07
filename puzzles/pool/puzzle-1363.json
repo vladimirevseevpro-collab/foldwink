@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1363",
+  "title": "On The Golf Course",
+  "difficulty": "medium",
+  "editorialSummary": "A putter is a club, while a putt is a shot made with one. The labels distinguish equipment from actions on the course.",
+  "groups": [
+    {
+      "id": "golf_clubs",
+      "label": "Types of golf club",
+      "revealHint": "GOLF CLUBS",
+      "items": [
+        "Driver",
+        "Putter",
+        "Wedge",
+        "Iron"
+      ]
+    },
+    {
+      "id": "golf_areas",
+      "label": "Areas on a golf course",
+      "revealHint": "COURSE AREAS",
+      "items": [
+        "Tee box",
+        "Fairway",
+        "Green",
+        "Bunker"
+      ]
+    },
+    {
+      "id": "golf_scores",
+      "label": "Golf scoring terms",
+      "revealHint": "GOLF SCORES",
+      "items": [
+        "Par",
+        "Birdie",
+        "Eagle",
+        "Bogey"
+      ]
+    },
+    {
+      "id": "golf_shots",
+      "label": "Shots played during a round",
+      "revealHint": "GOLF SHOTS",
+      "items": [
+        "Putt",
+        "Drive",
+        "Chip",
+        "Tee off"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "golf course",
+    "categoryType": "function"
+  }
+}

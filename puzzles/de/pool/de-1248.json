@@ -1,0 +1,55 @@
+{
+  "id": "de-1248",
+  "title": "Sicher unterwegs",
+  "difficulty": "easy",
+  "tags": [
+    "Fahrradwerkstatt",
+    "Alltag"
+  ],
+  "groups": [
+    {
+      "id": "bike_safety_gear",
+      "label": "Dinge für die Sicherheit am Fahrrad",
+      "items": [
+        "Fahrradhelm",
+        "Fahrradlicht",
+        "Klingel",
+        "Reflektor"
+      ]
+    },
+    {
+      "id": "red_vegetables",
+      "label": "Rotes Gemüse",
+      "items": [
+        "Tomate",
+        "Paprika",
+        "Radieschen",
+        "Rotkohl"
+      ]
+    },
+    {
+      "id": "cardinal_directions",
+      "label": "Himmelsrichtungen",
+      "items": [
+        "Norden",
+        "Süden",
+        "Osten",
+        "Westen"
+      ]
+    },
+    {
+      "id": "painting_supplies",
+      "label": "Malutensilien",
+      "items": [
+        "Pinsel",
+        "Farbpalette",
+        "Leinwand",
+        "Staffelei"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Fahrradwerkstatt",
+    "categoryType": "function"
+  }
+}

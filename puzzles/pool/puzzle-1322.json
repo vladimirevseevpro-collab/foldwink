@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1322",
+  "title": "Insurance Office",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "policy_terms",
+      "label": "Terms in an insurance policy",
+      "items": [
+        "Premium",
+        "Deductible",
+        "Coverage",
+        "Exclusion"
+      ]
+    },
+    {
+      "id": "claim_documents",
+      "label": "Documents for an insurance claim",
+      "items": [
+        "Estimate",
+        "Receipt",
+        "Invoice",
+        "Photograph"
+      ]
+    },
+    {
+      "id": "insurance_types",
+      "label": "Types of insurance",
+      "items": [
+        "Car",
+        "Home",
+        "Travel",
+        "Health"
+      ]
+    },
+    {
+      "id": "customer_actions",
+      "label": "Actions a customer can take",
+      "items": [
+        "Apply",
+        "Renew",
+        "Cancel",
+        "Appeal"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Insurance office",
+    "categoryType": "function"
+  }
+}

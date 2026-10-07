@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1346",
+  "title": "First Aid Kit",
+  "difficulty": "medium",
+  "editorialSummary": "Medical tape looks like ordinary household tape, but this group consists of dressings used directly on wounds. Its label resolves the overlap.",
+  "groups": [
+    {
+      "id": "wound_dressings",
+      "label": "Dressings used on minor wounds",
+      "revealHint": "DRESSINGS",
+      "items": [
+        "Adhesive bandage",
+        "Gauze pad",
+        "Roller bandage",
+        "Medical tape"
+      ]
+    },
+    {
+      "id": "first_aid_tools",
+      "label": "Tools kept in a first aid kit",
+      "revealHint": "TOOLS",
+      "items": [
+        "Blunt-tip scissors",
+        "Tweezers",
+        "Digital thermometer",
+        "Safety pins"
+      ]
+    },
+    {
+      "id": "cold_medicines",
+      "label": "Common cold medicines",
+      "revealHint": "MEDICINE",
+      "items": [
+        "Cough syrup",
+        "Throat lozenge",
+        "Decongestant",
+        "Saline spray"
+      ]
+    },
+    {
+      "id": "protective_supplies",
+      "label": "Disposable protective supplies",
+      "revealHint": "PROTECT",
+      "items": [
+        "Nitrile gloves",
+        "Face mask",
+        "Protective apron",
+        "Disposable eye shield"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "first aid kit",
+    "categoryType": "function"
+  }
+}

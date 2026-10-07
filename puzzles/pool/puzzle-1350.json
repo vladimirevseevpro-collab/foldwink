@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1350",
+  "title": "Rain Catcher",
+  "difficulty": "medium",
+  "editorialSummary": "A rain barrel is a garden container, but it stores water rather than growing plants. The labels separate a rainwater setup from planting containers.",
+  "groups": [
+    {
+      "id": "rain_barrel_setup",
+      "label": "Rain barrel setup",
+      "revealHint": "BARREL",
+      "items": [
+        "Rain barrel",
+        "Lid",
+        "Spigot",
+        "Overflow pipe"
+      ]
+    },
+    {
+      "id": "watering_gear",
+      "label": "Portable watering gear",
+      "revealHint": "WATERING",
+      "items": [
+        "Hose",
+        "Watering can",
+        "Nozzle",
+        "Sprinkler"
+      ]
+    },
+    {
+      "id": "planting_containers",
+      "label": "Planting containers",
+      "revealHint": "PLANTERS",
+      "items": [
+        "Flowerpot",
+        "Seed tray",
+        "Grow bag",
+        "Window box"
+      ]
+    },
+    {
+      "id": "rainwear",
+      "label": "Wet-weather gear",
+      "revealHint": "RAINWEAR",
+      "items": [
+        "Rain hat",
+        "Waterproof jacket",
+        "Umbrella",
+        "Galoshes"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "rain barrel",
+    "categoryType": "function"
+  }
+}

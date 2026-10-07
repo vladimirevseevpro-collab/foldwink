@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1354",
+  "title": "Doctor Visit",
+  "difficulty": "medium",
+  "editorialSummary": "A stethoscope is used to listen for signs of a cough, so it may initially suggest the symptom group. The label identifies it as an examination instrument rather than a patient condition.",
+  "groups": [
+    {
+      "id": "symptoms",
+      "label": "Common symptoms a patient reports",
+      "revealHint": "SYMPTOMS",
+      "items": [
+        "Cough",
+        "Fever",
+        "Dizziness",
+        "Fatigue"
+      ]
+    },
+    {
+      "id": "exam_tools",
+      "label": "Instruments used during an exam",
+      "revealHint": "EXAM TOOLS",
+      "items": [
+        "Stethoscope",
+        "Blood pressure cuff",
+        "Scale",
+        "Flashlight"
+      ]
+    },
+    {
+      "id": "front_desk",
+      "label": "Items used at a clinic front desk",
+      "revealHint": "FRONT DESK",
+      "items": [
+        "Calendar",
+        "Phone",
+        "Intake form",
+        "Appointment card"
+      ]
+    },
+    {
+      "id": "body_parts",
+      "label": "Parts of the human body",
+      "revealHint": "BODY PARTS",
+      "items": [
+        "Head",
+        "Throat",
+        "Chest",
+        "Knee"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "doctor visit",
+    "categoryType": "function"
+  }
+}

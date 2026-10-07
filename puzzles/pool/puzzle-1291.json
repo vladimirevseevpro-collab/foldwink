@@ -1,0 +1,55 @@
+{
+  "id": "puzzle-1291",
+  "title": "Sale Setup",
+  "difficulty": "easy",
+  "tags": [
+    "garage-sale",
+    "everyday"
+  ],
+  "groups": [
+    {
+      "id": "sale_setup",
+      "label": "Equipment for setting up a garage sale",
+      "items": [
+        "Folding table",
+        "Clothes rack",
+        "Cash box",
+        "Cardboard sign"
+      ]
+    },
+    {
+      "id": "frozen_desserts",
+      "label": "Common hat styles",
+      "items": [
+        "Baseball cap",
+        "Beanie",
+        "Sun hat",
+        "Fedora"
+      ]
+    },
+    {
+      "id": "metals",
+      "label": "Common metals",
+      "items": [
+        "Copper",
+        "Iron",
+        "Aluminum",
+        "Tin"
+      ]
+    },
+    {
+      "id": "card_suits",
+      "label": "Common road sign shapes",
+      "items": [
+        "Octagon",
+        "Triangle",
+        "Circle",
+        "Diamond"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "garage_sale",
+    "categoryType": "place_and_function"
+  }
+}

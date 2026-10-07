@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1362",
+  "title": "At The Climbing Gym",
+  "difficulty": "medium",
+  "editorialSummary": "A route card is paperwork, but it describes a specific climbing route rather than the visitor's booking. The labels distinguish route information from check-in records.",
+  "groups": [
+    {
+      "id": "climbing_equipment",
+      "label": "Equipment used for indoor climbing",
+      "revealHint": "CLIMBING GEAR",
+      "items": [
+        "Harness",
+        "Helmet",
+        "Rope",
+        "Chalk bag"
+      ]
+    },
+    {
+      "id": "gym_facilities",
+      "label": "Facilities at a climbing gym",
+      "revealHint": "GYM FACILITIES",
+      "items": [
+        "Climbing wall",
+        "Locker",
+        "Bench",
+        "Water fountain"
+      ]
+    },
+    {
+      "id": "route_information",
+      "label": "Information for a climbing route",
+      "revealHint": "ROUTE INFO",
+      "items": [
+        "Difficulty grade",
+        "Start marker",
+        "Finish marker",
+        "Route card"
+      ]
+    },
+    {
+      "id": "visit_records",
+      "label": "Records used to register for a visit",
+      "revealHint": "VISIT RECORDS",
+      "items": [
+        "Waiver",
+        "Membership card",
+        "Booking receipt",
+        "Emergency contact form"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "climbing gym",
+    "categoryType": "function"
+  }
+}

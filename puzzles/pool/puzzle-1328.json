@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1328",
+  "title": "Donation Center",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "donated_clothes",
+      "label": "Clothing donations",
+      "items": [
+        "Shirt",
+        "Trousers",
+        "Jacket",
+        "Boots"
+      ]
+    },
+    {
+      "id": "donated_books",
+      "label": "Book donations",
+      "items": [
+        "Novel",
+        "Cookbook",
+        "Textbook",
+        "Atlas"
+      ]
+    },
+    {
+      "id": "donated_housewares",
+      "label": "Household goods for donation",
+      "items": [
+        "Mug",
+        "Saucepan",
+        "Table lamp",
+        "Vase"
+      ]
+    },
+    {
+      "id": "donation_intake",
+      "label": "Donation intake tasks",
+      "items": [
+        "Inspect",
+        "Sort",
+        "Log",
+        "Price"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Donation center",
+    "categoryType": "place"
+  }
+}

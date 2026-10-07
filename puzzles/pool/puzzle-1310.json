@@ -1,0 +1,55 @@
+{
+  "id": "puzzle-1310",
+  "title": "The Laundry Room",
+  "difficulty": "easy",
+  "tags": [
+    "laundry room",
+    "home"
+  ],
+  "groups": [
+    {
+      "id": "laundry_appliances",
+      "label": "Items in a laundry room",
+      "items": [
+        "Washing machine",
+        "Clothes dryer",
+        "Ironing board",
+        "Laundry basket"
+      ]
+    },
+    {
+      "id": "tree_fruits",
+      "label": "Edible fruits borne on trees",
+      "items": [
+        "Mango",
+        "Avocado",
+        "Fig",
+        "Olive"
+      ]
+    },
+    {
+      "id": "types_of_bridges",
+      "label": "Structural types of bridges",
+      "items": [
+        "Arch bridge",
+        "Truss bridge",
+        "Cable-stayed bridge",
+        "Cantilever bridge"
+      ]
+    },
+    {
+      "id": "bird_nests",
+      "label": "Places where birds nest",
+      "items": [
+        "Tree hollow",
+        "Cliff ledge",
+        "Burrow",
+        "Nest box"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "laundry room",
+    "categoryType": "location"
+  }
+}

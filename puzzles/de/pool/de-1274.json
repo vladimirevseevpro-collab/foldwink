@@ -1,0 +1,56 @@
+{
+  "id": "de-1274",
+  "title": "Futter fürs Vogelhaus",
+  "difficulty": "medium",
+  "editorialSummary": "Erdnüsse sind auch ein Snack für Menschen. Hier zählt die ausdrücklich markierte Verwendung als Vogelfutter.",
+  "groups": [
+    {
+      "id": "bird_food",
+      "label": "Futter für Vogelfutterstellen",
+      "revealHint": "VOGELFUTTER",
+      "items": [
+        "Sonnenblumenkerne",
+        "Nigersaat",
+        "Meisenknödel",
+        "Ungesalzene Erdnüsse"
+      ]
+    },
+    {
+      "id": "garden_birds",
+      "label": "Kleine Vögel im Garten",
+      "revealHint": "VÖGEL",
+      "items": [
+        "Haussperling",
+        "Blaumeise",
+        "Stieglitz",
+        "Rotkehlchen"
+      ]
+    },
+    {
+      "id": "feeder_parts",
+      "label": "Teile eines hängenden Futterspenders",
+      "revealHint": "FUTTERSPENDER",
+      "items": [
+        "Futteröffnung",
+        "Sitzstange",
+        "Vorratsbehälter",
+        "Regendach"
+      ]
+    },
+    {
+      "id": "spring_flowers",
+      "label": "Frühe Frühlingsblumen",
+      "revealHint": "BLUMEN",
+      "items": [
+        "Schneeglöckchen",
+        "Blaustern",
+        "Primel",
+        "Maiglöckchen"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Vogelhaus",
+    "categoryType": "function"
+  }
+}

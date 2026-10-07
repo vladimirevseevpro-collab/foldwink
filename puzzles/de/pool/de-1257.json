@@ -1,0 +1,55 @@
+{
+  "id": "de-1257",
+  "title": "Herbst im Park",
+  "difficulty": "easy",
+  "tags": [
+    "Herbstspaziergang",
+    "Park"
+  ],
+  "groups": [
+    {
+      "id": "cool_weather_clothes",
+      "label": "Kleidung bei kühlem Wetter",
+      "items": [
+        "Mantel",
+        "Stiefel",
+        "Regenjacke",
+        "Handschuhe"
+      ]
+    },
+    {
+      "id": "weather_phenomena",
+      "label": "Herbstwetter im Freien",
+      "items": [
+        "Regen",
+        "Nebel",
+        "Wind",
+        "Frost"
+      ]
+    },
+    {
+      "id": "pathside_objects",
+      "label": "Dinge am Wegesrand im Park",
+      "items": [
+        "Bank",
+        "Pfütze",
+        "Laub",
+        "Eichel"
+      ]
+    },
+    {
+      "id": "hot_drinks",
+      "label": "Getränke für kalte Tage",
+      "items": [
+        "Tee",
+        "Kakao",
+        "Kaffee",
+        "Punsch"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Herbstspaziergang",
+    "categoryType": "classification"
+  }
+}

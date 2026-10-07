@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1333",
+  "title": "Table for Two",
+  "difficulty": "medium",
+  "editorialSummary": "The material labels separate pottery tableware from cloth linens. A ceramic plate can suggest the table-linen group by setting, but it is not textile.",
+  "groups": [
+    {
+      "id": "ceramic_tableware",
+      "label": "Ceramic tableware",
+      "revealHint": "CERAMIC",
+      "items": [
+        "Coffee mug",
+        "Cereal bowl",
+        "Dinner plate",
+        "Serving platter"
+      ]
+    },
+    {
+      "id": "table_textiles",
+      "label": "Textiles used on a dining table",
+      "revealHint": "TEXTILES",
+      "items": [
+        "Tablecloth",
+        "Table runner",
+        "Cloth napkin",
+        "Fabric placemat"
+      ]
+    },
+    {
+      "id": "pasta_shapes",
+      "label": "Common pasta shapes",
+      "revealHint": "PASTA",
+      "items": [
+        "Penne",
+        "Fusilli",
+        "Farfalle",
+        "Spaghetti"
+      ]
+    },
+    {
+      "id": "kitchen_measuring",
+      "label": "Tools for measuring in a kitchen",
+      "revealHint": "MEASURE",
+      "items": [
+        "Measuring cup",
+        "Measuring spoon",
+        "Kitchen scale",
+        "Food thermometer"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "pottery",
+    "categoryType": "material_and_function"
+  }
+}

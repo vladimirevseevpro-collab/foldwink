@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1327",
+  "title": "Vending Machine",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "machine_components",
+      "label": "Parts of a vending machine",
+      "items": [
+        "Keypad",
+        "Display",
+        "Coin slot",
+        "Delivery flap"
+      ]
+    },
+    {
+      "id": "payment_options",
+      "label": "Ways to pay at a machine",
+      "items": [
+        "Coin",
+        "Banknote",
+        "Payment card",
+        "Voucher"
+      ]
+    },
+    {
+      "id": "snacks_and_drinks",
+      "label": "Common vending machine products",
+      "items": [
+        "Chips",
+        "Chocolate bar",
+        "Soda can",
+        "Water bottle"
+      ]
+    },
+    {
+      "id": "buyer_steps",
+      "label": "Steps for buying from a machine",
+      "items": [
+        "Select",
+        "Pay",
+        "Collect",
+        "Cancel"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Vending machine",
+    "categoryType": "place"
+  }
+}

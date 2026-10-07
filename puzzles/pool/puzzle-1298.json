@@ -1,0 +1,55 @@
+{
+  "id": "puzzle-1298",
+  "title": "Record Shop Finds",
+  "difficulty": "easy",
+  "tags": [
+    "record shop",
+    "music"
+  ],
+  "groups": [
+    {
+      "id": "music_formats",
+      "label": "Common formats for recorded music",
+      "items": [
+        "Vinyl record",
+        "Audio cassette",
+        "Compact disc",
+        "8-track cartridge"
+      ]
+    },
+    {
+      "id": "garden_tools",
+      "label": "Tools used in a garden",
+      "items": [
+        "Trowel",
+        "Pruning shears",
+        "Garden fork",
+        "Watering can"
+      ]
+    },
+    {
+      "id": "baking_ingredients",
+      "label": "Ingredients for baking",
+      "items": [
+        "Flour",
+        "Baking powder",
+        "Vanilla extract",
+        "Cocoa powder"
+      ]
+    },
+    {
+      "id": "types_of_bridges",
+      "label": "Common types of bridges",
+      "items": [
+        "Arch bridge",
+        "Beam bridge",
+        "Suspension bridge",
+        "Truss bridge"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "record shop",
+    "categoryType": "format"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1357",
+  "title": "Lost and Found",
+  "difficulty": "medium",
+  "editorialSummary": "A lost phone may suggest the owner's contact details. The label asks for information about the owner, while Phone is the physical device itself.",
+  "groups": [
+    {
+      "id": "found_belongings",
+      "label": "Personal items often turned in",
+      "revealHint": "FOUND ITEMS",
+      "items": [
+        "Phone",
+        "Wallet",
+        "Glasses",
+        "Scarf"
+      ]
+    },
+    {
+      "id": "owner_details",
+      "label": "Details used to contact an owner",
+      "revealHint": "OWNER DETAILS",
+      "items": [
+        "Full name",
+        "Phone number",
+        "Email address",
+        "Street address"
+      ]
+    },
+    {
+      "id": "storage_places",
+      "label": "Places for storing found property",
+      "revealHint": "STORAGE",
+      "items": [
+        "Shelf",
+        "Drawer",
+        "Cabinet",
+        "Locker"
+      ]
+    },
+    {
+      "id": "recording_supplies",
+      "label": "Items used to record a found item",
+      "revealHint": "RECORD KEEPING",
+      "items": [
+        "Claim form",
+        "Logbook",
+        "Inventory tag",
+        "Pen"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "lost and found desk",
+    "categoryType": "function"
+  }
+}

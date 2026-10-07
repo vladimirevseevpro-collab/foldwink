@@ -1,0 +1,56 @@
+{
+  "id": "de-1283",
+  "title": "Auf dem Friedhof",
+  "difficulty": "medium",
+  "editorialSummary": "Ein Kranz wird oft an einem Grab niedergelegt und kann daher zunächst wie ein festes Grabzeichen wirken. Die Labels trennen eine bewegliche Blumengabe von dauerhaften Markierungen.",
+  "groups": [
+    {
+      "id": "floral_tributes",
+      "label": "Blumengaben für eine Trauerfeier",
+      "revealHint": "BLUMENGABEN",
+      "items": [
+        "Rose",
+        "Lilie",
+        "Trauerstrauß",
+        "Kranz"
+      ]
+    },
+    {
+      "id": "grave_markers",
+      "label": "Feste Grabmale und Zeichen",
+      "revealHint": "GRABZEICHEN",
+      "items": [
+        "Grabstein",
+        "Grabkreuz",
+        "Gedenktafel",
+        "Grabstatue"
+      ]
+    },
+    {
+      "id": "cemetery_care",
+      "label": "Geräte zur Pflege des Friedhofs",
+      "revealHint": "PFLEGE",
+      "items": [
+        "Schaufel",
+        "Harke",
+        "Gießkanne",
+        "Schubkarre"
+      ]
+    },
+    {
+      "id": "visitor_area",
+      "label": "Wege und Einrichtungen für Besucher",
+      "revealHint": "BESUCHERBEREICH",
+      "items": [
+        "Tor",
+        "Pfad",
+        "Zaun",
+        "Bank"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Friedhof",
+    "categoryType": "place"
+  }
+}

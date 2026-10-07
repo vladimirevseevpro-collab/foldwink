@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1355",
+  "title": "Pet Grooming",
+  "difficulty": "medium",
+  "editorialSummary": "Shampoo is used during grooming, so it may first sound like grooming equipment. The label separates products applied to a pet from the physical tools used by the groomer.",
+  "groups": [
+    {
+      "id": "grooming_tools",
+      "label": "Physical tools for grooming a pet",
+      "revealHint": "GROOMING TOOLS",
+      "items": [
+        "Brush",
+        "Comb",
+        "Scissors",
+        "Nail clipper"
+      ]
+    },
+    {
+      "id": "dog_breeds",
+      "label": "Common dog breeds",
+      "revealHint": "DOG BREEDS",
+      "items": [
+        "Poodle",
+        "Beagle",
+        "Dachshund",
+        "Bulldog"
+      ]
+    },
+    {
+      "id": "pet_wearables",
+      "label": "Wearable items for a pet",
+      "revealHint": "PET GEAR",
+      "items": [
+        "Collar",
+        "Leash",
+        "Harness",
+        "Bandana"
+      ]
+    },
+    {
+      "id": "grooming_products",
+      "label": "Products applied to a pet's coat",
+      "revealHint": "COAT PRODUCTS",
+      "items": [
+        "Shampoo",
+        "Conditioner",
+        "Detangling spray",
+        "Flea powder"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "pet grooming",
+    "categoryType": "function"
+  }
+}

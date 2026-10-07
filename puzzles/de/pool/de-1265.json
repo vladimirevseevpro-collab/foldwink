@@ -1,0 +1,55 @@
+{
+  "id": "de-1265",
+  "title": "Auf dem Dachboden",
+  "difficulty": "easy",
+  "tags": [
+    "Dachboden",
+    "Aufräumen"
+  ],
+  "groups": [
+    {
+      "id": "attic_containers",
+      "label": "Behälter zum Aufbewahren",
+      "items": [
+        "Kiste",
+        "Truhe",
+        "Umzugskarton",
+        "Koffer"
+      ]
+    },
+    {
+      "id": "roof_structure",
+      "label": "Teile des Dachaufbaus",
+      "items": [
+        "Balken",
+        "Dachfenster",
+        "Dachziegel",
+        "Dämmung"
+      ]
+    },
+    {
+      "id": "old_keepsakes",
+      "label": "Alte Erinnerungsstücke",
+      "items": [
+        "Fotoalbum",
+        "Spieluhr",
+        "Briefsammlung",
+        "Weihnachtsdekoration"
+      ]
+    },
+    {
+      "id": "tidying_actions",
+      "label": "Tätigkeiten beim Aufräumen",
+      "items": [
+        "Sortieren",
+        "Stapeln",
+        "Suchen",
+        "Wegwerfen"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Dachboden",
+    "categoryType": "place"
+  }
+}

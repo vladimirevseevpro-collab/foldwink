@@ -1,0 +1,55 @@
+{
+  "id": "de-1254",
+  "title": "Apfelkuchen backen",
+  "difficulty": "easy",
+  "tags": [
+    "Apfelkuchen",
+    "Backen"
+  ],
+  "groups": [
+    {
+      "id": "apple_cake_ingredients",
+      "label": "Zutaten für Apfelkuchen",
+      "items": [
+        "Äpfel",
+        "Mehl",
+        "Zimt",
+        "Butter"
+      ]
+    },
+    {
+      "id": "kitchen_cutlery",
+      "label": "Essbesteck auf dem Tisch",
+      "items": [
+        "Gabel",
+        "Messer",
+        "Esslöffel",
+        "Kuchengabel"
+      ]
+    },
+    {
+      "id": "time_units",
+      "label": "Kleine bis größere Zeiteinheiten",
+      "items": [
+        "Sekunde",
+        "Minute",
+        "Stunde",
+        "Tag"
+      ]
+    },
+    {
+      "id": "red_flowers",
+      "label": "Rote Gartenblumen",
+      "items": [
+        "Tulpe",
+        "Klatschrose",
+        "Dahlie",
+        "Geranie"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Apfelkuchen",
+    "categoryType": "function"
+  }
+}

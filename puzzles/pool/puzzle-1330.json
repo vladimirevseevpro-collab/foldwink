@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1330",
+  "title": "A Doormat",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "mat_materials",
+      "label": "Materials for a doormat",
+      "items": [
+        "Coconut fiber",
+        "Rubber",
+        "Cotton",
+        "Nylon"
+      ]
+    },
+    {
+      "id": "tracked_dirt",
+      "label": "Things tracked in from outside",
+      "items": [
+        "Mud",
+        "Sand",
+        "Gravel",
+        "Leaves"
+      ]
+    },
+    {
+      "id": "mat_cleaning",
+      "label": "Ways to clean a doormat",
+      "items": [
+        "Shake",
+        "Sweep",
+        "Rinse",
+        "Vacuum"
+      ]
+    },
+    {
+      "id": "doorway_features",
+      "label": "Features at an entrance",
+      "items": [
+        "Threshold",
+        "Doorbell",
+        "Porch",
+        "Doorway"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Doormat",
+    "categoryType": "object"
+  }
+}

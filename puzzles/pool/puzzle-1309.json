@@ -1,0 +1,55 @@
+{
+  "id": "puzzle-1309",
+  "title": "Music Festival Setup",
+  "difficulty": "easy",
+  "tags": [
+    "music festival",
+    "live music"
+  ],
+  "groups": [
+    {
+      "id": "stage_audio",
+      "label": "Audio equipment on a concert stage",
+      "items": [
+        "Microphone",
+        "Monitor speaker",
+        "Mixing console",
+        "Stage amplifier"
+      ]
+    },
+    {
+      "id": "plant_parts",
+      "label": "Parts of a plant",
+      "items": [
+        "Root",
+        "Stem",
+        "Leaf",
+        "Flower"
+      ]
+    },
+    {
+      "id": "furniture_materials",
+      "label": "Materials used to make furniture",
+      "items": [
+        "Wood",
+        "Steel",
+        "Rattan",
+        "Plywood"
+      ]
+    },
+    {
+      "id": "cloud_types",
+      "label": "Common cloud types",
+      "items": [
+        "Cirrus",
+        "Cumulus",
+        "Stratus",
+        "Altocumulus"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "music festival",
+    "categoryType": "function"
+  }
+}

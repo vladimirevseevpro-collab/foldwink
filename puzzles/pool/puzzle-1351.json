@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1351",
+  "title": "School Bell",
+  "difficulty": "medium",
+  "editorialSummary": "A lunchbox is a common school supply, but it is not stationery. The labels separate packed-lunch items from tools used for classroom writing.",
+  "groups": [
+    {
+      "id": "school_subjects",
+      "label": "Subjects taught in class",
+      "revealHint": "SUBJECTS",
+      "items": [
+        "Math",
+        "History",
+        "Science",
+        "Music"
+      ]
+    },
+    {
+      "id": "classroom_stationery",
+      "label": "Classroom stationery",
+      "revealHint": "STATIONERY",
+      "items": [
+        "Pencil",
+        "Ruler",
+        "Notebook",
+        "Eraser"
+      ]
+    },
+    {
+      "id": "packed_lunch",
+      "label": "Packed lunch items",
+      "revealHint": "LUNCH",
+      "items": [
+        "Lunchbox",
+        "Sandwich",
+        "Juice box",
+        "Thermos"
+      ]
+    },
+    {
+      "id": "schedule_blocks",
+      "label": "School timetable entries",
+      "revealHint": "SCHEDULE",
+      "items": [
+        "First period",
+        "Recess",
+        "Lunch break",
+        "Dismissal"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "school timetable",
+    "categoryType": "function"
+  }
+}

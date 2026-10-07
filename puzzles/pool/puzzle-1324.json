@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1324",
+  "title": "Roadwork Site",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "work_zone_signs",
+      "label": "Signs in a road work zone",
+      "items": [
+        "Detour",
+        "Road closed",
+        "Slow",
+        "Men at work"
+      ]
+    },
+    {
+      "id": "road_machines",
+      "label": "Machines used for roadwork",
+      "items": [
+        "Excavator",
+        "Road roller",
+        "Bulldozer",
+        "Dump truck"
+      ]
+    },
+    {
+      "id": "worker_gear",
+      "label": "Protective gear for road workers",
+      "items": [
+        "Safety vest",
+        "Hard hat",
+        "Ear defenders",
+        "Safety boots"
+      ]
+    },
+    {
+      "id": "pavement_materials",
+      "label": "Materials used in pavement",
+      "items": [
+        "Asphalt",
+        "Gravel",
+        "Concrete",
+        "Tar"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Roadwork site",
+    "categoryType": "place"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "puzzle-1320",
+  "title": "During A Power Outage",
+  "difficulty": "easy",
+  "tags": [
+    "power outage",
+    "emergency"
+  ],
+  "groups": [
+    {
+      "id": "emergency_lights",
+      "label": "Sources of light during a power outage",
+      "items": [
+        "Candle",
+        "Lantern",
+        "Flashlight",
+        "Glow stick"
+      ]
+    },
+    {
+      "id": "powered_devices",
+      "label": "Devices people may use during an outage",
+      "items": [
+        "Phone",
+        "Radio",
+        "Tablet",
+        "Laptop"
+      ]
+    },
+    {
+      "id": "backup_power",
+      "label": "Equipment that can supply backup power",
+      "items": [
+        "Generator",
+        "Power bank",
+        "Car battery",
+        "UPS"
+      ]
+    },
+    {
+      "id": "outage_safety",
+      "label": "Safety steps during an outage",
+      "items": [
+        "Check the breaker",
+        "Unplug appliances",
+        "Use the stairs",
+        "Call the utility"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "power outage",
+    "categoryType": "event"
+  }
+}

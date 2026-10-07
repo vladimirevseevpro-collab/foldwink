@@ -1,0 +1,55 @@
+{
+  "id": "de-1262",
+  "title": "Mit dem Zug",
+  "difficulty": "easy",
+  "tags": [
+    "Zugfahrt",
+    "Bahnreise"
+  ],
+  "groups": [
+    {
+      "id": "ticket_details",
+      "label": "Angaben auf einer Fahrkarte",
+      "items": [
+        "Abfahrtsbahnhof",
+        "Zielbahnhof",
+        "Reisedatum",
+        "Sitzplatznummer"
+      ]
+    },
+    {
+      "id": "station_areas",
+      "label": "Einrichtungen am Bahnhof",
+      "items": [
+        "Bahnsteig",
+        "Fahrkartenschalter",
+        "Wartebereich",
+        "Gepäckschließfach"
+      ]
+    },
+    {
+      "id": "coach_furnishings",
+      "label": "Einrichtung im Personenwagen",
+      "items": [
+        "Gepäckablage",
+        "Klapptisch",
+        "Leselampe",
+        "Vorhang"
+      ]
+    },
+    {
+      "id": "travel_belongings",
+      "label": "Persönliche Dinge für eine lange Fahrt",
+      "items": [
+        "Trinkflasche",
+        "Reisekissen",
+        "Ohrstöpsel",
+        "Buch"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Zugfahrt",
+    "categoryType": "place"
+  }
+}

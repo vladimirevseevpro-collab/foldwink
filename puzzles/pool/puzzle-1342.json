@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1342",
+  "title": "Digging For Records",
+  "difficulty": "medium",
+  "editorialSummary": "An album sleeve belongs with record packaging, though it is closely associated with vinyl. The format label refers to the recorded medium itself.",
+  "groups": [
+    {
+      "id": "record_formats",
+      "label": "Formats for recorded music",
+      "revealHint": "FORMATS",
+      "items": [
+        "Vinyl LP",
+        "Cassette tape",
+        "Compact disc",
+        "8-track cartridge"
+      ]
+    },
+    {
+      "id": "record_packaging",
+      "label": "Parts of a record's packaging",
+      "revealHint": "PACKAGING",
+      "items": [
+        "Album sleeve",
+        "Inner sleeve",
+        "Liner notes",
+        "Shrink wrap"
+      ]
+    },
+    {
+      "id": "music_genres",
+      "label": "Styles of popular music",
+      "revealHint": "MUSIC",
+      "items": [
+        "Jazz",
+        "Reggae",
+        "Bluegrass",
+        "Disco"
+      ]
+    },
+    {
+      "id": "stereo_equipment",
+      "label": "Home stereo equipment",
+      "revealHint": "STEREO",
+      "items": [
+        "Amplifier",
+        "Loudspeaker",
+        "Receiver",
+        "Equalizer"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "record store",
+    "categoryType": "format_and_accessory"
+  }
+}

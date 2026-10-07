@@ -1,0 +1,55 @@
+{
+  "id": "de-1268",
+  "title": "Im Fahrstuhl",
+  "difficulty": "easy",
+  "tags": [
+    "Fahrstuhl",
+    "Gebäude"
+  ],
+  "groups": [
+    {
+      "id": "elevator_controls",
+      "label": "Bedien- und Anzeigeelemente im Fahrstuhl",
+      "items": [
+        "Knopf",
+        "Anzeige",
+        "Notruftaste",
+        "Türöffner"
+      ]
+    },
+    {
+      "id": "building_levels",
+      "label": "Stockwerke eines Gebäudes",
+      "items": [
+        "Erdgeschoss",
+        "Keller",
+        "Dachgeschoss",
+        "Zwischenetage"
+      ]
+    },
+    {
+      "id": "elevator_users",
+      "label": "Personen, die den Fahrstuhl benutzen",
+      "items": [
+        "Fahrgast",
+        "Besucher",
+        "Hausmeister",
+        "Lieferant"
+      ]
+    },
+    {
+      "id": "elevator_actions",
+      "label": "Vorgänge im Fahrstuhl",
+      "items": [
+        "Einsteigen",
+        "Aussteigen",
+        "Warten",
+        "Fahren"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Fahrstuhl",
+    "categoryType": "place"
+  }
+}

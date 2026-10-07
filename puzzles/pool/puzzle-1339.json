@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-1339",
+  "title": "Track and Field",
+  "difficulty": "medium",
+  "editorialSummary": "The 4×100 relay suggests the relay baton, but the cards distinguish competition events from the equipment used in them.",
+  "groups": [
+    {
+      "id": "running_events",
+      "label": "Running events at a track meet",
+      "revealHint": "RACE EVENTS",
+      "items": [
+        "100-meter sprint",
+        "4×100 relay",
+        "110-meter hurdles",
+        "1500-meter race"
+      ]
+    },
+    {
+      "id": "running_gear",
+      "label": "Equipment used in running events",
+      "revealHint": "RACE GEAR",
+      "items": [
+        "Relay baton",
+        "Running spikes",
+        "Starting blocks",
+        "Race bib"
+      ]
+    },
+    {
+      "id": "field_events",
+      "label": "Track-and-field throwing events",
+      "revealHint": "THROWING",
+      "items": [
+        "Shot put",
+        "Discus throw",
+        "Javelin throw",
+        "Hammer throw"
+      ]
+    },
+    {
+      "id": "sports_awards",
+      "label": "Prizes given at a sports day",
+      "revealHint": "PRIZES",
+      "items": [
+        "Medal",
+        "Ribbon",
+        "Trophy",
+        "Certificate"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "sports-day",
+    "categoryType": "event_and_equipment"
+  }
+}

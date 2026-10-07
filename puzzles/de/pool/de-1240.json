@@ -1,0 +1,55 @@
+{
+  "id": "de-1240",
+  "title": "Schuhpflege",
+  "difficulty": "easy",
+  "tags": [
+    "Schuhreparatur",
+    "Alltag"
+  ],
+  "groups": [
+    {
+      "id": "shoe_care",
+      "label": "Mittel zur Schuhpflege",
+      "items": [
+        "Schuhcreme",
+        "Schuhbürste",
+        "Schuhspanner",
+        "Imprägnierspray"
+      ]
+    },
+    {
+      "id": "citrus_fruit",
+      "label": "Nüsse, die man oft knackt",
+      "items": [
+        "Walnuss",
+        "Haselnuss",
+        "Pekannuss",
+        "Pistazie"
+      ]
+    },
+    {
+      "id": "wild_mammals",
+      "label": "Bekannte wilde Säugetiere",
+      "items": [
+        "Fuchs",
+        "Wolf",
+        "Reh",
+        "Hase"
+      ]
+    },
+    {
+      "id": "punctuation",
+      "label": "Satzzeichen",
+      "items": [
+        "Komma",
+        "Punkt",
+        "Fragezeichen",
+        "Ausrufezeichen"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Schuhreparatur",
+    "categoryType": "function"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "de-1279",
+  "title": "In der Druckerei",
+  "difficulty": "medium",
+  "editorialSummary": "Folie kann ein fertiges bedrucktes Transparent sein, bezeichnet hier aber das Material vor dem Druck. Die Labels trennen Rohmaterial von fertigen Druckerzeugnissen.",
+  "groups": [
+    {
+      "id": "print_products",
+      "label": "Fertige Druckerzeugnisse",
+      "revealHint": "PRODUKTE",
+      "items": [
+        "Zeitung",
+        "Plakat",
+        "Flyer",
+        "Visitenkarte"
+      ]
+    },
+    {
+      "id": "print_materials",
+      "label": "Materialien für den Druckprozess",
+      "revealHint": "MATERIAL",
+      "items": [
+        "Papier",
+        "Druckfarbe",
+        "Karton",
+        "Folie"
+      ]
+    },
+    {
+      "id": "print_machines",
+      "label": "Maschinen und Geräte der Druckerei",
+      "revealHint": "MASCHINEN",
+      "items": [
+        "Druckmaschine",
+        "Schneidemaschine",
+        "Heftgerät",
+        "Laminiergerät"
+      ]
+    },
+    {
+      "id": "layout_terms",
+      "label": "Begriffe eines Drucklayouts",
+      "revealHint": "LAYOUT",
+      "items": [
+        "Titel",
+        "Bild",
+        "Seite",
+        "Rand"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Druckerei",
+    "categoryType": "function"
+  }
+}

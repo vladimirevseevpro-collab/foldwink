@@ -1,0 +1,55 @@
+{
+  "id": "puzzle-1294",
+  "title": "Fare Ready",
+  "difficulty": "easy",
+  "tags": [
+    "bus-stop",
+    "everyday"
+  ],
+  "groups": [
+    {
+      "id": "bus_fare_proof",
+      "label": "Ways to show you paid a bus fare",
+      "items": [
+        "Single-ride ticket",
+        "Day pass",
+        "Smart card",
+        "Transfer ticket"
+      ]
+    },
+    {
+      "id": "soup_vegetables",
+      "label": "Vegetables commonly used in soup",
+      "items": [
+        "Carrot",
+        "Celery",
+        "Leek",
+        "Parsnip"
+      ]
+    },
+    {
+      "id": "kitchen_measuring",
+      "label": "Kitchen tools for measuring",
+      "items": [
+        "Measuring cup",
+        "Measuring spoon",
+        "Kitchen scale",
+        "Thermometer"
+      ]
+    },
+    {
+      "id": "clock_parts",
+      "label": "Parts of an analog clock",
+      "items": [
+        "Hour hand",
+        "Minute hand",
+        "Second hand",
+        "Clock face"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "bus_stop",
+    "categoryType": "function"
+  }
+}

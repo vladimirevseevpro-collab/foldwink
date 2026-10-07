@@ -1,0 +1,55 @@
+{
+  "id": "de-1245",
+  "title": "Auf zum Camping",
+  "difficulty": "easy",
+  "tags": [
+    "Campingplatz",
+    "Reise"
+  ],
+  "groups": [
+    {
+      "id": "camp_sleeping_gear",
+      "label": "Ausrüstung für die Campingnacht",
+      "items": [
+        "Zelt",
+        "Schlafsack",
+        "Isomatte",
+        "Stirnlampe"
+      ]
+    },
+    {
+      "id": "dough_types",
+      "label": "Arten von Teig",
+      "items": [
+        "Blätterteig",
+        "Hefeteig",
+        "Mürbeteig",
+        "Strudelteig"
+      ]
+    },
+    {
+      "id": "kitchen_appliances",
+      "label": "Elektrische Küchengeräte",
+      "items": [
+        "Toaster",
+        "Wasserkocher",
+        "Mixer",
+        "Mikrowelle"
+      ]
+    },
+    {
+      "id": "winter_clothes",
+      "label": "Kleidung für kalte Tage",
+      "items": [
+        "Mantel",
+        "Mütze",
+        "Schal",
+        "Handschuhe"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Campingplatz",
+    "categoryType": "function"
+  }
+}

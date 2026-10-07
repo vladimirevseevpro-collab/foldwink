@@ -1,0 +1,56 @@
+{
+  "id": "de-1272",
+  "title": "Schätze im Plattenladen",
+  "difficulty": "medium",
+  "editorialSummary": "Eine Plattenhülle gehört zur Verpackung, ist aber eng mit einer Schallplatte verbunden. Die Markierungen trennen Tonträger von ihrer Hülle.",
+  "groups": [
+    {
+      "id": "music_formats",
+      "label": "Formate für gespeicherte Musik",
+      "revealHint": "FORMATE",
+      "items": [
+        "Schallplatte",
+        "Musikkassette",
+        "CD",
+        "Tonbandspule"
+      ]
+    },
+    {
+      "id": "record_packaging",
+      "label": "Teile einer Plattenverpackung",
+      "revealHint": "HÜLLE",
+      "items": [
+        "Innenhülle",
+        "Plattencover",
+        "Begleitheft",
+        "Schrumpffolie"
+      ]
+    },
+    {
+      "id": "music_genres",
+      "label": "Stilrichtungen der Musik",
+      "revealHint": "MUSIK",
+      "items": [
+        "Jazz",
+        "Reggae",
+        "Country",
+        "Disco"
+      ]
+    },
+    {
+      "id": "stereo_equipment",
+      "label": "Geräte einer Stereoanlage",
+      "revealHint": "ANLAGE",
+      "items": [
+        "Verstärker",
+        "Lautsprecher",
+        "Receiver",
+        "Equalizer"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Plattenladen",
+    "categoryType": "format_and_accessory"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "de-1289",
+  "title": "Am Geldautomaten",
+  "difficulty": "medium",
+  "editorialSummary": "Eine PIN kann als Eingabe oder als Sicherheitsmaßnahme verstanden werden. Die Labels trennen Angaben, die der Nutzer eingibt, von Schutzfunktionen.",
+  "groups": [
+    {
+      "id": "atm_parts",
+      "label": "Teile des Automaten",
+      "revealHint": "AUTOMAT",
+      "items": [
+        "Bildschirm",
+        "Tastenfeld",
+        "Kartenleser",
+        "Geldausgabefach"
+      ]
+    },
+    {
+      "id": "user_entries",
+      "label": "Nutzereingaben",
+      "revealHint": "EINGABEN",
+      "items": [
+        "PIN",
+        "Betrag",
+        "Sprache",
+        "Kontowahl"
+      ]
+    },
+    {
+      "id": "security_measures",
+      "label": "Sicherheitsmaßnahmen",
+      "revealHint": "SICHERHEIT",
+      "items": [
+        "Sichtschutz",
+        "Tageslimit",
+        "Kartensperre",
+        "Sicherheitskamera"
+      ]
+    },
+    {
+      "id": "atm_results",
+      "label": "Mögliche Ausgaben",
+      "revealHint": "ERGEBNISSE",
+      "items": [
+        "Banknote",
+        "Beleg",
+        "Kontostand",
+        "Kontoauszug"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "Geldautomat",
+    "categoryType": "place"
+  }
+}

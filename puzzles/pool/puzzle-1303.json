@@ -1,0 +1,55 @@
+{
+  "id": "puzzle-1303",
+  "title": "Using A Library Card",
+  "difficulty": "easy",
+  "tags": [
+    "library card",
+    "reading"
+  ],
+  "groups": [
+    {
+      "id": "library_card_fields",
+      "label": "Details printed on a library card",
+      "items": [
+        "Member number",
+        "Barcode",
+        "Expiration date",
+        "Library name"
+      ]
+    },
+    {
+      "id": "beach_supplies",
+      "label": "Things to bring to the beach",
+      "items": [
+        "Beach towel",
+        "Sunscreen",
+        "Swim goggles",
+        "Beach umbrella"
+      ]
+    },
+    {
+      "id": "kitchen_appliances",
+      "label": "Countertop electric kitchen machines",
+      "items": [
+        "Toaster",
+        "Blender",
+        "Electric kettle",
+        "Food processor"
+      ]
+    },
+    {
+      "id": "planets",
+      "label": "Planets in the Solar System",
+      "items": [
+        "Mercury",
+        "Venus",
+        "Earth",
+        "Jupiter"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "library card",
+    "categoryType": "printed_information"
+  }
+}
