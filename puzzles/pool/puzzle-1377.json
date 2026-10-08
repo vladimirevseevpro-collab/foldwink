@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1377",
+  "title": "Desert Trip",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Travel and nature",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Creatures of the dunes",
+      "items": [
+        "Camel",
+        "Scorpion",
+        "Fennec Fox",
+        "Gila Monster"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Desert landforms",
+      "items": [
+        "Dune",
+        "Oasis",
+        "Mesa",
+        "Wadi"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Dried fruits",
+      "items": [
+        "Apricot",
+        "Date",
+        "Raisin",
+        "Fig"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Climbing gear",
+      "items": [
+        "Crampons",
+        "Ice Axe",
+        "Carabiner",
+        "Harness"
+      ]
+    }
+  ]
+}

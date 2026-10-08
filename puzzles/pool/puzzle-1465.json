@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1465",
+  "title": "Bus Garage",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Vehicles",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Bus engine parts",
+      "items": [
+        "Turbocharger",
+        "Injector",
+        "Fan Belt",
+        "Oil Filter"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Car bodywork repair",
+      "items": [
+        "Dent Pulling",
+        "Filler",
+        "Primer",
+        "Lacquer"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Wheel alignment settings",
+      "items": [
+        "Camber",
+        "Caster",
+        "Toe",
+        "Thrust"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Lift types",
+      "items": [
+        "Two-post",
+        "Scissor",
+        "Pit",
+        "Mobile"
+      ]
+    }
+  ]
+}

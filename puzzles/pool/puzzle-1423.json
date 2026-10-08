@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1423",
+  "title": "Mail Sorting",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Work and office",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Envelope sizes",
+      "items": [
+        "DL",
+        "C5",
+        "C4",
+        "C6"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Office filing methods",
+      "items": [
+        "Alphabetical",
+        "Numerical",
+        "Chronological",
+        "Geographical"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Document shredder grades",
+      "items": [
+        "Strip Cut",
+        "Cross Cut",
+        "Micro Cut",
+        "Pulverise"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Staff ID badge features",
+      "items": [
+        "Lanyard",
+        "Clip",
+        "Hologram",
+        "Barcode"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1386",
+  "title": "Under the Log",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Nature",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Insect orders",
+      "items": [
+        "Beetle",
+        "Earwig",
+        "Mantis",
+        "Cricket"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Arachnids",
+      "items": [
+        "Tick",
+        "Mite",
+        "Scorpion",
+        "Harvestman"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Small falcons and hawks",
+      "items": [
+        "Kestrel",
+        "Merlin",
+        "Harrier",
+        "Osprey"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Fabric weaves",
+      "items": [
+        "Twill",
+        "Satin",
+        "Herringbone",
+        "Canvas"
+      ]
+    }
+  ]
+}

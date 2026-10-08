@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1379",
+  "title": "Music Room",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Music and sport",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Reed and flute family",
+      "items": [
+        "Oboe",
+        "Bassoon",
+        "Clarinet",
+        "Saxophone"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Dance styles",
+      "items": [
+        "Tango",
+        "Foxtrot",
+        "Waltz",
+        "Rumba"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Rhythm durations",
+      "items": [
+        "Crotchet",
+        "Quaver",
+        "Minim",
+        "Breve"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Court sports with rackets",
+      "items": [
+        "Squash",
+        "Badminton",
+        "Padel",
+        "Tennis"
+      ]
+    }
+  ]
+}

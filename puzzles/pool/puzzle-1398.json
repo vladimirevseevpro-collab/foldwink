@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1398",
+  "title": "Night Train",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Travel",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Passenger train cars",
+      "items": [
+        "Sleeper Car",
+        "Dining Car",
+        "Observation Car",
+        "Guard's Van"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Trackside signal types",
+      "items": [
+        "Semaphore",
+        "Home Signal",
+        "Distant Signal",
+        "Shunting Signal"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Track components",
+      "items": [
+        "Rail",
+        "Ballast",
+        "Points",
+        "Fishplate"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Ship deck areas",
+      "items": [
+        "Lido Deck",
+        "Promenade",
+        "Galley",
+        "Bridge"
+      ]
+    }
+  ]
+}

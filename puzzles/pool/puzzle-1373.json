@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1373",
+  "title": "Clear Night Sky",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Astronomy basics",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Night-sky star patterns",
+      "items": [
+        "Orion",
+        "Cassiopeia",
+        "Big Dipper",
+        "Pleiades"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Telescope parts",
+      "items": [
+        "Eyepiece",
+        "Objective Lens",
+        "Tripod",
+        "Finderscope"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Stages of the lunar cycle",
+      "items": [
+        "Waxing Crescent",
+        "Full Moon",
+        "New Moon",
+        "Last Quarter"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Alloy metals",
+      "items": [
+        "Copper",
+        "Tin",
+        "Zinc",
+        "Nickel"
+      ]
+    }
+  ]
+}

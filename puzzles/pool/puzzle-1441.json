@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1441",
+  "title": "Sunday Roast",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Food",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Roast meats",
+      "items": [
+        "Lamb",
+        "Beef",
+        "Pork",
+        "Turkey"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Gravy types",
+      "items": [
+        "Onion",
+        "Mushroom",
+        "Red Wine",
+        "Pan Gravy"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Yorkshire pudding batter",
+      "items": [
+        "Flour",
+        "Milk",
+        "Egg",
+        "Dripping"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Roast potato types",
+      "items": [
+        "Maris Piper",
+        "King Edward",
+        "Charlotte",
+        "Desiree"
+      ]
+    }
+  ]
+}

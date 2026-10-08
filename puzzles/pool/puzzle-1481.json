@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1481",
+  "title": "Glass Recycling",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Recycling",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Glass container types",
+      "items": [
+        "Jar",
+        "Bottle",
+        "Carafe",
+        "Demijohn"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Glass drinkware",
+      "items": [
+        "Highball",
+        "Stein",
+        "Goblet",
+        "Schooner"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Glass colours in bins",
+      "items": [
+        "Brown",
+        "Green",
+        "Clear",
+        "Blue"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Glass manufacturing steps",
+      "items": [
+        "Annealing",
+        "Batching",
+        "Forming",
+        "Cullet"
+      ]
+    }
+  ]
+}

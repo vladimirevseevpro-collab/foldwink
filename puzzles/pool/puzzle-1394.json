@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1394",
+  "title": "Harvest Fair",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Seasonal events",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Carnival games",
+      "items": [
+        "Ring Toss",
+        "Whack-a-Mole",
+        "Balloon Darts",
+        "Skee-Ball"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Fairground rides",
+      "items": [
+        "Ferris Wheel",
+        "Tilt-A-Whirl",
+        "Carousel",
+        "Zipper"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Pie varieties",
+      "items": [
+        "Pecan",
+        "Key Lime",
+        "Rhubarb",
+        "Mince"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Pumpkin carving tools",
+      "items": [
+        "Scoop",
+        "Carving Saw",
+        "Awl",
+        "Stencil"
+      ]
+    }
+  ]
+}

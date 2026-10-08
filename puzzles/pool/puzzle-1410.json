@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1410",
+  "title": "Lakeside Cabin",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Holidays",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Canoe paddling strokes",
+      "items": [
+        "J-Stroke",
+        "Draw Stroke",
+        "Sweep",
+        "Pry"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Dock types",
+      "items": [
+        "Floating Dock",
+        "Fixed Pier",
+        "Jetty",
+        "Boat Ramp"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Swimming strokes",
+      "items": [
+        "Breaststroke",
+        "Butterfly",
+        "Backstroke",
+        "Sidestroke"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Lake fish",
+      "items": [
+        "Perch",
+        "Pike",
+        "Walleye",
+        "Bluegill"
+      ]
+    }
+  ]
+}

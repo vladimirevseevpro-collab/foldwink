@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1462",
+  "title": "Stock Room",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Retail",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Retail pricing terms",
+      "items": [
+        "RRP",
+        "Markdown",
+        "Mark-up",
+        "Margin"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Barcode types",
+      "items": [
+        "EAN",
+        "UPC",
+        "QR",
+        "Code 128"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Stock counting methods",
+      "items": [
+        "Cycle Count",
+        "Physical Count",
+        "Spot Check",
+        "Full Stocktake"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Warehouse storage",
+      "items": [
+        "Bin",
+        "Rack",
+        "Mezzanine",
+        "Pallet Rack"
+      ]
+    }
+  ]
+}

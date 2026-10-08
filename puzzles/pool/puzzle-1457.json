@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1457",
+  "title": "Sea Shanty",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Maritime",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Ship rigging",
+      "items": [
+        "Shroud",
+        "Stay",
+        "Halyard",
+        "Ratline"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Sea chart symbols",
+      "items": [
+        "Buoy",
+        "Lighthouse",
+        "Anchorage",
+        "Rock"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Navigation instruments",
+      "items": [
+        "Sextant",
+        "Octant",
+        "Compass Rose",
+        "Log Line"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Sailing points of sail",
+      "items": [
+        "Beam Reach",
+        "Close Hauled",
+        "Running",
+        "Broad Reach"
+      ]
+    }
+  ]
+}

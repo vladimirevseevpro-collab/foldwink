@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1418",
+  "title": "Hospital Ward",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Health",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Blood components",
+      "items": [
+        "Plasma",
+        "Platelets",
+        "Red Cells",
+        "Serum"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Bone types",
+      "items": [
+        "Femur",
+        "Tibia",
+        "Ulna",
+        "Radius"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Hospital staff roles",
+      "items": [
+        "Porter",
+        "Anaesthetist",
+        "Radiographer",
+        "Orderly"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Bandage types",
+      "items": [
+        "Crepe",
+        "Triangular",
+        "Compression",
+        "Gauze Roll"
+      ]
+    }
+  ]
+}

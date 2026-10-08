@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1440",
+  "title": "Cloak Room",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Theatre and hospitality",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Coat hanger types",
+      "items": [
+        "Wire",
+        "Clip",
+        "Cloak Hook",
+        "Velvet"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Coat fabrics",
+      "items": [
+        "Tweed",
+        "Gabardine",
+        "Melton",
+        "Loden"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Cloak styles",
+      "items": [
+        "Capelet",
+        "Cape",
+        "Poncho",
+        "Mantle"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Theatre ticket classes",
+      "items": [
+        "Stalls",
+        "Circle",
+        "Gallery",
+        "Box"
+      ]
+    }
+  ]
+}

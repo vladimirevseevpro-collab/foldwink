@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1453",
+  "title": "Coffee House",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Drinks",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Espresso drinks",
+      "items": [
+        "Ristretto",
+        "Lungo",
+        "Doppio",
+        "Macchiato"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Milk frothing steps",
+      "items": [
+        "Stretch",
+        "Texture",
+        "Pour",
+        "Rest"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Coffee bean roast levels",
+      "items": [
+        "Light",
+        "Cinnamon",
+        "Dark",
+        "French"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Ways to brew coffee at home",
+      "items": [
+        "Chemex",
+        "French Press",
+        "AeroPress",
+        "Moka Pot"
+      ]
+    }
+  ]
+}

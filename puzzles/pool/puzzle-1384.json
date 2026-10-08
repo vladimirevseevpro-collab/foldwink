@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1384",
+  "title": "Orchard Day",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Farming and food",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Apple varieties",
+      "items": [
+        "Gala",
+        "Fuji",
+        "Braeburn",
+        "Jonagold"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Squash varieties",
+      "items": [
+        "Butternut",
+        "Hubbard",
+        "Kabocha",
+        "Delicata"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Beef cuts",
+      "items": [
+        "Brisket",
+        "Sirloin",
+        "Flank",
+        "Chuck"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Grains for porridge",
+      "items": [
+        "Barley",
+        "Rye",
+        "Millet",
+        "Spelt"
+      ]
+    }
+  ]
+}

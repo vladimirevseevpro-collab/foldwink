@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1390",
+  "title": "Toy Shelf",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Play and games",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Pocket toys",
+      "items": [
+        "Yo-yo",
+        "Spinning Top",
+        "Kaleidoscope",
+        "Marbles"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Puppet types",
+      "items": [
+        "Marionette",
+        "Shadow Puppet",
+        "Glove Puppet",
+        "Rod Puppet"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Landforms along a river",
+      "items": [
+        "Meander",
+        "Oxbow",
+        "Delta",
+        "Estuary"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Gelato flavours",
+      "items": [
+        "Pistachio",
+        "Stracciatella",
+        "Nocciola",
+        "Zabaione"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1416",
+  "title": "Ferry Crossing",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Travel",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Sea weather terms",
+      "items": [
+        "Squall",
+        "Swell",
+        "Fog Bank",
+        "Drizzle"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Port facilities",
+      "items": [
+        "Quay",
+        "Berth",
+        "Slipway",
+        "Breakwater"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Boarding passes",
+      "items": [
+        "Foot Passenger",
+        "Vehicle Deck",
+        "Cabin",
+        "Lounge"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Knots used on boats",
+      "items": [
+        "Cleat Hitch",
+        "Reef Knot",
+        "Bowline",
+        "Half Hitch"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1426",
+  "title": "Rock Band",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Music",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Guitar effects",
+      "items": [
+        "Overdrive",
+        "Reverb",
+        "Delay",
+        "Wah"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Drum kit parts",
+      "items": [
+        "Hi-Hat",
+        "Snare",
+        "Tom",
+        "Cymbal"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Music band formats",
+      "items": [
+        "Trio",
+        "Quartet",
+        "Quintet",
+        "Octet"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Amplifier controls",
+      "items": [
+        "Gain",
+        "Bass",
+        "Treble",
+        "Presence"
+      ]
+    }
+  ]
+}

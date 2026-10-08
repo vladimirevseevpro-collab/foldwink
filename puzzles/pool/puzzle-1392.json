@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1392",
+  "title": "Campfire Kit",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Camping and outdoors",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Fire-starting tools",
+      "items": [
+        "Ferro Rod",
+        "Flint",
+        "Tinder",
+        "Matches"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Campsite cookware",
+      "items": [
+        "Billy Can",
+        "Dutch Oven",
+        "Skillet",
+        "Kettle"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Tarp knots",
+      "items": [
+        "Taut-line Hitch",
+        "Trucker's Hitch",
+        "Prusik",
+        "Figure Eight"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Night creatures near camp",
+      "items": [
+        "Owl",
+        "Bat",
+        "Moth",
+        "Raccoon"
+      ]
+    }
+  ]
+}

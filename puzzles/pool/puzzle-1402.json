@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1402",
+  "title": "Court Side",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Sports",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Tennis scoring terms",
+      "items": [
+        "Ace",
+        "Let",
+        "Deuce",
+        "Volley"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Players on the ice rink",
+      "items": [
+        "Goalie",
+        "Winger",
+        "Centre",
+        "Defenceman"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Curling terms",
+      "items": [
+        "Hog Line",
+        "Hammer",
+        "Skip",
+        "Button"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Speed skating events",
+      "items": [
+        "500 Metres",
+        "1500 Metres",
+        "Team Pursuit",
+        "Mass Start"
+      ]
+    }
+  ]
+}

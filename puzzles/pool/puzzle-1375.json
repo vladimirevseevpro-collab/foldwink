@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1375",
+  "title": "Medieval Market",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "History and trades",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Medieval trades",
+      "items": [
+        "Blacksmith",
+        "Tanner",
+        "Cooper",
+        "Weaver"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Jousting gear",
+      "items": [
+        "Lance",
+        "Saddle",
+        "Gauntlet",
+        "Visor"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Headwear styles",
+      "items": [
+        "Fedora",
+        "Beret",
+        "Bowler",
+        "Sombrero"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Typefaces",
+      "items": [
+        "Helvetica",
+        "Garamond",
+        "Futura",
+        "Verdana"
+      ]
+    }
+  ]
+}

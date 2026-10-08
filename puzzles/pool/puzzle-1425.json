@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1425",
+  "title": "Greengrocer",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Food",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Brassicas",
+      "items": [
+        "Kale",
+        "Broccoli",
+        "Cabbage",
+        "Kohlrabi"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Vegetables grown underground",
+      "items": [
+        "Parsnip",
+        "Turnip",
+        "Beetroot",
+        "Swede"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Edible roots of plants",
+      "items": [
+        "Ginger",
+        "Turmeric",
+        "Galangal",
+        "Horseradish"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Leafy herbs in bunches",
+      "items": [
+        "Coriander",
+        "Parsley",
+        "Dill",
+        "Chervil"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1475",
+  "title": "Fruit Picking",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Harvest",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Soft fruit",
+      "items": [
+        "Gooseberry",
+        "Blackcurrant",
+        "Redcurrant",
+        "Whitecurrant"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Stone fruit",
+      "items": [
+        "Plum",
+        "Damson",
+        "Greengage",
+        "Sloe"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Pick-your-own signs",
+      "items": [
+        "Pick Here",
+        "Ladder Safety",
+        "Toilets",
+        "Refreshments"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Fruit tree pruning cuts",
+      "items": [
+        "Heading Cut",
+        "Thinning Cut",
+        "Renewal Cut",
+        "Stub Cut"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1477",
+  "title": "Balloon Shop",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Party supplies",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Balloon sizes",
+      "items": [
+        "Qualatex",
+        "Standard",
+        "Jumbo",
+        "Airship"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Party bags fillers",
+      "items": [
+        "Bubbles",
+        "Kazoo",
+        "Sticker Sheet",
+        "Mini Torch"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Cake candles",
+      "items": [
+        "Sparkler",
+        "Birthday Candle",
+        "Trick Candle",
+        "Numeral Candle"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Tablecloth materials",
+      "items": [
+        "Plastic",
+        "Paper",
+        "Crepe",
+        "Lace"
+      ]
+    }
+  ]
+}

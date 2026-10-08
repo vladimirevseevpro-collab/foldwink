@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1455",
+  "title": "Ballet Barre",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Dance",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Dance shoes",
+      "items": [
+        "Pointe Shoe",
+        "Ballet Flat",
+        "Jazz Shoe",
+        "Tap Shoe"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Exercises done at the barre",
+      "items": [
+        "Plie",
+        "Grand Battement",
+        "Developpe",
+        "Rond de Jambe"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Dance costume fabrics",
+      "items": [
+        "Tulle",
+        "Lycra",
+        "Chiffon",
+        "Satin"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Stretches",
+      "items": [
+        "Hamstring",
+        "Hip Flexor",
+        "Calf",
+        "Quad"
+      ]
+    }
+  ]
+}

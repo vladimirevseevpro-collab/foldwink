@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1370",
+  "title": "Game Night at Home",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Mixed everyday knowledge",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Chess men",
+      "items": [
+        "Rook",
+        "Bishop",
+        "Pawn",
+        "Queen"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Short pasta cuts",
+      "items": [
+        "Orzo",
+        "Ziti",
+        "Rotini",
+        "Cavatappi"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Knot types",
+      "items": [
+        "Bowline",
+        "Clove Hitch",
+        "Square Knot",
+        "Sheepshank"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Orchestra by section",
+      "items": [
+        "Harp",
+        "Timpani",
+        "Cello",
+        "Tuba"
+      ]
+    }
+  ]
+}

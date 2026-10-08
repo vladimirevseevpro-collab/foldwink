@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1404",
+  "title": "Greenhouse",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Gardening and plants",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Seed starting trays",
+      "items": [
+        "Plug Tray",
+        "Cell Pack",
+        "Seed Flat",
+        "Pot Liner"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Garden hose fittings",
+      "items": [
+        "Coupler",
+        "Nozzle",
+        "Tap Adaptor",
+        "Washer"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Succulent family",
+      "items": [
+        "Aloe",
+        "Agave",
+        "Echeveria",
+        "Haworthia"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Vines in the greenhouse",
+      "items": [
+        "Ivy",
+        "Clematis",
+        "Jasmine",
+        "Morning Glory"
+      ]
+    }
+  ]
+}

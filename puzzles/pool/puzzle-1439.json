@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1439",
+  "title": "Hydrant Crew",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Infrastructure",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Water pipe materials",
+      "items": [
+        "Copper",
+        "Cast Iron",
+        "Ductile Iron",
+        "PVC"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Road surface types",
+      "items": [
+        "Asphalt",
+        "Concrete",
+        "Tarmac",
+        "Cobblestone"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Street furniture",
+      "items": [
+        "Bollard",
+        "Bench",
+        "Litter Bin",
+        "Bus Shelter"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Drain covers",
+      "items": [
+        "Gully Grate",
+        "Manhole",
+        "Inspection Chamber",
+        "Stormwater Inlet"
+      ]
+    }
+  ]
+}

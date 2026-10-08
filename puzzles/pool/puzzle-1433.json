@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1433",
+  "title": "Weather Balloon",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Science",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Layers of the air",
+      "items": [
+        "Troposphere",
+        "Stratosphere",
+        "Exosphere",
+        "Ionosphere"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Cloud altitudes",
+      "items": [
+        "Cirrus",
+        "Altostratus",
+        "Stratocumulus",
+        "Cumulonimbus"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Meteorological instruments",
+      "items": [
+        "Anemometer",
+        "Hygrometer",
+        "Barograph",
+        "Pyranometer"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Wind directions",
+      "items": [
+        "Northeast",
+        "Southwest",
+        "Northwest",
+        "Southeast"
+      ]
+    }
+  ]
+}

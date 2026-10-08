@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1438",
+  "title": "Wine Cellar",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Drinks",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Wine glass rims",
+      "items": [
+        "Flared",
+        "Tulip",
+        "Narrow",
+        "Bell"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Grape varieties",
+      "items": [
+        "Riesling",
+        "Chardonnay",
+        "Merlot",
+        "Malbec"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Bottle sizes",
+      "items": [
+        "Magnum",
+        "Jeroboam",
+        "Rehoboam",
+        "Imperial"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Cork types",
+      "items": [
+        "Natural",
+        "Synthetic",
+        "Agglomerated",
+        "Twin-top"
+      ]
+    }
+  ]
+}

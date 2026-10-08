@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1479",
+  "title": "Dumpling House",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Food",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Dumpling wrappers",
+      "items": [
+        "Wonton",
+        "Gyoza",
+        "Jiaozi",
+        "Potsticker"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Dumpling fillings",
+      "items": [
+        "Pork and Chive",
+        "Shrimp",
+        "Lamb",
+        "Vegetable"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Chinese cooking methods",
+      "items": [
+        "Stir-fry",
+        "Steam",
+        "Deep-fry",
+        "Red-braise"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Chinese tea",
+      "items": [
+        "Pu-erh",
+        "Jasmine",
+        "Oolong",
+        "Longjing"
+      ]
+    }
+  ]
+}

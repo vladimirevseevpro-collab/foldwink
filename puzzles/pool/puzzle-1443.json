@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1443",
+  "title": "Night Market",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Travel",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Street food types",
+      "items": [
+        "Dumpling",
+        "Satay",
+        "Taco",
+        "Kebab"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Lantern styles",
+      "items": [
+        "Chinese",
+        "Paper",
+        "Sky",
+        "Floating"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Market textiles",
+      "items": [
+        "Batik",
+        "Ikat",
+        "Kente",
+        "Madras"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Souvenir types",
+      "items": [
+        "Keyring",
+        "Fridge Magnet",
+        "Snow Globe",
+        "Postcard"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1415",
+  "title": "Stationery Haul",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Writing",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Pen nib types",
+      "items": [
+        "Fine",
+        "Medium",
+        "Broad",
+        "Italic"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Paper finishes",
+      "items": [
+        "Matte",
+        "Gloss",
+        "Linen",
+        "Laid"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Binding styles",
+      "items": [
+        "Spiral",
+        "Saddle Stitch",
+        "Perfect Bound",
+        "Wire-O"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Ink types",
+      "items": [
+        "Fountain",
+        "Gel",
+        "Rollerball",
+        "Ballpoint"
+      ]
+    }
+  ]
+}

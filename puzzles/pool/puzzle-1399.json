@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1399",
+  "title": "Pet Clinic",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Animals and care",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Cat breeds",
+      "items": [
+        "Siamese",
+        "Persian",
+        "Bengal",
+        "Sphynx"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Horse coat colours",
+      "items": [
+        "Bay",
+        "Chestnut",
+        "Palomino",
+        "Roan"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Young farm animals",
+      "items": [
+        "Calf",
+        "Foal",
+        "Kid",
+        "Piglet"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Knitting stitches",
+      "items": [
+        "Purl",
+        "Garter",
+        "Stockinette",
+        "Moss"
+      ]
+    }
+  ]
+}

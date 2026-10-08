@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1437",
+  "title": "Sweet Shop",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Candy",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Boiled sweets",
+      "items": [
+        "Humbug",
+        "Pear Drop",
+        "Aniseed Ball",
+        "Barley Sugar"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Chocolate colour grades",
+      "items": [
+        "Dark",
+        "Milk",
+        "White",
+        "Ruby"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Sweets sold by weight",
+      "items": [
+        "Gobstopper",
+        "Jelly Bean",
+        "Fudge",
+        "Marshmallow"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Lollipop shapes",
+      "items": [
+        "Round",
+        "Heart",
+        "Spiral",
+        "Flat"
+      ]
+    }
+  ]
+}

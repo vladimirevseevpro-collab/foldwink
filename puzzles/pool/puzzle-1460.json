@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1460",
+  "title": "Floristry",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Flowers",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Bridal bouquet styles",
+      "items": [
+        "Cascade",
+        "Posy",
+        "Round",
+        "Crescent"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Flower cutting tools",
+      "items": [
+        "Secateurs",
+        "Snips",
+        "Floral Knife",
+        "Pruning Saw"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Vases",
+      "items": [
+        "Bud",
+        "Cylinder",
+        "Urn",
+        "Hurricane"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Foliage plants",
+      "items": [
+        "Fern",
+        "Ivy",
+        "Eucalyptus",
+        "Ruscus"
+      ]
+    }
+  ]
+}

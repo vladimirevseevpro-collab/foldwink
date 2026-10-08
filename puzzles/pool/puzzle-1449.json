@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1449",
+  "title": "Motor Pool",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Vehicles",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Engine types",
+      "items": [
+        "Inline",
+        "V-Twin",
+        "Boxer",
+        "Rotary"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Gearbox types",
+      "items": [
+        "Manual",
+        "Automatic",
+        "Semi-Automatic",
+        "CVT"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Tyre tread patterns",
+      "items": [
+        "Directional",
+        "Asymmetric",
+        "Symmetric",
+        "Studded"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Car safety features",
+      "items": [
+        "Airbag",
+        "Crumple Zone",
+        "Seatbelt Pretensioner",
+        "Anti-lock Brakes"
+      ]
+    }
+  ]
+}

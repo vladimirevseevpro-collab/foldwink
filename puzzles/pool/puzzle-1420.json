@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1420",
+  "title": "Dessert Trolley",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Food",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Meringue desserts",
+      "items": [
+        "Pavlova",
+        "Eton Mess",
+        "Lemon Meringue Pie",
+        "Floating Islands"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Custards and puddings",
+      "items": [
+        "Creme Brulee",
+        "Flan",
+        "Panna Cotta",
+        "Blancmange"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Sponge cakes",
+      "items": [
+        "Victoria",
+        "Genoise",
+        "Chiffon",
+        "Angel Food"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Ice cream serving tools",
+      "items": [
+        "Scoop",
+        "Wafer Rack",
+        "Sundae Dish",
+        "Dipper"
+      ]
+    }
+  ]
+}

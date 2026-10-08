@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1380",
+  "title": "Harbour Walk",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Sea and cakes",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Vessels for people or cargo",
+      "items": [
+        "Ferry",
+        "Tanker",
+        "Trawler",
+        "Tugboat"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Lighthouse parts",
+      "items": [
+        "Lantern Room",
+        "Gallery",
+        "Fog Signal",
+        "Keeper's Cottage"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "White fish",
+      "items": [
+        "Cod",
+        "Haddock",
+        "Plaice",
+        "Pollock"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Cake types",
+      "items": [
+        "Battenberg",
+        "Madeira",
+        "Sachertorte",
+        "Pavlova"
+      ]
+    }
+  ]
+}

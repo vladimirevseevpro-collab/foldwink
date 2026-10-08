@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1469",
+  "title": "Peak Viewpoint",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Geography",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Mountain types",
+      "items": [
+        "Volcano",
+        "Fold Mountain",
+        "Block Mountain",
+        "Dome"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Glacial lakes",
+      "items": [
+        "Tarn",
+        "Corrie Lake",
+        "Kettle Lake",
+        "Ribbon Lake"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Mountain pass types",
+      "items": [
+        "Col",
+        "Saddle",
+        "Gap",
+        "Notch"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Mountain bird species",
+      "items": [
+        "Golden Eagle",
+        "Chough",
+        "Ptarmigan",
+        "Snow Finch"
+      ]
+    }
+  ]
+}

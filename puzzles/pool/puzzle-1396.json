@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1396",
+  "title": "Studio Practice",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Performing arts",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Couple dances on a floor",
+      "items": [
+        "Waltz",
+        "Foxtrot",
+        "Quickstep",
+        "Paso Doble"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Ballet terms",
+      "items": [
+        "Plie",
+        "Releve",
+        "Tendu",
+        "Arabesque"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Tap steps",
+      "items": [
+        "Shuffle",
+        "Flap",
+        "Ball Change",
+        "Riff"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Stage costume pieces",
+      "items": [
+        "Tutu",
+        "Leotard",
+        "Tailcoat",
+        "Sequins"
+      ]
+    }
+  ]
+}

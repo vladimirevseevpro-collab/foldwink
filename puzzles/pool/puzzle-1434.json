@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1434",
+  "title": "Hotel Pool",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Leisure",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Pool depth markers",
+      "items": [
+        "Shallow End",
+        "Deep End",
+        "Lap Lane",
+        "Diving Well"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Pool toys",
+      "items": [
+        "Noodle",
+        "Pool Ring",
+        "Water Gun",
+        "Inflatable Swan"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Sun loungers",
+      "items": [
+        "Sunbed",
+        "Daybed",
+        "Recliner",
+        "Chaise"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Spa services",
+      "items": [
+        "Massage",
+        "Facial",
+        "Sauna",
+        "Steam Room"
+      ]
+    }
+  ]
+}

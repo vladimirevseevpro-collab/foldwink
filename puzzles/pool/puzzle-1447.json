@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1447",
+  "title": "Quiz Night",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Games",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Board game pieces",
+      "items": [
+        "Meeple",
+        "Token",
+        "Dice",
+        "Pawn Cup"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Trivia categories",
+      "items": [
+        "Geography",
+        "Sport",
+        "Science",
+        "History"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Quiz round types",
+      "items": [
+        "Picture Round",
+        "Music Round",
+        "Lightning Round",
+        "Final Round"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Pub snack bowls",
+      "items": [
+        "Olives",
+        "Crisps",
+        "Nuts",
+        "Pretzels"
+      ]
+    }
+  ]
+}

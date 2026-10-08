@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1381",
+  "title": "Tailgate Party",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Outdoor events",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Grilling utensils",
+      "items": [
+        "Tongs",
+        "Spatula",
+        "Skewer",
+        "Grill Brush"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Ballpark snacks",
+      "items": [
+        "Nachos",
+        "Pretzel",
+        "Hot Dog",
+        "Churros"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Tent components",
+      "items": [
+        "Pole",
+        "Guy Line",
+        "Rainfly",
+        "Peg"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Cricket fielding positions",
+      "items": [
+        "Slip",
+        "Gully",
+        "Point",
+        "Mid-off"
+      ]
+    }
+  ]
+}

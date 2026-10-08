@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1422",
+  "title": "Fire Station",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Emergency",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Fire engine types",
+      "items": [
+        "Pumper",
+        "Ladder Truck",
+        "Tanker",
+        "Rescue Truck"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Fire classes",
+      "items": [
+        "Class A",
+        "Class B",
+        "Class C",
+        "Class K"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Protective kit for firefighters",
+      "items": [
+        "Helmet",
+        "Turnout Coat",
+        "SCBA",
+        "Hose Clamp"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Emergency numbers",
+      "items": [
+        "999",
+        "112",
+        "911",
+        "000"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1397",
+  "title": "Big Top",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Entertainment",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Magic tricks",
+      "items": [
+        "Linking Rings",
+        "Cups and Balls",
+        "Card Force",
+        "Vanishing Bird"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Circus acts",
+      "items": [
+        "Trapeze",
+        "Tightrope",
+        "Unicycle",
+        "Fire Eating"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Juggling props",
+      "items": [
+        "Clubs",
+        "Torches",
+        "Diabolo",
+        "Devil Sticks"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Hand stitches",
+      "items": [
+        "Backstitch",
+        "Blanket Stitch",
+        "Chain Stitch",
+        "Satin Stitch"
+      ]
+    }
+  ]
+}

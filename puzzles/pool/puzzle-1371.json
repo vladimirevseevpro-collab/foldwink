@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1371",
+  "title": "Bakery Shelf",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Mixed everyday knowledge",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Bread types",
+      "items": [
+        "Ciabatta",
+        "Brioche",
+        "Focaccia",
+        "Pumpernickel"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Gymnastics apparatus",
+      "items": [
+        "Pommel Horse",
+        "Balance Beam",
+        "Uneven Bars",
+        "Vault"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Volcano parts",
+      "items": [
+        "Crater",
+        "Magma Chamber",
+        "Vent",
+        "Caldera"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Origami folds",
+      "items": [
+        "Valley Fold",
+        "Mountain Fold",
+        "Squash Fold",
+        "Reverse Fold"
+      ]
+    }
+  ]
+}

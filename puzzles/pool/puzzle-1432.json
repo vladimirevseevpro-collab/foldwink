@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1432",
+  "title": "Carpenter's Yard",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Building",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Wood types",
+      "items": [
+        "Oak",
+        "Pine",
+        "Walnut",
+        "Mahogany"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Timber sheet goods",
+      "items": [
+        "Plywood",
+        "MDF",
+        "Chipboard",
+        "OSB"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Nail types",
+      "items": [
+        "Brad",
+        "Panel Pin",
+        "Masonry Nail",
+        "Clout"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Screw heads",
+      "items": [
+        "Phillips",
+        "Pozidriv",
+        "Torx",
+        "Hex"
+      ]
+    }
+  ]
+}

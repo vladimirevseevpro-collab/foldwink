@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1407",
+  "title": "Opera House",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Performing arts",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Opera voice types",
+      "items": [
+        "Soprano",
+        "Mezzo",
+        "Tenor",
+        "Baritone"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Orchestra pit parts",
+      "items": [
+        "Podium",
+        "Stand",
+        "Conductor's Desk",
+        "Harp Case"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Theatre lighting gear",
+      "items": [
+        "Gel Frame",
+        "Spotlight",
+        "Dimmer",
+        "Lantern"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Stage set pieces",
+      "items": [
+        "Backdrop",
+        "Flat",
+        "Trapdoor",
+        "Cyclorama"
+      ]
+    }
+  ]
+}

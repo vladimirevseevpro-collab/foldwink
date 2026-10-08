@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1369",
+  "title": "Fishing Trip",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Outdoor leisure",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Angler's kit",
+      "items": [
+        "Reel",
+        "Hook",
+        "Sinker",
+        "Bobber"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Card games played at home",
+      "items": [
+        "Poker",
+        "Bridge",
+        "Canasta",
+        "Rummy"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Sailing terms",
+      "items": [
+        "Mainsail",
+        "Tiller",
+        "Keel",
+        "Bowsprit"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Fortress defences",
+      "items": [
+        "Moat",
+        "Portcullis",
+        "Keep",
+        "Drawbridge"
+      ]
+    }
+  ]
+}

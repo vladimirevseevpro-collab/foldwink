@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1484",
+  "title": "Sci-fi Shelf",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Books",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Sci-fi subgenres",
+      "items": [
+        "Cyberpunk",
+        "Space Opera",
+        "Steampunk",
+        "Dystopia"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Book cover finishes",
+      "items": [
+        "Matte",
+        "Gloss",
+        "Spot UV",
+        "Embossed"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Paperback sizes",
+      "items": [
+        "Mass Market",
+        "Trade",
+        "Pocket",
+        "Digest"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Book review scores",
+      "items": [
+        "Five Stars",
+        "Thumbs Up",
+        "Two Stars",
+        "Verdict"
+      ]
+    }
+  ]
+}

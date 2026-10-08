@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1401",
+  "title": "Binding Table",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Books and crafts",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Tools for binding",
+      "items": [
+        "Bone Folder",
+        "Awl",
+        "Bradawl",
+        "Needle"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Anatomy of a volume",
+      "items": [
+        "Spine",
+        "Endpaper",
+        "Gutter",
+        "Headband"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Paper fold sizes",
+      "items": [
+        "Folio",
+        "Quarto",
+        "Octavo",
+        "Duodecimo"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Manuscript decorations",
+      "items": [
+        "Illumination",
+        "Rubric",
+        "Marginalia",
+        "Initial"
+      ]
+    }
+  ]
+}

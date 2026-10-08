@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1467",
+  "title": "Dog Show",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Pets",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Show ring terms",
+      "items": [
+        "Best in Show",
+        "Judge",
+        "Handler",
+        "Ring Steward"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Dog coat care tools",
+      "items": [
+        "Slicker Brush",
+        "Pin Brush",
+        "Clippers",
+        "Stripping Knife"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Dog gaits",
+      "items": [
+        "Trot",
+        "Canter",
+        "Pace",
+        "Walk"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Dog coat types",
+      "items": [
+        "Double Coat",
+        "Wiry",
+        "Silky",
+        "Curly"
+      ]
+    }
+  ]
+}

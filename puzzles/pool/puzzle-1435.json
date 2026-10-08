@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1435",
+  "title": "Pawn Shop",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Money and objects",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Gemstone cuts",
+      "items": [
+        "Brilliant",
+        "Princess",
+        "Emerald Cut",
+        "Cabochon"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Watch complications",
+      "items": [
+        "Chronograph",
+        "Moonphase",
+        "Tourbillon",
+        "Alarm"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Antique clock styles",
+      "items": [
+        "Carriage",
+        "Bracket",
+        "Mantel",
+        "Grandfather"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Gold purity marks",
+      "items": [
+        "24 Karat",
+        "18 Karat",
+        "14 Karat",
+        "9 Karat"
+      ]
+    }
+  ]
+}

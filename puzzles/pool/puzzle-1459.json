@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1459",
+  "title": "Bus Depot",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Transport",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Bus types",
+      "items": [
+        "Double-decker",
+        "Articulated",
+        "Minibus",
+        "Coach"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Ticket types on a bus",
+      "items": [
+        "Day Ticket",
+        "Single Fare",
+        "Return Fare",
+        "Concession"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Bus stop signs",
+      "items": [
+        "Request Stop",
+        "Compulsory Stop",
+        "Flag Stop",
+        "Limited Stop"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Timetable terms",
+      "items": [
+        "Frequency",
+        "Headway",
+        "Layover",
+        "Terminus"
+      ]
+    }
+  ]
+}

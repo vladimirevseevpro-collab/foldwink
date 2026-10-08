@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1436",
+  "title": "Pottery Studio",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Crafts",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Glazes",
+      "items": [
+        "Celadon",
+        "Tenmoku",
+        "Shino",
+        "Majolica"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Pottery forming techniques",
+      "items": [
+        "Coiling",
+        "Slab Building",
+        "Pinching",
+        "Throwing"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Kiln types",
+      "items": [
+        "Electric",
+        "Gas",
+        "Raku",
+        "Wood-fired"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Clay body textures",
+      "items": [
+        "Grog",
+        "Stoneware",
+        "Earthenware",
+        "Porcelain"
+      ]
+    }
+  ]
+}

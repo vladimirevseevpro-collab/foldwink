@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1417",
+  "title": "Cheese Cave",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Food",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Cheese textures",
+      "items": [
+        "Crumbly",
+        "Creamy",
+        "Stringy",
+        "Crystalline"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Cheese milks",
+      "items": [
+        "Goat",
+        "Sheep",
+        "Buffalo",
+        "Camel"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Cheese rinds",
+      "items": [
+        "Bloomy",
+        "Washed",
+        "Natural",
+        "Waxed"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Cheese aging stages",
+      "items": [
+        "Fresh",
+        "Young",
+        "Mature",
+        "Vintage"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1385",
+  "title": "Gallery Walk",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Art and culture",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Early modern art styles",
+      "items": [
+        "Cubism",
+        "Dada",
+        "Fauvism",
+        "Baroque"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Paint binders and mediums",
+      "items": [
+        "Fresco",
+        "Tempera",
+        "Gouache",
+        "Encaustic"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Sculpture materials",
+      "items": [
+        "Marble",
+        "Bronze",
+        "Plaster",
+        "Terracotta"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Gallery staff roles",
+      "items": [
+        "Archivist",
+        "Registrar",
+        "Gallery Guard",
+        "Docent"
+      ]
+    }
+  ]
+}

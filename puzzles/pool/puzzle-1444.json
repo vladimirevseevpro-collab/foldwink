@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1444",
+  "title": "Cinema Trip",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Entertainment",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Named film genres",
+      "items": [
+        "Noir",
+        "Western",
+        "Musical",
+        "Slasher"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Film camera shots",
+      "items": [
+        "Close-up",
+        "Wide",
+        "Dolly",
+        "Pan"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Cinema snack sizes",
+      "items": [
+        "Small",
+        "Medium",
+        "Large",
+        "Jumbo"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Film awards",
+      "items": [
+        "Palme d'Or",
+        "Golden Bear",
+        "Golden Lion",
+        "Oscar"
+      ]
+    }
+  ]
+}

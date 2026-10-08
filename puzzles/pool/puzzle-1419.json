@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1419",
+  "title": "Gift Wrap",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Celebrations",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Balloon types",
+      "items": [
+        "Latex",
+        "Foil",
+        "Helium",
+        "Confetti"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Party hats",
+      "items": [
+        "Cone",
+        "Crown",
+        "Fez",
+        "Pointed Cap"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Gift bow types",
+      "items": [
+        "Loop",
+        "Ribbon Rose",
+        "Pom-Pom",
+        "Sash"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Wrapping paper designs",
+      "items": [
+        "Polka Dot",
+        "Chevron",
+        "Stripe",
+        "Tartan"
+      ]
+    }
+  ]
+}

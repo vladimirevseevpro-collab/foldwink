@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1473",
+  "title": "Caravan Trade Routes",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Trade",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Sea trade goods",
+      "items": [
+        "Pepper",
+        "Cinnamon",
+        "Clove",
+        "Mace"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Silk road goods",
+      "items": [
+        "Lapis Lazuli",
+        "Jade",
+        "Porcelain",
+        "Silk Thread"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Trade ships",
+      "items": [
+        "Dhow",
+        "Junk",
+        "Galleon",
+        "Caravel"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Trade containers",
+      "items": [
+        "Amphora",
+        "Barrel",
+        "Crate",
+        "Sack"
+      ]
+    }
+  ]
+}

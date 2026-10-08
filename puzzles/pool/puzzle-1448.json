@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1448",
+  "title": "Brick Yard",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Building",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Brick bonds",
+      "items": [
+        "Stretcher",
+        "Flemish",
+        "English",
+        "Herringbone"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Roof tile shapes",
+      "items": [
+        "Pantile",
+        "Plain Tile",
+        "Slate",
+        "Shingle"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Mortar mixes",
+      "items": [
+        "Lime",
+        "Cement",
+        "Gauging",
+        "Pointing"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Scaffold parts",
+      "items": [
+        "Standard",
+        "Ledger",
+        "Transom",
+        "Brace"
+      ]
+    }
+  ]
+}

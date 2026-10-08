@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1486",
+  "title": "Balcony Plants",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Gardening",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Hanging basket plants",
+      "items": [
+        "Petunia",
+        "Trailing Lobelia",
+        "Fuchsia",
+        "Bacopa"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Window box plants",
+      "items": [
+        "Pansy",
+        "Viola",
+        "Geranium",
+        "Busy Lizzie"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Herbs for pots",
+      "items": [
+        "Basil",
+        "Mint",
+        "Chives",
+        "Lemon Balm"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Container liner types",
+      "items": [
+        "Coir",
+        "Sphagnum",
+        "Hessian",
+        "Plastic Sheet"
+      ]
+    }
+  ]
+}

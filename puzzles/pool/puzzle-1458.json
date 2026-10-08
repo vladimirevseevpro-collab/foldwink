@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1458",
+  "title": "Scrap Heap",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Recycling and metal",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Scrap metal types",
+      "items": [
+        "Brass",
+        "Pewter",
+        "Zinc",
+        "Tin"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Car scrap parts",
+      "items": [
+        "Catalytic Converter",
+        "Alternator",
+        "Radiator",
+        "Starter Motor"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Metal finishes",
+      "items": [
+        "Anodised",
+        "Galvanised",
+        "Chrome-plated",
+        "Powder-coated"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Metal shapes sold by yard",
+      "items": [
+        "Angle Iron",
+        "Channel",
+        "Flat Bar",
+        "Hollow Section"
+      ]
+    }
+  ]
+}

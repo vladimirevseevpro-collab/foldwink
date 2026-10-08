@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1430",
+  "title": "Bike Ride",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Transport",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Bicycle types",
+      "items": [
+        "Tandem",
+        "Recumbent",
+        "Penny-farthing",
+        "Cargo Bike"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Cycle lanes",
+      "items": [
+        "Segregated",
+        "Advisory",
+        "Shared",
+        "Mandatory"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Motorcycle styles",
+      "items": [
+        "Cruiser",
+        "Scrambler",
+        "Tourer",
+        "Naked"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Painted road symbols",
+      "items": [
+        "Chevron",
+        "Zigzag",
+        "Box Junction",
+        "Cat's Eye"
+      ]
+    }
+  ]
+}

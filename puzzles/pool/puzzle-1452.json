@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1452",
+  "title": "Post Van",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Logistics",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Van body types",
+      "items": [
+        "Panel Van",
+        "Box Van",
+        "Luton",
+        "Tipper"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Pallet types",
+      "items": [
+        "Euro",
+        "Block",
+        "Stringer",
+        "Chep"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Forklift truck types",
+      "items": [
+        "Reach",
+        "Counterbalance",
+        "Pallet Jack",
+        "Order Picker"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Shipping labels",
+      "items": [
+        "Barcode",
+        "Tracking Number",
+        "Consignee",
+        "Hazard Sign"
+      ]
+    }
+  ]
+}

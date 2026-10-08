@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1454",
+  "title": "Vineyard Tour",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Farming",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Vineyard pests",
+      "items": [
+        "Phylloxera",
+        "Powdery Mildew",
+        "Downy Mildew",
+        "Botrytis"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Farm equipment",
+      "items": [
+        "Harvester",
+        "Baler",
+        "Seed Drill",
+        "Plough"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Irrigation methods",
+      "items": [
+        "Drip",
+        "Sprinkler",
+        "Flood",
+        "Furrow"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Soil textures",
+      "items": [
+        "Loam",
+        "Clay",
+        "Silt",
+        "Chalk"
+      ]
+    }
+  ]
+}

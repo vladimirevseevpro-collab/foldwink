@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1374",
+  "title": "Kitchen Knives",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Kitchen and food",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Knife types",
+      "items": [
+        "Cleaver",
+        "Paring Knife",
+        "Bread Knife",
+        "Santoku"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Cutting styles",
+      "items": [
+        "Julienne",
+        "Chiffonade",
+        "Brunoise",
+        "Dice"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Ocean mammals with lungs",
+      "items": [
+        "Dolphin",
+        "Orca",
+        "Walrus",
+        "Manatee"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Gems used in rings",
+      "items": [
+        "Ruby",
+        "Emerald",
+        "Sapphire",
+        "Opal"
+      ]
+    }
+  ]
+}

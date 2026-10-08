@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1372",
+  "title": "Coaster Day",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Amusement parks",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Roller coaster parts",
+      "items": [
+        "Loop",
+        "Lift Hill",
+        "Brake Run",
+        "Inversion"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Tea types",
+      "items": [
+        "Oolong",
+        "Matcha",
+        "Earl Grey",
+        "Chamomile"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Kitchen herbs for stew",
+      "items": [
+        "Thyme",
+        "Rosemary",
+        "Sage",
+        "Oregano"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Dog breeds",
+      "items": [
+        "Beagle",
+        "Poodle",
+        "Dachshund",
+        "Collie"
+      ]
+    }
+  ]
+}

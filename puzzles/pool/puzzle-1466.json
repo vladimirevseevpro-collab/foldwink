@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1466",
+  "title": "Mountain Hut",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Hiking",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Hut sleeping arrangements",
+      "items": [
+        "Bunk",
+        "Dormitory",
+        "Private Room",
+        "Mattress Loft"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Trail markings",
+      "items": [
+        "Blaze",
+        "Cairn",
+        "Waymark",
+        "Stile"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Mountain weather warnings",
+      "items": [
+        "Whiteout",
+        "Avalanche Warning",
+        "Thunderstorm Watch",
+        "Gale Warning"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Hiking boot materials",
+      "items": [
+        "Leather",
+        "Gore-Tex",
+        "Suede",
+        "Nubuck"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1382",
+  "title": "Barber Shop Day",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Personal care",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Salon styling tools",
+      "items": [
+        "Clipper",
+        "Straighteners",
+        "Shears",
+        "Round Brush"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Drink glass shapes",
+      "items": [
+        "Flute",
+        "Coupe",
+        "Snifter",
+        "Tumbler"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Figure skating jumps",
+      "items": [
+        "Axel",
+        "Lutz",
+        "Salchow",
+        "Loop"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Legume family seeds",
+      "items": [
+        "Lentil",
+        "Chickpea",
+        "Mung Bean",
+        "Peanut"
+      ]
+    }
+  ]
+}

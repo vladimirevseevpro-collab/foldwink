@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1368",
+  "title": "Natural And Useful",
+  "difficulty": "easy",
+  "groups": [
+    {
+      "id": "simple_machines",
+      "label": "Simple machines",
+      "items": [
+        "Lever",
+        "Pulley",
+        "Wheel and axle",
+        "Inclined plane"
+      ]
+    },
+    {
+      "id": "glassware",
+      "label": "Common glassware",
+      "items": [
+        "Tumbler",
+        "Goblet",
+        "Champagne flute",
+        "Shot glass"
+      ]
+    },
+    {
+      "id": "energy_forms",
+      "label": "Everyday forms of energy",
+      "items": [
+        "Heat",
+        "Light",
+        "Sound",
+        "Electricity"
+      ]
+    },
+    {
+      "id": "magnet_types",
+      "label": "Types of magnets",
+      "items": [
+        "Bar magnet",
+        "Horseshoe magnet",
+        "Ring magnet",
+        "Disc magnet"
+      ]
+    }
+  ],
+  "meta": {
+    "theme": "useful_and_physical",
+    "categoryType": "classification"
+  }
+}

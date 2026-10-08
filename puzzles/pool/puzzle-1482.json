@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1482",
+  "title": "Mini Golf",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Leisure",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Mini golf obstacles",
+      "items": [
+        "Windmill",
+        "Clown Mouth",
+        "Castle",
+        "Loop-de-loop"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Golf club types",
+      "items": [
+        "Driver",
+        "Putter",
+        "Wedge",
+        "Hybrid"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Scores relative to par",
+      "items": [
+        "Birdie",
+        "Bogey",
+        "Eagle",
+        "Double Eagle"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Golf course hazards",
+      "items": [
+        "Bunker",
+        "Water Hazard",
+        "Rough",
+        "Out of Bounds"
+      ]
+    }
+  ]
+}

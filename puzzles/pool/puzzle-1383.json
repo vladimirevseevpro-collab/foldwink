@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1383",
+  "title": "Old Measures",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "History and science",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Timekeeping devices",
+      "items": [
+        "Sundial",
+        "Hourglass",
+        "Water Clock",
+        "Cuckoo Clock"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Old units of length",
+      "items": [
+        "Furlong",
+        "Cubit",
+        "Span",
+        "Fathom"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Mountain sports terms",
+      "items": [
+        "Crampons",
+        "Cornice",
+        "Scree",
+        "Couloir"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Glacier features",
+      "items": [
+        "Crevasse",
+        "Moraine",
+        "Serac",
+        "Cirque"
+      ]
+    }
+  ]
+}

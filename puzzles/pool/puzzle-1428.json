@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1428",
+  "title": "Lighthouse Keeper",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Coasts",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Coastal cliffs",
+      "items": [
+        "Stack",
+        "Arch",
+        "Cave",
+        "Blowhole"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Beach sediments",
+      "items": [
+        "Shingle",
+        "Sand",
+        "Silt",
+        "Gravel"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Tide types",
+      "items": [
+        "Spring",
+        "Neap",
+        "High",
+        "Ebb"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Seabirds",
+      "items": [
+        "Gannet",
+        "Puffin",
+        "Fulmar",
+        "Shag"
+      ]
+    }
+  ]
+}

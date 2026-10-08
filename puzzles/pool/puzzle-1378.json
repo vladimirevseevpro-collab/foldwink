@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1378",
+  "title": "Snack Stall",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Food and crafts",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Candy types",
+      "items": [
+        "Lollipop",
+        "Toffee",
+        "Nougat",
+        "Licorice"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Dips",
+      "items": [
+        "Hummus",
+        "Guacamole",
+        "Tzatziki",
+        "Salsa"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Seashells",
+      "items": [
+        "Cowrie",
+        "Conch",
+        "Scallop",
+        "Limpet"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Carpenter's hand tools",
+      "items": [
+        "Chisel",
+        "Plane",
+        "Rasp",
+        "Mallet"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1472",
+  "title": "Tennis Club",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Racket sports",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Tennis court surfaces",
+      "items": [
+        "Clay",
+        "Grass",
+        "Hard Court",
+        "Carpet"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Tennis shots",
+      "items": [
+        "Lob",
+        "Drop Shot",
+        "Smash",
+        "Slice"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Tennis racket parts",
+      "items": [
+        "Throat",
+        "Grommet",
+        "Strings",
+        "Head"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Tennis ball colours",
+      "items": [
+        "Optic Yellow",
+        "Bright White",
+        "Neon Green",
+        "Fluorescent Orange"
+      ]
+    }
+  ]
+}

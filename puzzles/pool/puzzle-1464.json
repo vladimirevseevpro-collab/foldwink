@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1464",
+  "title": "Smokehouse",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Food",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Smoked fish",
+      "items": [
+        "Kipper",
+        "Bloater",
+        "Smoked Haddock",
+        "Arbroath Smokie"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Smoking woods",
+      "items": [
+        "Oak",
+        "Hickory",
+        "Applewood",
+        "Mesquite"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Cured meats",
+      "items": [
+        "Prosciutto",
+        "Pancetta",
+        "Bresaola",
+        "Speck"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Smoking methods",
+      "items": [
+        "Hot Smoke",
+        "Cold Smoke",
+        "Liquid Smoke",
+        "Smoke Roast"
+      ]
+    }
+  ]
+}

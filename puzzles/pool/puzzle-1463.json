@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1463",
+  "title": "Nursery Rhymes",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Children's culture",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Nursery rhyme characters",
+      "items": [
+        "Humpty Dumpty",
+        "Little Miss Muffet",
+        "Jack Sprat",
+        "Old King Cole"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Playground games",
+      "items": [
+        "Hopscotch",
+        "Tag",
+        "Conkers",
+        "Skipping"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Finger puppet animals",
+      "items": [
+        "Snake",
+        "Rabbit",
+        "Duck",
+        "Owl"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Children's toy blocks",
+      "items": [
+        "Lego Brick",
+        "Duplo",
+        "Mega Bloks",
+        "Wooden Cube"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1400",
+  "title": "Bridal Shop",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Weddings",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Veil lengths and styles",
+      "items": [
+        "Cathedral",
+        "Chapel",
+        "Fingertip",
+        "Birdcage"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Floral arrangements",
+      "items": [
+        "Bouquet",
+        "Boutonniere",
+        "Corsage",
+        "Centrepiece"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Ring settings",
+      "items": [
+        "Solitaire",
+        "Halo",
+        "Pave",
+        "Bezel"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Champagne bottle sizes",
+      "items": [
+        "Magnum",
+        "Jeroboam",
+        "Methuselah",
+        "Balthazar"
+      ]
+    }
+  ]
+}

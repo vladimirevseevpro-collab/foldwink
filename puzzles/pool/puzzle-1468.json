@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1468",
+  "title": "Stables",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Horses",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Horse tack",
+      "items": [
+        "Bridle",
+        "Halter",
+        "Girth",
+        "Martingale"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Horse feeds",
+      "items": [
+        "Oats",
+        "Bran",
+        "Chaff",
+        "Hay Cube"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Horse hoof problems",
+      "items": [
+        "Thrush",
+        "Laminitis",
+        "Cracked Heel",
+        "Abscess"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Horse gait names",
+      "items": [
+        "Walk",
+        "Trot",
+        "Gallop",
+        "Rack"
+      ]
+    }
+  ]
+}

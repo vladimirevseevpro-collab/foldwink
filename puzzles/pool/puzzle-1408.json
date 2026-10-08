@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1408",
+  "title": "Hidden Garden",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Nature",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Pond life",
+      "items": [
+        "Newt",
+        "Tadpole",
+        "Water Snail",
+        "Dragonfly Nymph"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Bird songs and calls",
+      "items": [
+        "Chirp",
+        "Trill",
+        "Warble",
+        "Coo"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Spiders' webs",
+      "items": [
+        "Orb Web",
+        "Funnel Web",
+        "Cobweb",
+        "Sheet Web"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Moss and lichen types",
+      "items": [
+        "Sphagnum",
+        "Reindeer Moss",
+        "Cup Lichen",
+        "Hair Moss"
+      ]
+    }
+  ]
+}

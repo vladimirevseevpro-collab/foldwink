@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1445",
+  "title": "Greenhouse Shop",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Gardening",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Potting compost types",
+      "items": [
+        "Multipurpose",
+        "Ericaceous",
+        "Seed Compost",
+        "John Innes"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "What plant pots are made of",
+      "items": [
+        "Terracotta",
+        "Plastic",
+        "Ceramic",
+        "Galvanised"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Gardening gloves",
+      "items": [
+        "Leather",
+        "Nitrile",
+        "Gauntlet",
+        "Canvas"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Plant feed",
+      "items": [
+        "Tomato Feed",
+        "Seaweed Extract",
+        "Blood Fish Bone",
+        "Comfrey"
+      ]
+    }
+  ]
+}

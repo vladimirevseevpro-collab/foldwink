@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1395",
+  "title": "Pet Store",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Animals and care",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Aquarium fish",
+      "items": [
+        "Guppy",
+        "Tetra",
+        "Betta",
+        "Molly"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Pet reptiles",
+      "items": [
+        "Gecko",
+        "Iguana",
+        "Bearded Dragon",
+        "Corn Snake"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Dog toy types",
+      "items": [
+        "Squeaky Toy",
+        "Chew Bone",
+        "Tug Rope",
+        "Kong"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Birdcage fittings",
+      "items": [
+        "Perch",
+        "Feeder Dish",
+        "Swing",
+        "Bell"
+      ]
+    }
+  ]
+}

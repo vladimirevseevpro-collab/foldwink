@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1388",
+  "title": "Counter at the Border",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "World and money",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "National money",
+      "items": [
+        "Yen",
+        "Rupee",
+        "Peso",
+        "Krona"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Massifs and chains",
+      "items": [
+        "Andes",
+        "Urals",
+        "Atlas",
+        "Pyrenees"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Papers for crossing",
+      "items": [
+        "Visa",
+        "Passport",
+        "Boarding Pass",
+        "Itinerary"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Indian spices",
+      "items": [
+        "Cumin",
+        "Cardamom",
+        "Turmeric",
+        "Fenugreek"
+      ]
+    }
+  ]
+}

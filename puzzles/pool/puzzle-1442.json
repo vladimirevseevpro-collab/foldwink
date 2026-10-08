@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1442",
+  "title": "Pharmacy Counter",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Health",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Ways medicine is taken",
+      "items": [
+        "Tablet",
+        "Capsule",
+        "Lozenge",
+        "Suppository"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Painkillers",
+      "items": [
+        "Ibuprofen",
+        "Paracetamol",
+        "Aspirin",
+        "Codeine"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Eye care products",
+      "items": [
+        "Eye Drops",
+        "Contact Lens Solution",
+        "Eye Wash",
+        "Ointment"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Plasters",
+      "items": [
+        "Blister Plaster",
+        "Fabric Strip",
+        "Waterproof Dressing",
+        "Butterfly Closure"
+      ]
+    }
+  ]
+}

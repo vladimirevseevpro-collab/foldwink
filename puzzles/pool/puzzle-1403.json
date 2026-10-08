@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1403",
+  "title": "Sushi Counter",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Japanese food",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Rolled and pressed sushi",
+      "items": [
+        "Nigiri",
+        "Maki",
+        "Uramaki",
+        "Chirashi"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Japanese noodles",
+      "items": [
+        "Soba",
+        "Udon",
+        "Ramen",
+        "Somen"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Tofu styles",
+      "items": [
+        "Silken",
+        "Firm",
+        "Fried",
+        "Smoked"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Sushi bar tools",
+      "items": [
+        "Bamboo Mat",
+        "Rice Paddle",
+        "Wasabi Grater",
+        "Hangiri"
+      ]
+    }
+  ]
+}

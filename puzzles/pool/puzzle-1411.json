@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1411",
+  "title": "Costume Trunk",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Theatre and dress",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Hat styles for men",
+      "items": [
+        "Top Hat",
+        "Bowler",
+        "Boater",
+        "Panama"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Collar styles",
+      "items": [
+        "Peter Pan",
+        "Mandarin",
+        "Wing",
+        "Button-down"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Gloves materials",
+      "items": [
+        "Kid Leather",
+        "Cashmere",
+        "Doeskin",
+        "Lisle"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Fabric prints",
+      "items": [
+        "Paisley",
+        "Houndstooth",
+        "Gingham",
+        "Toile"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1456",
+  "title": "Art Store",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Art supplies",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Drawing pencils",
+      "items": [
+        "HB",
+        "2B",
+        "6B",
+        "4H"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Canvas types",
+      "items": [
+        "Stretched",
+        "Canvas Board",
+        "Canvas Paper",
+        "Linen"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Brush shapes",
+      "items": [
+        "Filbert",
+        "Fan",
+        "Mop",
+        "Round"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Pastel types",
+      "items": [
+        "Oil Pastel",
+        "Chalk Pastel",
+        "Soft Pastel",
+        "Pastel Pencil"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1431",
+  "title": "Tea Room",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Hospitality",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Cake stands",
+      "items": [
+        "Tiered",
+        "Pedestal",
+        "Rotating",
+        "Wall-mount"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Scone toppings",
+      "items": [
+        "Clotted Cream",
+        "Jam",
+        "Lemon Curd",
+        "Honey"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Tea pots",
+      "items": [
+        "Brown Betty",
+        "Gooseneck",
+        "Yixing",
+        "Cast Iron"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Pastries served at tea",
+      "items": [
+        "Madeleine",
+        "Eclair",
+        "Macaroon",
+        "Financier"
+      ]
+    }
+  ]
+}

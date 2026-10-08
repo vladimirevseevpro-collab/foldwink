@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1391",
+  "title": "Market Stall",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Shopping",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Shell types",
+      "items": [
+        "Cowrie",
+        "Conch",
+        "Limpet",
+        "Whelk"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Carpentry joints",
+      "items": [
+        "Dovetail",
+        "Mortise",
+        "Tenon",
+        "Rabbet"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Shoe materials",
+      "items": [
+        "Suede",
+        "Nubuck",
+        "Patent Leather",
+        "Canvas"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Tea preparation",
+      "items": [
+        "Steep",
+        "Infuse",
+        "Decant",
+        "Brew"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1376",
+  "title": "Car Lot",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Vehicles",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Car body styles",
+      "items": [
+        "Sedan",
+        "Hatchback",
+        "Coupe",
+        "Convertible"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Paper sizes",
+      "items": [
+        "A4",
+        "Letter",
+        "Legal",
+        "Tabloid"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Ink colours",
+      "items": [
+        "Cyan",
+        "Magenta",
+        "Yellow",
+        "Black"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Racing terms",
+      "items": [
+        "Pit Stop",
+        "Chicane",
+        "Slipstream",
+        "Grid"
+      ]
+    }
+  ]
+}

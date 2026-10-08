@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1461",
+  "title": "Bird Table",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Garden birds",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Garden birds with crests",
+      "items": [
+        "Hoopoe",
+        "Waxwing",
+        "Crested Tit",
+        "Lapwing"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Seed types for birds",
+      "items": [
+        "Millet",
+        "Nyjer",
+        "Sunflower Hearts",
+        "Suet Pellets"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Bird nest types",
+      "items": [
+        "Cup",
+        "Platform",
+        "Cavity",
+        "Dome"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Feeding styles of birds",
+      "items": [
+        "Probing",
+        "Skimming",
+        "Dabbling",
+        "Hovering"
+      ]
+    }
+  ]
+}

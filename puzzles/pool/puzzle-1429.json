@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1429",
+  "title": "Tackle Box",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Fishing",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Lure types",
+      "items": [
+        "Spinner",
+        "Jig",
+        "Crankbait",
+        "Spoon"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Fishing knots",
+      "items": [
+        "Palomar",
+        "Uni",
+        "Improved Clinch",
+        "Surgeon's"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Fly types",
+      "items": [
+        "Dry Fly",
+        "Nymph",
+        "Streamer",
+        "Emerger"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Fishing line types",
+      "items": [
+        "Monofilament",
+        "Braid",
+        "Fluorocarbon",
+        "Wire"
+      ]
+    }
+  ]
+}

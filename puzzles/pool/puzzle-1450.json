@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1450",
+  "title": "Pedal Boat",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Park leisure",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Swan boat parts",
+      "items": [
+        "Hull",
+        "Pedal Crank",
+        "Rudder",
+        "Seat Back"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Lake wildfowl",
+      "items": [
+        "Mallard",
+        "Coot",
+        "Moorhen",
+        "Grebe"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Park lamp types",
+      "items": [
+        "Gas Lantern",
+        "Bollard Light",
+        "Post Top",
+        "Spotlight"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Kiosk items",
+      "items": [
+        "Ice Lolly",
+        "Hot Chocolate",
+        "Waffle",
+        "Crepe"
+      ]
+    }
+  ]
+}

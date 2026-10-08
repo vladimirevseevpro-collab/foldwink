@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1471",
+  "title": "Cloakroom Coats",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Clothing",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Coat collar types",
+      "items": [
+        "Notch",
+        "Shawl",
+        "Peak",
+        "Mandarin"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Raincoat fabrics",
+      "items": [
+        "Oilskin",
+        "Gore-Tex",
+        "Waxed Cotton",
+        "Neoprene"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Coat lengths",
+      "items": [
+        "Bolero",
+        "Car Coat",
+        "Pea Coat",
+        "Trench"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Coat fastenings",
+      "items": [
+        "Toggle",
+        "Frog",
+        "Zip",
+        "Velcro"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1470",
+  "title": "Ice Cream Van",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Summer treats",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Ice lolly types",
+      "items": [
+        "Choc Ice",
+        "Fab",
+        "Twister",
+        "Feast"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Ice cream cone types",
+      "items": [
+        "Sugar Cone",
+        "Waffle Cone",
+        "Cake Cone",
+        "Cornet"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Cold desserts from the freezer",
+      "items": [
+        "Sorbet",
+        "Granita",
+        "Kulfi",
+        "Semifreddo"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Van music tunes",
+      "items": [
+        "Greensleeves",
+        "Greensleeves Carousel",
+        "Pop Goes the Weasel",
+        "Funiculi Funicula"
+      ]
+    }
+  ]
+}

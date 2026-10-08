@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1421",
+  "title": "Race Day",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Sports",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Athletics running events",
+      "items": [
+        "Hurdles",
+        "Relay",
+        "Steeplechase",
+        "Decathlon"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Horse racing terms",
+      "items": [
+        "Furlong",
+        "Handicap",
+        "Photo Finish",
+        "Stewards"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Sprint start positions",
+      "items": [
+        "Set",
+        "Ready",
+        "On Your Marks",
+        "Crouch"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Rowing boat classes",
+      "items": [
+        "Single Scull",
+        "Coxless Pair",
+        "Eight",
+        "Quad"
+      ]
+    }
+  ]
+}

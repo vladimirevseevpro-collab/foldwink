@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1451",
+  "title": "Heritage Trail",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "History",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Historic house rooms",
+      "items": [
+        "Still Room",
+        "Scullery",
+        "Parlour",
+        "Morning Room"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Roman roads and sites",
+      "items": [
+        "Villa",
+        "Fort",
+        "Forum",
+        "Amphitheatre"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Ancient writing systems",
+      "items": [
+        "Cuneiform",
+        "Hieroglyphics",
+        "Linear B",
+        "Runes"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Medieval clothing",
+      "items": [
+        "Tunic",
+        "Kirtle",
+        "Surcoat",
+        "Hauberk"
+      ]
+    }
+  ]
+}

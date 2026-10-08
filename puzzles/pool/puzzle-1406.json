@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1406",
+  "title": "Tool Crib",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Trades and tools",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Spanner types",
+      "items": [
+        "Ring",
+        "Open-ended",
+        "Adjustable",
+        "Torque"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Clamp types",
+      "items": [
+        "C-Clamp",
+        "Bar Clamp",
+        "Vise Grip",
+        "Spring Clamp"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Sanding grits",
+      "items": [
+        "Coarse",
+        "Medium",
+        "Fine",
+        "Super Fine"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Plumbing fittings",
+      "items": [
+        "Elbow",
+        "Tee",
+        "Coupling",
+        "Union"
+      ]
+    }
+  ]
+}

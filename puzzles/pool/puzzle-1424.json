@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1424",
+  "title": "Surf Shack",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Water sports",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Surfboard shapes",
+      "items": [
+        "Shortboard",
+        "Longboard",
+        "Funboard",
+        "Fish"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Wetsuit thickness",
+      "items": [
+        "Shorty",
+        "Steamer",
+        "Springsuit",
+        "Full Suit"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Where waves break",
+      "items": [
+        "Beach Break",
+        "Point Break",
+        "Reef Break",
+        "Rivermouth"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Surf fins",
+      "items": [
+        "Thruster",
+        "Quad",
+        "Twin",
+        "Single"
+      ]
+    }
+  ]
+}

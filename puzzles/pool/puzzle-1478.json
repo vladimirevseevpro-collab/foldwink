@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1478",
+  "title": "Trekking Pole",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Outdoors",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Trekking pole parts",
+      "items": [
+        "Grip",
+        "Strap",
+        "Basket",
+        "Ferrule"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Hiking trail types",
+      "items": [
+        "Circuit",
+        "Out and Back",
+        "Point to Point",
+        "Figure Eight"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Rain gear types",
+      "items": [
+        "Waterproof Jacket",
+        "Overtrousers",
+        "Poncho",
+        "Gaiters"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Hydration bladder parts",
+      "items": [
+        "Hose",
+        "Bite Valve",
+        "Reservoir",
+        "Clip"
+      ]
+    }
+  ]
+}

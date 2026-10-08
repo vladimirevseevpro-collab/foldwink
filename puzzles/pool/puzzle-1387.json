@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1387",
+  "title": "Dinner Party",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Hosting and food",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Napkin folds",
+      "items": [
+        "Fan",
+        "Bishop's Hat",
+        "Rose",
+        "Pyramid"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Table settings",
+      "items": [
+        "Charger",
+        "Salad Fork",
+        "Butter Knife",
+        "Finger Bowl"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Classic cocktails",
+      "items": [
+        "Negroni",
+        "Mojito",
+        "Daiquiri",
+        "Martini"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "French pastries",
+      "items": [
+        "Eclair",
+        "Profiterole",
+        "Macaron",
+        "Croissant"
+      ]
+    }
+  ]
+}

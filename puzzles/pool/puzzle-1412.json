@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1412",
+  "title": "Solar Panel Install",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Energy",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Energy sources",
+      "items": [
+        "Solar",
+        "Wind",
+        "Geothermal",
+        "Tidal"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Electrical units",
+      "items": [
+        "Ampere",
+        "Volt",
+        "Ohm",
+        "Watt"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Power plant types",
+      "items": [
+        "Coal",
+        "Nuclear",
+        "Hydro",
+        "Biomass"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Battery chemistries",
+      "items": [
+        "Lithium-ion",
+        "Lead-acid",
+        "Nickel-metal",
+        "Sodium"
+      ]
+    }
+  ]
+}

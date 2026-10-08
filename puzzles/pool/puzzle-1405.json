@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1405",
+  "title": "Corner Bakery",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Baking",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Baking leavening agents",
+      "items": [
+        "Yeast",
+        "Baking Soda",
+        "Baking Powder",
+        "Whipped Egg Whites"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Cake frosting types",
+      "items": [
+        "Buttercream",
+        "Ganache",
+        "Royal Icing",
+        "Fondant"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Dough shapes",
+      "items": [
+        "Bagel",
+        "Pretzel",
+        "Croissant Roll",
+        "Baguette"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Oven settings",
+      "items": [
+        "Convection",
+        "Broil",
+        "Proof",
+        "Steam"
+      ]
+    }
+  ]
+}

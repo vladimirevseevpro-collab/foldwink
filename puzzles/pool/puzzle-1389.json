@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1389",
+  "title": "Ski Lodge",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Winter",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Skiing manoeuvres",
+      "items": [
+        "Slalom",
+        "Moguls",
+        "Telemark",
+        "Schuss"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Snow conditions",
+      "items": [
+        "Powder",
+        "Slush",
+        "Crust",
+        "Graupel"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Winter headwear",
+      "items": [
+        "Toque",
+        "Balaclava",
+        "Beanie",
+        "Ushanka"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Bowling terms",
+      "items": [
+        "Strike",
+        "Spare",
+        "Split",
+        "Gutter"
+      ]
+    }
+  ]
+}

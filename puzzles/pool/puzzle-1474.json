@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1474",
+  "title": "Fabric Shop",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Textiles",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Knit fabric types",
+      "items": [
+        "Jersey",
+        "Rib Knit",
+        "Interlock",
+        "Fleece"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Woven fabric types",
+      "items": [
+        "Poplin",
+        "Gingham",
+        "Oxford",
+        "Chambray"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Yarn weights",
+      "items": [
+        "Lace",
+        "Fingering",
+        "Worsted",
+        "Bulky"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Sewing machine feet",
+      "items": [
+        "Zipper Foot",
+        "Buttonhole Foot",
+        "Walking Foot",
+        "Overcast Foot"
+      ]
+    }
+  ]
+}

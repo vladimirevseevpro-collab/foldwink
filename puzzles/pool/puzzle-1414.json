@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1414",
+  "title": "Chemistry Club",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Science",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Acids",
+      "items": [
+        "Citric",
+        "Acetic",
+        "Lactic",
+        "Formic"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Elements in the air",
+      "items": [
+        "Nitrogen",
+        "Oxygen",
+        "Argon",
+        "Neon"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Chemical bonds",
+      "items": [
+        "Ionic",
+        "Covalent",
+        "Metallic",
+        "Hydrogen"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Units of measure in lab",
+      "items": [
+        "Gram",
+        "Litre",
+        "Molar",
+        "Pascal"
+      ]
+    }
+  ]
+}

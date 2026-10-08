@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1393",
+  "title": "Bench Setup",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Science",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Lab glassware",
+      "items": [
+        "Beaker",
+        "Burette",
+        "Pipette",
+        "Flask"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Microscope parts",
+      "items": [
+        "Stage",
+        "Diaphragm",
+        "Eyepiece",
+        "Condenser"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Organelles of a cell",
+      "items": [
+        "Nucleus",
+        "Ribosome",
+        "Vacuole",
+        "Mitochondria"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Protective wear in a lab",
+      "items": [
+        "Goggles",
+        "Lab Coat",
+        "Gloves",
+        "Apron"
+      ]
+    }
+  ]
+}

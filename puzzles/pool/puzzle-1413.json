@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1413",
+  "title": "Laundry Rules",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Home care",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Fabric care symbols",
+      "items": [
+        "Tumble Dry",
+        "Iron Low",
+        "Do Not Bleach",
+        "Dry Clean"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Detergent types",
+      "items": [
+        "Liquid Pods",
+        "Powder",
+        "Stain Remover",
+        "Fabric Softener"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Wool garment faults",
+      "items": [
+        "Pilling",
+        "Bobbling",
+        "Shrinkage",
+        "Snagging"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Ironing board parts",
+      "items": [
+        "Cover",
+        "Leg",
+        "Scorch Guard",
+        "Rest"
+      ]
+    }
+  ]
+}

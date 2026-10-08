@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1483",
+  "title": "Pasta Night",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Food",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Egg pasta shapes",
+      "items": [
+        "Tagliatelle",
+        "Pappardelle",
+        "Fettuccine",
+        "Lasagne"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Filled pasta parcels",
+      "items": [
+        "Ravioli",
+        "Tortellini",
+        "Agnolotti",
+        "Mezzelune"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Pasta sauces",
+      "items": [
+        "Carbonara",
+        "Puttanesca",
+        "Arrabbiata",
+        "Amatriciana"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Pasta cooking pots",
+      "items": [
+        "Stockpot",
+        "Colander",
+        "Ladle",
+        "Spider"
+      ]
+    }
+  ]
+}

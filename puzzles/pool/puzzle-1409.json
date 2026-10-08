@@ -1,0 +1,51 @@
+{
+  "id": "puzzle-1409",
+  "title": "Post Office Queue",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Services",
+    "categoryType": "everyday_objects"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Parcel delivery options",
+      "items": [
+        "Next Day",
+        "Signed For",
+        "Tracked",
+        "Pickup Point"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Bank card types",
+      "items": [
+        "Debit",
+        "Credit",
+        "Prepaid",
+        "Store Card"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Money transfer services",
+      "items": [
+        "Wire",
+        "Standing Order",
+        "Direct Debit",
+        "Cheque"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Ticket booking types",
+      "items": [
+        "Single",
+        "Return",
+        "Season",
+        "Day Pass"
+      ]
+    }
+  ]
+}
