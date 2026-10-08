@@ -32,7 +32,7 @@
       "revealHint": "WORD",
       "items": [
         "Cross",
-        "Pass",
+        "Buzz",
         "Key",
         "Fore"
       ]
@@ -42,7 +42,7 @@
       "label": "___ LINE",
       "revealHint": "LINE",
       "items": [
-        "Head",
+        "Hem",
         "Out",
         "Pipe",
         "Dead"

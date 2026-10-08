@@ -21,8 +21,8 @@
       "label": "___ ball",
       "revealHint": "Ball",
       "items": [
-        "Snow",
-        "Fire",
+        "Meat",
+        "Eye",
         "Basket",
         "Cannon"
       ]
@@ -54,7 +54,7 @@
       "label": "___ side",
       "revealHint": "Side",
       "items": [
-        "Out",
+        "Way",
         "Hill",
         "Ring",
         "Bed"

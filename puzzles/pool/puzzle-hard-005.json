@@ -21,7 +21,7 @@
       "label": "___ light",
       "revealHint": "Light",
       "items": [
-        "Moon",
+        "Torch",
         "Spot",
         "Flash",
         "Star"
@@ -44,7 +44,7 @@
       "revealHint": "Line",
       "items": [
         "Dead",
-        "Head",
+        "Hem",
         "Shore",
         "Guide"
       ]
@@ -55,7 +55,7 @@
       "revealHint": "Stone",
       "items": [
         "Key",
-        "Lime",
+        "Grave",
         "Mile",
         "Corner"
       ]
