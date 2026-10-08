@@ -24,7 +24,7 @@
       "id": "ball",
       "label": "Goes before BALL",
       "items": [
-        "Foot",
+        "Base",
         "Basket",
         "Snow",
         "Meat"
