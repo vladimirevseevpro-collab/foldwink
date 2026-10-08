@@ -1,0 +1,57 @@
+{
+  "id": "de-9075",
+  "title": "Vom Kopf bis Fuß",
+  "difficulty": "hard",
+  "editorialSummary": "Jede Karte bildet mit genau einem Körperteil ein Wort. Ball, Note, Weh, Kissen und Kette fielen raus: Kopfball, Kopfnote, Kopfweh, Halskissen, Fußkette.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "kopf",
+      "label": "KOPF davor",
+      "items": [
+        "Salat",
+        "Tuch",
+        "Hörer",
+        "Sprung"
+      ],
+      "revealHint": "KOPF___"
+    },
+    {
+      "id": "fuss",
+      "label": "FUSS davor",
+      "items": [
+        "Pilz",
+        "Weg",
+        "Abdruck",
+        "Gänger"
+      ],
+      "revealHint": "FUSS___"
+    },
+    {
+      "id": "augen",
+      "label": "AUGEN davor",
+      "items": [
+        "Blick",
+        "Braue",
+        "Arzt",
+        "Maß"
+      ],
+      "revealHint": "AUGEN___"
+    },
+    {
+      "id": "hals",
+      "label": "HALS davor",
+      "items": [
+        "Bonbon",
+        "Band",
+        "Schlagader",
+        "Wirbel"
+      ],
+      "revealHint": "HALS___"
+    }
+  ]
+}

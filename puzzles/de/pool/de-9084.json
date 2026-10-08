@@ -1,0 +1,57 @@
+{
+  "id": "de-9084",
+  "title": "Rundreise im Wort",
+  "difficulty": "hard",
+  "editorialSummary": "Städte, Flüsse, Möbel und Farben verstecken sich. Bankrott wurde ersetzt, weil darin auch Rot steckt.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "stadt",
+      "label": "Eine Stadt steckt darin",
+      "items": [
+        "Roman",
+        "Hammel",
+        "Essenz",
+        "Grazie"
+      ],
+      "revealHint": "STADT DARIN"
+    },
+    {
+      "id": "fluss",
+      "label": "Ein Fluss steckt darin",
+      "items": [
+        "Moder",
+        "Aufruhr",
+        "Polizei",
+        "Sinnlos"
+      ],
+      "revealHint": "FLUSS DARIN"
+    },
+    {
+      "id": "moebel",
+      "label": "Ein Möbelstück steckt darin",
+      "items": [
+        "Fliege",
+        "Katapult",
+        "Apotheke",
+        "Bettler"
+      ],
+      "revealHint": "MÖBEL DARIN"
+    },
+    {
+      "id": "farbe",
+      "label": "Eine Farbe steckt darin",
+      "items": [
+        "Brot",
+        "Prosa",
+        "Olive",
+        "Türkisch"
+      ],
+      "revealHint": "FARBE DARIN"
+    }
+  ]
+}

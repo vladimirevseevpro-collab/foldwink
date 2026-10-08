@@ -1,0 +1,57 @@
+{
+  "id": "de-9091",
+  "title": "Tierisch zusammengesetzt",
+  "difficulty": "hard",
+  "editorialSummary": "Jede Karte passt hinter genau ein Tier. Stall und Schwanz wurden ersetzt: Pferdestall, Katzenschwanz.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "hund",
+      "label": "HUNDE davor",
+      "items": [
+        "Hütte",
+        "Leine",
+        "Wetter",
+        "Kälte"
+      ],
+      "revealHint": "HUNDE___"
+    },
+    {
+      "id": "katze",
+      "label": "KATZEN davor",
+      "items": [
+        "Jammer",
+        "Sprung",
+        "Wäsche",
+        "Auge"
+      ],
+      "revealHint": "KATZEN___"
+    },
+    {
+      "id": "schwein",
+      "label": "SCHWEINE davor",
+      "items": [
+        "Hund",
+        "Glück",
+        "Braten",
+        "Bauch"
+      ],
+      "revealHint": "SCHWEINE___"
+    },
+    {
+      "id": "pferd",
+      "label": "PFERDE davor",
+      "items": [
+        "Apfel",
+        "Stärke",
+        "Kuss",
+        "Fuß"
+      ],
+      "revealHint": "PFERDE___"
+    }
+  ]
+}

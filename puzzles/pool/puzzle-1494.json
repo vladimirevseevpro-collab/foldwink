@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-1494",
+  "title": "Creature Endings",
+  "difficulty": "hard",
+  "editorialSummary": "Each group ends in a small creature word. Lady, Blue and Fire were left out because they fit two endings each.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "bell",
+      "label": "Goes before BELL",
+      "items": [
+        "Door",
+        "Bar",
+        "Dumb",
+        "Hand"
+      ],
+      "revealHint": "___BELL"
+    },
+    {
+      "id": "bug",
+      "label": "Goes before BUG",
+      "items": [
+        "Bed",
+        "Litter",
+        "Hum",
+        "Jitter"
+      ],
+      "revealHint": "___BUG"
+    },
+    {
+      "id": "worm",
+      "label": "Goes before WORM",
+      "items": [
+        "Book",
+        "Earth",
+        "Silk",
+        "Glow"
+      ],
+      "revealHint": "___WORM"
+    },
+    {
+      "id": "bird",
+      "label": "Goes before BIRD",
+      "items": [
+        "Black",
+        "Jail",
+        "Song",
+        "Humming"
+      ],
+      "revealHint": "___BIRD"
+    }
+  ]
+}

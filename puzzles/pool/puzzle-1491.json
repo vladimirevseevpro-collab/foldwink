@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-1491",
+  "title": "Word Surgery",
+  "difficulty": "hard",
+  "editorialSummary": "Four different operations on spelling: reverse, rearrange, look inside, and cut off the first letter.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "rev",
+      "label": "Spells another word backwards",
+      "items": [
+        "Lived",
+        "Diaper",
+        "Keep",
+        "Evil"
+      ],
+      "revealHint": "BACKWARDS"
+    },
+    {
+      "id": "anag",
+      "label": "Anagram of a fruit",
+      "items": [
+        "Reap",
+        "Mile",
+        "Lump",
+        "Among"
+      ],
+      "revealHint": "FRUIT ANAGRAM"
+    },
+    {
+      "id": "colour",
+      "label": "Contains a hidden colour",
+      "items": [
+        "Hundred",
+        "Sublime",
+        "Tangerine",
+        "Tired"
+      ],
+      "revealHint": "HIDDEN COLOUR"
+    },
+    {
+      "id": "drop",
+      "label": "Drop the first letter to get a new word",
+      "items": [
+        "Pirate",
+        "Swing",
+        "Stable",
+        "Grain"
+      ],
+      "revealHint": "DROP FIRST LETTER"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "de-9076",
+  "title": "Deutsch ist kompliziert",
+  "difficulty": "hard",
+  "editorialSummary": "Vier Eigenheiten des Deutschen: Betonung, doppelte Mehrzahl, Scheinanglizismen und doppelte Vokale.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "beton",
+      "label": "Betonung ändert die Bedeutung",
+      "items": [
+        "Umfahren",
+        "Modern",
+        "August",
+        "Tenor"
+      ],
+      "revealHint": "BETONUNG"
+    },
+    {
+      "id": "plural",
+      "label": "Zwei verschiedene Mehrzahlen",
+      "items": [
+        "Bank",
+        "Mutter",
+        "Wort",
+        "Strauß"
+      ],
+      "revealHint": "ZWEI MEHRZAHLEN"
+    },
+    {
+      "id": "denglisch",
+      "label": "Klingt englisch, ist es aber nicht",
+      "items": [
+        "Handy",
+        "Beamer",
+        "Oldtimer",
+        "Smoking"
+      ],
+      "revealHint": "SCHEINENGLISCH"
+    },
+    {
+      "id": "vokal",
+      "label": "Mit doppeltem Vokal",
+      "items": [
+        "Boot",
+        "Meer",
+        "Haar",
+        "Zoo"
+      ],
+      "revealHint": "DOPPELVOKAL"
+    }
+  ]
+}

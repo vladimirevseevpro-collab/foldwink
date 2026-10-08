@@ -1,0 +1,57 @@
+{
+  "id": "de-9063",
+  "title": "Was passt dahinter?",
+  "difficulty": "hard",
+  "editorialSummary": "Jede Karte bildet mit genau einer Endung ein Wort. Tisch, Fahr, Hand und Auto fielen raus: Tischkarte, Fahrkarte, Handrad, Autokarte.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "tuch",
+      "label": "Passt vor TUCH",
+      "items": [
+        "Hals",
+        "Kopf",
+        "Bade",
+        "Bett"
+      ],
+      "revealHint": "___TUCH"
+    },
+    {
+      "id": "rad",
+      "label": "Passt vor RAD",
+      "items": [
+        "Glücks",
+        "Riesen",
+        "Zahn",
+        "Schwung"
+      ],
+      "revealHint": "___RAD"
+    },
+    {
+      "id": "bahn",
+      "label": "Passt vor BAHN",
+      "items": [
+        "Eisen",
+        "Achter",
+        "Rodel",
+        "Seil"
+      ],
+      "revealHint": "___BAHN"
+    },
+    {
+      "id": "karte",
+      "label": "Passt vor KARTE",
+      "items": [
+        "Post",
+        "Land",
+        "Speise",
+        "Kredit"
+      ],
+      "revealHint": "___KARTE"
+    }
+  ]
+}

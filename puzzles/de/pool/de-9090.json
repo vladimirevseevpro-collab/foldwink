@@ -1,0 +1,57 @@
+{
+  "id": "de-9090",
+  "title": "Ein Buchstabe Unterschied",
+  "difficulty": "hard",
+  "editorialSummary": "Ein Umlaut, ein Dehnungs-h, ein ie oder ein doppelter Konsonant macht ein neues Wort. Wal und Stil fielen raus: Wahl und Wall, Stiel und still.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "umlaut",
+      "label": "Mit Umlaut ein anderes Wort",
+      "items": [
+        "Kuchen",
+        "Apfel",
+        "Mutter",
+        "Bar"
+      ],
+      "revealHint": "UMLAUT"
+    },
+    {
+      "id": "dehnung",
+      "label": "Mit Dehnungs-h ein anderes Wort",
+      "items": [
+        "Mal",
+        "Rum",
+        "Sole",
+        "Leere"
+      ],
+      "revealHint": "DEHNUNGS-H"
+    },
+    {
+      "id": "ie",
+      "label": "Mit ie ein anderes Wort",
+      "items": [
+        "Mine",
+        "Lid",
+        "Wider",
+        "Fiber"
+      ],
+      "revealHint": "IE STATT I"
+    },
+    {
+      "id": "doppel",
+      "label": "Mit Doppelkonsonant ein anderes Wort",
+      "items": [
+        "Mus",
+        "Hüte",
+        "Ofen",
+        "Schal"
+      ],
+      "revealHint": "DOPPELKONSONANT"
+    }
+  ]
+}

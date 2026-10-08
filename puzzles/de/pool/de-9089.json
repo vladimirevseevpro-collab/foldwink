@@ -1,0 +1,57 @@
+{
+  "id": "de-9089",
+  "title": "Doppelt gemeint",
+  "difficulty": "hard",
+  "editorialSummary": "Jedes Wort hat eine zweite Bedeutung: Pflanze und Körper, Fahrzeug, Getränk oder Turngerät.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "pflanze",
+      "label": "Pflanze und Körper",
+      "items": [
+        "Wurzel",
+        "Rinde",
+        "Stamm",
+        "Blatt"
+      ],
+      "revealHint": "PFLANZE UND KÖRPER"
+    },
+    {
+      "id": "fahrzeug",
+      "label": "Fahrzeug und noch etwas",
+      "items": [
+        "Zug",
+        "Wagen",
+        "Roller",
+        "Panzer"
+      ],
+      "revealHint": "FAHRZEUG UND MEHR"
+    },
+    {
+      "id": "getraenk",
+      "label": "Getränk und noch etwas",
+      "items": [
+        "Korn",
+        "Saft",
+        "Brause",
+        "Sprudel"
+      ],
+      "revealHint": "GETRÄNK UND MEHR"
+    },
+    {
+      "id": "turnen",
+      "label": "Turngerät und noch etwas",
+      "items": [
+        "Pferd",
+        "Kasten",
+        "Barren",
+        "Ring"
+      ],
+      "revealHint": "TURNGERÄT UND MEHR"
+    }
+  ]
+}

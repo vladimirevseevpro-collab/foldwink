@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-1493",
+  "title": "Something Inside",
+  "difficulty": "hard",
+  "editorialSummary": "Every card hides a shorter word. Fish are animals, so the mammal group is limited to mammals to keep CARP in CARPET out of it.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "tree",
+      "label": "Contains a hidden tree",
+      "items": [
+        "Firm",
+        "Soak",
+        "Helmet",
+        "Crash"
+      ],
+      "revealHint": "HIDDEN TREE"
+    },
+    {
+      "id": "metal",
+      "label": "Contains a hidden metal",
+      "items": [
+        "Tinder",
+        "Leader",
+        "Marigold",
+        "Ironic"
+      ],
+      "revealHint": "HIDDEN METAL"
+    },
+    {
+      "id": "mammal",
+      "label": "Contains a hidden mammal",
+      "items": [
+        "Scatter",
+        "Pigment",
+        "Batter",
+        "Ratify"
+      ],
+      "revealHint": "HIDDEN MAMMAL"
+    },
+    {
+      "id": "fishh",
+      "label": "Contains a hidden fish",
+      "items": [
+        "Wheel",
+        "Codify",
+        "Spiked",
+        "Carpet"
+      ],
+      "revealHint": "HIDDEN FISH"
+    }
+  ]
+}

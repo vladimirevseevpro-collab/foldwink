@@ -1,0 +1,57 @@
+{
+  "id": "de-9087",
+  "title": "Was steckt alles drin?",
+  "difficulty": "hard",
+  "editorialSummary": "In jeder Karte steckt eine Zahl, ein Körperteil, ein Vogel oder ein Möbelstück.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "zahl",
+      "label": "Darin versteckt: eine Zahl",
+      "items": [
+        "Pacht",
+        "Klavier",
+        "Delfin",
+        "Einsam"
+      ],
+      "revealHint": "ZAHL"
+    },
+    {
+      "id": "koerper",
+      "label": "Darin versteckt: ein Körperteil",
+      "items": [
+        "Charme",
+        "Invalide",
+        "Scherz",
+        "Handlung"
+      ],
+      "revealHint": "KÖRPERTEIL"
+    },
+    {
+      "id": "vogel",
+      "label": "Darin versteckt: ein Vogel",
+      "items": [
+        "Radler",
+        "Talente",
+        "Emulsion",
+        "Garage"
+      ],
+      "revealHint": "VOGEL"
+    },
+    {
+      "id": "moebel",
+      "label": "Darin versteckt: ein Möbelstück",
+      "items": [
+        "Bankrott",
+        "Tischler",
+        "Sessellift",
+        "Stubenhocker"
+      ],
+      "revealHint": "MÖBEL"
+    }
+  ]
+}

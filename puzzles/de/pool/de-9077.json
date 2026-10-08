@@ -1,0 +1,57 @@
+{
+  "id": "de-9077",
+  "title": "Städte, Flüsse, Klänge",
+  "difficulty": "hard",
+  "editorialSummary": "In jeder Karte versteckt sich eine Stadt, ein Fluss, ein Instrument oder eine Zahl.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "stadt",
+      "label": "Darin liegt eine Stadt",
+      "items": [
+        "Aroma",
+        "Klima",
+        "Bernstein",
+        "Ulme"
+      ],
+      "revealHint": "STADT DRIN"
+    },
+    {
+      "id": "fluss",
+      "label": "Darin fließt ein Fluss",
+      "items": [
+        "Emsig",
+        "Vanille",
+        "Gewinner",
+        "Blech"
+      ],
+      "revealHint": "FLUSS DRIN"
+    },
+    {
+      "id": "instr",
+      "label": "Darin klingt ein Instrument",
+      "items": [
+        "Hornisse",
+        "Flaute",
+        "Waschbecken",
+        "Cellophan"
+      ],
+      "revealHint": "INSTRUMENT DRIN"
+    },
+    {
+      "id": "zahl",
+      "label": "Darin zählt eine Zahl",
+      "items": [
+        "Dreist",
+        "Wacht",
+        "Helfer",
+        "Einsicht"
+      ],
+      "revealHint": "ZAHL DRIN"
+    }
+  ]
+}

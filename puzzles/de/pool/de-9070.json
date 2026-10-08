@@ -1,0 +1,57 @@
+{
+  "id": "de-9070",
+  "title": "Blind, golden, rot, lang",
+  "difficulty": "hard",
+  "editorialSummary": "Jede Karte ergibt nur mit einem Adjektiv eine feste Wendung; das Geschlecht hilft. Nase und Hochzeit wurden ersetzt: rote Nase, rote Hochzeit.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "blind",
+      "label": "Blinder ___",
+      "items": [
+        "Passagier",
+        "Fleck",
+        "Alarm",
+        "Eifer"
+      ],
+      "revealHint": "BLINDER"
+    },
+    {
+      "id": "gold",
+      "label": "Goldene ___",
+      "items": [
+        "Mitte",
+        "Regel",
+        "Gans",
+        "Brücke"
+      ],
+      "revealHint": "GOLDENE"
+    },
+    {
+      "id": "rot",
+      "label": "Rote ___",
+      "items": [
+        "Karte",
+        "Linie",
+        "Laterne",
+        "Bete"
+      ],
+      "revealHint": "ROTE"
+    },
+    {
+      "id": "lang",
+      "label": "Langer ___",
+      "items": [
+        "Atem",
+        "Lulatsch",
+        "Arm",
+        "Samstag"
+      ],
+      "revealHint": "LANGER"
+    }
+  ]
+}

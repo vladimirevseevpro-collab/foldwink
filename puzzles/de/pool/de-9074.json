@@ -1,0 +1,57 @@
+{
+  "id": "de-9074",
+  "title": "Buchstabenarbeit",
+  "difficulty": "hard",
+  "editorialSummary": "Vorn oder hinten einen Buchstaben streichen, rückwärts lesen oder spiegeln. Viele Kandidaten fielen raus, weil sie gleich zwei Regeln erfüllen (Bart – Art, Eis – Ei).",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "rueck",
+      "label": "Andersherum gelesen ein neues Wort",
+      "items": [
+        "Eber",
+        "Lese",
+        "Not",
+        "Rot"
+      ],
+      "revealHint": "ANDERSHERUM"
+    },
+    {
+      "id": "pal",
+      "label": "Spiegelwort",
+      "items": [
+        "Rentner",
+        "Reittier",
+        "Lagerregal",
+        "Kajak"
+      ],
+      "revealHint": "SPIEGELWORT"
+    },
+    {
+      "id": "letzter",
+      "label": "Ohne letzten Buchstaben ein Wort",
+      "items": [
+        "Laub",
+        "Garn",
+        "Baum",
+        "Taube"
+      ],
+      "revealHint": "OHNE LETZTEN"
+    },
+    {
+      "id": "erster",
+      "label": "Vorn gekürzt ein neues Wort",
+      "items": [
+        "Hast",
+        "Kreis",
+        "Klage",
+        "Brand"
+      ],
+      "revealHint": "VORN GEKÜRZT"
+    }
+  ]
+}

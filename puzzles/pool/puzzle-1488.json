@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-1488",
+  "title": "Wings and Work",
+  "difficulty": "hard",
+  "editorialSummary": "Two compound groups (___FLY and ___WORK) plus two letter tricks. Fire was left out on purpose: it fits both FIREFLY and FIREWORK.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "fly",
+      "label": "Goes before FLY",
+      "items": [
+        "Butter",
+        "Dragon",
+        "Horse",
+        "Green"
+      ],
+      "revealHint": "___FLY"
+    },
+    {
+      "id": "work",
+      "label": "Goes before WORK",
+      "items": [
+        "Clock",
+        "Team",
+        "Home",
+        "Net"
+      ],
+      "revealHint": "___WORK"
+    },
+    {
+      "id": "num",
+      "label": "Contains a hidden number",
+      "items": [
+        "Often",
+        "Bone",
+        "Weight",
+        "Canine"
+      ],
+      "revealHint": "HIDDEN NUMBER"
+    },
+    {
+      "id": "pal",
+      "label": "Reads the same backwards",
+      "items": [
+        "Level",
+        "Rotor",
+        "Refer",
+        "Kayak"
+      ],
+      "revealHint": "PALINDROME"
+    }
+  ]
+}

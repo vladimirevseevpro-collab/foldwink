@@ -1,0 +1,57 @@
+{
+  "id": "de-9057",
+  "title": "Versteckt und verdreht",
+  "difficulty": "hard",
+  "editorialSummary": "Drei Gruppen verstecken ein Wort, eine liest man rückwärts. Elfenbein wurde gestrichen, weil darin auch ein Bein steckt.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "tier",
+      "label": "Versteckt ein Tier",
+      "items": [
+        "Rente",
+        "Phase",
+        "Klausur",
+        "Saal"
+      ],
+      "revealHint": "TIER DARIN"
+    },
+    {
+      "id": "zahl",
+      "label": "Versteckt eine Zahl",
+      "items": [
+        "Zweig",
+        "Nacht",
+        "Elfmeter",
+        "Steinschlag"
+      ],
+      "revealHint": "ZAHL DARIN"
+    },
+    {
+      "id": "koerper",
+      "label": "Versteckt einen Körperteil",
+      "items": [
+        "Armut",
+        "Rohr",
+        "Handel",
+        "Klippe"
+      ],
+      "revealHint": "KÖRPERTEIL DARIN"
+    },
+    {
+      "id": "rueck",
+      "label": "Rückwärts ein anderes Wort",
+      "items": [
+        "Regal",
+        "Gras",
+        "Leben",
+        "Tor"
+      ],
+      "revealHint": "RÜCKWÄRTS"
+    }
+  ]
+}

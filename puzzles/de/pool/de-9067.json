@@ -1,0 +1,57 @@
+{
+  "id": "de-9067",
+  "title": "Wurst und Fisch",
+  "difficulty": "hard",
+  "editorialSummary": "Jede Karte gehört vor genau ein Grundwort. Brat, Weiß, Blau und Rot wurden vermieden: Bratfisch, Weißkraut, Blaumann, Rotwurst.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "wurst",
+      "label": "Passt vor WURST",
+      "items": [
+        "Mett",
+        "Leber",
+        "Blut",
+        "Brüh"
+      ],
+      "revealHint": "___WURST"
+    },
+    {
+      "id": "fisch",
+      "label": "Passt vor FISCH",
+      "items": [
+        "Gold",
+        "Tinten",
+        "Kugel",
+        "Thun"
+      ],
+      "revealHint": "___FISCH"
+    },
+    {
+      "id": "mann",
+      "label": "Passt vor MANN",
+      "items": [
+        "Schnee",
+        "Hampel",
+        "Kauf",
+        "Sand"
+      ],
+      "revealHint": "___MANN"
+    },
+    {
+      "id": "kraut",
+      "label": "Passt vor KRAUT",
+      "items": [
+        "Sauer",
+        "Un",
+        "Heil",
+        "Bohnen"
+      ],
+      "revealHint": "___KRAUT"
+    }
+  ]
+}

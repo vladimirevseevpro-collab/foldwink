@@ -1,0 +1,57 @@
+{
+  "id": "de-9071",
+  "title": "Alles versteckt",
+  "difficulty": "hard",
+  "editorialSummary": "In jeder Karte steckt ein Wort. Fliege wurde ersetzt, weil sie selbst ein Kleidungsstück ist.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "moebel",
+      "label": "Darin steht ein Möbelstück",
+      "items": [
+        "Bankett",
+        "Schranke",
+        "Bettler",
+        "Schwiegermutter"
+      ],
+      "revealHint": "MÖBEL DRIN"
+    },
+    {
+      "id": "werkzeug",
+      "label": "Darin liegt ein Werkzeug",
+      "items": [
+        "Beilage",
+        "Pfeile",
+        "Verbrechen",
+        "Schererei"
+      ],
+      "revealHint": "WERKZEUG DRIN"
+    },
+    {
+      "id": "gemuese",
+      "label": "Darin wächst ein Gemüse",
+      "items": [
+        "Kohle",
+        "Bohnerwachs",
+        "Schlauch",
+        "Demokrat"
+      ],
+      "revealHint": "GEMÜSE DRIN"
+    },
+    {
+      "id": "kleidung",
+      "label": "Darin hängt ein Kleidungsstück",
+      "items": [
+        "Brocken",
+        "Schale",
+        "Westen",
+        "Obhut"
+      ],
+      "revealHint": "KLEIDUNG DRIN"
+    }
+  ]
+}

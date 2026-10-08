@@ -1,0 +1,57 @@
+{
+  "id": "de-9066",
+  "title": "Lesen mit Tricks",
+  "difficulty": "hard",
+  "editorialSummary": "Vier Arten, ein Wort anders zu lesen. Bart, Macht und Reh wurden ersetzt: ohne ersten Buchstaben ergeben sie Art, acht und eh.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "rueck",
+      "label": "Rückwärts gelesen ein neues Wort",
+      "items": [
+        "Lage",
+        "Ton",
+        "Nie",
+        "Lieb"
+      ],
+      "revealHint": "RÜCKWÄRTS"
+    },
+    {
+      "id": "pal",
+      "label": "Liest sich in beide Richtungen gleich",
+      "items": [
+        "Uhu",
+        "Kajak",
+        "Tat",
+        "Rotor"
+      ],
+      "revealHint": "PALINDROM"
+    },
+    {
+      "id": "weg",
+      "label": "Erster Buchstabe weg – neues Wort",
+      "items": [
+        "Frost",
+        "Kleid",
+        "Stier",
+        "Kreis"
+      ],
+      "revealHint": "OHNE ERSTEN"
+    },
+    {
+      "id": "zahl",
+      "label": "Eine Zahl versteckt sich darin",
+      "items": [
+        "Revier",
+        "Schlacht",
+        "Elfe",
+        "Zweifel"
+      ],
+      "revealHint": "ZAHL DRIN"
+    }
+  ]
+}

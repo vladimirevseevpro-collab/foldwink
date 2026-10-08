@@ -1,0 +1,57 @@
+{
+  "id": "de-9080",
+  "title": "Teekesselchen",
+  "difficulty": "hard",
+  "editorialSummary": "Jedes Wort hat eine zweite Bedeutung. Schlüssel und Note wurden ersetzt: Notenschlüssel passt zur Musik, Banknote zum Geld.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "werkzeug",
+      "label": "Werkzeug und noch etwas",
+      "items": [
+        "Hammer",
+        "Kelle",
+        "Zange",
+        "Pinsel"
+      ],
+      "revealHint": "WERKZEUG UND MEHR"
+    },
+    {
+      "id": "geld",
+      "label": "Umgangssprachlich auch Geld",
+      "items": [
+        "Kohle",
+        "Knete",
+        "Kies",
+        "Moos"
+      ],
+      "revealHint": "AUCH GELD"
+    },
+    {
+      "id": "karte",
+      "label": "Spielkarte und noch etwas",
+      "items": [
+        "Bube",
+        "Dame",
+        "König",
+        "Herz"
+      ],
+      "revealHint": "SPIELKARTE UND MEHR"
+    },
+    {
+      "id": "musik",
+      "label": "Musik und noch etwas",
+      "items": [
+        "Stimme",
+        "Takt",
+        "Ton",
+        "Satz"
+      ],
+      "revealHint": "MUSIK UND MEHR"
+    }
+  ]
+}

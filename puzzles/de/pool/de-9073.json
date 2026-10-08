@@ -1,0 +1,57 @@
+{
+  "id": "de-9073",
+  "title": "Zwei Leben",
+  "difficulty": "hard",
+  "editorialSummary": "Jedes Wort führt ein Doppelleben: Person und Gerät, Pflanze und Spitzname, Tier und Schimpfwort, Zahl und noch etwas.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "geraet",
+      "label": "Person und Gerät",
+      "items": [
+        "Drucker",
+        "Rechner",
+        "Hörer",
+        "Schläger"
+      ],
+      "revealHint": "PERSON UND GERÄT"
+    },
+    {
+      "id": "pflanze",
+      "label": "Pflanze und noch etwas",
+      "items": [
+        "Tulpe",
+        "Veilchen",
+        "Rübe",
+        "Gurke"
+      ],
+      "revealHint": "PFLANZE UND MEHR"
+    },
+    {
+      "id": "schimpf",
+      "label": "Tier und Schimpfwort",
+      "items": [
+        "Esel",
+        "Kamel",
+        "Gans",
+        "Rindvieh"
+      ],
+      "revealHint": "TIER UND SCHIMPF"
+    },
+    {
+      "id": "zahl",
+      "label": "Zahl und noch etwas",
+      "items": [
+        "Acht",
+        "Elf",
+        "Null",
+        "Sieben"
+      ],
+      "revealHint": "ZAHL UND MEHR"
+    }
+  ]
+}

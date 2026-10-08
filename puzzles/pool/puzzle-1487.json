@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-1487",
+  "title": "Hidden in Plain Sight",
+  "difficulty": "hard",
+  "editorialSummary": "Each group uses a different word trick. Foot is a body part, but not one hidden inside a longer word; it only completes FOOTBALL.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "body",
+      "label": "Contains a hidden body part",
+      "items": [
+        "China",
+        "Whipped",
+        "Spears",
+        "Charm"
+      ],
+      "revealHint": "HIDDEN BODY PART"
+    },
+    {
+      "id": "ball",
+      "label": "Goes before BALL",
+      "items": [
+        "Foot",
+        "Basket",
+        "Snow",
+        "Meat"
+      ],
+      "revealHint": "___BALL"
+    },
+    {
+      "id": "ship",
+      "label": "Goes before SHIP",
+      "items": [
+        "Friend",
+        "Owner",
+        "Leader",
+        "Member"
+      ],
+      "revealHint": "___SHIP"
+    },
+    {
+      "id": "letter",
+      "label": "Sounds like a letter",
+      "items": [
+        "Sea",
+        "Tea",
+        "Bee",
+        "Queue"
+      ],
+      "revealHint": "SOUNDS LIKE A LETTER"
+    }
+  ]
+}

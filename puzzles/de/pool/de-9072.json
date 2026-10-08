@@ -1,0 +1,57 @@
+{
+  "id": "de-9072",
+  "title": "Was kommt davor?",
+  "difficulty": "hard",
+  "editorialSummary": "Jede Karte passt hinter genau ein Wort. Schuh, Ball, Werk und Stelle wurden ersetzt: Hausschuh, Feuerball, Wasserwerk, Wasserstelle.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "haus",
+      "label": "HAUS davor",
+      "items": [
+        "Tür",
+        "Arzt",
+        "Aufgabe",
+        "Halt"
+      ],
+      "revealHint": "HAUS___"
+    },
+    {
+      "id": "wasser",
+      "label": "WASSER davor",
+      "items": [
+        "Hahn",
+        "Fall",
+        "Kocher",
+        "Waage"
+      ],
+      "revealHint": "WASSER___"
+    },
+    {
+      "id": "feuer",
+      "label": "FEUER davor",
+      "items": [
+        "Wehr",
+        "Zeug",
+        "Wache",
+        "Löscher"
+      ],
+      "revealHint": "FEUER___"
+    },
+    {
+      "id": "hand",
+      "label": "HAND davor",
+      "items": [
+        "Gelenk",
+        "Tasche",
+        "Tuch",
+        "Bremse"
+      ],
+      "revealHint": "HAND___"
+    }
+  ]
+}

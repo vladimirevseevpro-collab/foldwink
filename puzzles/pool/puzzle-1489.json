@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-1489",
+  "title": "Say It Again",
+  "difficulty": "hard",
+  "editorialSummary": "Every card is a homophone. The trick is hearing the right twin: DEAR is deer, KNOWS is nose, WON is one.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "fruit",
+      "label": "Sounds like a fruit or vegetable",
+      "items": [
+        "Pair",
+        "Bury",
+        "Current",
+        "Leak"
+      ],
+      "revealHint": "FRUIT AND VEG"
+    },
+    {
+      "id": "animal",
+      "label": "Sounds like an animal",
+      "items": [
+        "Dear",
+        "Hoarse",
+        "Bare",
+        "Knew"
+      ],
+      "revealHint": "ANIMAL"
+    },
+    {
+      "id": "number",
+      "label": "Sounds like a number",
+      "items": [
+        "Won",
+        "Ate",
+        "Fore",
+        "Too"
+      ],
+      "revealHint": "NUMBER"
+    },
+    {
+      "id": "bodyh",
+      "label": "Sounds like a body part",
+      "items": [
+        "Heal",
+        "Knows",
+        "Mussel",
+        "Aye"
+      ],
+      "revealHint": "BODY PART"
+    }
+  ]
+}

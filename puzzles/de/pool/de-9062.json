@@ -1,0 +1,57 @@
+{
+  "id": "de-9062",
+  "title": "Was steckt drin?",
+  "difficulty": "hard",
+  "editorialSummary": "In jeder Karte steckt ein kürzeres Wort. Ersetzt wurden Kleber (Eber), Lotterie (Lotte), Handy (Andy) und Metall (Meta), weil sie doppelt passen.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "tier",
+      "label": "Darin steckt ein Tier",
+      "items": [
+        "Drehen",
+        "Computer",
+        "Graben",
+        "Keule"
+      ],
+      "revealHint": "TIER DRIN"
+    },
+    {
+      "id": "koerper",
+      "label": "Darin steckt ein Körperteil",
+      "items": [
+        "Alarm",
+        "Rohr",
+        "Krippe",
+        "Gestirn"
+      ],
+      "revealHint": "KÖRPERTEIL DRIN"
+    },
+    {
+      "id": "name",
+      "label": "Darin steckt ein Vorname",
+      "items": [
+        "Kaiser",
+        "Patina",
+        "Alibi",
+        "Theologie"
+      ],
+      "revealHint": "VORNAME DRIN"
+    },
+    {
+      "id": "drink",
+      "label": "Darin steckt ein Getränk",
+      "items": [
+        "Sektor",
+        "Barbier",
+        "Ginster",
+        "Krume"
+      ],
+      "revealHint": "GETRÄNK DRIN"
+    }
+  ]
+}

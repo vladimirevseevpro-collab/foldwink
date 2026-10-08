@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-1492",
+  "title": "Make a Compound",
+  "difficulty": "hard",
+  "editorialSummary": "Four compound endings. Cupboard, cheeseboard, teahouse and starboard were avoided so each card makes only one compound.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "cake",
+      "label": "Goes before CAKE",
+      "items": [
+        "Pan",
+        "Short",
+        "Fish",
+        "Fruit"
+      ],
+      "revealHint": "___CAKE"
+    },
+    {
+      "id": "board",
+      "label": "Goes before BOARD",
+      "items": [
+        "Key",
+        "Card",
+        "Chalk",
+        "Skate"
+      ],
+      "revealHint": "___BOARD"
+    },
+    {
+      "id": "fish",
+      "label": "Goes before FISH",
+      "items": [
+        "Gold",
+        "Sword",
+        "Jelly",
+        "Monk"
+      ],
+      "revealHint": "___FISH"
+    },
+    {
+      "id": "house",
+      "label": "Goes before HOUSE",
+      "items": [
+        "Light",
+        "Green",
+        "Ware",
+        "Farm"
+      ],
+      "revealHint": "___HOUSE"
+    }
+  ]
+}

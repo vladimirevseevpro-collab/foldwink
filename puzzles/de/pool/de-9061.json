@@ -1,0 +1,57 @@
+{
+  "id": "de-9061",
+  "title": "Farbe bekennen",
+  "difficulty": "hard",
+  "editorialSummary": "Jede Karte gehört zu genau einer Farbe. Licht, Montag und Fleck wurden ersetzt, weil sie zu zwei Farben passen.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "blau",
+      "label": "Passt zu BLAU",
+      "items": [
+        "Blut",
+        "Auge",
+        "Wunder",
+        "Brief"
+      ],
+      "revealHint": "BLAU"
+    },
+    {
+      "id": "gruen",
+      "label": "Passt zu GRÜN",
+      "items": [
+        "Daumen",
+        "Welle",
+        "Tisch",
+        "Bereich"
+      ],
+      "revealHint": "GRÜN"
+    },
+    {
+      "id": "schwarz",
+      "label": "Passt zu SCHWARZ",
+      "items": [
+        "Schaf",
+        "Loch",
+        "Humor",
+        "Markt"
+      ],
+      "revealHint": "SCHWARZ"
+    },
+    {
+      "id": "weiss",
+      "label": "Passt zu WEISS",
+      "items": [
+        "Weste",
+        "Haus",
+        "Rabe",
+        "Wurst"
+      ],
+      "revealHint": "WEISS"
+    }
+  ]
+}

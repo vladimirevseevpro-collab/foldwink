@@ -1,0 +1,57 @@
+{
+  "id": "de-9086",
+  "title": "Was gehört dahinter?",
+  "difficulty": "hard",
+  "editorialSummary": "Jede Karte ergibt nur mit einer Endung ein Wort. Kühl, Akten, Brief und Werkzeug fielen raus: Kühltasche, Aktenschrank, Brieftasche, Werkzeugschrank.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "schrank",
+      "label": "Endet auf SCHRANK",
+      "items": [
+        "Wand",
+        "Kleider",
+        "Bücher",
+        "Gift"
+      ],
+      "revealHint": "___SCHRANK"
+    },
+    {
+      "id": "tasche",
+      "label": "Endet auf TASCHE",
+      "items": [
+        "Schul",
+        "Hand",
+        "Hosen",
+        "Kultur"
+      ],
+      "revealHint": "___TASCHE"
+    },
+    {
+      "id": "licht",
+      "label": "Endet auf LICHT",
+      "items": [
+        "Kerzen",
+        "Mond",
+        "Blau",
+        "Tages"
+      ],
+      "revealHint": "___LICHT"
+    },
+    {
+      "id": "kasten",
+      "label": "Endet auf KASTEN",
+      "items": [
+        "Sand",
+        "Farb",
+        "Schalt",
+        "Leier"
+      ],
+      "revealHint": "___KASTEN"
+    }
+  ]
+}

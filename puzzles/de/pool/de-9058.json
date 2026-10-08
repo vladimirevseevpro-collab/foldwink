@@ -1,0 +1,57 @@
+{
+  "id": "de-9058",
+  "title": "Zusammengesetzt",
+  "difficulty": "hard",
+  "editorialSummary": "Jede Karte ergibt mit genau einer Endung ein Wort. Spiel, Feuer und Kunst fielen raus, weil sie zu zwei Endungen passen.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "haus",
+      "label": "Passt vor HAUS",
+      "items": [
+        "Kranken",
+        "Rat",
+        "Treib",
+        "Wirts"
+      ],
+      "revealHint": "___HAUS"
+    },
+    {
+      "id": "zeug",
+      "label": "Passt vor ZEUG",
+      "items": [
+        "Flug",
+        "Fahr",
+        "Strick",
+        "Bett"
+      ],
+      "revealHint": "___ZEUG"
+    },
+    {
+      "id": "stueck",
+      "label": "Passt vor STÜCK",
+      "items": [
+        "Früh",
+        "Schmuck",
+        "Grund",
+        "Bruch"
+      ],
+      "revealHint": "___STÜCK"
+    },
+    {
+      "id": "ball",
+      "label": "Passt vor BALL",
+      "items": [
+        "Fuß",
+        "Volley",
+        "Feder",
+        "Schnee"
+      ],
+      "revealHint": "___BALL"
+    }
+  ]
+}

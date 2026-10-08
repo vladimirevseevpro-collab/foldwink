@@ -1,0 +1,57 @@
+{
+  "id": "de-9082",
+  "title": "Von Kopf bis Zahn",
+  "difficulty": "hard",
+  "editorialSummary": "Jede Karte ergibt nur mit einem Körperteil ein Wort. Katzen und Hühner fielen raus: Katzenkopf, Hühnerbein.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "kopf",
+      "label": "Passt vor KOPF",
+      "items": [
+        "Dick",
+        "Hitz",
+        "Brause",
+        "Wasser"
+      ],
+      "revealHint": "___KOPF"
+    },
+    {
+      "id": "bein",
+      "label": "Passt vor BEIN",
+      "items": [
+        "Schien",
+        "Schlüssel",
+        "Elfen",
+        "Stand"
+      ],
+      "revealHint": "___BEIN"
+    },
+    {
+      "id": "zahn",
+      "label": "Passt vor ZAHN",
+      "items": [
+        "Löwen",
+        "Milch",
+        "Weisheits",
+        "Backen"
+      ],
+      "revealHint": "___ZAHN"
+    },
+    {
+      "id": "auge",
+      "label": "Passt vor AUGE",
+      "items": [
+        "Pfauen",
+        "Fett",
+        "Adler",
+        "Bull"
+      ],
+      "revealHint": "___AUGE"
+    }
+  ]
+}

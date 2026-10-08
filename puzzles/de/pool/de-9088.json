@@ -1,0 +1,57 @@
+{
+  "id": "de-9088",
+  "title": "Redensarten",
+  "difficulty": "hard",
+  "editorialSummary": "Jede Karte passt nur in eine feste Redewendung: auf den Keks gehen, über den Tisch ziehen, unter die Lupe nehmen, ins Gewicht fallen.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "auf",
+      "label": "Auf den ___ gehen",
+      "items": [
+        "Keks",
+        "Wecker",
+        "Geist",
+        "Senkel"
+      ],
+      "revealHint": "AUF DEN … GEHEN"
+    },
+    {
+      "id": "ueber",
+      "label": "Über den ___",
+      "items": [
+        "Tisch",
+        "Haufen",
+        "Berg",
+        "Jordan"
+      ],
+      "revealHint": "ÜBER DEN …"
+    },
+    {
+      "id": "unter",
+      "label": "Unter die ___",
+      "items": [
+        "Lupe",
+        "Räder",
+        "Haube",
+        "Arme"
+      ],
+      "revealHint": "UNTER DIE …"
+    },
+    {
+      "id": "ins",
+      "label": "Ins ___ fallen",
+      "items": [
+        "Gewicht",
+        "Schloss",
+        "Wort",
+        "Wasser"
+      ],
+      "revealHint": "INS … FALLEN"
+    }
+  ]
+}

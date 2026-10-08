@@ -1,0 +1,57 @@
+{
+  "id": "de-9078",
+  "title": "Hinten dran",
+  "difficulty": "hard",
+  "editorialSummary": "Jede Karte bildet mit genau einer Endung ein Wort. Mond und Mahl fielen raus: Mondstein, Mahlstein.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "schein",
+      "label": "Passt vor SCHEIN",
+      "items": [
+        "Führer",
+        "Heiligen",
+        "Sonnen",
+        "Geld"
+      ],
+      "revealHint": "___SCHEIN"
+    },
+    {
+      "id": "stein",
+      "label": "Passt vor STEIN",
+      "items": [
+        "Grund",
+        "Edel",
+        "Bern",
+        "Meilen"
+      ],
+      "revealHint": "___STEIN"
+    },
+    {
+      "id": "zeit",
+      "label": "Passt vor ZEIT",
+      "items": [
+        "Hoch",
+        "Jahres",
+        "Frei",
+        "Halb"
+      ],
+      "revealHint": "___ZEIT"
+    },
+    {
+      "id": "schaft",
+      "label": "Passt vor SCHAFT",
+      "items": [
+        "Mann",
+        "Wirt",
+        "Land",
+        "Freund"
+      ],
+      "revealHint": "___SCHAFT"
+    }
+  ]
+}

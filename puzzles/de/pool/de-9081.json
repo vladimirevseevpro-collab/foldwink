@@ -1,0 +1,57 @@
+{
+  "id": "de-9081",
+  "title": "Wortakrobatik",
+  "difficulty": "hard",
+  "editorialSummary": "Vorwärts, rückwärts, vorn oder hinten gekürzt. Gast, Herd und Ehe fielen raus, weil sie zwei Regeln erfüllen.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "rueck",
+      "label": "Von hinten gelesen ein anderes Wort",
+      "items": [
+        "Kram",
+        "Pils",
+        "Trab",
+        "Nebel"
+      ],
+      "revealHint": "VON HINTEN"
+    },
+    {
+      "id": "pal",
+      "label": "Gleich von vorn und hinten",
+      "items": [
+        "Ebbe",
+        "Radar",
+        "Rentner",
+        "Reittier"
+      ],
+      "revealHint": "VORN WIE HINTEN"
+    },
+    {
+      "id": "letzter",
+      "label": "Letzter Buchstabe weg – anderes Wort",
+      "items": [
+        "Kurs",
+        "Ware",
+        "Teer",
+        "Weste"
+      ],
+      "revealHint": "LETZTER WEG"
+    },
+    {
+      "id": "erster",
+      "label": "Erster Buchstabe weg – anderes Wort",
+      "items": [
+        "Bach",
+        "Fleck",
+        "Glaube",
+        "Platz"
+      ],
+      "revealHint": "ERSTER WEG"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "de-9059",
+  "title": "Doppelt gemoppelt",
+  "difficulty": "hard",
+  "editorialSummary": "Jedes Wort hat zwei Bedeutungen. Kiefer fehlt, weil es zwei Artikel hat und sonst in zwei Gruppen passt.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "tier",
+      "label": "Tier und Gegenstand",
+      "items": [
+        "Maus",
+        "Hahn",
+        "Bock",
+        "Schnecke"
+      ],
+      "revealHint": "TIER UND DING"
+    },
+    {
+      "id": "koerper",
+      "label": "Körperteil und etwas anderes",
+      "items": [
+        "Nagel",
+        "Ballen",
+        "Zunge",
+        "Rücken"
+      ],
+      "revealHint": "KÖRPER UND MEHR"
+    },
+    {
+      "id": "artikel",
+      "label": "Ein Wort, zwei Artikel",
+      "items": [
+        "See",
+        "Schild",
+        "Leiter",
+        "Steuer"
+      ],
+      "revealHint": "ZWEI ARTIKEL"
+    },
+    {
+      "id": "bau",
+      "label": "Gebäude und etwas anderes",
+      "items": [
+        "Schloss",
+        "Bank",
+        "Turm",
+        "Mühle"
+      ],
+      "revealHint": "GEBÄUDE UND MEHR"
+    }
+  ]
+}

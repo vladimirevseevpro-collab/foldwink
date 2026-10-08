@@ -1,0 +1,57 @@
+{
+  "id": "de-9085",
+  "title": "Wetterwörter",
+  "difficulty": "hard",
+  "editorialSummary": "Jede Karte passt hinter genau ein Wetterwort. Schirm, Jacke, Hose und Brille wurden ersetzt: Sonnenschirm, Regenjacke, Schneehose, Schneebrille.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "schnee",
+      "label": "SCHNEE davor",
+      "items": [
+        "Mann",
+        "Ball",
+        "Flocke",
+        "Glöckchen"
+      ],
+      "revealHint": "SCHNEE___"
+    },
+    {
+      "id": "regen",
+      "label": "REGEN davor",
+      "items": [
+        "Tropfen",
+        "Bogen",
+        "Wurm",
+        "Mantel"
+      ],
+      "revealHint": "REGEN___"
+    },
+    {
+      "id": "sonne",
+      "label": "SONNEN davor",
+      "items": [
+        "Aufgang",
+        "Blume",
+        "Stich",
+        "Uhr"
+      ],
+      "revealHint": "SONNEN___"
+    },
+    {
+      "id": "wind",
+      "label": "WIND davor",
+      "items": [
+        "Mühle",
+        "Stille",
+        "Spiel",
+        "Beutel"
+      ],
+      "revealHint": "WIND___"
+    }
+  ]
+}

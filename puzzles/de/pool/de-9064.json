@@ -1,0 +1,57 @@
+{
+  "id": "de-9064",
+  "title": "Zweite Bedeutung",
+  "difficulty": "hard",
+  "editorialSummary": "Jedes Wort hat eine zweite Bedeutung. Fliege und Kiefer fehlen, weil sie auch Kleidung bzw. Körperteil sind.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "artikel",
+      "label": "Gleiches Wort, zwei Artikel",
+      "items": [
+        "Tau",
+        "Gehalt",
+        "Erbe",
+        "Golf"
+      ],
+      "revealHint": "ZWEI ARTIKEL"
+    },
+    {
+      "id": "tier",
+      "label": "Tier und noch etwas",
+      "items": [
+        "Ente",
+        "Schlange",
+        "Raupe",
+        "Wurm"
+      ],
+      "revealHint": "TIER UND MEHR"
+    },
+    {
+      "id": "koerper",
+      "label": "Körperteil und noch etwas",
+      "items": [
+        "Bein",
+        "Fuß",
+        "Auge",
+        "Arm"
+      ],
+      "revealHint": "KÖRPER UND MEHR"
+    },
+    {
+      "id": "kleid",
+      "label": "Kleidung und noch etwas",
+      "items": [
+        "Mantel",
+        "Rock",
+        "Hose",
+        "Haube"
+      ],
+      "revealHint": "KLEIDUNG UND MEHR"
+    }
+  ]
+}

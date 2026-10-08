@@ -1,0 +1,57 @@
+{
+  "id": "puzzle-1490",
+  "title": "Weather Prefixes",
+  "difficulty": "hard",
+  "editorialSummary": "Each card follows a sky word to make one compound. Board, Fish and Drop were avoided because they fit more than one prefix.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "sun",
+      "label": "Follows SUN",
+      "items": [
+        "Rise",
+        "Burn",
+        "Dial",
+        "Glasses"
+      ],
+      "revealHint": "SUN___"
+    },
+    {
+      "id": "rain",
+      "label": "Follows RAIN",
+      "items": [
+        "Bow",
+        "Coat",
+        "Forest",
+        "Check"
+      ],
+      "revealHint": "RAIN___"
+    },
+    {
+      "id": "snow",
+      "label": "Follows SNOW",
+      "items": [
+        "Plough",
+        "Flake",
+        "Ball",
+        "Drift"
+      ],
+      "revealHint": "SNOW___"
+    },
+    {
+      "id": "star",
+      "label": "Follows STAR",
+      "items": [
+        "Dust",
+        "Gazer",
+        "Ship",
+        "Struck"
+      ],
+      "revealHint": "STAR___"
+    }
+  ]
+}

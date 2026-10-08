@@ -1,0 +1,57 @@
+{
+  "id": "de-9060",
+  "title": "Wer versteckt sich da?",
+  "difficulty": "hard",
+  "editorialSummary": "In drei Gruppen steckt ein Name, ein Land oder ein Getränk; in der vierten fällt der erste Buchstabe weg.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "name",
+      "label": "Versteckt einen Vornamen",
+      "items": [
+        "Intim",
+        "Bingo",
+        "Evakuierung",
+        "Minute"
+      ],
+      "revealHint": "VORNAME DARIN"
+    },
+    {
+      "id": "land",
+      "label": "Versteckt ein Land",
+      "items": [
+        "Mirakel",
+        "Katarrh",
+        "Polenta",
+        "Animalisch"
+      ],
+      "revealHint": "LAND DARIN"
+    },
+    {
+      "id": "getraenk",
+      "label": "Versteckt ein Getränk",
+      "items": [
+        "Schweine",
+        "Sekte",
+        "Barbier",
+        "Krumm"
+      ],
+      "revealHint": "GETRÄNK DARIN"
+    },
+    {
+      "id": "weg",
+      "label": "Ohne ersten Buchstaben ein neues Wort",
+      "items": [
+        "Brille",
+        "Brot",
+        "Grad",
+        "Laus"
+      ],
+      "revealHint": "ERSTER WEG"
+    }
+  ]
+}

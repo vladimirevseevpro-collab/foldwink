@@ -1,0 +1,57 @@
+{
+  "id": "de-9079",
+  "title": "Versteckt im Wort",
+  "difficulty": "hard",
+  "editorialSummary": "In jeder Karte versteckt sich ein Vogel, ein Baum, ein Körperteil oder ein Getränk. Radler wurde ersetzt: Es ist selbst ein Getränk.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "vogel",
+      "label": "Darin fliegt ein Vogel",
+      "items": [
+        "Ameise",
+        "Stark",
+        "Patente",
+        "Karamell"
+      ],
+      "revealHint": "VOGEL DRIN"
+    },
+    {
+      "id": "baum",
+      "label": "Darin wächst ein Baum",
+      "items": [
+        "Leiche",
+        "Blinde",
+        "Perle",
+        "Scheibe"
+      ],
+      "revealHint": "BAUM DRIN"
+    },
+    {
+      "id": "koerper",
+      "label": "Darin sitzt ein Körperteil",
+      "items": [
+        "Bohrer",
+        "Armee",
+        "Knacken",
+        "Magenta"
+      ],
+      "revealHint": "KÖRPERTEIL DRIN"
+    },
+    {
+      "id": "drink",
+      "label": "Darin fließt ein Getränk",
+      "items": [
+        "Weinen",
+        "Insekt",
+        "Metzger",
+        "Limousine"
+      ],
+      "revealHint": "GETRÄNK DRIN"
+    }
+  ]
+}

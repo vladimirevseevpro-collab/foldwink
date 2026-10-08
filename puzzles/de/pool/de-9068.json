@@ -1,0 +1,57 @@
+{
+  "id": "de-9068",
+  "title": "Versteckspiel",
+  "difficulty": "hard",
+  "editorialSummary": "Länder, Farben, Namen und Körperteile verstecken sich in längeren Wörtern. Mirakel und Romane wurden ersetzt, weil darin auch Ira und Roman stecken.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "land",
+      "label": "Darin versteckt sich ein Land",
+      "items": [
+        "Tschador",
+        "Normalität",
+        "Polenta",
+        "Katarrh"
+      ],
+      "revealHint": "LAND VERSTECKT"
+    },
+    {
+      "id": "farbe",
+      "label": "Darin versteckt sich eine Farbe",
+      "items": [
+        "Karotte",
+        "Hocker",
+        "Graupel",
+        "Beigeschmack"
+      ],
+      "revealHint": "FARBE VERSTECKT"
+    },
+    {
+      "id": "name",
+      "label": "Darin versteckt sich ein Name",
+      "items": [
+        "Januar",
+        "Beute",
+        "Judo",
+        "Maximal"
+      ],
+      "revealHint": "NAME VERSTECKT"
+    },
+    {
+      "id": "koerper",
+      "label": "Darin versteckt sich ein Körperteil",
+      "items": [
+        "Vormund",
+        "Kader",
+        "Schwanger",
+        "Solide"
+      ],
+      "revealHint": "KÖRPER VERSTECKT"
+    }
+  ]
+}

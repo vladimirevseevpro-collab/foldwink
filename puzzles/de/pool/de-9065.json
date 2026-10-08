@@ -1,0 +1,57 @@
+{
+  "id": "de-9065",
+  "title": "Kalt, heiß, alt, tot",
+  "difficulty": "hard",
+  "editorialSummary": "Jede Karte ergibt nur mit einem Adjektiv eine feste Wendung. Krieg, Kaffee, Luft und Mann wurden ersetzt, weil sie zu zwei Adjektiven passen.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "kalt",
+      "label": "Feste Wendung mit KALT",
+      "items": [
+        "Füße",
+        "Entzug",
+        "Hund",
+        "Schulter"
+      ],
+      "revealHint": "KALT"
+    },
+    {
+      "id": "heiss",
+      "label": "Feste Wendung mit HEISS",
+      "items": [
+        "Spur",
+        "Kartoffel",
+        "Phase",
+        "Draht"
+      ],
+      "revealHint": "HEISS"
+    },
+    {
+      "id": "alt",
+      "label": "Feste Wendung mit ALT",
+      "items": [
+        "Hase",
+        "Schwede",
+        "Hut",
+        "Zopf"
+      ],
+      "revealHint": "ALT"
+    },
+    {
+      "id": "tot",
+      "label": "Feste Wendung mit TOT",
+      "items": [
+        "Hose",
+        "Winkel",
+        "Punkt",
+        "Briefkasten"
+      ],
+      "revealHint": "TOT"
+    }
+  ]
+}

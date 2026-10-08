@@ -1,0 +1,57 @@
+{
+  "id": "de-9083",
+  "title": "Grammatik-Fallen",
+  "difficulty": "hard",
+  "editorialSummary": "Artikel und Mehrzahl entscheiden. Mark wurde ersetzt: Sie hat zwei Artikel und als Währung keine Mehrzahl.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "artikel",
+      "label": "Zwei Artikel, zwei Bedeutungen",
+      "items": [
+        "Gummi",
+        "Verdienst",
+        "Pony",
+        "Laster"
+      ],
+      "revealHint": "ZWEI ARTIKEL"
+    },
+    {
+      "id": "nurplural",
+      "label": "Nur in der Mehrzahl",
+      "items": [
+        "Eltern",
+        "Ferien",
+        "Leute",
+        "Kosten"
+      ],
+      "revealHint": "NUR MEHRZAHL"
+    },
+    {
+      "id": "keinplural",
+      "label": "Ohne Mehrzahl",
+      "items": [
+        "Durst",
+        "Obst",
+        "Gepäck",
+        "Hunger"
+      ],
+      "revealHint": "OHNE MEHRZAHL"
+    },
+    {
+      "id": "zweiplural",
+      "label": "Hat zwei Mehrzahlformen",
+      "items": [
+        "Tuch",
+        "Mann",
+        "Land",
+        "Ding"
+      ],
+      "revealHint": "ZWEI MEHRZAHLEN"
+    }
+  ]
+}

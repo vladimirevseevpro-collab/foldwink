@@ -1,0 +1,57 @@
+{
+  "id": "de-9069",
+  "title": "Doppelt besetzt",
+  "difficulty": "hard",
+  "editorialSummary": "Jedes Wort lebt ein Doppelleben. Bauer wurde ersetzt, weil es auch zwei Artikel hat.",
+  "meta": {
+    "theme": "language",
+    "categoryType": "wordplay",
+    "fairnessRisk": 1
+  },
+  "groups": [
+    {
+      "id": "artikel",
+      "label": "Ein Wort mit zwei Artikeln",
+      "items": [
+        "Mangel",
+        "Moment",
+        "Heide",
+        "Flur"
+      ],
+      "revealHint": "ZWEI ARTIKEL"
+    },
+    {
+      "id": "schach",
+      "label": "Schachfigur und noch etwas",
+      "items": [
+        "Läufer",
+        "Springer",
+        "Turm",
+        "Dame"
+      ],
+      "revealHint": "SCHACH UND MEHR"
+    },
+    {
+      "id": "obst",
+      "label": "Obst und noch etwas",
+      "items": [
+        "Birne",
+        "Pflaume",
+        "Apfel",
+        "Nuss"
+      ],
+      "revealHint": "OBST UND MEHR"
+    },
+    {
+      "id": "wetter",
+      "label": "Wetter und noch etwas",
+      "items": [
+        "Blitz",
+        "Sturm",
+        "Wolke",
+        "Schauer"
+      ],
+      "revealHint": "WETTER UND MEHR"
+    }
+  ]
+}
