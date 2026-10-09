@@ -1,0 +1,56 @@
+{
+  "id": "de-9258",
+  "title": "Regionale Wörter",
+  "difficulty": "medium",
+  "editorialSummary": "Typische Wörter aus Berlin, Bayern, dem Norden und dem Rheinland.",
+  "meta": {
+    "theme": "Sprache",
+    "batch": "de-medium-06"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Typisch Berlin",
+      "items": [
+        "Bulette",
+        "Schrippe",
+        "Molle",
+        "Späti"
+      ],
+      "revealHint": "BERLIN"
+    },
+    {
+      "id": "g2",
+      "label": "Bayerisch",
+      "items": [
+        "Servus",
+        "Brotzeit",
+        "Biergarten",
+        "Maß"
+      ],
+      "revealHint": "BAYERISCH"
+    },
+    {
+      "id": "g3",
+      "label": "Norddeutsch",
+      "items": [
+        "Moin",
+        "Deern",
+        "Klönschnack",
+        "Plietsch"
+      ],
+      "revealHint": "NORDEN"
+    },
+    {
+      "id": "g4",
+      "label": "Rheinisch",
+      "items": [
+        "Kamelle",
+        "Veedel",
+        "Klüngel",
+        "Fastelovend"
+      ],
+      "revealHint": "RHEINISCH"
+    }
+  ]
+}

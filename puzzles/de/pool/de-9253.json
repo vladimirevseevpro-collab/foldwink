@@ -1,0 +1,56 @@
+{
+  "id": "de-9253",
+  "title": "Werkstatt",
+  "difficulty": "medium",
+  "editorialSummary": "Schlagwerkzeug, Zangen, Messgeräte und Sägen.",
+  "meta": {
+    "theme": "Handwerk",
+    "batch": "de-medium-06"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Schlagwerkzeug",
+      "items": [
+        "Hammer",
+        "Fäustel",
+        "Vorschlaghammer",
+        "Klüpfel"
+      ],
+      "revealHint": "SCHLAG"
+    },
+    {
+      "id": "g2",
+      "label": "Zangenarten",
+      "items": [
+        "Kombizange",
+        "Beißzange",
+        "Rohrzange",
+        "Flachzange"
+      ],
+      "revealHint": "ZANGE"
+    },
+    {
+      "id": "g3",
+      "label": "Zum Messen",
+      "items": [
+        "Wasserwaage",
+        "Zollstock",
+        "Messschieber",
+        "Winkelmesser"
+      ],
+      "revealHint": "MESSEN"
+    },
+    {
+      "id": "g4",
+      "label": "Sägen",
+      "items": [
+        "Handsäge",
+        "Stichsäge",
+        "Kreissäge",
+        "Bandsäge"
+      ],
+      "revealHint": "SÄGE"
+    }
+  ]
+}

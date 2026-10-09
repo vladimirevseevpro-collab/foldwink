@@ -1,0 +1,56 @@
+{
+  "id": "de-9256",
+  "title": "Geld und Versicherung",
+  "difficulty": "medium",
+  "editorialSummary": "Börse, Bank, Steuern und Versicherungen.",
+  "meta": {
+    "theme": "Wirtschaft",
+    "batch": "de-medium-06"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "An der Börse",
+      "items": [
+        "Aktie",
+        "Anleihe",
+        "Dividende",
+        "Index"
+      ],
+      "revealHint": "BÖRSE"
+    },
+    {
+      "id": "g2",
+      "label": "Bei der Bank",
+      "items": [
+        "Girokonto",
+        "Kredit",
+        "Sparbuch",
+        "Überweisung"
+      ],
+      "revealHint": "BANK"
+    },
+    {
+      "id": "g3",
+      "label": "Steuerarten",
+      "items": [
+        "Einkommensteuer",
+        "Mehrwertsteuer",
+        "Grundsteuer",
+        "Erbschaftsteuer"
+      ],
+      "revealHint": "STEUER"
+    },
+    {
+      "id": "g4",
+      "label": "Versicherungen",
+      "items": [
+        "Haftpflicht",
+        "Hausrat",
+        "Kasko",
+        "Rechtsschutz"
+      ],
+      "revealHint": "VERSICHERUNG"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "de-9252",
+  "title": "Film und Fernsehen",
+  "difficulty": "medium",
+  "editorialSummary": "Stummfilm-Klassiker, Pixar, deutsche Serien und Oscar-Filme.",
+  "meta": {
+    "theme": "Film",
+    "batch": "de-medium-06"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Stummfilm-Klassiker",
+      "items": [
+        "Metropolis",
+        "Das Cabinet des Dr. Caligari",
+        "Nosferatu",
+        "Der letzte Mann"
+      ],
+      "revealHint": "STUMMFILM"
+    },
+    {
+      "id": "g2",
+      "label": "Pixar-Filme",
+      "items": [
+        "Toy Story",
+        "Findet Nemo",
+        "Die Unglaublichen",
+        "Oben"
+      ],
+      "revealHint": "PIXAR"
+    },
+    {
+      "id": "g3",
+      "label": "Deutsche Fernsehserien",
+      "items": [
+        "Tatort",
+        "Lindenstraße",
+        "Schwarzwaldklinik",
+        "Derrick"
+      ],
+      "revealHint": "SERIE"
+    },
+    {
+      "id": "g4",
+      "label": "Deutsche Filme mit Oscar",
+      "items": [
+        "Das Leben der Anderen",
+        "Nirgendwo in Afrika",
+        "Im Westen nichts Neues",
+        "Die Blechtrommel"
+      ],
+      "revealHint": "OSCAR"
+    }
+  ]
+}

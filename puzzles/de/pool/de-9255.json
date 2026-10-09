@@ -1,0 +1,56 @@
+{
+  "id": "de-9255",
+  "title": "Bauwerke",
+  "difficulty": "medium",
+  "editorialSummary": "Burgteile, Dome, Schlösser und Brücken.",
+  "meta": {
+    "theme": "Architektur",
+    "batch": "de-medium-06"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Teile einer Burg",
+      "items": [
+        "Bergfried",
+        "Zugbrücke",
+        "Burggraben",
+        "Zinnen"
+      ],
+      "revealHint": "BURG"
+    },
+    {
+      "id": "g2",
+      "label": "Berühmte Dome",
+      "items": [
+        "Kölner Dom",
+        "Aachener Dom",
+        "Speyerer Dom",
+        "Mainzer Dom"
+      ],
+      "revealHint": "DOM"
+    },
+    {
+      "id": "g3",
+      "label": "Schlösser in Deutschland",
+      "items": [
+        "Neuschwanstein",
+        "Sanssouci",
+        "Schwerin",
+        "Linderhof"
+      ],
+      "revealHint": "SCHLOSS"
+    },
+    {
+      "id": "g4",
+      "label": "Berühmte Brücken",
+      "items": [
+        "Golden Gate",
+        "Tower Bridge",
+        "Rialtobrücke",
+        "Karlsbrücke"
+      ],
+      "revealHint": "BRÜCKE"
+    }
+  ]
+}

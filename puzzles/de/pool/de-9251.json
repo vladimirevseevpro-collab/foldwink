@@ -1,0 +1,56 @@
+{
+  "id": "de-9251",
+  "title": "Romane und Autoren",
+  "difficulty": "medium",
+  "editorialSummary": "Werke von Thomas Mann, Kafka, Hesse und Grass.",
+  "meta": {
+    "theme": "Literatur",
+    "batch": "de-medium-06"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Bücher von Thomas Mann",
+      "items": [
+        "Buddenbrooks",
+        "Der Zauberberg",
+        "Tod in Venedig",
+        "Doktor Faustus"
+      ],
+      "revealHint": "MANN"
+    },
+    {
+      "id": "g2",
+      "label": "Werke von Franz Kafka",
+      "items": [
+        "Der Prozess",
+        "Das Schloss",
+        "Die Verwandlung",
+        "Amerika"
+      ],
+      "revealHint": "KAFKA"
+    },
+    {
+      "id": "g3",
+      "label": "Romane von Hermann Hesse",
+      "items": [
+        "Steppenwolf",
+        "Siddhartha",
+        "Das Glasperlenspiel",
+        "Demian"
+      ],
+      "revealHint": "HESSE"
+    },
+    {
+      "id": "g4",
+      "label": "Werke von Günter Grass",
+      "items": [
+        "Die Blechtrommel",
+        "Katz und Maus",
+        "Hundejahre",
+        "Im Krebsgang"
+      ],
+      "revealHint": "GRASS"
+    }
+  ]
+}

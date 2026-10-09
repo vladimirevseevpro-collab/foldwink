@@ -1,0 +1,56 @@
+{
+  "id": "de-9259",
+  "title": "Sportarten im Überblick",
+  "difficulty": "medium",
+  "editorialSummary": "Wintersport, Leichtathletik, Kampfsport und Radrennen.",
+  "meta": {
+    "theme": "Sport",
+    "batch": "de-medium-06"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Winterdisziplinen",
+      "items": [
+        "Biathlon",
+        "Rodeln",
+        "Skispringen",
+        "Eisschnelllauf"
+      ],
+      "revealHint": "WINTER"
+    },
+    {
+      "id": "g2",
+      "label": "Leichtathletik-Disziplinen",
+      "items": [
+        "Hürdenlauf",
+        "Stabhochsprung",
+        "Diskuswurf",
+        "Staffellauf"
+      ],
+      "revealHint": "ATHLETIK"
+    },
+    {
+      "id": "g3",
+      "label": "Kampfdisziplinen",
+      "items": [
+        "Judo",
+        "Karate",
+        "Fechten",
+        "Sumo"
+      ],
+      "revealHint": "KAMPF"
+    },
+    {
+      "id": "g4",
+      "label": "Radrennen",
+      "items": [
+        "Tour de France",
+        "Giro d'Italia",
+        "Vuelta",
+        "Paris–Roubaix"
+      ],
+      "revealHint": "RAD"
+    }
+  ]
+}

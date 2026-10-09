@@ -1,0 +1,56 @@
+{
+  "id": "de-9260",
+  "title": "So tut man es",
+  "difficulty": "medium",
+  "editorialSummary": "Gehen, sprechen, schauen und lachen auf verschiedene Weise.",
+  "meta": {
+    "theme": "Verben",
+    "batch": "de-medium-06"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Arten zu gehen",
+      "items": [
+        "schlendern",
+        "marschieren",
+        "humpeln",
+        "stolzieren"
+      ],
+      "revealHint": "GEHEN"
+    },
+    {
+      "id": "g2",
+      "label": "Arten zu sprechen",
+      "items": [
+        "flüstern",
+        "murmeln",
+        "stottern",
+        "brüllen"
+      ],
+      "revealHint": "SPRECHEN"
+    },
+    {
+      "id": "g3",
+      "label": "Arten zu schauen",
+      "items": [
+        "starren",
+        "spähen",
+        "blinzeln",
+        "zwinkern"
+      ],
+      "revealHint": "SCHAUEN"
+    },
+    {
+      "id": "g4",
+      "label": "Arten zu lachen",
+      "items": [
+        "kichern",
+        "prusten",
+        "schmunzeln",
+        "glucksen"
+      ],
+      "revealHint": "LACHEN"
+    }
+  ]
+}

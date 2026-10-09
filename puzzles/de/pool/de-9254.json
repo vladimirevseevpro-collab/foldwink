@@ -1,0 +1,56 @@
+{
+  "id": "de-9254",
+  "title": "Kleine Tiere",
+  "difficulty": "medium",
+  "editorialSummary": "Insekten, Spinnentiere, Weichtiere und Krebstiere.",
+  "meta": {
+    "theme": "Tiere",
+    "batch": "de-medium-06"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Insekten",
+      "items": [
+        "Libelle",
+        "Marienkäfer",
+        "Hummel",
+        "Ameise"
+      ],
+      "revealHint": "INSEKT"
+    },
+    {
+      "id": "g2",
+      "label": "Spinnentiere",
+      "items": [
+        "Kreuzspinne",
+        "Skorpion",
+        "Zecke",
+        "Weberknecht"
+      ],
+      "revealHint": "SPINNE"
+    },
+    {
+      "id": "g3",
+      "label": "Mollusken",
+      "items": [
+        "Weinbergschnecke",
+        "Auster",
+        "Tintenfisch",
+        "Miesmuschel"
+      ],
+      "revealHint": "WEICHTIER"
+    },
+    {
+      "id": "g4",
+      "label": "Krustentiere",
+      "items": [
+        "Hummer",
+        "Krabbe",
+        "Garnele",
+        "Languste"
+      ],
+      "revealHint": "KREBS"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "de-9257",
+  "title": "Steine und Erdzeiten",
+  "difficulty": "medium",
+  "editorialSummary": "Erdzeitalter, Gesteine, Mineralien und Edelsteine.",
+  "meta": {
+    "theme": "Geologie",
+    "batch": "de-medium-06"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Erdzeitalter",
+      "items": [
+        "Jura",
+        "Kreide",
+        "Trias",
+        "Perm"
+      ],
+      "revealHint": "ZEITALTER"
+    },
+    {
+      "id": "g2",
+      "label": "Gesteine",
+      "items": [
+        "Granit",
+        "Basalt",
+        "Sandstein",
+        "Marmor"
+      ],
+      "revealHint": "GESTEIN"
+    },
+    {
+      "id": "g3",
+      "label": "Minerale",
+      "items": [
+        "Quarz",
+        "Feldspat",
+        "Glimmer",
+        "Kalkspat"
+      ],
+      "revealHint": "MINERAL"
+    },
+    {
+      "id": "g4",
+      "label": "Natürliche Schmuckmaterialien",
+      "items": [
+        "Bernstein",
+        "Perle",
+        "Koralle",
+        "Gagat"
+      ],
+      "revealHint": "SCHMUCK"
+    }
+  ]
+}
