@@ -9,7 +9,11 @@
     "wordplay": false,
     "fairnessRisk": 0,
     "repetitionRisk": 1,
-    "tags": ["easy", "everyday", "general-knowledge"],
+    "tags": [
+      "easy",
+      "everyday",
+      "general-knowledge"
+    ],
     "batch": "cq6-ru-replacements-wave2",
     "status": "draft"
   },
@@ -17,22 +21,42 @@
     {
       "id": "kitchen_utensils",
       "label": "Кухонная утварь",
-      "items": ["Кастрюля", "Сковорода", "Чайник", "Дуршлаг"]
+      "items": [
+        "Кастрюля",
+        "Сковорода",
+        "Чайник",
+        "Дуршлаг"
+      ]
     },
     {
       "id": "domestic_birds",
       "label": "Домашние птицы",
-      "items": ["Курица", "Утка", "Гусь", "Индейка"]
+      "items": [
+        "Курица",
+        "Утка",
+        "Гусь",
+        "Перепёлка"
+      ]
     },
     {
       "id": "ball_sports",
       "label": "Игры с мячом",
-      "items": ["Футбол", "Баскетбол", "Волейбол", "Гандбол"]
+      "items": [
+        "Футбол",
+        "Баскетбол",
+        "Гандбол",
+        "Водное поло"
+      ]
     },
     {
       "id": "ballroom_dances",
       "label": "Бальные танцы",
-      "items": ["Вальс", "Танго", "Фокстрот", "Ча-ча-ча"]
+      "items": [
+        "Вальс",
+        "Танго",
+        "Фокстрот",
+        "Ча-ча-ча"
+      ]
     }
   ]
 }

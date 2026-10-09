@@ -1,59 +1,59 @@
 {
-    "id":  "ru-0449",
-    "title":  "Культура Японии",
-    "difficulty":  "medium",
-    "meta":  {
-                 "theme":  "Японская культура и традиции",
-                 "batch":  "ru-batch-19",
-                 "difficultyScore":  42,
-                 "editorialRank":  38,
-                 "gptDifficulty":  43,
-                 "gptRationale":  "The revised groups separate visual traditions, budo, food, and festivals or rituals; the labels no longer nest martial arts inside a generic arts group."
-             },
-    "groups":  [
-                   {
-                       "id":  "japan_arts",
-                       "label":  "Традиционные визуальные искусства",
-                       "revealHint":  "ВИЗУАЛ",
-                       "items":  [
-                                     "Икебана",
-                                     "Оригами",
-                                     "Каллиграфия",
-                                     "Укиё-э"
-                                 ]
-                   },
-                   {
-                       "id":  "japan_martial_arts",
-                       "label":  "Будо",
-                       "revealHint":  "БУДО",
-                       "items":  [
-                                     "Дзюдо",
-                                     "Карате",
-                                     "Кендо",
-                                     "Айкидо"
-                                 ]
-                   },
-                   {
-                       "id":  "japan_food",
-                       "label":  "Японские блюда",
-                       "revealHint":  "БЛЮДА",
-                       "items":  [
-                                     "Суши",
-                                     "Рамен",
-                                     "Темпура",
-                                     "Такояки"
-                                 ]
-                   },
-                   {
-                       "id":  "japan_culture",
-                       "label":  "Праздники и ритуалы",
-                       "revealHint":  "РИТУАЛ",
-                       "items":  [
-                                     "Чайная церемония",
-                                     "Ханами",
-                                     "Омацури",
-                                     "Сёгацу"
-                                 ]
-                   }
-               ]
+  "id": "ru-0449",
+  "title": "Культура Японии",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Японская культура и традиции",
+    "batch": "ru-batch-19",
+    "difficultyScore": 42,
+    "editorialRank": 38,
+    "gptDifficulty": 43,
+    "gptRationale": "The revised groups separate visual traditions, budo, food, and festivals or rituals; the labels no longer nest martial arts inside a generic arts group."
+  },
+  "groups": [
+    {
+      "id": "japan_arts",
+      "label": "Традиционные визуальные искусства",
+      "revealHint": "ВИЗУАЛ",
+      "items": [
+        "Икебана",
+        "Оригами",
+        "Каллиграфия",
+        "Укиё-э"
+      ]
+    },
+    {
+      "id": "japan_martial_arts",
+      "label": "Будо",
+      "revealHint": "БУДО",
+      "items": [
+        "Дзюдо",
+        "Карате",
+        "Кюдо",
+        "Айкидо"
+      ]
+    },
+    {
+      "id": "japan_food",
+      "label": "Японские блюда",
+      "revealHint": "БЛЮДА",
+      "items": [
+        "Суши",
+        "Рамен",
+        "Темпура",
+        "Такояки"
+      ]
+    },
+    {
+      "id": "japan_culture",
+      "label": "Праздники и ритуалы",
+      "revealHint": "РИТУАЛ",
+      "items": [
+        "Чайная церемония",
+        "Ханами",
+        "Омацури",
+        "Сёгацу"
+      ]
+    }
+  ]
 }

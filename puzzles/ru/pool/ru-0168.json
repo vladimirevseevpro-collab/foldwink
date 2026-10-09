@@ -1,59 +1,59 @@
 {
-    "id":  "ru-0168",
-    "title":  "Советское кино",
-    "difficulty":  "medium",
-    "meta":  {
-                 "theme":  "Советское кино",
-                 "batch":  "ru-batch-05",
-                 "difficultyScore":  54,
-                 "editorialRank":  52,
-                 "gptDifficulty":  61,
-                 "gptRationale":  "Recognising sixteen Soviet films and separating directors, war films and fairy tales is a medium task; every group now has one explicit, non-overlapping anchor."
-             },
-    "groups":  [
-                   {
-                       "id":  "comedies_sov",
-                       "label":  "Комедии Гайдая",
-                       "items":  [
-                                     "Операция Ы",
-                                     "Кавказская пленница",
-                                     "Бриллиантовая рука",
-                                     "Иван Васильевич"
-                                 ],
-                       "revealHint":  "ГАЙДАЙ"
-                   },
-                   {
-                       "id":  "war_films",
-                       "label":  "Военные фильмы",
-                       "items":  [
-                                     "Они сраж. за Родину",
-                                     "Летят журавли",
-                                     "Судьба человека",
-                                     "А зори здесь тихие"
-                                 ],
-                       "revealHint":  "ВОЙНА"
-                   },
-                   {
-                       "id":  "fairy_tales",
-                       "label":  "Сказки",
-                       "items":  [
-                                     "Морозко",
-                                     "Золушка",
-                                     "Варвара-краса",
-                                     "Аленький цветочек"
-                                 ],
-                       "revealHint":  "СКАЗКА"
-                   },
-                   {
-                       "id":  "drama_sov",
-                       "label":  "Фильмы Рязанова",
-                       "items":  [
-                                     "Берегись автомобиля",
-                                     "Гараж",
-                                     "Ирония судьбы",
-                                     "Служебный роман"
-                                 ],
-                       "revealHint":  "РЯЗАНОВ"
-                   }
-               ]
+  "id": "ru-0168",
+  "title": "Советское кино",
+  "difficulty": "medium",
+  "meta": {
+    "theme": "Советское кино",
+    "batch": "ru-batch-05",
+    "difficultyScore": 54,
+    "editorialRank": 52,
+    "gptDifficulty": 61,
+    "gptRationale": "Recognising sixteen Soviet films and separating directors, war films and fairy tales is a medium task; every group now has one explicit, non-overlapping anchor."
+  },
+  "groups": [
+    {
+      "id": "comedies_sov",
+      "label": "Комедии Гайдая",
+      "items": [
+        "Операция Ы",
+        "Кавказская пленница",
+        "Бриллиантовая рука",
+        "Двенадцать стульев"
+      ],
+      "revealHint": "ГАЙДАЙ"
+    },
+    {
+      "id": "war_films",
+      "label": "Военные фильмы",
+      "items": [
+        "Они сраж. за Родину",
+        "Летят журавли",
+        "Судьба человека",
+        "А зори здесь тихие"
+      ],
+      "revealHint": "ВОЙНА"
+    },
+    {
+      "id": "fairy_tales",
+      "label": "Сказки",
+      "items": [
+        "Морозко",
+        "Золушка",
+        "Варвара-краса",
+        "Аленький цветочек"
+      ],
+      "revealHint": "СКАЗКА"
+    },
+    {
+      "id": "drama_sov",
+      "label": "Фильмы Рязанова",
+      "items": [
+        "Берегись автомобиля",
+        "Гараж",
+        "Ирония судьбы",
+        "Служебный роман"
+      ],
+      "revealHint": "РЯЗАНОВ"
+    }
+  ]
 }

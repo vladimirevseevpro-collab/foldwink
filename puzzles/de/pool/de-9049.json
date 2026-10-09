@@ -13,22 +13,22 @@
   "groups": [
     {
       "id": "group_a",
-      "label": "Kochgeschirr",
+      "label": "Backzutaten",
       "items": [
-        "Topf",
-        "Pfanne",
-        "Auflaufform",
-        "Backblech"
+        "Mehl",
+        "Zucker",
+        "Hefe",
+        "Backpulver"
       ]
     },
     {
       "id": "group_b",
-      "label": "Küchengeräte",
+      "label": "Gewürze",
       "items": [
-        "Mixer",
-        "Toaster",
-        "Wasserkocher",
-        "Kaffeemaschine"
+        "Salz",
+        "Pfeffer",
+        "Paprika",
+        "Zimt"
       ]
     },
     {

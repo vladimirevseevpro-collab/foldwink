@@ -16,9 +16,9 @@
       "label": "Tart Citrus Fruits",
       "items": [
         "Lemon",
+        "Lime",
         "Grapefruit",
-        "Kumquat",
-        "Bergamot"
+        "Yuzu"
       ]
     },
     {
@@ -28,7 +28,7 @@
         "Nib",
         "Feed",
         "Cap",
-        "Reservoir"
+        "Converter"
       ]
     },
     {

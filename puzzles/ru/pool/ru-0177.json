@@ -25,10 +25,10 @@
       "id": "messengers",
       "label": "Мессенджеры",
       "items": [
-        "WhatsApp",
         "Telegram",
         "Viber",
-        "Signal"
+        "Signal",
+        "iMessage"
       ]
     },
     {

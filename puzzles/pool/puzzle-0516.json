@@ -1,6 +1,6 @@
 {
   "id": "puzzle-0516",
-  "title": "Nocturnal Forest Animals & Things with Wings",
+  "title": "Night Animals, Wings, Eyes & Necks",
   "difficulty": "medium",
   "meta": {
     "theme": "wave2_puzzle",
@@ -35,24 +35,24 @@
     },
     {
       "id": "g3_things_with_teeth",
-      "label": "Things with Teeth",
-      "revealHint": "TEETH",
+      "label": "Things with Eyes",
+      "revealHint": "Not for seeing",
       "items": [
-        "Comb",
-        "Gear",
-        "Saw",
-        "Zipper"
+        "Needle",
+        "Potato",
+        "Hurricane",
+        "Peacock Feather"
       ]
     },
     {
       "id": "g4_things_that_fold",
-      "label": "Things that Fold",
-      "revealHint": "FOLD",
+      "label": "Things with Necks",
+      "revealHint": "Not heads",
       "items": [
-        "Origami",
-        "Lawn Chair",
-        "Poker Hand",
-        "Laundry"
+        "Bottle",
+        "Guitar",
+        "Giraffe",
+        "Shirt"
       ]
     }
   ]

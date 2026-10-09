@@ -13,12 +13,12 @@
   "groups": [
     {
       "id": "group_a",
-      "label": "Fischarten",
+      "label": "Meeresfrüchte",
       "items": [
-        "Hering",
-        "Kabeljau",
-        "Lachs",
-        "Thunfisch"
+        "Garnele",
+        "Muschel",
+        "Tintenfisch",
+        "Krabbe"
       ]
     },
     {

@@ -8,7 +8,11 @@
     "wordplay": false,
     "fairnessRisk": 0,
     "repetitionRisk": 1,
-    "tags": ["markt", "alltag", "lebensmittel"],
+    "tags": [
+      "markt",
+      "alltag",
+      "lebensmittel"
+    ],
     "batch": "cq6-de-replacements",
     "status": "needs-review",
     "difficultyScore": 12
@@ -17,22 +21,42 @@
     {
       "id": "market_vegetables",
       "label": "Gemüse",
-      "items": ["Karotte", "Gurke", "Zucchini", "Kartoffel"]
+      "items": [
+        "Karotte",
+        "Gurke",
+        "Zucchini",
+        "Kartoffel"
+      ]
     },
     {
       "id": "market_fruit",
       "label": "Obst",
-      "items": ["Banane", "Orange", "Traube", "Erdbeere"]
+      "items": [
+        "Banane",
+        "Orange",
+        "Traube",
+        "Erdbeere"
+      ]
     },
     {
       "id": "market_herbs",
-      "label": "Küchenkräuter",
-      "items": ["Petersilie", "Schnittlauch", "Basilikum", "Dill"]
+      "label": "Käsesorten",
+      "items": [
+        "Gouda",
+        "Edamer",
+        "Brie",
+        "Parmesan"
+      ]
     },
     {
       "id": "market_flowers",
       "label": "Blumen",
-      "items": ["Geranie", "Begonie", "Nelke", "Sonnenblume"]
+      "items": [
+        "Geranie",
+        "Begonie",
+        "Nelke",
+        "Sonnenblume"
+      ]
     }
   ]
 }

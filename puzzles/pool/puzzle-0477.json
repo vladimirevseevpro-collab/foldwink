@@ -22,18 +22,18 @@
         "Discus",
         "Hammer",
         "Shot Put",
-        "Javelin"
+        "Weight Throw"
       ]
     },
     {
       "id": "g2",
-      "label": "JUMPING",
-      "revealHint": "Jump",
+      "label": "COMBINED EVENTS",
+      "revealHint": "Multi-event contests",
       "items": [
-        "Long Jump",
-        "Triple Jump",
-        "High Jump",
-        "Pole Vault"
+        "Decathlon",
+        "Heptathlon",
+        "Pentathlon",
+        "Tetrathlon"
       ]
     },
     {

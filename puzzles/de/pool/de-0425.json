@@ -10,22 +10,42 @@
     {
       "id": "group_a",
       "label": "Schreibgeräte",
-      "items": ["Bleistift", "Füller", "Kugelschreiber", "Filzstift"]
+      "items": [
+        "Bleistift",
+        "Füller",
+        "Kugelschreiber",
+        "Filzstift"
+      ]
     },
     {
       "id": "group_b",
       "label": "Messwerkzeuge",
-      "items": ["Lineal", "Geodreieck", "Maßband", "Zollstock"]
+      "items": [
+        "Lineal",
+        "Geodreieck",
+        "Maßband",
+        "Zollstock"
+      ]
     },
     {
       "id": "group_c",
       "label": "Papierwaren",
-      "items": ["Heft", "Notizblock", "Briefumschlag", "Karteikarte"]
+      "items": [
+        "Heft",
+        "Notizblock",
+        "Briefumschlag",
+        "Karteikarte"
+      ]
     },
     {
       "id": "group_d",
-      "label": "Befestigungsmittel",
-      "items": ["Büroklammer", "Heftklammer", "Reißzwecke", "Gummiband"]
+      "label": "Klebemittel",
+      "items": [
+        "Klebestift",
+        "Tesafilm",
+        "Klebeband",
+        "Alleskleber"
+      ]
     }
   ]
 }

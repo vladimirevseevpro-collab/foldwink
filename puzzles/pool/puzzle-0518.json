@@ -1,6 +1,6 @@
 {
   "id": "puzzle-0518",
-  "title": "Things with Teeth & Things that Fold",
+  "title": "Heads, Legs, Brands & Cheeses",
   "difficulty": "medium",
   "meta": {
     "theme": "wave2_puzzle",
@@ -13,24 +13,24 @@
   "groups": [
     {
       "id": "g1_things_with_teeth",
-      "label": "Things with Teeth",
-      "revealHint": "TEETH",
+      "label": "Things with Heads",
+      "revealHint": "Top part",
       "items": [
-        "Comb",
-        "Gear",
-        "Saw",
-        "Zipper"
+        "Nail",
+        "Beer",
+        "Lettuce",
+        "Match"
       ]
     },
     {
       "id": "g2_things_that_fold",
-      "label": "Things that Fold",
-      "revealHint": "FOLD",
+      "label": "Things with Legs",
+      "revealHint": "Not just animals",
       "items": [
-        "Origami",
-        "Lawn Chair",
-        "Poker Hand",
-        "Laundry"
+        "Table",
+        "Chair",
+        "Trousers",
+        "Journey"
       ]
     },
     {

@@ -24,13 +24,13 @@
     },
     {
       "id": "group_b",
-      "label": "Messinstrumente",
-      "revealHint": "Wetter messen",
+      "label": "Wolkenarten",
+      "revealHint": "Am Himmel",
       "items": [
-        "Barometer",
-        "Thermometer",
-        "Anemometer",
-        "Hygrometer"
+        "Cumulus",
+        "Cirrus",
+        "Stratus",
+        "Nimbus"
       ]
     },
     {

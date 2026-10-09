@@ -23,12 +23,12 @@
     },
     {
       "id": "group_b",
-      "label": "Holzarten",
+      "label": "Teile eines Baumes",
       "items": [
-        "Eiche",
-        "Buche",
-        "Kiefer",
-        "Fichte"
+        "Stamm",
+        "Ast",
+        "Wurzel",
+        "Rinde"
       ]
     },
     {

@@ -13,12 +13,12 @@
   "groups": [
     {
       "id": "group_a",
-      "label": "Faserarten",
+      "label": "Haustextilien",
       "items": [
-        "Wolle",
-        "Baumwolle",
-        "Leinen",
-        "Seide"
+        "Vorhang",
+        "Teppich",
+        "Bettwäsche",
+        "Handtuch"
       ]
     },
     {

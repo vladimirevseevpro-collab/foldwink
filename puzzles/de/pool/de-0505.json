@@ -1,6 +1,6 @@
 {
   "id": "de-0505",
-  "title": "Wortsalat mit «-salat» & Dinge mit «-rad»",
+  "title": "Wörter mit «-haus», «-rad», «-zeit» & «-licht»",
   "difficulty": "easy",
   "meta": {
     "theme": "wave2_de",
@@ -13,12 +13,12 @@
   "groups": [
     {
       "id": "g1_de_salat_compounds",
-      "label": "Wortsalat mit «-salat»",
+      "label": "Wörter mit «-haus»",
       "items": [
-        "Kartoffelsalat",
-        "Nudelsalat",
-        "Kabelsalat",
-        "Wortsalat"
+        "Gewächshaus",
+        "Rathaus",
+        "Krankenhaus",
+        "Hochhaus"
       ]
     },
     {
@@ -43,12 +43,12 @@
     },
     {
       "id": "g4_de_morning_after",
-      "label": "Am Morgen danach gesucht",
+      "label": "Wörter mit «-licht»",
       "items": [
-        "Aspirin",
-        "Wasser",
-        "Rollmops",
-        "Kaffee"
+        "Sonnenlicht",
+        "Kerzenlicht",
+        "Rotlicht",
+        "Blaulicht"
       ]
     }
   ]

@@ -2,27 +2,50 @@
   "id": "de-0382",
   "title": "Badregal",
   "difficulty": "easy",
-  "meta": { "theme": "Badregal", "batch": "cq6-de-replacements-wave3" },
+  "meta": {
+    "theme": "Badregal",
+    "batch": "cq6-de-replacements-wave3"
+  },
   "groups": [
     {
       "id": "group_a",
-      "label": "Zahnpflege",
-      "items": ["Zahnbürste", "Zahnpasta", "Zahnseide", "Mundspülung"]
+      "label": "Badtextilien",
+      "items": [
+        "Badetuch",
+        "Handtuch",
+        "Badematte",
+        "Waschlappen"
+      ]
     },
     {
       "id": "group_b",
-      "label": "Haarpflege",
-      "items": ["Shampoo", "Spülung", "Haarkur", "Haaröl"]
+      "label": "Duft im Bad",
+      "items": [
+        "Parfüm",
+        "Deo",
+        "Duftkerze",
+        "Raumspray"
+      ]
     },
     {
       "id": "group_c",
       "label": "Rasur",
-      "items": ["Rasierer", "Rasierschaum", "Rasierklinge", "Aftershave"]
+      "items": [
+        "Rasierer",
+        "Rasierschaum",
+        "Rasierklinge",
+        "Aftershave"
+      ]
     },
     {
       "id": "group_d",
       "label": "Handpflege",
-      "items": ["Handcreme", "Nagelfeile", "Nagellack", "Nagelhautschere"]
+      "items": [
+        "Handcreme",
+        "Nagelfeile",
+        "Nagellack",
+        "Nagelhautschere"
+      ]
     }
   ]
 }

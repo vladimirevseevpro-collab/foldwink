@@ -30,7 +30,7 @@
         "Pine",
         "Spruce",
         "Cedar",
-        "Fir"
+        "Redwood"
       ]
     },
     {
@@ -38,7 +38,7 @@
       "label": "Tropical Trees",
       "items": [
         "Palm",
-        "Mango",
+        "Banyan",
         "Teak",
         "Mahogany"
       ]

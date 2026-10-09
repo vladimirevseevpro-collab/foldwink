@@ -14,12 +14,12 @@
     {
       "id": "group_a",
       "label": "Nibelungen-Personen",
-      "revealHint": "Helden des Epos",
+      "revealHint": "Burgundenhof",
       "items": [
-        "Siegfried",
         "Kriemhild",
-        "Hagen",
-        "Brunhild"
+        "Gunther",
+        "Giselher",
+        "Volker"
       ]
     },
     {

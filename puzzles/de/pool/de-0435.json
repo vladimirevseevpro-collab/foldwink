@@ -13,23 +13,43 @@
   "groups": [
     {
       "id": "group_a",
-      "label": "Schreibgeräte",
-      "items": ["Bleistift", "Kugelschreiber", "Füller", "Textmarker"]
+      "label": "Ordnungshelfer",
+      "items": [
+        "Ordner",
+        "Hängemappe",
+        "Schnellhefter",
+        "Postablage"
+      ]
     },
     {
       "id": "group_b",
-      "label": "Befestigungsmittel",
-      "items": ["Büroklammer", "Heftklammer", "Reißzwecke", "Gummiband"]
+      "label": "Büromöbel",
+      "items": [
+        "Bürostuhl",
+        "Rollcontainer",
+        "Besprechungstisch",
+        "Garderobe"
+      ]
     },
     {
       "id": "group_c",
       "label": "Papierwaren",
-      "items": ["Briefpapier", "Briefumschlag", "Karteikarte", "Notizblock"]
+      "items": [
+        "Briefpapier",
+        "Briefumschlag",
+        "Karteikarte",
+        "Notizblock"
+      ]
     },
     {
       "id": "group_d",
       "label": "Computergeräte",
-      "items": ["Tastatur", "Maus", "Bildschirm", "Drucker"]
+      "items": [
+        "Tastatur",
+        "Maus",
+        "Bildschirm",
+        "Drucker"
+      ]
     }
   ]
 }

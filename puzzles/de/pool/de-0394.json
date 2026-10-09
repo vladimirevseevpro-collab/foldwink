@@ -35,13 +35,13 @@
     },
     {
       "id": "group_c",
-      "label": "Holzarten",
-      "revealHint": "Baumholz-Typen",
+      "label": "Waldtiere",
+      "revealHint": "Wer wohnt im Wald?",
       "items": [
-        "Eiche",
-        "Fichte",
-        "Kiefer",
-        "Buche"
+        "Hirsch",
+        "Specht",
+        "Eichhörnchen",
+        "Fuchs"
       ]
     },
     {

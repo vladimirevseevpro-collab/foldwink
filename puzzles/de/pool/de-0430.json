@@ -13,23 +13,43 @@
   "groups": [
     {
       "id": "group_a",
-      "label": "Brotaufstriche",
-      "items": ["Butter", "Marmelade", "Honig", "Nuss-Nougat-Creme"]
+      "label": "Eierspeisen",
+      "items": [
+        "Spiegelei",
+        "Rührei",
+        "Pochiertes Ei",
+        "Frühstücksei"
+      ]
     },
     {
       "id": "group_b",
       "label": "Müslizutaten",
-      "items": ["Haferflocken", "Rosinen", "Mandeln", "Cornflakes"]
+      "items": [
+        "Haferflocken",
+        "Rosinen",
+        "Mandeln",
+        "Cornflakes"
+      ]
     },
     {
       "id": "group_c",
       "label": "Frühstücksgetränke",
-      "items": ["Kaffee", "Tee", "Kakao", "Orangensaft"]
+      "items": [
+        "Kaffee",
+        "Tee",
+        "Kakao",
+        "Orangensaft"
+      ]
     },
     {
       "id": "group_d",
       "label": "Obst",
-      "items": ["Apfel", "Banane", "Birne", "Traube"]
+      "items": [
+        "Apfel",
+        "Banane",
+        "Birne",
+        "Traube"
+      ]
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "id": "de-0212",
-  "title": "Deutsche Bundesländer",
+  "title": "Deutschland: Länder, Städte, Flüsse",
   "difficulty": "easy",
   "meta": {
     "theme": "bundeslaender",
@@ -13,22 +13,22 @@
   "groups": [
     {
       "id": "group_a",
-      "label": "Nördliche Länder",
+      "label": "Landeshauptstädte",
       "items": [
-        "Schleswig-Holstein",
-        "Hamburg",
-        "Bremen",
-        "Mecklenburg-Vorp."
+        "München",
+        "Stuttgart",
+        "Dresden",
+        "Mainz"
       ]
     },
     {
       "id": "group_b",
-      "label": "Südliche Länder",
+      "label": "Große Flüsse",
       "items": [
-        "Bayern",
-        "Baden-Württemberg",
-        "Saarland",
-        "Rheinland-Pfalz"
+        "Rhein",
+        "Main",
+        "Neckar",
+        "Mosel"
       ]
     },
     {
@@ -48,7 +48,7 @@
         "NRW",
         "Hessen",
         "Niedersachsen",
-        "Berlin"
+        "Saarland"
       ]
     }
   ]

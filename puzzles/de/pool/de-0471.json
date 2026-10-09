@@ -14,22 +14,42 @@
     {
       "id": "group_a",
       "label": "Besteck",
-      "items": ["Gabel", "Messer", "Löffel", "Teelöffel"]
+      "items": [
+        "Gabel",
+        "Messer",
+        "Löffel",
+        "Teelöffel"
+      ]
     },
     {
       "id": "group_b",
       "label": "Geschirr",
-      "items": ["Teller", "Tasse", "Schüssel", "Becher"]
+      "items": [
+        "Teller",
+        "Tasse",
+        "Schüssel",
+        "Becher"
+      ]
     },
     {
       "id": "group_c",
-      "label": "Aufstriche",
-      "items": ["Butter", "Marmelade", "Honig", "Frischkäse"]
+      "label": "Getränke",
+      "items": [
+        "Tee",
+        "Milch",
+        "Orangensaft",
+        "Kakao"
+      ]
     },
     {
       "id": "group_d",
-      "label": "Backwaren",
-      "items": ["Toast", "Brötchen", "Brezel", "Croissant"]
+      "label": "Aufschnitt",
+      "items": [
+        "Salami",
+        "Schinken",
+        "Mortadella",
+        "Käse"
+      ]
     }
   ]
 }

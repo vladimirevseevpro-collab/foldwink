@@ -15,22 +15,22 @@
   "groups": [
     {
       "id": "planet",
-      "label": "Rocky Planets",
+      "label": "Moons",
       "items": [
-        "Mercury",
-        "Venus",
-        "Mars",
-        "Earth"
+        "Titan",
+        "Europa",
+        "Io",
+        "Callisto"
       ]
     },
     {
       "id": "gas",
-      "label": "Gas Giants",
+      "label": "Space Missions",
       "items": [
-        "Jupiter",
-        "Saturn",
-        "Uranus",
-        "Neptune"
+        "Apollo",
+        "Voyager",
+        "Hubble",
+        "Sputnik"
       ]
     },
     {

@@ -13,12 +13,12 @@
   "groups": [
     {
       "id": "group_a",
-      "label": "Wildtierarten",
+      "label": "Federwild",
       "items": [
-        "Reh",
-        "Wildschwein",
-        "Fuchs",
-        "Dachs"
+        "Fasan",
+        "Rebhuhn",
+        "Wildente",
+        "Wildtaube"
       ]
     },
     {

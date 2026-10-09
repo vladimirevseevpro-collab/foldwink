@@ -13,12 +13,12 @@
   "groups": [
     {
       "id": "group_a",
-      "label": "Märchen-Prinzessinnen",
+      "label": "Märchen-Titelfiguren",
       "items": [
-        "Schneewittchen",
-        "Dornröschen",
-        "Aschenputtel",
-        "Rapunzel"
+        "Rotkäppchen",
+        "Daumesdick",
+        "Hans im Glück",
+        "Frau Holle"
       ]
     },
     {
@@ -27,8 +27,8 @@
       "items": [
         "Böse Hexe",
         "Stiefmutter",
-        "Wolf",
-        "Rumpelstilzchen"
+        "Riese",
+        "Zauberer"
       ]
     },
     {

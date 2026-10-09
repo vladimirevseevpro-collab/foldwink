@@ -13,23 +13,43 @@
   "groups": [
     {
       "id": "group_a",
-      "label": "Oberteile",
-      "items": ["T-Shirt", "Pullover", "Hemd", "Bluse"]
+      "label": "Jacken",
+      "items": [
+        "Regenjacke",
+        "Lederjacke",
+        "Daunenjacke",
+        "Strickjacke"
+      ]
     },
     {
       "id": "group_b",
       "label": "Beinbekleidung",
-      "items": ["Jeans", "Stoffhose", "Shorts", "Leggings"]
+      "items": [
+        "Jeans",
+        "Stoffhose",
+        "Shorts",
+        "Leggings"
+      ]
     },
     {
       "id": "group_c",
       "label": "Schuhe",
-      "items": ["Turnschuhe", "Stiefel", "Sandalen", "Hausschuhe"]
+      "items": [
+        "Turnschuhe",
+        "Stiefel",
+        "Sandalen",
+        "Hausschuhe"
+      ]
     },
     {
       "id": "group_d",
-      "label": "Kleidungszubehör",
-      "items": ["Gürtel", "Schal", "Mütze", "Handschuhe"]
+      "label": "Schmuck",
+      "items": [
+        "Halskette",
+        "Armband",
+        "Ohrring",
+        "Brosche"
+      ]
     }
   ]
 }

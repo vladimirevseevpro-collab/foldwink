@@ -2,27 +2,50 @@
   "id": "de-0390",
   "title": "Kleiderschrank",
   "difficulty": "easy",
-  "meta": { "theme": "Kleiderschrank", "batch": "cq6-de-replacements-wave3" },
+  "meta": {
+    "theme": "Kleiderschrank",
+    "batch": "cq6-de-replacements-wave3"
+  },
   "groups": [
     {
       "id": "group_a",
-      "label": "Kopfbedeckungen",
-      "items": ["Mütze", "Hut", "Kappe", "Stirnband"]
+      "label": "Wintersachen",
+      "items": [
+        "Schal",
+        "Handschuhe",
+        "Wintermantel",
+        "Thermounterwäsche"
+      ]
     },
     {
       "id": "group_b",
-      "label": "Oberteile",
-      "items": ["T-Shirt", "Pullover", "Hemd", "Bluse"]
+      "label": "Nachtwäsche",
+      "items": [
+        "Schlafanzug",
+        "Nachthemd",
+        "Bademantel",
+        "Morgenmantel"
+      ]
     },
     {
       "id": "group_c",
       "label": "Unterteile",
-      "items": ["Jeans", "Rock", "Shorts", "Leggings"]
+      "items": [
+        "Jeans",
+        "Rock",
+        "Shorts",
+        "Leggings"
+      ]
     },
     {
       "id": "group_d",
       "label": "Fußbekleidung",
-      "items": ["Sneaker", "Sandalen", "Stiefel", "Hausschuhe"]
+      "items": [
+        "Sneaker",
+        "Sandalen",
+        "Stiefel",
+        "Hausschuhe"
+      ]
     }
   ]
 }

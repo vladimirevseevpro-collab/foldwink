@@ -23,12 +23,12 @@
     },
     {
       "id": "group_b",
-      "label": "Büromöbel",
+      "label": "Bürogeräte",
       "items": [
-        "Schreibtisch",
-        "Bürostuhl",
-        "Aktenschrank",
-        "Regal"
+        "Kopierer",
+        "Scanner",
+        "Faxgerät",
+        "Aktenvernichter"
       ]
     },
     {

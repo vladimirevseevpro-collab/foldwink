@@ -25,12 +25,12 @@
     {
       "id": "group_b",
       "label": "Nietzsche Kernbegriffe",
-      "revealHint": "Philos. Ideen",
+      "revealHint": "Begriffe, nicht Titel",
       "items": [
-        "Übermensch",
-        "Wille zur Macht",
-        "Ewige Wiederkehr",
-        "Nihilismus"
+        "Umwertung",
+        "Perspektivismus",
+        "Herrenmoral",
+        "Sklavenmoral"
       ]
     },
     {

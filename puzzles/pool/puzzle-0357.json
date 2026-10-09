@@ -45,12 +45,12 @@
     },
     {
       "id": "g4",
-      "label": "Conic Sections",
+      "label": "Polygons with 5+ Sides",
       "items": [
-        "Ellipse",
-        "Parabola",
-        "Hyperbola",
-        "Circle"
+        "Pentagon",
+        "Hexagon",
+        "Octagon",
+        "Heptagon"
       ]
     }
   ]

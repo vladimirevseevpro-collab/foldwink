@@ -13,12 +13,12 @@
   "groups": [
     {
       "id": "group_a",
-      "label": "Zahnpflegeprodukte",
+      "label": "Badezimmer-Einrichtung",
       "items": [
-        "Zahnbürste",
-        "Zahnpasta",
-        "Zahnseide",
-        "Mundspülung"
+        "Waschbecken",
+        "Badewanne",
+        "Spiegel",
+        "Handtuchhalter"
       ]
     },
     {

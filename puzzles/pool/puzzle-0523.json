@@ -17,18 +17,18 @@
       "items": [
         "Saturn",
         "Tree Trunk",
-        "Telephone",
-        "Binder"
+        "Circus",
+        "Boxing"
       ]
     },
     {
       "id": "g2_things_with_horns",
       "label": "Things with Horns",
       "items": [
-        "Bicycle",
         "Rhino",
         "Anvil",
-        "Trombone"
+        "Trombone",
+        "Car"
       ]
     },
     {

@@ -59,7 +59,7 @@
       "items": [
         "Bishop",
         "Knight",
-        "Pawn",
+        "Queen",
         "Rook"
       ],
       "revealHint": "Roles in a 64-square battle"
