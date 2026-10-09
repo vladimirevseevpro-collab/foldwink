@@ -1,0 +1,56 @@
+{
+  "id": "de-9248",
+  "title": "Dramen und Dichter",
+  "difficulty": "medium",
+  "editorialSummary": "Werke von Schiller, Goethe, Brecht und Büchner.",
+  "meta": {
+    "theme": "Literatur",
+    "batch": "de-medium-05"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Dramen von Schiller",
+      "items": [
+        "Die Räuber",
+        "Wilhelm Tell",
+        "Don Karlos",
+        "Maria Stuart"
+      ],
+      "revealHint": "SCHILLER"
+    },
+    {
+      "id": "g2",
+      "label": "Goethes Werke",
+      "items": [
+        "Faust",
+        "Götz von Berlichingen",
+        "Hermann und Dorothea",
+        "Wilhelm Meister"
+      ],
+      "revealHint": "GOETHE"
+    },
+    {
+      "id": "g3",
+      "label": "Stücke von Brecht",
+      "items": [
+        "Mutter Courage",
+        "Dreigroschenoper",
+        "Leben des Galilei",
+        "Der kaukasische Kreidekreis"
+      ],
+      "revealHint": "BRECHT"
+    },
+    {
+      "id": "g4",
+      "label": "Werke von Büchner",
+      "items": [
+        "Woyzeck",
+        "Dantons Tod",
+        "Leonce und Lena",
+        "Lenz"
+      ],
+      "revealHint": "BÜCHNER"
+    }
+  ]
+}

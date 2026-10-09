@@ -1,0 +1,56 @@
+{
+  "id": "de-9245",
+  "title": "Sportstars",
+  "difficulty": "medium",
+  "editorialSummary": "Fußballer, Tennisspieler, Rennfahrer und Skifahrer.",
+  "meta": {
+    "theme": "Sport",
+    "batch": "de-medium-05"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Deutsche Fußballlegenden",
+      "items": [
+        "Beckenbauer",
+        "Gerd Müller",
+        "Netzer",
+        "Matthäus"
+      ],
+      "revealHint": "FUSSBALL"
+    },
+    {
+      "id": "g2",
+      "label": "Deutsche Tennisstars",
+      "items": [
+        "Becker",
+        "Graf",
+        "Stich",
+        "Zverev"
+      ],
+      "revealHint": "TENNIS"
+    },
+    {
+      "id": "g3",
+      "label": "Formel-1-Champions",
+      "items": [
+        "Schumacher",
+        "Vettel",
+        "Hamilton",
+        "Senna"
+      ],
+      "revealHint": "FORMEL 1"
+    },
+    {
+      "id": "g4",
+      "label": "Deutsche Skiläufer",
+      "items": [
+        "Neureuther",
+        "Rosi Mittermaier",
+        "Höfl-Riesch",
+        "Dreßen"
+      ],
+      "revealHint": "SKI"
+    }
+  ]
+}

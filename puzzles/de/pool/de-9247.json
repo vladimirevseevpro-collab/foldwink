@@ -1,0 +1,56 @@
+{
+  "id": "de-9247",
+  "title": "Elemente und ihre Familien",
+  "difficulty": "medium",
+  "editorialSummary": "Edelgase, Halogene, Alkalimetalle und wertvolle Metalle.",
+  "meta": {
+    "theme": "Chemie",
+    "batch": "de-medium-05"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Gase, die kaum reagieren",
+      "items": [
+        "Helium",
+        "Argon",
+        "Xenon",
+        "Radon"
+      ],
+      "revealHint": "EDELGAS"
+    },
+    {
+      "id": "g2",
+      "label": "Elemente der 7. Hauptgruppe",
+      "items": [
+        "Fluor",
+        "Chlor",
+        "Brom",
+        "Jod"
+      ],
+      "revealHint": "HALOGEN"
+    },
+    {
+      "id": "g3",
+      "label": "Alkalimetalle",
+      "items": [
+        "Lithium",
+        "Natrium",
+        "Kalium",
+        "Rubidium"
+      ],
+      "revealHint": "ALKALI"
+    },
+    {
+      "id": "g4",
+      "label": "Wertvolle Metalle",
+      "items": [
+        "Gold",
+        "Silber",
+        "Platin",
+        "Rhodium"
+      ],
+      "revealHint": "EDELMETALL"
+    }
+  ]
+}

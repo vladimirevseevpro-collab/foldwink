@@ -1,0 +1,56 @@
+{
+  "id": "de-9242",
+  "title": "Zuflüsse",
+  "difficulty": "medium",
+  "editorialSummary": "Nebenflüsse von Rhein, Donau, Elbe und Weser.",
+  "meta": {
+    "theme": "Geografie",
+    "batch": "de-medium-05"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Zuflüsse des Rheins",
+      "items": [
+        "Main",
+        "Nahe",
+        "Ill",
+        "Sieg"
+      ],
+      "revealHint": "RHEIN"
+    },
+    {
+      "id": "g2",
+      "label": "Zuflüsse der Donau",
+      "items": [
+        "Inn",
+        "Iller",
+        "Lech",
+        "Isar"
+      ],
+      "revealHint": "DONAU"
+    },
+    {
+      "id": "g3",
+      "label": "Zuflüsse der Elbe",
+      "items": [
+        "Saale",
+        "Havel",
+        "Mulde",
+        "Moldau"
+      ],
+      "revealHint": "ELBE"
+    },
+    {
+      "id": "g4",
+      "label": "Zuflüsse der Weser",
+      "items": [
+        "Diemel",
+        "Wümme",
+        "Aller",
+        "Hunte"
+      ],
+      "revealHint": "WESER"
+    }
+  ]
+}

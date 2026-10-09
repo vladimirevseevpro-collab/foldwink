@@ -1,0 +1,56 @@
+{
+  "id": "de-9244",
+  "title": "Opern und Werke",
+  "difficulty": "medium",
+  "editorialSummary": "Wagner, Mozart, Bach und Verdi.",
+  "meta": {
+    "theme": "Musik",
+    "batch": "de-medium-05"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Opern von Richard Wagner",
+      "items": [
+        "Lohengrin",
+        "Parsifal",
+        "Tannhäuser",
+        "Tristan und Isolde"
+      ],
+      "revealHint": "WAGNER"
+    },
+    {
+      "id": "g2",
+      "label": "Opern von Mozart",
+      "items": [
+        "Die Zauberflöte",
+        "Don Giovanni",
+        "Figaros Hochzeit",
+        "Cosi fan tutte"
+      ],
+      "revealHint": "MOZART"
+    },
+    {
+      "id": "g3",
+      "label": "Werke von Johann Sebastian Bach",
+      "items": [
+        "Matthäus-Passion",
+        "Brandenburgische Konzerte",
+        "Goldberg-Variationen",
+        "Kunst der Fuge"
+      ],
+      "revealHint": "BACH"
+    },
+    {
+      "id": "g4",
+      "label": "Opern von Giuseppe Verdi",
+      "items": [
+        "Aida",
+        "La Traviata",
+        "Rigoletto",
+        "Nabucco"
+      ],
+      "revealHint": "VERDI"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "de-9243",
+  "title": "Städte am Wasser",
+  "difficulty": "medium",
+  "editorialSummary": "Städte an Weser, Mosel, Isar und Neckar.",
+  "meta": {
+    "theme": "Geografie",
+    "batch": "de-medium-05"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Städte an der Weser",
+      "items": [
+        "Bremen",
+        "Minden",
+        "Hameln",
+        "Höxter"
+      ],
+      "revealHint": "WESER"
+    },
+    {
+      "id": "g2",
+      "label": "Städte an der Mosel",
+      "items": [
+        "Trier",
+        "Cochem",
+        "Bernkastel-Kues",
+        "Traben-Trarbach"
+      ],
+      "revealHint": "MOSEL"
+    },
+    {
+      "id": "g3",
+      "label": "Orte an der Isar",
+      "items": [
+        "München",
+        "Landshut",
+        "Freising",
+        "Plattling"
+      ],
+      "revealHint": "ISAR"
+    },
+    {
+      "id": "g4",
+      "label": "Städte am Neckar",
+      "items": [
+        "Stuttgart",
+        "Heidelberg",
+        "Tübingen",
+        "Heilbronn"
+      ],
+      "revealHint": "NECKAR"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "de-9246",
+  "title": "Unterwegs",
+  "difficulty": "medium",
+  "editorialSummary": "Unterkünfte, Flughafen, Urlaubsarten und Reisedokumente.",
+  "meta": {
+    "theme": "Reisen",
+    "batch": "de-medium-05"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Unterkünfte",
+      "items": [
+        "Hotel",
+        "Pension",
+        "Jugendherberge",
+        "Ferienwohnung"
+      ],
+      "revealHint": "UNTERKUNFT"
+    },
+    {
+      "id": "g2",
+      "label": "Am Flughafen",
+      "items": [
+        "Check-in",
+        "Gate",
+        "Zoll",
+        "Boardingkarte"
+      ],
+      "revealHint": "FLUGHAFEN"
+    },
+    {
+      "id": "g3",
+      "label": "Urlaubsarten",
+      "items": [
+        "Strandurlaub",
+        "Skiurlaub",
+        "Wanderurlaub",
+        "Städtereise"
+      ],
+      "revealHint": "URLAUB"
+    },
+    {
+      "id": "g4",
+      "label": "Dokumente für Reisen",
+      "items": [
+        "Reisepass",
+        "Visum",
+        "Impfpass",
+        "Führerschein"
+      ],
+      "revealHint": "DOKUMENT"
+    }
+  ]
+}

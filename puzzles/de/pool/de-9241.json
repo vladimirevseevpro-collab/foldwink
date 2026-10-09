@@ -1,0 +1,56 @@
+{
+  "id": "de-9241",
+  "title": "Märchenautoren",
+  "difficulty": "medium",
+  "editorialSummary": "Märchen von Grimm, Andersen, Hauff und Preußler.",
+  "meta": {
+    "theme": "Literatur",
+    "batch": "de-medium-05"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Grimms Märchen",
+      "items": [
+        "Hänsel und Gretel",
+        "Rumpelstilzchen",
+        "Frau Holle",
+        "Schneewittchen"
+      ],
+      "revealHint": "GRIMM"
+    },
+    {
+      "id": "g2",
+      "label": "Märchen von Andersen",
+      "items": [
+        "Die kleine Meerjungfrau",
+        "Die Schneekönigin",
+        "Das hässliche Entlein",
+        "Der standhafte Zinnsoldat"
+      ],
+      "revealHint": "ANDERSEN"
+    },
+    {
+      "id": "g3",
+      "label": "Märchen von Wilhelm Hauff",
+      "items": [
+        "Zwerg Nase",
+        "Der kleine Muck",
+        "Kalif Storch",
+        "Das kalte Herz"
+      ],
+      "revealHint": "HAUFF"
+    },
+    {
+      "id": "g4",
+      "label": "Kinderbücher von Otfried Preußler",
+      "items": [
+        "Räuber Hotzenplotz",
+        "Das kleine Gespenst",
+        "Die kleine Hexe",
+        "Krabat"
+      ],
+      "revealHint": "PREUSSLER"
+    }
+  ]
+}

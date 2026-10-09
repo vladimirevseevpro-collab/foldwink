@@ -1,0 +1,56 @@
+{
+  "id": "de-9249",
+  "title": "Regionale Spezialitäten",
+  "difficulty": "medium",
+  "editorialSummary": "Küche aus Bayern, Schwaben, dem Norden und dem Rheinland.",
+  "meta": {
+    "theme": "Essen",
+    "batch": "de-medium-05"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Aus Bayern",
+      "items": [
+        "Weißwurst",
+        "Leberkäse",
+        "Obatzda",
+        "Schweinshaxe"
+      ],
+      "revealHint": "BAYERN"
+    },
+    {
+      "id": "g2",
+      "label": "Aus Württemberg",
+      "items": [
+        "Spätzle",
+        "Maultaschen",
+        "Schupfnudeln",
+        "Zwiebelkuchen"
+      ],
+      "revealHint": "SCHWABEN"
+    },
+    {
+      "id": "g3",
+      "label": "Aus dem Norden",
+      "items": [
+        "Labskaus",
+        "Fischbrötchen",
+        "Grünkohl",
+        "Rote Grütze"
+      ],
+      "revealHint": "NORDEN"
+    },
+    {
+      "id": "g4",
+      "label": "Aus dem Rheinland",
+      "items": [
+        "Himmel un Ähd",
+        "Rheinischer Sauerbraten",
+        "Reibekuchen",
+        "Halver Hahn"
+      ],
+      "revealHint": "RHEINLAND"
+    }
+  ]
+}
