@@ -1,0 +1,56 @@
+{
+  "id": "ru-9295",
+  "title": "Цифровые сервисы",
+  "difficulty": "medium",
+  "editorialSummary": "Сервисы Яндекса, Google, VK и Apple.",
+  "meta": {
+    "theme": "Технологии",
+    "batch": "ru-medium-10"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Сервисы Яндекса",
+      "items": [
+        "Алиса",
+        "Кинопоиск",
+        "Яндекс Маркет",
+        "Яндекс Лавка"
+      ],
+      "revealHint": "ЯНДЕКС"
+    },
+    {
+      "id": "g2",
+      "label": "Сервисы Google",
+      "items": [
+        "Gmail",
+        "Chrome",
+        "Google Maps",
+        "Google Docs"
+      ],
+      "revealHint": "GOOGLE"
+    },
+    {
+      "id": "g3",
+      "label": "Сервисы VK",
+      "items": [
+        "VK Музыка",
+        "VK Клипы",
+        "VK Мессенджер",
+        "VK Видео"
+      ],
+      "revealHint": "VK"
+    },
+    {
+      "id": "g4",
+      "label": "Функции и сервисы Apple",
+      "items": [
+        "iCloud",
+        "Siri",
+        "FaceTime",
+        "AirDrop"
+      ],
+      "revealHint": "APPLE"
+    }
+  ]
+}
