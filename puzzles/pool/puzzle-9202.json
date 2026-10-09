@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9202",
+  "title": "Colour Me Phrases",
+  "difficulty": "medium",
+  "editorialSummary": "Fixed expressions with black, white, red and green.",
+  "meta": {
+    "theme": "colour + noun",
+    "batch": "en-medium-01"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Black ___",
+      "items": [
+        "Market",
+        "Sheep",
+        "Friday",
+        "Widow"
+      ],
+      "revealHint": "BLACK"
+    },
+    {
+      "id": "g2",
+      "label": "White ___",
+      "items": [
+        "House",
+        "Lie",
+        "Elephant",
+        "Christmas"
+      ],
+      "revealHint": "WHITE"
+    },
+    {
+      "id": "g3",
+      "label": "Red ___",
+      "items": [
+        "Carpet",
+        "Herring",
+        "Tape",
+        "Panda"
+      ],
+      "revealHint": "RED"
+    },
+    {
+      "id": "g4",
+      "label": "Green ___",
+      "items": [
+        "Thumb",
+        "Room",
+        "Card",
+        "Mile"
+      ],
+      "revealHint": "GREEN"
+    }
+  ]
+}

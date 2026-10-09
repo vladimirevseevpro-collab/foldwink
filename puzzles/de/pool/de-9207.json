@@ -1,0 +1,56 @@
+{
+  "id": "de-9207",
+  "title": "Sprache des Sports",
+  "difficulty": "medium",
+  "editorialSummary": "Begriffe aus Fußball, Tennis, Eishockey und Golf.",
+  "meta": {
+    "theme": "Fachbegriffe",
+    "batch": "de-medium-01"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Fußball-Begriffe",
+      "items": [
+        "Flanke",
+        "Elfmeter",
+        "Eckball",
+        "Einwurf"
+      ],
+      "revealHint": "FUSSBALL"
+    },
+    {
+      "id": "g2",
+      "label": "Tennis-Begriffe",
+      "items": [
+        "Vorhand",
+        "Rückhand",
+        "Aufschlag",
+        "Tie-Break"
+      ],
+      "revealHint": "TENNIS"
+    },
+    {
+      "id": "g3",
+      "label": "Eishockey-Begriffe",
+      "items": [
+        "Bully",
+        "Puck",
+        "Icing",
+        "Powerplay"
+      ],
+      "revealHint": "EISHOCKEY"
+    },
+    {
+      "id": "g4",
+      "label": "Golf-Begriffe",
+      "items": [
+        "Birdie",
+        "Bogey",
+        "Par",
+        "Fairway"
+      ],
+      "revealHint": "GOLF"
+    }
+  ]
+}

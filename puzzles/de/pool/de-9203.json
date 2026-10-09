@@ -1,0 +1,56 @@
+{
+  "id": "de-9203",
+  "title": "Musik und Noten",
+  "difficulty": "medium",
+  "editorialSummary": "Notenwerte, Tempobezeichnungen, Instrumentenfamilien und Stimmlagen.",
+  "meta": {
+    "theme": "Musik",
+    "batch": "de-medium-01"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Längen der Noten",
+      "items": [
+        "Halbe",
+        "Viertel",
+        "Achtel",
+        "Sechzehntel"
+      ],
+      "revealHint": "NOTEN"
+    },
+    {
+      "id": "g2",
+      "label": "Tempobezeichnungen",
+      "items": [
+        "Adagio",
+        "Allegro",
+        "Presto",
+        "Andante"
+      ],
+      "revealHint": "TEMPO"
+    },
+    {
+      "id": "g3",
+      "label": "Instrumentenfamilien",
+      "items": [
+        "Streicher",
+        "Bläser",
+        "Schlagwerk",
+        "Zupfinstrumente"
+      ],
+      "revealHint": "FAMILIEN"
+    },
+    {
+      "id": "g4",
+      "label": "Singstimmen",
+      "items": [
+        "Sopran",
+        "Alt",
+        "Tenor",
+        "Bass"
+      ],
+      "revealHint": "STIMME"
+    }
+  ]
+}

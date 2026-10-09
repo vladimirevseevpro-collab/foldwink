@@ -1,0 +1,56 @@
+{
+  "id": "de-9204",
+  "title": "Städte am Fluss",
+  "difficulty": "medium",
+  "editorialSummary": "Je eine Stadtgruppe an Rhein, Elbe, Donau und Main.",
+  "meta": {
+    "theme": "Flüsse und Städte",
+    "batch": "de-medium-01"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Am Rhein gelegen",
+      "items": [
+        "Köln",
+        "Düsseldorf",
+        "Bonn",
+        "Duisburg"
+      ],
+      "revealHint": "RHEIN"
+    },
+    {
+      "id": "g2",
+      "label": "An der Elbe gelegen",
+      "items": [
+        "Dresden",
+        "Magdeburg",
+        "Meißen",
+        "Torgau"
+      ],
+      "revealHint": "ELBE"
+    },
+    {
+      "id": "g3",
+      "label": "An der Donau gelegen",
+      "items": [
+        "Ulm",
+        "Regensburg",
+        "Passau",
+        "Ingolstadt"
+      ],
+      "revealHint": "DONAU"
+    },
+    {
+      "id": "g4",
+      "label": "Am Main gelegen",
+      "items": [
+        "Frankfurt",
+        "Würzburg",
+        "Offenbach",
+        "Aschaffenburg"
+      ],
+      "revealHint": "MAIN"
+    }
+  ]
+}

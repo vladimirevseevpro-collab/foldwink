@@ -1,0 +1,56 @@
+{
+  "id": "de-9205",
+  "title": "Essen aus aller Welt",
+  "difficulty": "medium",
+  "editorialSummary": "Gerichte und Getränke aus Italien, Spanien, Griechenland und der Türkei.",
+  "meta": {
+    "theme": "Länderküchen",
+    "batch": "de-medium-01"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Italienische Küche",
+      "items": [
+        "Lasagne",
+        "Risotto",
+        "Tiramisu",
+        "Bruschetta"
+      ],
+      "revealHint": "ITALIEN"
+    },
+    {
+      "id": "g2",
+      "label": "Spanische Küche",
+      "items": [
+        "Paella",
+        "Patatas bravas",
+        "Gazpacho",
+        "Churros"
+      ],
+      "revealHint": "SPANIEN"
+    },
+    {
+      "id": "g3",
+      "label": "Griechische Küche",
+      "items": [
+        "Souvlaki",
+        "Moussaka",
+        "Spanakopita",
+        "Retsina"
+      ],
+      "revealHint": "GRIECHEN"
+    },
+    {
+      "id": "g4",
+      "label": "Türkische Küche",
+      "items": [
+        "Döner",
+        "Lahmacun",
+        "Börek",
+        "Ayran"
+      ],
+      "revealHint": "TÜRKEI"
+    }
+  ]
+}

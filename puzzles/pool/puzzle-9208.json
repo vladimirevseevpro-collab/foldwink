@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9208",
+  "title": "Fictional Heroes",
+  "difficulty": "medium",
+  "editorialSummary": "Characters from Dickens, Shakespeare, Conan Doyle and Tolkien.",
+  "meta": {
+    "theme": "literature",
+    "batch": "en-medium-01"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Dickens characters",
+      "items": [
+        "Pip",
+        "Scrooge",
+        "Fagin",
+        "Oliver"
+      ],
+      "revealHint": "DICKENS"
+    },
+    {
+      "id": "g2",
+      "label": "Shakespeare tragedies",
+      "items": [
+        "Hamlet",
+        "Macbeth",
+        "Othello",
+        "Lear"
+      ],
+      "revealHint": "BARD"
+    },
+    {
+      "id": "g3",
+      "label": "Sherlock Holmes cast",
+      "items": [
+        "Holmes",
+        "Watson",
+        "Moriarty",
+        "Lestrade"
+      ],
+      "revealHint": "BAKER"
+    },
+    {
+      "id": "g4",
+      "label": "Middle-earth figures",
+      "items": [
+        "Frodo",
+        "Gandalf",
+        "Aragorn",
+        "Gollum"
+      ],
+      "revealHint": "MIDDLE"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9203",
+  "title": "Sporting Language",
+  "difficulty": "medium",
+  "editorialSummary": "Terms from golf, tennis, cricket and baseball.",
+  "meta": {
+    "theme": "sports terms",
+    "batch": "en-medium-01"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Golf terms",
+      "items": [
+        "Birdie",
+        "Bogey",
+        "Par",
+        "Fairway"
+      ],
+      "revealHint": "GOLF"
+    },
+    {
+      "id": "g2",
+      "label": "Tennis scoring and shots",
+      "items": [
+        "Deuce",
+        "Volley",
+        "Love",
+        "Let"
+      ],
+      "revealHint": "TENNIS"
+    },
+    {
+      "id": "g3",
+      "label": "Cricket terms",
+      "items": [
+        "Wicket",
+        "Over",
+        "Maiden",
+        "Googly"
+      ],
+      "revealHint": "CRICKET"
+    },
+    {
+      "id": "g4",
+      "label": "Baseball terms",
+      "items": [
+        "Bunt",
+        "Inning",
+        "Dugout",
+        "Bullpen"
+      ],
+      "revealHint": "BASEBALL"
+    }
+  ]
+}

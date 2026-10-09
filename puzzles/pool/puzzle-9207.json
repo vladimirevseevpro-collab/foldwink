@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9207",
+  "title": "Measure Up",
+  "difficulty": "medium",
+  "editorialSummary": "Units of electricity, length, mass and volume.",
+  "meta": {
+    "theme": "units",
+    "batch": "en-medium-01"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Electricity units",
+      "items": [
+        "Watt",
+        "Volt",
+        "Ohm",
+        "Coulomb"
+      ],
+      "revealHint": "CURRENT"
+    },
+    {
+      "id": "g2",
+      "label": "Imperial lengths",
+      "items": [
+        "Inch",
+        "Mile",
+        "Yard",
+        "Furlong"
+      ],
+      "revealHint": "LENGTH"
+    },
+    {
+      "id": "g3",
+      "label": "Units of weight",
+      "items": [
+        "Pound",
+        "Gram",
+        "Stone",
+        "Ton"
+      ],
+      "revealHint": "WEIGHT"
+    },
+    {
+      "id": "g4",
+      "label": "Liquid measures",
+      "items": [
+        "Litre",
+        "Gallon",
+        "Pint",
+        "Barrel"
+      ],
+      "revealHint": "LIQUID"
+    }
+  ]
+}

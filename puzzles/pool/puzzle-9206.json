@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9206",
+  "title": "Grammar Basics",
+  "difficulty": "medium",
+  "editorialSummary": "Tenses, parts of speech, punctuation and figures of speech.",
+  "meta": {
+    "theme": "grammar",
+    "batch": "en-medium-01"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Tenses and aspects",
+      "items": [
+        "Present",
+        "Past",
+        "Future",
+        "Perfect"
+      ],
+      "revealHint": "TENSE"
+    },
+    {
+      "id": "g2",
+      "label": "Kinds of words",
+      "items": [
+        "Noun",
+        "Pronoun",
+        "Adjective",
+        "Conjunction"
+      ],
+      "revealHint": "SPEECH"
+    },
+    {
+      "id": "g3",
+      "label": "Marks in a sentence",
+      "items": [
+        "Comma",
+        "Colon",
+        "Hyphen",
+        "Apostrophe"
+      ],
+      "revealHint": "PUNCTUATION"
+    },
+    {
+      "id": "g4",
+      "label": "Figures of speech",
+      "items": [
+        "Simile",
+        "Metaphor",
+        "Irony",
+        "Hyperbole"
+      ],
+      "revealHint": "FIGURES"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9201",
+  "title": "Verb It",
+  "difficulty": "medium",
+  "editorialSummary": "Four actions, each fits only its own objects.",
+  "meta": {
+    "theme": "verbs",
+    "batch": "en-medium-01"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Things you can sharpen",
+      "items": [
+        "Knife",
+        "Pencil",
+        "Axe",
+        "Scythe"
+      ],
+      "revealHint": "SHARPEN"
+    },
+    {
+      "id": "g2",
+      "label": "Things you can charge",
+      "items": [
+        "Phone",
+        "Laptop",
+        "Camera",
+        "Tablet"
+      ],
+      "revealHint": "CHARGE"
+    },
+    {
+      "id": "g3",
+      "label": "Things that can melt",
+      "items": [
+        "Snow",
+        "Ice",
+        "Butter",
+        "Wax"
+      ],
+      "revealHint": "MELT"
+    },
+    {
+      "id": "g4",
+      "label": "Things you can beat",
+      "items": [
+        "Rug",
+        "Eggs",
+        "Drum",
+        "Record"
+      ],
+      "revealHint": "BEAT"
+    }
+  ]
+}

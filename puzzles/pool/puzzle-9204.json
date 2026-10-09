@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9204",
+  "title": "Cities on Rivers",
+  "difficulty": "medium",
+  "editorialSummary": "Cities on the Danube, Rhine, Thames and Seine.",
+  "meta": {
+    "theme": "rivers",
+    "batch": "en-medium-01"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "On the Danube",
+      "items": [
+        "Vienna",
+        "Budapest",
+        "Belgrade",
+        "Bratislava"
+      ],
+      "revealHint": "DANUBE"
+    },
+    {
+      "id": "g2",
+      "label": "On the Rhine",
+      "items": [
+        "Cologne",
+        "Basel",
+        "Mainz",
+        "Dusseldorf"
+      ],
+      "revealHint": "RHINE"
+    },
+    {
+      "id": "g3",
+      "label": "On the Thames",
+      "items": [
+        "London",
+        "Oxford",
+        "Reading",
+        "Windsor"
+      ],
+      "revealHint": "THAMES"
+    },
+    {
+      "id": "g4",
+      "label": "On the Seine",
+      "items": [
+        "Paris",
+        "Rouen",
+        "Troyes",
+        "Giverny"
+      ],
+      "revealHint": "SEINE"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "de-9208",
+  "title": "Blick in die Geschichte",
+  "difficulty": "medium",
+  "editorialSummary": "Dynastien, Epochen, Reformatoren und Bundeskanzler.",
+  "meta": {
+    "theme": "Geschichte",
+    "batch": "de-medium-01"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Herrscherhäuser",
+      "items": [
+        "Habsburger",
+        "Hohenzollern",
+        "Wittelsbacher",
+        "Staufer"
+      ],
+      "revealHint": "DYNASTIE"
+    },
+    {
+      "id": "g2",
+      "label": "Epochen",
+      "items": [
+        "Mittelalter",
+        "Renaissance",
+        "Barock",
+        "Aufklärung"
+      ],
+      "revealHint": "EPOCHE"
+    },
+    {
+      "id": "g3",
+      "label": "Köpfe der Reformation",
+      "items": [
+        "Luther",
+        "Calvin",
+        "Zwingli",
+        "Melanchthon"
+      ],
+      "revealHint": "REFORM"
+    },
+    {
+      "id": "g4",
+      "label": "Bundeskanzler",
+      "items": [
+        "Adenauer",
+        "Brandt",
+        "Kohl",
+        "Schröder"
+      ],
+      "revealHint": "KANZLER"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "de-9206",
+  "title": "Grammatik-Grundkurs",
+  "difficulty": "medium",
+  "editorialSummary": "Zeitformen, Satzarten, Satzzeichen und Wortarten.",
+  "meta": {
+    "theme": "Grammatik",
+    "batch": "de-medium-01"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Zeitformen",
+      "items": [
+        "Präsens",
+        "Perfekt",
+        "Futur",
+        "Präteritum"
+      ],
+      "revealHint": "ZEIT"
+    },
+    {
+      "id": "g2",
+      "label": "Satzarten",
+      "items": [
+        "Aussagesatz",
+        "Fragesatz",
+        "Befehlssatz",
+        "Ausrufesatz"
+      ],
+      "revealHint": "SATZ"
+    },
+    {
+      "id": "g3",
+      "label": "Zeichen im Satz",
+      "items": [
+        "Komma",
+        "Semikolon",
+        "Bindestrich",
+        "Doppelpunkt"
+      ],
+      "revealHint": "ZEICHEN"
+    },
+    {
+      "id": "g4",
+      "label": "Wortarten",
+      "items": [
+        "Substantiv",
+        "Adjektiv",
+        "Verb",
+        "Präposition"
+      ],
+      "revealHint": "WORTART"
+    }
+  ]
+}

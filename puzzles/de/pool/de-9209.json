@@ -1,0 +1,56 @@
+{
+  "id": "de-9209",
+  "title": "Draußen in der Natur",
+  "difficulty": "medium",
+  "editorialSummary": "Pilze, Giftpflanzen, Heilkräuter und Beeren.",
+  "meta": {
+    "theme": "Pflanzen und Pilze",
+    "batch": "de-medium-01"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Speisepilze",
+      "items": [
+        "Steinpilz",
+        "Pfifferling",
+        "Champignon",
+        "Maronenröhrling"
+      ],
+      "revealHint": "PILZE"
+    },
+    {
+      "id": "g2",
+      "label": "Giftpflanzen",
+      "items": [
+        "Fingerhut",
+        "Tollkirsche",
+        "Eisenhut",
+        "Herbstzeitlose"
+      ],
+      "revealHint": "GIFT"
+    },
+    {
+      "id": "g3",
+      "label": "Kräuter für Tee",
+      "items": [
+        "Kamille",
+        "Pfefferminze",
+        "Fenchel",
+        "Melisse"
+      ],
+      "revealHint": "TEE"
+    },
+    {
+      "id": "g4",
+      "label": "Essbare Beeren aus Garten und Wald",
+      "items": [
+        "Heidelbeere",
+        "Himbeere",
+        "Brombeere",
+        "Stachelbeere"
+      ],
+      "revealHint": "BEEREN"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9205",
+  "title": "A Taste of the World",
+  "difficulty": "medium",
+  "editorialSummary": "Dishes from Italy, Spain, Greece and Turkey.",
+  "meta": {
+    "theme": "world cuisine",
+    "batch": "en-medium-01"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Italian dishes",
+      "items": [
+        "Lasagna",
+        "Risotto",
+        "Tiramisu",
+        "Bruschetta"
+      ],
+      "revealHint": "ITALY"
+    },
+    {
+      "id": "g2",
+      "label": "Spanish dishes",
+      "items": [
+        "Paella",
+        "Gazpacho",
+        "Churros",
+        "Patatas bravas"
+      ],
+      "revealHint": "SPAIN"
+    },
+    {
+      "id": "g3",
+      "label": "Greek dishes",
+      "items": [
+        "Souvlaki",
+        "Moussaka",
+        "Spanakopita",
+        "Loukoumades"
+      ],
+      "revealHint": "GREECE"
+    },
+    {
+      "id": "g4",
+      "label": "Turkish dishes",
+      "items": [
+        "Doner",
+        "Lahmacun",
+        "Borek",
+        "Ayran"
+      ],
+      "revealHint": "TURKEY"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "de-9201",
+  "title": "Was kann man damit machen?",
+  "difficulty": "medium",
+  "editorialSummary": "Vier Tätigkeiten, die jeweils nur zu ihren Gegenständen passen.",
+  "meta": {
+    "theme": "Verben",
+    "batch": "de-medium-01"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Das kann man schärfen",
+      "items": [
+        "Messer",
+        "Bleistift",
+        "Sense",
+        "Axt"
+      ],
+      "revealHint": "SCHÄRFEN"
+    },
+    {
+      "id": "g2",
+      "label": "Das kann man aufladen",
+      "items": [
+        "Handy",
+        "Tablet",
+        "Smartwatch",
+        "Powerbank"
+      ],
+      "revealHint": "AKKU"
+    },
+    {
+      "id": "g3",
+      "label": "Das kann man schmelzen",
+      "items": [
+        "Schnee",
+        "Eis",
+        "Butter",
+        "Wachs"
+      ],
+      "revealHint": "SCHMELZEN"
+    },
+    {
+      "id": "g4",
+      "label": "Das kann man ausklopfen",
+      "items": [
+        "Teppich",
+        "Matratze",
+        "Kissen",
+        "Pfeife"
+      ],
+      "revealHint": "KLOPFEN"
+    }
+  ]
+}

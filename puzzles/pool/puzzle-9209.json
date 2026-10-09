@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9209",
+  "title": "Ancient Worlds",
+  "difficulty": "medium",
+  "editorialSummary": "Roman emperors, Greek philosophers, Tudor monarchs and Egyptian rulers.",
+  "meta": {
+    "theme": "history",
+    "batch": "en-medium-01"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Roman emperors",
+      "items": [
+        "Nero",
+        "Caligula",
+        "Augustus",
+        "Trajan"
+      ],
+      "revealHint": "ROME"
+    },
+    {
+      "id": "g2",
+      "label": "Greek philosophers",
+      "items": [
+        "Plato",
+        "Socrates",
+        "Aristotle",
+        "Pythagoras"
+      ],
+      "revealHint": "ATHENS"
+    },
+    {
+      "id": "g3",
+      "label": "Tudor monarchs",
+      "items": [
+        "Henry",
+        "Edward",
+        "Mary",
+        "Elizabeth"
+      ],
+      "revealHint": "TUDOR"
+    },
+    {
+      "id": "g4",
+      "label": "Egyptian rulers",
+      "items": [
+        "Ramses",
+        "Tutankhamun",
+        "Cleopatra",
+        "Khufu"
+      ],
+      "revealHint": "NILE"
+    }
+  ]
+}

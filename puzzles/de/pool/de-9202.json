@@ -1,0 +1,56 @@
+{
+  "id": "de-9202",
+  "title": "Farben in Redewendungen",
+  "difficulty": "medium",
+  "editorialSummary": "Feste Wendungen mit Rot, Schwarz, Weiß und Grün.",
+  "meta": {
+    "theme": "Farbe + Substantiv",
+    "batch": "de-medium-01"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Roter ___",
+      "items": [
+        "Faden",
+        "Teppich",
+        "Hahn",
+        "Baron"
+      ],
+      "revealHint": "ROT"
+    },
+    {
+      "id": "g2",
+      "label": "Schwarzer ___",
+      "items": [
+        "Peter",
+        "Humor",
+        "Markt",
+        "Freitag"
+      ],
+      "revealHint": "SCHWARZ"
+    },
+    {
+      "id": "g3",
+      "label": "Weißer ___",
+      "items": [
+        "Hai",
+        "Kragen",
+        "Elefant",
+        "Sonntag"
+      ],
+      "revealHint": "WEISS"
+    },
+    {
+      "id": "g4",
+      "label": "Grüner ___",
+      "items": [
+        "Daumen",
+        "Punkt",
+        "Star",
+        "Hügel"
+      ],
+      "revealHint": "GRÜN"
+    }
+  ]
+}
