@@ -1,0 +1,56 @@
+{
+  "id": "de-9261",
+  "title": "Weltliteratur",
+  "difficulty": "medium",
+  "editorialSummary": "Romane von Dickens, Hugo, Dumas und Jules Verne.",
+  "meta": {
+    "theme": "Literatur",
+    "batch": "de-medium-07"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Romane von Dickens",
+      "items": [
+        "Oliver Twist",
+        "David Copperfield",
+        "Große Erwartungen",
+        "Nicholas Nickleby"
+      ],
+      "revealHint": "DICKENS"
+    },
+    {
+      "id": "g2",
+      "label": "Romane von Victor Hugo",
+      "items": [
+        "Les Misérables",
+        "Der Glöckner von Notre-Dame",
+        "Der lachende Mann",
+        "Dreiundneunzig"
+      ],
+      "revealHint": "HUGO"
+    },
+    {
+      "id": "g3",
+      "label": "Romane von Alexandre Dumas",
+      "items": [
+        "Die drei Musketiere",
+        "Der Graf von Monte Christo",
+        "Die Königin Margot",
+        "Der Mann mit der eisernen Maske"
+      ],
+      "revealHint": "DUMAS"
+    },
+    {
+      "id": "g4",
+      "label": "Romane von Jules Verne",
+      "items": [
+        "Reise zum Mittelpunkt der Erde",
+        "In 80 Tagen um die Welt",
+        "20.000 Meilen unter dem Meer",
+        "Die geheimnisvolle Insel"
+      ],
+      "revealHint": "VERNE"
+    }
+  ]
+}

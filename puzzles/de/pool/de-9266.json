@@ -1,0 +1,56 @@
+{
+  "id": "de-9266",
+  "title": "Zuhause",
+  "difficulty": "medium",
+  "editorialSummary": "Möbel, Geschirr, Textilien und Elektrogeräte.",
+  "meta": {
+    "theme": "Wohnen",
+    "batch": "de-medium-07"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Möbelstücke",
+      "items": [
+        "Kommode",
+        "Anrichte",
+        "Nachttisch",
+        "Regal"
+      ],
+      "revealHint": "MÖBEL"
+    },
+    {
+      "id": "g2",
+      "label": "Geschirr für den Tisch",
+      "items": [
+        "Suppenterrine",
+        "Sauciere",
+        "Salatschüssel",
+        "Butterdose"
+      ],
+      "revealHint": "GESCHIRR"
+    },
+    {
+      "id": "g3",
+      "label": "Heimtextilien",
+      "items": [
+        "Tischdecke",
+        "Tagesdecke",
+        "Gardine",
+        "Plaid"
+      ],
+      "revealHint": "TEXTIL"
+    },
+    {
+      "id": "g4",
+      "label": "Haushaltsgeräte",
+      "items": [
+        "Kühlschrank",
+        "Staubsauger",
+        "Bügeleisen",
+        "Waschmaschine"
+      ],
+      "revealHint": "GERÄT"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "de-9263",
+  "title": "Sterne und Sternzeichen",
+  "difficulty": "medium",
+  "editorialSummary": "Tierkreiszeichen, Sterne, Astronomen und Sternwarten.",
+  "meta": {
+    "theme": "Astronomie",
+    "batch": "de-medium-07"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Tierkreiszeichen von Sommer bis Herbst",
+      "items": [
+        "Löwe",
+        "Jungfrau",
+        "Waage",
+        "Skorpion"
+      ],
+      "revealHint": "ZODIAK"
+    },
+    {
+      "id": "g2",
+      "label": "Helle Sterne",
+      "items": [
+        "Sirius",
+        "Beteigeuze",
+        "Rigel",
+        "Wega"
+      ],
+      "revealHint": "STERN"
+    },
+    {
+      "id": "g3",
+      "label": "Astronomen",
+      "items": [
+        "Kopernikus",
+        "Kepler",
+        "Halley",
+        "Tycho Brahe"
+      ],
+      "revealHint": "ASTRONOM"
+    },
+    {
+      "id": "g4",
+      "label": "Sternwarten",
+      "items": [
+        "Pulkowo",
+        "Palomar",
+        "Effelsberg",
+        "Jodrell Bank"
+      ],
+      "revealHint": "STERNWARTE"
+    }
+  ]
+}

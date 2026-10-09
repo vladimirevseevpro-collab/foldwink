@@ -1,0 +1,56 @@
+{
+  "id": "de-9267",
+  "title": "Antike Welten",
+  "difficulty": "medium",
+  "editorialSummary": "Götter, Helden, Kaiser und Philosophen.",
+  "meta": {
+    "theme": "Geschichte",
+    "batch": "de-medium-07"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Götter des Olymp",
+      "items": [
+        "Zeus",
+        "Hera",
+        "Apollon",
+        "Aphrodite"
+      ],
+      "revealHint": "OLYMP"
+    },
+    {
+      "id": "g2",
+      "label": "Helden der Sage",
+      "items": [
+        "Theseus",
+        "Odysseus",
+        "Achilles",
+        "Perseus"
+      ],
+      "revealHint": "HELD"
+    },
+    {
+      "id": "g3",
+      "label": "Römische Kaiser",
+      "items": [
+        "Augustus",
+        "Nero",
+        "Trajan",
+        "Hadrian"
+      ],
+      "revealHint": "KAISER"
+    },
+    {
+      "id": "g4",
+      "label": "Griechische Philosophen",
+      "items": [
+        "Sokrates",
+        "Aristoteles",
+        "Demokrit",
+        "Diogenes"
+      ],
+      "revealHint": "PHILOSOPH"
+    }
+  ]
+}

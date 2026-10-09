@@ -1,0 +1,56 @@
+{
+  "id": "de-9265",
+  "title": "Kunst und Künstler",
+  "difficulty": "medium",
+  "editorialSummary": "Skulpturen, Maler der Renaissance, Impressionisten und deutsche Maler.",
+  "meta": {
+    "theme": "Kunst",
+    "batch": "de-medium-07"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Berühmte Skulpturen",
+      "items": [
+        "David",
+        "Venus von Milo",
+        "Der Denker",
+        "Kleine Meerjungfrau"
+      ],
+      "revealHint": "SKULPTUR"
+    },
+    {
+      "id": "g2",
+      "label": "Maler der Renaissance",
+      "items": [
+        "Leonardo",
+        "Raffael",
+        "Botticelli",
+        "Tizian"
+      ],
+      "revealHint": "RENAISSANCE"
+    },
+    {
+      "id": "g3",
+      "label": "Impressionisten",
+      "items": [
+        "Monet",
+        "Sisley",
+        "Morisot",
+        "Caillebotte"
+      ],
+      "revealHint": "IMPRESSIONISMUS"
+    },
+    {
+      "id": "g4",
+      "label": "Deutsche Maler",
+      "items": [
+        "Caspar David Friedrich",
+        "Franz Marc",
+        "Max Liebermann",
+        "Lovis Corinth"
+      ],
+      "revealHint": "DEUTSCH"
+    }
+  ]
+}

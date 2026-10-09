@@ -1,0 +1,56 @@
+{
+  "id": "de-9268",
+  "title": "Staat und Politik",
+  "difficulty": "medium",
+  "editorialSummary": "Regierungsämter, Verfassungsorgane und EU-Institutionen.",
+  "meta": {
+    "theme": "Politik",
+    "batch": "de-medium-07"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Wer regiert?",
+      "items": [
+        "Kanzler",
+        "Präsident",
+        "König",
+        "Ministerpräsident"
+      ],
+      "revealHint": "REGIERUNG"
+    },
+    {
+      "id": "g2",
+      "label": "Verfassungsorgane der Bundesrepublik",
+      "items": [
+        "Bundestag",
+        "Bundesrat",
+        "Bundesverfassungsgericht",
+        "Bundespräsident"
+      ],
+      "revealHint": "VERFASSUNG"
+    },
+    {
+      "id": "g3",
+      "label": "Institutionen der EU",
+      "items": [
+        "Kommission",
+        "Europäisches Parlament",
+        "Europäischer Rat",
+        "Europäischer Gerichtshof"
+      ],
+      "revealHint": "EU"
+    },
+    {
+      "id": "g4",
+      "label": "Politische Ebenen",
+      "items": [
+        "Gemeinde",
+        "Landkreis",
+        "Bundesland",
+        "Bund"
+      ],
+      "revealHint": "EBENE"
+    }
+  ]
+}

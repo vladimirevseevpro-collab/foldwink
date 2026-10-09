@@ -1,0 +1,56 @@
+{
+  "id": "de-9262",
+  "title": "Gesund und krank",
+  "difficulty": "medium",
+  "editorialSummary": "Fachärzte, Krankenhaus, Messgeräte und Hausapotheke.",
+  "meta": {
+    "theme": "Medizin",
+    "batch": "de-medium-07"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Spezialisten in der Medizin",
+      "items": [
+        "Kardiologe",
+        "Neurologe",
+        "Dermatologe",
+        "HNO-Arzt"
+      ],
+      "revealHint": "FACHARZT"
+    },
+    {
+      "id": "g2",
+      "label": "Im Krankenhaus",
+      "items": [
+        "Notaufnahme",
+        "Station",
+        "Operationssaal",
+        "Ambulanz"
+      ],
+      "revealHint": "KLINIK"
+    },
+    {
+      "id": "g3",
+      "label": "Messen und Untersuchen",
+      "items": [
+        "Blutdruckmessgerät",
+        "EKG-Gerät",
+        "Stethoskop",
+        "Reflexhammer"
+      ],
+      "revealHint": "UNTERSUCHEN"
+    },
+    {
+      "id": "g4",
+      "label": "Aus der Hausapotheke",
+      "items": [
+        "Mullbinde",
+        "Brandsalbe",
+        "Wunddesinfektion",
+        "Splitterpinzette"
+      ],
+      "revealHint": "APOTHEKE"
+    }
+  ]
+}

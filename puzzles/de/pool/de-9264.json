@@ -1,0 +1,56 @@
+{
+  "id": "de-9264",
+  "title": "Geld der Welt",
+  "difficulty": "medium",
+  "editorialSummary": "Währungen Europas und Asiens, historische deutsche Währungen und Zahlungsarten.",
+  "meta": {
+    "theme": "Wirtschaft",
+    "batch": "de-medium-07"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Europäische Währungen",
+      "items": [
+        "Złoty",
+        "Schwedische Krone",
+        "Schweizer Franken",
+        "Forint"
+      ],
+      "revealHint": "EUROPA"
+    },
+    {
+      "id": "g2",
+      "label": "Asiatische Währungen",
+      "items": [
+        "Yen",
+        "Yuan",
+        "Rupie",
+        "Won"
+      ],
+      "revealHint": "ASIEN"
+    },
+    {
+      "id": "g3",
+      "label": "Frühere deutsche Währungen",
+      "items": [
+        "D-Mark",
+        "Taler",
+        "Gulden",
+        "Reichsmark"
+      ],
+      "revealHint": "FRÜHER"
+    },
+    {
+      "id": "g4",
+      "label": "Zahlungsmittel",
+      "items": [
+        "EC-Karte",
+        "Kreditkarte",
+        "Bargeld",
+        "PayPal"
+      ],
+      "revealHint": "ZAHLEN"
+    }
+  ]
+}
