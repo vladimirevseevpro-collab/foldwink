@@ -1,7 +1,7 @@
 {
   "id": "de-0228",
   "title": "Nibelungensage",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "meta": {
     "theme": "nibelungen",
     "batch": "de-batch-03",
@@ -19,7 +19,8 @@
         "Kriemhild",
         "Hagen",
         "Gunther"
-      ]
+      ],
+      "revealHint": "NIBELUNGEN"
     },
     {
       "id": "group_b",
@@ -29,7 +30,8 @@
         "Xanten",
         "Etzelburg",
         "Island"
-      ]
+      ],
+      "revealHint": "NIBELUNGEN"
     },
     {
       "id": "group_c",
@@ -39,7 +41,8 @@
         "Tarnkappe",
         "Drachenblut",
         "Balmung"
-      ]
+      ],
+      "revealHint": "GEGENSTÄNDE"
     },
     {
       "id": "group_d",
@@ -49,7 +52,8 @@
         "Hochzeit",
         "Burgunderuntergang",
         "Rache"
-      ]
+      ],
+      "revealHint": "EREIGNISSE"
     }
   ]
 }

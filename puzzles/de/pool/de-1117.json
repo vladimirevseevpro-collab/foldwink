@@ -1,7 +1,7 @@
 {
   "id": "de-1117",
   "title": "Segel setzen",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "meta": {
     "theme": "Segeln und Boote"
   },
@@ -14,7 +14,8 @@
         "Segel",
         "Kiel",
         "Deck"
-      ]
+      ],
+      "revealHint": "SEGELBOOTS"
     },
     {
       "id": "kleidung",
@@ -24,7 +25,8 @@
         "Bootsschuhe",
         "Segelhandschuhe",
         "Südwester"
-      ]
+      ],
+      "revealHint": "KLEIDUNG"
     },
     {
       "id": "wetter",
@@ -34,7 +36,8 @@
         "Flaute",
         "Sturm",
         "Nebel"
-      ]
+      ],
+      "revealHint": "WETTER"
     },
     {
       "id": "knoten",
@@ -44,7 +47,8 @@
         "Achtknoten",
         "Webleinstek",
         "Schotstek"
-      ]
+      ],
+      "revealHint": "SEEMANNSKNOTEN"
     }
   ]
 }

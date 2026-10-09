@@ -1,7 +1,7 @@
 {
   "id": "de-1237",
   "title": "Beim Imker",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "meta": {
     "theme": "Imkerei"
   },
@@ -14,7 +14,8 @@
         "Honig",
         "Pollen",
         "Wachs"
-      ]
+      ],
+      "revealHint": "BIENENSTOCK"
     },
     {
       "id": "werkzeug",
@@ -24,7 +25,8 @@
         "Stockmeißel",
         "Wabenzange",
         "Abkehrbesen"
-      ]
+      ],
+      "revealHint": "WERKZEUG"
     },
     {
       "id": "kleidung",
@@ -34,7 +36,8 @@
         "Hut",
         "Handschuhe",
         "Overall"
-      ]
+      ],
+      "revealHint": "KLEIDUNG"
     },
     {
       "id": "beute",
@@ -44,7 +47,8 @@
         "Honigraum",
         "Flugloch",
         "Deckel"
-      ]
+      ],
+      "revealHint": "BIENENBEUTE"
     }
   ]
 }

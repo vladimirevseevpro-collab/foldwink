@@ -1,7 +1,7 @@
 {
   "id": "de-0261",
   "title": "Mode-Geschichte",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "meta": {
     "theme": "mode-geschichte",
     "batch": "de-batch-03",
@@ -19,7 +19,8 @@
         "Krinoline",
         "Korsett",
         "Zylinder"
-      ]
+      ],
+      "revealHint": "JAHRHUNDERT"
     },
     {
       "id": "group_b",
@@ -29,7 +30,8 @@
         "Schlaghose",
         "Schulterpolster",
         "Leggings"
-      ]
+      ],
+      "revealHint": "JAHRHUNDERT"
     },
     {
       "id": "group_c",
@@ -39,7 +41,8 @@
         "Athleisure",
         "Nachhaltigkeit",
         "Capsule Wardrobe"
-      ]
+      ],
+      "revealHint": "HEUTIGE"
     },
     {
       "id": "group_d",
@@ -49,7 +52,8 @@
         "Smartfabric",
         "Recycelfiber",
         "Digitale Mode"
-      ]
+      ],
+      "revealHint": "ZUKUNFT"
     }
   ]
 }

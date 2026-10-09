@@ -1,7 +1,7 @@
 {
   "id": "de-0125",
   "title": "Aquarium und Terrarium",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "meta": {
     "theme": "Tiere",
     "batch": "de-batch-02",
@@ -19,7 +19,8 @@
         "Neon",
         "Diskusfisch",
         "Goldfisch"
-      ]
+      ],
+      "revealHint": "SÜSSWASSERFISCHE"
     },
     {
       "id": "group_b",
@@ -29,7 +30,8 @@
         "Doktorfisch",
         "Feuerfisch",
         "Lippfisch"
-      ]
+      ],
+      "revealHint": "MEERWASSERFISCHE"
     },
     {
       "id": "group_c",
@@ -39,7 +41,8 @@
         "Königspython",
         "Leopardgecko",
         "Wasseragame"
-      ]
+      ],
+      "revealHint": "REPTILIEN"
     },
     {
       "id": "group_d",
@@ -49,7 +52,8 @@
         "Vallisnerien",
         "Cryptocoryne",
         "Javafarn"
-      ]
+      ],
+      "revealHint": "WASSERPFLANZEN"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "id": "ru-0101",
   "title": "По жанру",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "meta": {
     "theme": "Жанры видеоигр",
     "batch": "ru-batch-02",
@@ -19,7 +19,8 @@
         "Файтинг",
         "Слэшер",
         "Битемап"
-      ]
+      ],
+      "revealHint": "БОЕВЫЕ"
     },
     {
       "id": "strategy",
@@ -29,7 +30,8 @@
         "RTS",
         "Варгейм",
         "4X"
-      ]
+      ],
+      "revealHint": "СТРАТЕГИИ"
     },
     {
       "id": "sim",
@@ -39,7 +41,8 @@
         "Авиасим",
         "Ферма",
         "Стройка"
-      ]
+      ],
+      "revealHint": "СИМУЛЯТОРЫ"
     },
     {
       "id": "rpg",
@@ -49,7 +52,8 @@
         "Action RPG",
         "JRPG",
         "Roguelike"
-      ]
+      ],
+      "revealHint": "РОЛЕВЫЕ"
     }
   ]
 }

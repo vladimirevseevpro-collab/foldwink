@@ -1,7 +1,7 @@
 {
   "id": "de-0101",
   "title": "Tierwelt Afrikas",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "meta": {
     "theme": "Tiere",
     "batch": "de-batch-02",
@@ -19,7 +19,8 @@
         "Löwe",
         "Büffel",
         "Nashorn"
-      ]
+      ],
+      "revealHint": "GROSSE"
     },
     {
       "id": "group_b",
@@ -29,7 +30,8 @@
         "Sekretär",
         "Marabu",
         "Kronenkranich"
-      ]
+      ],
+      "revealHint": "SAVANNENVÖGEL"
     },
     {
       "id": "group_c",
@@ -39,7 +41,8 @@
         "Puffotter",
         "Chamäleon",
         "Wüstenmonitor"
-      ]
+      ],
+      "revealHint": "REPTILIEN"
     },
     {
       "id": "group_d",
@@ -49,7 +52,8 @@
         "Gorilla",
         "Pavian",
         "Mandrill"
-      ]
+      ],
+      "revealHint": "PRIMATEN"
     }
   ]
 }

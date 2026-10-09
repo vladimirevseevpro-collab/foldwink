@@ -1,7 +1,7 @@
 {
   "id": "de-0106",
   "title": "Dinosaurier",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "meta": {
     "theme": "Urzeit",
     "batch": "de-batch-02",
@@ -19,7 +19,8 @@
         "Diplodocus",
         "Apatosaurus",
         "Brontosaurus"
-      ]
+      ],
+      "revealHint": "SAUROPODEN"
     },
     {
       "id": "group_b",
@@ -29,7 +30,8 @@
         "Velociraptor",
         "Spinosaurus",
         "Allosaurus"
-      ]
+      ],
+      "revealHint": "THEROPODEN"
     },
     {
       "id": "group_c",
@@ -39,7 +41,8 @@
         "Parasaurolophus",
         "Hadrosaur",
         "Edmontosaurus"
-      ]
+      ],
+      "revealHint": "ORNITHOPODEN"
     },
     {
       "id": "group_d",
@@ -49,7 +52,8 @@
         "Styracosaurus",
         "Torosaurus",
         "Pentaceratops"
-      ]
+      ],
+      "revealHint": "CERATOPSIER"
     }
   ]
 }

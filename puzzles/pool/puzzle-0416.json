@@ -1,7 +1,7 @@
 {
   "id": "puzzle-0416",
   "title": "Ballet Moves",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "editorialSummary": "Ballet terms grouped by movement type: jumps, turns, positions, and barre exercises. False trail: Pirouette and Fouetté are both turning moves; Arabesque is a position not a turn.",
   "meta": {
     "theme": "dance",
@@ -22,7 +22,8 @@
         "Sauté",
         "Cabriole",
         "Assemblé"
-      ]
+      ],
+      "revealHint": "BALLET"
     },
     {
       "id": "g2",
@@ -32,7 +33,8 @@
         "Fouetté",
         "Chaîné",
         "Piqué Turn"
-      ]
+      ],
+      "revealHint": "BALLET"
     },
     {
       "id": "g3",
@@ -42,7 +44,8 @@
         "Attitude",
         "Croisé",
         "Effacé"
-      ]
+      ],
+      "revealHint": "POSITIONS"
     },
     {
       "id": "g4",
@@ -52,7 +55,8 @@
         "Tendu",
         "Dégagé",
         "Rond de Jambe"
-      ]
+      ],
+      "revealHint": "EXERCISES"
     }
   ]
 }

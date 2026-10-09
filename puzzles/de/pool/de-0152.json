@@ -1,7 +1,7 @@
 {
   "id": "de-0152",
   "title": "Yoga und Meditation",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "meta": {
     "theme": "Gesundheit",
     "batch": "de-batch-02",
@@ -19,7 +19,8 @@
         "Baum",
         "Kobra",
         "Kindhaltung"
-      ]
+      ],
+      "revealHint": "ASANAS"
     },
     {
       "id": "group_b",
@@ -29,7 +30,8 @@
         "Ujjayi",
         "Wechselatmung",
         "Kapalabhati"
-      ]
+      ],
+      "revealHint": "ATEMÜBUNGEN"
     },
     {
       "id": "group_c",
@@ -39,7 +41,8 @@
         "Bodyscan",
         "Mantra",
         "Visualisierung"
-      ]
+      ],
+      "revealHint": "MEDITATION"
     },
     {
       "id": "group_d",
@@ -49,7 +52,8 @@
         "Dharma",
         "Ahimsa",
         "Moksha"
-      ]
+      ],
+      "revealHint": "PHILOSOPHIE"
     }
   ]
 }

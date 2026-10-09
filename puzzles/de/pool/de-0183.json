@@ -1,7 +1,7 @@
 {
   "id": "de-0183",
   "title": "Bedrohte Tierarten",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "meta": {
     "theme": "Natur",
     "batch": "de-batch-02",
@@ -19,7 +19,8 @@
         "Amur-Leopard",
         "Berggorilla",
         "Vaquita"
-      ]
+      ],
+      "revealHint": "SÄUGETIERE"
     },
     {
       "id": "group_b",
@@ -29,7 +30,8 @@
         "Philippinen-Adler",
         "Waldrapp",
         "Spix-Ara"
-      ]
+      ],
+      "revealHint": "BEDROHTE"
     },
     {
       "id": "group_c",
@@ -39,7 +41,8 @@
         "Komodo-Waran",
         "Galapagos-Riesensch.",
         "Gharial"
-      ]
+      ],
+      "revealHint": "REPTILIEN"
     },
     {
       "id": "group_d",
@@ -49,7 +52,8 @@
         "Mantarochen",
         "Weißer Stör",
         "Hammerkopfhai"
-      ]
+      ],
+      "revealHint": "BEDROHTE"
     }
   ]
 }

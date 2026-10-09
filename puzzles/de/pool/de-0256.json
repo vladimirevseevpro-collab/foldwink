@@ -1,7 +1,7 @@
 {
   "id": "de-0256",
   "title": "Hamburger Architektur",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "meta": {
     "theme": "hamburger-architektur",
     "batch": "de-batch-03",
@@ -19,7 +19,8 @@
         "Roter Backsteinbau",
         "Fleetkanal",
         "Gründerzeit"
-      ]
+      ],
+      "revealHint": "SPEICHERSTADT"
     },
     {
       "id": "group_b",
@@ -29,7 +30,8 @@
         "Sprinkenhof",
         "Mohlenhof",
         "Montanhof"
-      ]
+      ],
+      "revealHint": "KONTORHÄUSER"
     },
     {
       "id": "group_c",
@@ -39,7 +41,8 @@
         "HafenCity",
         "Deichtorhallen",
         "Dockland"
-      ]
+      ],
+      "revealHint": "HAMBURG"
     },
     {
       "id": "group_d",
@@ -49,7 +52,8 @@
         "Michel",
         "Alsterarkaden",
         "Binnenalster"
-      ]
+      ],
+      "revealHint": "HISTORISCHES"
     }
   ]
 }

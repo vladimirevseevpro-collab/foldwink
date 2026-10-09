@@ -1,7 +1,7 @@
 {
   "id": "de-0229",
   "title": "Artussage",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "meta": {
     "theme": "artus",
     "batch": "de-batch-03",
@@ -19,7 +19,8 @@
         "Gawain",
         "Percival",
         "Tristan"
-      ]
+      ],
+      "revealHint": "TAFELRUNDE"
     },
     {
       "id": "group_b",
@@ -29,7 +30,8 @@
         "Avalon",
         "Tintagel",
         "Glastonbury"
-      ]
+      ],
+      "revealHint": "ARTUS"
     },
     {
       "id": "group_c",
@@ -39,7 +41,8 @@
         "Heiliger Gral",
         "Tafelrunde",
         "Schwert im Stein"
-      ]
+      ],
+      "revealHint": "GEGENSTÄNDE"
     },
     {
       "id": "group_d",
@@ -49,7 +52,8 @@
         "Gralsuche",
         "Camlann",
         "Zauberschlaf"
-      ]
+      ],
+      "revealHint": "EREIGNISSE"
     }
   ]
 }

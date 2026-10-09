@@ -1,7 +1,7 @@
 {
   "id": "de-0104",
   "title": "Regenwald",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "meta": {
     "theme": "Natur",
     "batch": "de-batch-02",
@@ -19,7 +19,8 @@
         "Ara",
         "Anaconda",
         "Faultier"
-      ]
+      ],
+      "revealHint": "TIERE"
     },
     {
       "id": "group_b",
@@ -29,7 +30,8 @@
         "Lianen",
         "Orchidee",
         "Riesenseerosel"
-      ]
+      ],
+      "revealHint": "PFLANZEN"
     },
     {
       "id": "group_c",
@@ -39,7 +41,8 @@
         "Kayapo",
         "Matsés",
         "Awá"
-      ]
+      ],
+      "revealHint": "INDIGENE"
     },
     {
       "id": "group_d",
@@ -49,7 +52,8 @@
         "Brandrodung",
         "Goldabbau",
         "Wilderei"
-      ]
+      ],
+      "revealHint": "BEDROHUNGEN"
     }
   ]
 }

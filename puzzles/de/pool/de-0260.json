@@ -1,7 +1,7 @@
 {
   "id": "de-0260",
   "title": "Jugendstil",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "meta": {
     "theme": "jugendstil",
     "batch": "de-batch-03",
@@ -19,7 +19,8 @@
         "Müllersches Volksbad",
         "Villa Stuck",
         "Majolikahaus"
-      ]
+      ],
+      "revealHint": "JUGENDSTIL"
     },
     {
       "id": "group_b",
@@ -29,7 +30,8 @@
         "Zinnvase",
         "Keramikfliesen",
         "Emailschmuck"
-      ]
+      ],
+      "revealHint": "KUNSTHANDWERK"
     },
     {
       "id": "group_c",
@@ -39,7 +41,8 @@
         "Egon Schiele",
         "Franz von Stuck",
         "Jan Toorop"
-      ]
+      ],
+      "revealHint": "JUGENDSTIL"
     },
     {
       "id": "group_d",
@@ -49,7 +52,8 @@
         "Ornamentik",
         "Schwunglinien",
         "Frauenfiguren"
-      ]
+      ],
+      "revealHint": "JUGENDSTIL"
     }
   ]
 }

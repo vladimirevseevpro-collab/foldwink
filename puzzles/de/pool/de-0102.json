@@ -1,7 +1,7 @@
 {
   "id": "de-0102",
   "title": "Tierwelt Australiens",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "meta": {
     "theme": "Tiere",
     "batch": "de-batch-02",
@@ -19,7 +19,8 @@
         "Koala",
         "Wombat",
         "Tasmanischer Teufel"
-      ]
+      ],
+      "revealHint": "BEUTELTIERE"
     },
     {
       "id": "group_b",
@@ -29,7 +30,8 @@
         "Kakadu",
         "Lachkookaburra",
         "Lyravogel"
-      ]
+      ],
+      "revealHint": "VÖGEL"
     },
     {
       "id": "group_c",
@@ -39,7 +41,8 @@
         "Taipan",
         "Salzwasserkrokodil",
         "Blauzungenskink"
-      ]
+      ],
+      "revealHint": "REPTILIEN"
     },
     {
       "id": "group_d",
@@ -49,7 +52,8 @@
         "Weißer Hai",
         "Manta",
         "Buckelwal"
-      ]
+      ],
+      "revealHint": "MEERESTIERE"
     }
   ]
 }

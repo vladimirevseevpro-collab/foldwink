@@ -1,7 +1,7 @@
 {
   "id": "de-1211",
   "title": "Trainingsplan",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "meta": {
     "theme": "Fitnessstudio"
   },
@@ -14,7 +14,8 @@
         "Ausfallschritte",
         "Wadenheben",
         "Step-Ups"
-      ]
+      ],
+      "revealHint": "ÜBUNGEN"
     },
     {
       "id": "oberkoerper",
@@ -24,7 +25,8 @@
         "Klimmzüge",
         "Bankdrücken",
         "Schulterdrücken"
-      ]
+      ],
+      "revealHint": "OBERKÖRPER"
     },
     {
       "id": "bauch",
@@ -34,7 +36,8 @@
         "Crunches",
         "Unterarmstütz",
         "Seitstütz"
-      ]
+      ],
+      "revealHint": "BAUCHÜBUNGEN"
     },
     {
       "id": "aufwaermen",
@@ -44,7 +47,8 @@
         "Seilspringen",
         "Joggen",
         "Dehnen"
-      ]
+      ],
+      "revealHint": "AUFWÄRMEN"
     }
   ]
 }

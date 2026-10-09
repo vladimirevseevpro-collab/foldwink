@@ -1,7 +1,7 @@
 {
   "id": "de-1104",
   "title": "Am Korallenriff",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "meta": {
     "theme": "Korallenriff"
   },
@@ -14,7 +14,8 @@
         "Papageifisch",
         "Kaiserfisch",
         "Doktorfisch"
-      ]
+      ],
+      "revealHint": "KORALLENRIFF"
     },
     {
       "id": "korallen",
@@ -24,7 +25,8 @@
         "Weichkoralle",
         "Feuerkoralle",
         "Hirnkoralle"
-      ]
+      ],
+      "revealHint": "KORALLENARTEN"
     },
     {
       "id": "zahnwale",
@@ -34,7 +36,8 @@
         "Schwertwal",
         "Beluga",
         "Narwal"
-      ]
+      ],
+      "revealHint": "ZAHNWALE"
     },
     {
       "id": "schildkroeten",
@@ -44,7 +47,8 @@
         "Grüne Meeresschildkröte",
         "Echte Karettschildkröte",
         "Unechte Karettschildkröte"
-      ]
+      ],
+      "revealHint": "MEERESSCHILDKRÖTEN"
     }
   ]
 }

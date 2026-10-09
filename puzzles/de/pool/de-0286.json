@@ -1,7 +1,7 @@
 {
   "id": "de-0286",
   "title": "Bundeswehr Einheiten",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "meta": {
     "theme": "bundeswehr",
     "batch": "de-batch-03",
@@ -19,7 +19,8 @@
         "Gebirgsjäger",
         "Fallschirmjäger",
         "Pioniere"
-      ]
+      ],
+      "revealHint": "EINHEITEN"
     },
     {
       "id": "group_b",
@@ -29,7 +30,8 @@
         "U-Boot-Geschwader",
         "Minengeschwader",
         "Seebataillon"
-      ]
+      ],
+      "revealHint": "EINHEITEN"
     },
     {
       "id": "group_c",
@@ -39,7 +41,8 @@
         "Transportgeschwader",
         "Hubschrauberregiment",
         "Fernmeldegruppe"
-      ]
+      ],
+      "revealHint": "EINHEITEN"
     },
     {
       "id": "group_d",
@@ -49,7 +52,8 @@
         "KSM",
         "Fernspäher",
         "ABC-Abwehr"
-      ]
+      ],
+      "revealHint": "SPEZIALKRÄFTE"
     }
   ]
 }

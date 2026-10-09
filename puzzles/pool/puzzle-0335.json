@@ -1,7 +1,7 @@
 {
   "id": "puzzle-0335",
   "title": "Afraid of What?",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "editorialSummary": "Common phobias grouped by the type of thing feared. False trail: Arachnophobia and Entomophobia both involve small creatures, but spiders are arachnids not insects — they belong to different groups. All phobia terms appear in standard psychological and medical references (DSM / ICD). Gephyrophobia (fear of bridges) and Claustrophobia (fear of enclosed spaces) are the most broadly known in their respective groups.",
   "meta": {
     "theme": "psychology",
@@ -24,7 +24,7 @@
         "Cynophobia"
       ],
       "color": "yellow",
-      "revealHint": ""
+      "revealHint": "CREATURES"
     },
     {
       "id": "g2",
@@ -36,7 +36,7 @@
         "Gephyrophobia"
       ],
       "color": "green",
-      "revealHint": ""
+      "revealHint": "PHOBIAS"
     },
     {
       "id": "g3",
@@ -48,7 +48,7 @@
         "Pyrophobia"
       ],
       "color": "blue",
-      "revealHint": ""
+      "revealHint": "PHENOMENA"
     },
     {
       "id": "g4",
@@ -60,7 +60,7 @@
         "Erythrophobia"
       ],
       "color": "purple",
-      "revealHint": ""
+      "revealHint": "SITUATIONS"
     }
   ]
 }

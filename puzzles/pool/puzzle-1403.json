@@ -1,7 +1,7 @@
 {
   "id": "puzzle-1403",
   "title": "Sushi Counter",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "meta": {
     "theme": "Japanese food",
     "categoryType": "everyday_objects"
@@ -15,7 +15,8 @@
         "Maki",
         "Uramaki",
         "Chirashi"
-      ]
+      ],
+      "revealHint": "PRESSED"
     },
     {
       "id": "g2",
@@ -25,7 +26,8 @@
         "Udon",
         "Ramen",
         "Somen"
-      ]
+      ],
+      "revealHint": "JAPANESE"
     },
     {
       "id": "g3",
@@ -35,7 +37,8 @@
         "Firm",
         "Fried",
         "Smoked"
-      ]
+      ],
+      "revealHint": "STYLES"
     },
     {
       "id": "g4",
@@ -45,7 +48,8 @@
         "Rice Paddle",
         "Wasabi Grater",
         "Hangiri"
-      ]
+      ],
+      "revealHint": "TOOLS"
     }
   ]
 }

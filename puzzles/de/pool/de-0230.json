@@ -1,7 +1,7 @@
 {
   "id": "de-0230",
   "title": "Zauberei und Hexerei",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "meta": {
     "theme": "hexerei",
     "batch": "de-batch-03",
@@ -19,7 +19,8 @@
         "Kessel",
         "Zauberstab",
         "Hut"
-      ]
+      ],
+      "revealHint": "UTENSILIEN"
     },
     {
       "id": "group_b",
@@ -29,7 +30,8 @@
         "Fluch",
         "Bann",
         "Zauberspruch"
-      ]
+      ],
+      "revealHint": "BEGRIFFE"
     },
     {
       "id": "group_c",
@@ -39,7 +41,8 @@
         "Krötenaugen",
         "Wolfswurz",
         "Bilsenkraut"
-      ]
+      ],
+      "revealHint": "ZAUBERTRÄNKE"
     },
     {
       "id": "group_d",
@@ -49,7 +52,8 @@
         "Hexentanzplatz",
         "Walpurgisberg",
         "Brocken"
-      ]
+      ],
+      "revealHint": "HEXEN"
     }
   ]
 }

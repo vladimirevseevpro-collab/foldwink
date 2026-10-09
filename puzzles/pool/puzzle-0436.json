@@ -1,7 +1,7 @@
 {
   "id": "puzzle-0436",
   "title": "Omakase",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "editorialSummary": "Sushi types sorted by preparation style: nigiri (hand-pressed rice with a topping), maki (rolled in nori), hand rolls (temaki), and cooked/non-raw options. Every item is a well-known sushi menu entry.",
   "meta": {
     "theme": "sushi",
@@ -22,7 +22,8 @@
         "Tuna Nigiri",
         "Shrimp Nigiri",
         "Eel Nigiri"
-      ]
+      ],
+      "revealHint": "NIGIRI"
     },
     {
       "id": "g2",
@@ -32,7 +33,8 @@
         "Spicy Tuna Roll",
         "Dragon Roll",
         "Rainbow Roll"
-      ]
+      ],
+      "revealHint": "ROLLS"
     },
     {
       "id": "g3",
@@ -42,7 +44,8 @@
         "Tuna Temaki",
         "Scallop Temaki",
         "Avocado Temaki"
-      ]
+      ],
+      "revealHint": "TEMAKI"
     },
     {
       "id": "g4",
@@ -52,7 +55,8 @@
         "Kani",
         "Tamago",
         "Unagi"
-      ]
+      ],
+      "revealHint": "COOKED"
     }
   ]
 }
