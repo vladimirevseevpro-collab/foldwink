@@ -1,0 +1,56 @@
+{
+  "id": "de-9275",
+  "title": "Genuss aus aller Welt",
+  "difficulty": "medium",
+  "editorialSummary": "Käse, Wurst, Brot und Nachspeisen.",
+  "meta": {
+    "theme": "Essen",
+    "batch": "de-medium-08"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Käse aus aller Welt",
+      "items": [
+        "Roquefort",
+        "Emmentaler",
+        "Brie",
+        "Cheddar"
+      ],
+      "revealHint": "KÄSE"
+    },
+    {
+      "id": "g2",
+      "label": "Wurstsorten",
+      "items": [
+        "Salami",
+        "Cervelatwurst",
+        "Chorizo",
+        "Mortadella"
+      ],
+      "revealHint": "WURST"
+    },
+    {
+      "id": "g3",
+      "label": "Brote aus aller Welt",
+      "items": [
+        "Baguette",
+        "Ciabatta",
+        "Fladenbrot",
+        "Vollkornbrot"
+      ],
+      "revealHint": "BROT"
+    },
+    {
+      "id": "g4",
+      "label": "Süße Nachspeisen",
+      "items": [
+        "Tiramisu",
+        "Eclair",
+        "Strudel",
+        "Baklava"
+      ],
+      "revealHint": "NACHSPEISE"
+    }
+  ]
+}

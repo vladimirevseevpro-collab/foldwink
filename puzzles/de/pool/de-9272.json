@@ -1,0 +1,56 @@
+{
+  "id": "de-9272",
+  "title": "Berühmte Schlachten",
+  "difficulty": "medium",
+  "editorialSummary": "Schlachten der Napoleonzeit, beider Weltkriege und des Mittelalters.",
+  "meta": {
+    "theme": "Geschichte",
+    "batch": "de-medium-08"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Schlachten Napoleons",
+      "items": [
+        "Waterloo",
+        "Austerlitz",
+        "Leipzig",
+        "Borodino"
+      ],
+      "revealHint": "NAPOLEON"
+    },
+    {
+      "id": "g2",
+      "label": "Schlachten des Ersten Weltkriegs",
+      "items": [
+        "Verdun",
+        "Somme",
+        "Marne",
+        "Ypern"
+      ],
+      "revealHint": "1914"
+    },
+    {
+      "id": "g3",
+      "label": "Schlachten des Zweiten Weltkriegs",
+      "items": [
+        "Stalingrad",
+        "Normandie",
+        "El Alamein",
+        "Kursk"
+      ],
+      "revealHint": "1939"
+    },
+    {
+      "id": "g4",
+      "label": "Mittelalterliche Schlachten",
+      "items": [
+        "Hastings",
+        "Crécy",
+        "Azincourt",
+        "Lechfeld"
+      ],
+      "revealHint": "MITTELALTER"
+    }
+  ]
+}

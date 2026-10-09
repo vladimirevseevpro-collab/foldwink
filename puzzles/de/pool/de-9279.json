@@ -1,0 +1,56 @@
+{
+  "id": "de-9279",
+  "title": "Sagenwelt",
+  "difficulty": "medium",
+  "editorialSummary": "Fabelwesen der Antike, Märchenwesen, magische Tiere und Ungeheuer.",
+  "meta": {
+    "theme": "Mythologie",
+    "batch": "de-medium-08"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Wesen der griechischen Sage",
+      "items": [
+        "Zentaur",
+        "Sphinx",
+        "Minotaurus",
+        "Chimäre"
+      ],
+      "revealHint": "SAGE"
+    },
+    {
+      "id": "g2",
+      "label": "Wesen aus Märchen und Wald",
+      "items": [
+        "Elf",
+        "Zwerg",
+        "Troll",
+        "Nixe"
+      ],
+      "revealHint": "MÄRCHEN"
+    },
+    {
+      "id": "g3",
+      "label": "Magische Tiere",
+      "items": [
+        "Einhorn",
+        "Greif",
+        "Phönix",
+        "Basilisk"
+      ],
+      "revealHint": "MAGISCH"
+    },
+    {
+      "id": "g4",
+      "label": "Monster und Ungeheuer",
+      "items": [
+        "Kraken",
+        "Yeti",
+        "Nessie",
+        "Werwolf"
+      ],
+      "revealHint": "UNGEHEUER"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "de-9277",
+  "title": "Rassen",
+  "difficulty": "medium",
+  "editorialSummary": "Hunde, Katzen, Pferde und Rinder nach Rasse.",
+  "meta": {
+    "theme": "Tiere",
+    "batch": "de-medium-08"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Hunde nach Rasse",
+      "items": [
+        "Schäferhund",
+        "Dackel",
+        "Pudel",
+        "Dogge"
+      ],
+      "revealHint": "HUND"
+    },
+    {
+      "id": "g2",
+      "label": "Katzen nach Rasse",
+      "items": [
+        "Siamkatze",
+        "Perserkatze",
+        "Maine Coon",
+        "Sphynx"
+      ],
+      "revealHint": "KATZE"
+    },
+    {
+      "id": "g3",
+      "label": "Pferde nach Rasse",
+      "items": [
+        "Haflinger",
+        "Araber",
+        "Trakehner",
+        "Friese"
+      ],
+      "revealHint": "PFERD"
+    },
+    {
+      "id": "g4",
+      "label": "Rinderrassen",
+      "items": [
+        "Fleckvieh",
+        "Holstein",
+        "Angus",
+        "Highland"
+      ],
+      "revealHint": "RIND"
+    }
+  ]
+}

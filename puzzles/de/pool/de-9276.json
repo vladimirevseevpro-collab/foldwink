@@ -1,0 +1,56 @@
+{
+  "id": "de-9276",
+  "title": "Trachten der Welt",
+  "difficulty": "medium",
+  "editorialSummary": "Kleidung aus Japan, Indien, Schottland und Bayern.",
+  "meta": {
+    "theme": "Kultur",
+    "batch": "de-medium-08"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Japanische Kleidung",
+      "items": [
+        "Kimono",
+        "Obi",
+        "Yukata",
+        "Geta"
+      ],
+      "revealHint": "JAPAN"
+    },
+    {
+      "id": "g2",
+      "label": "Indische Kleidung",
+      "items": [
+        "Sari",
+        "Dhoti",
+        "Kurta",
+        "Lehenga"
+      ],
+      "revealHint": "INDIEN"
+    },
+    {
+      "id": "g3",
+      "label": "Schottische Kleidung",
+      "items": [
+        "Kilt",
+        "Sporran",
+        "Plaid",
+        "Glengarry"
+      ],
+      "revealHint": "SCHOTTLAND"
+    },
+    {
+      "id": "g4",
+      "label": "Bayerische Tracht",
+      "items": [
+        "Dirndl",
+        "Lederhose",
+        "Trachtenhut",
+        "Haferlschuh"
+      ],
+      "revealHint": "BAYERN"
+    }
+  ]
+}

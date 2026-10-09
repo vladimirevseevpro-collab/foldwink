@@ -1,0 +1,56 @@
+{
+  "id": "de-9274",
+  "title": "Wunder der Welt",
+  "difficulty": "medium",
+  "editorialSummary": "Antike und neue Weltwunder, Wolkenkratzer und Türme.",
+  "meta": {
+    "theme": "Architektur",
+    "batch": "de-medium-08"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Sieben Weltwunder der Antike",
+      "items": [
+        "Cheops-Pyramide",
+        "Hängende Gärten",
+        "Koloss von Rhodos",
+        "Leuchtturm von Alexandria"
+      ],
+      "revealHint": "ANTIKE"
+    },
+    {
+      "id": "g2",
+      "label": "Neue Weltwunder",
+      "items": [
+        "Petra",
+        "Chichén Itzá",
+        "Christus-Erlöser-Statue",
+        "Machu Picchu"
+      ],
+      "revealHint": "NEU"
+    },
+    {
+      "id": "g3",
+      "label": "Wolkenkratzer",
+      "items": [
+        "Burj Khalifa",
+        "Empire State Building",
+        "Chrysler Building",
+        "Woolworth Building"
+      ],
+      "revealHint": "HOCHHAUS"
+    },
+    {
+      "id": "g4",
+      "label": "Berühmte Türme",
+      "items": [
+        "Eiffelturm",
+        "Berliner Fernsehturm",
+        "Schiefer Turm von Pisa",
+        "Tokyo Tower"
+      ],
+      "revealHint": "TURM"
+    }
+  ]
+}

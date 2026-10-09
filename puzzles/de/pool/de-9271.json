@@ -1,0 +1,56 @@
+{
+  "id": "de-9271",
+  "title": "Olympische Spiele",
+  "difficulty": "medium",
+  "editorialSummary": "Gastgeberstädte, Symbole und deutsche Olympiasieger.",
+  "meta": {
+    "theme": "Sport",
+    "batch": "de-medium-08"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Städte der Sommerspiele",
+      "items": [
+        "Athen",
+        "London",
+        "Rio de Janeiro",
+        "Tokio"
+      ],
+      "revealHint": "SOMMER"
+    },
+    {
+      "id": "g2",
+      "label": "Städte der Winterspiele",
+      "items": [
+        "Sotschi",
+        "Innsbruck",
+        "Sapporo",
+        "Lillehammer"
+      ],
+      "revealHint": "WINTER"
+    },
+    {
+      "id": "g3",
+      "label": "Olympische Symbole",
+      "items": [
+        "Ringe",
+        "Fackel",
+        "Maskottchen",
+        "Motto"
+      ],
+      "revealHint": "SYMBOL"
+    },
+    {
+      "id": "g4",
+      "label": "Deutsche Olympiasieger",
+      "items": [
+        "Birgit Fischer",
+        "Armin Hary",
+        "Heike Drechsler",
+        "Lars Riedel"
+      ],
+      "revealHint": "GOLD"
+    }
+  ]
+}

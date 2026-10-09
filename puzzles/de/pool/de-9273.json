@@ -1,0 +1,56 @@
+{
+  "id": "de-9273",
+  "title": "Forscher und Erfinder",
+  "difficulty": "medium",
+  "editorialSummary": "Flugpioniere, Physiker, Chemiker und Mediziner.",
+  "meta": {
+    "theme": "Wissenschaft",
+    "batch": "de-medium-08"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Flugpioniere",
+      "items": [
+        "Lilienthal",
+        "Zeppelin",
+        "Junkers",
+        "Dornier"
+      ],
+      "revealHint": "FLUG"
+    },
+    {
+      "id": "g2",
+      "label": "Physiker",
+      "items": [
+        "Röntgen",
+        "Hertz",
+        "Ohm",
+        "Planck"
+      ],
+      "revealHint": "PHYSIK"
+    },
+    {
+      "id": "g3",
+      "label": "Chemiker",
+      "items": [
+        "Liebig",
+        "Bunsen",
+        "Haber",
+        "Hahn"
+      ],
+      "revealHint": "CHEMIE"
+    },
+    {
+      "id": "g4",
+      "label": "Ärzte und Bakteriologen",
+      "items": [
+        "Koch",
+        "Virchow",
+        "Behring",
+        "Semmelweis"
+      ],
+      "revealHint": "MEDIZIN"
+    }
+  ]
+}

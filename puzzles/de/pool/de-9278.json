@@ -1,0 +1,56 @@
+{
+  "id": "de-9278",
+  "title": "Land und Meer",
+  "difficulty": "medium",
+  "editorialSummary": "Inseln, Nationalparks, Halbinseln und Gebirge.",
+  "meta": {
+    "theme": "Geografie",
+    "batch": "de-medium-08"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Inseln vor der deutschen Küste",
+      "items": [
+        "Rügen",
+        "Sylt",
+        "Fehmarn",
+        "Usedom"
+      ],
+      "revealHint": "INSEL"
+    },
+    {
+      "id": "g2",
+      "label": "Nationalparks in Deutschland",
+      "items": [
+        "Hainich",
+        "Harz",
+        "Sächsische Schweiz",
+        "Bayerischer Wald"
+      ],
+      "revealHint": "PARK"
+    },
+    {
+      "id": "g3",
+      "label": "Europäische Halbinseln",
+      "items": [
+        "Peloponnes",
+        "Iberische Halbinsel",
+        "Balkan",
+        "Jütland"
+      ],
+      "revealHint": "HALBINSEL"
+    },
+    {
+      "id": "g4",
+      "label": "Gebirge Europas",
+      "items": [
+        "Pyrenäen",
+        "Karpaten",
+        "Apennin",
+        "Skanden"
+      ],
+      "revealHint": "GEBIRGE"
+    }
+  ]
+}
