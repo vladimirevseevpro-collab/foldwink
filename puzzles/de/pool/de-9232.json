@@ -1,0 +1,56 @@
+{
+  "id": "de-9232",
+  "title": "Beim Bäcker",
+  "difficulty": "medium",
+  "editorialSummary": "Brot, Brötchen, Kuchen und Torten.",
+  "meta": {
+    "theme": "Backwaren",
+    "batch": "de-medium-04"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Brot aus aller Welt",
+      "items": [
+        "Roggenbrot",
+        "Pumpernickel",
+        "Baguette",
+        "Ciabatta"
+      ],
+      "revealHint": "BROT"
+    },
+    {
+      "id": "g2",
+      "label": "Regionale Namen für Brötchen",
+      "items": [
+        "Semmel",
+        "Schrippe",
+        "Weck",
+        "Rundstück"
+      ],
+      "revealHint": "BRÖTCHEN"
+    },
+    {
+      "id": "g3",
+      "label": "Kuchen vom Blech",
+      "items": [
+        "Streuselkuchen",
+        "Apfelkuchen",
+        "Bienenstich",
+        "Donauwelle"
+      ],
+      "revealHint": "BLECH"
+    },
+    {
+      "id": "g4",
+      "label": "Berühmte Torten",
+      "items": [
+        "Sachertorte",
+        "Linzer Torte",
+        "Frankfurter Kranz",
+        "Schwarzwälder Kirschtorte"
+      ],
+      "revealHint": "TORTE"
+    }
+  ]
+}

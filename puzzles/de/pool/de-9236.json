@@ -1,0 +1,56 @@
+{
+  "id": "de-9236",
+  "title": "Pioniere",
+  "difficulty": "medium",
+  "editorialSummary": "Erfinder, Entdecker, Raumfahrer und Bergsteiger.",
+  "meta": {
+    "theme": "Persönlichkeiten",
+    "batch": "de-medium-04"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Erfinder",
+      "items": [
+        "Gutenberg",
+        "Diesel",
+        "Daimler",
+        "Benz"
+      ],
+      "revealHint": "ERFINDER"
+    },
+    {
+      "id": "g2",
+      "label": "Entdecker",
+      "items": [
+        "Kolumbus",
+        "Magellan",
+        "Cook",
+        "Humboldt"
+      ],
+      "revealHint": "ENTDECKER"
+    },
+    {
+      "id": "g3",
+      "label": "Raumfahrer",
+      "items": [
+        "Gagarin",
+        "Armstrong",
+        "Aldrin",
+        "Glenn"
+      ],
+      "revealHint": "RAUMFAHRT"
+    },
+    {
+      "id": "g4",
+      "label": "Bergsteiger",
+      "items": [
+        "Hillary",
+        "Messner",
+        "Tenzing",
+        "Habeler"
+      ],
+      "revealHint": "BERGSTEIGER"
+    }
+  ]
+}

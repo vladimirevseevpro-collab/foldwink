@@ -1,0 +1,56 @@
+{
+  "id": "de-9233",
+  "title": "Landschaften und Gewässer",
+  "difficulty": "medium",
+  "editorialSummary": "Alpengipfel, Mittelgebirge, Seen und Flüsse.",
+  "meta": {
+    "theme": "Geografie",
+    "batch": "de-medium-04"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Berge der Alpen",
+      "items": [
+        "Zugspitze",
+        "Matterhorn",
+        "Watzmann",
+        "Großglockner"
+      ],
+      "revealHint": "ALPEN"
+    },
+    {
+      "id": "g2",
+      "label": "Mittelgebirge in Deutschland",
+      "items": [
+        "Harz",
+        "Eifel",
+        "Rhön",
+        "Erzgebirge"
+      ],
+      "revealHint": "MITTELGEBIRGE"
+    },
+    {
+      "id": "g3",
+      "label": "Seen in Deutschland",
+      "items": [
+        "Bodensee",
+        "Müritz",
+        "Chiemsee",
+        "Starnberger See"
+      ],
+      "revealHint": "SEE"
+    },
+    {
+      "id": "g4",
+      "label": "Flüsse zur Nordsee",
+      "items": [
+        "Rhein",
+        "Weser",
+        "Ems",
+        "Eider"
+      ],
+      "revealHint": "NORDSEE"
+    }
+  ]
+}

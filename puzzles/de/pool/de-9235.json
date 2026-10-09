@@ -1,0 +1,56 @@
+{
+  "id": "de-9235",
+  "title": "Computer und Netz",
+  "difficulty": "medium",
+  "editorialSummary": "Bauteile, Zubehör, Programme und Internetbegriffe.",
+  "meta": {
+    "theme": "Technik",
+    "batch": "de-medium-04"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Bauteile im Rechner",
+      "items": [
+        "Prozessor",
+        "Arbeitsspeicher",
+        "Festplatte",
+        "Grafikkarte"
+      ],
+      "revealHint": "HARDWARE"
+    },
+    {
+      "id": "g2",
+      "label": "Zubehör am Computer",
+      "items": [
+        "Maus",
+        "Tastatur",
+        "Drucker",
+        "Monitor"
+      ],
+      "revealHint": "ZUBEHÖR"
+    },
+    {
+      "id": "g3",
+      "label": "Programmarten",
+      "items": [
+        "Textverarbeitung",
+        "Tabellenkalkulation",
+        "Browser",
+        "Antivirenprogramm"
+      ],
+      "revealHint": "PROGRAMM"
+    },
+    {
+      "id": "g4",
+      "label": "Begriffe rund ums Internet",
+      "items": [
+        "Router",
+        "Server",
+        "Domain",
+        "Hyperlink"
+      ],
+      "revealHint": "NETZ"
+    }
+  ]
+}

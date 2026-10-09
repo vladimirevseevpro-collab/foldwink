@@ -1,0 +1,56 @@
+{
+  "id": "de-9237",
+  "title": "Im Gemüsegarten",
+  "difficulty": "medium",
+  "editorialSummary": "Gartengeräte, Gemüse, Blumen und Schädlinge.",
+  "meta": {
+    "theme": "Garten",
+    "batch": "de-medium-04"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Hilfsmittel für die Gartenarbeit",
+      "items": [
+        "Spaten",
+        "Harke",
+        "Gießkanne",
+        "Heckenschere"
+      ],
+      "revealHint": "GERÄT"
+    },
+    {
+      "id": "g2",
+      "label": "Wurzel- und Knollengemüse",
+      "items": [
+        "Möhre",
+        "Kohlrabi",
+        "Sellerie",
+        "Rote Bete"
+      ],
+      "revealHint": "WURZEL"
+    },
+    {
+      "id": "g3",
+      "label": "Beetblumen",
+      "items": [
+        "Tulpe",
+        "Dahlie",
+        "Pfingstrose",
+        "Aster"
+      ],
+      "revealHint": "BLUME"
+    },
+    {
+      "id": "g4",
+      "label": "Schädlinge im Beet",
+      "items": [
+        "Blattlaus",
+        "Nacktschnecke",
+        "Kohlweißling",
+        "Wühlmaus"
+      ],
+      "revealHint": "SCHÄDLING"
+    }
+  ]
+}

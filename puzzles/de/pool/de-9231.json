@@ -1,0 +1,56 @@
+{
+  "id": "de-9231",
+  "title": "Aus dem Gewürzregal",
+  "difficulty": "medium",
+  "editorialSummary": "Kräuter, Samen, Schärfe und Aromen aus dem Orient.",
+  "meta": {
+    "theme": "Gewürze",
+    "batch": "de-medium-04"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Frische Küchenkräuter",
+      "items": [
+        "Salbei",
+        "Majoran",
+        "Bohnenkraut",
+        "Estragon"
+      ],
+      "revealHint": "KRÄUTER"
+    },
+    {
+      "id": "g2",
+      "label": "Gewürzsamen",
+      "items": [
+        "Kümmel",
+        "Fenchel",
+        "Anis",
+        "Senfsaat"
+      ],
+      "revealHint": "SAMEN"
+    },
+    {
+      "id": "g3",
+      "label": "Scharfe Würzer",
+      "items": [
+        "Chili",
+        "Ingwer",
+        "Meerrettich",
+        "Wasabi"
+      ],
+      "revealHint": "SCHARF"
+    },
+    {
+      "id": "g4",
+      "label": "Orientalische Gewürze",
+      "items": [
+        "Kurkuma",
+        "Kardamom",
+        "Zimt",
+        "Safran"
+      ],
+      "revealHint": "ORIENT"
+    }
+  ]
+}

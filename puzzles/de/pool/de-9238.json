@@ -1,0 +1,56 @@
+{
+  "id": "de-9238",
+  "title": "Auf dem Bauernhof",
+  "difficulty": "medium",
+  "editorialSummary": "Gebäude, Maschinen, Tiere und Erzeugnisse.",
+  "meta": {
+    "theme": "Landwirtschaft",
+    "batch": "de-medium-04"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Gebäude am Hof",
+      "items": [
+        "Scheune",
+        "Stall",
+        "Silo",
+        "Schuppen"
+      ],
+      "revealHint": "HOF"
+    },
+    {
+      "id": "g2",
+      "label": "Maschinen auf dem Acker",
+      "items": [
+        "Traktor",
+        "Mähdrescher",
+        "Sämaschine",
+        "Heuwender"
+      ],
+      "revealHint": "MASCHINE"
+    },
+    {
+      "id": "g3",
+      "label": "Geflügel auf dem Hof",
+      "items": [
+        "Huhn",
+        "Gans",
+        "Ente",
+        "Pute"
+      ],
+      "revealHint": "GEFLÜGEL"
+    },
+    {
+      "id": "g4",
+      "label": "Erzeugnisse vom Hof",
+      "items": [
+        "Milch",
+        "Eier",
+        "Getreide",
+        "Honig"
+      ],
+      "revealHint": "ERZEUGNIS"
+    }
+  ]
+}

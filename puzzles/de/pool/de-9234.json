@@ -1,0 +1,56 @@
+{
+  "id": "de-9234",
+  "title": "Pasta, Pizza, Parmesan",
+  "difficulty": "medium",
+  "editorialSummary": "Nudelsorten, Pizzabeläge, Käse und Soßen.",
+  "meta": {
+    "theme": "Italien",
+    "batch": "de-medium-04"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Nudelsorten",
+      "items": [
+        "Penne",
+        "Fusilli",
+        "Tagliatelle",
+        "Farfalle"
+      ],
+      "revealHint": "NUDEL"
+    },
+    {
+      "id": "g2",
+      "label": "Pizzasorten",
+      "items": [
+        "Margherita",
+        "Funghi",
+        "Hawaii",
+        "Quattro Stagioni"
+      ],
+      "revealHint": "PIZZA"
+    },
+    {
+      "id": "g3",
+      "label": "Italienische Käse",
+      "items": [
+        "Parmesan",
+        "Mozzarella",
+        "Gorgonzola",
+        "Pecorino"
+      ],
+      "revealHint": "KÄSE"
+    },
+    {
+      "id": "g4",
+      "label": "Nudelsoßen",
+      "items": [
+        "Bolognese",
+        "Carbonara",
+        "Arrabbiata",
+        "Pesto"
+      ],
+      "revealHint": "SOSSE"
+    }
+  ]
+}
