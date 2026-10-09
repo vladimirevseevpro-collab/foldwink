@@ -1,0 +1,56 @@
+{
+  "id": "de-9223",
+  "title": "Teile und Technik",
+  "difficulty": "medium",
+  "editorialSummary": "Motor, Karosserie, Fahrrad und Bahn.",
+  "meta": {
+    "theme": "Technik",
+    "batch": "de-medium-03"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Im Motor",
+      "items": [
+        "Kolben",
+        "Zylinder",
+        "Zündkerze",
+        "Kurbelwelle"
+      ],
+      "revealHint": "MOTOR"
+    },
+    {
+      "id": "g2",
+      "label": "An der Karosserie",
+      "items": [
+        "Kotflügel",
+        "Stoßstange",
+        "Kühlerhaube",
+        "Scheinwerfer"
+      ],
+      "revealHint": "KAROSSERIE"
+    },
+    {
+      "id": "g3",
+      "label": "Am Fahrrad",
+      "items": [
+        "Speiche",
+        "Gepäckträger",
+        "Sattel",
+        "Klingel"
+      ],
+      "revealHint": "FAHRRAD"
+    },
+    {
+      "id": "g4",
+      "label": "Bei der Bahn",
+      "items": [
+        "Schaffner",
+        "Gleis",
+        "Bahnsteig",
+        "Fahrkarte"
+      ],
+      "revealHint": "BAHN"
+    }
+  ]
+}

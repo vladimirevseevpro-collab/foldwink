@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9217",
+  "title": "At the Movies",
+  "difficulty": "medium",
+  "editorialSummary": "Directors, awards, film crew jobs and camera moves.",
+  "meta": {
+    "theme": "cinema",
+    "batch": "en-medium-02"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Film directors",
+      "items": [
+        "Hitchcock",
+        "Kubrick",
+        "Scorsese",
+        "Tarantino"
+      ],
+      "revealHint": "DIRECTOR"
+    },
+    {
+      "id": "g2",
+      "label": "Film awards",
+      "items": [
+        "Oscar",
+        "Bafta",
+        "Palme d'Or",
+        "Golden Globe"
+      ],
+      "revealHint": "AWARD"
+    },
+    {
+      "id": "g3",
+      "label": "Film crew jobs",
+      "items": [
+        "Gaffer",
+        "Grip",
+        "Best boy",
+        "Foley artist"
+      ],
+      "revealHint": "CREW"
+    },
+    {
+      "id": "g4",
+      "label": "Camera moves and shots",
+      "items": [
+        "Close-up",
+        "Pan",
+        "Tilt",
+        "Zoom"
+      ],
+      "revealHint": "CAMERA"
+    }
+  ]
+}

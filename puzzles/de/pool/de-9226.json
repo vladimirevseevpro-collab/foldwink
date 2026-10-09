@@ -1,0 +1,56 @@
+{
+  "id": "de-9226",
+  "title": "Farbtöne",
+  "difficulty": "medium",
+  "editorialSummary": "Rot, Blau, Grün und Gelb in feinen Nuancen.",
+  "meta": {
+    "theme": "Farben",
+    "batch": "de-medium-03"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Rottöne",
+      "items": [
+        "Purpur",
+        "Karmin",
+        "Scharlach",
+        "Bordeaux"
+      ],
+      "revealHint": "ROT"
+    },
+    {
+      "id": "g2",
+      "label": "Blautöne",
+      "items": [
+        "Azur",
+        "Marine",
+        "Kobalt",
+        "Königsblau"
+      ],
+      "revealHint": "BLAU"
+    },
+    {
+      "id": "g3",
+      "label": "Grüntöne",
+      "items": [
+        "Smaragd",
+        "Oliv",
+        "Mint",
+        "Jade"
+      ],
+      "revealHint": "GRÜN"
+    },
+    {
+      "id": "g4",
+      "label": "Gelbtöne",
+      "items": [
+        "Zitrone",
+        "Senf",
+        "Safran",
+        "Ocker"
+      ],
+      "revealHint": "GELB"
+    }
+  ]
+}

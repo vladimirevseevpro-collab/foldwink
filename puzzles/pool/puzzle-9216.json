@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9216",
+  "title": "Waters and Islands",
+  "difficulty": "medium",
+  "editorialSummary": "Seas, straits, African rivers and Mediterranean islands.",
+  "meta": {
+    "theme": "geography",
+    "batch": "en-medium-02"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Seas",
+      "items": [
+        "Adriatic",
+        "Baltic",
+        "Caribbean",
+        "Aegean"
+      ],
+      "revealHint": "SEA"
+    },
+    {
+      "id": "g2",
+      "label": "Narrow straits",
+      "items": [
+        "Gibraltar",
+        "Bosphorus",
+        "Malacca",
+        "Hormuz"
+      ],
+      "revealHint": "STRAIT"
+    },
+    {
+      "id": "g3",
+      "label": "African rivers south of the Sahara",
+      "items": [
+        "Limpopo",
+        "Congo",
+        "Niger",
+        "Orange"
+      ],
+      "revealHint": "AFRICA"
+    },
+    {
+      "id": "g4",
+      "label": "Mediterranean islands",
+      "items": [
+        "Sicily",
+        "Crete",
+        "Malta",
+        "Corsica"
+      ],
+      "revealHint": "ISLAND"
+    }
+  ]
+}

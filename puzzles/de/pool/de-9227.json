@@ -1,0 +1,56 @@
+{
+  "id": "de-9227",
+  "title": "Feste im Jahr",
+  "difficulty": "medium",
+  "editorialSummary": "Bräuche zu Ostern, Weihnachten, Karneval und Silvester.",
+  "meta": {
+    "theme": "Feste",
+    "batch": "de-medium-03"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Am Osterwochenende",
+      "items": [
+        "Osterhase",
+        "Ostereier",
+        "Osterfeuer",
+        "Karfreitag"
+      ],
+      "revealHint": "OSTERN"
+    },
+    {
+      "id": "g2",
+      "label": "Zu Weihnachten",
+      "items": [
+        "Adventskranz",
+        "Lebkuchen",
+        "Krippe",
+        "Christbaum"
+      ],
+      "revealHint": "WEIHNACHT"
+    },
+    {
+      "id": "g3",
+      "label": "Zu Karneval",
+      "items": [
+        "Büttenrede",
+        "Narrenkappe",
+        "Rosenmontag",
+        "Helau"
+      ],
+      "revealHint": "KARNEVAL"
+    },
+    {
+      "id": "g4",
+      "label": "Zu Silvester",
+      "items": [
+        "Bleigießen",
+        "Dinner for One",
+        "Glücksbringer",
+        "Sekt"
+      ],
+      "revealHint": "SILVESTER"
+    }
+  ]
+}

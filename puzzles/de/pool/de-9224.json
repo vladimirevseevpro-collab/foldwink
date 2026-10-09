@@ -1,0 +1,56 @@
+{
+  "id": "de-9224",
+  "title": "Rund um den Kopf",
+  "difficulty": "medium",
+  "editorialSummary": "Gesicht, Auge, Ohr und Mund.",
+  "meta": {
+    "theme": "Anatomie",
+    "batch": "de-medium-03"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Äußere Gesichtsteile",
+      "items": [
+        "Stirn",
+        "Wange",
+        "Kinn",
+        "Nase"
+      ],
+      "revealHint": "GESICHT"
+    },
+    {
+      "id": "g2",
+      "label": "Im Auge",
+      "items": [
+        "Pupille",
+        "Iris",
+        "Netzhaut",
+        "Hornhaut"
+      ],
+      "revealHint": "AUGE"
+    },
+    {
+      "id": "g3",
+      "label": "Im Ohr",
+      "items": [
+        "Trommelfell",
+        "Hammer",
+        "Amboss",
+        "Steigbügel"
+      ],
+      "revealHint": "OHR"
+    },
+    {
+      "id": "g4",
+      "label": "Im Mund",
+      "items": [
+        "Zunge",
+        "Gaumen",
+        "Lippe",
+        "Zahnfleisch"
+      ],
+      "revealHint": "MUND"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "de-9230",
+  "title": "Im Ort",
+  "difficulty": "medium",
+  "editorialSummary": "Geschäfte, Behörden, Bildungseinrichtungen und Freizeitorte.",
+  "meta": {
+    "theme": "Ortsbild",
+    "batch": "de-medium-03"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Läden",
+      "items": [
+        "Bäckerei",
+        "Metzgerei",
+        "Apotheke",
+        "Drogerie"
+      ],
+      "revealHint": "LADEN"
+    },
+    {
+      "id": "g2",
+      "label": "Behörden",
+      "items": [
+        "Stadtverwaltung",
+        "Finanzamt",
+        "Standesamt",
+        "Ordnungsamt"
+      ],
+      "revealHint": "AMT"
+    },
+    {
+      "id": "g3",
+      "label": "Orte zum Lernen",
+      "items": [
+        "Schule",
+        "Kindergarten",
+        "Universität",
+        "Volkshochschule"
+      ],
+      "revealHint": "LERNEN"
+    },
+    {
+      "id": "g4",
+      "label": "Orte für die Freizeit",
+      "items": [
+        "Schwimmbad",
+        "Kino",
+        "Zoo",
+        "Stadion"
+      ],
+      "revealHint": "FREIZEIT"
+    }
+  ]
+}

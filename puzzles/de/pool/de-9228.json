@@ -1,0 +1,56 @@
+{
+  "id": "de-9228",
+  "title": "Starke Frauen",
+  "difficulty": "medium",
+  "editorialSummary": "Forscherinnen, Herrscherinnen, Politikerinnen und Künstlerinnen.",
+  "meta": {
+    "theme": "Persönlichkeiten",
+    "batch": "de-medium-03"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Forscherinnen",
+      "items": [
+        "Curie",
+        "Meitner",
+        "Lovelace",
+        "Noether"
+      ],
+      "revealHint": "FORSCHUNG"
+    },
+    {
+      "id": "g2",
+      "label": "Herrscherinnen",
+      "items": [
+        "Elisabeth I.",
+        "Katharina die Große",
+        "Maria Theresia",
+        "Kleopatra"
+      ],
+      "revealHint": "THRON"
+    },
+    {
+      "id": "g3",
+      "label": "Regierungschefinnen",
+      "items": [
+        "Merkel",
+        "Thatcher",
+        "Golda Meir",
+        "Indira Gandhi"
+      ],
+      "revealHint": "REGIERUNG"
+    },
+    {
+      "id": "g4",
+      "label": "Künstlerinnen",
+      "items": [
+        "Kahlo",
+        "Dietrich",
+        "Callas",
+        "Piaf"
+      ],
+      "revealHint": "KUNST"
+    }
+  ]
+}

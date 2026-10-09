@@ -1,0 +1,56 @@
+{
+  "id": "de-9220",
+  "title": "Wetter und Himmel",
+  "difficulty": "medium",
+  "editorialSummary": "Wetterlagen, Winde, Niederschlag und Messgeräte.",
+  "meta": {
+    "theme": "Wetter",
+    "batch": "de-medium-02"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Wetterlagen und Fronten",
+      "items": [
+        "Hochdruck",
+        "Tiefdruck",
+        "Kaltfront",
+        "Warmfront"
+      ],
+      "revealHint": "LAGE"
+    },
+    {
+      "id": "g2",
+      "label": "Winde",
+      "items": [
+        "Passat",
+        "Monsun",
+        "Föhn",
+        "Mistral"
+      ],
+      "revealHint": "WIND"
+    },
+    {
+      "id": "g3",
+      "label": "Niederschlag",
+      "items": [
+        "Hagel",
+        "Graupel",
+        "Nieselregen",
+        "Schneefall"
+      ],
+      "revealHint": "REGEN"
+    },
+    {
+      "id": "g4",
+      "label": "Auf der Wetterstation",
+      "items": [
+        "Regenmesser",
+        "Windfahne",
+        "Hygrometer",
+        "Thermometer"
+      ],
+      "revealHint": "STATION"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9219",
+  "title": "Built to Last",
+  "difficulty": "medium",
+  "editorialSummary": "Styles, architects, church parts and roof-and-wall details.",
+  "meta": {
+    "theme": "architecture",
+    "batch": "en-medium-02"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Building styles through history",
+      "items": [
+        "Gothic",
+        "Baroque",
+        "Romanesque",
+        "Art Deco"
+      ],
+      "revealHint": "STYLE"
+    },
+    {
+      "id": "g2",
+      "label": "Famous architects",
+      "items": [
+        "Gaudi",
+        "Le Corbusier",
+        "Gehry",
+        "Foster"
+      ],
+      "revealHint": "ARCHITECT"
+    },
+    {
+      "id": "g3",
+      "label": "Parts of a church",
+      "items": [
+        "Nave",
+        "Aisle",
+        "Transept",
+        "Chancel"
+      ],
+      "revealHint": "CHURCH"
+    },
+    {
+      "id": "g4",
+      "label": "Parts of a building's exterior",
+      "items": [
+        "Gable",
+        "Eaves",
+        "Lintel",
+        "Cornice"
+      ],
+      "revealHint": "EXTERIOR"
+    }
+  ]
+}

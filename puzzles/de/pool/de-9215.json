@@ -1,0 +1,56 @@
+{
+  "id": "de-9215",
+  "title": "Hinter der Leinwand",
+  "difficulty": "medium",
+  "editorialSummary": "Regisseure, Preise, Berufe am Set und Filmgenres.",
+  "meta": {
+    "theme": "Film",
+    "batch": "de-medium-02"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Regisseure",
+      "items": [
+        "Hitchcock",
+        "Kubrick",
+        "Fassbinder",
+        "Tarantino"
+      ],
+      "revealHint": "REGIE"
+    },
+    {
+      "id": "g2",
+      "label": "Auszeichnungen im Film",
+      "items": [
+        "Oscar",
+        "Goldene Palme",
+        "Goldener Bär",
+        "Goldener Löwe"
+      ],
+      "revealHint": "PREIS"
+    },
+    {
+      "id": "g3",
+      "label": "Berufe beim Film",
+      "items": [
+        "Kameramann",
+        "Cutter",
+        "Tonmeister",
+        "Maskenbildner"
+      ],
+      "revealHint": "SET"
+    },
+    {
+      "id": "g4",
+      "label": "Arten von Filmen",
+      "items": [
+        "Western",
+        "Krimi",
+        "Horrorfilm",
+        "Komödie"
+      ],
+      "revealHint": "GENRE"
+    }
+  ]
+}

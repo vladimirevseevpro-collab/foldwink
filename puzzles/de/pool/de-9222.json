@@ -1,0 +1,56 @@
+{
+  "id": "de-9222",
+  "title": "Von Kopf bis Fuß",
+  "difficulty": "medium",
+  "editorialSummary": "Kopfbedeckungen, Schuhe, Oberteile und Hosen.",
+  "meta": {
+    "theme": "Kleidung",
+    "batch": "de-medium-03"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Auf dem Kopf",
+      "items": [
+        "Mütze",
+        "Hut",
+        "Kappe",
+        "Barett"
+      ],
+      "revealHint": "KOPF"
+    },
+    {
+      "id": "g2",
+      "label": "Schuhwerk",
+      "items": [
+        "Stiefel",
+        "Sandale",
+        "Pumps",
+        "Clogs"
+      ],
+      "revealHint": "FUSS"
+    },
+    {
+      "id": "g3",
+      "label": "Trägt man obenrum",
+      "items": [
+        "Bluse",
+        "Pullover",
+        "Hemd",
+        "Weste"
+      ],
+      "revealHint": "OBERTEIL"
+    },
+    {
+      "id": "g4",
+      "label": "Beinkleider",
+      "items": [
+        "Jeans",
+        "Shorts",
+        "Leggings",
+        "Latzhose"
+      ],
+      "revealHint": "BEIN"
+    }
+  ]
+}

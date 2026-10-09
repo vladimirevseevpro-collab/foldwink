@@ -1,0 +1,56 @@
+{
+  "id": "de-9213",
+  "title": "Im Körper",
+  "difficulty": "medium",
+  "editorialSummary": "Knochen, Organe, Muskeln und Gelenke des Menschen.",
+  "meta": {
+    "theme": "Anatomie",
+    "batch": "de-medium-02"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Knochen im Körper",
+      "items": [
+        "Elle",
+        "Speiche",
+        "Schienbein",
+        "Brustbein"
+      ],
+      "revealHint": "KNOCHEN"
+    },
+    {
+      "id": "g2",
+      "label": "Innere Organe",
+      "items": [
+        "Leber",
+        "Milz",
+        "Niere",
+        "Magen"
+      ],
+      "revealHint": "ORGAN"
+    },
+    {
+      "id": "g3",
+      "label": "Muskeln im Körper",
+      "items": [
+        "Bizeps",
+        "Trizeps",
+        "Gesäßmuskel",
+        "Zwerchfell"
+      ],
+      "revealHint": "MUSKEL"
+    },
+    {
+      "id": "g4",
+      "label": "Gelenke",
+      "items": [
+        "Schulter",
+        "Hüfte",
+        "Ellbogen",
+        "Knie"
+      ],
+      "revealHint": "GELENK"
+    }
+  ]
+}

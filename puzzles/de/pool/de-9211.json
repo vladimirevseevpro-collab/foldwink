@@ -1,0 +1,56 @@
+{
+  "id": "de-9211",
+  "title": "Tierische Wörter",
+  "difficulty": "medium",
+  "editorialSummary": "Vier Tiernamen, die als Endung neue Wörter bilden.",
+  "meta": {
+    "theme": "Komposita",
+    "batch": "de-medium-02"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Wörter vor -fisch",
+      "items": [
+        "Schwert",
+        "Kugel",
+        "Gold",
+        "Tinten"
+      ],
+      "revealHint": "FISCH"
+    },
+    {
+      "id": "g2",
+      "label": "Wörter vor -wurm",
+      "items": [
+        "Regen",
+        "Mehl",
+        "Glüh",
+        "Bücher"
+      ],
+      "revealHint": "WURM"
+    },
+    {
+      "id": "g3",
+      "label": "Wörter vor -vogel",
+      "items": [
+        "Sing",
+        "Spott",
+        "Zug",
+        "Lock"
+      ],
+      "revealHint": "VOGEL"
+    },
+    {
+      "id": "g4",
+      "label": "Wörter vor -hund",
+      "items": [
+        "Wach",
+        "Jagd",
+        "Schlitten",
+        "Wind"
+      ],
+      "revealHint": "HUND"
+    }
+  ]
+}

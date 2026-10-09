@@ -1,0 +1,56 @@
+{
+  "id": "de-9218",
+  "title": "Spieleabend",
+  "difficulty": "medium",
+  "editorialSummary": "Kartenspiele, Brettspiele, Schachbegriffe und Skat-Begriffe.",
+  "meta": {
+    "theme": "Spiele",
+    "batch": "de-medium-02"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Spiele mit Karten",
+      "items": [
+        "Skat",
+        "Doppelkopf",
+        "Mau-Mau",
+        "Rommé"
+      ],
+      "revealHint": "KARTEN"
+    },
+    {
+      "id": "g2",
+      "label": "Spiele mit Brett",
+      "items": [
+        "Catan",
+        "Carcassonne",
+        "Risiko",
+        "Scrabble"
+      ],
+      "revealHint": "BRETT"
+    },
+    {
+      "id": "g3",
+      "label": "Schachbegriffe",
+      "items": [
+        "Rochade",
+        "Gambit",
+        "Remis",
+        "Zugzwang"
+      ],
+      "revealHint": "SCHACH"
+    },
+    {
+      "id": "g4",
+      "label": "Skat-Begriffe",
+      "items": [
+        "Reizen",
+        "Grand",
+        "Ramsch",
+        "Null"
+      ],
+      "revealHint": "SKAT"
+    }
+  ]
+}

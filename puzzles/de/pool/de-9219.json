@@ -1,0 +1,56 @@
+{
+  "id": "de-9219",
+  "title": "Berufe im Überblick",
+  "difficulty": "medium",
+  "editorialSummary": "Handwerk, Heilberufe, Justiz und Schifffahrt.",
+  "meta": {
+    "theme": "Berufe",
+    "batch": "de-medium-02"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Handwerker",
+      "items": [
+        "Tischler",
+        "Maurer",
+        "Dachdecker",
+        "Klempner"
+      ],
+      "revealHint": "HANDWERK"
+    },
+    {
+      "id": "g2",
+      "label": "Heilberufe",
+      "items": [
+        "Apotheker",
+        "Hebamme",
+        "Physiotherapeut",
+        "Zahnarzt"
+      ],
+      "revealHint": "HEILEN"
+    },
+    {
+      "id": "g3",
+      "label": "Berufe in der Justiz",
+      "items": [
+        "Richter",
+        "Staatsanwalt",
+        "Gerichtsvollzieher",
+        "Rechtspfleger"
+      ],
+      "revealHint": "JUSTIZ"
+    },
+    {
+      "id": "g4",
+      "label": "Besatzung eines Schiffs",
+      "items": [
+        "Kapitän",
+        "Steuermann",
+        "Matrose",
+        "Smutje"
+      ],
+      "revealHint": "SCHIFF"
+    }
+  ]
+}

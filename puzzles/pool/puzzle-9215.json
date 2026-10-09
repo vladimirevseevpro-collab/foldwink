@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9215",
+  "title": "Writers by Genre",
+  "difficulty": "medium",
+  "editorialSummary": "Poets, playwrights, crime writers and science-fiction authors.",
+  "meta": {
+    "theme": "literature",
+    "batch": "en-medium-02"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Poets",
+      "items": [
+        "Wordsworth",
+        "Larkin",
+        "Heaney",
+        "Blake"
+      ],
+      "revealHint": "POETRY"
+    },
+    {
+      "id": "g2",
+      "label": "Playwrights",
+      "items": [
+        "Ibsen",
+        "Chekhov",
+        "Beckett",
+        "Marlowe"
+      ],
+      "revealHint": "DRAMA"
+    },
+    {
+      "id": "g3",
+      "label": "Crime writers",
+      "items": [
+        "Christie",
+        "Chandler",
+        "Simenon",
+        "Rankin"
+      ],
+      "revealHint": "CRIME"
+    },
+    {
+      "id": "g4",
+      "label": "Science-fiction authors",
+      "items": [
+        "Asimov",
+        "Clarke",
+        "Herbert",
+        "Bradbury"
+      ],
+      "revealHint": "SCIFI"
+    }
+  ]
+}

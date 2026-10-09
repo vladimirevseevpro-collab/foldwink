@@ -1,0 +1,56 @@
+{
+  "id": "de-9214",
+  "title": "Gewässer und Inseln",
+  "difficulty": "medium",
+  "editorialSummary": "Meere, Meerengen, Inseln und Wüsten.",
+  "meta": {
+    "theme": "Geografie",
+    "batch": "de-medium-02"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Meere",
+      "items": [
+        "Nordsee",
+        "Ostsee",
+        "Adria",
+        "Ägäis"
+      ],
+      "revealHint": "MEER"
+    },
+    {
+      "id": "g2",
+      "label": "Meerengen",
+      "items": [
+        "Gibraltar",
+        "Bosporus",
+        "Malakka",
+        "Hormus"
+      ],
+      "revealHint": "ENGE"
+    },
+    {
+      "id": "g3",
+      "label": "Mittelmeerinseln",
+      "items": [
+        "Sizilien",
+        "Kreta",
+        "Malta",
+        "Korsika"
+      ],
+      "revealHint": "INSEL"
+    },
+    {
+      "id": "g4",
+      "label": "Wüsten",
+      "items": [
+        "Sahara",
+        "Gobi",
+        "Atacama",
+        "Kalahari"
+      ],
+      "revealHint": "WÜSTE"
+    }
+  ]
+}

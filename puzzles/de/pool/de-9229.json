@@ -1,0 +1,56 @@
+{
+  "id": "de-9229",
+  "title": "Medienwelt",
+  "difficulty": "medium",
+  "editorialSummary": "Zeitungsrubriken, Textsorten, Medien und Berufe.",
+  "meta": {
+    "theme": "Medien",
+    "batch": "de-medium-03"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Rubriken einer Zeitung",
+      "items": [
+        "Feuilleton",
+        "Lokales",
+        "Wirtschaft",
+        "Sport"
+      ],
+      "revealHint": "RUBRIK"
+    },
+    {
+      "id": "g2",
+      "label": "Journalistische Textsorten",
+      "items": [
+        "Reportage",
+        "Kommentar",
+        "Glosse",
+        "Interview"
+      ],
+      "revealHint": "TEXTSORTE"
+    },
+    {
+      "id": "g3",
+      "label": "Medien",
+      "items": [
+        "Radio",
+        "Fernsehen",
+        "Podcast",
+        "Zeitschrift"
+      ],
+      "revealHint": "MEDIEN"
+    },
+    {
+      "id": "g4",
+      "label": "Berufe bei der Zeitung",
+      "items": [
+        "Redakteur",
+        "Reporter",
+        "Korrespondent",
+        "Verleger"
+      ],
+      "revealHint": "JOURNALIST"
+    }
+  ]
+}

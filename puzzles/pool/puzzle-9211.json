@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9211",
+  "title": "Animal Compounds",
+  "difficulty": "medium",
+  "editorialSummary": "Words that become new words after an animal ending.",
+  "meta": {
+    "theme": "compound words",
+    "batch": "en-medium-02"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Words before -fish",
+      "items": [
+        "Sword",
+        "Jelly",
+        "Star",
+        "Gold"
+      ],
+      "revealHint": "FISH"
+    },
+    {
+      "id": "g2",
+      "label": "Words before -fly",
+      "items": [
+        "Butter",
+        "Dragon",
+        "Fruit",
+        "Horse"
+      ],
+      "revealHint": "FLY"
+    },
+    {
+      "id": "g3",
+      "label": "Words before -bird",
+      "items": [
+        "Mocking",
+        "Song",
+        "Lady",
+        "Love"
+      ],
+      "revealHint": "BIRD"
+    },
+    {
+      "id": "g4",
+      "label": "Words before -worm",
+      "items": [
+        "Book",
+        "Earth",
+        "Silk",
+        "Glow"
+      ],
+      "revealHint": "WORM"
+    }
+  ]
+}

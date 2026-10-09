@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9214",
+  "title": "Borrowed Words",
+  "difficulty": "medium",
+  "editorialSummary": "English has borrowed words from many languages.",
+  "meta": {
+    "theme": "loanwords",
+    "batch": "en-medium-02"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Words from Japanese",
+      "items": [
+        "Karaoke",
+        "Tsunami",
+        "Origami",
+        "Sushi"
+      ],
+      "revealHint": "JAPANESE"
+    },
+    {
+      "id": "g2",
+      "label": "Words from German",
+      "items": [
+        "Kindergarten",
+        "Angst",
+        "Zeitgeist",
+        "Wanderlust"
+      ],
+      "revealHint": "GERMAN"
+    },
+    {
+      "id": "g3",
+      "label": "Words from French",
+      "items": [
+        "Cliche",
+        "Rendezvous",
+        "Encore",
+        "Deja vu"
+      ],
+      "revealHint": "FRENCH"
+    },
+    {
+      "id": "g4",
+      "label": "Words from Italian",
+      "items": [
+        "Graffiti",
+        "Fiasco",
+        "Piano",
+        "Opera"
+      ],
+      "revealHint": "ITALIAN"
+    }
+  ]
+}

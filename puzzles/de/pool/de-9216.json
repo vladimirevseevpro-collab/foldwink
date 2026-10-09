@@ -1,0 +1,56 @@
+{
+  "id": "de-9216",
+  "title": "Bauen und Baukunst",
+  "difficulty": "medium",
+  "editorialSummary": "Stile, Architekten, Kirchenteile und Dachformen.",
+  "meta": {
+    "theme": "Architektur",
+    "batch": "de-medium-02"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Stile der Baukunst",
+      "items": [
+        "Gotik",
+        "Barock",
+        "Romanik",
+        "Jugendstil"
+      ],
+      "revealHint": "STIL"
+    },
+    {
+      "id": "g2",
+      "label": "Architekten",
+      "items": [
+        "Gaudí",
+        "Gropius",
+        "Mies van der Rohe",
+        "Le Corbusier"
+      ],
+      "revealHint": "ARCHITEKT"
+    },
+    {
+      "id": "g3",
+      "label": "Teile einer Kirche",
+      "items": [
+        "Kirchenschiff",
+        "Chor",
+        "Querhaus",
+        "Apsis"
+      ],
+      "revealHint": "KIRCHE"
+    },
+    {
+      "id": "g4",
+      "label": "Dachformen",
+      "items": [
+        "Satteldach",
+        "Walmdach",
+        "Pultdach",
+        "Mansarddach"
+      ],
+      "revealHint": "DACH"
+    }
+  ]
+}

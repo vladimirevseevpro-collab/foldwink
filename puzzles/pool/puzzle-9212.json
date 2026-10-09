@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9212",
+  "title": "Minds of Science",
+  "difficulty": "medium",
+  "editorialSummary": "Four fields of science, four names each.",
+  "meta": {
+    "theme": "scientists",
+    "batch": "en-medium-02"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Astronomers",
+      "items": [
+        "Hubble",
+        "Copernicus",
+        "Kepler",
+        "Halley"
+      ],
+      "revealHint": "ASTRONOMY"
+    },
+    {
+      "id": "g2",
+      "label": "Biologists",
+      "items": [
+        "Darwin",
+        "Mendel",
+        "Lamarck",
+        "Linnaeus"
+      ],
+      "revealHint": "BIOLOGY"
+    },
+    {
+      "id": "g3",
+      "label": "Chemists",
+      "items": [
+        "Lavoisier",
+        "Mendeleev",
+        "Priestley",
+        "Davy"
+      ],
+      "revealHint": "CHEMISTRY"
+    },
+    {
+      "id": "g4",
+      "label": "Physicists",
+      "items": [
+        "Einstein",
+        "Bohr",
+        "Planck",
+        "Heisenberg"
+      ],
+      "revealHint": "PHYSICS"
+    }
+  ]
+}

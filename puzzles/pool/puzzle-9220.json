@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9220",
+  "title": "Numbers Game",
+  "difficulty": "medium",
+  "editorialSummary": "Branches of maths, great mathematicians, kinds of number and averages.",
+  "meta": {
+    "theme": "mathematics",
+    "batch": "en-medium-02"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Areas of maths",
+      "items": [
+        "Algebra",
+        "Calculus",
+        "Geometry",
+        "Trigonometry"
+      ],
+      "revealHint": "BRANCH"
+    },
+    {
+      "id": "g2",
+      "label": "Mathematicians",
+      "items": [
+        "Euclid",
+        "Euler",
+        "Gauss",
+        "Fibonacci"
+      ],
+      "revealHint": "MATHEMATICIAN"
+    },
+    {
+      "id": "g3",
+      "label": "Kinds of number",
+      "items": [
+        "Prime",
+        "Integer",
+        "Irrational",
+        "Imaginary"
+      ],
+      "revealHint": "NUMBER"
+    },
+    {
+      "id": "g4",
+      "label": "Averages and spread",
+      "items": [
+        "Mean",
+        "Median",
+        "Mode",
+        "Range"
+      ],
+      "revealHint": "AVERAGE"
+    }
+  ]
+}

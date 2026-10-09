@@ -1,0 +1,56 @@
+{
+  "id": "de-9221",
+  "title": "Elemente im Wort",
+  "difficulty": "medium",
+  "editorialSummary": "Vier Elemente als Wortanfang.",
+  "meta": {
+    "theme": "Komposita",
+    "batch": "de-medium-03"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Wasser___",
+      "items": [
+        "Melone",
+        "Hahn",
+        "Farbe",
+        "Rutsche"
+      ],
+      "revealHint": "WASSER"
+    },
+    {
+      "id": "g2",
+      "label": "Feuer___",
+      "items": [
+        "Land",
+        "Löscher",
+        "Melder",
+        "Zeug"
+      ],
+      "revealHint": "FEUER"
+    },
+    {
+      "id": "g3",
+      "label": "Luft___",
+      "items": [
+        "Röhre",
+        "Brücke",
+        "Post",
+        "Gitarre"
+      ],
+      "revealHint": "LUFT"
+    },
+    {
+      "id": "g4",
+      "label": "Erd___",
+      "items": [
+        "Nuss",
+        "Kunde",
+        "Beben",
+        "Geschoss"
+      ],
+      "revealHint": "ERDE"
+    }
+  ]
+}

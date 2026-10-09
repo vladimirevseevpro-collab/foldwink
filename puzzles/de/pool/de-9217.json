@@ -1,0 +1,56 @@
+{
+  "id": "de-9217",
+  "title": "Zahlen und Formeln",
+  "difficulty": "medium",
+  "editorialSummary": "Teilgebiete, Mathematiker, Körper und Lagemaße.",
+  "meta": {
+    "theme": "Mathematik",
+    "batch": "de-medium-02"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Teilgebiete der Mathematik",
+      "items": [
+        "Algebra",
+        "Analysis",
+        "Geometrie",
+        "Stochastik"
+      ],
+      "revealHint": "TEILGEBIET"
+    },
+    {
+      "id": "g2",
+      "label": "Mathematiker",
+      "items": [
+        "Euklid",
+        "Euler",
+        "Gauß",
+        "Pythagoras"
+      ],
+      "revealHint": "MATHEMATIKER"
+    },
+    {
+      "id": "g3",
+      "label": "Geometrische Körper",
+      "items": [
+        "Würfel",
+        "Kegel",
+        "Pyramide",
+        "Zylinder"
+      ],
+      "revealHint": "KÖRPER"
+    },
+    {
+      "id": "g4",
+      "label": "Lagemaße in der Statistik",
+      "items": [
+        "Mittelwert",
+        "Median",
+        "Modus",
+        "Quartil"
+      ],
+      "revealHint": "LAGE"
+    }
+  ]
+}

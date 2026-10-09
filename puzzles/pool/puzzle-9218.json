@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9218",
+  "title": "Rainy Day Games",
+  "difficulty": "medium",
+  "editorialSummary": "Card games, board games, chess terms and poker terms.",
+  "meta": {
+    "theme": "games",
+    "batch": "en-medium-02"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Classic card games",
+      "items": [
+        "Whist",
+        "Rummy",
+        "Bridge",
+        "Canasta"
+      ],
+      "revealHint": "CARDS"
+    },
+    {
+      "id": "g2",
+      "label": "Tabletop favourites",
+      "items": [
+        "Monopoly",
+        "Cluedo",
+        "Scrabble",
+        "Risk"
+      ],
+      "revealHint": "BOARD"
+    },
+    {
+      "id": "g3",
+      "label": "Chess vocabulary",
+      "items": [
+        "Gambit",
+        "Castling",
+        "Checkmate",
+        "Fork"
+      ],
+      "revealHint": "CHESS"
+    },
+    {
+      "id": "g4",
+      "label": "Poker vocabulary",
+      "items": [
+        "Flop",
+        "River",
+        "Blind",
+        "Bluff"
+      ],
+      "revealHint": "POKER"
+    }
+  ]
+}

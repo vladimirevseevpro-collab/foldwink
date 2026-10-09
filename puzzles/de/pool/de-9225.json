@@ -1,0 +1,56 @@
+{
+  "id": "de-9225",
+  "title": "Küchenlatein",
+  "difficulty": "medium",
+  "editorialSummary": "Geräte, Schneiden, Garen und Backzutaten.",
+  "meta": {
+    "theme": "Küche",
+    "batch": "de-medium-03"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Küchenutensilien",
+      "items": [
+        "Schneebesen",
+        "Sieb",
+        "Nudelholz",
+        "Reibe"
+      ],
+      "revealHint": "UTENSIL"
+    },
+    {
+      "id": "g2",
+      "label": "So schneidet man",
+      "items": [
+        "hacken",
+        "würfeln",
+        "raspeln",
+        "schälen"
+      ],
+      "revealHint": "SCHNEIDEN"
+    },
+    {
+      "id": "g3",
+      "label": "So gart man",
+      "items": [
+        "braten",
+        "dünsten",
+        "schmoren",
+        "backen"
+      ],
+      "revealHint": "GAREN"
+    },
+    {
+      "id": "g4",
+      "label": "Geräte mit Strom",
+      "items": [
+        "Mixer",
+        "Toaster",
+        "Wasserkocher",
+        "Kühlschrank"
+      ],
+      "revealHint": "STROM"
+    }
+  ]
+}

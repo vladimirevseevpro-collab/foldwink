@@ -1,0 +1,56 @@
+{
+  "id": "de-9212",
+  "title": "Köpfe der Kultur",
+  "difficulty": "medium",
+  "editorialSummary": "Komponisten, Maler, Dichter und Philosophen.",
+  "meta": {
+    "theme": "Kultur",
+    "batch": "de-medium-02"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Komponisten",
+      "items": [
+        "Bach",
+        "Beethoven",
+        "Mozart",
+        "Brahms"
+      ],
+      "revealHint": "KOMPONIST"
+    },
+    {
+      "id": "g2",
+      "label": "Maler",
+      "items": [
+        "Dürer",
+        "Rembrandt",
+        "Monet",
+        "Picasso"
+      ],
+      "revealHint": "MALER"
+    },
+    {
+      "id": "g3",
+      "label": "Dichter",
+      "items": [
+        "Goethe",
+        "Heine",
+        "Rilke",
+        "Fontane"
+      ],
+      "revealHint": "DICHTER"
+    },
+    {
+      "id": "g4",
+      "label": "Philosophen",
+      "items": [
+        "Kant",
+        "Hegel",
+        "Nietzsche",
+        "Schopenhauer"
+      ],
+      "revealHint": "PHILOSOPH"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9213",
+  "title": "Inside the Body",
+  "difficulty": "medium",
+  "editorialSummary": "Bones, organs, muscles and joints.",
+  "meta": {
+    "theme": "anatomy",
+    "batch": "en-medium-02"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Bones",
+      "items": [
+        "Femur",
+        "Tibia",
+        "Ulna",
+        "Sternum"
+      ],
+      "revealHint": "BONE"
+    },
+    {
+      "id": "g2",
+      "label": "Organs",
+      "items": [
+        "Liver",
+        "Spleen",
+        "Pancreas",
+        "Kidney"
+      ],
+      "revealHint": "ORGAN"
+    },
+    {
+      "id": "g3",
+      "label": "Muscles",
+      "items": [
+        "Biceps",
+        "Deltoid",
+        "Triceps",
+        "Hamstring"
+      ],
+      "revealHint": "MUSCLE"
+    },
+    {
+      "id": "g4",
+      "label": "Joints of the body",
+      "items": [
+        "Shoulder",
+        "Hip",
+        "Wrist",
+        "Ankle"
+      ],
+      "revealHint": "JOINT"
+    }
+  ]
+}
