@@ -1,0 +1,56 @@
+{
+  "id": "de-9288",
+  "title": "Kinderbuch-Klassiker",
+  "difficulty": "medium",
+  "editorialSummary": "Bücher von Astrid Lindgren, Erich Kästner, Michael Ende und Otfried Preußler.",
+  "meta": {
+    "theme": "Literatur",
+    "batch": "de-medium-09"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Bücher von Astrid Lindgren",
+      "items": [
+        "Pippi Langstrumpf",
+        "Michel aus Lönneberga",
+        "Ronja Räubertochter",
+        "Karlsson vom Dach"
+      ],
+      "revealHint": "LINDGREN"
+    },
+    {
+      "id": "g2",
+      "label": "Bücher von Erich Kästner",
+      "items": [
+        "Emil und die Detektive",
+        "Das fliegende Klassenzimmer",
+        "Pünktchen und Anton",
+        "Das doppelte Lottchen"
+      ],
+      "revealHint": "KÄSTNER"
+    },
+    {
+      "id": "g3",
+      "label": "Bücher von Michael Ende",
+      "items": [
+        "Momo",
+        "Die unendliche Geschichte",
+        "Jim Knopf",
+        "Der Wunschpunsch"
+      ],
+      "revealHint": "ENDE"
+    },
+    {
+      "id": "g4",
+      "label": "Bücher von James Krüss",
+      "items": [
+        "Timm Thaler",
+        "Der Leuchtturm auf den Hummerklippen",
+        "Mein Urgroßvater und ich",
+        "Henriette Bimmelbahn"
+      ],
+      "revealHint": "KRÜSS"
+    }
+  ]
+}

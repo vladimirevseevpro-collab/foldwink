@@ -1,0 +1,56 @@
+{
+  "id": "de-9287",
+  "title": "Alte Maße",
+  "difficulty": "medium",
+  "editorialSummary": "Längenmaße, Gewichte, Flächenmaße und Hohlmaße von früher.",
+  "meta": {
+    "theme": "Maße",
+    "batch": "de-medium-09"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Alte Längenmaße",
+      "items": [
+        "Elle",
+        "Fuß",
+        "Klafter",
+        "Zoll"
+      ],
+      "revealHint": "LÄNGE"
+    },
+    {
+      "id": "g2",
+      "label": "Alte Gewichte",
+      "items": [
+        "Zentner",
+        "Lot",
+        "Unze",
+        "Quentchen"
+      ],
+      "revealHint": "GEWICHT"
+    },
+    {
+      "id": "g3",
+      "label": "Alte Flächenmaße",
+      "items": [
+        "Morgen",
+        "Joch",
+        "Hufe",
+        "Tagwerk"
+      ],
+      "revealHint": "FLÄCHE"
+    },
+    {
+      "id": "g4",
+      "label": "Alte Hohlmaße",
+      "items": [
+        "Scheffel",
+        "Eimer",
+        "Fuder",
+        "Tonne"
+      ],
+      "revealHint": "HOHLMASS"
+    }
+  ]
+}

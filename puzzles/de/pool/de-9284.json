@@ -1,0 +1,56 @@
+{
+  "id": "de-9284",
+  "title": "Orchester",
+  "difficulty": "medium",
+  "editorialSummary": "Volksinstrumente, Holzbläser, Blechbläser und Schlagwerk.",
+  "meta": {
+    "theme": "Musik",
+    "batch": "de-medium-09"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Volksmusikinstrumente",
+      "items": [
+        "Zither",
+        "Akkordeon",
+        "Hackbrett",
+        "Maultrommel"
+      ],
+      "revealHint": "VOLKSMUSIK"
+    },
+    {
+      "id": "g2",
+      "label": "Holzblasinstrumente",
+      "items": [
+        "Oboe",
+        "Klarinette",
+        "Fagott",
+        "Saxophon"
+      ],
+      "revealHint": "HOLZ"
+    },
+    {
+      "id": "g3",
+      "label": "Blech im Orchester",
+      "items": [
+        "Kornett",
+        "Posaune",
+        "Flügelhorn",
+        "Euphonium"
+      ],
+      "revealHint": "BLECH"
+    },
+    {
+      "id": "g4",
+      "label": "Zum Draufschlagen",
+      "items": [
+        "Becken",
+        "Pauke",
+        "Tamburin",
+        "Xylophon"
+      ],
+      "revealHint": "SCHLAG"
+    }
+  ]
+}

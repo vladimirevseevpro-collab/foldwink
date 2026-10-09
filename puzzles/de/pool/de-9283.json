@@ -1,0 +1,56 @@
+{
+  "id": "de-9283",
+  "title": "Aus Feld und Garten",
+  "difficulty": "medium",
+  "editorialSummary": "Exotische Früchte, Nüsse, Hülsenfrüchte und Getreide.",
+  "meta": {
+    "theme": "Pflanzen",
+    "batch": "de-medium-09"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Exotische Früchte",
+      "items": [
+        "Mango",
+        "Papaya",
+        "Maracuja",
+        "Karambole"
+      ],
+      "revealHint": "EXOTEN"
+    },
+    {
+      "id": "g2",
+      "label": "Nüsse",
+      "items": [
+        "Haselnuss",
+        "Mandel",
+        "Cashew",
+        "Pistazie"
+      ],
+      "revealHint": "NUSS"
+    },
+    {
+      "id": "g3",
+      "label": "Leguminosen",
+      "items": [
+        "Sojabohne",
+        "Lupine",
+        "Linse",
+        "Kichererbse"
+      ],
+      "revealHint": "HÜLSE"
+    },
+    {
+      "id": "g4",
+      "label": "Getreide und Pseudogetreide",
+      "items": [
+        "Hirse",
+        "Buchweizen",
+        "Dinkel",
+        "Sorghum"
+      ],
+      "revealHint": "GETREIDE"
+    }
+  ]
+}

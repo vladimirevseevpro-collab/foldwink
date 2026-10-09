@@ -1,0 +1,56 @@
+{
+  "id": "de-9285",
+  "title": "Krankheiten und Verletzungen",
+  "difficulty": "medium",
+  "editorialSummary": "Erkältungszeichen, Kinderkrankheiten, Verletzungen und Allergiesymptome.",
+  "meta": {
+    "theme": "Gesundheit",
+    "batch": "de-medium-09"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Anzeichen einer Erkältung",
+      "items": [
+        "Husten",
+        "Halsschmerzen",
+        "Schüttelfrost",
+        "Fieber"
+      ],
+      "revealHint": "ERKÄLTUNG"
+    },
+    {
+      "id": "g2",
+      "label": "Klassische Kinderleiden",
+      "items": [
+        "Windpocken",
+        "Masern",
+        "Röteln",
+        "Keuchhusten"
+      ],
+      "revealHint": "KINDER"
+    },
+    {
+      "id": "g3",
+      "label": "Verletzungen",
+      "items": [
+        "Verstauchung",
+        "Bruch",
+        "Prellung",
+        "Zerrung"
+      ],
+      "revealHint": "VERLETZUNG"
+    },
+    {
+      "id": "g4",
+      "label": "Allergiesymptome",
+      "items": [
+        "Nesselsucht",
+        "Heuschnupfen",
+        "Tränende Augen",
+        "Juckreiz"
+      ],
+      "revealHint": "ALLERGIE"
+    }
+  ]
+}

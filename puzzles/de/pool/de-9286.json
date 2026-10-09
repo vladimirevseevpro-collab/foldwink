@@ -1,0 +1,56 @@
+{
+  "id": "de-9286",
+  "title": "Pflanzenwelt",
+  "difficulty": "medium",
+  "editorialSummary": "Zimmerpflanzen, Wiesenblumen, Wasserpflanzen und Steppengräser.",
+  "meta": {
+    "theme": "Natur",
+    "batch": "de-medium-09"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Grün im Wohnzimmer",
+      "items": [
+        "Geranie",
+        "Gummibaum",
+        "Orchidee",
+        "Aloe"
+      ],
+      "revealHint": "ZIMMER"
+    },
+    {
+      "id": "g2",
+      "label": "Wiesenblumen",
+      "items": [
+        "Kornblume",
+        "Klee",
+        "Glockenblume",
+        "Löwenzahn"
+      ],
+      "revealHint": "WIESE"
+    },
+    {
+      "id": "g3",
+      "label": "Pflanzen am und im Wasser",
+      "items": [
+        "Seerose",
+        "Teichrose",
+        "Rohrkolben",
+        "Wasserpest"
+      ],
+      "revealHint": "WASSER"
+    },
+    {
+      "id": "g4",
+      "label": "Gräser",
+      "items": [
+        "Federgras",
+        "Pampasgras",
+        "Lampenputzergras",
+        "Zittergras"
+      ],
+      "revealHint": "GRAS"
+    }
+  ]
+}

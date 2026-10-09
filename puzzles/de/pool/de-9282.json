@@ -1,0 +1,56 @@
+{
+  "id": "de-9282",
+  "title": "Im Theater",
+  "difficulty": "medium",
+  "editorialSummary": "Theaterarten, Plätze, Backstage und Genres.",
+  "meta": {
+    "theme": "Bühne",
+    "batch": "de-medium-09"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Theaterarten",
+      "items": [
+        "Oper",
+        "Ballett",
+        "Puppentheater",
+        "Schattentheater"
+      ],
+      "revealHint": "THEATER"
+    },
+    {
+      "id": "g2",
+      "label": "Sitzplätze",
+      "items": [
+        "Parkett",
+        "Loge",
+        "Rang",
+        "Balkon"
+      ],
+      "revealHint": "SITZ"
+    },
+    {
+      "id": "g3",
+      "label": "Hinter der Bühne",
+      "items": [
+        "Souffleurkasten",
+        "Garderobe",
+        "Schnürboden",
+        "Requisite"
+      ],
+      "revealHint": "BACKSTAGE"
+    },
+    {
+      "id": "g4",
+      "label": "Bühnengenres",
+      "items": [
+        "Komödie",
+        "Tragödie",
+        "Posse",
+        "Singspiel"
+      ],
+      "revealHint": "GENRE"
+    }
+  ]
+}

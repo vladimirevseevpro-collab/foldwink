@@ -1,0 +1,56 @@
+{
+  "id": "de-9281",
+  "title": "Glaube und Kultur",
+  "difficulty": "medium",
+  "editorialSummary": "Weltreligionen, Gotteshäuser, heilige Schriften und christliche Feste.",
+  "meta": {
+    "theme": "Religionen",
+    "batch": "de-medium-09"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Weltreligionen",
+      "items": [
+        "Christentum",
+        "Islam",
+        "Buddhismus",
+        "Judentum"
+      ],
+      "revealHint": "RELIGION"
+    },
+    {
+      "id": "g2",
+      "label": "Orte der Andacht",
+      "items": [
+        "Kirche",
+        "Moschee",
+        "Synagoge",
+        "Pagode"
+      ],
+      "revealHint": "GOTTESHAUS"
+    },
+    {
+      "id": "g3",
+      "label": "Heilige Schriften",
+      "items": [
+        "Bibel",
+        "Koran",
+        "Tora",
+        "Veden"
+      ],
+      "revealHint": "SCHRIFT"
+    },
+    {
+      "id": "g4",
+      "label": "Kirchliche Feste",
+      "items": [
+        "Weihnachten",
+        "Himmelfahrt",
+        "Pfingsten",
+        "Allerheiligen"
+      ],
+      "revealHint": "FEST"
+    }
+  ]
+}
