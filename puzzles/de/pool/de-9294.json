@@ -1,0 +1,56 @@
+{
+  "id": "de-9294",
+  "title": "Städte Europas",
+  "difficulty": "medium",
+  "editorialSummary": "Städte im Baltikum, in Skandinavien, auf dem Balkan und in Mitteleuropa.",
+  "meta": {
+    "theme": "Geografie",
+    "batch": "de-medium-10"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Städte im Baltikum",
+      "items": [
+        "Riga",
+        "Tallinn",
+        "Vilnius",
+        "Klaipėda"
+      ],
+      "revealHint": "BALTIKUM"
+    },
+    {
+      "id": "g2",
+      "label": "Städte in Skandinavien",
+      "items": [
+        "Göteborg",
+        "Bergen",
+        "Malmö",
+        "Aarhus"
+      ],
+      "revealHint": "SKANDINAVIEN"
+    },
+    {
+      "id": "g3",
+      "label": "Hauptstädte auf dem Balkan",
+      "items": [
+        "Belgrad",
+        "Sofia",
+        "Sarajevo",
+        "Skopje"
+      ],
+      "revealHint": "BALKAN"
+    },
+    {
+      "id": "g4",
+      "label": "Hauptstädte Mitteleuropas",
+      "items": [
+        "Prag",
+        "Warschau",
+        "Budapest",
+        "Bratislava"
+      ],
+      "revealHint": "MITTELEUROPA"
+    }
+  ]
+}

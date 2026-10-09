@@ -1,0 +1,56 @@
+{
+  "id": "de-9291",
+  "title": "Sprachfamilien",
+  "difficulty": "medium",
+  "editorialSummary": "Slawische, germanische, romanische und finno-ugrische Sprachen.",
+  "meta": {
+    "theme": "Sprache",
+    "batch": "de-medium-10"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Slawische Sprachen",
+      "items": [
+        "Polnisch",
+        "Tschechisch",
+        "Bulgarisch",
+        "Serbisch"
+      ],
+      "revealHint": "SLAWISCH"
+    },
+    {
+      "id": "g2",
+      "label": "Germanische Sprachen",
+      "items": [
+        "Niederländisch",
+        "Schwedisch",
+        "Dänisch",
+        "Norwegisch"
+      ],
+      "revealHint": "GERMANISCH"
+    },
+    {
+      "id": "g3",
+      "label": "Romanische Sprachen",
+      "items": [
+        "Portugiesisch",
+        "Katalanisch",
+        "Rumänisch",
+        "Italienisch"
+      ],
+      "revealHint": "ROMANISCH"
+    },
+    {
+      "id": "g4",
+      "label": "Finno-ugrische Sprachen",
+      "items": [
+        "Finnisch",
+        "Ungarisch",
+        "Estnisch",
+        "Karelisch"
+      ],
+      "revealHint": "FINNO-UGRISCH"
+    }
+  ]
+}

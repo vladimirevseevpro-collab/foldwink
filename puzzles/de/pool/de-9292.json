@@ -1,0 +1,56 @@
+{
+  "id": "de-9292",
+  "title": "Kräfte der Natur",
+  "difficulty": "medium",
+  "editorialSummary": "Naturkatastrophen, Vulkane, fossile Brennstoffe und Buntmetalle.",
+  "meta": {
+    "theme": "Erde",
+    "batch": "de-medium-10"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Naturkatastrophen",
+      "items": [
+        "Erdbeben",
+        "Tsunami",
+        "Überschwemmung",
+        "Orkan"
+      ],
+      "revealHint": "KATASTROPHE"
+    },
+    {
+      "id": "g2",
+      "label": "Berühmte Vulkane",
+      "items": [
+        "Vesuv",
+        "Ätna",
+        "Krakatau",
+        "Stromboli"
+      ],
+      "revealHint": "VULKAN"
+    },
+    {
+      "id": "g3",
+      "label": "Fossile Brennstoffe",
+      "items": [
+        "Steinkohle",
+        "Erdöl",
+        "Erdgas",
+        "Torf"
+      ],
+      "revealHint": "BRENNSTOFF"
+    },
+    {
+      "id": "g4",
+      "label": "Nichteisenmetalle",
+      "items": [
+        "Kupfer",
+        "Aluminium",
+        "Zink",
+        "Zinn"
+      ],
+      "revealHint": "METALL"
+    }
+  ]
+}

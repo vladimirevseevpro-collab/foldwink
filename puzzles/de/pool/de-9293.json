@@ -1,0 +1,56 @@
+{
+  "id": "de-9293",
+  "title": "Himmelskörper und Raumfahrt",
+  "difficulty": "medium",
+  "editorialSummary": "Monde, Kometen, Raumfahrtagenturen und Raumsonden.",
+  "meta": {
+    "theme": "Astronomie",
+    "batch": "de-medium-10"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Trabanten des Uranus",
+      "items": [
+        "Titania",
+        "Oberon",
+        "Miranda",
+        "Ariel"
+      ],
+      "revealHint": "URANUS"
+    },
+    {
+      "id": "g2",
+      "label": "Berühmte Kometen",
+      "items": [
+        "Halley",
+        "Hale-Bopp",
+        "Tschurjumow-Gerassimenko",
+        "Shoemaker-Levy 9"
+      ],
+      "revealHint": "KOMET"
+    },
+    {
+      "id": "g3",
+      "label": "Raumfahrtagenturen",
+      "items": [
+        "NASA",
+        "ESA",
+        "Roskosmos",
+        "ISRO"
+      ],
+      "revealHint": "AGENTUR"
+    },
+    {
+      "id": "g4",
+      "label": "Raumsonden",
+      "items": [
+        "Voyager",
+        "Cassini",
+        "Galileo",
+        "New Horizons"
+      ],
+      "revealHint": "SONDE"
+    }
+  ]
+}

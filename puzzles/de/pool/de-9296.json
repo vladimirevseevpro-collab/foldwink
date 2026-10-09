@@ -1,0 +1,56 @@
+{
+  "id": "de-9296",
+  "title": "Spielwelten",
+  "difficulty": "medium",
+  "editorialSummary": "Konsolen, Spieleklassiker, Spielfiguren und Genres.",
+  "meta": {
+    "theme": "Games",
+    "batch": "de-medium-10"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Spielkonsolen",
+      "items": [
+        "PlayStation",
+        "Xbox",
+        "Switch",
+        "Wii"
+      ],
+      "revealHint": "KONSOLE"
+    },
+    {
+      "id": "g2",
+      "label": "Spieleklassiker",
+      "items": [
+        "Tetris",
+        "Minecraft",
+        "Pac-Man",
+        "Metroid"
+      ],
+      "revealHint": "SPIEL"
+    },
+    {
+      "id": "g3",
+      "label": "Spielfiguren",
+      "items": [
+        "Mario",
+        "Sonic",
+        "Lara Croft",
+        "Link"
+      ],
+      "revealHint": "FIGUR"
+    },
+    {
+      "id": "g4",
+      "label": "Spielgenres",
+      "items": [
+        "Rollenspiel",
+        "Ego-Shooter",
+        "Jump 'n' Run",
+        "Strategie"
+      ],
+      "revealHint": "GENRE"
+    }
+  ]
+}

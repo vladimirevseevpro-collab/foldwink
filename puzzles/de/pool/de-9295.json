@@ -1,0 +1,56 @@
+{
+  "id": "de-9295",
+  "title": "Verkehrsschilder",
+  "difficulty": "medium",
+  "editorialSummary": "Verbote, Gebote, Gefahrenzeichen und Hinweise.",
+  "meta": {
+    "theme": "Straße",
+    "batch": "de-medium-10"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Verbotsschilder",
+      "items": [
+        "Halteverbot",
+        "Einfahrt verboten",
+        "Überholverbot",
+        "Tempolimit"
+      ],
+      "revealHint": "VERBOT"
+    },
+    {
+      "id": "g2",
+      "label": "Gebotsschilder",
+      "items": [
+        "Kreisverkehr",
+        "Gehweg",
+        "Radweg",
+        "Mindestgeschwindigkeit"
+      ],
+      "revealHint": "GEBOT"
+    },
+    {
+      "id": "g3",
+      "label": "Gefahrenzeichen",
+      "items": [
+        "Wildwechsel",
+        "Baustelle",
+        "Glatteis",
+        "Steinschlag"
+      ],
+      "revealHint": "GEFAHR"
+    },
+    {
+      "id": "g4",
+      "label": "Hinweisschilder",
+      "items": [
+        "Parkplatz",
+        "Tankstelle",
+        "Krankenhaus",
+        "Autobahn"
+      ],
+      "revealHint": "HINWEIS"
+    }
+  ]
+}

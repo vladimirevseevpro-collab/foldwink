@@ -1,0 +1,56 @@
+{
+  "id": "de-9297",
+  "title": "Arbeit im Gastgewerbe",
+  "difficulty": "medium",
+  "editorialSummary": "Küche, Service, Hotel und Reisebegleitung.",
+  "meta": {
+    "theme": "Berufe",
+    "batch": "de-medium-10"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Am Herd und im Backofen",
+      "items": [
+        "Koch",
+        "Sous-Chef",
+        "Beikoch",
+        "Konditor"
+      ],
+      "revealHint": "KÜCHE"
+    },
+    {
+      "id": "g2",
+      "label": "Im Service",
+      "items": [
+        "Kellner",
+        "Sommelier",
+        "Oberkellner",
+        "Barkeeper"
+      ],
+      "revealHint": "SERVICE"
+    },
+    {
+      "id": "g3",
+      "label": "Im Hotel",
+      "items": [
+        "Empfangschef",
+        "Portier",
+        "Zimmermädchen",
+        "Concierge"
+      ],
+      "revealHint": "HOTEL"
+    },
+    {
+      "id": "g4",
+      "label": "Auf Reisen",
+      "items": [
+        "Reiseleiter",
+        "Animateur",
+        "Fremdenführer",
+        "Skilehrer"
+      ],
+      "revealHint": "REISEN"
+    }
+  ]
+}
