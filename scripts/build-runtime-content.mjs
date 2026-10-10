@@ -69,6 +69,36 @@ function stripPuzzle(source) {
   };
 }
 
+/**
+ * Archive chunks are fetched one at a time as the player progresses, so an
+ * id-sorted archive left RU/DE without a single Hard board until chunk 13
+ * (Master showed "coming soon") and gave German Medium practice only two
+ * boards to cycle. Interleave difficulties deterministically so every
+ * chunk carries the catalogue's easy/medium/hard proportions.
+ */
+function interleaveByDifficulty(entries) {
+  const buckets = new Map();
+  for (const entry of entries) {
+    const key = entry.puzzle.difficulty;
+    if (!buckets.has(key)) buckets.set(key, []);
+    buckets.get(key).push(entry);
+  }
+  const order = ["easy", "medium", "hard", ...[...buckets.keys()].filter((k) => !["easy", "medium", "hard"].includes(k)).sort()];
+  const lists = order.filter((k) => buckets.has(k)).map((k) => ({ items: buckets.get(k), taken: 0 }));
+  const result = [];
+  while (result.length < entries.length) {
+    let best = null;
+    for (const list of lists) {
+      if (list.taken >= list.items.length) continue;
+      const progress = (list.taken + 0.5) / list.items.length;
+      if (!best || progress < best.progress) best = { list, progress };
+    }
+    result.push(best.list.items[best.list.taken]);
+    best.list.taken += 1;
+  }
+  return result;
+}
+
 async function readLanguagePool(language, contentVersion, editorialById) {
   const directory = language === "en" ? join(ROOT, "puzzles", "pool") : join(ROOT, "puzzles", language, "pool");
   const files = (await readdir(directory)).filter((file) => file.endsWith(".json")).sort();
@@ -166,7 +196,9 @@ async function makeLanguage(language) {
     return { ref, puzzle: entry.puzzle };
   });
   const releasedIds = new Set(releaseRefs.map((ref) => ref.puzzleId));
-  const archivePuzzles = allPuzzles.filter((entry) => !releasedIds.has(entry.puzzle.id));
+  const archivePuzzles = interleaveByDifficulty(
+    allPuzzles.filter((entry) => !releasedIds.has(entry.puzzle.id)),
+  );
   assert(bootPuzzles.length === 30, `${language} boot payload must contain the 30 released boards`);
   assert(
     archivePuzzles.length === allPuzzles.length - bootPuzzles.length,
