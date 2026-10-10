@@ -314,3 +314,17 @@ describe("hardReadiness — fallback", () => {
     expect(r.level).not.toBe("locked");
   });
 });
+
+describe("mediumReadiness — starter path consistency", () => {
+  it("a Medium win from the starter path unlocks Medium practice", () => {
+    // 2 easy starters + 3 medium starters: Master is open, so Medium must be too.
+    const stats = mk({ wins: 5, gamesPlayed: 5, mediumWins: 3 });
+    expect(mediumReadiness(stats).unlocked).toBe(true);
+    expect(hardReadiness(stats, 100).unlocked).toBe(true);
+  });
+
+  it("hard wins are not counted as easy wins", () => {
+    const r = mediumReadiness(mk({ wins: 4, gamesPlayed: 4, hardWins: 4 }));
+    expect(r.easyWins).toBe(0);
+  });
+});

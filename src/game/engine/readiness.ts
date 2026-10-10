@@ -108,15 +108,20 @@ function countRecentConfidentEasyWins(stats: Stats): number {
 export function mediumReadiness(stats: Stats): ProgressionSignal {
   const mediumWins = stats.mediumWins ?? 0;
   const mediumLosses = stats.mediumLosses ?? 0;
-  const easyWins = Math.max(0, stats.wins - mediumWins);
-  const easyLosses = Math.max(0, stats.losses - mediumLosses);
+  const hardWins = stats.hardWins ?? 0;
+  const hardLosses = stats.hardLosses ?? 0;
+  const easyWins = Math.max(0, stats.wins - mediumWins - hardWins);
+  const easyLosses = Math.max(0, stats.losses - mediumLosses - hardLosses);
   const easyGames = easyWins + easyLosses;
   const easyWinRate = easyGames > 0 ? easyWins / easyGames : 0;
   const totalMistakes = stats.totalMistakes ?? 0;
   const avgMistakes = stats.gamesPlayed > 0 ? totalMistakes / stats.gamesPlayed : 0;
   const mediumLossStreak = stats.mediumLossStreak ?? 0;
 
-  const unlocked = easyWins >= MEDIUM_UNLOCK_AT;
+  // The starter path already serves Medium boards (wink introduction), so a
+  // player who has won a Medium must never see Practice Medium as locked
+  // while Master (3 Medium wins) is open.
+  const unlocked = easyWins >= MEDIUM_UNLOCK_AT || mediumWins > 0;
   const showNudge = !unlocked && easyWins >= EASY_NUDGE_AT;
 
   // Recommendation thresholds — smarter than raw unlock.
@@ -265,7 +270,7 @@ export function hardReadiness(stats: Stats, hardPoolSize: number): HardProgressi
     unlocked: true,
     level: "unlocked",
     label: "Master Challenge",
-    caption: "Slower reveals, no Wink",
+    caption: "No hint tabs, no Wink — pure deduction",
     fallback,
     mediumWins,
   };
