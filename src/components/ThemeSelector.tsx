@@ -36,7 +36,7 @@ export function ThemeSelector() {
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-line bg-surface hover:bg-surfaceHi text-xs font-semibold text-text shadow-sm transition-colors"
+        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-line text-xs text-muted hover:text-text transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface"
         aria-label="Select Desk Theme"
       >
         <span>🎨</span>

@@ -69,6 +69,7 @@ export function MenuScreen() {
   const stats = useGameStore((s) => s.stats);
   const todayDailyRecord = useGameStore((s) => s.todayDailyRecord);
   const t = useT();
+  const todayLabel = formatTodayLabel(lang);
   const dailyHistory = mergeDailyHistory(loadDailyHistory(), todayDailyRecord);
   const [consentStatus, setConsent] = useState(() => getConsentStatus());
   const [isPassportOpen, setIsPassportOpen] = useState(false);
@@ -213,9 +214,7 @@ export function MenuScreen() {
             <h2 id="today-puzzle-title" className="mt-1 fw-screen-title text-text">
               {t.daily.label}
             </h2>
-            <p className="mt-1 fw-body-copy text-muted">
-              {dailyDone ? t.menu.replayDaily : t.menu.subtitle}
-            </p>
+            <p className="mt-1 fw-body-copy text-muted">{todayLabel}</p>
             <Button
               variant={dailyDone ? "secondary" : "primary"}
               className="mt-3 w-full"
@@ -444,39 +443,25 @@ export function MenuScreen() {
         </>
       )}
 
-      <div className="flex items-center gap-3 flex-wrap justify-center text-[11px] text-muted">
-        <SoundToggle />
-        <HapticsToggle />
-        <span aria-hidden="true" className="opacity-50">
-          ·
-        </span>
-        <LanguageToggle />
-        <span aria-hidden="true" className="opacity-50">
-          ·
-        </span>
-        <ThemeSelector />
-        <span aria-hidden="true" className="opacity-50">
-          ·
-        </span>
-        <button
-          type="button"
-          onClick={openHowToPlay}
-          className="text-muted hover:text-text underline-offset-2 hover:underline transition-colors"
-        >
-          {t.onboarding.menuLink}
-        </button>
-        <span aria-hidden="true" className="opacity-50">
-          ·
-        </span>
-        <AboutFooter />
-        <span aria-hidden="true" className="opacity-50">
-          ·
-        </span>
-        <InstallFoldwink />
-        <span aria-hidden="true" className="opacity-50">
-          ·
-        </span>
-        <span className="tabular-nums">{t.menu.poolSize(poolSize)}</span>
+      <div className="flex w-full max-w-sm flex-col items-center gap-3 text-[11px] text-muted">
+        <div className="flex flex-wrap items-center justify-center gap-2">
+          <SoundToggle />
+          <HapticsToggle />
+          <ThemeSelector />
+          <LanguageToggle />
+        </div>
+        <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+          <button
+            type="button"
+            onClick={openHowToPlay}
+            className="min-h-8 text-muted hover:text-text underline-offset-2 hover:underline transition-colors"
+          >
+            {t.onboarding.menuLink}
+          </button>
+          <AboutFooter />
+          <InstallFoldwink />
+          <span className="tabular-nums">{t.menu.poolSize(poolSize)}</span>
+        </div>
       </div>
 
       {isIosSafariInBrowser() && (
@@ -486,4 +471,18 @@ export function MenuScreen() {
       )}
     </div>
   );
+}
+
+/** "Saturday, 10 October" in the player's language; the tagline already sits under the wordmark. */
+function formatTodayLabel(lang: string): string {
+  try {
+    const label = new Intl.DateTimeFormat(lang, {
+      weekday: "long",
+      day: "numeric",
+      month: "long",
+    }).format(new Date());
+    return label.charAt(0).toLocaleUpperCase(lang) + label.slice(1);
+  } catch {
+    return new Date().toDateString();
+  }
 }

@@ -51,7 +51,7 @@ export function AboutFooter() {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="text-[10px] uppercase text-muted hover:text-text transition-colors"
+        className="min-h-8 text-[11px] text-muted hover:text-text transition-colors"
       >
         {t.about.link}
       </button>

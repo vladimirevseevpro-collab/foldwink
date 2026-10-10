@@ -173,9 +173,7 @@ export function ResultScreen() {
   const archetype = computePlayerArchetype(summary, puzzle.difficulty, active?.winkedGroupId);
 
   const profile = ENABLE_ARCHIVIST_LAYER ? loadArchivistProfile() : null;
-  const activeSeal = profile
-    ? (SEALS.find((s) => s.id === profile.sealId) ?? SEALS[0])
-    : null;
+  const activeSeal = profile ? (SEALS.find((s) => s.id === profile.sealId) ?? SEALS[0]) : null;
 
   const cardOptions = {
     mode: (isDaily ? "daily" : "standard") as "daily" | "standard",
@@ -246,6 +244,53 @@ export function ResultScreen() {
         puzzle={puzzle}
         currentStreak={isZen ? (stats.zenStreak ?? 0) : stats.currentStreak}
       />
+
+      <div className="mt-3 flex flex-col gap-2" data-testid="result-cta-stack">
+        {isDaily ? (
+          <Button onClick={goToMenu}>{t.result.backToMenu}</Button>
+        ) : (
+          <>
+            <Button onClick={startNextSame} data-testid="result-next-puzzle">
+              {t.result.nextPuzzle}
+            </Button>
+            {!isWin && (
+              <Button
+                variant="secondary"
+                onClick={retryCurrent}
+                data-testid="result-retry-puzzle"
+              >
+                {t.result.retryPuzzle}
+              </Button>
+            )}
+          </>
+        )}
+        {!isDaily &&
+          isWin &&
+          puzzle.difficulty === "easy" &&
+          mediumReadiness(stats).unlocked && (
+            <Button variant="secondary" onClick={startMedium} data-testid="result-try-medium">
+              {t.result.tryMedium}
+            </Button>
+          )}
+        <ShareButton text={shareText} card={cardOptions} challengeUrl={officialChallengeUrl} />
+        {duel?.challenge.source === "legacy" && (
+          <button
+            type="button"
+            onClick={handleSendDuelResponse}
+            className="w-full py-2.5 px-4 rounded-xl border border-amber-400/70 bg-amber-500/20 hover:bg-amber-500/30 text-amber-200 text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-sm"
+            data-testid="result-send-duel-response"
+          >
+            <span>{duelResponseSent ? "✓" : "⚔️"}</span>
+            <span>{duelResponseSent ? t.duel.responseSent : t.duel.sendResponse}</span>
+          </button>
+        )}
+      </div>
+
+      {isDaily && (
+        <div className="mt-3 text-center text-[11px] text-muted">
+          <DailyCountdown />
+        </div>
+      )}
 
       {isWin && rewardReceipt && (
         <div
@@ -420,49 +465,6 @@ export function ResultScreen() {
         )}
       </div>
 
-      <div className="mt-3 flex flex-col gap-2" data-testid="result-cta-stack">
-        {isDaily ? (
-          <Button onClick={goToMenu}>{t.result.backToMenu}</Button>
-        ) : (
-          <>
-            <Button onClick={startNextSame} data-testid="result-next-puzzle">
-              {t.result.nextPuzzle}
-            </Button>
-            {!isWin && (
-              <Button
-                variant="secondary"
-                onClick={retryCurrent}
-                data-testid="result-retry-puzzle"
-              >
-                {t.result.retryPuzzle}
-              </Button>
-            )}
-          </>
-        )}
-        {!isDaily &&
-          isWin &&
-          puzzle.difficulty === "easy" &&
-          mediumReadiness(stats).unlocked && (
-            <Button variant="secondary" onClick={startMedium} data-testid="result-try-medium">
-              {t.result.tryMedium}
-            </Button>
-          )}
-        <Button variant="secondary" onClick={showStats}>
-          {t.result.showStats}
-        </Button>
-        {!isDaily && (
-          <Button variant="ghost" onClick={goToMenu}>
-            {t.result.backToMenu}
-          </Button>
-        )}
-      </div>
-
-      {isDaily && (
-        <div className="mt-3 text-center text-[11px] text-muted">
-          <DailyCountdown />
-        </div>
-      )}
-
       {isDaily && dailyMoment && (
         <div
           className="mt-3 rounded-lg border border-line bg-surface px-4 py-3 text-center"
@@ -490,18 +492,14 @@ export function ResultScreen() {
         </div>
       )}
 
-      <div className="mt-3 flex flex-col gap-2">
-        <ShareButton text={shareText} card={cardOptions} challengeUrl={officialChallengeUrl} />
-        {duel?.challenge.source === "legacy" && (
-          <button
-            type="button"
-            onClick={handleSendDuelResponse}
-            className="w-full py-2.5 px-4 rounded-xl border border-amber-400/70 bg-amber-500/20 hover:bg-amber-500/30 text-amber-200 text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-sm"
-            data-testid="result-send-duel-response"
-          >
-            <span>{duelResponseSent ? "✓" : "⚔️"}</span>
-            <span>{duelResponseSent ? t.duel.responseSent : t.duel.sendResponse}</span>
-          </button>
+      <div className="mt-3 flex flex-col gap-2" data-testid="result-secondary-actions">
+        <Button variant="secondary" onClick={showStats}>
+          {t.result.showStats}
+        </Button>
+        {!isDaily && (
+          <Button variant="ghost" onClick={goToMenu}>
+            {t.result.backToMenu}
+          </Button>
         )}
       </div>
 
