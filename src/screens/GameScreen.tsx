@@ -13,7 +13,7 @@ import { canSubmit } from "../game/engine/submit";
 import { colorIndexForGroup } from "../game/solvedColors";
 import { useFeedback } from "../feedback/useFeedback";
 import { GameTimer } from "../components/GameTimer";
-import { useT } from "../i18n/useLanguage";
+import { useLang, useT } from "../i18n/useLanguage";
 import { FoldwinkIcon } from "../components/FoldwinkIcon";
 
 export function GameScreen() {
@@ -29,6 +29,7 @@ export function GameScreen() {
   const winkTab = useGameStore((s) => s.winkTab);
   const feedback = useFeedback();
   const t = useT();
+  const lang = useLang();
   const prevSolvedCount = useRef(0);
   const prevWinkedId = useRef<string | null>(null);
   const [quitArmed, setQuitArmed] = useState(false);
@@ -245,7 +246,11 @@ export function GameScreen() {
               active.mode === "daily"
                 ? t.mode.daily
                 : active.mode === "zen"
-                  ? "ZEN STREAK 🧘"
+                  ? lang === "ru"
+                    ? "СЕРИЯ ДЗЕН 🧘"
+                    : lang === "de"
+                      ? "ZEN-SERIE 🧘"
+                      : "ZEN STREAK 🧘"
                   : t.mode.standard
             }` + (active.mode === "daily" && !active.countsToStats ? ` · ${t.mode.replay}` : "")
           }

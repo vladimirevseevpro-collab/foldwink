@@ -4,19 +4,23 @@ import { formatDuration, computePlayerArchetype } from "../game/engine/result";
 import { solvedClassForGroup, solvedDepthClassForGroup } from "../game/solvedColors";
 import { StatStrip } from "./StatStrip";
 import { VictoryConfetti } from "./VictoryConfetti";
-import { useT } from "../i18n/useLanguage";
+import { useLang, useT } from "../i18n/useLanguage";
+import { localizeResultLabel } from "../i18n/resultLabels";
 
 interface Props {
   summary: ResultSummaryModel;
   puzzle: Puzzle;
   currentStreak: number;
+  /** Same input as the share card so the badge and the card agree. */
+  winkedGroupId?: string | null;
 }
 
-export function ResultSummary({ summary, puzzle, currentStreak }: Props) {
+export function ResultSummary({ summary, puzzle, currentStreak, winkedGroupId }: Props) {
   const t = useT();
+  const lang = useLang();
   const isWin = summary.result === "win";
   const headline = isWin ? t.resultSummary.solved : t.resultSummary.outOfMistakes;
-  const archetype = computePlayerArchetype(summary, puzzle.difficulty);
+  const archetype = computePlayerArchetype(summary, puzzle.difficulty, winkedGroupId);
 
   return (
     <div className="relative z-10 space-y-3 fw-result-pop">
@@ -31,7 +35,7 @@ export function ResultSummary({ summary, puzzle, currentStreak }: Props) {
         <div className="mt-2 flex justify-center">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surfaceHi border border-accent/30 text-accent font-bold text-xs shadow-sm">
             <span aria-hidden="true">{archetype.icon}</span>
-            <span>{archetype.title}</span>
+            <span>{localizeResultLabel(archetype.title, lang)}</span>
           </div>
         </div>
       </div>

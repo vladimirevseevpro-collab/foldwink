@@ -37,7 +37,13 @@ export function ThemeSelector() {
         type="button"
         onClick={() => setIsOpen(!isOpen)}
         className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-line text-xs text-muted hover:text-text transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface"
-        aria-label="Select Desk Theme"
+        aria-label={
+          lang === "ru"
+            ? "Выбрать оформление"
+            : lang === "de"
+              ? "Design wählen"
+              : "Select desk theme"
+        }
       >
         <span>🎨</span>
         <span className="hidden sm:inline">

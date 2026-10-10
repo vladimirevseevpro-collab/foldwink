@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useGameStore } from "../game/state/appStore";
 import { useT, useLang } from "../i18n/useLanguage";
+import { localizeResultLabel } from "../i18n/resultLabels";
 import { useFeedback } from "../feedback/useFeedback";
 import { Button } from "../components/Button";
 import { ResultSummary } from "../components/ResultSummary";
@@ -190,7 +191,7 @@ export function ResultScreen() {
     winkedGroupId: active?.winkedGroupId,
     difficultyLabel: t.difficulty[puzzle.difficulty],
     supporter: isSupporter(),
-    archetype: `${archetype.icon} ${archetype.badge}`,
+    archetype: `${archetype.icon} ${localizeResultLabel(archetype.badge, lang)}`,
     sealIcon: activeSeal?.icon,
     sealLabel: activeSeal?.label,
     dateStr: isDaily ? today : todayLocal(),
@@ -243,6 +244,7 @@ export function ResultScreen() {
         summary={summary}
         puzzle={puzzle}
         currentStreak={isZen ? (stats.zenStreak ?? 0) : stats.currentStreak}
+        winkedGroupId={active?.winkedGroupId}
       />
 
       <div className="mt-3 flex flex-col gap-2" data-testid="result-cta-stack">
@@ -365,7 +367,7 @@ export function ResultScreen() {
                 grade.noWinkMedium || showNewBest ? "text-accent" : "text-text"
               }`}
             >
-              {grade.label}
+              {localizeResultLabel(grade.label, lang)}
             </span>
           </div>
           {(grade.caption || showNewBest) && (
@@ -373,10 +375,15 @@ export function ResultScreen() {
               {showNewBest ? (
                 <>
                   <span className="text-accent">{t.result.newBest(stats.bestStreak)}</span>
-                  {grade.caption && <span className="opacity-70"> · {grade.caption}</span>}
+                  {grade.caption && (
+                    <span className="opacity-70">
+                      {" "}
+                      · {localizeResultLabel(grade.caption, lang)}
+                    </span>
+                  )}
                 </>
               ) : (
-                grade.caption
+                localizeResultLabel(grade.caption, lang)
               )}
             </div>
           )}
