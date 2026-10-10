@@ -1,0 +1,55 @@
+{
+  "id": "de-9466",
+  "title": "Baustelle und Werkstatt",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Handwerk",
+    "batch": "de-easy-07"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Großgerät am Bau",
+      "items": [
+        "Kran",
+        "Radlader",
+        "Walze",
+        "Gerüstbauer"
+      ],
+      "revealHint": "BAU"
+    },
+    {
+      "id": "g2",
+      "label": "Zum Verbinden",
+      "items": [
+        "Nagel",
+        "Schraube",
+        "Dübel",
+        "Leim"
+      ],
+      "revealHint": "VERBINDEN"
+    },
+    {
+      "id": "g3",
+      "label": "Zum Messen",
+      "items": [
+        "Zollstock",
+        "Wasserwaage",
+        "Lot",
+        "Winkel"
+      ],
+      "revealHint": "MESSEN"
+    },
+    {
+      "id": "g4",
+      "label": "Zum Schutz",
+      "items": [
+        "Schutzbrille",
+        "Handschuhe",
+        "Gehörschutz",
+        "Sicherheitsschuhe"
+      ],
+      "revealHint": "SCHUTZ"
+    }
+  ]
+}

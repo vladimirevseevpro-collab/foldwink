@@ -1,0 +1,55 @@
+{
+  "id": "de-9468",
+  "title": "Im Großraumbüro",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Arbeit",
+    "batch": "de-easy-07"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Zum Abheften und Lochen",
+      "items": [
+        "Locher",
+        "Tacker",
+        "Ordner",
+        "Büroklammer"
+      ],
+      "revealHint": "BEDARF"
+    },
+    {
+      "id": "g2",
+      "label": "Besprechung",
+      "items": [
+        "Protokoll",
+        "Tagesordnung",
+        "Beamer",
+        "Flipchart"
+      ],
+      "revealHint": "MEETING"
+    },
+    {
+      "id": "g3",
+      "label": "Post im Büro",
+      "items": [
+        "Briefkasten",
+        "Umschlag",
+        "Stempelkissen",
+        "Frankiermaschine"
+      ],
+      "revealHint": "POST"
+    },
+    {
+      "id": "g4",
+      "label": "Pause im Büro",
+      "items": [
+        "Kaffeeküche",
+        "Mittagspause",
+        "Kantine",
+        "Teekessel"
+      ],
+      "revealHint": "PAUSE"
+    }
+  ]
+}

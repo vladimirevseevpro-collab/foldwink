@@ -1,0 +1,55 @@
+{
+  "id": "de-9464",
+  "title": "Arbeiten in der Küche",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Verben",
+    "batch": "de-easy-07"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Zerkleinern",
+      "items": [
+        "Hacken",
+        "Würfeln",
+        "Raspeln",
+        "Schnetzeln"
+      ],
+      "revealHint": "SCHNEIDEN"
+    },
+    {
+      "id": "g2",
+      "label": "Rühren und Mischen",
+      "items": [
+        "Rühren",
+        "Kneten",
+        "Schlagen",
+        "Unterheben"
+      ],
+      "revealHint": "MISCHEN"
+    },
+    {
+      "id": "g3",
+      "label": "Erhitzen",
+      "items": [
+        "Kochen",
+        "Backen",
+        "Rösten",
+        "Schmoren"
+      ],
+      "revealHint": "HITZE"
+    },
+    {
+      "id": "g4",
+      "label": "Mit Flüssigkeit",
+      "items": [
+        "Ablöschen",
+        "Aufgießen",
+        "Marinieren",
+        "Beträufeln"
+      ],
+      "revealHint": "FLÜSSIGKEIT"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-9462",
+  "title": "Freizeitorte",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Freizeit",
+    "batch": "de-easy-07"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Im Schwimmbad",
+      "items": [
+        "Sprungturm",
+        "Bademeister",
+        "Schwimmflügel",
+        "Nichtschwimmerbecken"
+      ],
+      "revealHint": "BAD"
+    },
+    {
+      "id": "g2",
+      "label": "Im Museum",
+      "items": [
+        "Ausstellung",
+        "Exponat",
+        "Führung",
+        "Audioguide"
+      ],
+      "revealHint": "MUSEUM"
+    },
+    {
+      "id": "g3",
+      "label": "In der Kirche",
+      "items": [
+        "Altar",
+        "Glocke",
+        "Orgel",
+        "Kanzel"
+      ],
+      "revealHint": "KIRCHE"
+    },
+    {
+      "id": "g4",
+      "label": "Auf der Burg",
+      "items": [
+        "Zugbrücke",
+        "Burggraben",
+        "Bergfried",
+        "Ritter"
+      ],
+      "revealHint": "BURG"
+    }
+  ]
+}

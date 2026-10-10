@@ -1,0 +1,55 @@
+{
+  "id": "de-9467",
+  "title": "Zahnbehandlung",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Gesundheit",
+    "batch": "de-easy-07"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "In der Praxis",
+      "items": [
+        "Wartezimmer",
+        "Behandlungsstuhl",
+        "Bohrer",
+        "Zahnspiegel"
+      ],
+      "revealHint": "PRAXIS"
+    },
+    {
+      "id": "g2",
+      "label": "Zahnersatz",
+      "items": [
+        "Krone",
+        "Brücke",
+        "Prothese",
+        "Implantat"
+      ],
+      "revealHint": "ERSATZ"
+    },
+    {
+      "id": "g3",
+      "label": "Vorsorge",
+      "items": [
+        "Kontrolle",
+        "Zahnreinigung",
+        "Fissurenversiegelung",
+        "Fluoridlack"
+      ],
+      "revealHint": "VORSORGE"
+    },
+    {
+      "id": "g4",
+      "label": "Zahnprobleme",
+      "items": [
+        "Karies",
+        "Zahnstein",
+        "Zahnschmerz",
+        "Zahnfleischbluten"
+      ],
+      "revealHint": "PROBLEME"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-9461",
+  "title": "Am Flughafen und Bahnhof",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Reisen",
+    "batch": "de-easy-07"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Am Flughafen",
+      "items": [
+        "Check-in",
+        "Gate",
+        "Gepäckband",
+        "Zoll"
+      ],
+      "revealHint": "FLUGHAFEN"
+    },
+    {
+      "id": "g2",
+      "label": "Am Bahnhof",
+      "items": [
+        "Gleis",
+        "Fahrplan",
+        "Fahrkartenautomat",
+        "Schaffner"
+      ],
+      "revealHint": "BAHNHOF"
+    },
+    {
+      "id": "g3",
+      "label": "Im Hafen",
+      "items": [
+        "Kai",
+        "Lotse",
+        "Containerkran",
+        "Anleger"
+      ],
+      "revealHint": "HAFEN"
+    },
+    {
+      "id": "g4",
+      "label": "Im Hotel",
+      "items": [
+        "Rezeption",
+        "Zimmerservice",
+        "Frühstücksbuffet",
+        "Schlüsselkarte"
+      ],
+      "revealHint": "HOTEL"
+    }
+  ]
+}

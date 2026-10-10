@@ -1,0 +1,55 @@
+{
+  "id": "de-9469",
+  "title": "Spiele",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Freizeit",
+    "batch": "de-easy-07"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Spiele mit Karten",
+      "items": [
+        "Skat",
+        "Mau-Mau",
+        "Rommé",
+        "Doppelkopf"
+      ],
+      "revealHint": "KARTEN"
+    },
+    {
+      "id": "g2",
+      "label": "Spiele mit Würfeln",
+      "items": [
+        "Kniffel",
+        "Mäxchen",
+        "Backgammon",
+        "Würfelpoker"
+      ],
+      "revealHint": "WÜRFEL"
+    },
+    {
+      "id": "g3",
+      "label": "Rätsel",
+      "items": [
+        "Kreuzworträtsel",
+        "Sudoku",
+        "Bilderrätsel",
+        "Silbenrätsel"
+      ],
+      "revealHint": "RÄTSEL"
+    },
+    {
+      "id": "g4",
+      "label": "Zocken",
+      "items": [
+        "Konsole",
+        "Joystick",
+        "Level",
+        "Highscore"
+      ],
+      "revealHint": "VIDEO"
+    }
+  ]
+}

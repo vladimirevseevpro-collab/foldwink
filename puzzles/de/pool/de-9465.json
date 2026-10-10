@@ -1,0 +1,55 @@
+{
+  "id": "de-9465",
+  "title": "Weinberg und Brauerei",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Getränke",
+    "batch": "de-easy-07"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Am Weinberg",
+      "items": [
+        "Rebe",
+        "Winzer",
+        "Traubenlese",
+        "Weinfass"
+      ],
+      "revealHint": "WEIN"
+    },
+    {
+      "id": "g2",
+      "label": "In der Brauerei",
+      "items": [
+        "Hopfen",
+        "Malz",
+        "Braukessel",
+        "Fassbier"
+      ],
+      "revealHint": "BIER"
+    },
+    {
+      "id": "g3",
+      "label": "Hochprozentiges",
+      "items": [
+        "Korn",
+        "Obstler",
+        "Weinbrand",
+        "Kräuterlikör"
+      ],
+      "revealHint": "SCHNAPS"
+    },
+    {
+      "id": "g4",
+      "label": "Gläser",
+      "items": [
+        "Weinglas",
+        "Bierkrug",
+        "Sektflöte",
+        "Schnapsglas"
+      ],
+      "revealHint": "GLAS"
+    }
+  ]
+}

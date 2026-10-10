@@ -1,0 +1,55 @@
+{
+  "id": "de-9463",
+  "title": "Wie man geht",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Verben",
+    "batch": "de-easy-07"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Gehen",
+      "items": [
+        "Schlendern",
+        "Marschieren",
+        "Humpeln",
+        "Stolzieren"
+      ],
+      "revealHint": "GEHEN"
+    },
+    {
+      "id": "g2",
+      "label": "Sprechen",
+      "items": [
+        "Flüstern",
+        "Brüllen",
+        "Murmeln",
+        "Stottern"
+      ],
+      "revealHint": "SPRECHEN"
+    },
+    {
+      "id": "g3",
+      "label": "Lachen",
+      "items": [
+        "Kichern",
+        "Gackern",
+        "Schmunzeln",
+        "Losprusten"
+      ],
+      "revealHint": "LACHEN"
+    },
+    {
+      "id": "g4",
+      "label": "Schauen",
+      "items": [
+        "Starren",
+        "Spähen",
+        "Blinzeln",
+        "Glotzen"
+      ],
+      "revealHint": "SCHAUEN"
+    }
+  ]
+}
