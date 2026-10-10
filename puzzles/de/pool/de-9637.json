@@ -1,0 +1,56 @@
+{
+  "id": "de-9637",
+  "title": "Woher die Redensart?",
+  "difficulty": "hard",
+  "editorialSummary": "Redensarten aus der Seefahrt, der Jagd, dem Rittertum und der Bibel.",
+  "meta": {
+    "theme": "Sprache",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Redensart aus der Seefahrt",
+      "items": [
+        "Klar Schiff machen",
+        "Die Segel streichen",
+        "Vom Stapel lassen",
+        "Ins Schlepptau nehmen"
+      ],
+      "revealHint": "SEEFAHRT"
+    },
+    {
+      "id": "g2",
+      "label": "Redensart aus der Jagd",
+      "items": [
+        "Durch die Lappen gehen",
+        "Auf den Busch klopfen",
+        "Auf die Schliche kommen",
+        "Ins Garn gehen"
+      ],
+      "revealHint": "JAGD"
+    },
+    {
+      "id": "g3",
+      "label": "Redensart aus dem Rittertum",
+      "items": [
+        "Etwas im Schilde führen",
+        "Eine Lanze brechen",
+        "Sich die Sporen verdienen",
+        "Den Fehdehandschuh hinwerfen"
+      ],
+      "revealHint": "RITTER"
+    },
+    {
+      "id": "g4",
+      "label": "Redensart aus der Bibel",
+      "items": [
+        "Perlen vor die Säue werfen",
+        "Sein Licht unter den Scheffel stellen",
+        "Ein Buch mit sieben Siegeln",
+        "Auf Sand bauen"
+      ],
+      "revealHint": "BIBEL"
+    }
+  ]
+}

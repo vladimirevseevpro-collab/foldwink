@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9627",
+  "title": "Day Jobs",
+  "difficulty": "hard",
+  "editorialSummary": "Writers who trained in medicine, spied, trained in law or taught school.",
+  "meta": {
+    "theme": "literature",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Writers trained in medicine",
+      "items": [
+        "Chekhov",
+        "Conan Doyle",
+        "Bulgakov",
+        "Keats"
+      ],
+      "revealHint": "DOCTORS"
+    },
+    {
+      "id": "g2",
+      "label": "Writers who worked in intelligence",
+      "items": [
+        "Fleming",
+        "Greene",
+        "Defoe",
+        "Dahl"
+      ],
+      "revealHint": "SPIES"
+    },
+    {
+      "id": "g3",
+      "label": "Writers trained in law",
+      "items": [
+        "Kafka",
+        "Goethe",
+        "Grisham",
+        "Stevenson"
+      ],
+      "revealHint": "LAWYERS"
+    },
+    {
+      "id": "g4",
+      "label": "Writers who were schoolteachers",
+      "items": [
+        "Golding",
+        "Rowling",
+        "King",
+        "Pullman"
+      ],
+      "revealHint": "TEACHERS"
+    }
+  ]
+}

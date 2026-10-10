@@ -1,0 +1,56 @@
+{
+  "id": "de-9626",
+  "title": "Figurenkabinett",
+  "difficulty": "hard",
+  "editorialSummary": "Comic-Partner, Figuren aus Grimms Märchen, Shakespeare-Heldinnen und Frauen der griechischen Mythologie.",
+  "meta": {
+    "theme": "Literatur",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Bekannter Comic-Partner",
+      "items": [
+        "Obelix",
+        "Foxi",
+        "Struppi",
+        "Jolly Jumper"
+      ],
+      "revealHint": "COMIC"
+    },
+    {
+      "id": "g2",
+      "label": "Figur aus Grimms Märchen",
+      "items": [
+        "Gretel",
+        "Rosenrot",
+        "Schwesterchen",
+        "Pechmarie"
+      ],
+      "revealHint": "GRIMM"
+    },
+    {
+      "id": "g3",
+      "label": "Heldin bei Shakespeare",
+      "items": [
+        "Julia",
+        "Desdemona",
+        "Ophelia",
+        "Cordelia"
+      ],
+      "revealHint": "SHAKESPEARE"
+    },
+    {
+      "id": "g4",
+      "label": "Frau der griechischen Mythologie",
+      "items": [
+        "Eurydike",
+        "Penelope",
+        "Ariadne",
+        "Antigone"
+      ],
+      "revealHint": "GRIECHISCHER MYTHOS"
+    }
+  ]
+}

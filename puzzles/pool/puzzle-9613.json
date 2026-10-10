@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9613",
+  "title": "Units of Measure",
+  "difficulty": "hard",
+  "editorialSummary": "Units of force or pressure, radiation, magnetism and electricity.",
+  "meta": {
+    "theme": "science",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Units of force or pressure",
+      "items": [
+        "Newton",
+        "Pascal",
+        "Dyne",
+        "Bar"
+      ],
+      "revealHint": "FORCE / PRESSURE"
+    },
+    {
+      "id": "g2",
+      "label": "Units of radiation",
+      "items": [
+        "Becquerel",
+        "Gray",
+        "Sievert",
+        "Curie"
+      ],
+      "revealHint": "RADIATION"
+    },
+    {
+      "id": "g3",
+      "label": "Units of magnetism",
+      "items": [
+        "Tesla",
+        "Weber",
+        "Gauss",
+        "Maxwell"
+      ],
+      "revealHint": "MAGNETISM"
+    },
+    {
+      "id": "g4",
+      "label": "Units of electricity",
+      "items": [
+        "Volt",
+        "Ohm",
+        "Farad",
+        "Coulomb"
+      ],
+      "revealHint": "ELECTRICITY"
+    }
+  ]
+}

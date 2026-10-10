@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9650",
+  "title": "Call Signs",
+  "difficulty": "hard",
+  "editorialSummary": "NATO alphabet words, Greek letters, metric prefixes and ballroom or Latin dances.",
+  "meta": {
+    "theme": "wordplay",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "NATO phonetic alphabet words",
+      "items": [
+        "Quebec",
+        "Hotel",
+        "Whiskey",
+        "Sierra"
+      ],
+      "revealHint": "NATO"
+    },
+    {
+      "id": "g2",
+      "label": "Greek letters",
+      "items": [
+        "Gamma",
+        "Omicron",
+        "Sigma",
+        "Lambda"
+      ],
+      "revealHint": "GREEK"
+    },
+    {
+      "id": "g3",
+      "label": "Metric prefixes",
+      "items": [
+        "Mega",
+        "Giga",
+        "Nano",
+        "Pico"
+      ],
+      "revealHint": "PREFIXES"
+    },
+    {
+      "id": "g4",
+      "label": "Partner dances",
+      "items": [
+        "Waltz",
+        "Rumba",
+        "Polka",
+        "Mambo"
+      ],
+      "revealHint": "DANCES"
+    }
+  ]
+}

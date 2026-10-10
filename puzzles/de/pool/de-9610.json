@@ -1,0 +1,56 @@
+{
+  "id": "de-9610",
+  "title": "Woher der Name?",
+  "difficulty": "hard",
+  "editorialSummary": "Wörter, die auf Personen, Orte, mythologische Figuren oder Markennamen zurückgehen.",
+  "meta": {
+    "theme": "Sprache",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Nach einer realen Person benannt",
+      "items": [
+        "Litfaßsäule",
+        "Zeppelin",
+        "Saxophon",
+        "Guillotine"
+      ],
+      "revealHint": "PERSON"
+    },
+    {
+      "id": "g2",
+      "label": "Nach einem Ort benannt",
+      "items": [
+        "Bikini",
+        "Marathon",
+        "Bajonett",
+        "Kanarienvogel"
+      ],
+      "revealHint": "ORT"
+    },
+    {
+      "id": "g3",
+      "label": "Nach einer Gestalt der griechischen Mythologie",
+      "items": [
+        "Panik",
+        "Morphium",
+        "Erotik",
+        "Echo"
+      ],
+      "revealHint": "MYTHOS"
+    },
+    {
+      "id": "g4",
+      "label": "Ursprünglich ein Markenname",
+      "items": [
+        "Uhu",
+        "Fön",
+        "Tesa",
+        "Labello"
+      ],
+      "revealHint": "MARKE"
+    }
+  ]
+}

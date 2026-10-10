@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9641",
+  "title": "The Ologies",
+  "difficulty": "hard",
+  "editorialSummary": "Studies of animals, of the Earth, of medicine and of man-made objects.",
+  "meta": {
+    "theme": "science",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Studies of animal groups",
+      "items": [
+        "Ornithology",
+        "Herpetology",
+        "Ichthyology",
+        "Entomology"
+      ],
+      "revealHint": "ZOOLOGY"
+    },
+    {
+      "id": "g2",
+      "label": "Earth-science studies",
+      "items": [
+        "Seismology",
+        "Speleology",
+        "Glaciology",
+        "Volcanology"
+      ],
+      "revealHint": "EARTH"
+    },
+    {
+      "id": "g3",
+      "label": "Medical specialties",
+      "items": [
+        "Nephrology",
+        "Dermatology",
+        "Haematology",
+        "Oncology"
+      ],
+      "revealHint": "MEDICINE"
+    },
+    {
+      "id": "g4",
+      "label": "Studies of flags, bells, clocks, wine",
+      "items": [
+        "Vexillology",
+        "Campanology",
+        "Horology",
+        "Oenology"
+      ],
+      "revealHint": "OBJECTS"
+    }
+  ]
+}

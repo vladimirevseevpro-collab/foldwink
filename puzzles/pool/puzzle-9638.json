@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9638",
+  "title": "Mixology",
+  "difficulty": "hard",
+  "editorialSummary": "Classic cocktails based on gin, rum, whiskey and vodka.",
+  "meta": {
+    "theme": "drinks",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Gin cocktails",
+      "items": [
+        "Negroni",
+        "Gimlet",
+        "Aviation",
+        "Tom Collins"
+      ],
+      "revealHint": "GIN"
+    },
+    {
+      "id": "g2",
+      "label": "Rum cocktails",
+      "items": [
+        "Mojito",
+        "Daiquiri",
+        "Mai Tai",
+        "Piña Colada"
+      ],
+      "revealHint": "RUM"
+    },
+    {
+      "id": "g3",
+      "label": "Whisk(e)y cocktails",
+      "items": [
+        "Manhattan",
+        "Rob Roy",
+        "Mint Julep",
+        "Old Fashioned"
+      ],
+      "revealHint": "WHISKEY"
+    },
+    {
+      "id": "g4",
+      "label": "Vodka cocktails",
+      "items": [
+        "Cosmopolitan",
+        "Moscow Mule",
+        "Screwdriver",
+        "Bloody Mary"
+      ],
+      "revealHint": "VODKA"
+    }
+  ]
+}

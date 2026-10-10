@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9618",
+  "title": "Battle Lines",
+  "difficulty": "hard",
+  "editorialSummary": "Battles of the Hundred Years' War, Napoleonic Wars, First World War and American Civil War.",
+  "meta": {
+    "theme": "history",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Hundred Years' War battles",
+      "items": [
+        "Crécy",
+        "Poitiers",
+        "Agincourt",
+        "Castillon"
+      ],
+      "revealHint": "1337-1453"
+    },
+    {
+      "id": "g2",
+      "label": "Napoleonic battles",
+      "items": [
+        "Austerlitz",
+        "Jena",
+        "Borodino",
+        "Wagram"
+      ],
+      "revealHint": "NAPOLEON"
+    },
+    {
+      "id": "g3",
+      "label": "First World War battles",
+      "items": [
+        "Somme",
+        "Verdun",
+        "Marne",
+        "Passchendaele"
+      ],
+      "revealHint": "1914-1918"
+    },
+    {
+      "id": "g4",
+      "label": "American Civil War battles",
+      "items": [
+        "Gettysburg",
+        "Antietam",
+        "Shiloh",
+        "Vicksburg"
+      ],
+      "revealHint": "1861-1865"
+    }
+  ]
+}

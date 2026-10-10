@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9629",
+  "title": "Satellite Navigation",
+  "difficulty": "hard",
+  "editorialSummary": "Moons of Saturn, moons of Uranus, comets and space probes.",
+  "meta": {
+    "theme": "astronomy",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Moons of Saturn",
+      "items": [
+        "Titan",
+        "Enceladus",
+        "Rhea",
+        "Mimas"
+      ],
+      "revealHint": "SATURN"
+    },
+    {
+      "id": "g2",
+      "label": "Moons of Uranus",
+      "items": [
+        "Miranda",
+        "Ariel",
+        "Titania",
+        "Oberon"
+      ],
+      "revealHint": "URANUS"
+    },
+    {
+      "id": "g3",
+      "label": "Named comets",
+      "items": [
+        "Halley",
+        "Hale-Bopp",
+        "Encke",
+        "Hyakutake"
+      ],
+      "revealHint": "COMETS"
+    },
+    {
+      "id": "g4",
+      "label": "Robotic space probes",
+      "items": [
+        "Voyager",
+        "Cassini",
+        "Juno",
+        "Rosetta"
+      ],
+      "revealHint": "PROBES"
+    }
+  ]
+}

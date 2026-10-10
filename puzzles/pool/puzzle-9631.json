@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9631",
+  "title": "Archipelago Mix",
+  "difficulty": "hard",
+  "editorialSummary": "Greek, Italian, Spanish and Scottish islands.",
+  "meta": {
+    "theme": "geography",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Greek islands",
+      "items": [
+        "Corfu",
+        "Rhodes",
+        "Santorini",
+        "Mykonos"
+      ],
+      "revealHint": "GREECE"
+    },
+    {
+      "id": "g2",
+      "label": "Italian islands",
+      "items": [
+        "Capri",
+        "Elba",
+        "Ischia",
+        "Lampedusa"
+      ],
+      "revealHint": "ITALY"
+    },
+    {
+      "id": "g3",
+      "label": "Spanish islands",
+      "items": [
+        "Ibiza",
+        "Menorca",
+        "Tenerife",
+        "Lanzarote"
+      ],
+      "revealHint": "SPAIN"
+    },
+    {
+      "id": "g4",
+      "label": "Scottish islands",
+      "items": [
+        "Skye",
+        "Mull",
+        "Islay",
+        "Arran"
+      ],
+      "revealHint": "SCOTLAND"
+    }
+  ]
+}

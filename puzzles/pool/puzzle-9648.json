@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9648",
+  "title": "Legendary Kit",
+  "difficulty": "hard",
+  "editorialSummary": "Legendary swords, fabled paradises, mythical horses and legendary ships.",
+  "meta": {
+    "theme": "myth",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Legendary or fictional swords",
+      "items": [
+        "Excalibur",
+        "Andúril",
+        "Sting",
+        "Durendal"
+      ],
+      "revealHint": "SWORDS"
+    },
+    {
+      "id": "g2",
+      "label": "Mythic or fabled paradises",
+      "items": [
+        "Valhalla",
+        "Elysium",
+        "Avalon",
+        "Shangri-La"
+      ],
+      "revealHint": "PARADISES"
+    },
+    {
+      "id": "g3",
+      "label": "Mythical horse-like creatures",
+      "items": [
+        "Pegasus",
+        "Sleipnir",
+        "Kelpie",
+        "Unicorn"
+      ],
+      "revealHint": "HORSES"
+    },
+    {
+      "id": "g4",
+      "label": "Legendary or fictional ships",
+      "items": [
+        "Argo",
+        "Flying Dutchman",
+        "Nautilus",
+        "Black Pearl"
+      ],
+      "revealHint": "SHIPS"
+    }
+  ]
+}

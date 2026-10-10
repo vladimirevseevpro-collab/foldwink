@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9621",
+  "title": "Dry Spells",
+  "difficulty": "hard",
+  "editorialSummary": "Deserts of Asia, Africa, the Americas and Australia.",
+  "meta": {
+    "theme": "geography",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Deserts of Asia",
+      "items": [
+        "Gobi",
+        "Taklamakan",
+        "Thar",
+        "Karakum"
+      ],
+      "revealHint": "ASIA"
+    },
+    {
+      "id": "g2",
+      "label": "Deserts of Africa",
+      "items": [
+        "Sahara",
+        "Kalahari",
+        "Namib",
+        "Nubian"
+      ],
+      "revealHint": "AFRICA"
+    },
+    {
+      "id": "g3",
+      "label": "Deserts of the Americas",
+      "items": [
+        "Atacama",
+        "Mojave",
+        "Sonoran",
+        "Chihuahuan"
+      ],
+      "revealHint": "AMERICAS"
+    },
+    {
+      "id": "g4",
+      "label": "Deserts of Australia",
+      "items": [
+        "Simpson",
+        "Gibson",
+        "Tanami",
+        "Great Sandy"
+      ],
+      "revealHint": "AUSTRALIA"
+    }
+  ]
+}

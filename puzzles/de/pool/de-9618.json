@@ -1,0 +1,56 @@
+{
+  "id": "de-9618",
+  "title": "Was fehlt hinten?",
+  "difficulty": "hard",
+  "editorialSummary": "Jede Karte ergänzt genau ein Wort: ___zeit, ___werk, ___geld oder ___zug.",
+  "meta": {
+    "theme": "Sprache",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Passt vor ZEIT",
+      "items": [
+        "Hoch",
+        "Frei",
+        "Halb",
+        "Sommer"
+      ],
+      "revealHint": "___ZEIT"
+    },
+    {
+      "id": "g2",
+      "label": "Passt vor WERK",
+      "items": [
+        "Feuer",
+        "Laub",
+        "Stock",
+        "Kraft"
+      ],
+      "revealHint": "___WERK"
+    },
+    {
+      "id": "g3",
+      "label": "Passt vor GELD",
+      "items": [
+        "Taschen",
+        "Trink",
+        "Klein",
+        "Bar"
+      ],
+      "revealHint": "___GELD"
+    },
+    {
+      "id": "g4",
+      "label": "Passt vor ZUG",
+      "items": [
+        "Atem",
+        "Schach",
+        "Um",
+        "Güter"
+      ],
+      "revealHint": "___ZUG"
+    }
+  ]
+}

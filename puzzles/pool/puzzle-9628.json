@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9628",
+  "title": "Italian Deli",
+  "difficulty": "hard",
+  "editorialSummary": "Italian cheeses, pasta shapes, cured meats and desserts.",
+  "meta": {
+    "theme": "food",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Italian cheeses",
+      "items": [
+        "Taleggio",
+        "Pecorino",
+        "Fontina",
+        "Gorgonzola"
+      ],
+      "revealHint": "FORMAGGI"
+    },
+    {
+      "id": "g2",
+      "label": "Pasta cuts from Italy",
+      "items": [
+        "Orecchiette",
+        "Bucatini",
+        "Pappardelle",
+        "Rigatoni"
+      ],
+      "revealHint": "PASTA"
+    },
+    {
+      "id": "g3",
+      "label": "Italian cured meats",
+      "items": [
+        "Bresaola",
+        "Mortadella",
+        "Pancetta",
+        "Coppa"
+      ],
+      "revealHint": "SALUMI"
+    },
+    {
+      "id": "g4",
+      "label": "Italian desserts",
+      "items": [
+        "Tiramisu",
+        "Cannoli",
+        "Panna cotta",
+        "Zabaglione"
+      ],
+      "revealHint": "DOLCI"
+    }
+  ]
+}

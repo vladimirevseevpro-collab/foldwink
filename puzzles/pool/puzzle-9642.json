@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9642",
+  "title": "Ruling Families",
+  "difficulty": "hard",
+  "editorialSummary": "Chinese dynasties, English royal houses, continental royal houses and Mughal emperors.",
+  "meta": {
+    "theme": "history",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Chinese dynasties",
+      "items": [
+        "Ming",
+        "Tang",
+        "Song",
+        "Han"
+      ],
+      "revealHint": "CHINA"
+    },
+    {
+      "id": "g2",
+      "label": "English royal houses",
+      "items": [
+        "Tudor",
+        "Stuart",
+        "Plantagenet",
+        "Windsor"
+      ],
+      "revealHint": "ENGLAND"
+    },
+    {
+      "id": "g3",
+      "label": "Continental royal houses",
+      "items": [
+        "Habsburg",
+        "Bourbon",
+        "Romanov",
+        "Hohenzollern"
+      ],
+      "revealHint": "CONTINENT"
+    },
+    {
+      "id": "g4",
+      "label": "Mughal emperors",
+      "items": [
+        "Babur",
+        "Akbar",
+        "Jahangir",
+        "Shah Jahan"
+      ],
+      "revealHint": "MUGHALS"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "de-9604",
+  "title": "Nachnamen mit Rang",
+  "difficulty": "hard",
+  "editorialSummary": "Deutsche Literaturnobelpreisträger, Physiknobelpreisträger, Komponisten des 20. Jahrhunderts und Philosophen des 17. bis 19. Jahrhunderts.",
+  "meta": {
+    "theme": "Kultur",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Literaturnobelpreisträger aus Deutschland",
+      "items": [
+        "Böll",
+        "Grass",
+        "Mommsen",
+        "Heyse"
+      ],
+      "revealHint": "LITERATURNOBELPREIS"
+    },
+    {
+      "id": "g2",
+      "label": "Physiknobelpreisträger aus Deutschland",
+      "items": [
+        "Röntgen",
+        "Laue",
+        "Heisenberg",
+        "Born"
+      ],
+      "revealHint": "PHYSIKNOBELPREIS"
+    },
+    {
+      "id": "g3",
+      "label": "Deutsche Komponisten des 20. Jahrhunderts",
+      "items": [
+        "Orff",
+        "Henze",
+        "Weill",
+        "Reger"
+      ],
+      "revealHint": "KOMPONIST"
+    },
+    {
+      "id": "g4",
+      "label": "Deutsche Philosophen des 17. bis 19. Jh.",
+      "items": [
+        "Fichte",
+        "Hegel",
+        "Schelling",
+        "Leibniz"
+      ],
+      "revealHint": "PHILOSOPH"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9602",
+  "title": "Hidden Depths",
+  "difficulty": "hard",
+  "editorialSummary": "Words hiding a metal, a tree, a body part and a number.",
+  "meta": {
+    "theme": "wordplay",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Hides a metal",
+      "items": [
+        "Destiny",
+        "Pleading",
+        "Environment",
+        "Marigold"
+      ],
+      "revealHint": "METAL INSIDE"
+    },
+    {
+      "id": "g2",
+      "label": "Hides a tree",
+      "items": [
+        "Soaking",
+        "Helmet",
+        "Bashful",
+        "Alpine"
+      ],
+      "revealHint": "TREE INSIDE"
+    },
+    {
+      "id": "g3",
+      "label": "Hides a body part",
+      "items": [
+        "Charming",
+        "Elegant",
+        "Chipper",
+        "Clipboard"
+      ],
+      "revealHint": "BODY PART INSIDE"
+    },
+    {
+      "id": "g4",
+      "label": "Hides a number",
+      "items": [
+        "Often",
+        "Alone",
+        "Weight",
+        "Honey"
+      ],
+      "revealHint": "NUMBER INSIDE"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9647",
+  "title": "Know Your Varieties",
+  "difficulty": "hard",
+  "editorialSummary": "Varieties of apple, potato, wine grape and tomato.",
+  "meta": {
+    "theme": "food",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Apple varieties",
+      "items": [
+        "Braeburn",
+        "Gala",
+        "Fuji",
+        "Pink Lady"
+      ],
+      "revealHint": "APPLES"
+    },
+    {
+      "id": "g2",
+      "label": "Potato varieties",
+      "items": [
+        "King Edward",
+        "Maris Piper",
+        "Desiree",
+        "Yukon Gold"
+      ],
+      "revealHint": "POTATOES"
+    },
+    {
+      "id": "g3",
+      "label": "Wine grape varieties",
+      "items": [
+        "Riesling",
+        "Malbec",
+        "Shiraz",
+        "Merlot"
+      ],
+      "revealHint": "GRAPES"
+    },
+    {
+      "id": "g4",
+      "label": "Tomato varieties",
+      "items": [
+        "Beefsteak",
+        "Roma",
+        "San Marzano",
+        "Cherry"
+      ],
+      "revealHint": "TOMATOES"
+    }
+  ]
+}

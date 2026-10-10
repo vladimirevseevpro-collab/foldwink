@@ -1,0 +1,56 @@
+{
+  "id": "de-9625",
+  "title": "Teekesselchen-Zoo",
+  "difficulty": "hard",
+  "editorialSummary": "Vögel, Fische, Insekten und Pflanzen, deren Namen noch eine zweite Bedeutung haben.",
+  "meta": {
+    "theme": "Sprache",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Ein Vogel mit zweiter Bedeutung",
+      "items": [
+        "Strauß",
+        "Star",
+        "Kauz",
+        "Gimpel"
+      ],
+      "revealHint": "VOGEL"
+    },
+    {
+      "id": "g2",
+      "label": "Ein Fisch mit zweiter Bedeutung",
+      "items": [
+        "Scholle",
+        "Barsch",
+        "Hering",
+        "Wels"
+      ],
+      "revealHint": "FISCH"
+    },
+    {
+      "id": "g3",
+      "label": "Ein Insekt mit zweiter Bedeutung",
+      "items": [
+        "Wanze",
+        "Grille",
+        "Bremse",
+        "Käfer"
+      ],
+      "revealHint": "INSEKT"
+    },
+    {
+      "id": "g4",
+      "label": "Eine Pflanze mit zweiter Bedeutung",
+      "items": [
+        "Weide",
+        "Kiefer",
+        "Iris",
+        "Erika"
+      ],
+      "revealHint": "PFLANZE"
+    }
+  ]
+}

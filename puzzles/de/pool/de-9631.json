@@ -1,0 +1,56 @@
+{
+  "id": "de-9631",
+  "title": "Zahlenzirkel",
+  "difficulty": "hard",
+  "editorialSummary": "Primzahlen, Quadratzahlen, Fibonacci-Zahlen und Zweierpotenzen – jede Zahl gehört nur in eine dieser Familien.",
+  "meta": {
+    "theme": "Mathematik",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Primzahlen",
+      "items": [
+        "7",
+        "19",
+        "41",
+        "53"
+      ],
+      "revealHint": "PRIMZAHL"
+    },
+    {
+      "id": "g2",
+      "label": "Quadratzahlen",
+      "items": [
+        "36",
+        "49",
+        "81",
+        "121"
+      ],
+      "revealHint": "QUADRATZAHL"
+    },
+    {
+      "id": "g3",
+      "label": "Fibonacci-Zahlen",
+      "items": [
+        "21",
+        "34",
+        "55",
+        "377"
+      ],
+      "revealHint": "FIBONACCI"
+    },
+    {
+      "id": "g4",
+      "label": "Zweierpotenzen",
+      "items": [
+        "32",
+        "128",
+        "512",
+        "2048"
+      ],
+      "revealHint": "ZWEIERPOTENZ"
+    }
+  ]
+}

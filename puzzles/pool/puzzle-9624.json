@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9624",
+  "title": "Shades of Meaning",
+  "difficulty": "hard",
+  "editorialSummary": "Words that follow Grand, Black, White and Dead.",
+  "meta": {
+    "theme": "phrases",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Grand ___",
+      "items": [
+        "Piano",
+        "Slam",
+        "Canyon",
+        "Jury"
+      ],
+      "revealHint": "GRAND"
+    },
+    {
+      "id": "g2",
+      "label": "Black ___",
+      "items": [
+        "Sheep",
+        "Friday",
+        "Mail",
+        "Widow"
+      ],
+      "revealHint": "BLACK"
+    },
+    {
+      "id": "g3",
+      "label": "White ___",
+      "items": [
+        "Elephant",
+        "Lie",
+        "Wash",
+        "Noise"
+      ],
+      "revealHint": "WHITE"
+    },
+    {
+      "id": "g4",
+      "label": "Dead ___",
+      "items": [
+        "End",
+        "Beat",
+        "Ringer",
+        "Weight"
+      ],
+      "revealHint": "DEAD"
+    }
+  ]
+}

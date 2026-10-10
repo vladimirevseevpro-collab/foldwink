@@ -1,0 +1,56 @@
+{
+  "id": "de-9606",
+  "title": "Steine, Bäume, Kraut und Sterne",
+  "difficulty": "hard",
+  "editorialSummary": "Jede Karte ergänzt genau ein Wort: ___stein, ___baum, ___kraut oder ___stern.",
+  "meta": {
+    "theme": "Sprache",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Passt vor STEIN",
+      "items": [
+        "Grab",
+        "Edel",
+        "Bern",
+        "Kiesel"
+      ],
+      "revealHint": "___STEIN"
+    },
+    {
+      "id": "g2",
+      "label": "Passt vor BAUM",
+      "items": [
+        "Tannen",
+        "Stamm",
+        "Schlag",
+        "Gummi"
+      ],
+      "revealHint": "___BAUM"
+    },
+    {
+      "id": "g3",
+      "label": "Passt vor KRAUT",
+      "items": [
+        "Sauer",
+        "Weiß",
+        "Bohnen",
+        "Heide"
+      ],
+      "revealHint": "___KRAUT"
+    },
+    {
+      "id": "g4",
+      "label": "Passt vor STERN",
+      "items": [
+        "Morgen",
+        "Abend",
+        "Nord",
+        "See"
+      ],
+      "revealHint": "___STERN"
+    }
+  ]
+}

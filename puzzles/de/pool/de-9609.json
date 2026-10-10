@@ -1,0 +1,56 @@
+{
+  "id": "de-9609",
+  "title": "Geliehene Wörter",
+  "difficulty": "hard",
+  "editorialSummary": "Scheinanglizismen und Lehnwörter aus dem Französischen, dem Italienischen und dem Japanischen.",
+  "meta": {
+    "theme": "Sprache",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Scheinanglizismen",
+      "items": [
+        "Handy",
+        "Beamer",
+        "Oldtimer",
+        "Smoking"
+      ],
+      "revealHint": "SCHEINANGLIZISMUS"
+    },
+    {
+      "id": "g2",
+      "label": "Lehnwörter aus dem Französischen",
+      "items": [
+        "Portemonnaie",
+        "Trottoir",
+        "Chauffeur",
+        "Etage"
+      ],
+      "revealHint": "FRANZÖSISCH"
+    },
+    {
+      "id": "g3",
+      "label": "Lehnwörter aus dem Italienischen",
+      "items": [
+        "Konto",
+        "Saldo",
+        "Bankrott",
+        "Porto"
+      ],
+      "revealHint": "ITALIENISCH"
+    },
+    {
+      "id": "g4",
+      "label": "Lehnwörter aus dem Japanischen",
+      "items": [
+        "Tsunami",
+        "Karaoke",
+        "Emoji",
+        "Bonsai"
+      ],
+      "revealHint": "JAPANISCH"
+    }
+  ]
+}

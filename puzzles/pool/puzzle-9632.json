@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9632",
+  "title": "Named Ideas",
+  "difficulty": "hard",
+  "editorialSummary": "Names attached to a famous law, effect, principle or paradox.",
+  "meta": {
+    "theme": "science",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "___'s law",
+      "items": [
+        "Hooke",
+        "Boyle",
+        "Murphy",
+        "Moore"
+      ],
+      "revealHint": "LAW"
+    },
+    {
+      "id": "g2",
+      "label": "___ effect",
+      "items": [
+        "Doppler",
+        "Coriolis",
+        "Streisand",
+        "Mandela"
+      ],
+      "revealHint": "EFFECT"
+    },
+    {
+      "id": "g3",
+      "label": "___ principle",
+      "items": [
+        "Archimedes",
+        "Le Chatelier",
+        "Peter",
+        "Heisenberg"
+      ],
+      "revealHint": "PRINCIPLE"
+    },
+    {
+      "id": "g4",
+      "label": "___ paradox",
+      "items": [
+        "Simpson",
+        "Fermi",
+        "Olbers",
+        "Russell"
+      ],
+      "revealHint": "PARADOX"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9646",
+  "title": "Board Room",
+  "difficulty": "hard",
+  "editorialSummary": "Chess openings, classic Monopoly tokens, Cluedo weapons and Cluedo suspects.",
+  "meta": {
+    "theme": "games",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Chess openings",
+      "items": [
+        "Sicilian",
+        "French",
+        "Ruy Lopez",
+        "King's Gambit"
+      ],
+      "revealHint": "OPENINGS"
+    },
+    {
+      "id": "g2",
+      "label": "Classic Monopoly tokens",
+      "items": [
+        "Thimble",
+        "Boot",
+        "Wheelbarrow",
+        "Battleship"
+      ],
+      "revealHint": "MONOPOLY"
+    },
+    {
+      "id": "g3",
+      "label": "Cluedo weapons",
+      "items": [
+        "Candlestick",
+        "Dagger",
+        "Lead pipe",
+        "Revolver"
+      ],
+      "revealHint": "WEAPONS"
+    },
+    {
+      "id": "g4",
+      "label": "Cluedo suspects",
+      "items": [
+        "Mustard",
+        "Plum",
+        "Scarlett",
+        "Peacock"
+      ],
+      "revealHint": "SUSPECTS"
+    }
+  ]
+}

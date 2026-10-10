@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9607",
+  "title": "River Cities",
+  "difficulty": "hard",
+  "editorialSummary": "Cities on the Danube, the Rhine, the Elbe and the Rhone.",
+  "meta": {
+    "theme": "geography",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Cities on the Danube",
+      "items": [
+        "Vienna",
+        "Budapest",
+        "Bratislava",
+        "Belgrade"
+      ],
+      "revealHint": "DANUBE"
+    },
+    {
+      "id": "g2",
+      "label": "Cities on the Rhine",
+      "items": [
+        "Cologne",
+        "Basel",
+        "Bonn",
+        "Mainz"
+      ],
+      "revealHint": "RHINE"
+    },
+    {
+      "id": "g3",
+      "label": "Cities on the Elbe",
+      "items": [
+        "Dresden",
+        "Hamburg",
+        "Magdeburg",
+        "Wittenberg"
+      ],
+      "revealHint": "ELBE"
+    },
+    {
+      "id": "g4",
+      "label": "Cities on the Rhone",
+      "items": [
+        "Lyon",
+        "Geneva",
+        "Avignon",
+        "Arles"
+      ],
+      "revealHint": "RHONE"
+    }
+  ]
+}

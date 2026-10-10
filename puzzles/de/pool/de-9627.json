@@ -1,0 +1,56 @@
+{
+  "id": "de-9627",
+  "title": "Innere Werte",
+  "difficulty": "hard",
+  "editorialSummary": "Teile des Auges, des Ohrs, des Zahns und des Gehirns – viele klingen nach Werkstatt, Küche oder Garten.",
+  "meta": {
+    "theme": "Biologie",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Teil des Auges",
+      "items": [
+        "Linse",
+        "Netzhaut",
+        "Pupille",
+        "Glaskörper"
+      ],
+      "revealHint": "AUGE"
+    },
+    {
+      "id": "g2",
+      "label": "Teil des Ohrs",
+      "items": [
+        "Hammer",
+        "Amboss",
+        "Steigbügel",
+        "Schnecke"
+      ],
+      "revealHint": "OHR"
+    },
+    {
+      "id": "g3",
+      "label": "Teil des Zahns",
+      "items": [
+        "Krone",
+        "Wurzel",
+        "Schmelz",
+        "Pulpa"
+      ],
+      "revealHint": "ZAHN"
+    },
+    {
+      "id": "g4",
+      "label": "Teil des Gehirns",
+      "items": [
+        "Balken",
+        "Hippocampus",
+        "Kleinhirn",
+        "Hypothalamus"
+      ],
+      "revealHint": "GEHIRN"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "de-9648",
+  "title": "Mehrzahl-Muster",
+  "difficulty": "hard",
+  "editorialSummary": "Substantive nach ihrer Pluralbildung: mit -s, mit Umlaut und -er, nur mit Umlaut oder ganz ohne Veränderung.",
+  "meta": {
+    "theme": "Sprache",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Plural mit -s",
+      "items": [
+        "Auto",
+        "Kino",
+        "Hotel",
+        "Oma"
+      ],
+      "revealHint": "-S"
+    },
+    {
+      "id": "g2",
+      "label": "Plural mit Umlaut und -er",
+      "items": [
+        "Wald",
+        "Haus",
+        "Buch",
+        "Mann"
+      ],
+      "revealHint": "UMLAUT + -ER"
+    },
+    {
+      "id": "g3",
+      "label": "Plural nur durch Umlaut",
+      "items": [
+        "Vater",
+        "Bruder",
+        "Garten",
+        "Vogel"
+      ],
+      "revealHint": "NUR UMLAUT"
+    },
+    {
+      "id": "g4",
+      "label": "Plural ohne jede Veränderung",
+      "items": [
+        "Lehrer",
+        "Messer",
+        "Zimmer",
+        "Kuchen"
+      ],
+      "revealHint": "UNVERÄNDERT"
+    }
+  ]
+}

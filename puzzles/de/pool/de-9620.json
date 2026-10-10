@@ -1,0 +1,56 @@
+{
+  "id": "de-9620",
+  "title": "Artikelwechsel",
+  "difficulty": "hard",
+  "editorialSummary": "Wörter, die mit der/die, der/das oder die/das Verschiedenes bedeuten, und Wörter, die es nur im Plural gibt.",
+  "meta": {
+    "theme": "Sprache",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Mit der und die je eine andere Bedeutung",
+      "items": [
+        "Kiefer",
+        "Leiter",
+        "See",
+        "Kunde"
+      ],
+      "revealHint": "DER / DIE"
+    },
+    {
+      "id": "g2",
+      "label": "Mit der und das je eine andere Bedeutung",
+      "items": [
+        "Tor",
+        "Schild",
+        "Erbe",
+        "Gehalt"
+      ],
+      "revealHint": "DER / DAS"
+    },
+    {
+      "id": "g3",
+      "label": "Mit die und das je eine andere Bedeutung",
+      "items": [
+        "Steuer",
+        "Mark",
+        "Wehr",
+        "Koppel"
+      ],
+      "revealHint": "DIE / DAS"
+    },
+    {
+      "id": "g4",
+      "label": "Nur im Plural gebräuchlich",
+      "items": [
+        "Leute",
+        "Ferien",
+        "Kosten",
+        "Masern"
+      ],
+      "revealHint": "NUR PLURAL"
+    }
+  ]
+}

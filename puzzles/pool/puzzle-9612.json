@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9612",
+  "title": "Saucy",
+  "difficulty": "hard",
+  "editorialSummary": "French mother sauces, Italian pasta sauces, Japanese condiments and Mexican sauces.",
+  "meta": {
+    "theme": "food",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "French mother sauces",
+      "items": [
+        "Béchamel",
+        "Velouté",
+        "Espagnole",
+        "Hollandaise"
+      ],
+      "revealHint": "FRENCH"
+    },
+    {
+      "id": "g2",
+      "label": "Italian pasta sauces",
+      "items": [
+        "Puttanesca",
+        "Arrabbiata",
+        "Carbonara",
+        "Amatriciana"
+      ],
+      "revealHint": "ITALIAN"
+    },
+    {
+      "id": "g3",
+      "label": "Japanese seasonings",
+      "items": [
+        "Ponzu",
+        "Teriyaki",
+        "Mirin",
+        "Wasabi"
+      ],
+      "revealHint": "JAPANESE"
+    },
+    {
+      "id": "g4",
+      "label": "Mexican sauces and dips",
+      "items": [
+        "Mole",
+        "Guacamole",
+        "Pico de gallo",
+        "Salsa roja"
+      ],
+      "revealHint": "MEXICAN"
+    }
+  ]
+}

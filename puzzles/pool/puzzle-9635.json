@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9635",
+  "title": "Dressed and Driven",
+  "difficulty": "hard",
+  "editorialSummary": "Car body styles, hats, shoes and coats.",
+  "meta": {
+    "theme": "everyday",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Car body styles",
+      "items": [
+        "Hatchback",
+        "Saloon",
+        "Estate",
+        "Roadster"
+      ],
+      "revealHint": "CARS"
+    },
+    {
+      "id": "g2",
+      "label": "Brimmed hat styles",
+      "items": [
+        "Bowler",
+        "Boater",
+        "Panama",
+        "Fedora"
+      ],
+      "revealHint": "HATS"
+    },
+    {
+      "id": "g3",
+      "label": "Classic shoe types",
+      "items": [
+        "Brogue",
+        "Mule",
+        "Espadrille",
+        "Clog"
+      ],
+      "revealHint": "SHOES"
+    },
+    {
+      "id": "g4",
+      "label": "Coat styles",
+      "items": [
+        "Duffel",
+        "Trench",
+        "Mackintosh",
+        "Parka"
+      ],
+      "revealHint": "COATS"
+    }
+  ]
+}

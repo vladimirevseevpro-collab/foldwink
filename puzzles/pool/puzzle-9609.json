@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9609",
+  "title": "Word Travellers",
+  "difficulty": "hard",
+  "editorialSummary": "English words borrowed from Hindi, Arabic, Dutch and Old Norse.",
+  "meta": {
+    "theme": "language",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "English words from Hindi",
+      "items": [
+        "Shampoo",
+        "Jungle",
+        "Bungalow",
+        "Thug"
+      ],
+      "revealHint": "HINDI"
+    },
+    {
+      "id": "g2",
+      "label": "English words from Arabic",
+      "items": [
+        "Algebra",
+        "Alcohol",
+        "Admiral",
+        "Magazine"
+      ],
+      "revealHint": "ARABIC"
+    },
+    {
+      "id": "g3",
+      "label": "English words from Dutch",
+      "items": [
+        "Yacht",
+        "Cookie",
+        "Boss",
+        "Easel"
+      ],
+      "revealHint": "DUTCH"
+    },
+    {
+      "id": "g4",
+      "label": "English words from Old Norse",
+      "items": [
+        "Sky",
+        "Knife",
+        "Ugly",
+        "Berserk"
+      ],
+      "revealHint": "NORSE"
+    }
+  ]
+}

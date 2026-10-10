@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9636",
+  "title": "Animal Vocabulary",
+  "difficulty": "hard",
+  "editorialSummary": "Words for young animals, male animals, female animals and animal homes.",
+  "meta": {
+    "theme": "nature",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Young animals",
+      "items": [
+        "Cygnet",
+        "Leveret",
+        "Elver",
+        "Kid"
+      ],
+      "revealHint": "YOUNG"
+    },
+    {
+      "id": "g2",
+      "label": "Male animals",
+      "items": [
+        "Cob",
+        "Drake",
+        "Gander",
+        "Jack"
+      ],
+      "revealHint": "MALE"
+    },
+    {
+      "id": "g3",
+      "label": "Female animals",
+      "items": [
+        "Pen",
+        "Vixen",
+        "Jenny",
+        "Hind"
+      ],
+      "revealHint": "FEMALE"
+    },
+    {
+      "id": "g4",
+      "label": "Animal homes",
+      "items": [
+        "Sett",
+        "Drey",
+        "Holt",
+        "Eyrie"
+      ],
+      "revealHint": "HOMES"
+    }
+  ]
+}

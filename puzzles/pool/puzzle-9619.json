@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9619",
+  "title": "Mixed Up",
+  "difficulty": "hard",
+  "editorialSummary": "Anagrams of countries, capital cities, fruits and body parts.",
+  "meta": {
+    "theme": "wordplay",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Anagrams of countries",
+      "items": [
+        "Panel",
+        "Reign",
+        "Enemy",
+        "Moan"
+      ],
+      "revealHint": "COUNTRY ANAGRAM"
+    },
+    {
+      "id": "g2",
+      "label": "Anagrams of capital cities",
+      "items": [
+        "More",
+        "Solo",
+        "Pairs",
+        "Hasten"
+      ],
+      "revealHint": "CAPITAL ANAGRAM"
+    },
+    {
+      "id": "g3",
+      "label": "Anagrams of fruits",
+      "items": [
+        "Reap",
+        "Mile",
+        "Lump",
+        "Cheap"
+      ],
+      "revealHint": "FRUIT ANAGRAM"
+    },
+    {
+      "id": "g4",
+      "label": "Anagrams of body parts",
+      "items": [
+        "Slip",
+        "Gel",
+        "Keen",
+        "Inch"
+      ],
+      "revealHint": "BODY ANAGRAM"
+    }
+  ]
+}

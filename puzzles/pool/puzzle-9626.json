@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9626",
+  "title": "Tied Up",
+  "difficulty": "hard",
+  "editorialSummary": "Knots, embroidery stitches, sails and yoga poses.",
+  "meta": {
+    "theme": "crafts",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Knots you can tie",
+      "items": [
+        "Bowline",
+        "Reef",
+        "Sheepshank",
+        "Granny"
+      ],
+      "revealHint": "KNOT"
+    },
+    {
+      "id": "g2",
+      "label": "Embroidery stitches",
+      "items": [
+        "Blanket",
+        "Chain",
+        "Satin",
+        "Cross"
+      ],
+      "revealHint": "STITCH"
+    },
+    {
+      "id": "g3",
+      "label": "Types of sail",
+      "items": [
+        "Jib",
+        "Spinnaker",
+        "Genoa",
+        "Mizzen"
+      ],
+      "revealHint": "SAIL"
+    },
+    {
+      "id": "g4",
+      "label": "Yoga asanas",
+      "items": [
+        "Cobra",
+        "Lotus",
+        "Warrior",
+        "Tree"
+      ],
+      "revealHint": "YOGA"
+    }
+  ]
+}

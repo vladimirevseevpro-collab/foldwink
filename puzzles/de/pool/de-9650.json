@@ -1,0 +1,56 @@
+{
+  "id": "de-9650",
+  "title": "Falscher Anfang",
+  "difficulty": "hard",
+  "editorialSummary": "Jedes Wort beginnt mit einem Körperteil, einer Zahl, einem Tier oder einer Farbe – ohne etwas damit zu tun zu haben.",
+  "meta": {
+    "theme": "Sprache",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Beginnt mit einem Körperteil",
+      "items": [
+        "Armut",
+        "Armatur",
+        "Beinahe",
+        "Darmstadt"
+      ],
+      "revealHint": "KÖRPERTEIL VORN"
+    },
+    {
+      "id": "g2",
+      "label": "Beginnt mit einer Zahl",
+      "items": [
+        "Zweifel",
+        "Dreist",
+        "Achtung",
+        "Einsiedler"
+      ],
+      "revealHint": "ZAHL VORN"
+    },
+    {
+      "id": "g3",
+      "label": "Beginnt mit einem Tier",
+      "items": [
+        "Rinde",
+        "Kuhle",
+        "Lachsalve",
+        "Mausoleum"
+      ],
+      "revealHint": "TIER VORN"
+    },
+    {
+      "id": "g4",
+      "label": "Beginnt mit einer Farbe",
+      "items": [
+        "Rotation",
+        "Graupel",
+        "Braunschweig",
+        "Rotunde"
+      ],
+      "revealHint": "FARBE VORN"
+    }
+  ]
+}

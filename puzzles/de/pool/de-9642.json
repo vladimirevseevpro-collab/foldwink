@@ -1,0 +1,56 @@
+{
+  "id": "de-9642",
+  "title": "Buchstabensalat",
+  "difficulty": "hard",
+  "editorialSummary": "Jedes Wort ist ein Anagramm einer Hauptstadt, eines Tiers, eines Vornamens oder eines Körperteils.",
+  "meta": {
+    "theme": "Sprache",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Anagramm einer Hauptstadt",
+      "items": [
+        "Solo",
+        "Wein",
+        "Kuba",
+        "Saunas"
+      ],
+      "revealHint": "HAUPTSTADT"
+    },
+    {
+      "id": "g2",
+      "label": "Anagramm eines Tiers",
+      "items": [
+        "Tarte",
+        "Saum",
+        "Torte",
+        "Aber"
+      ],
+      "revealHint": "TIER"
+    },
+    {
+      "id": "g3",
+      "label": "Anagramm eines Vornamens",
+      "items": [
+        "Elan",
+        "Klar",
+        "Leim",
+        "Eins"
+      ],
+      "revealHint": "VORNAME"
+    },
+    {
+      "id": "g4",
+      "label": "Anagramm eines Körperteils",
+      "items": [
+        "Rebel",
+        "Kein",
+        "Schale",
+        "Bauer"
+      ],
+      "revealHint": "KÖRPERTEIL"
+    }
+  ]
+}

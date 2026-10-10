@@ -1,0 +1,56 @@
+{
+  "id": "de-9615",
+  "title": "Verstecktes Inventar",
+  "difficulty": "hard",
+  "editorialSummary": "In jedem Wort steckt ein Vorname, ein Möbelstück, ein Werkzeug oder ein Kleidungsstück.",
+  "meta": {
+    "theme": "Sprache",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Darin steckt ein Vorname",
+      "items": [
+        "Motto",
+        "Juwel",
+        "Raute",
+        "Klausur"
+      ],
+      "revealHint": "VORNAME DRIN"
+    },
+    {
+      "id": "g2",
+      "label": "Darin steckt ein Möbelstück",
+      "items": [
+        "Katapult",
+        "Fetisch",
+        "Bettler",
+        "Schrankwand"
+      ],
+      "revealHint": "MÖBEL DRIN"
+    },
+    {
+      "id": "g3",
+      "label": "Darin steckt ein Werkzeug",
+      "items": [
+        "Pfeile",
+        "Beileid",
+        "Hacker",
+        "Kellerei"
+      ],
+      "revealHint": "WERKZEUG DRIN"
+    },
+    {
+      "id": "g4",
+      "label": "Darin steckt ein Kleidungsstück",
+      "items": [
+        "Trocken",
+        "Schalter",
+        "Sockel",
+        "Probe"
+      ],
+      "revealHint": "KLEIDUNG DRIN"
+    }
+  ]
+}

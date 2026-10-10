@@ -1,0 +1,56 @@
+{
+  "id": "de-9630",
+  "title": "Austragungsorte",
+  "difficulty": "hard",
+  "editorialSummary": "Nur-Sommerspiel-Städte, Nur-Winterspiel-Orte, Grand-Slam-Anlagen und Formel-1-Strecken.",
+  "meta": {
+    "theme": "Sport",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Olympische Sommerspiele, nie Winterspiele",
+      "items": [
+        "Atlanta",
+        "Sydney",
+        "Athen",
+        "Seoul"
+      ],
+      "revealHint": "SOMMERSPIELE"
+    },
+    {
+      "id": "g2",
+      "label": "Olympische Winterspiele, nie Sommerspiele",
+      "items": [
+        "Lillehammer",
+        "Calgary",
+        "Nagano",
+        "Sarajevo"
+      ],
+      "revealHint": "WINTERSPIELE"
+    },
+    {
+      "id": "g3",
+      "label": "Grand-Slam-Tennisanlagen",
+      "items": [
+        "Wimbledon",
+        "Roland Garros",
+        "Flushing Meadows",
+        "Melbourne Park"
+      ],
+      "revealHint": "GRAND SLAM"
+    },
+    {
+      "id": "g4",
+      "label": "Formel-1-Rennstrecken",
+      "items": [
+        "Monza",
+        "Silverstone",
+        "Suzuka",
+        "Interlagos"
+      ],
+      "revealHint": "FORMEL 1"
+    }
+  ]
+}

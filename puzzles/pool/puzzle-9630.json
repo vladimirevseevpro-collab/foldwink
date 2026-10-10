@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9630",
+  "title": "Brand New",
+  "difficulty": "hard",
+  "editorialSummary": "Brand names that are animals, fruits, astronomical terms or figures from Greek myth.",
+  "meta": {
+    "theme": "business",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Brands named after animals",
+      "items": [
+        "Jaguar",
+        "Puma",
+        "Dove",
+        "Caterpillar"
+      ],
+      "revealHint": "ANIMALS"
+    },
+    {
+      "id": "g2",
+      "label": "Brands named after fruits",
+      "items": [
+        "Apple",
+        "BlackBerry",
+        "Orange",
+        "Mango"
+      ],
+      "revealHint": "FRUIT"
+    },
+    {
+      "id": "g3",
+      "label": "Brands with astronomical names",
+      "items": [
+        "Mars",
+        "Galaxy",
+        "Orbit",
+        "Milky Way"
+      ],
+      "revealHint": "SPACE"
+    },
+    {
+      "id": "g4",
+      "label": "Brands named from Greek myth",
+      "items": [
+        "Nike",
+        "Pandora",
+        "Ajax",
+        "Olympus"
+      ],
+      "revealHint": "GREEK MYTH"
+    }
+  ]
+}

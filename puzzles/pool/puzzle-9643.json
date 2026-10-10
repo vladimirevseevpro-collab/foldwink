@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9643",
+  "title": "Second Cities",
+  "difficulty": "hard",
+  "editorialSummary": "Capitals of US states, Canadian provinces, Australian states or territories and German states.",
+  "meta": {
+    "theme": "geography",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "US state capitals",
+      "items": [
+        "Albany",
+        "Sacramento",
+        "Tallahassee",
+        "Olympia"
+      ],
+      "revealHint": "USA"
+    },
+    {
+      "id": "g2",
+      "label": "Canadian provincial capitals",
+      "items": [
+        "Regina",
+        "Halifax",
+        "Winnipeg",
+        "Fredericton"
+      ],
+      "revealHint": "CANADA"
+    },
+    {
+      "id": "g3",
+      "label": "Australian state or territory capitals",
+      "items": [
+        "Perth",
+        "Hobart",
+        "Adelaide",
+        "Darwin"
+      ],
+      "revealHint": "AUSTRALIA"
+    },
+    {
+      "id": "g4",
+      "label": "German state capitals",
+      "items": [
+        "Wiesbaden",
+        "Hanover",
+        "Kiel",
+        "Schwerin"
+      ],
+      "revealHint": "GERMANY"
+    }
+  ]
+}

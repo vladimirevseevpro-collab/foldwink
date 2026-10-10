@@ -1,0 +1,56 @@
+{
+  "id": "de-9603",
+  "title": "Versteckspiel",
+  "difficulty": "hard",
+  "editorialSummary": "In jedem Wort steckt ein Fluss, eine Stadt, ein Körperteil oder eine Farbe.",
+  "meta": {
+    "theme": "Sprache",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Darin fließt ein Fluss",
+      "items": [
+        "Aufruhr",
+        "Blech",
+        "Thriller",
+        "Bremse"
+      ],
+      "revealHint": "FLUSS DRIN"
+    },
+    {
+      "id": "g2",
+      "label": "Darin liegt eine Stadt",
+      "items": [
+        "Brigade",
+        "Klima",
+        "Chrom",
+        "Messen"
+      ],
+      "revealHint": "STADT DRIN"
+    },
+    {
+      "id": "g3",
+      "label": "Darin steckt ein Körperteil",
+      "items": [
+        "Gestirn",
+        "Brücken",
+        "Alarm",
+        "Rohr"
+      ],
+      "revealHint": "KÖRPERTEIL DRIN"
+    },
+    {
+      "id": "g4",
+      "label": "Darin leuchtet eine Farbe",
+      "items": [
+        "Grotte",
+        "Gründer",
+        "Prosa",
+        "Hocker"
+      ],
+      "revealHint": "FARBE DRIN"
+    }
+  ]
+}

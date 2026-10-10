@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9603",
+  "title": "Sound Alike",
+  "difficulty": "hard",
+  "editorialSummary": "Words that sound like letters, numbers, Greek letters and sol-fa notes.",
+  "meta": {
+    "theme": "homophones",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Sound like English letters",
+      "items": [
+        "Queue",
+        "Eye",
+        "Jay",
+        "Why"
+      ],
+      "revealHint": "LETTERS"
+    },
+    {
+      "id": "g2",
+      "label": "Sound like numbers",
+      "items": [
+        "Won",
+        "Ate",
+        "Fore",
+        "Too"
+      ],
+      "revealHint": "NUMBERS"
+    },
+    {
+      "id": "g3",
+      "label": "Sound like Greek letters",
+      "items": [
+        "Pie",
+        "Mew",
+        "New",
+        "Sigh"
+      ],
+      "revealHint": "GREEK"
+    },
+    {
+      "id": "g4",
+      "label": "Sound like sol-fa notes",
+      "items": [
+        "Doe",
+        "Ray",
+        "Far",
+        "Sew"
+      ],
+      "revealHint": "DO-RE-MI"
+    }
+  ]
+}

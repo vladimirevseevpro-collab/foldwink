@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9622",
+  "title": "National Schools",
+  "difficulty": "hard",
+  "editorialSummary": "Czech, Russian 'Mighty Handful', English and Spanish composers.",
+  "meta": {
+    "theme": "music",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Czech composers",
+      "items": [
+        "Dvořák",
+        "Smetana",
+        "Janáček",
+        "Martinů"
+      ],
+      "revealHint": "CZECH"
+    },
+    {
+      "id": "g2",
+      "label": "Russia's 'Mighty Handful'",
+      "items": [
+        "Balakirev",
+        "Cui",
+        "Mussorgsky",
+        "Borodin"
+      ],
+      "revealHint": "THE FIVE"
+    },
+    {
+      "id": "g3",
+      "label": "English composers",
+      "items": [
+        "Elgar",
+        "Holst",
+        "Purcell",
+        "Britten"
+      ],
+      "revealHint": "ENGLISH"
+    },
+    {
+      "id": "g4",
+      "label": "Spanish composers",
+      "items": [
+        "Albéniz",
+        "Granados",
+        "Falla",
+        "Rodrigo"
+      ],
+      "revealHint": "SPANISH"
+    }
+  ]
+}

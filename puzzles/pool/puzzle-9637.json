@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9637",
+  "title": "Machine Minds",
+  "difficulty": "hard",
+  "editorialSummary": "Fictional computers, game-playing programs, early computers and digital assistants.",
+  "meta": {
+    "theme": "technology",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Fictional computers",
+      "items": [
+        "HAL",
+        "Skynet",
+        "WOPR",
+        "JARVIS"
+      ],
+      "revealHint": "FICTION"
+    },
+    {
+      "id": "g2",
+      "label": "Game-playing programs",
+      "items": [
+        "Deep Blue",
+        "Watson",
+        "AlphaGo",
+        "Stockfish"
+      ],
+      "revealHint": "GAME AI"
+    },
+    {
+      "id": "g3",
+      "label": "Early electronic computers",
+      "items": [
+        "ENIAC",
+        "Z3",
+        "UNIVAC",
+        "EDSAC"
+      ],
+      "revealHint": "EARLY"
+    },
+    {
+      "id": "g4",
+      "label": "Digital assistants from tech giants",
+      "items": [
+        "Siri",
+        "Alexa",
+        "Bixby",
+        "Copilot"
+      ],
+      "revealHint": "ASSISTANTS"
+    }
+  ]
+}

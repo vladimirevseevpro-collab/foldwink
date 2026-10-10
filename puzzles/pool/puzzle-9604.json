@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9604",
+  "title": "First Names First",
+  "difficulty": "hard",
+  "editorialSummary": "Famous Charleses, Johns, Georges and Williams known by surname.",
+  "meta": {
+    "theme": "people",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Famous Charleses",
+      "items": [
+        "Darwin",
+        "Dickens",
+        "Chaplin",
+        "Lindbergh"
+      ],
+      "revealHint": "CHARLES"
+    },
+    {
+      "id": "g2",
+      "label": "Famous Johns",
+      "items": [
+        "Lennon",
+        "Keats",
+        "Milton",
+        "Locke"
+      ],
+      "revealHint": "JOHN"
+    },
+    {
+      "id": "g3",
+      "label": "Famous Georges",
+      "items": [
+        "Orwell",
+        "Gershwin",
+        "Eliot",
+        "Lucas"
+      ],
+      "revealHint": "GEORGE"
+    },
+    {
+      "id": "g4",
+      "label": "Famous Williams",
+      "items": [
+        "Blake",
+        "Wordsworth",
+        "Shakespeare",
+        "Faulkner"
+      ],
+      "revealHint": "WILLIAM"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9601",
+  "title": "Jazz Section",
+  "difficulty": "hard",
+  "editorialSummary": "Jazz pianists, trumpeters, saxophonists and drummers by surname.",
+  "meta": {
+    "theme": "music",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Jazz pianists",
+      "items": [
+        "Monk",
+        "Tatum",
+        "Hancock",
+        "Brubeck"
+      ],
+      "revealHint": "KEYS"
+    },
+    {
+      "id": "g2",
+      "label": "Jazz trumpeters",
+      "items": [
+        "Armstrong",
+        "Gillespie",
+        "Beiderbecke",
+        "Davis"
+      ],
+      "revealHint": "HORN"
+    },
+    {
+      "id": "g3",
+      "label": "Jazz saxophonists",
+      "items": [
+        "Parker",
+        "Coltrane",
+        "Rollins",
+        "Getz"
+      ],
+      "revealHint": "REEDS"
+    },
+    {
+      "id": "g4",
+      "label": "Jazz drummers",
+      "items": [
+        "Blakey",
+        "Roach",
+        "Krupa",
+        "Rich"
+      ],
+      "revealHint": "STICKS"
+    }
+  ]
+}

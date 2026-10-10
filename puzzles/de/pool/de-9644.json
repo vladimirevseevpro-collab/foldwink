@@ -1,0 +1,56 @@
+{
+  "id": "de-9644",
+  "title": "Spieleabend",
+  "difficulty": "hard",
+  "editorialSummary": "Kartenspiele, Würfelspiele, Brettspiele ohne Würfel und Schachfiguren.",
+  "meta": {
+    "theme": "Spiele",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Spiele mit Spielkarten",
+      "items": [
+        "Skat",
+        "Doppelkopf",
+        "Rommé",
+        "Canasta"
+      ],
+      "revealHint": "KARTENSPIEL"
+    },
+    {
+      "id": "g2",
+      "label": "Spiele nur mit Würfeln",
+      "items": [
+        "Kniffel",
+        "Mäxchen",
+        "Schocken",
+        "Craps"
+      ],
+      "revealHint": "WÜRFELSPIEL"
+    },
+    {
+      "id": "g3",
+      "label": "Brettspiele ganz ohne Würfel",
+      "items": [
+        "Mühle",
+        "Halma",
+        "Go",
+        "Reversi"
+      ],
+      "revealHint": "BRETTSPIEL"
+    },
+    {
+      "id": "g4",
+      "label": "Figur im Schachspiel",
+      "items": [
+        "König",
+        "Turm",
+        "Läufer",
+        "Springer"
+      ],
+      "revealHint": "SCHACHFIGUR"
+    }
+  ]
+}

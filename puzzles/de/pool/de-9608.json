@@ -1,0 +1,56 @@
+{
+  "id": "de-9608",
+  "title": "Fachjargon im Sport",
+  "difficulty": "hard",
+  "editorialSummary": "Begriffe aus dem Golf, dem Tennis, dem Schach und dem Eishockey.",
+  "meta": {
+    "theme": "Sport",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Ergebnisse auf einem Golfloch",
+      "items": [
+        "Birdie",
+        "Eagle",
+        "Bogey",
+        "Albatros"
+      ],
+      "revealHint": "GOLF"
+    },
+    {
+      "id": "g2",
+      "label": "Tennisbegriffe",
+      "items": [
+        "Tiebreak",
+        "Lob",
+        "Satzball",
+        "Volley"
+      ],
+      "revealHint": "TENNIS"
+    },
+    {
+      "id": "g3",
+      "label": "Schachbegriffe",
+      "items": [
+        "Rochade",
+        "Gambit",
+        "Patt",
+        "En passant"
+      ],
+      "revealHint": "SCHACH"
+    },
+    {
+      "id": "g4",
+      "label": "Eishockeybegriffe",
+      "items": [
+        "Bully",
+        "Icing",
+        "Slapshot",
+        "Bandencheck"
+      ],
+      "revealHint": "EISHOCKEY"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "de-9611",
+  "title": "Nachbarschaftsverhältnisse",
+  "difficulty": "hard",
+  "editorialSummary": "Staaten mit genau einem Nachbarn, Binnenstaaten, Inselstaaten ohne Landgrenze und Länder mit mindestens neun Nachbarn.",
+  "meta": {
+    "theme": "Geografie",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Hat genau einen Nachbarstaat",
+      "items": [
+        "Portugal",
+        "Dänemark",
+        "Kanada",
+        "Haiti"
+      ],
+      "revealHint": "EIN NACHBAR"
+    },
+    {
+      "id": "g2",
+      "label": "Binnenstaat mit mehreren Nachbarn",
+      "items": [
+        "Bolivien",
+        "Paraguay",
+        "Mongolei",
+        "Äthiopien"
+      ],
+      "revealHint": "BINNENSTAAT"
+    },
+    {
+      "id": "g3",
+      "label": "Inselstaat ohne jede Landgrenze",
+      "items": [
+        "Island",
+        "Malta",
+        "Japan",
+        "Neuseeland"
+      ],
+      "revealHint": "KEINE LANDGRENZE"
+    },
+    {
+      "id": "g4",
+      "label": "Grenzt an mindestens neun Staaten",
+      "items": [
+        "China",
+        "Russland",
+        "Brasilien",
+        "Deutschland"
+      ],
+      "revealHint": "VIELE NACHBARN"
+    }
+  ]
+}

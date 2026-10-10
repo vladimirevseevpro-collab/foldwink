@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9645",
+  "title": "Silent Partners",
+  "difficulty": "hard",
+  "editorialSummary": "Words with a silent K, B, W or P.",
+  "meta": {
+    "theme": "language",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Has a silent K",
+      "items": [
+        "Knack",
+        "Knuckle",
+        "Knit",
+        "Knead"
+      ],
+      "revealHint": "SILENT K"
+    },
+    {
+      "id": "g2",
+      "label": "Has a silent B",
+      "items": [
+        "Debt",
+        "Doubt",
+        "Thumb",
+        "Subtle"
+      ],
+      "revealHint": "SILENT B"
+    },
+    {
+      "id": "g3",
+      "label": "Has a silent W",
+      "items": [
+        "Wrist",
+        "Wreck",
+        "Sword",
+        "Answer"
+      ],
+      "revealHint": "SILENT W"
+    },
+    {
+      "id": "g4",
+      "label": "Has a silent P",
+      "items": [
+        "Receipt",
+        "Raspberry",
+        "Cupboard",
+        "Pneumonia"
+      ],
+      "revealHint": "SILENT P"
+    }
+  ]
+}

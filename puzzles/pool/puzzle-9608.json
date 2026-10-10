@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9608",
+  "title": "Cup Runneth Over",
+  "difficulty": "hard",
+  "editorialSummary": "Trophy names from golf, tennis, rugby and North American leagues.",
+  "meta": {
+    "theme": "sport",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Golf team cups",
+      "items": [
+        "Ryder",
+        "Solheim",
+        "Walker",
+        "Curtis"
+      ],
+      "revealHint": "GOLF"
+    },
+    {
+      "id": "g2",
+      "label": "Tennis team cups",
+      "items": [
+        "Davis",
+        "Hopman",
+        "Laver",
+        "King"
+      ],
+      "revealHint": "TENNIS"
+    },
+    {
+      "id": "g3",
+      "label": "Rugby union cups",
+      "items": [
+        "Calcutta",
+        "Bledisloe",
+        "Webb Ellis",
+        "Currie"
+      ],
+      "revealHint": "RUGBY"
+    },
+    {
+      "id": "g4",
+      "label": "North American league trophies",
+      "items": [
+        "Stanley",
+        "Grey",
+        "Lombardi",
+        "O'Brien"
+      ],
+      "revealHint": "PRO LEAGUES"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "de-9601",
+  "title": "Himmlische Namen",
+  "difficulty": "hard",
+  "editorialSummary": "Monde des Saturn und des Jupiter, die größten Körper im Asteroidengürtel und ESA-Missionen – viele Namen klingen nach Mythologie.",
+  "meta": {
+    "theme": "Astronomie",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Begleiter des Saturn",
+      "items": [
+        "Titan",
+        "Rhea",
+        "Dione",
+        "Tethys"
+      ],
+      "revealHint": "SATURN"
+    },
+    {
+      "id": "g2",
+      "label": "Begleiter des Jupiter",
+      "items": [
+        "Io",
+        "Europa",
+        "Ganymed",
+        "Amalthea"
+      ],
+      "revealHint": "JUPITER"
+    },
+    {
+      "id": "g3",
+      "label": "Die vier größten Körper im Asteroidengürtel",
+      "items": [
+        "Ceres",
+        "Vesta",
+        "Pallas",
+        "Hygiea"
+      ],
+      "revealHint": "ASTEROIDENGÜRTEL"
+    },
+    {
+      "id": "g4",
+      "label": "Raumfahrtmissionen der ESA",
+      "items": [
+        "Rosetta",
+        "Gaia",
+        "Herschel",
+        "Planck"
+      ],
+      "revealHint": "ESA"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9611",
+  "title": "Art Movements",
+  "difficulty": "hard",
+  "editorialSummary": "Impressionists, Cubists, Surrealists and Pre-Raphaelites by surname.",
+  "meta": {
+    "theme": "art",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Impressionist painters",
+      "items": [
+        "Monet",
+        "Renoir",
+        "Pissarro",
+        "Sisley"
+      ],
+      "revealHint": "IMPRESSIONISM"
+    },
+    {
+      "id": "g2",
+      "label": "Cubist painters",
+      "items": [
+        "Braque",
+        "Gris",
+        "Léger",
+        "Metzinger"
+      ],
+      "revealHint": "CUBISM"
+    },
+    {
+      "id": "g3",
+      "label": "Surrealist painters",
+      "items": [
+        "Dalí",
+        "Magritte",
+        "Ernst",
+        "Miró"
+      ],
+      "revealHint": "SURREALISM"
+    },
+    {
+      "id": "g4",
+      "label": "Pre-Raphaelite painters",
+      "items": [
+        "Rossetti",
+        "Millais",
+        "Hunt",
+        "Burne-Jones"
+      ],
+      "revealHint": "PRE-RAPHAELITES"
+    }
+  ]
+}

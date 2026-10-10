@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9633",
+  "title": "Venue Finder",
+  "difficulty": "hard",
+  "editorialSummary": "Winter Olympic hosts, Summer Olympic hosts, F1 circuits and Open Championship golf venues.",
+  "meta": {
+    "theme": "sport",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Winter Olympics host cities",
+      "items": [
+        "Lillehammer",
+        "Nagano",
+        "Calgary",
+        "Albertville"
+      ],
+      "revealHint": "WINTER GAMES"
+    },
+    {
+      "id": "g2",
+      "label": "Summer Olympics host cities",
+      "items": [
+        "Helsinki",
+        "Seoul",
+        "Atlanta",
+        "Stockholm"
+      ],
+      "revealHint": "SUMMER GAMES"
+    },
+    {
+      "id": "g3",
+      "label": "Formula One circuits",
+      "items": [
+        "Monza",
+        "Suzuka",
+        "Interlagos",
+        "Silverstone"
+      ],
+      "revealHint": "F1"
+    },
+    {
+      "id": "g4",
+      "label": "Open Championship golf venues",
+      "items": [
+        "St Andrews",
+        "Carnoustie",
+        "Muirfield",
+        "Troon"
+      ],
+      "revealHint": "THE OPEN"
+    }
+  ]
+}

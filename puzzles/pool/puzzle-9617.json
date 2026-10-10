@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9617",
+  "title": "Animal Characters",
+  "difficulty": "hard",
+  "editorialSummary": "Famous dogs, horses, pigs and cats from books.",
+  "meta": {
+    "theme": "literature",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Dogs in literature",
+      "items": [
+        "Toto",
+        "Fang",
+        "Nana",
+        "Buck"
+      ],
+      "revealHint": "DOGS"
+    },
+    {
+      "id": "g2",
+      "label": "Horses in literature",
+      "items": [
+        "Boxer",
+        "Shadowfax",
+        "Rocinante",
+        "Joey"
+      ],
+      "revealHint": "HORSES"
+    },
+    {
+      "id": "g3",
+      "label": "Pigs in literature",
+      "items": [
+        "Napoleon",
+        "Wilbur",
+        "Snowball",
+        "Old Major"
+      ],
+      "revealHint": "PIGS"
+    },
+    {
+      "id": "g4",
+      "label": "Cats in literature",
+      "items": [
+        "Macavity",
+        "Crookshanks",
+        "Cheshire",
+        "Behemoth"
+      ],
+      "revealHint": "CATS"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "de-9614",
+  "title": "Käsetheke",
+  "difficulty": "hard",
+  "editorialSummary": "Käse aus Frankreich, Italien, der Schweiz und den Niederlanden.",
+  "meta": {
+    "theme": "Essen",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Käse aus Frankreich",
+      "items": [
+        "Roquefort",
+        "Comté",
+        "Reblochon",
+        "Brie"
+      ],
+      "revealHint": "FRANKREICH"
+    },
+    {
+      "id": "g2",
+      "label": "Käse aus Italien",
+      "items": [
+        "Gorgonzola",
+        "Taleggio",
+        "Pecorino",
+        "Mascarpone"
+      ],
+      "revealHint": "ITALIEN"
+    },
+    {
+      "id": "g3",
+      "label": "Käse aus der Schweiz",
+      "items": [
+        "Emmentaler",
+        "Gruyère",
+        "Appenzeller",
+        "Sbrinz"
+      ],
+      "revealHint": "SCHWEIZ"
+    },
+    {
+      "id": "g4",
+      "label": "Käse aus den Niederlanden",
+      "items": [
+        "Gouda",
+        "Edamer",
+        "Leerdammer",
+        "Maasdamer"
+      ],
+      "revealHint": "NIEDERLANDE"
+    }
+  ]
+}

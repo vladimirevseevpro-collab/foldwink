@@ -1,0 +1,56 @@
+{
+  "id": "de-9639",
+  "title": "Göttliche Zuständigkeiten",
+  "difficulty": "hard",
+  "editorialSummary": "Gottheiten der Liebe, des Krieges, des Meeres und der Unterwelt aus verschiedenen Mythologien.",
+  "meta": {
+    "theme": "Mythologie",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Gottheit der Liebe",
+      "items": [
+        "Aphrodite",
+        "Venus",
+        "Eros",
+        "Hathor"
+      ],
+      "revealHint": "LIEBE"
+    },
+    {
+      "id": "g2",
+      "label": "Gottheit des Krieges",
+      "items": [
+        "Ares",
+        "Mars",
+        "Tyr",
+        "Athene"
+      ],
+      "revealHint": "KRIEG"
+    },
+    {
+      "id": "g3",
+      "label": "Gottheit des Meeres",
+      "items": [
+        "Poseidon",
+        "Neptun",
+        "Njörd",
+        "Ägir"
+      ],
+      "revealHint": "MEER"
+    },
+    {
+      "id": "g4",
+      "label": "Gottheit der Unterwelt",
+      "items": [
+        "Hades",
+        "Pluto",
+        "Hel",
+        "Osiris"
+      ],
+      "revealHint": "UNTERWELT"
+    }
+  ]
+}

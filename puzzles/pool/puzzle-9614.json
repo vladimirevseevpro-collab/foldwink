@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9614",
+  "title": "Ship Shape",
+  "difficulty": "hard",
+  "editorialSummary": "Space shuttles, polar expedition ships, ocean liners and explorers' flagships.",
+  "meta": {
+    "theme": "history",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Space Shuttle orbiters",
+      "items": [
+        "Atlantis",
+        "Columbia",
+        "Challenger",
+        "Enterprise"
+      ],
+      "revealHint": "SHUTTLES"
+    },
+    {
+      "id": "g2",
+      "label": "Polar expedition ships",
+      "items": [
+        "Endurance",
+        "Fram",
+        "Terra Nova",
+        "Nimrod"
+      ],
+      "revealHint": "POLAR"
+    },
+    {
+      "id": "g3",
+      "label": "Ocean liners",
+      "items": [
+        "Titanic",
+        "Lusitania",
+        "Mauretania",
+        "Normandie"
+      ],
+      "revealHint": "LINERS"
+    },
+    {
+      "id": "g4",
+      "label": "Ships of Columbus, Magellan, Drake, Darwin",
+      "items": [
+        "Santa María",
+        "Victoria",
+        "Golden Hind",
+        "Beagle"
+      ],
+      "revealHint": "EXPLORERS"
+    }
+  ]
+}

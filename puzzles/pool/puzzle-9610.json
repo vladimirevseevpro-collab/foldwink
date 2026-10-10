@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9610",
+  "title": "Proof of Concept",
+  "difficulty": "hard",
+  "editorialSummary": "Words that go before proof, lock, struck and print.",
+  "meta": {
+    "theme": "compounds",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "___proof",
+      "items": [
+        "Water",
+        "Sound",
+        "Bullet",
+        "Fool"
+      ],
+      "revealHint": "+PROOF"
+    },
+    {
+      "id": "g2",
+      "label": "___lock",
+      "items": [
+        "Dead",
+        "Grid",
+        "Hem",
+        "War"
+      ],
+      "revealHint": "+LOCK"
+    },
+    {
+      "id": "g3",
+      "label": "___struck",
+      "items": [
+        "Star",
+        "Awe",
+        "Thunder",
+        "Dumb"
+      ],
+      "revealHint": "+STRUCK"
+    },
+    {
+      "id": "g4",
+      "label": "___print",
+      "items": [
+        "Foot",
+        "Finger",
+        "Blue",
+        "News"
+      ],
+      "revealHint": "+PRINT"
+    }
+  ]
+}

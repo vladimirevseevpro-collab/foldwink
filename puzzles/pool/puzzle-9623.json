@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9623",
+  "title": "Score Draw",
+  "difficulty": "hard",
+  "editorialSummary": "Golf scores below par, cricket terms, tennis scoring terms and baseball terms.",
+  "meta": {
+    "theme": "sport",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Golf scores below par",
+      "items": [
+        "Albatross",
+        "Condor",
+        "Eagle",
+        "Birdie"
+      ],
+      "revealHint": "UNDER PAR"
+    },
+    {
+      "id": "g2",
+      "label": "Cricket terms",
+      "items": [
+        "Duck",
+        "Maiden",
+        "Googly",
+        "Yorker"
+      ],
+      "revealHint": "CRICKET"
+    },
+    {
+      "id": "g3",
+      "label": "Words heard on a tennis court",
+      "items": [
+        "Let",
+        "Love",
+        "Deuce",
+        "Advantage"
+      ],
+      "revealHint": "TENNIS"
+    },
+    {
+      "id": "g4",
+      "label": "Baseball terms",
+      "items": [
+        "Bunt",
+        "Balk",
+        "Bullpen",
+        "Shortstop"
+      ],
+      "revealHint": "BASEBALL"
+    }
+  ]
+}

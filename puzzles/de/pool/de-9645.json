@@ -1,0 +1,56 @@
+{
+  "id": "de-9645",
+  "title": "Wetterwörter",
+  "difficulty": "hard",
+  "editorialSummary": "Jede Karte ergänzt genau ein Wort: Schnee___, Regen___, Sonnen___ oder Wind___.",
+  "meta": {
+    "theme": "Sprache",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Passt hinter SCHNEE",
+      "items": [
+        "Flocke",
+        "Mann",
+        "Glöckchen",
+        "Pflug"
+      ],
+      "revealHint": "SCHNEE___"
+    },
+    {
+      "id": "g2",
+      "label": "Passt hinter REGEN",
+      "items": [
+        "Bogen",
+        "Wurm",
+        "Tropfen",
+        "Wald"
+      ],
+      "revealHint": "REGEN___"
+    },
+    {
+      "id": "g3",
+      "label": "Passt hinter SONNEN",
+      "items": [
+        "Blume",
+        "Brand",
+        "Uhr",
+        "Finsternis"
+      ],
+      "revealHint": "SONNEN___"
+    },
+    {
+      "id": "g4",
+      "label": "Passt hinter WIND",
+      "items": [
+        "Mühle",
+        "Stärke",
+        "Pocken",
+        "Beutel"
+      ],
+      "revealHint": "WIND___"
+    }
+  ]
+}

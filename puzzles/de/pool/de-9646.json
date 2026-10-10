@@ -1,0 +1,56 @@
+{
+  "id": "de-9646",
+  "title": "Steinreich",
+  "difficulty": "hard",
+  "editorialSummary": "Magmatische, sedimentäre und metamorphe Gesteine sowie Edelsteine.",
+  "meta": {
+    "theme": "Geologie",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Magmatisches Gestein",
+      "items": [
+        "Granit",
+        "Basalt",
+        "Bims",
+        "Obsidian"
+      ],
+      "revealHint": "MAGMATISCH"
+    },
+    {
+      "id": "g2",
+      "label": "Sedimentgestein",
+      "items": [
+        "Sandstein",
+        "Kalkstein",
+        "Kreide",
+        "Steinkohle"
+      ],
+      "revealHint": "SEDIMENT"
+    },
+    {
+      "id": "g3",
+      "label": "Metamorphes Gestein",
+      "items": [
+        "Marmor",
+        "Gneis",
+        "Quarzit",
+        "Glimmerschiefer"
+      ],
+      "revealHint": "METAMORPH"
+    },
+    {
+      "id": "g4",
+      "label": "Edelstein",
+      "items": [
+        "Rubin",
+        "Saphir",
+        "Smaragd",
+        "Topas"
+      ],
+      "revealHint": "EDELSTEIN"
+    }
+  ]
+}

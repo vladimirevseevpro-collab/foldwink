@@ -1,0 +1,56 @@
+{
+  "id": "de-9636",
+  "title": "Baustile",
+  "difficulty": "hard",
+  "editorialSummary": "Bauwerke der Romanik, der Gotik, des Barocks und der Moderne des 20. und 21. Jahrhunderts.",
+  "meta": {
+    "theme": "Architektur",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Romanisches Bauwerk",
+      "items": [
+        "Speyerer Dom",
+        "Wormser Dom",
+        "Mainzer Dom",
+        "Maria Laach"
+      ],
+      "revealHint": "ROMANIK"
+    },
+    {
+      "id": "g2",
+      "label": "Gotisches Bauwerk",
+      "items": [
+        "Kölner Dom",
+        "Ulmer Münster",
+        "Freiburger Münster",
+        "Notre-Dame de Paris"
+      ],
+      "revealHint": "GOTIK"
+    },
+    {
+      "id": "g3",
+      "label": "Barockes Bauwerk",
+      "items": [
+        "Dresdner Zwinger",
+        "Würzburger Residenz",
+        "Schloss Ludwigsburg",
+        "Schloss Versailles"
+      ],
+      "revealHint": "BAROCK"
+    },
+    {
+      "id": "g4",
+      "label": "Bauwerk der Moderne",
+      "items": [
+        "Elbphilharmonie",
+        "Bauhausgebäude Dessau",
+        "Neue Nationalgalerie",
+        "Olympiastadion München"
+      ],
+      "revealHint": "MODERNE"
+    }
+  ]
+}

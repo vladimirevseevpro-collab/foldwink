@@ -1,0 +1,56 @@
+{
+  "id": "de-9613",
+  "title": "Bonn, Berlin, Ost-Berlin",
+  "difficulty": "hard",
+  "editorialSummary": "Bundeskanzler, Bundespräsidenten, Staatsoberhäupter der DDR und Regierende Bürgermeister von Berlin.",
+  "meta": {
+    "theme": "Geschichte",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Bundeskanzler",
+      "items": [
+        "Adenauer",
+        "Erhard",
+        "Kiesinger",
+        "Schmidt"
+      ],
+      "revealHint": "KANZLER"
+    },
+    {
+      "id": "g2",
+      "label": "Bundespräsidenten",
+      "items": [
+        "Heuss",
+        "Lübke",
+        "Heinemann",
+        "Scheel"
+      ],
+      "revealHint": "BUNDESPRÄSIDENT"
+    },
+    {
+      "id": "g3",
+      "label": "Staatsoberhäupter der DDR",
+      "items": [
+        "Pieck",
+        "Ulbricht",
+        "Honecker",
+        "Krenz"
+      ],
+      "revealHint": "DDR"
+    },
+    {
+      "id": "g4",
+      "label": "Regierende Bürgermeister von Berlin",
+      "items": [
+        "Reuter",
+        "Diepgen",
+        "Momper",
+        "Wowereit"
+      ],
+      "revealHint": "BERLIN"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "de-9633",
+  "title": "Digitale Namen",
+  "difficulty": "hard",
+  "editorialSummary": "Programmiersprachen, Webbrowser, Betriebssysteme und macOS-Versionen mit Namen aus der echten Welt.",
+  "meta": {
+    "theme": "Technik",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Programmiersprache",
+      "items": [
+        "Python",
+        "Java",
+        "Ruby",
+        "Rust"
+      ],
+      "revealHint": "PROGRAMMIERSPRACHE"
+    },
+    {
+      "id": "g2",
+      "label": "Webbrowser",
+      "items": [
+        "Safari",
+        "Opera",
+        "Chrome",
+        "Edge"
+      ],
+      "revealHint": "BROWSER"
+    },
+    {
+      "id": "g3",
+      "label": "Betriebssysteme",
+      "items": [
+        "Windows",
+        "Android",
+        "Linux",
+        "Solaris"
+      ],
+      "revealHint": "BETRIEBSSYSTEM"
+    },
+    {
+      "id": "g4",
+      "label": "Versionen von macOS",
+      "items": [
+        "Mojave",
+        "Catalina",
+        "Yosemite",
+        "Sequoia"
+      ],
+      "revealHint": "MACOS"
+    }
+  ]
+}

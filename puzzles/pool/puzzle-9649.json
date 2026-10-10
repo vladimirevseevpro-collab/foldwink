@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9649",
+  "title": "Idiom Origins",
+  "difficulty": "hard",
+  "editorialSummary": "Idioms that come from sailing, horse racing, card games and the theatre.",
+  "meta": {
+    "theme": "language",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Idioms from sailing",
+      "items": [
+        "Taken aback",
+        "Loose cannon",
+        "Batten down the hatches",
+        "Three sheets to the wind"
+      ],
+      "revealHint": "AT SEA"
+    },
+    {
+      "id": "g2",
+      "label": "Idioms from horse racing",
+      "items": [
+        "Dark horse",
+        "Down to the wire",
+        "Neck and neck",
+        "Also-ran"
+      ],
+      "revealHint": "AT THE TRACK"
+    },
+    {
+      "id": "g3",
+      "label": "Idioms from card games",
+      "items": [
+        "Above board",
+        "Wild card",
+        "Up the ante",
+        "Poker face"
+      ],
+      "revealHint": "AT THE TABLE"
+    },
+    {
+      "id": "g4",
+      "label": "Idioms from the theatre",
+      "items": [
+        "Upstage",
+        "In the limelight",
+        "Waiting in the wings",
+        "Break a leg"
+      ],
+      "revealHint": "ON STAGE"
+    }
+  ]
+}

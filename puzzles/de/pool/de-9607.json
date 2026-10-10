@@ -1,0 +1,56 @@
+{
+  "id": "de-9607",
+  "title": "Pinsel und Programme",
+  "difficulty": "hard",
+  "editorialSummary": "Französische Impressionisten, Brücke-Maler, Künstler des Blauen Reiters und Surrealisten.",
+  "meta": {
+    "theme": "Kunst",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Französische Impressionisten",
+      "items": [
+        "Monet",
+        "Renoir",
+        "Degas",
+        "Sisley"
+      ],
+      "revealHint": "IMPRESSIONISMUS"
+    },
+    {
+      "id": "g2",
+      "label": "Mitglieder der Künstlergruppe Brücke",
+      "items": [
+        "Kirchner",
+        "Heckel",
+        "Schmidt-Rottluff",
+        "Pechstein"
+      ],
+      "revealHint": "BRÜCKE"
+    },
+    {
+      "id": "g3",
+      "label": "Künstler des Blauen Reiters",
+      "items": [
+        "Marc",
+        "Macke",
+        "Münter",
+        "Kandinsky"
+      ],
+      "revealHint": "BLAUER REITER"
+    },
+    {
+      "id": "g4",
+      "label": "Maler des Surrealismus",
+      "items": [
+        "Dalí",
+        "Magritte",
+        "Ernst",
+        "Tanguy"
+      ],
+      "revealHint": "SURREALISMUS"
+    }
+  ]
+}

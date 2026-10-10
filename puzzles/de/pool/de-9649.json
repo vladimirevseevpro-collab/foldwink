@@ -1,0 +1,56 @@
+{
+  "id": "de-9649",
+  "title": "Forscherköpfe",
+  "difficulty": "hard",
+  "editorialSummary": "Wissenschaftler, vor allem bekannt als Biologen und Mediziner, Chemiker, Mathematiker oder Astronomen.",
+  "meta": {
+    "theme": "Wissenschaft",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Hauptsächlich als Biologe oder Mediziner bekannt",
+      "items": [
+        "Mendel",
+        "Darwin",
+        "Koch",
+        "Virchow"
+      ],
+      "revealHint": "BIOLOGIE / MEDIZIN"
+    },
+    {
+      "id": "g2",
+      "label": "Hauptsächlich als Chemiker bekannt",
+      "items": [
+        "Liebig",
+        "Bunsen",
+        "Haber",
+        "Lavoisier"
+      ],
+      "revealHint": "CHEMIE"
+    },
+    {
+      "id": "g3",
+      "label": "Hauptsächlich als Mathematiker bekannt",
+      "items": [
+        "Euler",
+        "Riemann",
+        "Hilbert",
+        "Cantor"
+      ],
+      "revealHint": "MATHEMATIK"
+    },
+    {
+      "id": "g4",
+      "label": "Hauptsächlich als Astronom bekannt",
+      "items": [
+        "Kopernikus",
+        "Kepler",
+        "Herschel",
+        "Hubble"
+      ],
+      "revealHint": "ASTRONOMIE"
+    }
+  ]
+}

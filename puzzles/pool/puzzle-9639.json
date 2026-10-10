@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9639",
+  "title": "Old Maps",
+  "difficulty": "hard",
+  "editorialSummary": "Old names of Asian countries, African countries, cities and Latin names of European lands.",
+  "meta": {
+    "theme": "history",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Old names of Asian countries",
+      "items": [
+        "Ceylon",
+        "Siam",
+        "Persia",
+        "Cathay"
+      ],
+      "revealHint": "ASIA, RENAMED"
+    },
+    {
+      "id": "g2",
+      "label": "Old names of African countries",
+      "items": [
+        "Abyssinia",
+        "Dahomey",
+        "Gold Coast",
+        "Upper Volta"
+      ],
+      "revealHint": "AFRICA, RENAMED"
+    },
+    {
+      "id": "g3",
+      "label": "Old names of cities",
+      "items": [
+        "Edo",
+        "Constantinople",
+        "Christiania",
+        "New Amsterdam"
+      ],
+      "revealHint": "CITIES, RENAMED"
+    },
+    {
+      "id": "g4",
+      "label": "Latin names of European lands",
+      "items": [
+        "Helvetia",
+        "Hibernia",
+        "Caledonia",
+        "Lusitania"
+      ],
+      "revealHint": "LATIN NAMES"
+    }
+  ]
+}

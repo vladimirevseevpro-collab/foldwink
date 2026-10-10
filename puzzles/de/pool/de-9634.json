@@ -1,0 +1,56 @@
+{
+  "id": "de-9634",
+  "title": "Vorsicht beim Sammeln",
+  "difficulty": "hard",
+  "editorialSummary": "Speisepilze, Giftpilze, tödlich giftige Pflanzen und klassische Heilpflanzen.",
+  "meta": {
+    "theme": "Natur",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Speisepilze",
+      "items": [
+        "Steinpilz",
+        "Pfifferling",
+        "Parasol",
+        "Krause Glucke"
+      ],
+      "revealHint": "SPEISEPILZ"
+    },
+    {
+      "id": "g2",
+      "label": "Giftpilze",
+      "items": [
+        "Fliegenpilz",
+        "Grüner Knollenblätterpilz",
+        "Satansröhrling",
+        "Pantherpilz"
+      ],
+      "revealHint": "GIFTPILZ"
+    },
+    {
+      "id": "g3",
+      "label": "Tödlich giftige Pflanzen",
+      "items": [
+        "Tollkirsche",
+        "Eisenhut",
+        "Schierling",
+        "Herbstzeitlose"
+      ],
+      "revealHint": "GIFTPFLANZE"
+    },
+    {
+      "id": "g4",
+      "label": "Klassische Heilpflanzen",
+      "items": [
+        "Kamille",
+        "Salbei",
+        "Baldrian",
+        "Johanniskraut"
+      ],
+      "revealHint": "HEILPFLANZE"
+    }
+  ]
+}

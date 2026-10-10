@@ -1,0 +1,56 @@
+{
+  "id": "de-9640",
+  "title": "Ausschank",
+  "difficulty": "hard",
+  "editorialSummary": "Wiener und italienische Kaffeespezialitäten, Rebsorten und Biersorten.",
+  "meta": {
+    "theme": "Essen",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Wiener Kaffeespezialitäten",
+      "items": [
+        "Melange",
+        "Einspänner",
+        "Verlängerter",
+        "Kleiner Brauner"
+      ],
+      "revealHint": "WIENER KAFFEEHAUS"
+    },
+    {
+      "id": "g2",
+      "label": "Italienische Kaffeespezialitäten",
+      "items": [
+        "Ristretto",
+        "Macchiato",
+        "Cappuccino",
+        "Lungo"
+      ],
+      "revealHint": "ITALIENISCHER KAFFEE"
+    },
+    {
+      "id": "g3",
+      "label": "Weißwein- und Rotweinrebsorten",
+      "items": [
+        "Riesling",
+        "Silvaner",
+        "Trollinger",
+        "Spätburgunder"
+      ],
+      "revealHint": "REBSORTE"
+    },
+    {
+      "id": "g4",
+      "label": "Biersorten",
+      "items": [
+        "Kölsch",
+        "Bock",
+        "Alt",
+        "Märzen"
+      ],
+      "revealHint": "BIERSORTE"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9616",
+  "title": "Breeding Grounds",
+  "difficulty": "hard",
+  "editorialSummary": "Dog, cat, horse and cattle breeds named after places.",
+  "meta": {
+    "theme": "nature",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Dog breeds named after places",
+      "items": [
+        "Dalmatian",
+        "Chihuahua",
+        "Labrador",
+        "Maltese"
+      ],
+      "revealHint": "DOGS"
+    },
+    {
+      "id": "g2",
+      "label": "Cat breeds named after places",
+      "items": [
+        "Siamese",
+        "Persian",
+        "Burmese",
+        "Manx"
+      ],
+      "revealHint": "CATS"
+    },
+    {
+      "id": "g3",
+      "label": "Horse breeds named after places",
+      "items": [
+        "Clydesdale",
+        "Andalusian",
+        "Arabian",
+        "Lipizzaner"
+      ],
+      "revealHint": "HORSES"
+    },
+    {
+      "id": "g4",
+      "label": "Cattle breeds named after places",
+      "items": [
+        "Jersey",
+        "Hereford",
+        "Charolais",
+        "Limousin"
+      ],
+      "revealHint": "CATTLE"
+    }
+  ]
+}

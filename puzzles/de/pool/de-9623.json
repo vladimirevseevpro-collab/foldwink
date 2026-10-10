@@ -1,0 +1,56 @@
+{
+  "id": "de-9623",
+  "title": "Jahrhundertfragen",
+  "difficulty": "hard",
+  "editorialSummary": "Ereignisse aus dem 15., 16., 17. und 18. Jahrhundert.",
+  "meta": {
+    "theme": "Geschichte",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Geschah im 15. Jahrhundert",
+      "items": [
+        "Fall Konstantinopels",
+        "Erste Fahrt des Kolumbus",
+        "Gutenberg-Bibel",
+        "Rosenkriege"
+      ],
+      "revealHint": "15. JH."
+    },
+    {
+      "id": "g2",
+      "label": "Geschah im 16. Jahrhundert",
+      "items": [
+        "Thesenanschlag Luthers",
+        "Deutscher Bauernkrieg",
+        "Untergang der Armada",
+        "Magellans Weltumsegelung"
+      ],
+      "revealHint": "16. JH."
+    },
+    {
+      "id": "g3",
+      "label": "Geschah im 17. Jahrhundert",
+      "items": [
+        "Westfälischer Friede",
+        "Glorious Revolution",
+        "Großer Brand von London",
+        "Tod Shakespeares"
+      ],
+      "revealHint": "17. JH."
+    },
+    {
+      "id": "g4",
+      "label": "Geschah im 18. Jahrhundert",
+      "items": [
+        "Französische Revolution",
+        "Unabhängigkeitserklärung der USA",
+        "Siebenjähriger Krieg",
+        "Erdbeben von Lissabon"
+      ],
+      "revealHint": "18. JH."
+    }
+  ]
+}

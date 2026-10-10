@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9615",
+  "title": "Code Names",
+  "difficulty": "hard",
+  "editorialSummary": "macOS releases, Android dessert names, programming languages and web browsers.",
+  "meta": {
+    "theme": "technology",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "macOS release names",
+      "items": [
+        "Mojave",
+        "Catalina",
+        "Yosemite",
+        "Sonoma"
+      ],
+      "revealHint": "MACOS"
+    },
+    {
+      "id": "g2",
+      "label": "Android dessert code names",
+      "items": [
+        "Cupcake",
+        "Eclair",
+        "Nougat",
+        "Marshmallow"
+      ],
+      "revealHint": "ANDROID"
+    },
+    {
+      "id": "g3",
+      "label": "Coding languages",
+      "items": [
+        "Python",
+        "Ruby",
+        "Perl",
+        "Julia"
+      ],
+      "revealHint": "CODE"
+    },
+    {
+      "id": "g4",
+      "label": "Web browsers",
+      "items": [
+        "Opera",
+        "Safari",
+        "Edge",
+        "Vivaldi"
+      ],
+      "revealHint": "BROWSERS"
+    }
+  ]
+}

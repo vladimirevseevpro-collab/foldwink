@@ -1,0 +1,56 @@
+{
+  "id": "de-9619",
+  "title": "Ab ins Meer",
+  "difficulty": "hard",
+  "editorialSummary": "Flüsse, die in die Nordsee, die Ostsee, das Mittelmeer oder direkt in den Atlantik münden.",
+  "meta": {
+    "theme": "Geografie",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Mündet in die Nordsee",
+      "items": [
+        "Elbe",
+        "Weser",
+        "Ems",
+        "Themse"
+      ],
+      "revealHint": "NORDSEE"
+    },
+    {
+      "id": "g2",
+      "label": "Mündet in die Ostsee",
+      "items": [
+        "Oder",
+        "Weichsel",
+        "Newa",
+        "Memel"
+      ],
+      "revealHint": "OSTSEE"
+    },
+    {
+      "id": "g3",
+      "label": "Mündet ins Mittelmeer",
+      "items": [
+        "Rhône",
+        "Ebro",
+        "Tiber",
+        "Nil"
+      ],
+      "revealHint": "MITTELMEER"
+    },
+    {
+      "id": "g4",
+      "label": "Mündet direkt in den offenen Atlantik",
+      "items": [
+        "Loire",
+        "Tejo",
+        "Douro",
+        "Guadalquivir"
+      ],
+      "revealHint": "ATLANTIK"
+    }
+  ]
+}

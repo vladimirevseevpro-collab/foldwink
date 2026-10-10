@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9605",
+  "title": "Anatomy of Things",
+  "difficulty": "hard",
+  "editorialSummary": "Things that have a bridge, teeth, eyes or hands.",
+  "meta": {
+    "theme": "everyday",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Things with a bridge",
+      "items": [
+        "Nose",
+        "Violin",
+        "Spectacles",
+        "Guitar"
+      ],
+      "revealHint": "BRIDGE"
+    },
+    {
+      "id": "g2",
+      "label": "Objects with teeth",
+      "items": [
+        "Comb",
+        "Saw",
+        "Zip",
+        "Cog"
+      ],
+      "revealHint": "TEETH"
+    },
+    {
+      "id": "g3",
+      "label": "Things with eyes",
+      "items": [
+        "Needle",
+        "Potato",
+        "Hurricane",
+        "Peacock"
+      ],
+      "revealHint": "EYES"
+    },
+    {
+      "id": "g4",
+      "label": "Things with hands",
+      "items": [
+        "Clock",
+        "Banana",
+        "Poker",
+        "Ranch"
+      ],
+      "revealHint": "HANDS"
+    }
+  ]
+}

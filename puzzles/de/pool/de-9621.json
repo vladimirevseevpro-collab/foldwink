@@ -1,0 +1,56 @@
+{
+  "id": "de-9621",
+  "title": "Deutsches Kino",
+  "difficulty": "hard",
+  "editorialSummary": "Filme von Fritz Lang, F. W. Murnau, Werner Herzog und Wim Wenders.",
+  "meta": {
+    "theme": "Film",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Filme von Fritz Lang",
+      "items": [
+        "Metropolis",
+        "M – Eine Stadt sucht einen Mörder",
+        "Die Nibelungen",
+        "Dr. Mabuse, der Spieler"
+      ],
+      "revealHint": "FRITZ LANG"
+    },
+    {
+      "id": "g2",
+      "label": "Filme von F. W. Murnau",
+      "items": [
+        "Faust",
+        "Tabu",
+        "Der letzte Mann",
+        "Sunrise"
+      ],
+      "revealHint": "MURNAU"
+    },
+    {
+      "id": "g3",
+      "label": "Filme von Werner Herzog",
+      "items": [
+        "Fitzcarraldo",
+        "Aguirre, der Zorn Gottes",
+        "Stroszek",
+        "Grizzly Man"
+      ],
+      "revealHint": "HERZOG"
+    },
+    {
+      "id": "g4",
+      "label": "Filme von Wim Wenders",
+      "items": [
+        "Paris, Texas",
+        "Der Himmel über Berlin",
+        "Perfect Days",
+        "Alice in den Städten"
+      ],
+      "revealHint": "WENDERS"
+    }
+  ]
+}

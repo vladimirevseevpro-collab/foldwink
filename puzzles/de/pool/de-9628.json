@@ -1,0 +1,56 @@
+{
+  "id": "de-9628",
+  "title": "Inselhüpfen",
+  "difficulty": "hard",
+  "editorialSummary": "Inseln, die zu Griechenland, Italien, Kroatien oder Frankreich gehören.",
+  "meta": {
+    "theme": "Geografie",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Gehört zu Griechenland",
+      "items": [
+        "Korfu",
+        "Kos",
+        "Ithaka",
+        "Naxos"
+      ],
+      "revealHint": "GRIECHENLAND"
+    },
+    {
+      "id": "g2",
+      "label": "Gehört zu Italien",
+      "items": [
+        "Elba",
+        "Ischia",
+        "Lampedusa",
+        "Stromboli"
+      ],
+      "revealHint": "ITALIEN"
+    },
+    {
+      "id": "g3",
+      "label": "Gehört zu Kroatien",
+      "items": [
+        "Krk",
+        "Hvar",
+        "Brač",
+        "Korčula"
+      ],
+      "revealHint": "KROATIEN"
+    },
+    {
+      "id": "g4",
+      "label": "Gehört zu Frankreich",
+      "items": [
+        "Korsika",
+        "Réunion",
+        "Martinique",
+        "Guadeloupe"
+      ],
+      "revealHint": "FRANKREICH"
+    }
+  ]
+}

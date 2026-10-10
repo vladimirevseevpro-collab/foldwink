@@ -1,0 +1,56 @@
+{
+  "id": "de-9643",
+  "title": "Schiffsregister",
+  "difficulty": "hard",
+  "editorialSummary": "Schiffe berühmter Entdeckungsfahrten, Polarexpeditionsschiffe, Kriegsschiffe und Ozeandampfer.",
+  "meta": {
+    "theme": "Geschichte",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Schiff einer berühmten Entdeckungsfahrt",
+      "items": [
+        "Santa María",
+        "Victoria",
+        "Golden Hind",
+        "Endeavour"
+      ],
+      "revealHint": "ENTDECKER"
+    },
+    {
+      "id": "g2",
+      "label": "Schiff einer Polarexpedition",
+      "items": [
+        "Fram",
+        "Endurance",
+        "Terra Nova",
+        "Polarstern"
+      ],
+      "revealHint": "POLAR"
+    },
+    {
+      "id": "g3",
+      "label": "Kriegsschiff",
+      "items": [
+        "Bismarck",
+        "Victory",
+        "Yamato",
+        "Tirpitz"
+      ],
+      "revealHint": "KRIEGSSCHIFF"
+    },
+    {
+      "id": "g4",
+      "label": "Passagierschiff im Linienverkehr",
+      "items": [
+        "Titanic",
+        "Lusitania",
+        "Queen Mary 2",
+        "Normandie"
+      ],
+      "revealHint": "PASSAGIERSCHIFF"
+    }
+  ]
+}

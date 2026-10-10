@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9625",
+  "title": "Small Parts",
+  "difficulty": "hard",
+  "editorialSummary": "Parts of the eye, a flower, a tooth and a cell.",
+  "meta": {
+    "theme": "biology",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Parts of the human eye",
+      "items": [
+        "Iris",
+        "Lens",
+        "Sclera",
+        "Cornea"
+      ],
+      "revealHint": "EYE"
+    },
+    {
+      "id": "g2",
+      "label": "Parts of a flower",
+      "items": [
+        "Stamen",
+        "Sepal",
+        "Anther",
+        "Stigma"
+      ],
+      "revealHint": "FLOWER"
+    },
+    {
+      "id": "g3",
+      "label": "Layers and parts of a tooth",
+      "items": [
+        "Enamel",
+        "Pulp",
+        "Crown",
+        "Dentine"
+      ],
+      "revealHint": "TOOTH"
+    },
+    {
+      "id": "g4",
+      "label": "Parts of a cell",
+      "items": [
+        "Nucleus",
+        "Ribosome",
+        "Vacuole",
+        "Cytoplasm"
+      ],
+      "revealHint": "CELL"
+    }
+  ]
+}

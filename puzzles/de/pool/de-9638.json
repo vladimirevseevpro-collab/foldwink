@@ -1,0 +1,56 @@
+{
+  "id": "de-9638",
+  "title": "Bildergalerie",
+  "difficulty": "hard",
+  "editorialSummary": "Gemälde von Caspar David Friedrich, Jan Vermeer, Pieter Bruegel dem Älteren und Vincent van Gogh.",
+  "meta": {
+    "theme": "Kunst",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Gemälde von Caspar David Friedrich",
+      "items": [
+        "Wanderer über dem Nebelmeer",
+        "Das Eismeer",
+        "Kreidefelsen auf Rügen",
+        "Der Mönch am Meer"
+      ],
+      "revealHint": "C. D. FRIEDRICH"
+    },
+    {
+      "id": "g2",
+      "label": "Gemälde von Jan Vermeer",
+      "items": [
+        "Das Mädchen mit dem Perlenohrring",
+        "Briefleserin am offenen Fenster",
+        "Der Astronom",
+        "Die Dienstmagd mit dem Milchkrug"
+      ],
+      "revealHint": "VERMEER"
+    },
+    {
+      "id": "g3",
+      "label": "Gemälde von Pieter Bruegel dem Älteren",
+      "items": [
+        "Die Bauernhochzeit",
+        "Der Turmbau zu Babel",
+        "Die Jäger im Schnee",
+        "Die niederländischen Sprichwörter"
+      ],
+      "revealHint": "BRUEGEL"
+    },
+    {
+      "id": "g4",
+      "label": "Gemälde von Vincent van Gogh",
+      "items": [
+        "Die Sternennacht",
+        "Sonnenblumen",
+        "Das Nachtcafé",
+        "Die Kartoffelesser"
+      ],
+      "revealHint": "VAN GOGH"
+    }
+  ]
+}

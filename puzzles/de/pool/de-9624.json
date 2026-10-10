@@ -1,0 +1,56 @@
+{
+  "id": "de-9624",
+  "title": "Spezialitätenreise",
+  "difficulty": "hard",
+  "editorialSummary": "Spezialitäten aus Österreich, der Schweiz, Ungarn und Griechenland.",
+  "meta": {
+    "theme": "Essen",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Spezialitäten aus Österreich",
+      "items": [
+        "Kaiserschmarrn",
+        "Tafelspitz",
+        "Sachertorte",
+        "Germknödel"
+      ],
+      "revealHint": "ÖSTERREICH"
+    },
+    {
+      "id": "g2",
+      "label": "Spezialitäten aus der Schweiz",
+      "items": [
+        "Rösti",
+        "Zürcher Geschnetzeltes",
+        "Birchermüsli",
+        "Älplermagronen"
+      ],
+      "revealHint": "SCHWEIZ"
+    },
+    {
+      "id": "g3",
+      "label": "Spezialitäten aus Ungarn",
+      "items": [
+        "Lángos",
+        "Dobostorte",
+        "Letscho",
+        "Pörkölt"
+      ],
+      "revealHint": "UNGARN"
+    },
+    {
+      "id": "g4",
+      "label": "Spezialitäten aus Griechenland",
+      "items": [
+        "Moussaka",
+        "Tzatziki",
+        "Souvlaki",
+        "Stifado"
+      ],
+      "revealHint": "GRIECHENLAND"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9606",
+  "title": "Name the Element",
+  "difficulty": "hard",
+  "editorialSummary": "Chemical elements named after places, people, myths and colours.",
+  "meta": {
+    "theme": "science",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Elements named after places",
+      "items": [
+        "Germanium",
+        "Francium",
+        "Americium",
+        "Polonium"
+      ],
+      "revealHint": "PLACES"
+    },
+    {
+      "id": "g2",
+      "label": "Elements named after scientists",
+      "items": [
+        "Einsteinium",
+        "Curium",
+        "Nobelium",
+        "Mendelevium"
+      ],
+      "revealHint": "SCIENTISTS"
+    },
+    {
+      "id": "g3",
+      "label": "Elements named after myth figures",
+      "items": [
+        "Titanium",
+        "Thorium",
+        "Promethium",
+        "Tantalum"
+      ],
+      "revealHint": "MYTHS"
+    },
+    {
+      "id": "g4",
+      "label": "Elements named after colours",
+      "items": [
+        "Chlorine",
+        "Iodine",
+        "Rubidium",
+        "Caesium"
+      ],
+      "revealHint": "COLOURS"
+    }
+  ]
+}

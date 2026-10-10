@@ -1,0 +1,56 @@
+{
+  "id": "de-9602",
+  "title": "Elementare Namensgeber",
+  "difficulty": "hard",
+  "editorialSummary": "Chemische Elemente, benannt nach Forschern, Ländern oder Erdteilen, Städten und Himmelskörpern.",
+  "meta": {
+    "theme": "Chemie",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Element nach einer Person benannt",
+      "items": [
+        "Einsteinium",
+        "Curium",
+        "Nobelium",
+        "Mendelevium"
+      ],
+      "revealHint": "FORSCHER"
+    },
+    {
+      "id": "g2",
+      "label": "Element nach Land oder Erdteil benannt",
+      "items": [
+        "Germanium",
+        "Polonium",
+        "Francium",
+        "Americium"
+      ],
+      "revealHint": "LAND"
+    },
+    {
+      "id": "g3",
+      "label": "Element nach einer Stadt benannt",
+      "items": [
+        "Darmstadtium",
+        "Hafnium",
+        "Lutetium",
+        "Berkelium"
+      ],
+      "revealHint": "STADT"
+    },
+    {
+      "id": "g4",
+      "label": "Element nach einem Himmelskörper benannt",
+      "items": [
+        "Helium",
+        "Selen",
+        "Tellur",
+        "Uran"
+      ],
+      "revealHint": "HIMMELSKÖRPER"
+    }
+  ]
+}

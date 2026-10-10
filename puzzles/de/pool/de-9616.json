@@ -1,0 +1,56 @@
+{
+  "id": "de-9616",
+  "title": "Maßgeschneidert",
+  "difficulty": "hard",
+  "editorialSummary": "Maßeinheiten nach Deutschen, Franzosen und Briten benannt sowie SI-Basiseinheiten ohne Personennamen.",
+  "meta": {
+    "theme": "Wissenschaft",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Einheit nach einem Deutschen benannt",
+      "items": [
+        "Hertz",
+        "Ohm",
+        "Siemens",
+        "Weber"
+      ],
+      "revealHint": "DEUTSCHER"
+    },
+    {
+      "id": "g2",
+      "label": "Einheit nach einem Franzosen benannt",
+      "items": [
+        "Ampere",
+        "Coulomb",
+        "Becquerel",
+        "Pascal"
+      ],
+      "revealHint": "FRANZOSE"
+    },
+    {
+      "id": "g3",
+      "label": "Einheit nach einem Briten benannt",
+      "items": [
+        "Newton",
+        "Joule",
+        "Watt",
+        "Kelvin"
+      ],
+      "revealHint": "BRITE"
+    },
+    {
+      "id": "g4",
+      "label": "SI-Basiseinheit ohne Personennamen",
+      "items": [
+        "Meter",
+        "Sekunde",
+        "Mol",
+        "Candela"
+      ],
+      "revealHint": "OHNE PERSON"
+    }
+  ]
+}

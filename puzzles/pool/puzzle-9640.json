@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9640",
+  "title": "Double Lives",
+  "difficulty": "hard",
+  "editorialSummary": "Birds, fish, mammals and trees whose names are also verbs.",
+  "meta": {
+    "theme": "wordplay",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Birds that are also verbs",
+      "items": [
+        "Swallow",
+        "Grouse",
+        "Quail",
+        "Rook"
+      ],
+      "revealHint": "BIRD / VERB"
+    },
+    {
+      "id": "g2",
+      "label": "Fish that are also verbs",
+      "items": [
+        "Carp",
+        "Flounder",
+        "Perch",
+        "Skate"
+      ],
+      "revealHint": "FISH / VERB"
+    },
+    {
+      "id": "g3",
+      "label": "Mammals that are also verbs",
+      "items": [
+        "Badger",
+        "Ferret",
+        "Hound",
+        "Wolf"
+      ],
+      "revealHint": "MAMMAL / VERB"
+    },
+    {
+      "id": "g4",
+      "label": "Trees that are also verbs",
+      "items": [
+        "Pine",
+        "Spruce",
+        "Box",
+        "Plane"
+      ],
+      "revealHint": "TREE / VERB"
+    }
+  ]
+}

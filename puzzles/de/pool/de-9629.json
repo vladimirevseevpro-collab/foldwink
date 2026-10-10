@@ -1,0 +1,56 @@
+{
+  "id": "de-9629",
+  "title": "Von Kopf bis Fuß",
+  "difficulty": "hard",
+  "editorialSummary": "Jede Karte ergänzt genau ein Wort: Kopf___, Hand___, Fuß___ oder Herz___.",
+  "meta": {
+    "theme": "Sprache",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Passt hinter KOPF",
+      "items": [
+        "Salat",
+        "Hörer",
+        "Nuss",
+        "Bahnhof"
+      ],
+      "revealHint": "KOPF___"
+    },
+    {
+      "id": "g2",
+      "label": "Passt hinter HAND",
+      "items": [
+        "Schuh",
+        "Schrift",
+        "Tasche",
+        "Werk"
+      ],
+      "revealHint": "HAND___"
+    },
+    {
+      "id": "g3",
+      "label": "Passt hinter FUSS",
+      "items": [
+        "Gänger",
+        "Matte",
+        "Pilz",
+        "Boden"
+      ],
+      "revealHint": "FUSS___"
+    },
+    {
+      "id": "g4",
+      "label": "Passt hinter HERZ",
+      "items": [
+        "Infarkt",
+        "Klappe",
+        "Dame",
+        "Blut"
+      ],
+      "revealHint": "HERZ___"
+    }
+  ]
+}

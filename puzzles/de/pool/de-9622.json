@@ -1,0 +1,56 @@
+{
+  "id": "de-9622",
+  "title": "Dreierpack",
+  "difficulty": "hard",
+  "editorialSummary": "Wörter mit drei gleichen Buchstaben hintereinander: dreifaches F, L, T oder S.",
+  "meta": {
+    "theme": "Sprache",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Enthält dreifaches F",
+      "items": [
+        "Schifffahrt",
+        "Stofffetzen",
+        "Sauerstoffflasche",
+        "Kunststofffolie"
+      ],
+      "revealHint": "FFF"
+    },
+    {
+      "id": "g2",
+      "label": "Enthält dreifaches L",
+      "items": [
+        "Rollladen",
+        "Stilllegung",
+        "Schnellläufer",
+        "Kontrolllampe"
+      ],
+      "revealHint": "LLL"
+    },
+    {
+      "id": "g3",
+      "label": "Enthält dreifaches T",
+      "items": [
+        "Balletttänzer",
+        "Schritttempo",
+        "Betttuch",
+        "Fetttropfen"
+      ],
+      "revealHint": "TTT"
+    },
+    {
+      "id": "g4",
+      "label": "Enthält dreifaches S",
+      "items": [
+        "Schlussstrich",
+        "Passstraße",
+        "Fitnessstudio",
+        "Stresssituation"
+      ],
+      "revealHint": "SSS"
+    }
+  ]
+}

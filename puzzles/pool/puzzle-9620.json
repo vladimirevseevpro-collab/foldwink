@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9620",
+  "title": "Eponyms Everywhere",
+  "difficulty": "hard",
+  "editorialSummary": "Clothes named after people, clothes named after places, events named after places and inventions named after inventors.",
+  "meta": {
+    "theme": "words",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Clothing named after people",
+      "items": [
+        "Leotard",
+        "Stetson",
+        "Bloomers",
+        "Cardigan"
+      ],
+      "revealHint": "WORN, BY NAME"
+    },
+    {
+      "id": "g2",
+      "label": "Clothing named after places",
+      "items": [
+        "Denim",
+        "Bikini",
+        "Tuxedo",
+        "Balaclava"
+      ],
+      "revealHint": "WORN, BY PLACE"
+    },
+    {
+      "id": "g3",
+      "label": "Sports or contests named after places",
+      "items": [
+        "Rugby",
+        "Badminton",
+        "Marathon",
+        "Olympics"
+      ],
+      "revealHint": "PLAYED, BY PLACE"
+    },
+    {
+      "id": "g4",
+      "label": "Inventions named after inventors",
+      "items": [
+        "Saxophone",
+        "Diesel",
+        "Braille",
+        "Biro"
+      ],
+      "revealHint": "INVENTED"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9644",
+  "title": "Auteur Theory",
+  "difficulty": "hard",
+  "editorialSummary": "Films directed by Hitchcock, Kubrick, Spielberg and Nolan.",
+  "meta": {
+    "theme": "film",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Directed by Alfred Hitchcock",
+      "items": [
+        "Vertigo",
+        "Rebecca",
+        "Rope",
+        "Marnie"
+      ],
+      "revealHint": "HITCHCOCK"
+    },
+    {
+      "id": "g2",
+      "label": "Directed by Stanley Kubrick",
+      "items": [
+        "Lolita",
+        "Spartacus",
+        "Barry Lyndon",
+        "Dr. Strangelove"
+      ],
+      "revealHint": "KUBRICK"
+    },
+    {
+      "id": "g3",
+      "label": "Directed by Steven Spielberg",
+      "items": [
+        "Jaws",
+        "Hook",
+        "Duel",
+        "Munich"
+      ],
+      "revealHint": "SPIELBERG"
+    },
+    {
+      "id": "g4",
+      "label": "Directed by Christopher Nolan",
+      "items": [
+        "Memento",
+        "Inception",
+        "Tenet",
+        "Dunkirk"
+      ],
+      "revealHint": "NOLAN"
+    }
+  ]
+}

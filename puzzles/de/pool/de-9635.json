@@ -1,0 +1,56 @@
+{
+  "id": "de-9635",
+  "title": "Familienbande",
+  "difficulty": "hard",
+  "editorialSummary": "Jede Karte ergänzt genau ein Wort: ___frau, ___kind, ___mutter oder ___herr.",
+  "meta": {
+    "theme": "Sprache",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Passt vor FRAU",
+      "items": [
+        "Jung",
+        "Putz",
+        "Markt",
+        "Wasch"
+      ],
+      "revealHint": "___FRAU"
+    },
+    {
+      "id": "g2",
+      "label": "Passt vor KIND",
+      "items": [
+        "Christ",
+        "Wunder",
+        "Sorgen",
+        "Einzel"
+      ],
+      "revealHint": "___KIND"
+    },
+    {
+      "id": "g3",
+      "label": "Passt vor MUTTER",
+      "items": [
+        "Perl",
+        "Schrauben",
+        "Leih",
+        "Raben"
+      ],
+      "revealHint": "___MUTTER"
+    },
+    {
+      "id": "g4",
+      "label": "Passt vor HERR",
+      "items": [
+        "Bau",
+        "Grund",
+        "Feld",
+        "Schirm"
+      ],
+      "revealHint": "___HERR"
+    }
+  ]
+}

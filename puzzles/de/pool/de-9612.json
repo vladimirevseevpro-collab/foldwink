@@ -1,0 +1,56 @@
+{
+  "id": "de-9612",
+  "title": "Tierische Bausteine",
+  "difficulty": "hard",
+  "editorialSummary": "Tiernamen, zusammengesetzt aus zwei Tieren, aus Pflanze und Tier, aus Lebensraum und Tier oder aus Farbe und Tier.",
+  "meta": {
+    "theme": "Natur",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Tiername aus zwei Tiernamen",
+      "items": [
+        "Hirschkäfer",
+        "Mäusebussard",
+        "Wolfsbarsch",
+        "Schweinswal"
+      ],
+      "revealHint": "TIER + TIER"
+    },
+    {
+      "id": "g2",
+      "label": "Tiername aus Pflanze und Tier",
+      "items": [
+        "Distelfalter",
+        "Kartoffelkäfer",
+        "Tannenhäher",
+        "Rosenkäfer"
+      ],
+      "revealHint": "PFLANZE + TIER"
+    },
+    {
+      "id": "g3",
+      "label": "Tiername aus Lebensraum und Tier",
+      "items": [
+        "Feldhase",
+        "Waldkauz",
+        "Seeadler",
+        "Bergfink"
+      ],
+      "revealHint": "LEBENSRAUM + TIER"
+    },
+    {
+      "id": "g4",
+      "label": "Tiername aus Farbe und Tier",
+      "items": [
+        "Blaumeise",
+        "Rotfuchs",
+        "Grünspecht",
+        "Schwarzstorch"
+      ],
+      "revealHint": "FARBE + TIER"
+    }
+  ]
+}

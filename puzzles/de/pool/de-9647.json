@@ -1,0 +1,56 @@
+{
+  "id": "de-9647",
+  "title": "Wer hat sie erfunden?",
+  "difficulty": "hard",
+  "editorialSummary": "Figuren von Thomas Mann, Franz Kafka, Goethe und Theodor Fontane.",
+  "meta": {
+    "theme": "Literatur",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Figur von Thomas Mann",
+      "items": [
+        "Hans Castorp",
+        "Tonio Kröger",
+        "Gustav von Aschenbach",
+        "Felix Krull"
+      ],
+      "revealHint": "THOMAS MANN"
+    },
+    {
+      "id": "g2",
+      "label": "Figur von Franz Kafka",
+      "items": [
+        "Gregor Samsa",
+        "Josef K.",
+        "Karl Roßmann",
+        "Georg Bendemann"
+      ],
+      "revealHint": "KAFKA"
+    },
+    {
+      "id": "g3",
+      "label": "Figur von Goethe",
+      "items": [
+        "Werther",
+        "Mephisto",
+        "Wilhelm Meister",
+        "Gretchen"
+      ],
+      "revealHint": "GOETHE"
+    },
+    {
+      "id": "g4",
+      "label": "Figur von Theodor Fontane",
+      "items": [
+        "Effi Briest",
+        "Dubslav von Stechlin",
+        "Jenny Treibel",
+        "Mathilde Möhring"
+      ],
+      "revealHint": "FONTANE"
+    }
+  ]
+}

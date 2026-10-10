@@ -1,0 +1,56 @@
+{
+  "id": "puzzle-9634",
+  "title": "Dramatis Personae",
+  "difficulty": "hard",
+  "editorialSummary": "Shakespeare's cross-dressing heroines, jesters, villains and fairies.",
+  "meta": {
+    "theme": "literature",
+    "batch": "en-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Shakespeare heroines disguised as men",
+      "items": [
+        "Rosalind",
+        "Viola",
+        "Portia",
+        "Imogen"
+      ],
+      "revealHint": "DISGUISED"
+    },
+    {
+      "id": "g2",
+      "label": "Shakespeare jesters",
+      "items": [
+        "Feste",
+        "Touchstone",
+        "Trinculo",
+        "Yorick"
+      ],
+      "revealHint": "FOOLS"
+    },
+    {
+      "id": "g3",
+      "label": "Shakespeare villains",
+      "items": [
+        "Iago",
+        "Edmund",
+        "Aaron",
+        "Don John"
+      ],
+      "revealHint": "VILLAINS"
+    },
+    {
+      "id": "g4",
+      "label": "Shakespeare fairies and spirits",
+      "items": [
+        "Ariel",
+        "Puck",
+        "Oberon",
+        "Titania"
+      ],
+      "revealHint": "SPIRITS"
+    }
+  ]
+}

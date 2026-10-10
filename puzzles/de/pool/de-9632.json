@@ -1,0 +1,56 @@
+{
+  "id": "de-9632",
+  "title": "Grimms Requisiten",
+  "difficulty": "hard",
+  "editorialSummary": "Motive aus den Grimm-Märchen Dornröschen, Rumpelstilzchen, Schneewittchen und Der Froschkönig.",
+  "meta": {
+    "theme": "Literatur",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Motiv aus „Dornröschen“",
+      "items": [
+        "Spindel",
+        "Dornenhecke",
+        "Dreizehnte weise Frau",
+        "Hundertjähriger Schlaf"
+      ],
+      "revealHint": "DORNRÖSCHEN"
+    },
+    {
+      "id": "g2",
+      "label": "Motiv aus „Rumpelstilzchen“",
+      "items": [
+        "Stroh",
+        "Müllerstochter",
+        "Feuer",
+        "Halsband"
+      ],
+      "revealHint": "RUMPELSTILZCHEN"
+    },
+    {
+      "id": "g3",
+      "label": "Motiv aus „Schneewittchen“",
+      "items": [
+        "Zauberspiegel",
+        "Glassarg",
+        "Giftapfel",
+        "Vergifteter Kamm"
+      ],
+      "revealHint": "SCHNEEWITTCHEN"
+    },
+    {
+      "id": "g4",
+      "label": "Motiv aus „Der Froschkönig“",
+      "items": [
+        "Goldene Kugel",
+        "Brunnen",
+        "Eiserner Heinrich",
+        "Goldener Teller"
+      ],
+      "revealHint": "FROSCHKÖNIG"
+    }
+  ]
+}

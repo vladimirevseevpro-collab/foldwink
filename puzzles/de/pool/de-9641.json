@@ -1,0 +1,56 @@
+{
+  "id": "de-9641",
+  "title": "Ortsnamen mit Doppelleben",
+  "difficulty": "hard",
+  "editorialSummary": "Städte, Flüsse, Berge und Inseln, deren Namen zugleich gewöhnliche Wörter sind.",
+  "meta": {
+    "theme": "Geografie",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Deutsche Stadt, zugleich ein gewöhnliches Wort",
+      "items": [
+        "Essen",
+        "Halle",
+        "Hof",
+        "Kiel"
+      ],
+      "revealHint": "STADT"
+    },
+    {
+      "id": "g2",
+      "label": "Deutscher Fluss, zugleich ein gewöhnliches Wort",
+      "items": [
+        "Lippe",
+        "Elster",
+        "Sieg",
+        "Aller"
+      ],
+      "revealHint": "FLUSS"
+    },
+    {
+      "id": "g3",
+      "label": "Berg, zugleich ein gewöhnliches Wort",
+      "items": [
+        "Mönch",
+        "Jungfrau",
+        "Dom",
+        "Brocken"
+      ],
+      "revealHint": "BERG"
+    },
+    {
+      "id": "g4",
+      "label": "Insel, zugleich ein gewöhnliches Wort",
+      "items": [
+        "Rügen",
+        "Jersey",
+        "Mull",
+        "Man"
+      ],
+      "revealHint": "INSEL"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "de-9605",
+  "title": "Hauptsache Hauptstadt",
+  "difficulty": "hard",
+  "editorialSummary": "Deutsche Landeshauptstädte mit und ohne Größenrekord, die größten Städte ohne Hauptstadtstatus und österreichische Landeshauptstädte.",
+  "meta": {
+    "theme": "Geografie",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Deutsche Landeshauptstadt, aber nicht größte Stadt ihres Landes",
+      "items": [
+        "Düsseldorf",
+        "Wiesbaden",
+        "Dresden",
+        "Schwerin"
+      ],
+      "revealHint": "NICHT DIE GRÖSSTE"
+    },
+    {
+      "id": "g2",
+      "label": "Größte Stadt ihres deutschen Bundeslands, aber nicht Hauptstadt",
+      "items": [
+        "Köln",
+        "Frankfurt am Main",
+        "Leipzig",
+        "Rostock"
+      ],
+      "revealHint": "GRÖSSTE, NICHT HAUPTST."
+    },
+    {
+      "id": "g3",
+      "label": "Deutsche Landeshauptstadt und zugleich größte Stadt des Landes",
+      "items": [
+        "München",
+        "Stuttgart",
+        "Hannover",
+        "Mainz"
+      ],
+      "revealHint": "BEIDES"
+    },
+    {
+      "id": "g4",
+      "label": "Österreichische Landeshauptstädte",
+      "items": [
+        "Graz",
+        "Linz",
+        "Innsbruck",
+        "Klagenfurt"
+      ],
+      "revealHint": "ÖSTERREICH"
+    }
+  ]
+}

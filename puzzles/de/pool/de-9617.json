@@ -1,0 +1,56 @@
+{
+  "id": "de-9617",
+  "title": "Opernabend",
+  "difficulty": "hard",
+  "editorialSummary": "Opern von Mozart, Verdi, Puccini und Rossini.",
+  "meta": {
+    "theme": "Musik",
+    "batch": "de-hard-96"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Opern von Mozart",
+      "items": [
+        "Die Zauberflöte",
+        "Idomeneo",
+        "Così fan tutte",
+        "Die Entführung aus dem Serail"
+      ],
+      "revealHint": "MOZART"
+    },
+    {
+      "id": "g2",
+      "label": "Opern von Verdi",
+      "items": [
+        "Aida",
+        "Rigoletto",
+        "Nabucco",
+        "La Traviata"
+      ],
+      "revealHint": "VERDI"
+    },
+    {
+      "id": "g3",
+      "label": "Opern von Puccini",
+      "items": [
+        "Tosca",
+        "Turandot",
+        "La Bohème",
+        "Manon Lescaut"
+      ],
+      "revealHint": "PUCCINI"
+    },
+    {
+      "id": "g4",
+      "label": "Opern von Rossini",
+      "items": [
+        "Der Barbier von Sevilla",
+        "Wilhelm Tell",
+        "La Cenerentola",
+        "Die diebische Elster"
+      ],
+      "revealHint": "ROSSINI"
+    }
+  ]
+}
