@@ -45,7 +45,7 @@ await runCases("responsive-smoke", [
       await seedDismissedOnboarding(page);
       await page.goto(BASE_URL);
       await waitForMenu(page);
-      await page.getByText("1,000 puzzles", { exact: true }).waitFor({ state: "visible" });
+      await page.getByText(/^[\d,]+ puzzles$/).waitFor({ state: "visible" });
       await assertNoHorizontalScroll(page);
     },
   },

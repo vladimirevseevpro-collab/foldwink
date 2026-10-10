@@ -8,7 +8,7 @@
  * date-selected Daily entry, whose difficulty is part of the frozen calendar.
  */
 
-import { readFile } from "node:fs/promises";
+import { readFile, readdir } from "node:fs/promises";
 import { resolve } from "node:path";
 
 import {
@@ -33,9 +33,16 @@ const dailyManifest = JSON.parse(
 const expectedDailyEntry = dailyManifest.entries.find((entry) => entry.date === todayLocal());
 if (!expectedDailyEntry)
   throw new Error(`reviewed EN Daily calendar has no entry for ${todayLocal()}`);
-const expectedDailyPuzzle = JSON.parse(
-  await readFile(resolve("puzzles/pool", `${expectedDailyEntry.puzzleId}.json`), "utf8"),
-);
+// File names do not always equal ids (e.g. puzzle-hard-010.json holds hard-010).
+async function readPoolPuzzle(id) {
+  for (const file of await readdir(resolve("puzzles/pool"))) {
+    if (!file.endsWith(".json")) continue;
+    const puzzle = JSON.parse(await readFile(resolve("puzzles/pool", file), "utf8"));
+    if (puzzle.id === id) return puzzle;
+  }
+  throw new Error(`EN pool has no puzzle with id ${id}`);
+}
+const expectedDailyPuzzle = await readPoolPuzzle(expectedDailyEntry.puzzleId);
 
 async function readTextOf(page, selector) {
   const el = await page.$(selector);
@@ -60,8 +67,10 @@ async function dailyButton(page) {
 async function activeDifficultyFromHeader(page) {
   const subtitle = await readTextOf(page, "header p");
   if (!subtitle) return null;
-  const m = subtitle.match(/^(EASY|MEDIUM|HARD)/);
-  return m ? m[1].toLowerCase() : null;
+  // The UI names the hard tier "Master".
+  const m = subtitle.match(/^(EASY|MEDIUM|HARD|MASTER)/);
+  if (!m) return null;
+  return m[1] === "MASTER" ? "hard" : m[1].toLowerCase();
 }
 
 await runCases("progression-validator", [
