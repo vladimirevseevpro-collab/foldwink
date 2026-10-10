@@ -1,0 +1,51 @@
+{
+  "id": "de-9701",
+  "title": "Tierwelt",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Tiere nach Lebensraum",
+    "batch": "de-easy-fix"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Haustiere",
+      "items": [
+        "Hund",
+        "Katze",
+        "Hamster",
+        "Wellensittich"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Bauernhoftiere",
+      "items": [
+        "Kuh",
+        "Schwein",
+        "Huhn",
+        "Schaf"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Waldtiere",
+      "items": [
+        "Fuchs",
+        "Reh",
+        "Wildschwein",
+        "Dachs"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Meerestiere",
+      "items": [
+        "Hai",
+        "Qualle",
+        "Seestern",
+        "Delfin"
+      ]
+    }
+  ]
+}

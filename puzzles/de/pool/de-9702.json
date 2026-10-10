@@ -1,0 +1,51 @@
+{
+  "id": "de-9702",
+  "title": "Im Haus und Garten",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Alltagsgegenstände nach Verwendung",
+    "batch": "de-easy-fix"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Werkzeug",
+      "items": [
+        "Hammer",
+        "Zange",
+        "Säge",
+        "Bohrer"
+      ]
+    },
+    {
+      "id": "g2",
+      "label": "Besteck",
+      "items": [
+        "Gabel",
+        "Löffel",
+        "Messer",
+        "Essstäbchen"
+      ]
+    },
+    {
+      "id": "g3",
+      "label": "Schreibzeug",
+      "items": [
+        "Bleistift",
+        "Kugelschreiber",
+        "Füller",
+        "Filzstift"
+      ]
+    },
+    {
+      "id": "g4",
+      "label": "Gartengeräte",
+      "items": [
+        "Rasenmäher",
+        "Harke",
+        "Gießkanne",
+        "Heckenschere"
+      ]
+    }
+  ]
+}
