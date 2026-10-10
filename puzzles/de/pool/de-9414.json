@@ -1,0 +1,55 @@
+{
+  "id": "de-9414",
+  "title": "Zoo und Bauernhof",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Tiere",
+    "batch": "de-easy-02"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Im Zoo",
+      "items": [
+        "Elefant",
+        "Affe",
+        "Krokodil",
+        "Flamingo"
+      ],
+      "revealHint": "ZOO"
+    },
+    {
+      "id": "g2",
+      "label": "Auf dem Bauernhof",
+      "items": [
+        "Kuh",
+        "Schwein",
+        "Huhn",
+        "Schaf"
+      ],
+      "revealHint": "BAUERNHOF"
+    },
+    {
+      "id": "g3",
+      "label": "Jungtiere",
+      "items": [
+        "Kalb",
+        "Fohlen",
+        "Kätzchen",
+        "Küken"
+      ],
+      "revealHint": "JUNGTIERE"
+    },
+    {
+      "id": "g4",
+      "label": "Tierlaute",
+      "items": [
+        "Miau",
+        "Wau",
+        "Muh",
+        "Quak"
+      ],
+      "revealHint": "LAUTE"
+    }
+  ]
+}

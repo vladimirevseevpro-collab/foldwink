@@ -1,0 +1,55 @@
+{
+  "id": "de-9411",
+  "title": "Putzen und Waschen",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Haushalt",
+    "batch": "de-easy-02"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Wäsche waschen",
+      "items": [
+        "Waschpulver",
+        "Weichspüler",
+        "Fleckenentferner",
+        "Bleichmittel"
+      ],
+      "revealHint": "WÄSCHE"
+    },
+    {
+      "id": "g2",
+      "label": "Putzzeug",
+      "items": [
+        "Besen",
+        "Kehrschaufel",
+        "Mopp",
+        "Eimer"
+      ],
+      "revealHint": "PUTZEN"
+    },
+    {
+      "id": "g3",
+      "label": "Beim Abwasch",
+      "items": [
+        "Schwamm",
+        "Spülbürste",
+        "Abtropfgitter",
+        "Spülmittel"
+      ],
+      "revealHint": "SPÜLEN"
+    },
+    {
+      "id": "g4",
+      "label": "Entsorgung",
+      "items": [
+        "Mülltonne",
+        "Abfallsack",
+        "Container",
+        "Biotonne"
+      ],
+      "revealHint": "MÜLL"
+    }
+  ]
+}

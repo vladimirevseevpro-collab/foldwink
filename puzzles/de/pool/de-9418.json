@@ -1,0 +1,55 @@
+{
+  "id": "de-9418",
+  "title": "Auf der Straße unterwegs",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Verkehr",
+    "batch": "de-easy-02"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "An der Tankstelle",
+      "items": [
+        "Benzin",
+        "Zapfsäule",
+        "Zapfpistole",
+        "Kassierer"
+      ],
+      "revealHint": "TANKEN"
+    },
+    {
+      "id": "g2",
+      "label": "In der Werkstatt",
+      "items": [
+        "Reifenwechsel",
+        "Ölwechsel",
+        "Lackierung",
+        "Inspektion"
+      ],
+      "revealHint": "WERKSTATT"
+    },
+    {
+      "id": "g3",
+      "label": "Während der Fahrt",
+      "items": [
+        "Gurt",
+        "Navi",
+        "Scheibenwischer",
+        "Heizung"
+      ],
+      "revealHint": "FAHRT"
+    },
+    {
+      "id": "g4",
+      "label": "Papiere für Fahrer",
+      "items": [
+        "Führerschein",
+        "Fahrzeugschein",
+        "Fahrzeugbrief",
+        "Versicherungskarte"
+      ],
+      "revealHint": "PAPIERE"
+    }
+  ]
+}

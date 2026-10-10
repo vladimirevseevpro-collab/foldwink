@@ -1,0 +1,55 @@
+{
+  "id": "de-9413",
+  "title": "Im Stadtverkehr",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Verkehr",
+    "batch": "de-easy-02"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Haltepunkte",
+      "items": [
+        "Haltestelle",
+        "Bahnhof",
+        "Endstation",
+        "Anlegestelle"
+      ],
+      "revealHint": "HALT"
+    },
+    {
+      "id": "g2",
+      "label": "Nahverkehr",
+      "items": [
+        "Bus",
+        "U-Bahn",
+        "Tram",
+        "Sammeltaxi"
+      ],
+      "revealHint": "NAHVERKEHR"
+    },
+    {
+      "id": "g3",
+      "label": "Auf der Straße",
+      "items": [
+        "Zebrastreifen",
+        "Ampel",
+        "Stoppschild",
+        "Fahrbahnmarkierung"
+      ],
+      "revealHint": "ZEICHEN"
+    },
+    {
+      "id": "g4",
+      "label": "Menschen im Verkehr",
+      "items": [
+        "Fahrer",
+        "Fußgänger",
+        "Fahrgast",
+        "Verkehrspolizist"
+      ],
+      "revealHint": "MENSCHEN"
+    }
+  ]
+}

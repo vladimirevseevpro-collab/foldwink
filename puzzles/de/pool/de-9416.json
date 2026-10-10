@@ -1,0 +1,55 @@
+{
+  "id": "de-9416",
+  "title": "Spielsachen und Spiele",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Kindheit",
+    "batch": "de-easy-02"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Kuscheltiere und Puppen",
+      "items": [
+        "Teddy",
+        "Puppe",
+        "Stoffhase",
+        "Handpuppe"
+      ],
+      "revealHint": "KUSCHELN"
+    },
+    {
+      "id": "g2",
+      "label": "Bauen und Legen",
+      "items": [
+        "Bauklötze",
+        "Puzzle",
+        "Mosaik",
+        "Steckbausteine"
+      ],
+      "revealHint": "BAUEN"
+    },
+    {
+      "id": "g3",
+      "label": "Draußen spielen",
+      "items": [
+        "Fangen",
+        "Verstecken",
+        "Himmel und Hölle",
+        "Gummitwist"
+      ],
+      "revealHint": "DRAUSSEN"
+    },
+    {
+      "id": "g4",
+      "label": "Spiele mit Worten",
+      "items": [
+        "Galgenmännchen",
+        "Stadt-Land-Fluss",
+        "Tabu",
+        "Teekesselchen"
+      ],
+      "revealHint": "WORTSPIELE"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-9417",
+  "title": "Die Bibliothek",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Bücher",
+    "batch": "de-easy-02"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "In der Bibliothek",
+      "items": [
+        "Ausleihtheke",
+        "Katalog",
+        "Leseausweis",
+        "Lesesaal"
+      ],
+      "revealHint": "BIBLIOTHEK"
+    },
+    {
+      "id": "g2",
+      "label": "Aufbau eines Buches",
+      "items": [
+        "Einband",
+        "Seite",
+        "Inhaltsverzeichnis",
+        "Buchrücken"
+      ],
+      "revealHint": "BUCH"
+    },
+    {
+      "id": "g3",
+      "label": "Zum Nachschlagen",
+      "items": [
+        "Wörterbuch",
+        "Lexikon",
+        "Atlas",
+        "Duden"
+      ],
+      "revealHint": "NACHSCHLAGEN"
+    },
+    {
+      "id": "g4",
+      "label": "Menschen rund ums Buch",
+      "items": [
+        "Autor",
+        "Lektor",
+        "Übersetzer",
+        "Verleger"
+      ],
+      "revealHint": "BUCHLEUTE"
+    }
+  ]
+}

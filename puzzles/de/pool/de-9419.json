@@ -1,0 +1,55 @@
+{
+  "id": "de-9419",
+  "title": "Wetter und Himmel",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Wetter",
+    "batch": "de-easy-02"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Beim Gewitter",
+      "items": [
+        "Blitz",
+        "Donner",
+        "Gewitterwolke",
+        "Windböe"
+      ],
+      "revealHint": "GEWITTER"
+    },
+    {
+      "id": "g2",
+      "label": "Naturschauspiele am Himmel",
+      "items": [
+        "Regenbogen",
+        "Nordlicht",
+        "Morgenrot",
+        "Sternschnuppe"
+      ],
+      "revealHint": "HIMMEL"
+    },
+    {
+      "id": "g3",
+      "label": "Wintertage",
+      "items": [
+        "Schneefall",
+        "Glatteis",
+        "Raureif",
+        "Schneesturm"
+      ],
+      "revealHint": "WINTER"
+    },
+    {
+      "id": "g4",
+      "label": "Trübe Sicht",
+      "items": [
+        "Dunst",
+        "Nebel",
+        "Smog",
+        "Wolkenschleier"
+      ],
+      "revealHint": "SICHT"
+    }
+  ]
+}

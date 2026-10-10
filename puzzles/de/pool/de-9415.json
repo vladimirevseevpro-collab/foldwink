@@ -1,0 +1,55 @@
+{
+  "id": "de-9415",
+  "title": "Der erste Hunger",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Essen",
+    "batch": "de-easy-02"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Frühstücksgerichte",
+      "items": [
+        "Müsli",
+        "Rührei",
+        "Pfannkuchen",
+        "Haferbrei"
+      ],
+      "revealHint": "FRÜHSTÜCK"
+    },
+    {
+      "id": "g2",
+      "label": "Wurstbelag",
+      "items": [
+        "Salami",
+        "Schinken",
+        "Leberwurst",
+        "Mortadella"
+      ],
+      "revealHint": "WURST"
+    },
+    {
+      "id": "g3",
+      "label": "Süßer Brotaufstrich",
+      "items": [
+        "Honig",
+        "Marmelade",
+        "Nougatcreme",
+        "Erdnussbutter"
+      ],
+      "revealHint": "SÜSS"
+    },
+    {
+      "id": "g4",
+      "label": "Milchprodukte am Tisch",
+      "items": [
+        "Käse",
+        "Frischkäse",
+        "Butter",
+        "Quark"
+      ],
+      "revealHint": "BRÖTCHEN"
+    }
+  ]
+}

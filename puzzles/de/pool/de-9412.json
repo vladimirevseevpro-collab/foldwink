@@ -1,0 +1,55 @@
+{
+  "id": "de-9412",
+  "title": "Märchen",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Literatur",
+    "batch": "de-easy-02"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Grimm: Klassiker",
+      "items": [
+        "Aschenputtel",
+        "Rotkäppchen",
+        "Schneewittchen",
+        "Hänsel und Gretel"
+      ],
+      "revealHint": "GRIMM"
+    },
+    {
+      "id": "g2",
+      "label": "Weitere Grimm-Märchen",
+      "items": [
+        "Frau Holle",
+        "Rumpelstilzchen",
+        "Dornröschen",
+        "Froschkönig"
+      ],
+      "revealHint": "GRIMM 2"
+    },
+    {
+      "id": "g3",
+      "label": "Märchen von Andersen",
+      "items": [
+        "Kleine Meerjungfrau",
+        "Hässliches Entlein",
+        "Schneekönigin",
+        "Däumelinchen"
+      ],
+      "revealHint": "ANDERSEN"
+    },
+    {
+      "id": "g4",
+      "label": "Märchen von Hauff",
+      "items": [
+        "Zwerg Nase",
+        "Kalif Storch",
+        "Das kalte Herz",
+        "Der kleine Muck"
+      ],
+      "revealHint": "HAUFF"
+    }
+  ]
+}
