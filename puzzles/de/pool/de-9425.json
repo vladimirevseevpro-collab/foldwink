@@ -1,0 +1,55 @@
+{
+  "id": "de-9425",
+  "title": "Sportarten und ihre Begriffe",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Sport",
+    "batch": "de-easy-03"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Beim Fußball",
+      "items": [
+        "Elfmeter",
+        "Abseits",
+        "Eckball",
+        "Einwurf"
+      ],
+      "revealHint": "FUSSBALL"
+    },
+    {
+      "id": "g2",
+      "label": "Beim Tennis",
+      "items": [
+        "Aufschlag",
+        "Doppel",
+        "Satz",
+        "Rückhand"
+      ],
+      "revealHint": "TENNIS"
+    },
+    {
+      "id": "g3",
+      "label": "Schwimmen im Becken",
+      "items": [
+        "Brustschwimmen",
+        "Kraulen",
+        "Rückenschwimmen",
+        "Schmetterling"
+      ],
+      "revealHint": "SCHWIMMEN"
+    },
+    {
+      "id": "g4",
+      "label": "Zweikampf",
+      "items": [
+        "Judo",
+        "Boxen",
+        "Fechten",
+        "Sumo"
+      ],
+      "revealHint": "KAMPF"
+    }
+  ]
+}

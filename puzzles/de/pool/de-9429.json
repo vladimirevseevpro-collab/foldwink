@@ -1,0 +1,55 @@
+{
+  "id": "de-9429",
+  "title": "Backen",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Essen",
+    "batch": "de-easy-03"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Zutaten",
+      "items": [
+        "Mehl",
+        "Zucker",
+        "Hefe",
+        "Backpulver"
+      ],
+      "revealHint": "ZUTATEN"
+    },
+    {
+      "id": "g2",
+      "label": "Küchenhelfer beim Backen",
+      "items": [
+        "Backblech",
+        "Rührschüssel",
+        "Nudelholz",
+        "Springform"
+      ],
+      "revealHint": "GERÄTE"
+    },
+    {
+      "id": "g3",
+      "label": "Kuchenarten",
+      "items": [
+        "Marmorkuchen",
+        "Käsekuchen",
+        "Streuselkuchen",
+        "Gugelhupf"
+      ],
+      "revealHint": "KUCHEN"
+    },
+    {
+      "id": "g4",
+      "label": "Verzierung",
+      "items": [
+        "Zuckerguss",
+        "Zuckerperlen",
+        "Schlagsahne",
+        "Marzipan"
+      ],
+      "revealHint": "DEKO"
+    }
+  ]
+}

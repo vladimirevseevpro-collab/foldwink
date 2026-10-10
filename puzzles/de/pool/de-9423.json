@@ -1,0 +1,55 @@
+{
+  "id": "de-9423",
+  "title": "Musik und Tanz",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Musik",
+    "batch": "de-easy-03"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Beim Orchester",
+      "items": [
+        "Dirigent",
+        "Notenständer",
+        "Partitur",
+        "Taktstock"
+      ],
+      "revealHint": "ORCHESTER"
+    },
+    {
+      "id": "g2",
+      "label": "Tänze",
+      "items": [
+        "Walzer",
+        "Tango",
+        "Polka",
+        "Salsa"
+      ],
+      "revealHint": "TANZ"
+    },
+    {
+      "id": "g3",
+      "label": "Stimmgruppen im Chor",
+      "items": [
+        "Sopran",
+        "Alt",
+        "Tenor",
+        "Bass"
+      ],
+      "revealHint": "CHOR"
+    },
+    {
+      "id": "g4",
+      "label": "Musik hören",
+      "items": [
+        "Kopfhörer",
+        "Plattenspieler",
+        "Radio",
+        "Lautsprecher"
+      ],
+      "revealHint": "HÖREN"
+    }
+  ]
+}

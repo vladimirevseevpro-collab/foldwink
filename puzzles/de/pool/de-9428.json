@@ -1,0 +1,55 @@
+{
+  "id": "de-9428",
+  "title": "Ostern und Frühling",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Feste",
+    "batch": "de-easy-03"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Ostern",
+      "items": [
+        "Osterhase",
+        "Osterei",
+        "Osterfeuer",
+        "Ostermontag"
+      ],
+      "revealHint": "OSTERN"
+    },
+    {
+      "id": "g2",
+      "label": "Blumen im Frühling",
+      "items": [
+        "Krokus",
+        "Osterglocke",
+        "Tulpe",
+        "Schneeglöckchen"
+      ],
+      "revealHint": "FRÜHLING"
+    },
+    {
+      "id": "g3",
+      "label": "Frühlingstiere",
+      "items": [
+        "Storch",
+        "Frosch",
+        "Marienkäfer",
+        "Schmetterling"
+      ],
+      "revealHint": "TIERE"
+    },
+    {
+      "id": "g4",
+      "label": "Im Garten",
+      "items": [
+        "Rechen",
+        "Gießkanne",
+        "Spaten",
+        "Saatgut"
+      ],
+      "revealHint": "GARTEN"
+    }
+  ]
+}

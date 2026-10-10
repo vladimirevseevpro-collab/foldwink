@@ -1,0 +1,55 @@
+{
+  "id": "de-9427",
+  "title": "Handwerker und ihr Werkzeug",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Handwerk",
+    "batch": "de-easy-03"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Beim Schreiner",
+      "items": [
+        "Hobel",
+        "Säge",
+        "Stemmeisen",
+        "Schraubzwinge"
+      ],
+      "revealHint": "SCHREINER"
+    },
+    {
+      "id": "g2",
+      "label": "Beim Maler",
+      "items": [
+        "Pinsel",
+        "Farbeimer",
+        "Abdeckband",
+        "Malerkittel"
+      ],
+      "revealHint": "MALER"
+    },
+    {
+      "id": "g3",
+      "label": "Beim Schneider",
+      "items": [
+        "Nadel",
+        "Schnittmuster",
+        "Maßband",
+        "Fingerhut"
+      ],
+      "revealHint": "SCHNEIDER"
+    },
+    {
+      "id": "g4",
+      "label": "Beim Bäcker",
+      "items": [
+        "Teig",
+        "Backofen",
+        "Brotschieber",
+        "Knetmaschine"
+      ],
+      "revealHint": "BÄCKER"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-9422",
+  "title": "Taschen und Schmuck",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Accessoires",
+    "batch": "de-easy-03"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Schmuck",
+      "items": [
+        "Ohrring",
+        "Kette",
+        "Armband",
+        "Brosche"
+      ],
+      "revealHint": "SCHMUCK"
+    },
+    {
+      "id": "g2",
+      "label": "Taschen",
+      "items": [
+        "Rucksack",
+        "Handtasche",
+        "Aktentasche",
+        "Koffer"
+      ],
+      "revealHint": "TASCHEN"
+    },
+    {
+      "id": "g3",
+      "label": "Zum Sehen",
+      "items": [
+        "Brille",
+        "Fernglas",
+        "Lupe",
+        "Kontaktlinse"
+      ],
+      "revealHint": "SEHEN"
+    },
+    {
+      "id": "g4",
+      "label": "Zeitmesser",
+      "items": [
+        "Taschenuhr",
+        "Wecker",
+        "Sanduhr",
+        "Stoppuhr"
+      ],
+      "revealHint": "ZEIT"
+    }
+  ]
+}

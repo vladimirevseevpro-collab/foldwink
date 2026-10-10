@@ -1,0 +1,55 @@
+{
+  "id": "de-9426",
+  "title": "Schultag",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Schule",
+    "batch": "de-easy-03"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "An der Tafel",
+      "items": [
+        "Kreide",
+        "Tafelschwamm",
+        "Tafellineal",
+        "Pult"
+      ],
+      "revealHint": "TAFEL"
+    },
+    {
+      "id": "g2",
+      "label": "Im Mäppchen",
+      "items": [
+        "Buntstift",
+        "Radiergummi",
+        "Geodreieck",
+        "Anspitzer"
+      ],
+      "revealHint": "MÄPPCHEN"
+    },
+    {
+      "id": "g3",
+      "label": "In der Pause",
+      "items": [
+        "Pausenbrot",
+        "Schulhof",
+        "Klingel",
+        "Pausenaufsicht"
+      ],
+      "revealHint": "PAUSE"
+    },
+    {
+      "id": "g4",
+      "label": "Zeugnis",
+      "items": [
+        "Note",
+        "Versetzung",
+        "Sitzenbleiben",
+        "Zeugniskonferenz"
+      ],
+      "revealHint": "ZEUGNIS"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-9424",
+  "title": "Der Körper",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Körper",
+    "batch": "de-easy-03"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Die Hand",
+      "items": [
+        "Daumen",
+        "Zeigefinger",
+        "Handfläche",
+        "Fingernagel"
+      ],
+      "revealHint": "HAND"
+    },
+    {
+      "id": "g2",
+      "label": "Das Auge",
+      "items": [
+        "Pupille",
+        "Iris",
+        "Netzhaut",
+        "Augenlid"
+      ],
+      "revealHint": "AUGE"
+    },
+    {
+      "id": "g3",
+      "label": "Der Mund",
+      "items": [
+        "Zahn",
+        "Zunge",
+        "Lippe",
+        "Gaumen"
+      ],
+      "revealHint": "MUND"
+    },
+    {
+      "id": "g4",
+      "label": "Das Ohr",
+      "items": [
+        "Ohrläppchen",
+        "Trommelfell",
+        "Gehörgang",
+        "Ohrmuschel"
+      ],
+      "revealHint": "OHR"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-9421",
+  "title": "Kleidung für jeden Anlass",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Kleidung",
+    "batch": "de-easy-03"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Sportkleidung",
+      "items": [
+        "Trikot",
+        "Jogginghose",
+        "Turnschuhe",
+        "Schweißband"
+      ],
+      "revealHint": "SPORT"
+    },
+    {
+      "id": "g2",
+      "label": "Festliche Kleidung",
+      "items": [
+        "Anzug",
+        "Abendkleid",
+        "Krawatte",
+        "Fliege"
+      ],
+      "revealHint": "FEST"
+    },
+    {
+      "id": "g3",
+      "label": "Nachts und zu Hause",
+      "items": [
+        "Schlafanzug",
+        "Nachthemd",
+        "Hausschuhe",
+        "Bademantel"
+      ],
+      "revealHint": "NACHT"
+    },
+    {
+      "id": "g4",
+      "label": "Arbeitskleidung",
+      "items": [
+        "Schutzanzug",
+        "Schutzhelm",
+        "Kittel",
+        "Warnweste"
+      ],
+      "revealHint": "ARBEIT"
+    }
+  ]
+}
