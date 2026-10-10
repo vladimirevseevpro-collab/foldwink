@@ -1,0 +1,55 @@
+{
+  "id": "de-9473",
+  "title": "Geschmack und Geruch",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Sinne",
+    "batch": "de-easy-08"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Geschmack",
+      "items": [
+        "Süß",
+        "Sauer",
+        "Bitter",
+        "Salzig"
+      ],
+      "revealHint": "GESCHMACK"
+    },
+    {
+      "id": "g2",
+      "label": "Gerüche",
+      "items": [
+        "Muffig",
+        "Würzig",
+        "Blumig",
+        "Modrig"
+      ],
+      "revealHint": "GERUCH"
+    },
+    {
+      "id": "g3",
+      "label": "Temperatur",
+      "items": [
+        "Eisig",
+        "Lauwarm",
+        "Glühend",
+        "Frisch"
+      ],
+      "revealHint": "TEMPERATUR"
+    },
+    {
+      "id": "g4",
+      "label": "Oberflächen",
+      "items": [
+        "Glatt",
+        "Rau",
+        "Stachelig",
+        "Samtig"
+      ],
+      "revealHint": "OBERFLÄCHE"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-9477",
+  "title": "Tageslauf",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Alltag",
+    "batch": "de-easy-08"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Morgens",
+      "items": [
+        "Aufstehen",
+        "Zähneputzen",
+        "Frühstücken",
+        "Anziehen"
+      ],
+      "revealHint": "MORGENS"
+    },
+    {
+      "id": "g2",
+      "label": "Mittags",
+      "items": [
+        "Mittagessen",
+        "Mittagspause",
+        "Mittagsschlaf",
+        "Schulschluss"
+      ],
+      "revealHint": "MITTAGS"
+    },
+    {
+      "id": "g3",
+      "label": "Abends",
+      "items": [
+        "Abendbrot",
+        "Tagesschau",
+        "Zubettgehen",
+        "Gutenachtgeschichte"
+      ],
+      "revealHint": "ABENDS"
+    },
+    {
+      "id": "g4",
+      "label": "Nachts",
+      "items": [
+        "Schlafen",
+        "Träumen",
+        "Mondschein",
+        "Sternenhimmel"
+      ],
+      "revealHint": "NACHTS"
+    }
+  ]
+}

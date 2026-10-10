@@ -1,0 +1,55 @@
+{
+  "id": "de-9474",
+  "title": "Eigenschaften",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Adjektive",
+    "batch": "de-easy-08"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Größe",
+      "items": [
+        "Winzig",
+        "Riesig",
+        "Gewaltig",
+        "Zierlich"
+      ],
+      "revealHint": "GRÖSSE"
+    },
+    {
+      "id": "g2",
+      "label": "Tempo",
+      "items": [
+        "Flink",
+        "Rasant",
+        "Gemächlich",
+        "Blitzschnell"
+      ],
+      "revealHint": "TEMPO"
+    },
+    {
+      "id": "g3",
+      "label": "Lautstärke",
+      "items": [
+        "Schrill",
+        "Dumpf",
+        "Donnernd",
+        "Gedämpft"
+      ],
+      "revealHint": "LAUT"
+    },
+    {
+      "id": "g4",
+      "label": "Charakter",
+      "items": [
+        "Mutig",
+        "Fleißig",
+        "Geizig",
+        "Ehrlich"
+      ],
+      "revealHint": "CHARAKTER"
+    }
+  ]
+}

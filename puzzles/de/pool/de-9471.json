@@ -1,0 +1,55 @@
+{
+  "id": "de-9471",
+  "title": "Essen und Trinken",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Verben",
+    "batch": "de-easy-08"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Essen",
+      "items": [
+        "Schlemmen",
+        "Knabbern",
+        "Naschen",
+        "Verschlingen"
+      ],
+      "revealHint": "ESSEN"
+    },
+    {
+      "id": "g2",
+      "label": "Trinken",
+      "items": [
+        "Schlürfen",
+        "Nippen",
+        "Schlucken",
+        "Hinunterkippen"
+      ],
+      "revealHint": "TRINKEN"
+    },
+    {
+      "id": "g3",
+      "label": "Schlafen",
+      "items": [
+        "Dösen",
+        "Schlummern",
+        "Schnarchen",
+        "Einnicken"
+      ],
+      "revealHint": "SCHLAFEN"
+    },
+    {
+      "id": "g4",
+      "label": "Weinen",
+      "items": [
+        "Schluchzen",
+        "Heulen",
+        "Wimmern",
+        "Jammern"
+      ],
+      "revealHint": "WEINEN"
+    }
+  ]
+}

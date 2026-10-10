@@ -1,0 +1,55 @@
+{
+  "id": "de-9475",
+  "title": "Wie man springt und wirft",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Verben",
+    "batch": "de-easy-08"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Springen",
+      "items": [
+        "Hüpfen",
+        "Hopsen",
+        "Hechten",
+        "Wippen"
+      ],
+      "revealHint": "SPRINGEN"
+    },
+    {
+      "id": "g2",
+      "label": "Werfen",
+      "items": [
+        "Schleudern",
+        "Schmeißen",
+        "Pfeffern",
+        "Feuern"
+      ],
+      "revealHint": "WERFEN"
+    },
+    {
+      "id": "g3",
+      "label": "Ziehen und Schieben",
+      "items": [
+        "Zerren",
+        "Schleppen",
+        "Drücken",
+        "Schubsen"
+      ],
+      "revealHint": "ZIEHEN"
+    },
+    {
+      "id": "g4",
+      "label": "Fallen",
+      "items": [
+        "Stürzen",
+        "Purzeln",
+        "Kippen",
+        "Stolpern"
+      ],
+      "revealHint": "FALLEN"
+    }
+  ]
+}

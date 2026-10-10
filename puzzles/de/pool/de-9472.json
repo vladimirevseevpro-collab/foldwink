@@ -1,0 +1,55 @@
+{
+  "id": "de-9472",
+  "title": "Wie sich Tiere äußern",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Tiere",
+    "batch": "de-easy-08"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Hund",
+      "items": [
+        "Bellen",
+        "Knurren",
+        "Jaulen",
+        "Winseln"
+      ],
+      "revealHint": "HUND"
+    },
+    {
+      "id": "g2",
+      "label": "Katze",
+      "items": [
+        "Miauen",
+        "Fauchen",
+        "Schnurren",
+        "Kratzen"
+      ],
+      "revealHint": "KATZE"
+    },
+    {
+      "id": "g3",
+      "label": "Vogelstimmen",
+      "items": [
+        "Zwitschern",
+        "Krächzen",
+        "Gurren",
+        "Trillern"
+      ],
+      "revealHint": "VOGEL"
+    },
+    {
+      "id": "g4",
+      "label": "Bauernhoftiere",
+      "items": [
+        "Muhen",
+        "Wiehern",
+        "Grunzen",
+        "Meckern"
+      ],
+      "revealHint": "HOF"
+    }
+  ]
+}

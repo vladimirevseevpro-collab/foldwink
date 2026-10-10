@@ -1,0 +1,55 @@
+{
+  "id": "de-9476",
+  "title": "Wetter erleben",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Natur",
+    "batch": "de-easy-08"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Regen",
+      "items": [
+        "Tropfen",
+        "Pfütze",
+        "Regenschirm",
+        "Gummistiefel"
+      ],
+      "revealHint": "REGEN"
+    },
+    {
+      "id": "g2",
+      "label": "Sonne",
+      "items": [
+        "Sonnencreme",
+        "Sonnenbrille",
+        "Sonnenhut",
+        "Sonnenbrand"
+      ],
+      "revealHint": "SONNE"
+    },
+    {
+      "id": "g3",
+      "label": "Schnee",
+      "items": [
+        "Schneeflocke",
+        "Schneemann",
+        "Schneepflug",
+        "Schneeschaufel"
+      ],
+      "revealHint": "SCHNEE"
+    },
+    {
+      "id": "g4",
+      "label": "Wind",
+      "items": [
+        "Drachen",
+        "Windrad",
+        "Segel",
+        "Windjacke"
+      ],
+      "revealHint": "WIND"
+    }
+  ]
+}
