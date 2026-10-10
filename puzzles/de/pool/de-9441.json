@@ -1,0 +1,55 @@
+{
+  "id": "de-9441",
+  "title": "Ämter und Dienste",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Alltag",
+    "batch": "de-easy-05"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Bei der Post",
+      "items": [
+        "Brief",
+        "Paket",
+        "Briefmarke",
+        "Päckchen"
+      ],
+      "revealHint": "POST"
+    },
+    {
+      "id": "g2",
+      "label": "Bei der Bank",
+      "items": [
+        "Konto",
+        "Überweisung",
+        "Geldautomat",
+        "Kreditkarte"
+      ],
+      "revealHint": "BANK"
+    },
+    {
+      "id": "g3",
+      "label": "Auf dem Amt",
+      "items": [
+        "Antrag",
+        "Formular",
+        "Stempel",
+        "Wartenummer"
+      ],
+      "revealHint": "AMT"
+    },
+    {
+      "id": "g4",
+      "label": "Bei der Polizei",
+      "items": [
+        "Streifenwagen",
+        "Handschellen",
+        "Dienstmarke",
+        "Notruf"
+      ],
+      "revealHint": "POLIZEI"
+    }
+  ]
+}

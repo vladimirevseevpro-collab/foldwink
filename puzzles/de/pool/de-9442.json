@@ -1,0 +1,55 @@
+{
+  "id": "de-9442",
+  "title": "Gebirge",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Natur",
+    "batch": "de-easy-05"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Teile des Berges",
+      "items": [
+        "Gipfel",
+        "Grat",
+        "Hang",
+        "Tal"
+      ],
+      "revealHint": "BERG"
+    },
+    {
+      "id": "g2",
+      "label": "Wanderausrüstung",
+      "items": [
+        "Wanderstock",
+        "Bergschuhe",
+        "Kompass",
+        "Trinkflasche"
+      ],
+      "revealHint": "WANDERN"
+    },
+    {
+      "id": "g3",
+      "label": "Alpentiere",
+      "items": [
+        "Steinbock",
+        "Gämse",
+        "Murmeltier",
+        "Steinadler"
+      ],
+      "revealHint": "ALPEN"
+    },
+    {
+      "id": "g4",
+      "label": "Wintersport am Berg",
+      "items": [
+        "Skilift",
+        "Piste",
+        "Gondel",
+        "Schneekanone"
+      ],
+      "revealHint": "BERGSPORT"
+    }
+  ]
+}

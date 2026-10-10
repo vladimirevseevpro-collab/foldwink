@@ -1,0 +1,55 @@
+{
+  "id": "de-9445",
+  "title": "Elektrogeräte",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Wohnen",
+    "batch": "de-easy-05"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Kleine Küchenmaschinen",
+      "items": [
+        "Toaster",
+        "Mikrowelle",
+        "Eierkocher",
+        "Entsafter"
+      ],
+      "revealHint": "KÜCHE"
+    },
+    {
+      "id": "g2",
+      "label": "Technik im Bad",
+      "items": [
+        "Rasierer",
+        "Haartrockner",
+        "Körperwaage",
+        "Lockenstab"
+      ],
+      "revealHint": "BAD"
+    },
+    {
+      "id": "g3",
+      "label": "Fernsehecke",
+      "items": [
+        "Fernseher",
+        "Stereoanlage",
+        "Spielkonsole",
+        "Receiver"
+      ],
+      "revealHint": "WOHNZIMMER"
+    },
+    {
+      "id": "g4",
+      "label": "Büroecke",
+      "items": [
+        "Computer",
+        "Drucker",
+        "Schreibtischlampe",
+        "Router"
+      ],
+      "revealHint": "ARBEIT"
+    }
+  ]
+}

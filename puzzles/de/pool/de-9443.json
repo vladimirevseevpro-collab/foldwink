@@ -1,0 +1,55 @@
+{
+  "id": "de-9443",
+  "title": "Am Meer",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Natur",
+    "batch": "de-easy-05"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Badestrand",
+      "items": [
+        "Sand",
+        "Düne",
+        "Welle",
+        "Strandkorb"
+      ],
+      "revealHint": "STRAND"
+    },
+    {
+      "id": "g2",
+      "label": "Tiere im Salzwasser",
+      "items": [
+        "Krabbe",
+        "Seestern",
+        "Qualle",
+        "Seepferdchen"
+      ],
+      "revealHint": "MEER"
+    },
+    {
+      "id": "g3",
+      "label": "Teile des Schiffs",
+      "items": [
+        "Bug",
+        "Heck",
+        "Deck",
+        "Mast"
+      ],
+      "revealHint": "SCHIFF"
+    },
+    {
+      "id": "g4",
+      "label": "An der Küste",
+      "items": [
+        "Hafen",
+        "Leuchtturm",
+        "Deich",
+        "Mole"
+      ],
+      "revealHint": "KÜSTE"
+    }
+  ]
+}

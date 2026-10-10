@@ -1,0 +1,55 @@
+{
+  "id": "de-9448",
+  "title": "Kino und Film",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Unterhaltung",
+    "batch": "de-easy-05"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Im Kinosaal",
+      "items": [
+        "Leinwand",
+        "Projektor",
+        "Kinosessel",
+        "Vorhang"
+      ],
+      "revealHint": "KINO"
+    },
+    {
+      "id": "g2",
+      "label": "Kinogenres",
+      "items": [
+        "Krimi",
+        "Horrorfilm",
+        "Western",
+        "Zeichentrick"
+      ],
+      "revealHint": "GENRES"
+    },
+    {
+      "id": "g3",
+      "label": "Am Filmset",
+      "items": [
+        "Kameramann",
+        "Regisseur",
+        "Tontechniker",
+        "Maskenbildner"
+      ],
+      "revealHint": "SET"
+    },
+    {
+      "id": "g4",
+      "label": "Auszeichnungen für Filme",
+      "items": [
+        "Oscar",
+        "Goldene Palme",
+        "Goldener Bär",
+        "Deutscher Filmpreis"
+      ],
+      "revealHint": "PREISE"
+    }
+  ]
+}

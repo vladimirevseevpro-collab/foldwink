@@ -1,0 +1,55 @@
+{
+  "id": "de-9447",
+  "title": "Feuerwehr",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Berufe",
+    "batch": "de-easy-05"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Schutz und Werkzeug",
+      "items": [
+        "Schlauch",
+        "Feuerwehrhelm",
+        "Atemschutz",
+        "Axt"
+      ],
+      "revealHint": "AUSRÜSTUNG"
+    },
+    {
+      "id": "g2",
+      "label": "Fahrzeuge",
+      "items": [
+        "Löschfahrzeug",
+        "Drehleiter",
+        "Gerätewagen",
+        "Einsatzleitwagen"
+      ],
+      "revealHint": "FAHRZEUGE"
+    },
+    {
+      "id": "g3",
+      "label": "Einsätze",
+      "items": [
+        "Brand",
+        "Hochwasser",
+        "Verkehrsunfall",
+        "Wohnungsöffnung"
+      ],
+      "revealHint": "EINSATZ"
+    },
+    {
+      "id": "g4",
+      "label": "Auf der Wache",
+      "items": [
+        "Spind",
+        "Schlauchturm",
+        "Stangenrutsche",
+        "Funkraum"
+      ],
+      "revealHint": "WACHE"
+    }
+  ]
+}

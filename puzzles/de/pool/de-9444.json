@@ -1,0 +1,55 @@
+{
+  "id": "de-9444",
+  "title": "Beim Kochen",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Kochen",
+    "batch": "de-easy-05"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Zum Zerkleinern",
+      "items": [
+        "Gemüsehobel",
+        "Küchenmesser",
+        "Reibe",
+        "Sparschäler"
+      ],
+      "revealHint": "SCHNEIDEN"
+    },
+    {
+      "id": "g2",
+      "label": "Töpfe und Pfannen",
+      "items": [
+        "Kochtopf",
+        "Bratpfanne",
+        "Wok",
+        "Schnellkochtopf"
+      ],
+      "revealHint": "TÖPFE"
+    },
+    {
+      "id": "g3",
+      "label": "Gararten",
+      "items": [
+        "Braten",
+        "Kochen",
+        "Dünsten",
+        "Grillen"
+      ],
+      "revealHint": "GAREN"
+    },
+    {
+      "id": "g4",
+      "label": "Würzmittel",
+      "items": [
+        "Salz",
+        "Pfeffer",
+        "Paprikapulver",
+        "Muskat"
+      ],
+      "revealHint": "GEWÜRZE"
+    }
+  ]
+}

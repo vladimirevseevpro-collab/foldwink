@@ -1,0 +1,55 @@
+{
+  "id": "de-9446",
+  "title": "Feste in Deutschland",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Feste",
+    "batch": "de-easy-05"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Große Feste",
+      "items": [
+        "Oktoberfest",
+        "Karneval",
+        "Weihnachtsmarkt",
+        "Kirmes"
+      ],
+      "revealHint": "VOLKSFEST"
+    },
+    {
+      "id": "g2",
+      "label": "Kirchliche Feiertage",
+      "items": [
+        "Pfingsten",
+        "Christi Himmelfahrt",
+        "Fronleichnam",
+        "Allerheiligen"
+      ],
+      "revealHint": "KIRCHE"
+    },
+    {
+      "id": "g3",
+      "label": "Familienfeste",
+      "items": [
+        "Taufe",
+        "Hochzeit",
+        "Konfirmation",
+        "Geburtstag"
+      ],
+      "revealHint": "FAMILIE"
+    },
+    {
+      "id": "g4",
+      "label": "Bräuche",
+      "items": [
+        "Maibaum",
+        "Martinsumzug",
+        "Sternsingen",
+        "Silvesterfeuerwerk"
+      ],
+      "revealHint": "BRÄUCHE"
+    }
+  ]
+}
