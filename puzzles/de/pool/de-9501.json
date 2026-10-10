@@ -1,0 +1,55 @@
+{
+  "id": "de-9501",
+  "title": "Die Stadt",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Orte",
+    "batch": "de-easy-11"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Öffentliche Gebäude",
+      "items": [
+        "Rathaus",
+        "Bahnhof",
+        "Bibliothek",
+        "Stadthalle"
+      ],
+      "revealHint": "GEBÄUDE"
+    },
+    {
+      "id": "g2",
+      "label": "Geschäfte",
+      "items": [
+        "Bäckerei",
+        "Apotheke",
+        "Drogerie",
+        "Friseursalon"
+      ],
+      "revealHint": "GESCHÄFTE"
+    },
+    {
+      "id": "g3",
+      "label": "Grünflächen",
+      "items": [
+        "Stadtpark",
+        "Spielplatz",
+        "Kleingarten",
+        "Botanischer Garten"
+      ],
+      "revealHint": "GRÜN"
+    },
+    {
+      "id": "g4",
+      "label": "Straßenarten",
+      "items": [
+        "Allee",
+        "Gasse",
+        "Sackgasse",
+        "Einbahnstraße"
+      ],
+      "revealHint": "STRASSEN"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-9506",
+  "title": "Kinderfernsehen und Bücher",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Kindheit",
+    "batch": "de-easy-11"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Sendungen",
+      "items": [
+        "Sendung mit der Maus",
+        "Sandmännchen",
+        "Löwenzahn",
+        "Benjamin Blümchen"
+      ],
+      "revealHint": "SENDUNG"
+    },
+    {
+      "id": "g2",
+      "label": "Zeichentrickfiguren",
+      "items": [
+        "Biene Maja",
+        "Calimero",
+        "Wickie",
+        "Tabaluga"
+      ],
+      "revealHint": "FIGUREN"
+    },
+    {
+      "id": "g3",
+      "label": "Kinderbuchhelden",
+      "items": [
+        "Pippi Langstrumpf",
+        "Jim Knopf",
+        "Räuber Hotzenplotz",
+        "Emil Tischbein"
+      ],
+      "revealHint": "BUCHHELDEN"
+    },
+    {
+      "id": "g4",
+      "label": "Comic-Helden",
+      "items": [
+        "Asterix",
+        "Obelix",
+        "Tim",
+        "Struppi"
+      ],
+      "revealHint": "COMIC"
+    }
+  ]
+}

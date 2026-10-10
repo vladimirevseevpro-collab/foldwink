@@ -1,0 +1,55 @@
+{
+  "id": "de-9507",
+  "title": "Bauwerke in Deutschland",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Sehenswürdigkeiten",
+    "batch": "de-easy-11"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Tore und Denkmäler",
+      "items": [
+        "Brandenburger Tor",
+        "Holstentor",
+        "Siegessäule",
+        "Hermannsdenkmal"
+      ],
+      "revealHint": "TORE"
+    },
+    {
+      "id": "g2",
+      "label": "Schlösser",
+      "items": [
+        "Neuschwanstein",
+        "Sanssouci",
+        "Heidelberger Schloss",
+        "Schloss Nymphenburg"
+      ],
+      "revealHint": "SCHLÖSSER"
+    },
+    {
+      "id": "g3",
+      "label": "Kirchen",
+      "items": [
+        "Kölner Dom",
+        "Michaeliskirche",
+        "Aachener Dom",
+        "Ulmer Münster"
+      ],
+      "revealHint": "KIRCHEN"
+    },
+    {
+      "id": "g4",
+      "label": "Berühmte Museen",
+      "items": [
+        "Pergamonmuseum",
+        "Deutsches Museum",
+        "Städel Museum",
+        "Alte Pinakothek"
+      ],
+      "revealHint": "MUSEEN"
+    }
+  ]
+}

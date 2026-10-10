@@ -1,0 +1,55 @@
+{
+  "id": "de-9505",
+  "title": "Essen aus aller Welt",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Essen",
+    "batch": "de-easy-11"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Italienisch",
+      "items": [
+        "Pizza",
+        "Pasta",
+        "Risotto",
+        "Tiramisu"
+      ],
+      "revealHint": "ITALIEN"
+    },
+    {
+      "id": "g2",
+      "label": "Türkisch",
+      "items": [
+        "Döner",
+        "Börek",
+        "Lahmacun",
+        "Ayran"
+      ],
+      "revealHint": "TÜRKEI"
+    },
+    {
+      "id": "g3",
+      "label": "Griechisch",
+      "items": [
+        "Gyros",
+        "Tzatziki",
+        "Souvlaki",
+        "Feta"
+      ],
+      "revealHint": "GRIECHENLAND"
+    },
+    {
+      "id": "g4",
+      "label": "Asiatisch",
+      "items": [
+        "Sushi",
+        "Frühlingsrolle",
+        "Pad Thai",
+        "Ramen"
+      ],
+      "revealHint": "ASIEN"
+    }
+  ]
+}

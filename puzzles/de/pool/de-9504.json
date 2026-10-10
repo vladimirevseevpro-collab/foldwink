@@ -1,0 +1,55 @@
+{
+  "id": "de-9504",
+  "title": "Hobbys",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Freizeit",
+    "batch": "de-easy-11"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Kreative Hobbys",
+      "items": [
+        "Malen",
+        "Basteln",
+        "Stricken",
+        "Töpfern"
+      ],
+      "revealHint": "KREATIV"
+    },
+    {
+      "id": "g2",
+      "label": "Was man sammelt",
+      "items": [
+        "Briefmarken",
+        "Münzen",
+        "Schallplatten",
+        "Sticker"
+      ],
+      "revealHint": "SAMMELN"
+    },
+    {
+      "id": "g3",
+      "label": "Draußen",
+      "items": [
+        "Angeln",
+        "Wandern",
+        "Radfahren",
+        "Joggen"
+      ],
+      "revealHint": "DRAUSSEN"
+    },
+    {
+      "id": "g4",
+      "label": "Drinnen",
+      "items": [
+        "Lesen",
+        "Puzzeln",
+        "Fernsehen",
+        "Brettspiele"
+      ],
+      "revealHint": "DRINNEN"
+    }
+  ]
+}

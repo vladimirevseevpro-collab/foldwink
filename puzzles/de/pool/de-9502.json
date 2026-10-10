@@ -1,0 +1,55 @@
+{
+  "id": "de-9502",
+  "title": "Körpersprache",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Kommunikation",
+    "batch": "de-easy-11"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Gesten",
+      "items": [
+        "Nicken",
+        "Winken",
+        "Achselzucken",
+        "Daumen hoch"
+      ],
+      "revealHint": "GESTEN"
+    },
+    {
+      "id": "g2",
+      "label": "Mimik",
+      "items": [
+        "Lächeln",
+        "Stirnrunzeln",
+        "Augenrollen",
+        "Naserümpfen"
+      ],
+      "revealHint": "MIMIK"
+    },
+    {
+      "id": "g3",
+      "label": "Haltung",
+      "items": [
+        "Strammstehen",
+        "Kauern",
+        "Knien",
+        "Sich strecken"
+      ],
+      "revealHint": "HALTUNG"
+    },
+    {
+      "id": "g4",
+      "label": "Berührungen",
+      "items": [
+        "Umarmung",
+        "Händedruck",
+        "Schulterklopfen",
+        "Kuss"
+      ],
+      "revealHint": "BERÜHRUNG"
+    }
+  ]
+}

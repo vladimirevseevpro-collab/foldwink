@@ -1,0 +1,55 @@
+{
+  "id": "de-9503",
+  "title": "Uhr und Kalender",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Zeit",
+    "batch": "de-easy-11"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Zeitmesser",
+      "items": [
+        "Wanduhr",
+        "Armbanduhr",
+        "Wecker",
+        "Küchentimer"
+      ],
+      "revealHint": "UHREN"
+    },
+    {
+      "id": "g2",
+      "label": "Uhrzeit",
+      "items": [
+        "Stundenzeiger",
+        "Minutenzeiger",
+        "Zifferblatt",
+        "Sekundenzeiger"
+      ],
+      "revealHint": "ZEIGER"
+    },
+    {
+      "id": "g3",
+      "label": "Kalender",
+      "items": [
+        "Wandkalender",
+        "Terminkalender",
+        "Adventskalender",
+        "Taschenkalender"
+      ],
+      "revealHint": "KALENDER"
+    },
+    {
+      "id": "g4",
+      "label": "Zeitabschnitte",
+      "items": [
+        "Vormittag",
+        "Nachmittag",
+        "Dämmerung",
+        "Mitternacht"
+      ],
+      "revealHint": "ABSCHNITTE"
+    }
+  ]
+}
