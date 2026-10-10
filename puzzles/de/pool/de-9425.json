@@ -33,10 +33,10 @@
       "id": "g3",
       "label": "Schwimmen im Becken",
       "items": [
-        "Brustschwimmen",
-        "Kraulen",
-        "Rückenschwimmen",
-        "Schmetterling"
+        "Brust",
+        "Kraul",
+        "Rücken",
+        "Delfin"
       ],
       "revealHint": "SCHWIMMEN"
     },
