@@ -1,0 +1,55 @@
+{
+  "id": "de-9436",
+  "title": "Urlaub",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Reisen",
+    "batch": "de-easy-04"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Urlaubsarten",
+      "items": [
+        "Strandurlaub",
+        "Skiurlaub",
+        "Wanderurlaub",
+        "Städtereise"
+      ],
+      "revealHint": "ARTEN"
+    },
+    {
+      "id": "g2",
+      "label": "Unterkünfte",
+      "items": [
+        "Hotel",
+        "Pension",
+        "Zeltplatz",
+        "Ferienwohnung"
+      ],
+      "revealHint": "UNTERKUNFT"
+    },
+    {
+      "id": "g3",
+      "label": "Dokumente zur Reise",
+      "items": [
+        "Reisepass",
+        "Visum",
+        "Flugticket",
+        "Personalausweis"
+      ],
+      "revealHint": "DOKUMENTE"
+    },
+    {
+      "id": "g4",
+      "label": "Mitbringsel",
+      "items": [
+        "Kühlschrankmagnet",
+        "Postkarte",
+        "Muschel",
+        "Reiseführer"
+      ],
+      "revealHint": "MITBRINGSEL"
+    }
+  ]
+}

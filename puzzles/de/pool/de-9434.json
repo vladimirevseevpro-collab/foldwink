@@ -1,0 +1,55 @@
+{
+  "id": "de-9434",
+  "title": "Freizeitpark",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Freizeit",
+    "batch": "de-easy-04"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Fahrgeschäfte",
+      "items": [
+        "Karussell",
+        "Riesenrad",
+        "Achterbahn",
+        "Autoscooter"
+      ],
+      "revealHint": "FAHREN"
+    },
+    {
+      "id": "g2",
+      "label": "Süßes im Park",
+      "items": [
+        "Zuckerwatte",
+        "Lebkuchenherz",
+        "Gebrannte Mandeln",
+        "Schokofrüchte"
+      ],
+      "revealHint": "SÜSS"
+    },
+    {
+      "id": "g3",
+      "label": "Vor dem Einlass",
+      "items": [
+        "Eintrittskarte",
+        "Parkplan",
+        "Armband",
+        "Kasse"
+      ],
+      "revealHint": "EINGANG"
+    },
+    {
+      "id": "g4",
+      "label": "Personal",
+      "items": [
+        "Kartenkontrolleur",
+        "Fahrgeschäftsmitarbeiter",
+        "Animateur",
+        "Sicherheitsdienst"
+      ],
+      "revealHint": "PERSONAL"
+    }
+  ]
+}

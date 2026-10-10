@@ -1,0 +1,55 @@
+{
+  "id": "de-9435",
+  "title": "Einkauf im Laden",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Einkaufen",
+    "batch": "de-easy-04"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Abteilungen",
+      "items": [
+        "Milchprodukte",
+        "Fleischtheke",
+        "Backwaren",
+        "Obst und Gemüse"
+      ],
+      "revealHint": "ABTEILUNG"
+    },
+    {
+      "id": "g2",
+      "label": "Beim Bezahlen",
+      "items": [
+        "Kassenbon",
+        "Pfandbon",
+        "Kaugummi",
+        "Wechselgeld"
+      ],
+      "revealHint": "KASSE"
+    },
+    {
+      "id": "g3",
+      "label": "Verpackungen",
+      "items": [
+        "Dose",
+        "Packung",
+        "Flasche",
+        "Karton"
+      ],
+      "revealHint": "VERPACKUNG"
+    },
+    {
+      "id": "g4",
+      "label": "Haushaltswaren",
+      "items": [
+        "Glühbirne",
+        "Batterien",
+        "Klebeband",
+        "Kerzen"
+      ],
+      "revealHint": "HAUSHALT"
+    }
+  ]
+}

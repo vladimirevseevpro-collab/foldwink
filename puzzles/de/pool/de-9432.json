@@ -1,0 +1,55 @@
+{
+  "id": "de-9432",
+  "title": "Computerwelt",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Technik",
+    "batch": "de-easy-04"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Hardware",
+      "items": [
+        "Maus",
+        "Tastatur",
+        "Monitor",
+        "Webcam"
+      ],
+      "revealHint": "HARDWARE"
+    },
+    {
+      "id": "g2",
+      "label": "Programme",
+      "items": [
+        "Bildbearbeitung",
+        "Textverarbeitung",
+        "Betriebssystem",
+        "Tabellenkalkulation"
+      ],
+      "revealHint": "PROGRAMME"
+    },
+    {
+      "id": "g3",
+      "label": "Im Internet",
+      "items": [
+        "Link",
+        "Website",
+        "Suchmaschine",
+        "Chat"
+      ],
+      "revealHint": "INTERNET"
+    },
+    {
+      "id": "g4",
+      "label": "Speicher",
+      "items": [
+        "Festplatte",
+        "USB-Stick",
+        "Cloud",
+        "Speicherkarte"
+      ],
+      "revealHint": "SPEICHER"
+    }
+  ]
+}

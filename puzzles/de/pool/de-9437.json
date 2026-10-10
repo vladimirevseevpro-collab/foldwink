@@ -1,0 +1,55 @@
+{
+  "id": "de-9437",
+  "title": "Im Theater",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Kultur",
+    "batch": "de-easy-04"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Auf der Bühne",
+      "items": [
+        "Vorhang",
+        "Kulisse",
+        "Rampe",
+        "Scheinwerfer"
+      ],
+      "revealHint": "BÜHNE"
+    },
+    {
+      "id": "g2",
+      "label": "Im Zuschauerraum",
+      "items": [
+        "Parkett",
+        "Rang",
+        "Loge",
+        "Balkon"
+      ],
+      "revealHint": "PUBLIKUM"
+    },
+    {
+      "id": "g3",
+      "label": "Mitwirkende",
+      "items": [
+        "Hauptdarsteller",
+        "Nebendarsteller",
+        "Statist",
+        "Gastdarsteller"
+      ],
+      "revealHint": "BESETZUNG"
+    },
+    {
+      "id": "g4",
+      "label": "Stückarten",
+      "items": [
+        "Komödie",
+        "Tragödie",
+        "Musical",
+        "Oper"
+      ],
+      "revealHint": "STÜCKE"
+    }
+  ]
+}

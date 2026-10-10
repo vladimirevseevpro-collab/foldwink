@@ -1,0 +1,55 @@
+{
+  "id": "de-9431",
+  "title": "Berufe nach Ort",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Berufe",
+    "batch": "de-easy-04"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "In der Schule",
+      "items": [
+        "Lehrer",
+        "Direktor",
+        "Hausmeister",
+        "Schulsekretärin"
+      ],
+      "revealHint": "SCHULE"
+    },
+    {
+      "id": "g2",
+      "label": "Im Krankenhaus",
+      "items": [
+        "Chirurg",
+        "Krankenschwester",
+        "Pfleger",
+        "Anästhesist"
+      ],
+      "revealHint": "KLINIK"
+    },
+    {
+      "id": "g3",
+      "label": "Im Laden",
+      "items": [
+        "Kassierer",
+        "Verkäufer",
+        "Lagerist",
+        "Ladendetektiv"
+      ],
+      "revealHint": "LADEN"
+    },
+    {
+      "id": "g4",
+      "label": "Im Restaurant",
+      "items": [
+        "Kellner",
+        "Barkeeper",
+        "Konditor",
+        "Koch"
+      ],
+      "revealHint": "GASTRO"
+    }
+  ]
+}

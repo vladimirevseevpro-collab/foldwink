@@ -1,0 +1,55 @@
+{
+  "id": "de-9433",
+  "title": "Das Smartphone",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Technik",
+    "batch": "de-easy-04"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Teile des Handys",
+      "items": [
+        "Display",
+        "Kamera",
+        "Lautsprecher",
+        "Akku"
+      ],
+      "revealHint": "HANDY"
+    },
+    {
+      "id": "g2",
+      "label": "Kontakt aufnehmen",
+      "items": [
+        "Anruf",
+        "SMS",
+        "Videoanruf",
+        "Sprachnachricht"
+      ],
+      "revealHint": "KONTAKT"
+    },
+    {
+      "id": "g3",
+      "label": "Nützliche Apps",
+      "items": [
+        "Navigation",
+        "Wetter",
+        "Wecker",
+        "Taschenrechner"
+      ],
+      "revealHint": "APPS"
+    },
+    {
+      "id": "g4",
+      "label": "Dazu gekauft",
+      "items": [
+        "Hülle",
+        "Ladekabel",
+        "Kopfhörer",
+        "Displayschutz"
+      ],
+      "revealHint": "ZUBEHÖR"
+    }
+  ]
+}

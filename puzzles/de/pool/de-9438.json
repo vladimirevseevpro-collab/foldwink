@@ -1,0 +1,55 @@
+{
+  "id": "de-9438",
+  "title": "Die Wiese",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Natur",
+    "batch": "de-easy-04"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Wiesenblumen",
+      "items": [
+        "Löwenzahn",
+        "Butterblume",
+        "Gänseblümchen",
+        "Margerite"
+      ],
+      "revealHint": "BLUMEN"
+    },
+    {
+      "id": "g2",
+      "label": "Wiesen-Insekten",
+      "items": [
+        "Hummel",
+        "Grashüpfer",
+        "Marienkäfer",
+        "Schmetterling"
+      ],
+      "revealHint": "INSEKTEN"
+    },
+    {
+      "id": "g3",
+      "label": "Vögel auf Feldern",
+      "items": [
+        "Lerche",
+        "Rebhuhn",
+        "Star",
+        "Kiebitz"
+      ],
+      "revealHint": "VÖGEL"
+    },
+    {
+      "id": "g4",
+      "label": "Kleine Wiesentiere",
+      "items": [
+        "Maulwurf",
+        "Feldmaus",
+        "Wiesel",
+        "Igel"
+      ],
+      "revealHint": "TIERE"
+    }
+  ]
+}
