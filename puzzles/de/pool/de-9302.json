@@ -1,0 +1,56 @@
+{
+  "id": "de-9302",
+  "title": "Große Komponisten",
+  "difficulty": "medium",
+  "editorialSummary": "Werke von Beethoven, Bach, Wagner und Brahms.",
+  "meta": {
+    "theme": "Musik",
+    "batch": "de-medium-15"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Werke von Beethoven",
+      "items": [
+        "Eroica",
+        "Mondscheinsonate",
+        "Fidelio",
+        "Neunte Sinfonie"
+      ],
+      "revealHint": "BEETHOVEN"
+    },
+    {
+      "id": "g2",
+      "label": "Werke von Bach",
+      "items": [
+        "Matthäuspassion",
+        "Goldberg-Variationen",
+        "Brandenburgische Konzerte",
+        "Wohltemperiertes Klavier"
+      ],
+      "revealHint": "BACH"
+    },
+    {
+      "id": "g3",
+      "label": "Werke von Wagner",
+      "items": [
+        "Lohengrin",
+        "Tannhäuser",
+        "Parsifal",
+        "Tristan und Isolde"
+      ],
+      "revealHint": "WAGNER"
+    },
+    {
+      "id": "g4",
+      "label": "Werke von Brahms",
+      "items": [
+        "Ungarische Tänze",
+        "Wiegenlied",
+        "Ein deutsches Requiem",
+        "Haydn-Variationen"
+      ],
+      "revealHint": "BRAHMS"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "de-9301",
+  "title": "Dramen und Dichter",
+  "difficulty": "medium",
+  "editorialSummary": "Werke von Goethe, Schiller, Kleist und Brecht.",
+  "meta": {
+    "theme": "Literatur",
+    "batch": "de-medium-15"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Goethe-Titel",
+      "items": [
+        "Faust",
+        "Werther",
+        "Torquato Tasso",
+        "Hermann und Dorothea"
+      ],
+      "revealHint": "GOETHE"
+    },
+    {
+      "id": "g2",
+      "label": "Schiller-Dramen",
+      "items": [
+        "Die Räuber",
+        "Wallenstein",
+        "Wilhelm Tell",
+        "Kabale und Liebe"
+      ],
+      "revealHint": "SCHILLER"
+    },
+    {
+      "id": "g3",
+      "label": "Werke von Kleist",
+      "items": [
+        "Der zerbrochne Krug",
+        "Michael Kohlhaas",
+        "Penthesilea",
+        "Prinz Friedrich von Homburg"
+      ],
+      "revealHint": "KLEIST"
+    },
+    {
+      "id": "g4",
+      "label": "Werke von Brecht",
+      "items": [
+        "Mutter Courage",
+        "Dreigroschenoper",
+        "Leben des Galilei",
+        "Der gute Mensch von Sezuan"
+      ],
+      "revealHint": "BRECHT"
+    }
+  ]
+}
