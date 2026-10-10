@@ -1,0 +1,55 @@
+{
+  "id": "de-9406",
+  "title": "Das Haus",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Wohnen",
+    "batch": "de-easy-01"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Nebenräume und Anbauten",
+      "items": [
+        "Keller",
+        "Dachboden",
+        "Balkon",
+        "Veranda"
+      ],
+      "revealHint": "HAUS"
+    },
+    {
+      "id": "g2",
+      "label": "Am Fenster",
+      "items": [
+        "Rahmen",
+        "Fensterbrett",
+        "Griff",
+        "Rollladen"
+      ],
+      "revealHint": "FENSTER"
+    },
+    {
+      "id": "g3",
+      "label": "Zimmer",
+      "items": [
+        "Küche",
+        "Schlafzimmer",
+        "Flur",
+        "Wohnzimmer"
+      ],
+      "revealHint": "ZIMMER"
+    },
+    {
+      "id": "g4",
+      "label": "Treppe",
+      "items": [
+        "Stufe",
+        "Geländer",
+        "Absatz",
+        "Treppenhaus"
+      ],
+      "revealHint": "TREPPE"
+    }
+  ]
+}

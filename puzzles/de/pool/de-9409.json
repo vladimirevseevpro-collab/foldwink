@@ -1,0 +1,55 @@
+{
+  "id": "de-9409",
+  "title": "Verkehrsmittel",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Verkehr",
+    "batch": "de-easy-01"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "In der Luft",
+      "items": [
+        "Hubschrauber",
+        "Zeppelin",
+        "Segelflugzeug",
+        "Gleitschirm"
+      ],
+      "revealHint": "LUFT"
+    },
+    {
+      "id": "g2",
+      "label": "Auf dem Wasser",
+      "items": [
+        "Segelboot",
+        "Dampfer",
+        "Frachter",
+        "Tanker"
+      ],
+      "revealHint": "WASSER"
+    },
+    {
+      "id": "g3",
+      "label": "Auf Schienen",
+      "items": [
+        "Zug",
+        "Straßenbahn",
+        "S-Bahn",
+        "Zahnradbahn"
+      ],
+      "revealHint": "SCHIENE"
+    },
+    {
+      "id": "g4",
+      "label": "Von Pferden gezogen",
+      "items": [
+        "Kutsche",
+        "Planwagen",
+        "Fuhrwerk",
+        "Droschke"
+      ],
+      "revealHint": "PFERDE"
+    }
+  ]
+}

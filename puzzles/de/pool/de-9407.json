@@ -1,0 +1,55 @@
+{
+  "id": "de-9407",
+  "title": "Der Fluss",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Gewässer",
+    "batch": "de-easy-01"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Flusslauf",
+      "items": [
+        "Quelle",
+        "Mündung",
+        "Flussbett",
+        "Ufer"
+      ],
+      "revealHint": "FLUSS"
+    },
+    {
+      "id": "g2",
+      "label": "Hindernisse im Fluss",
+      "items": [
+        "Stromschnelle",
+        "Wehr",
+        "Wasserfall",
+        "Staudamm"
+      ],
+      "revealHint": "HINDERNIS"
+    },
+    {
+      "id": "g3",
+      "label": "Gewässer",
+      "items": [
+        "See",
+        "Teich",
+        "Weiher",
+        "Meer"
+      ],
+      "revealHint": "GEWÄSSER"
+    },
+    {
+      "id": "g4",
+      "label": "Boote und Schiffe",
+      "items": [
+        "Ruderboot",
+        "Floß",
+        "Kahn",
+        "Fähre"
+      ],
+      "revealHint": "BOOTE"
+    }
+  ]
+}

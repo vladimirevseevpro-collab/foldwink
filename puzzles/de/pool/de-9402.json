@@ -1,0 +1,55 @@
+{
+  "id": "de-9402",
+  "title": "Gefühle",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Emotionen",
+    "batch": "de-easy-01"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Gute Laune",
+      "items": [
+        "Glück",
+        "Begeisterung",
+        "Jubel",
+        "Heiterkeit"
+      ],
+      "revealHint": "FREUDE"
+    },
+    {
+      "id": "g2",
+      "label": "Niedergeschlagen",
+      "items": [
+        "Kummer",
+        "Wehmut",
+        "Trübsinn",
+        "Betrübnis"
+      ],
+      "revealHint": "TRAUER"
+    },
+    {
+      "id": "g3",
+      "label": "Wütend",
+      "items": [
+        "Zorn",
+        "Ärger",
+        "Groll",
+        "Raserei"
+      ],
+      "revealHint": "WUT"
+    },
+    {
+      "id": "g4",
+      "label": "Angstgefühle",
+      "items": [
+        "Furcht",
+        "Panik",
+        "Grauen",
+        "Entsetzen"
+      ],
+      "revealHint": "ANGST"
+    }
+  ]
+}

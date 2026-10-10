@@ -1,0 +1,55 @@
+{
+  "id": "de-9403",
+  "title": "Pflanzenteile",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Pflanzen",
+    "batch": "de-easy-01"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Blüte",
+      "items": [
+        "Blütenblatt",
+        "Staubblatt",
+        "Fruchtknoten",
+        "Narbe"
+      ],
+      "revealHint": "BLÜTE"
+    },
+    {
+      "id": "g2",
+      "label": "Baum",
+      "items": [
+        "Rinde",
+        "Ast",
+        "Krone",
+        "Stamm"
+      ],
+      "revealHint": "BAUM"
+    },
+    {
+      "id": "g3",
+      "label": "Frucht",
+      "items": [
+        "Kern",
+        "Schale",
+        "Fruchtfleisch",
+        "Stiel"
+      ],
+      "revealHint": "FRUCHT"
+    },
+    {
+      "id": "g4",
+      "label": "Getreidepflanze",
+      "items": [
+        "Halm",
+        "Ähre",
+        "Korn",
+        "Spelze"
+      ],
+      "revealHint": "GETREIDE"
+    }
+  ]
+}

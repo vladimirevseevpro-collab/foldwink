@@ -1,0 +1,55 @@
+{
+  "id": "de-9404",
+  "title": "Gemüse und Obst nach Farbe",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Essen",
+    "batch": "de-easy-01"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Rot",
+      "items": [
+        "Tomate",
+        "Rote Bete",
+        "Radieschen",
+        "Erdbeere"
+      ],
+      "revealHint": "ROT"
+    },
+    {
+      "id": "g2",
+      "label": "Gelb",
+      "items": [
+        "Zitrone",
+        "Banane",
+        "Mais",
+        "Ananas"
+      ],
+      "revealHint": "GELB"
+    },
+    {
+      "id": "g3",
+      "label": "Grün",
+      "items": [
+        "Gurke",
+        "Kiwi",
+        "Spinat",
+        "Brokkoli"
+      ],
+      "revealHint": "GRÜN"
+    },
+    {
+      "id": "g4",
+      "label": "Violett",
+      "items": [
+        "Aubergine",
+        "Pflaume",
+        "Weintraube",
+        "Brombeere"
+      ],
+      "revealHint": "VIOLETT"
+    }
+  ]
+}

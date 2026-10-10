@@ -1,0 +1,55 @@
+{
+  "id": "de-9408",
+  "title": "Winter",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Jahreszeiten",
+    "batch": "de-easy-01"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Disziplinen im Winter",
+      "items": [
+        "Skispringen",
+        "Eishockey",
+        "Biathlon",
+        "Rodeln"
+      ],
+      "revealHint": "SPORT"
+    },
+    {
+      "id": "g2",
+      "label": "Spaß im Schnee",
+      "items": [
+        "Schneeball",
+        "Schneemann",
+        "Eisbahn",
+        "Schneeburg"
+      ],
+      "revealHint": "SPASS"
+    },
+    {
+      "id": "g3",
+      "label": "Weihnachten",
+      "items": [
+        "Nikolaus",
+        "Christkind",
+        "Engel",
+        "Rentier"
+      ],
+      "revealHint": "WEIHNACHT"
+    },
+    {
+      "id": "g4",
+      "label": "Warme Kleidung",
+      "items": [
+        "Handschuhe",
+        "Mütze",
+        "Schal",
+        "Stiefel"
+      ],
+      "revealHint": "KLEIDUNG"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-9405",
+  "title": "Im Friseursalon",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Schönheit",
+    "batch": "de-easy-01"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Friseurwerkzeug",
+      "items": [
+        "Schere",
+        "Föhn",
+        "Lockenwickler",
+        "Haarschneider"
+      ],
+      "revealHint": "FRISEUR"
+    },
+    {
+      "id": "g2",
+      "label": "Haarstile",
+      "items": [
+        "Bob",
+        "Zopf",
+        "Dutt",
+        "Pferdeschwanz"
+      ],
+      "revealHint": "FRISUREN"
+    },
+    {
+      "id": "g3",
+      "label": "Make-up",
+      "items": [
+        "Wimperntusche",
+        "Lippenstift",
+        "Lidschatten",
+        "Rouge"
+      ],
+      "revealHint": "SCHMINKE"
+    },
+    {
+      "id": "g4",
+      "label": "Maniküre",
+      "items": [
+        "Nagellack",
+        "Nagelfeile",
+        "Nagellackentferner",
+        "Nagelschere"
+      ],
+      "revealHint": "NÄGEL"
+    }
+  ]
+}
