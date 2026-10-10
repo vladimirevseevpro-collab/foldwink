@@ -298,9 +298,17 @@ function selectCatalogPractice(
   language: PuzzleLanguage,
   tier: "easy" | "medium" | "hard",
   pool: readonly Puzzle[],
+  solvedIds: readonly string[] = [],
 ): PracticeCandidate | undefined {
   if (!deps.getEditorialRecord) return undefined;
+  // Only boards the player has not solved yet. Editorial records cover the
+  // released boards, so without this filter a player who had solved both
+  // German boot Medium boards was served them again in turn even though
+  // unsolved Medium boards were already loaded; the progression picker
+  // below handles the rest of the pool.
+  const solved = new Set(solvedIds);
   const candidates = pool.flatMap((puzzle): PracticeCandidate[] => {
+    if (solved.has(puzzle.id)) return [];
     const editorial = deps.getEditorialRecord?.(language, puzzle.id);
     return editorial ? [{ puzzle, puzzleRef: editorial.puzzleRef, editorial }] : [];
   });
@@ -520,6 +528,7 @@ export function createStore(deps: StoreDeps = defaultDeps) {
         language,
         "easy",
         targetPool,
+        stats.solvedPuzzleIds,
       );
       const progressionPuzzle = getNextProgressionPuzzle({
         pool: targetPool,
@@ -581,7 +590,14 @@ export function createStore(deps: StoreDeps = defaultDeps) {
       const language = getLangSync();
       const cursor = resolveCursor(progress, "medium");
       const pool = deps.getMediumPool ? deps.getMediumPool() : deps.mediumPool;
-      const catalogSelection = selectCatalogPractice(deps, progress, language, "medium", pool);
+      const catalogSelection = selectCatalogPractice(
+        deps,
+        progress,
+        language,
+        "medium",
+        pool,
+        stats.solvedPuzzleIds,
+      );
       const progressionPuzzle = getNextProgressionPuzzle({
         pool,
         solvedIds: stats.solvedPuzzleIds,
@@ -685,7 +701,14 @@ export function createStore(deps: StoreDeps = defaultDeps) {
       const language = getLangSync();
       const cursor = resolveCursor(progress, "hard");
       const pool = deps.getHardPool ? deps.getHardPool() : deps.hardPool;
-      const catalogSelection = selectCatalogPractice(deps, progress, language, "hard", pool);
+      const catalogSelection = selectCatalogPractice(
+        deps,
+        progress,
+        language,
+        "hard",
+        pool,
+        stats.solvedPuzzleIds,
+      );
       const progressionPuzzle = getNextProgressionPuzzle({
         pool,
         solvedIds: stats.solvedPuzzleIds,
