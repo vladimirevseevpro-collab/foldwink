@@ -1,4 +1,11 @@
-import { useRef, useCallback, useState, useEffect, type CSSProperties } from "react";
+import {
+  useRef,
+  useCallback,
+  useState,
+  useEffect,
+  useLayoutEffect,
+  type CSSProperties,
+} from "react";
 import {
   SOLVED_CARD_DEPTH_CLASSES,
   SOLVED_COLOR_CLASSES,
@@ -6,6 +13,80 @@ import {
 } from "../game/solvedColors";
 import { MOTION_CLASS } from "../styles/motion";
 import { FoldedCorner } from "./FoldedCorner";
+
+let measureCtx: CanvasRenderingContext2D | null | undefined;
+function getMeasureCtx(): CanvasRenderingContext2D | null {
+  if (measureCtx !== undefined) return measureCtx;
+  try {
+    measureCtx = document.createElement("canvas").getContext("2d");
+  } catch {
+    measureCtx = null;
+  }
+  return measureCtx;
+}
+
+/** Smallest font size we shrink a card label to before letting it wrap. */
+const MIN_FIT_PX = 9;
+
+/**
+ * Shrinks the label so its longest unbreakable word fits on one line.
+ * Without this, narrow phones broke German/Russian words mid-word with no
+ * hyphen ("Trompet|e", "Kontrabas|ss").
+ */
+function useFitLongestWord(
+  value: string,
+  buttonRef: React.RefObject<HTMLButtonElement>,
+  textRef: React.RefObject<HTMLSpanElement>,
+) {
+  useLayoutEffect(() => {
+    const button = buttonRef.current;
+    const text = textRef.current;
+    if (!button || !text || typeof window === "undefined") return;
+    let frame = 0;
+    const fit = () => {
+      text.style.fontSize = "";
+      const ctx = getMeasureCtx();
+      if (!ctx) return;
+      const textStyle = window.getComputedStyle(text);
+      const buttonStyle = window.getComputedStyle(button);
+      const base = parseFloat(textStyle.fontSize);
+      const available =
+        button.clientWidth -
+        parseFloat(buttonStyle.paddingLeft || "0") -
+        parseFloat(buttonStyle.paddingRight || "0") -
+        2;
+      if (!(base > 0) || !(available > 0)) return;
+      ctx.font = `${textStyle.fontWeight} ${base}px ${textStyle.fontFamily}`;
+      const spacing = parseFloat(textStyle.letterSpacing) || 0;
+      let widest = 0;
+      for (const word of value.split(/[\s\-\u2010\u2011/]+/u)) {
+        if (!word) continue;
+        const w = ctx.measureText(word).width + spacing * Array.from(word).length;
+        if (w > widest) widest = w;
+      }
+      if (widest > available) {
+        const fitted = Math.max(MIN_FIT_PX, Math.floor(((base * available) / widest) * 2) / 2);
+        text.style.fontSize = `${fitted}px`;
+      }
+    };
+    fit();
+    const schedule = () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(fit);
+    };
+    const observer = typeof ResizeObserver === "function" ? new ResizeObserver(schedule) : null;
+    observer?.observe(button);
+    let alive = true;
+    document.fonts?.ready.then(() => {
+      if (alive) schedule();
+    });
+    return () => {
+      alive = false;
+      observer?.disconnect();
+      cancelAnimationFrame(frame);
+    };
+  }, [value, buttonRef, textRef]);
+}
 
 interface Props {
   value: string;
@@ -43,6 +124,8 @@ export function Card({
   const base = `relative w-full h-[64px] min-h-[48px] max-[340px]:h-[56px] sm:h-[90px] lg:h-[100px] flex items-center justify-center text-center px-1.5 py-2 sm:px-2 rounded-lg font-bold ${textSize} leading-[1.08] select-none will-change-transform overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface touch-manipulation`;
 
   const ref = useRef<HTMLButtonElement>(null);
+  const textRef = useRef<HTMLSpanElement>(null);
+  useFitLongestWord(value, ref, textRef);
   const [isPressed, setIsPressed] = useState(false);
 
   // High-performance direct CSS transform parallax with S-curve damping
@@ -255,7 +338,8 @@ export function Card({
       {state === "selected" && <FoldedCorner />}
       {state === "selected" && <span className="fw-sheen-glare" aria-hidden="true" />}
       <span
-        className={`hyphens-auto [overflow-wrap:anywhere] max-w-full relative z-10 tracking-tight ${letterpress}`}
+        ref={textRef}
+        className={`hyphens-manual [overflow-wrap:anywhere] max-w-full relative z-10 tracking-tight ${letterpress}`}
       >
         {marker && (
           <span className="mr-0.5 text-xs opacity-90" aria-hidden="true">
