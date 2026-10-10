@@ -10,9 +10,7 @@ const digest = async (body: string) => createHash("sha256").update(body).digest(
 
 async function sourcePoolSize(language: "en" | "ru" | "de"): Promise<number> {
   const directory =
-    language === "en"
-      ? join(ROOT, "puzzles", "pool")
-      : join(ROOT, "puzzles", language, "pool");
+    language === "en" ? join(ROOT, "puzzles", "pool") : join(ROOT, "puzzles", language, "pool");
   return (await readdir(directory)).filter((file) => file.endsWith(".json")).length;
 }
 

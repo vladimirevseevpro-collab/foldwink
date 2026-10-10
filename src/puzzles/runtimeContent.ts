@@ -121,10 +121,7 @@ export function parseRuntimeManifest(input: unknown): RuntimeManifest {
   const allAssets = [boot, ...(archive as RuntimeAsset[])];
   const refs = allAssets.flatMap((asset) => asset.puzzleRefs);
   if (new Set(refs.map((ref) => ref.puzzleId)).size !== refs.length)
-    throw new RuntimeContentError(
-      "invalid",
-      "Runtime manifest must describe unique boards",
-    );
+    throw new RuntimeContentError("invalid", "Runtime manifest must describe unique boards");
   if (
     refs.some((ref) => ref.language !== language || ref.contentVersion !== input.contentVersion)
   )
