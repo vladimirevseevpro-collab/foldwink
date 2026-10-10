@@ -1,54 +1,49 @@
 {
   "id": "de-1001",
-  "title": "Klassiker im Biergarten & Große und kleine Katzen",
+  "title": "Morgens im Bad",
   "difficulty": "easy",
   "meta": {
-    "theme": "wave2_de",
-    "categoryType": "cultural_lifestyle",
-    "batch": "wave2-expansion",
-    "difficultyScore": 12,
-    "editorialRank": 26,
-    "gptRationale": "High-quality Wave 2 expanded puzzle with rich thematic depth and clean group symmetry."
+    "theme": "Körperpflege"
   },
   "groups": [
     {
-      "id": "g1_de_biergarten",
-      "label": "Klassiker im Biergarten",
+      "id": "zaehne",
+      "label": "Beim Zähneputzen",
       "items": [
-        "Brezel",
-        "Radler",
-        "Senf",
-        "Weißwurst"
+        "Zahnbürste",
+        "Zahnpasta",
+        "Zahnseide",
+        "Zahnstocher"
       ]
     },
     {
-      "id": "g2_de_felines",
-      "label": "Große und kleine Katzen",
+      "id": "haende",
+      "label": "Beim Händewaschen",
       "items": [
-        "Luchs",
-        "Gepard",
-        "Löwe",
-        "Kater"
+        "Seife",
+        "Handtuch",
+        "Wasserhahn",
+        "Waschbecken"
       ]
     },
     {
-      "id": "g3_de_salat_compounds",
-      "label": "Wortsalat mit «-salat»",
+      "id": "naegel",
+      "label": "Für die Nägel",
       "items": [
-        "Kartoffelsalat",
-        "Nudelsalat",
-        "Kabelsalat",
-        "Wortsalat"
+        "Nagelknipser",
+        "Nagelfeile",
+        "Nagelschere",
+        "Nagellack"
       ]
     },
     {
-      "id": "g4_de_rad_compounds",
-      "label": "Dinge mit «-rad»",
+      "id": "haare",
+      "label": "Zum Frisieren",
       "items": [
-        "Fahrrad",
-        "Riesenrad",
-        "Zahnrad",
-        "Steuerrad"
+        "Kamm",
+        "Haarbürste",
+        "Haarspray",
+        "Haargummi"
       ]
     }
   ]

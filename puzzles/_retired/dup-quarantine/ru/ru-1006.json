@@ -1,58 +1,50 @@
 {
   "id": "ru-1006",
-  "title": "Съедобные грибы & Зимние забавы на снегу",
-  "difficulty": "medium",
+  "title": "Малышня и луг",
+  "difficulty": "easy",
   "meta": {
-    "theme": "wave2_ru",
-    "categoryType": "polysemy_subversion",
-    "batch": "wave2-expansion",
-    "difficultyScore": 25,
-    "editorialRank": 27,
-    "gptRationale": "High-quality Wave 2 expanded puzzle with rich thematic depth and clean group symmetry."
+    "theme": "Животные",
+    "categoryType": "classification"
   },
   "groups": [
     {
-      "id": "g1_ru_mushrooms",
-      "label": "Съедобные грибы",
-      "revealHint": "ГРИБЫ",
+      "id": "group_a",
+      "label": "Кто живёт на лугу",
       "items": [
-        "Белый",
-        "Лисичка",
-        "Подосиновик",
-        "Маслёнок"
+        "Бабочка",
+        "Пчела",
+        "Стрекоза",
+        "Кузнечик"
       ]
     },
     {
-      "id": "g2_ru_winter_fun",
-      "label": "Зимние забавы на снегу",
-      "revealHint": "ЗИМА",
+      "id": "group_b",
+      "label": "Рыбы в реке",
       "items": [
-        "Санки",
-        "Лыжи",
-        "Коньки",
-        "Снежки"
+        "Щука",
+        "Окунь",
+        "Сом",
+        "Лещ"
       ]
     },
     {
-      "id": "g3_ru_hang",
-      "label": "Что можно «повесить»",
-      "revealHint": "ВЕСИТЬ",
+      "id": "group_c",
+      "label": "Кого видно в зоопарке",
       "items": [
-        "Нос",
-        "Уши",
-        "Ярлык",
-        "Трубку"
+        "Слон",
+        "Жираф",
+        "Зебра",
+        "Тигр"
       ]
     },
     {
-      "id": "g4_ru_break",
-      "label": "Что можно «разбить»",
-      "revealHint": "БИТЬ",
+      "id": "group_d",
+      "label": "Как называют детёнышей",
       "items": [
-        "Бокал",
-        "Палатку",
-        "Сердце",
-        "Сад"
+        "Котёнок",
+        "Щенок",
+        "Телёнок",
+        "Поросёнок"
       ]
     }
   ]

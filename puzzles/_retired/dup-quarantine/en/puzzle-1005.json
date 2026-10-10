@@ -1,55 +1,51 @@
 {
   "id": "puzzle-1005",
-  "title": "Wild Edible Mushrooms & Bookbinding Tools",
+  "title": "Wheels and Motors",
   "difficulty": "easy",
-  "meta": {
-    "theme": "wave2_puzzle",
-    "categoryType": "cultural_lifestyle",
-    "batch": "wave2-expansion",
-    "difficultyScore": 12,
-    "editorialRank": 20,
-    "gptRationale": "High-quality Wave 2 expanded puzzle with rich thematic depth and clean group symmetry."
-  },
   "groups": [
     {
-      "id": "g1_mushrooms_forest",
-      "label": "Wild Edible Mushrooms",
+      "id": "bikes-scooters",
+      "label": "Bikes and Scooters",
       "items": [
-        "Chanterelle",
-        "Morel",
-        "Porcini",
-        "Shiitake"
+        "Bicycle",
+        "Scooter",
+        "Moped",
+        "Unicycle"
       ]
     },
     {
-      "id": "g2_binding_craft",
-      "label": "Bookbinding Tools",
+      "id": "site-vehicles",
+      "label": "Building Site Vehicles",
       "items": [
-        "Bone Folder",
-        "Awl",
-        "Linen Thread",
-        "Book Press"
+        "Backhoe",
+        "Forklift",
+        "Road Roller",
+        "Dump Truck"
       ]
     },
     {
-      "id": "g3_wax_seals",
-      "label": "Wax Seal Motifs",
+      "id": "spacecraft",
+      "label": "Spacecraft",
       "items": [
-        "Laurel",
-        "Raven",
-        "Keyhole",
-        "Compass"
+        "Rocket",
+        "Space Shuttle",
+        "Satellite",
+        "Space Probe"
       ]
     },
     {
-      "id": "g4_ocean_zones",
-      "label": "Deep Ocean Zones",
+      "id": "bike-components",
+      "label": "Bike Components",
       "items": [
-        "Sunlight",
-        "Twilight",
-        "Midnight",
-        "Abyssal"
+        "Handlebar",
+        "Pedal",
+        "Chain",
+        "Saddle"
       ]
     }
-  ]
+  ],
+  "meta": {
+    "theme": "transport",
+    "categoryType": "classification"
+  }
 }

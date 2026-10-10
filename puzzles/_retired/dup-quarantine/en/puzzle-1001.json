@@ -1,55 +1,51 @@
 {
   "id": "puzzle-1001",
-  "title": "Words before 'Jack' & Artisan Coffee Styles",
+  "title": "Heat and Mix",
   "difficulty": "easy",
-  "meta": {
-    "theme": "wave2_puzzle",
-    "categoryType": "cultural_lifestyle",
-    "batch": "wave2-expansion",
-    "difficultyScore": 12,
-    "editorialRank": 16,
-    "gptRationale": "High-quality Wave 2 expanded puzzle with rich thematic depth and clean group symmetry."
-  },
   "groups": [
     {
-      "id": "g1_words_before_jack",
-      "label": "Words before 'Jack'",
+      "id": "cooking-actions",
+      "label": "Cooking Actions",
       "items": [
-        "Black",
-        "Flap",
-        "Lumber",
-        "Cracker"
+        "Boil",
+        "Fry",
+        "Bake",
+        "Grill"
       ]
     },
     {
-      "id": "g2_artisan_coffee",
-      "label": "Artisan Coffee Styles",
+      "id": "baking-staples",
+      "label": "Baking Staples",
       "items": [
-        "Espresso",
-        "Pour Over",
-        "Cold Brew",
-        "Aeropress"
+        "Flour",
+        "Yeast",
+        "Baking Powder",
+        "Cocoa Powder"
       ]
     },
     {
-      "id": "g3_tea_types",
-      "label": "World Tea Varieties",
+      "id": "cookware",
+      "label": "Pots and Skillets",
       "items": [
-        "Matcha",
-        "Oolong",
-        "Earl Grey",
-        "Rooibos"
+        "Saucepan",
+        "Saute Pan",
+        "Dutch Oven",
+        "Griddle"
       ]
     },
     {
-      "id": "g4_spices_baking",
-      "label": "Aromatic Baking Spices",
+      "id": "spice-rack",
+      "label": "From the Spice Rack",
       "items": [
         "Cinnamon",
-        "Nutmeg",
-        "Cardamom",
-        "Clove"
+        "Paprika",
+        "Cumin",
+        "Turmeric"
       ]
     }
-  ]
+  ],
+  "meta": {
+    "theme": "kitchen and cooking",
+    "categoryType": "classification"
+  }
 }
