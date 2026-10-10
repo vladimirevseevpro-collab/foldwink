@@ -14,7 +14,7 @@
         "Aufstehen",
         "Zähneputzen",
         "Frühstücken",
-        "Anziehen"
+        "Aufwachen"
       ],
       "revealHint": "MORGENS"
     },
@@ -25,7 +25,7 @@
         "Mittagessen",
         "Mittagspause",
         "Mittagsschlaf",
-        "Schulschluss"
+        "Mittagstisch"
       ],
       "revealHint": "MITTAGS"
     },
@@ -44,7 +44,7 @@
       "id": "g4",
       "label": "Nachts",
       "items": [
-        "Schlafen",
+        "Schnarchen",
         "Träumen",
         "Mondschein",
         "Sternenhimmel"

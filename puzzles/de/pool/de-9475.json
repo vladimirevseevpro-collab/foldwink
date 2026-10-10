@@ -14,7 +14,7 @@
         "Hüpfen",
         "Hopsen",
         "Hechten",
-        "Wippen"
+        "Abspringen"
       ],
       "revealHint": "SPRINGEN"
     },
@@ -25,7 +25,7 @@
         "Schleudern",
         "Schmeißen",
         "Pfeffern",
-        "Feuern"
+        "Katapultieren"
       ],
       "revealHint": "WERFEN"
     },
@@ -47,7 +47,7 @@
         "Stürzen",
         "Purzeln",
         "Kippen",
-        "Stolpern"
+        "Abstürzen"
       ],
       "revealHint": "FALLEN"
     }

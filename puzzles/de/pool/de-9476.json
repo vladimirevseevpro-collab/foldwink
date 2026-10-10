@@ -11,7 +11,7 @@
       "id": "g1",
       "label": "Regen",
       "items": [
-        "Tropfen",
+        "Regenwolke",
         "Pfütze",
         "Regenschirm",
         "Gummistiefel"
@@ -47,7 +47,7 @@
         "Drachen",
         "Windrad",
         "Segel",
-        "Windjacke"
+        "Fahne"
       ],
       "revealHint": "WIND"
     }

@@ -23,9 +23,9 @@
       "label": "Gerüche",
       "items": [
         "Muffig",
-        "Würzig",
+        "Brenzlig",
         "Blumig",
-        "Modrig"
+        "Fruchtig"
       ],
       "revealHint": "GERUCH"
     },
@@ -36,7 +36,7 @@
         "Eisig",
         "Lauwarm",
         "Glühend",
-        "Frisch"
+        "Kochend"
       ],
       "revealHint": "TEMPERATUR"
     },
