@@ -1,24 +1,41 @@
+/**
+ * Theme colours are CSS variables so the desk themes can swap them at
+ * runtime. Tailwind cannot apply an opacity modifier (`bg-accent/40`) to a
+ * plain `var(...)` colour and silently emits no CSS for it, so every such
+ * class fell back to the default border/ring colour. A function colour lets
+ * the modifier compile to `color-mix()` while plain classes stay a plain var.
+ */
+function themeColor(variable, fallback) {
+  const base = `var(${variable}, ${fallback})`;
+  return ({ opacityValue } = {}) => {
+    if (opacityValue === undefined || String(opacityValue).startsWith("var(")) return base;
+    const pct = Math.round(Number(opacityValue) * 1000) / 10;
+    if (!Number.isFinite(pct)) return base;
+    return `color-mix(in srgb, ${base} ${pct}%, transparent)`;
+  };
+}
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        bg: "var(--theme-bg, #1a1614)",
-        surface: "var(--theme-surface, #251e19)",
-        surfaceHi: "var(--theme-surface-hi, #322720)",
-        surfaceHover: "var(--theme-surface-hover, #3f3229)",
-        text: "var(--theme-text, #f7efe1)",
-        muted: "var(--theme-muted, #aa9987)",
-        accent: "var(--theme-accent, #e27a5b)",
-        accentHi: "var(--theme-accent-hi, #ef8d6f)",
-        accentBorder: "var(--theme-accent-border, #b8573b)",
+        bg: themeColor("--theme-bg", "#1a1614"),
+        surface: themeColor("--theme-surface", "#251e19"),
+        surfaceHi: themeColor("--theme-surface-hi", "#322720"),
+        surfaceHover: themeColor("--theme-surface-hover", "#3f3229"),
+        text: themeColor("--theme-text", "#f7efe1"),
+        muted: themeColor("--theme-muted", "#aa9987"),
+        accent: themeColor("--theme-accent", "#e27a5b"),
+        accentHi: themeColor("--theme-accent-hi", "#ef8d6f"),
+        accentBorder: themeColor("--theme-accent-border", "#b8573b"),
         paper: "#fffdf7",
         paperHi: "#ffffff",
         paperBorder: "#d9cca8",
         paperEdge: "#b5a47e",
         ink: "#2b1d15",
-        line: "var(--theme-line, #48392f)",
+        line: themeColor("--theme-line", "#48392f"),
         solved1: "#f3cb65",
         solved1Border: "#c89f38",
         solved2: "#7bc88f",
@@ -45,7 +62,7 @@ export default {
         ],
       },
       boxShadow: {
-        paper:
+        paperRest:
           "0 4px 0 #b5a47e, 0 10px 18px -4px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.95)",
         paperHover:
           "0 6px 0 #9e8d67, 0 14px 24px -4px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,1)",
@@ -55,13 +72,13 @@ export default {
           "0 5px 0 #b8573b, 0 14px 24px -4px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.95), 0 0 0 2px rgba(226,122,91,0.6)",
         paperSelectedPressed:
           "0 2px 0 #b8573b, 0 6px 10px -4px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.5)",
-        solved1:
+        solvedDepth1:
           "0 4px 0 #b88f2e, 0 10px 18px -4px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.6)",
-        solved2:
+        solvedDepth2:
           "0 4px 0 #46965c, 0 10px 18px -4px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.6)",
-        solved3:
+        solvedDepth3:
           "0 4px 0 #b25445, 0 10px 18px -4px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.6)",
-        solved4:
+        solvedDepth4:
           "0 4px 0 #7e69be, 0 10px 18px -4px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.6)",
         control: "0 3px 0 #18120e",
         controlPressed: "0 1px 0 #18120e",

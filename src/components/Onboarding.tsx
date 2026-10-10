@@ -61,9 +61,16 @@ export function Onboarding({ onDismiss, presentation = "dialog", onComplete, onS
     // Escape uses the stable dismissal contract; the callback is intentionally local to this dialog.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isDialog, onDismiss, onSkip]);
+  const focusMountedRef = useRef(false);
   useEffect(() => {
+    // The first-run page must not pre-focus a card: on phones the focus ring
+    // is indistinguishable from a selected card ("0 of 4 selected" next to
+    // a highlighted APPLE). The modal re-open still traps and moves focus.
+    const firstRun = !focusMountedRef.current;
+    focusMountedRef.current = true;
+    if (firstRun && !isDialog) return;
     (step === 1 ? firstCardRef : actionRef).current?.focus();
-  }, [step]);
+  }, [step, isDialog]);
   useEffect(() => {
     if (startedTrackedRef.current) return;
     startedTrackedRef.current = true;

@@ -210,7 +210,7 @@ export function Card({
     variant = `bg-paperHi text-ink border-2 border-accent shadow-paperSelected`;
   } else {
     variant =
-      "bg-paper text-ink border border-paperBorder shadow-paper hover:shadow-paperHover hover:bg-paperHi";
+      "bg-paper text-ink border border-paperBorder shadow-paperRest hover:shadow-paperHover hover:bg-paperHi";
   }
 
   const wobbleClass = isWobbling ? "fw-tension-wobble" : "";

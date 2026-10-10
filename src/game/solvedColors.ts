@@ -8,10 +8,10 @@ export const SOLVED_COLOR_CLASSES = [
 ] as const;
 
 export const SOLVED_CARD_DEPTH_CLASSES = [
-  "shadow-solved1",
-  "shadow-solved2",
-  "shadow-solved3",
-  "shadow-solved4",
+  "shadow-solvedDepth1",
+  "shadow-solvedDepth2",
+  "shadow-solvedDepth3",
+  "shadow-solvedDepth4",
 ] as const;
 
 /**

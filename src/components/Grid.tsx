@@ -5,6 +5,8 @@ interface Props {
   children: ReactNode;
   shake?: boolean;
   label: string;
+  /** Transient ring on the board mat (correct / wrong / one-away feedback). */
+  flashClass?: string;
 }
 
 /**
@@ -13,7 +15,7 @@ interface Props {
  * Children are expected to be 16 card buttons. Arrow keys move focus
  * between them in a 4-column layout. Focus wraps at edges.
  */
-export function Grid({ children, shake, label }: Props) {
+export function Grid({ children, shake, label, flashClass = "" }: Props) {
   const ref = useRef<HTMLDivElement>(null);
 
   const handleKeyDown = useCallback((e: React.KeyboardEvent<HTMLDivElement>) => {
@@ -60,7 +62,9 @@ export function Grid({ children, shake, label }: Props) {
   }`;
 
   return (
-    <div className="relative mx-auto w-full max-w-[760px] rounded-2xl bg-surface p-2.5 sm:p-4 border border-line shadow-mat">
+    <div
+      className={`relative mx-auto w-full max-w-[760px] rounded-2xl bg-surface p-2.5 sm:p-4 border border-line shadow-mat transition-shadow ${flashClass}`}
+    >
       <div
         className="pointer-events-none absolute inset-1.5 sm:inset-2.5 rounded-xl border border-dashed border-line/50"
         aria-hidden="true"

@@ -223,7 +223,7 @@ export function GameScreen() {
           aria-hidden="true"
         />
       )}
-      <div className={`transition-shadow rounded-2xl ${flashRingClass}`}>
+      <div>
         <div className="sticky top-0 z-40 -mx-3 sm:-mx-5 mb-3 border-b border-line/60 bg-bg px-3 sm:px-5 fw-safe-pt">
           <button
             type="button"
@@ -270,7 +270,11 @@ export function GameScreen() {
         />
         <div className="relative">
           <OrigamiConfetti triggerKey={confettiTrigger} colorIndex={latestSolvedColor} />
-          <Grid label={t.game.gridAria} shake={flash === "incorrect" || flash === "one-away"}>
+          <Grid
+            label={t.game.gridAria}
+            shake={flash === "incorrect" || flash === "one-away"}
+            flashClass={flashRingClass}
+          >
             {/* Solved groups displayed as compact origami fold-lock horizontal category bars */}
             {active.solvedGroupIds.map((gId) => {
               const g = puzzle.groups.find((x) => x.id === gId);
@@ -330,7 +334,7 @@ export function GameScreen() {
                 <span
                   key={i}
                   className={`inline-block w-2 h-2 rounded-full ${
-                    i < active.selection.length ? "bg-accent" : "bg-[#2e343f]"
+                    i < active.selection.length ? "bg-accent" : "bg-line"
                   }`}
                 />
               ))}
@@ -362,7 +366,7 @@ export function GameScreen() {
               disabled={!canSubmit(active.selection)}
               className={
                 canSubmit(active.selection)
-                  ? "max-[479px]:min-w-0 max-[479px]:flex-1 max-[479px]:px-2 ring-2 ring-accent/40 shadow-[0_0_0_4px_rgba(124,196,255,0.12)]"
+                  ? "max-[479px]:min-w-0 max-[479px]:flex-1 max-[479px]:px-2 ring-2 ring-accent/40"
                   : "max-[479px]:min-w-0 max-[479px]:flex-1 max-[479px]:px-2"
               }
             >
