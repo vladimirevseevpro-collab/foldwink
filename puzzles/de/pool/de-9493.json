@@ -1,0 +1,55 @@
+{
+  "id": "de-9493",
+  "title": "Stoffe und Muster",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Kleidung",
+    "batch": "de-easy-10"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Gewebe",
+      "items": [
+        "Seide",
+        "Samt",
+        "Cord",
+        "Leinen"
+      ],
+      "revealHint": "STOFFE"
+    },
+    {
+      "id": "g2",
+      "label": "Muster",
+      "items": [
+        "Kariert",
+        "Gestreift",
+        "Gepunktet",
+        "Geblümt"
+      ],
+      "revealHint": "MUSTER"
+    },
+    {
+      "id": "g3",
+      "label": "Verschlüsse",
+      "items": [
+        "Knopf",
+        "Reißverschluss",
+        "Klettband",
+        "Schnalle"
+      ],
+      "revealHint": "VERSCHLUSS"
+    },
+    {
+      "id": "g4",
+      "label": "Zum Nähen",
+      "items": [
+        "Faden",
+        "Nadel",
+        "Nähmaschine",
+        "Stecknadel"
+      ],
+      "revealHint": "NÄHEN"
+    }
+  ]
+}

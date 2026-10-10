@@ -1,0 +1,55 @@
+{
+  "id": "de-9497",
+  "title": "Handwerk im Haushalt",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Haushalt",
+    "batch": "de-easy-10"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Sachen zum Aufhängen",
+      "items": [
+        "Bilderrahmen",
+        "Gardinenstange",
+        "Handtuchhalter",
+        "Garderobenhaken"
+      ],
+      "revealHint": "HÄNGEN"
+    },
+    {
+      "id": "g2",
+      "label": "Lampen",
+      "items": [
+        "Stehlampe",
+        "Deckenlampe",
+        "Nachttischlampe",
+        "Taschenlampe"
+      ],
+      "revealHint": "LAMPEN"
+    },
+    {
+      "id": "g3",
+      "label": "Schlüssel und Schlösser",
+      "items": [
+        "Haustürschlüssel",
+        "Vorhängeschloss",
+        "Schließzylinder",
+        "Schlüsselbund"
+      ],
+      "revealHint": "SCHLOSS"
+    },
+    {
+      "id": "g4",
+      "label": "Reinigung",
+      "items": [
+        "Staubsauger",
+        "Wischlappen",
+        "Fensterleder",
+        "Handfeger"
+      ],
+      "revealHint": "REINIGUNG"
+    }
+  ]
+}

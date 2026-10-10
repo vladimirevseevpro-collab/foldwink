@@ -1,0 +1,55 @@
+{
+  "id": "de-9494",
+  "title": "Medien",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Kommunikation",
+    "batch": "de-easy-10"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Zeitung",
+      "items": [
+        "Schlagzeile",
+        "Leitartikel",
+        "Kommentarspalte",
+        "Zeitungsständer"
+      ],
+      "revealHint": "ZEITUNG"
+    },
+    {
+      "id": "g2",
+      "label": "Fernsehen",
+      "items": [
+        "Fernsehprogramm",
+        "Serie",
+        "Quizshow",
+        "Werbepause"
+      ],
+      "revealHint": "FERNSEHEN"
+    },
+    {
+      "id": "g3",
+      "label": "Radio",
+      "items": [
+        "Sender",
+        "Frequenz",
+        "Moderator",
+        "Hörer"
+      ],
+      "revealHint": "RADIO"
+    },
+    {
+      "id": "g4",
+      "label": "Online",
+      "items": [
+        "Webseite",
+        "Blog",
+        "Streamingdienst",
+        "Newsletter"
+      ],
+      "revealHint": "ONLINE"
+    }
+  ]
+}

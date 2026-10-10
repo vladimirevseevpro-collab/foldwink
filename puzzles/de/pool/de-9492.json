@@ -1,0 +1,55 @@
+{
+  "id": "de-9492",
+  "title": "Schätze der Erde",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Natur",
+    "batch": "de-easy-10"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Kostbare Steine",
+      "items": [
+        "Diamant",
+        "Rubin",
+        "Saphir",
+        "Opal"
+      ],
+      "revealHint": "EDELSTEINE"
+    },
+    {
+      "id": "g2",
+      "label": "Gebrauchsmetalle",
+      "items": [
+        "Eisen",
+        "Kupfer",
+        "Zinn",
+        "Blei"
+      ],
+      "revealHint": "METALLE"
+    },
+    {
+      "id": "g3",
+      "label": "Gesteine",
+      "items": [
+        "Granit",
+        "Marmor",
+        "Sandstein",
+        "Basalt"
+      ],
+      "revealHint": "GESTEIN"
+    },
+    {
+      "id": "g4",
+      "label": "Brennstoffe",
+      "items": [
+        "Kohle",
+        "Erdöl",
+        "Erdgas",
+        "Torf"
+      ],
+      "revealHint": "BRENNSTOFF"
+    }
+  ]
+}

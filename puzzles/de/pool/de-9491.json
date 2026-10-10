@@ -1,0 +1,55 @@
+{
+  "id": "de-9491",
+  "title": "Bauen und Wohnen",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Wohnen",
+    "batch": "de-easy-10"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Hausarten",
+      "items": [
+        "Einfamilienhaus",
+        "Hochhaus",
+        "Reihenhaus",
+        "Bungalow"
+      ],
+      "revealHint": "HÄUSER"
+    },
+    {
+      "id": "g2",
+      "label": "Baustoffe",
+      "items": [
+        "Ziegel",
+        "Lehm",
+        "Glas",
+        "Mörtel"
+      ],
+      "revealHint": "BAUSTOFF"
+    },
+    {
+      "id": "g3",
+      "label": "Dachformen",
+      "items": [
+        "Satteldach",
+        "Flachdach",
+        "Walmdach",
+        "Pultdach"
+      ],
+      "revealHint": "DACH"
+    },
+    {
+      "id": "g4",
+      "label": "Haustechnik",
+      "items": [
+        "Heizung",
+        "Wasserleitung",
+        "Sicherungskasten",
+        "Steckdose"
+      ],
+      "revealHint": "TECHNIK"
+    }
+  ]
+}

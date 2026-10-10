@@ -1,0 +1,55 @@
+{
+  "id": "de-9496",
+  "title": "Sportstätten",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Sport",
+    "batch": "de-easy-10"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Plätze und Hallen",
+      "items": [
+        "Fußballplatz",
+        "Tennisplatz",
+        "Turnhalle",
+        "Schwimmhalle"
+      ],
+      "revealHint": "STÄTTE"
+    },
+    {
+      "id": "g2",
+      "label": "Sportliche Erfolge",
+      "items": [
+        "Sieg",
+        "Pokal",
+        "Medaille",
+        "Rekord"
+      ],
+      "revealHint": "WETTKAMPF"
+    },
+    {
+      "id": "g3",
+      "label": "Im Stadion",
+      "items": [
+        "Tribüne",
+        "Rasen",
+        "Anzeigetafel",
+        "Flutlicht"
+      ],
+      "revealHint": "STADION"
+    },
+    {
+      "id": "g4",
+      "label": "Sportler und Betreuer",
+      "items": [
+        "Trainer",
+        "Torwart",
+        "Physio",
+        "Mannschaftsarzt"
+      ],
+      "revealHint": "TEAM"
+    }
+  ]
+}

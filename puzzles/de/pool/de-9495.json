@@ -1,0 +1,55 @@
+{
+  "id": "de-9495",
+  "title": "Landschaften der Welt",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Geografie",
+    "batch": "de-easy-10"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Wüste",
+      "items": [
+        "Oase",
+        "Kamel",
+        "Sandsturm",
+        "Karawane"
+      ],
+      "revealHint": "WÜSTE"
+    },
+    {
+      "id": "g2",
+      "label": "Dschungel",
+      "items": [
+        "Liane",
+        "Papagei",
+        "Tukan",
+        "Moskito"
+      ],
+      "revealHint": "DSCHUNGEL"
+    },
+    {
+      "id": "g3",
+      "label": "Polargebiet",
+      "items": [
+        "Eisbär",
+        "Polarfuchs",
+        "Iglu",
+        "Eisberg"
+      ],
+      "revealHint": "POLAR"
+    },
+    {
+      "id": "g4",
+      "label": "Savanne",
+      "items": [
+        "Löwe",
+        "Gnu",
+        "Giraffe",
+        "Akazie"
+      ],
+      "revealHint": "SAVANNE"
+    }
+  ]
+}
