@@ -1,0 +1,55 @@
+{
+  "id": "de-9487",
+  "title": "Tierwelt",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Tiere",
+    "batch": "de-easy-09"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Behausungen",
+      "items": [
+        "Fuchsbau",
+        "Vogelnest",
+        "Bienenstock",
+        "Hundehütte"
+      ],
+      "revealHint": "BAU"
+    },
+    {
+      "id": "g2",
+      "label": "Tiergruppen",
+      "items": [
+        "Rudel",
+        "Schwarm",
+        "Herde",
+        "Schar"
+      ],
+      "revealHint": "GRUPPEN"
+    },
+    {
+      "id": "g3",
+      "label": "Futter",
+      "items": [
+        "Heu",
+        "Körner",
+        "Knochen",
+        "Fischfutter"
+      ],
+      "revealHint": "FUTTER"
+    },
+    {
+      "id": "g4",
+      "label": "Tiergesundheit",
+      "items": [
+        "Impfung",
+        "Wurmkur",
+        "Tierchip",
+        "Zeckenzange"
+      ],
+      "revealHint": "TIERARZT"
+    }
+  ]
+}

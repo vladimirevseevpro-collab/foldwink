@@ -1,0 +1,55 @@
+{
+  "id": "de-9486",
+  "title": "Berufe nach Bereich",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Berufe",
+    "batch": "de-easy-09"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Handwerk",
+      "items": [
+        "Tischler",
+        "Klempner",
+        "Elektriker",
+        "Maurer"
+      ],
+      "revealHint": "HANDWERK"
+    },
+    {
+      "id": "g2",
+      "label": "Büro",
+      "items": [
+        "Sekretärin",
+        "Buchhalter",
+        "Sachbearbeiter",
+        "Assistent"
+      ],
+      "revealHint": "BÜRO"
+    },
+    {
+      "id": "g3",
+      "label": "Gesundheit",
+      "items": [
+        "Apotheker",
+        "Physiotherapeut",
+        "Hebamme",
+        "Zahnarzt"
+      ],
+      "revealHint": "GESUNDHEIT"
+    },
+    {
+      "id": "g4",
+      "label": "Kunst",
+      "items": [
+        "Bildhauer",
+        "Kunstmaler",
+        "Musiker",
+        "Schauspieler"
+      ],
+      "revealHint": "KUNST"
+    }
+  ]
+}

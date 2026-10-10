@@ -1,0 +1,55 @@
+{
+  "id": "de-9485",
+  "title": "Geld",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Wirtschaft",
+    "batch": "de-easy-09"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Zahlungsarten",
+      "items": [
+        "Bargeld",
+        "Girokarte",
+        "Lastschrift",
+        "Überweisung"
+      ],
+      "revealHint": "BEZAHLEN"
+    },
+    {
+      "id": "g2",
+      "label": "Kosten",
+      "items": [
+        "Preis",
+        "Gebühr",
+        "Steuer",
+        "Porto"
+      ],
+      "revealHint": "KOSTEN"
+    },
+    {
+      "id": "g3",
+      "label": "Sparen",
+      "items": [
+        "Sparbuch",
+        "Sparschwein",
+        "Sparplan",
+        "Tagesgeld"
+      ],
+      "revealHint": "SPAREN"
+    },
+    {
+      "id": "g4",
+      "label": "Zahlungsmittel früher",
+      "items": [
+        "Mark",
+        "Pfennig",
+        "Taler",
+        "Gulden"
+      ],
+      "revealHint": "FRÜHER"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-9483",
+  "title": "Auf dem Acker",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Landwirtschaft",
+    "batch": "de-easy-09"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Körner vom Halm",
+      "items": [
+        "Weizen",
+        "Dinkel",
+        "Hirse",
+        "Hafer"
+      ],
+      "revealHint": "GETREIDE"
+    },
+    {
+      "id": "g2",
+      "label": "Feldfrüchte",
+      "items": [
+        "Zuckerrübe",
+        "Raps",
+        "Kartoffel",
+        "Sonnenblume"
+      ],
+      "revealHint": "FELD"
+    },
+    {
+      "id": "g3",
+      "label": "Maschinen auf dem Feld",
+      "items": [
+        "Mähdrescher",
+        "Pflug",
+        "Sämaschine",
+        "Traktor"
+      ],
+      "revealHint": "MASCHINEN"
+    },
+    {
+      "id": "g4",
+      "label": "Erntearbeit",
+      "items": [
+        "Mähen",
+        "Dreschen",
+        "Binden",
+        "Einfahren"
+      ],
+      "revealHint": "ERNTE"
+    }
+  ]
+}

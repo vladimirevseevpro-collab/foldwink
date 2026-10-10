@@ -1,0 +1,55 @@
+{
+  "id": "de-9484",
+  "title": "Maße und Gewichte",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Zahlen",
+    "batch": "de-easy-09"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Gewicht",
+      "items": [
+        "Gramm",
+        "Kilogramm",
+        "Tonne",
+        "Pfund"
+      ],
+      "revealHint": "GEWICHT"
+    },
+    {
+      "id": "g2",
+      "label": "Längenmaße",
+      "items": [
+        "Meter",
+        "Zoll",
+        "Fuß",
+        "Meile"
+      ],
+      "revealHint": "LÄNGE"
+    },
+    {
+      "id": "g3",
+      "label": "Hohlmaße",
+      "items": [
+        "Liter",
+        "Milliliter",
+        "Esslöffel",
+        "Teelöffel"
+      ],
+      "revealHint": "VOLUMEN"
+    },
+    {
+      "id": "g4",
+      "label": "Zeitspannen",
+      "items": [
+        "Stunde",
+        "Woche",
+        "Monat",
+        "Jahr"
+      ],
+      "revealHint": "ZEIT"
+    }
+  ]
+}

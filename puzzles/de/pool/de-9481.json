@@ -1,0 +1,55 @@
+{
+  "id": "de-9481",
+  "title": "Beim Bäcker",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Essen",
+    "batch": "de-easy-09"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Brötchen",
+      "items": [
+        "Semmel",
+        "Roggenbrötchen",
+        "Mohnbrötchen",
+        "Käsebrötchen"
+      ],
+      "revealHint": "BRÖTCHEN"
+    },
+    {
+      "id": "g2",
+      "label": "Brot vom Bäcker",
+      "items": [
+        "Roggenbrot",
+        "Vollkornbrot",
+        "Pumpernickel",
+        "Weißbrot"
+      ],
+      "revealHint": "BROT"
+    },
+    {
+      "id": "g3",
+      "label": "Feingebäck",
+      "items": [
+        "Berliner",
+        "Nussecke",
+        "Bienenstich",
+        "Streuselschnecke"
+      ],
+      "revealHint": "SÜSS"
+    },
+    {
+      "id": "g4",
+      "label": "Bekannte Torten",
+      "items": [
+        "Schwarzwälder Kirschtorte",
+        "Sachertorte",
+        "Frankfurter Kranz",
+        "Käsesahnetorte"
+      ],
+      "revealHint": "TORTEN"
+    }
+  ]
+}

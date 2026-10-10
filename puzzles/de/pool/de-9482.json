@@ -1,0 +1,55 @@
+{
+  "id": "de-9482",
+  "title": "Deutsche Küche",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Essen",
+    "batch": "de-easy-09"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Würste",
+      "items": [
+        "Currywurst",
+        "Weißwurst",
+        "Bratwurst",
+        "Leberwurst"
+      ],
+      "revealHint": "WURST"
+    },
+    {
+      "id": "g2",
+      "label": "Typische Beilagen",
+      "items": [
+        "Sauerkraut",
+        "Rotkohl",
+        "Spätzle",
+        "Knödel"
+      ],
+      "revealHint": "BEILAGEN"
+    },
+    {
+      "id": "g3",
+      "label": "Süßspeisen",
+      "items": [
+        "Kaiserschmarrn",
+        "Milchreis",
+        "Apfelstrudel",
+        "Rote Grütze"
+      ],
+      "revealHint": "SÜSSSPEISEN"
+    },
+    {
+      "id": "g4",
+      "label": "Kartoffelgerichte",
+      "items": [
+        "Kartoffelsalat",
+        "Pommes frites",
+        "Reibekuchen",
+        "Kartoffelsuppe"
+      ],
+      "revealHint": "KARTOFFEL"
+    }
+  ]
+}
