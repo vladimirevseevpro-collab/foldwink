@@ -1,0 +1,55 @@
+{
+  "id": "de-9457",
+  "title": "Tiere im Haus",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Tiere",
+    "batch": "de-easy-06"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Haustierbedarf",
+      "items": [
+        "Leine",
+        "Futternapf",
+        "Körbchen",
+        "Kratzbaum"
+      ],
+      "revealHint": "ZUBEHÖR"
+    },
+    {
+      "id": "g2",
+      "label": "Hunde aus Deutschland",
+      "items": [
+        "Dackel",
+        "Schäferhund",
+        "Rottweiler",
+        "Dobermann"
+      ],
+      "revealHint": "HUNDE"
+    },
+    {
+      "id": "g3",
+      "label": "Tiere im Käfig",
+      "items": [
+        "Hamster",
+        "Meerschweinchen",
+        "Wellensittich",
+        "Kanarienvogel"
+      ],
+      "revealHint": "KLEINTIERE"
+    },
+    {
+      "id": "g4",
+      "label": "Rassekatzen",
+      "items": [
+        "Siamkatze",
+        "Perserkatze",
+        "Maine Coon",
+        "Britisch Kurzhaar"
+      ],
+      "revealHint": "KATZEN"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-9454",
+  "title": "Markttag",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Einkaufen",
+    "batch": "de-easy-06"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Marktstand-Ausstattung",
+      "items": [
+        "Marktschreier",
+        "Waage",
+        "Obstkiste",
+        "Sonnenschirm"
+      ],
+      "revealHint": "STAND"
+    },
+    {
+      "id": "g2",
+      "label": "Frisches Gemüse",
+      "items": [
+        "Spargel",
+        "Kohlrabi",
+        "Lauch",
+        "Rhabarber"
+      ],
+      "revealHint": "GEMÜSE"
+    },
+    {
+      "id": "g3",
+      "label": "Beim Metzger",
+      "items": [
+        "Bratwurst",
+        "Leberkäse",
+        "Schnitzel",
+        "Hackfleisch"
+      ],
+      "revealHint": "METZGER"
+    },
+    {
+      "id": "g4",
+      "label": "Beim Fischhändler",
+      "items": [
+        "Forelle",
+        "Lachs",
+        "Hering",
+        "Zander"
+      ],
+      "revealHint": "FISCH"
+    }
+  ]
+}

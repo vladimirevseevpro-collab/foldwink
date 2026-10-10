@@ -1,0 +1,55 @@
+{
+  "id": "de-9456",
+  "title": "Zelten",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Freizeit",
+    "batch": "de-easy-06"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Zum Übernachten",
+      "items": [
+        "Zelt",
+        "Schlafsack",
+        "Isomatte",
+        "Hängematte"
+      ],
+      "revealHint": "AUSRÜSTUNG"
+    },
+    {
+      "id": "g2",
+      "label": "Am Lagerfeuer",
+      "items": [
+        "Stockbrot",
+        "Marshmallows",
+        "Funken",
+        "Brennholz"
+      ],
+      "revealHint": "LAGERFEUER"
+    },
+    {
+      "id": "g3",
+      "label": "Auf dem Campingplatz",
+      "items": [
+        "Stellplatz",
+        "Sanitärhaus",
+        "Wohnwagen",
+        "Rezeption"
+      ],
+      "revealHint": "PLATZ"
+    },
+    {
+      "id": "g4",
+      "label": "Nachts im Freien",
+      "items": [
+        "Sterne",
+        "Taschenlampe",
+        "Grillen",
+        "Eule"
+      ],
+      "revealHint": "NACHT"
+    }
+  ]
+}

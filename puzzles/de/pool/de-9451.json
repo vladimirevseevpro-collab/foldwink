@@ -1,0 +1,55 @@
+{
+  "id": "de-9451",
+  "title": "Süßes",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Essen",
+    "batch": "de-easy-06"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Sorten von Schokolade",
+      "items": [
+        "Vollmilch",
+        "Zartbitter",
+        "Weiße Schokolade",
+        "Nussschokolade"
+      ],
+      "revealHint": "SCHOKOLADE"
+    },
+    {
+      "id": "g2",
+      "label": "Eissorten",
+      "items": [
+        "Vanille",
+        "Erdbeere",
+        "Stracciatella",
+        "Pistazie"
+      ],
+      "revealHint": "EIS"
+    },
+    {
+      "id": "g3",
+      "label": "Gebäck zur Adventszeit",
+      "items": [
+        "Lebkuchen",
+        "Spekulatius",
+        "Stollen",
+        "Vanillekipferl"
+      ],
+      "revealHint": "GEBÄCK"
+    },
+    {
+      "id": "g4",
+      "label": "Süßigkeiten aus der Tüte",
+      "items": [
+        "Gummibärchen",
+        "Lakritz",
+        "Bonbon",
+        "Kaugummi"
+      ],
+      "revealHint": "NASCHEN"
+    }
+  ]
+}

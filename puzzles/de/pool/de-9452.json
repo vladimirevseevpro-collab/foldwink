@@ -1,0 +1,55 @@
+{
+  "id": "de-9452",
+  "title": "Mit dem Fahrrad",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Verkehr",
+    "batch": "de-easy-06"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Fahrradzubehör",
+      "items": [
+        "Klingel",
+        "Fahrradpumpe",
+        "Fahrradschloss",
+        "Fahrradhelm"
+      ],
+      "revealHint": "ZUBEHÖR"
+    },
+    {
+      "id": "g2",
+      "label": "Teile am Rad",
+      "items": [
+        "Lenker",
+        "Pedal",
+        "Rücklicht",
+        "Gepäckträger"
+      ],
+      "revealHint": "RAD"
+    },
+    {
+      "id": "g3",
+      "label": "Pannen",
+      "items": [
+        "Platten",
+        "Kettenriss",
+        "Speichenbruch",
+        "Bremsdefekt"
+      ],
+      "revealHint": "PANNE"
+    },
+    {
+      "id": "g4",
+      "label": "Fahrradwege",
+      "items": [
+        "Radweg",
+        "Fahrradstraße",
+        "Schutzstreifen",
+        "Radwanderweg"
+      ],
+      "revealHint": "WEGE"
+    }
+  ]
+}

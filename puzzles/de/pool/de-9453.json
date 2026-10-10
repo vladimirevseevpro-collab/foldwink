@@ -1,0 +1,55 @@
+{
+  "id": "de-9453",
+  "title": "Beim Arzt",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Gesundheit",
+    "batch": "de-easy-06"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "In der Arzttasche",
+      "items": [
+        "Spritze",
+        "Fieberthermometer",
+        "Stethoskop",
+        "Verband"
+      ],
+      "revealHint": "ARZT"
+    },
+    {
+      "id": "g2",
+      "label": "Ärzte nach Fachgebiet",
+      "items": [
+        "Kinderarzt",
+        "Zahnarzt",
+        "Augenarzt",
+        "Hautarzt"
+      ],
+      "revealHint": "FACHARZT"
+    },
+    {
+      "id": "g3",
+      "label": "Beschwerden bei Erkältung",
+      "items": [
+        "Schnupfen",
+        "Husten",
+        "Heiserkeit",
+        "Kopfschmerzen"
+      ],
+      "revealHint": "KRANK"
+    },
+    {
+      "id": "g4",
+      "label": "Arzneiformen",
+      "items": [
+        "Tablette",
+        "Tropfen",
+        "Salbe",
+        "Hustensaft"
+      ],
+      "revealHint": "MEDIZIN"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "de-9458",
+  "title": "Spinnentiere und Krabbler",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Tiere",
+    "batch": "de-easy-06"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Spinnentiere",
+      "items": [
+        "Kreuzspinne",
+        "Skorpion",
+        "Zecke",
+        "Weberknecht"
+      ],
+      "revealHint": "SPINNEN"
+    },
+    {
+      "id": "g2",
+      "label": "Käfer",
+      "items": [
+        "Marienkäfer",
+        "Maikäfer",
+        "Hirschkäfer",
+        "Mistkäfer"
+      ],
+      "revealHint": "KÄFER"
+    },
+    {
+      "id": "g3",
+      "label": "Fliegende Insekten",
+      "items": [
+        "Biene",
+        "Wespe",
+        "Hummel",
+        "Hornisse"
+      ],
+      "revealHint": "FLIEGEN"
+    },
+    {
+      "id": "g4",
+      "label": "Kriechende Tiere im Garten",
+      "items": [
+        "Regenwurm",
+        "Nacktschnecke",
+        "Weinbergschnecke",
+        "Tausendfüßler"
+      ],
+      "revealHint": "KRIECHER"
+    }
+  ]
+}

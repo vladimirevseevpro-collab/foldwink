@@ -1,0 +1,55 @@
+{
+  "id": "de-9455",
+  "title": "Spielplatz",
+  "difficulty": "easy",
+  "meta": {
+    "theme": "Kindheit",
+    "batch": "de-easy-06"
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "label": "Spielgeräte",
+      "items": [
+        "Rutsche",
+        "Schaukel",
+        "Wippe",
+        "Karussell"
+      ],
+      "revealHint": "GERÄTE"
+    },
+    {
+      "id": "g2",
+      "label": "Sandspielzeug",
+      "items": [
+        "Eimer",
+        "Schaufel",
+        "Förmchen",
+        "Baggerauto"
+      ],
+      "revealHint": "SAND"
+    },
+    {
+      "id": "g3",
+      "label": "Fahrzeuge für Kinder",
+      "items": [
+        "Dreirad",
+        "Tretroller",
+        "Laufrad",
+        "Bobbycar"
+      ],
+      "revealHint": "KINDERFAHRZEUG"
+    },
+    {
+      "id": "g4",
+      "label": "Kinderlieder",
+      "items": [
+        "Hänschen klein",
+        "Alle meine Entchen",
+        "Backe, backe Kuchen",
+        "Fuchs, du hast die Gans gestohlen"
+      ],
+      "revealHint": "LIEDER"
+    }
+  ]
+}
