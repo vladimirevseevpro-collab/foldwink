@@ -8,7 +8,7 @@ Foldwink is a short daily grouping puzzle. Find four hidden groups of four in a
 Medium puzzles use the Foldwink Tabs: every solved group reveals one more
 letter on each unsolved tab. Once per medium puzzle, the player may Wink one
 tab to reveal its full category. Easy puzzles intentionally have neither Tabs
-nor Wink; Hard reveals Tabs more slowly and has no Wink.
+nor Wink; Hard has no Tabs and no Wink (pure deduction).
 
 ## Product status
 

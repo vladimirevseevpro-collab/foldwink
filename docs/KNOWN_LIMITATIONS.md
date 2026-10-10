@@ -18,7 +18,7 @@ This document records the real remaining limits of the current Foldwink web/PWA 
 - One review signal remains in the Russian pool: `ru-0205` distinguishes conventional geographic regions of East Asia and Southeast Asia. It was retained after manual review, but belongs on the next editorial revisit list.
 - German Tabs audit classified 33 fallback boards as P0 rebuild/retire candidates. All 33 have now been replaced one-for-one with independently reviewed general-audience boards.
 - 28 active Medium/Hard boards still rely on a full group-label fallback instead of a short explicit revealHint (27 English and 1 Russian; German has none). They are playable, but this is a mobile readability debt and is now counted by validation.
-- Easy puzzles deliberately have no Tabs or Wink. Medium puzzles have Tabs and one optional Wink. Hard puzzles reveal Tabs more slowly and have no Wink.
+- Easy puzzles deliberately have no Tabs or Wink. Medium puzzles have Tabs and one optional Wink. Hard puzzles have neither Tabs nor Wink.
 
 ## Privacy, storage, and monetization
 

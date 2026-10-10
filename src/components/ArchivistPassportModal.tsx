@@ -136,7 +136,7 @@ export function ArchivistPassportModal({
     if (!committed) {
       setImportError(
         lang === "ru"
-          ? "Не удалось безопасно сохранить паспорт. Проверьте хранилище или конфликт другой вкладки."
+          ? "Не удалось надёжно сохранить паспорт. Проверь память браузера или закрой другую вкладку с игрой."
           : lang === "de"
             ? "Der Pass konnte nicht sicher gespeichert werden. Prüfe Speicher oder einen Tab-Konflikt."
             : "The passport could not be saved safely. Check storage or another-tab conflict.",
@@ -293,7 +293,7 @@ export function ArchivistPassportModal({
                 data-testid="legacy-passport-qr-fallback"
               >
                 {lang === "ru"
-                  ? "Этот старый код слишком длинный для надёжного QR. Паспорт не повреждён — используйте «Копировать код»."
+                  ? "Этот старый код слишком длинный для надёжного QR. Паспорт не повреждён — нажми «Скопировать код печати»."
                   : lang === "de"
                     ? "Dieser alte Code ist zu lang für einen zuverlässigen QR. Der Pass ist intakt — nutze „Code kopieren“."
                     : "This legacy code is too long for a reliable QR. The passport is intact — use Copy code."}
@@ -302,7 +302,7 @@ export function ArchivistPassportModal({
 
             <p className="text-[11px] text-muted max-w-xs mx-auto">
               {lang === "ru"
-                ? "Legacy: переносит только паспорт и seed, а не полный прогресс. Для полного backup используйте кнопку ниже в паспорте."
+                ? "Legacy: переносит только паспорт и seed, а не полный прогресс. Для полного backup используй кнопку ниже в паспорте."
                 : lang === "de"
                   ? "Legacy: überträgt nur Pass und Seed, nicht den vollständigen Fortschritt. Nutze Vollständiges Backup / Import im Pass."
                   : "Legacy: transfers passport and seed only, not full progress. Use Full backup / import in the passport for a complete transfer."}
@@ -343,7 +343,7 @@ export function ArchivistPassportModal({
               </div>
               <p className="text-[11px] text-muted mt-1">
                 {lang === "ru"
-                  ? "Legacy: вставьте код (FWSEAL1:...), чтобы восстановить только паспорт и seed, не полный прогресс."
+                  ? "Legacy: вставь код (FWSEAL1:...), чтобы восстановить только паспорт и seed, не полный прогресс."
                   : lang === "de"
                     ? "Legacy: Siegelcode (FWSEAL1:...) einfügen, um nur Pass und Seed wiederherzustellen, nicht den vollständigen Fortschritt."
                     : "Legacy: paste a wax seal code (FWSEAL1:...) to restore only your passport and seed, not full progress."}

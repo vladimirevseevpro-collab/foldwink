@@ -273,12 +273,12 @@ export function App() {
               <span>
                 {persistenceIssue === "conflict"
                   ? lang === "ru"
-                    ? "Игра изменена в другой вкладке. Перезагрузите страницу, чтобы открыть последнее сохранение."
+                    ? "Игра изменилась в другой вкладке. Перезагрузи страницу, чтобы открыть последнее сохранение."
                     : lang === "de"
                       ? "Das Spiel wurde in einem anderen Tab geändert. Lade neu, um den letzten Stand zu öffnen."
                       : "This game changed in another tab. Reload to open the latest saved attempt."
                   : lang === "ru"
-                    ? "Прогресс этой сессии нельзя надёжно сохранить. Не закрывайте вкладку."
+                    ? "Прогресс этой сессии не удаётся надёжно сохранить. Не закрывай вкладку."
                     : lang === "de"
                       ? "Der Fortschritt dieser Sitzung kann nicht zuverlässig gespeichert werden. Lass den Tab offen."
                       : "This session cannot save progress reliably. Keep this tab open."}
@@ -332,7 +332,7 @@ export function App() {
                     : "This link version is not supported yet"
                 : sharedLinkError === "unavailable"
                   ? lang === "ru"
-                    ? "Эта задача недоступна в текущем каталоге"
+                    ? "Этот пазл недоступен в текущем каталоге"
                     : lang === "de"
                       ? "Dieses Rätsel ist im aktuellen Katalog nicht verfügbar"
                       : "This puzzle is unavailable in the current catalog"
@@ -344,7 +344,7 @@ export function App() {
             </h1>
             <p className="mt-2 text-sm text-muted">
               {lang === "ru"
-                ? "Мы не подменили её случайной задачей и не изменили ваш прогресс."
+                ? "Мы не подменили её случайным пазлом и не тронули твой прогресс."
                 : lang === "de"
                   ? "Wir haben sie nicht durch ein zufälliges Rätsel ersetzt und deinen Fortschritt nicht verändert."
                   : "We did not replace it with a random puzzle or change your progress."}

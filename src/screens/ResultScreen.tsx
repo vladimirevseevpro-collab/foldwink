@@ -314,7 +314,7 @@ export function ResultScreen() {
             <div className="text-xs text-muted">
               {rewardReceipt.reason === "already-consumed"
                 ? lang === "ru"
-                  ? "Повтор: прогресс этой задачи уже учтён"
+                  ? "Повтор: прогресс за этот пазл уже засчитан"
                   : lang === "de"
                     ? "Wiederholung: Der Fortschritt wurde bereits gezählt"
                     : "Replay: this puzzle's progress was already counted"
@@ -405,7 +405,7 @@ export function ResultScreen() {
       >
         <div className="text-xs text-muted">
           {lang === "ru"
-            ? "Связь в одной группе была неясной?"
+            ? "Какая-то связь показалась неочевидной?"
             : lang === "de"
               ? "War eine Verbindung unklar?"
               : "Was a connection unclear?"}
