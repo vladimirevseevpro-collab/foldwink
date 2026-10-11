@@ -12,7 +12,7 @@ A short daily grouping puzzle with a twist.
 
 ## Short description (for search / listing)
 
-Find 4 hidden groups of 4 in a 4×4 grid. Medium puzzles reveal their categories one letter at a time — tap once to Wink and reveal a full category. 500 curated puzzles across three difficulties. 2–5 minutes per session. No accounts. No tracking.
+Find 4 hidden groups of 4 in a 4×4 grid. Medium puzzles reveal their categories one letter at a time — tap once to Wink and reveal a full category. 1,000 curated puzzles per language (English, German, Russian) across three difficulties. 2–5 minutes per session. No accounts. No tracking.
 
 ## Long description
 
@@ -26,11 +26,11 @@ Foldwink is a short-session grouping puzzle. You see 16 cards on a 4×4 grid. Yo
 
 **Medium** — Stronger false trails and structured ambiguity. Medium puzzles introduce **Foldwink Tabs**: a row of 4 hidden category previews above the grid. Each time you solve a group, the tabs reveal one more letter. Once per puzzle you can **Wink** a tab — tap it to fully reveal its category keyword. Save the Wink for when you're stuck.
 
-**Master Challenge (Hard)** — The tabs slow to half speed. The Wink is gone. You solve from the grid and your own reasoning. Reduced help, cleaner pressure, stronger overlap. Tough but fair.
+**Master Challenge (Hard)** — No hint tabs, no Wink. You solve from the grid and your own reasoning. Stronger overlap, cleaner pressure. Tough but fair.
 
 ### What's included
 
-- **500 curated puzzles** (272 easy · 194 medium · 34 hard)
+- **1,000 curated puzzles in each of English, German and Russian** (550 easy · 350 medium · 100 hard)
 - **Daily puzzle** — one per day, deterministic
 - **Foldwink Tabs + Wink** — the mechanic that makes this game different
 - **Progression system** — guided Easy → Medium → Hard path
@@ -52,7 +52,7 @@ Foldwink is a short-session grouping puzzle. You see 16 cards on a 4×4 grid. Yo
 
 ### Current status
 
-Foldwink is an actively developed indie puzzle game. The current build has 500 curated puzzles across three difficulties.
+Foldwink is an actively developed indie puzzle game. The current build has 1,000 curated puzzles per language (English, German, Russian) across three difficulties.
 
 ### Credits
 

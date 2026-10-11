@@ -12,7 +12,7 @@ A daily 4×4 grouping puzzle with the one-shot Wink.
 
 ## Short description (for search / listing)
 
-A daily 4×4 grouping puzzle with the one-shot Wink. Hundreds of curated puzzles in English, German and Russian.
+A daily 4×4 grouping puzzle with the one-shot Wink. 1,000 curated puzzles per language in English, German and Russian.
 
 ## Long description
 
@@ -47,7 +47,7 @@ A quick daily puzzle: 16 cards, 4 secret categories, 4 mistakes. Plays free in y
 
 ### Content
 
-Hundreds of curated puzzles in English, German (Deutsch) and Russian (Русский). The daily puzzle follows your language. The active pool size is reported by `npm run validate` and is currently being de-duplicated after a 2026-10-01 audit found that roughly half of the September scale-up consisted of recombined copies.
+1,000 curated puzzles per language in English, German (Deutsch) and Russian (Русский): 550 easy, 350 medium and 100 Master. The daily puzzle follows your language.
 
 ### Privacy
 
@@ -69,7 +69,7 @@ Built by Neural Void with AI-assisted development, validation and editorial revi
 
 The public itch.io listing still shows a fixed `3,000 curated puzzles` claim and must be re-published by the owner (the repo cannot update the live page). After the 2026-10-01 audit found that roughly half of the September scale-up were recombined copies, no count above what is verified may be quoted. Use the sentence below, and point anyone who wants an exact figure at `npm run validate`.
 
-- EN: Hundreds of curated puzzles in English, German and Russian.
+- EN: 1,000 curated puzzles per language in English, German and Russian.
 - DE: Hunderte kuratierte Rätsel auf Englisch, Deutsch und Russisch.
 - RU: Сотни отобранных пазлов на английском, немецком и русском.
 

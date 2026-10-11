@@ -2,7 +2,7 @@ export type PuzzleDifficulty = "easy" | "medium" | "hard";
 
 /**
  * Editorial metadata added in 0.4.1 to support the disciplined scale-to-500
- * content pipeline. Every field is optional — the 98 existing puzzles pre-
+ * content pipeline. Every field is optional — the earliest puzzles pre-
  * date this schema and continue to validate cleanly without any migration.
  *
  * New puzzles authored under `docs/content/BATCH_WORKFLOW.md` should fill in
