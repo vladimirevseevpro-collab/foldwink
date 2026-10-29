@@ -2,22 +2,21 @@
 
 Use with `FOLDWINK_W7_PILOT_PROTOCOL.md`. This document is an operational template, not participant evidence. Open `docs/research/FOLDWINK_W7_OPERATOR_FORM.html` locally for the safest data-entry path; it sends and stores nothing, fixes the pilot build identity, computes return dates and downloads only locally validated JSON. The CLI validator remains authoritative. The raw example is `docs/research/templates/foldwink-w7-observation.example.json`. Store completed copies only in the researcher's access-controlled `pilot-data/` workspace, which is git-ignored. Never enter the external study code into Foldwink, its URL, localStorage or app export.
 
-## Current pilot constants — build 0.8.4
+## Current pilot constants — build 0.8.5
 
-- Public listing: `https://neural-void.itch.io/foldwink`
-- Exact playable URL: `https://html.itch.zone/html/19242763-1984826/index.html`
-- Invited first-entry URL: `https://html.itch.zone/html/19242763-1984826/index.html?utm_medium=research_invite`
-- itch upload/build: `#19242763` / `#1984826`; channel `pilot-2026-09`
-- Deployment: 2026-09-16 12:02 Europe/Berlin; external staging verification: 12:04
-- Artifact: `foldwink-itch-upload-v0.8.4-2026-09-16.zip`
-- Artifact SHA-256: `b9e5dde25558e27dc9f846f28e8ad4b9dbb0d134136e2efa2bb8c9d7cf7fc645`
-- Dist tree SHA-256: `b41e3ce52dd56f28e96719a6e4872bc7701e6305cbfe270a5e8f02bdd64eb385`
-- Version tuple: app `0.8.4`; content `catalog-2026-09-v1`; Daily `daily-2026-09-14-2026-10-13-v1`; events `ops-06-v1`; privacy `privacy-v1`; balance `balance-2026-09-v1`
-- Physical smoke: Windows Chrome `152.0.7977.84` passes on exact `0.8.4/#1984826`; iOS Safari/PWA and Android Chrome/PWA are still open.
+- Pilot URL: `https://vladimirevseevpro-collab.github.io/foldwink/pilot/0.8.5/`
+- Invited first-entry URL: `https://vladimirevseevpro-collab.github.io/foldwink/pilot/0.8.5/?utm_medium=research_invite`
+- Channel token for records: `pages:pilot-0.8.5` (GitHub Pages; frozen tree `pilot/0.8.5/` in the repository)
+- Source commit: `c874de79d9e75c4011295a325216594ac2cdda14` (clean); manifest `pilot/0.8.5.manifest.json`
+- Tree SHA-256: `d91e97fe42d65532cb9a067bc6f851f2e9f1ef19db0b8810ade61f5850a47567` (146 files, 5,477,890 bytes)
+- Version tuple: app `0.8.5`; content `catalog-2026-09-v1`; Daily `daily-2026-10-14-2026-12-12-v1` + `daily-2026-12-13-2027-02-10-v1`; events `ops-06-v1`; privacy `privacy-v1`; balance `balance-2026-09-v1`
+- Daily horizon of this build: **2027-02-10**. Recruit so that every D7 window closes by then.
+- Evidence: `docs/release-evidence/0.8.5-w7-pilot/README.md`
+- Physical smoke: iOS Safari/PWA and Android Chrome/PWA are still open on this URL.
 
-Use the direct tagged URL for invited attribution: itch does not guarantee that a query parameter on the outer listing is forwarded into its game iframe. Do not modify the build, rules, copy, manifests or balance configuration after participant 001 without closing the baseline cohort and versioning the change.
+Send participants only the invited first-entry URL. The main app at `…/foldwink/` shares this origin and therefore local storage; do not point participants at it during their window, and do not ship storage-schema changes to main while a cohort is open. Do not modify the build, rules, copy, manifests or balance configuration after participant 001 without closing the baseline cohort and versioning the change.
 
-Build `0.8.3` / `#1981655` was superseded before participant 001 because its runtime research export incorrectly reported app version `0.8.2`. Do not use that URL or mix its exports into the `0.8.4` cohort.
+Builds `0.8.3` and `0.8.4` (itch.io channel `pilot-2026-09`) are superseded and recruited nobody. Do not use their URLs or mix any of their exports into the `0.8.5` cohort.
 
 ## Neutral recruitment message
 
@@ -37,8 +36,8 @@ Build `0.8.3` / `#1981655` was superseded before participant 001 because its run
 
 - External study code:
 - Consent recorded externally: yes / no
-- Artifact SHA-256:
-- Staging URL:
+- Tree SHA-256:
+- Pilot URL:
 - Deployment timestamp and timezone:
 - App / content / daily / event / privacy / balance versions:
 - Locale: EN / RU / DE

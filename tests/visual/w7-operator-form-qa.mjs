@@ -5,8 +5,10 @@ import { pathToFileURL } from "node:url";
 import { promisify } from "node:util";
 import { chromium } from "playwright";
 
+import { currentPilotManifestPath } from "../../scripts/lib/web-pilot.mjs";
+
 const execFileAsync = promisify(execFile);
-const packageMetadata = JSON.parse(await readFile(resolve("package.json"), "utf8"));
+const pilotManifest = JSON.parse(await readFile(await currentPilotManifestPath(), "utf8"));
 const formPath = resolve("docs/research/FOLDWINK_W7_OPERATOR_FORM.html");
 const formUrl = pathToFileURL(formPath).href;
 const evidenceDir = resolve("reports/w7-balance-retention-2026-09-14/operator-form");
@@ -103,8 +105,8 @@ try {
       const payload = JSON.parse(await readFile(downloadedPath, "utf8"));
       if (
         payload.studyCode !== "P017" ||
-        payload.build.app !== packageMetadata.version ||
-        payload.build.itchBuild !== "#1984826"
+        payload.build.app !== pilotManifest.version ||
+        payload.build.channel !== pilotManifest.channel
       ) {
         throw new Error("download did not preserve the external code and frozen build tuple");
       }

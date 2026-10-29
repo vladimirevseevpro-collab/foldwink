@@ -28,9 +28,17 @@ const check = (condition, message) => {
 };
 const json = async (file) => JSON.parse(await readFile(file, "utf8"));
 
-function readQuoted(source, key) {
-  const match = new RegExp(`${key}:\\s*["']([^"']+)["']`, "u").exec(source);
-  return match?.[1];
+// Read only the active `const BUILD = {...}` tuple, so a comment or another
+// object elsewhere in the file can never satisfy the contract.
+function readBuild(source, label) {
+  const block = /const BUILD = (?:Object\.freeze\()?\{([^}]*)\}/u.exec(source)?.[1];
+  if (block === undefined) {
+    failures.push(`${label} has no BUILD tuple`);
+    return {};
+  }
+  return Object.fromEntries(
+    [...block.matchAll(/^\s*(\w+):\s*"([^"]*)",?\s*$/gmu)].map((match) => [match[1], match[2]]),
+  );
 }
 
 const manifest = await json(manifestPath);
@@ -111,7 +119,6 @@ check(deploy.actual?.treeSha256 === manifest.tree.treeSha256, "deployed tree SHA
 check(deploy.actual?.files === manifest.tree.files, "deployed file count differs");
 check(deploy.actual?.bytes === manifest.tree.bytes, "deployed byte count differs");
 
-const BUILD_KEYS = ["app", "content", "daily", "events", "privacy", "balance", "channel", "treeSha256"];
 const expectedBuild = {
   app: manifest.versions.app,
   content: manifest.versions.content,
@@ -122,19 +129,14 @@ const expectedBuild = {
   channel: manifest.channel,
   treeSha256: manifest.tree.treeSha256,
 };
-const formBuild = Object.fromEntries(BUILD_KEYS.map((key) => [key, readQuoted(formSource, key)]));
-check(
-  JSON.stringify(formBuild) === JSON.stringify(expectedBuild),
-  "operator form build tuple differs from frozen evidence",
-);
-check(
-  JSON.stringify(observationTemplate.build) === JSON.stringify(expectedBuild),
-  "observation template build tuple differs from frozen evidence",
-);
-for (const key of BUILD_KEYS) {
+for (const [label, build] of [
+  ["operator form", readBuild(formSource, "operator form")],
+  ["observation template", observationTemplate.build],
+  ["observation validator", readBuild(observationSource, "observation validator")],
+]) {
   check(
-    readQuoted(observationSource, key) === expectedBuild[key],
-    `observation validator ${key} differs from frozen evidence`,
+    JSON.stringify(build) === JSON.stringify(expectedBuild),
+    `${label} build tuple differs from frozen evidence`,
   );
 }
 

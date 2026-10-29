@@ -11,19 +11,17 @@ const PII_KEY =
   /^(?:name|email|phone|ip|address|age|birthday|birthdate|location|advertisingid)$/iu;
 const PII_VALUE =
   /(?:\b[^\s@]+@[^\s@]+\.[^\s@]+\b|\b(?:\d{1,3}\.){3}\d{1,3}\b|https?:\/\/|\+\d[\d ()-]{7,}\d|\b\d{2,4}[ ()]\d[\d ()-]{5,}\d\b|\b\d{4}-\d{2}-\d{2}[T ]\d{2}:\d{2})/iu;
-const packageMetadata = JSON.parse(await readFile(path.resolve("package.json"), "utf8"));
-
+// The frozen web pilot (pilot/0.8.5.manifest.json), not the moving main build;
+// `npm run pilot:check-contract` proves these literals still match it.
 const BUILD = {
-  app: packageMetadata.version,
+  app: "0.8.5",
   content: "catalog-2026-09-v1",
-  daily: "daily-2026-09-14-2026-10-13-v1",
+  daily: "daily-2026-10-14-2026-12-12-v1+daily-2026-12-13-2027-02-10-v1",
   events: "ops-06-v1",
   privacy: "privacy-v1",
   balance: "balance-2026-09-v1",
-  itchUpload: "#19242763",
-  itchBuild: "#1984826",
-  artifactSha256: "b9e5dde25558e27dc9f846f28e8ad4b9dbb0d134136e2efa2bb8c9d7cf7fc645",
-  treeSha256: "b41e3ce52dd56f28e96719a6e4872bc7701e6305cbfe270a5e8f02bdd64eb385",
+  channel: "pages:pilot-0.8.5",
+  treeSha256: "d91e97fe42d65532cb9a067bc6f851f2e9f1ef19db0b8810ade61f5850a47567",
 };
 
 function fail(file, message) {

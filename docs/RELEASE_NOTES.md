@@ -1,5 +1,23 @@
 # Release Notes
 
+## 0.8.5 - 2026-10-29 - W7 pilot moves to the web
+
+This build replaces `0.8.4` as the W7 pilot before participant 001. `0.8.4`
+predates the October duplicate-board cleanup, and the pilot no longer runs on
+itch.io.
+
+- The pilot is a frozen copy of clean commit `c874de7`, committed as
+  `pilot/0.8.5/` and served by GitHub Pages at
+  `https://vladimirevseevpro-collab.github.io/foldwink/pilot/0.8.5/` beside the
+  moving main app. Every deploy re-checks it against its manifest.
+- Tree SHA-256 `d91e97fe42d65532cb9a067bc6f851f2e9f1ef19db0b8810ade61f5850a47567`
+  (146 files); a clean rebuild of the commit reproduces every file.
+- The pilot contract, operator form, observation validator and template pin
+  this build instead of `dist/` and `package.json`.
+- Daily runs through 2027-02-10 (two schedules since 2026-10-14).
+- W7 remains incomplete: physical devices, real participants and complete
+  D1/D7 windows are still required.
+
 ## 0.8.4 - 2026-09-16 - W7 pilot version-integrity fix
 
 This build supersedes `0.8.3` before participant 001. The frozen `0.8.3`

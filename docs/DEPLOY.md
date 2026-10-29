@@ -138,15 +138,27 @@ valid rollback target. Keep the migration-aware shell or publish a separately
 verified compatibility build. A rollback during a research cohort pauses that
 cohort; never merge records from different app/build identities.
 
-For itch staging, verify the restored bytes rather than trusting the push log:
-
-```bash
-npm run pilot:verify-channel -- <channel> <manifest.json> <verification.json>
-npm run pilot:verify-staging
-```
-
 Production rollback or canonical-host promotion is a separate operator action.
 Confirm the exact target and authorization before pushing it.
+
+## Research pilot (frozen web build)
+
+A W7 cohort runs on one exact build while main keeps moving:
+
+```bash
+npm run pilot:freeze           # clean worktree only; writes pilot/<version>/ + manifest
+git add pilot && git commit    # commit the frozen tree, then push main
+npm run pilot:verify-deploy    # after the Pages deploy: fetch and hash every live file
+npm run pilot:verify-staging   # EN/DE/RU browser smoke, own service-worker scope
+npm run pilot:check-contract   # tree, live evidence and operator tooling agree
+```
+
+The Pages workflow copies every `pilot/<version>/` to `/pilot/<version>/` after
+re-checking it against its manifest, refuses any change to or deletion of a
+pilot once committed (it reads full git history), and after the deploy fetches
+every live pilot file again. The pilot shares the main app's origin, so no
+storage-schema or migration change may ship to main while a cohort is open. A
+new pilot needs a new version: freezing never overwrites `pilot/<version>/`.
 
 ## Content-only update
 

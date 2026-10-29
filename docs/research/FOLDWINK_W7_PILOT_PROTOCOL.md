@@ -148,8 +148,10 @@ FW-034 changes only an evidenced board, configuration value or UI surface. Every
 
 ## 10. Operator checklist
 
-- [x] Freeze exact `0.8.4` artifact, staging URL and version tuple; both channel fetches and external browser delivery match. The staging suite also downloads the live consent-safe export and proves app/content version parity in EN/RU/DE. W7 explicitly accepts the immutable artifact identity while clean source provenance remains a W8 gate. Superseded `0.8.3` must not be used because its export version drift was found before participant 001.
-- [ ] Complete physical iOS Safari/PWA and Android Chrome/PWA smoke against build `#1984826`; exact-build Windows Chrome `152.0.7977.84` public-iframe smoke passes with RU correct-group flow, EN/DE/RU localization and zero console errors.
+- [x] ~~Freeze exact `0.8.4` on itch.io~~ — superseded on 2026-10-29 before participant 001: its content predates the October duplicate-board cleanup, and itch is no longer used.
+- [x] Freeze `0.8.5` from clean commit `c874de7` as `pilot/0.8.5/` (146 files, tree `d91e97fe…`), served by GitHub Pages at `…/foldwink/pilot/0.8.5/`; a clean rebuild reproduces every file. Live file-by-file and EN/DE/RU browser verification: `docs/release-evidence/0.8.5-w7-pilot/README.md`.
+- [ ] Complete physical iOS Safari/PWA and Android Chrome/PWA smoke against the `0.8.5` pilot URL.
+- [ ] Close every D7 window by 2027-02-10, the last Daily the frozen build contains.
 - [ ] Verify FW-032 unit/E2E/privacy/visual gates on that build.
 - [ ] Obtain participant consent; assign external study code only in the roster.
 - [ ] Run the neutral first-session script and record interventions.

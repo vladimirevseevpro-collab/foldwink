@@ -19,6 +19,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Full history: stage-web-pilots.mjs proves published pilots never changed.
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version-file: ".node-version"
@@ -42,3 +45,18 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  # Prove what Pages actually serves, not only what was uploaded.
+  verify-pilots:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: ".node-version"
+      - run: |
+          for manifest in pilot/*.manifest.json; do
+            [ -e "$manifest" ] || continue
+            node scripts/verify-web-pilot.mjs "$manifest"
+          done
