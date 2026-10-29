@@ -17,6 +17,7 @@ export default [
       "assets/**",
       "ios/**",
       "itch.io/**",
+      "pilot/**",
       "tiktok/**",
       "docs/reports/**",
       "reports/**",

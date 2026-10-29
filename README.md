@@ -51,8 +51,9 @@ Open the URL Vite prints, normally `http://localhost:5173`.
 | `npm run release:preflight:paid` | Require public payment config and print checkout return URL |
 | `npm run pack:itch`              | Build a versioned itch.io HTML5 upload archive              |
 | `npm run release:butler`         | Push a packed archive to configured itch.io target          |
-| `npm run pilot:verify-channel`   | Fetch and hash-check the immutable itch channel             |
-| `npm run pilot:verify-staging`   | Smoke-test live itch EN/DE/RU at the acceptance viewports   |
+| `npm run pilot:freeze`           | Freeze the clean build as `pilot/<version>/` for a cohort   |
+| `npm run pilot:verify-deploy`    | Fetch and hash-check the live web pilot file by file        |
+| `npm run pilot:verify-staging`   | Smoke-test the live web pilot EN/DE/RU at acceptance sizes  |
 
 ## Deployment
 

@@ -26,6 +26,9 @@ jobs:
       - run: npm install --global npm@11.11.0
       - run: npm ci
       - run: npm run build
+      # Frozen research pilots ride along at /pilot/<version>/; a drifted
+      # tree fails the deploy rather than changing a running cohort's build.
+      - run: node scripts/stage-web-pilots.mjs dist
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

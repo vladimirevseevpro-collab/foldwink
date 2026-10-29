@@ -3,10 +3,10 @@ import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 
+import { currentPilotManifestPath } from "../../scripts/lib/web-pilot.mjs";
+
 const CHECKER = resolve("scripts/check-pilot-contract.mjs");
-const MANIFEST = resolve(
-  "docs/reports/assets/FOLDWINK_W7_PILOT_BUILD_CANDIDATE_V084.manifest.json",
-);
+const MANIFEST = await currentPilotManifestPath();
 
 async function runChecker(manifestPath = MANIFEST) {
   return new Promise((resolveRun) => {
@@ -43,7 +43,7 @@ try {
   if (tampered.exitCode !== 1) {
     throw new Error(`tampered pilot contract exited ${tampered.exitCode}, expected 1`);
   }
-  if (!tampered.output.includes("manifest app version differs from package")) {
+  if (!tampered.output.includes("live export version differs from manifest")) {
     throw new Error(`tampered manifest failure was not diagnosed:\n${tampered.output}`);
   }
 

@@ -1,7 +1,7 @@
 {
   "name": "foldwink",
   "private": true,
-  "version": "0.8.4",
+  "version": "0.8.5",
   "packageManager": "npm@11.11.0",
   "engines": {
     "node": "24.14.1",
@@ -25,8 +25,9 @@
     "pilot:summarize": "node scripts/summarize-pilot-exports.mjs",
     "pilot:summarize-observations": "node scripts/summarize-pilot-observations.mjs",
     "pilot:verify-operator-form": "node tests/visual/w7-operator-form-qa.mjs",
-    "pilot:verify-channel": "node scripts/verify-butler-channel.mjs",
-    "pilot:verify-staging": "node tests/visual/w7-itch-staging-qa.mjs",
+    "pilot:freeze": "npm run build && node scripts/freeze-web-pilot.mjs",
+    "pilot:verify-deploy": "node scripts/verify-web-pilot.mjs",
+    "pilot:verify-staging": "node tests/visual/w7-web-staging-qa.mjs",
     "pilot:check-contract": "node scripts/check-pilot-contract.mjs",
     "pilot:manifest": "node scripts/build-pilot-artifact-manifest.mjs",
     "lint": "eslint .",
