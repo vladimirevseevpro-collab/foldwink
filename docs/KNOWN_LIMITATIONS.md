@@ -32,7 +32,7 @@ This document records the real remaining limits of the current Foldwink web/PWA 
 - Direct web/PWA is the canonical product. itch.io is optional discovery, not the primary home or payment flow.
 - Service-worker offline behavior and responsive layouts are automated in browser tests, but real iPhone Safari and Android Chrome install/safe-area/share checks remain human work. The exact W7 pilot build is the frozen web build `0.8.5` at `/foldwink/pilot/0.8.5/`; older device evidence does not substitute for exact-build acceptance.
 - Native Android/iOS shells have not been started. They require a separate Capacitor setup, real-device testing, and channel-compliant purchase handling; a thin wrapped website is not a release target.
-- The canonical route neural-void.com/foldwink still serves a pre-W6 build. Cloudflare access is not the blocker: Wrangler holds a valid login with Pages write access (checked 2026-10-29). The deploy waits on the neural-void.com Impressum, which still has placeholders for name, address and e-mail, and on a cleanup of the neural-void.com repository; its prepared copy still holds Foldwink 0.8.2 and must be rebuilt from current `main`. Direct web publication, support contact verification, and a real hosted checkout return test are still required before an openly monetized launch.
+- The canonical route neural-void.com/foldwink serves Foldwink 0.8.5 since 2026-10-29, with a filled Impressum. Each later release needs a manual rebuild and deploy of the neural-void.com publish artifact. Support contact verification and a real hosted checkout return test are still required before an openly monetized launch.
 
 ## Accessibility and audio
 
