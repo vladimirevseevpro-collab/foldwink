@@ -33,3 +33,8 @@ puzzles/pool/_drafts/
 build/
 *.ipa
 *.xcarchive
+
+# raw AI-generated TikTok source media (local only, large)
+tiktok/video/
+# local debug / CI rebuild capture output
+tmp-debug/
