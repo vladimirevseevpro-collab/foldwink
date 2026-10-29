@@ -1,0 +1,117 @@
+{
+  "generatedAt": "2026-09-14T15:30:45.641Z",
+  "baseUrl": "http://127.0.0.1:5187/",
+  "report": [
+    {
+      "profile": "desktop",
+      "state": "terminal-result-restored",
+      "path": "C:\\AI\\neural-void.com\\foldwink\\reports\\w1-integrity-2026-09-14\\screenshots\\desktop-terminal-result-restored.png",
+      "pendingBeforeReload": "91a83eac-d978-4a21-874b-aa8f65fa17a6",
+      "pendingAfterReload": "91a83eac-d978-4a21-874b-aa8f65fa17a6",
+      "xpBeforeReload": 80,
+      "xpAfterReload": 80,
+      "terminalCountBefore": 1,
+      "terminalCountAfter": 1,
+      "rewardCountBefore": 1,
+      "rewardCountAfter": 1,
+      "width": 1440,
+      "documentWidth": 1440,
+      "horizontalOverflow": false,
+      "focused": "Foldwink · clearedSolved⚡Speed Demon0:02Time0/4Mistakes1StreakCoffee brewing met"
+    },
+    {
+      "profile": "desktop",
+      "state": "terminal-result-acknowledged",
+      "pendingResultAttemptId": null,
+      "terminalCount": 1,
+      "xp": 80
+    },
+    {
+      "profile": "desktop",
+      "state": "corrupt-recovery",
+      "path": "C:\\AI\\neural-void.com\\foldwink\\reports\\w1-integrity-2026-09-14\\screenshots\\desktop-corrupt-recovery.png",
+      "recoveryKeys": 1,
+      "downloadPath": "C:\\AI\\neural-void.com\\foldwink\\reports\\w1-integrity-2026-09-14\\desktop-foldwink-recovery-2026-09-14.json",
+      "width": 1440,
+      "documentWidth": 1440,
+      "horizontalOverflow": false,
+      "focused": "Download copy"
+    },
+    {
+      "profile": "desktop",
+      "state": "corrupt-clear-cas",
+      "staleBannerRemains": true,
+      "validAggregateSurvived": true
+    },
+    {
+      "profile": "tablet",
+      "state": "terminal-result-restored",
+      "path": "C:\\AI\\neural-void.com\\foldwink\\reports\\w1-integrity-2026-09-14\\screenshots\\tablet-terminal-result-restored.png",
+      "pendingBeforeReload": "a7570a26-057d-497e-9731-c33fd7b6a340",
+      "pendingAfterReload": "a7570a26-057d-497e-9731-c33fd7b6a340",
+      "xpBeforeReload": 80,
+      "xpAfterReload": 80,
+      "terminalCountBefore": 1,
+      "terminalCountAfter": 1,
+      "rewardCountBefore": 1,
+      "rewardCountAfter": 1,
+      "width": 1024,
+      "documentWidth": 1024,
+      "horizontalOverflow": false,
+      "focused": "Foldwink · clearedSolved⚡Speed Demon0:01Time0/4Mistakes1StreakCoffee brewing met"
+    },
+    {
+      "profile": "tablet",
+      "state": "terminal-result-acknowledged",
+      "pendingResultAttemptId": null,
+      "terminalCount": 1,
+      "xp": 80
+    },
+    {
+      "profile": "tablet",
+      "state": "corrupt-recovery",
+      "path": "C:\\AI\\neural-void.com\\foldwink\\reports\\w1-integrity-2026-09-14\\screenshots\\tablet-corrupt-recovery.png",
+      "recoveryKeys": 1,
+      "downloadPath": "C:\\AI\\neural-void.com\\foldwink\\reports\\w1-integrity-2026-09-14\\tablet-foldwink-recovery-2026-09-14.json",
+      "width": 1024,
+      "documentWidth": 1024,
+      "horizontalOverflow": false,
+      "focused": "Download copy"
+    },
+    {
+      "profile": "mobile",
+      "state": "terminal-result-restored",
+      "path": "C:\\AI\\neural-void.com\\foldwink\\reports\\w1-integrity-2026-09-14\\screenshots\\mobile-terminal-result-restored.png",
+      "pendingBeforeReload": "1ee97acf-2d2c-4a28-bec1-ce70dc8215a7",
+      "pendingAfterReload": "1ee97acf-2d2c-4a28-bec1-ce70dc8215a7",
+      "xpBeforeReload": 80,
+      "xpAfterReload": 80,
+      "terminalCountBefore": 1,
+      "terminalCountAfter": 1,
+      "rewardCountBefore": 1,
+      "rewardCountAfter": 1,
+      "width": 390,
+      "documentWidth": 390,
+      "horizontalOverflow": false,
+      "focused": "Foldwink · clearedSolved⚡Speed Demon0:02Time0/4Mistakes1StreakCoffee brewing met"
+    },
+    {
+      "profile": "mobile",
+      "state": "terminal-result-acknowledged",
+      "pendingResultAttemptId": null,
+      "terminalCount": 1,
+      "xp": 80
+    },
+    {
+      "profile": "mobile",
+      "state": "corrupt-recovery",
+      "path": "C:\\AI\\neural-void.com\\foldwink\\reports\\w1-integrity-2026-09-14\\screenshots\\mobile-corrupt-recovery.png",
+      "recoveryKeys": 1,
+      "downloadPath": "C:\\AI\\neural-void.com\\foldwink\\reports\\w1-integrity-2026-09-14\\mobile-foldwink-recovery-2026-09-14.json",
+      "width": 390,
+      "documentWidth": 390,
+      "horizontalOverflow": false,
+      "focused": "Download copy"
+    }
+  ]
+}

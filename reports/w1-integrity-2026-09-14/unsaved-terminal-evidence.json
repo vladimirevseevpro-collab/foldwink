@@ -1,0 +1,32 @@
+{
+  "generatedAt": "2026-09-14T15:24:27.934Z",
+  "report": [
+    {
+      "profile": "desktop",
+      "state": "terminal-storage-failure",
+      "path": "C:\\AI\\neural-void.com\\foldwink\\reports\\w1-integrity-2026-09-14\\screenshots\\desktop-terminal-unsaved-warning.png",
+      "autoResultVisible": false,
+      "explicitTemporaryAction": true,
+      "documentWidth": 1440,
+      "horizontalOverflow": false
+    },
+    {
+      "profile": "tablet",
+      "state": "terminal-storage-failure",
+      "path": "C:\\AI\\neural-void.com\\foldwink\\reports\\w1-integrity-2026-09-14\\screenshots\\tablet-terminal-unsaved-warning.png",
+      "autoResultVisible": false,
+      "explicitTemporaryAction": true,
+      "documentWidth": 1024,
+      "horizontalOverflow": false
+    },
+    {
+      "profile": "mobile",
+      "state": "terminal-storage-failure",
+      "path": "C:\\AI\\neural-void.com\\foldwink\\reports\\w1-integrity-2026-09-14\\screenshots\\mobile-terminal-unsaved-warning.png",
+      "autoResultVisible": false,
+      "explicitTemporaryAction": true,
+      "documentWidth": 390,
+      "horizontalOverflow": false
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "generatedAt": "2026-09-14T10:03:27.248Z",
+  "dbName": "foldwink-w1-browser-qa-1789380204689",
+  "pass": true,
+  "initial": {
+    "ok": true,
+    "state": {
+      "schemaVersion": 2,
+      "profileRevision": 1,
+      "activeSession": null,
+      "terminalAttempts": {},
+      "stats": {
+        "gamesPlayed": 0,
+        "wins": 0,
+        "losses": 0,
+        "currentStreak": 0,
+        "bestStreak": 0,
+        "solvedPuzzleIds": []
+      },
+      "standardProgress": {
+        "cursor": 0
+      },
+      "dailyHistory": {},
+      "onboarded": true,
+      "archivistProfile": {
+        "version": 2,
+        "level": 1,
+        "xp": 0,
+        "ink": 25,
+        "wax": 3,
+        "prestige": 0,
+        "discipline": "scribe",
+        "sealId": "seal_raven",
+        "nibId": "nib_brass",
+        "titleId": "title_truths",
+        "collectedStampIds": [],
+        "contractsAttempted": 0,
+        "contractsWon": 0,
+        "activeContract": null,
+        "consumedRewardKeys": [],
+        "rewardReceipts": {},
+        "migrationReceipts": []
+      }
+    },
+    "idempotent": false
+  },
+  "competingStarts": {
+    "startA": {
+      "ok": true,
+      "state": {
+        "schemaVersion": 2,
+        "profileRevision": 2,
+        "activeSession": {
+          "active": {
+            "attemptId": "browser-attempt-a",
+            "revision": 0,
+            "context": "practice",
+            "rules": {
+              "version": 1,
+              "maxIncorrectGuesses": 4,
+              "tabsEnabled": false,
+              "maxWinks": 0,
+              "timerPresentation": "optional"
+            },
+            "startedLocalDate": "2026-09-14",
+            "puzzleId": "puzzle-0001",
+            "mode": "standard",
+            "order": [
+              "a",
+              "b",
+              "c",
+              "d"
+            ],
+            "selection": [],
+            "solvedGroupIds": [],
+            "mistakesUsed": 0,
+            "startedAt": 100,
+            "countsToStats": true,
+            "incorrectGuessSignatures": [],
+            "winkedGroupId": null
+          },
+          "puzzleId": "puzzle-0001",
+          "savedAt": 100
+        },
+        "terminalAttempts": {},
+        "stats": {
+          "gamesPlayed": 0,
+          "wins": 0,
+          "losses": 0,
+          "currentStreak": 0,
+          "bestStreak": 0,
+          "solvedPuzzleIds": []
+        },
+        "standardProgress": {
+          "cursor": 0
+        },
+        "dailyHistory": {},
+        "onboarded": true,
+        "archivistProfile": {
+          "version": 2,
+          "level": 1,
+          "xp": 0,
+          "ink": 25,
+          "wax": 3,
+          "prestige": 0,
+          "discipline": "scribe",
+          "sealId": "seal_raven",
+          "nibId": "nib_brass",
+          "titleId": "title_truths",
+          "collectedStampIds": [],
+          "contractsAttempted": 0,
+          "contractsWon": 0,
+          "activeContract": null,
+          "consumedRewardKeys": [],
+          "rewardReceipts": {},
+          "migrationReceipts": []
+        }
+      },
+      "idempotent": false
+    },
+    "startB": {
+      "ok": false,
+      "kind": "conflict",
+      "code": "profile-revision",
+      "current": {
+        "schemaVersion": 2,
+        "profileRevision": 2,
+        "activeSession": {
+          "active": {
+            "attemptId": "browser-attempt-a",
+            "revision": 0,
+            "context": "practice",
+            "rules": {
+              "version": 1,
+              "maxIncorrectGuesses": 4,
+              "tabsEnabled": false,
+              "maxWinks": 0,
+              "timerPresentation": "optional"
+            },
+            "startedLocalDate": "2026-09-14",
+            "puzzleId": "puzzle-0001",
+            "mode": "standard",
+            "order": [
+              "a",
+              "b",
+              "c",
+              "d"
+            ],
+            "selection": [],
+            "solvedGroupIds": [],
+            "mistakesUsed": 0,
+            "startedAt": 100,
+            "countsToStats": true,
+            "incorrectGuessSignatures": [],
+            "winkedGroupId": null
+          },
+          "puzzleId": "puzzle-0001",
+          "savedAt": 100
+        },
+        "terminalAttempts": {},
+        "stats": {
+          "gamesPlayed": 0,
+          "wins": 0,
+          "losses": 0,
+          "currentStreak": 0,
+          "bestStreak": 0,
+          "solvedPuzzleIds": []
+        },
+        "standardProgress": {
+          "cursor": 0
+        },
+        "dailyHistory": {},
+        "onboarded": true,
+        "archivistProfile": {
+          "version": 2,
+          "level": 1,
+          "xp": 0,
+          "ink": 25,
+          "wax": 3,
+          "prestige": 0,
+          "discipline": "scribe",
+          "sealId": "seal_raven",
+          "nibId": "nib_brass",
+          "titleId": "title_truths",
+          "collectedStampIds": [],
+          "contractsAttempted": 0,
+          "contractsWon": 0,
+          "activeContract": null,
+          "consumedRewardKeys": [],
+          "rewardReceipts": {},
+          "migrationReceipts": []
+        }
+      }
+    }
+  },
+  "reloaded": {
+    "profileRevision": 2,
+    "activeAttemptId": "browser-attempt-a"
+  }
+}

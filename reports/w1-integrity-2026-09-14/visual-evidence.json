@@ -1,0 +1,321 @@
+{
+  "generatedAt": "2026-09-14T10:13:49.354Z",
+  "baseUrl": "http://127.0.0.1:5187/",
+  "report": [
+    {
+      "profile": "desktop",
+      "state": "mastery",
+      "path": "C:\\AI\\neural-void.com\\foldwink\\reports\\w1-integrity-2026-09-14\\screenshots\\desktop-mastery.png",
+      "focusTrap": {
+        "reverseWrapFocus": "Not now",
+        "forwardWrapFocus": "Start challenge"
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "scrollX": 0,
+      "document": {
+        "width": 1440,
+        "height": 989,
+        "horizontalOverflow": false
+      },
+      "focused": "Start challenge",
+      "dialogs": 1,
+      "overflowElements": [],
+      "returnFocus": "⚔️ Mastery Challenge"
+    },
+    {
+      "profile": "desktop",
+      "state": "repeat-guess",
+      "path": "C:\\AI\\neural-void.com\\foldwink\\reports\\w1-integrity-2026-09-14\\screenshots\\desktop-repeat-guess.png",
+      "puzzleId": "puzzle-0001",
+      "repeatMessageVisible": true,
+      "statusLabels": [
+        "Mistakes used 1 of 4"
+      ],
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "scrollX": 0,
+      "document": {
+        "width": 1440,
+        "height": 900,
+        "horizontalOverflow": false
+      },
+      "focused": "Submit",
+      "dialogs": 0,
+      "overflowElements": []
+    },
+    {
+      "profile": "desktop",
+      "state": "indexeddb-resume",
+      "path": "C:\\AI\\neural-void.com\\foldwink\\reports\\w1-integrity-2026-09-14\\screenshots\\desktop-indexeddb-resume.png",
+      "selectedCards": 4,
+      "statusLabels": [
+        "Mistakes used 1 of 4"
+      ],
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "scrollX": 0,
+      "document": {
+        "width": 1440,
+        "height": 900,
+        "horizontalOverflow": false
+      },
+      "focused": "Morning RitualEASY · Standard0:02MistakesPour OverEspressoSourdoughCroissantFren",
+      "dialogs": 0,
+      "overflowElements": []
+    },
+    {
+      "profile": "desktop",
+      "state": "reward-receipt",
+      "path": "C:\\AI\\neural-void.com\\foldwink\\reports\\w1-integrity-2026-09-14\\screenshots\\desktop-reward-receipt.png",
+      "awardedXp": 80,
+      "rewardKeys": [
+        "unique-solve:en:puzzle-0001"
+      ],
+      "indexedDb": {
+        "xp": 80,
+        "rewardKeys": [
+          "unique-solve:en:puzzle-0001"
+        ],
+        "activeAttemptId": null,
+        "terminalAttemptCount": 1,
+        "statsGamesPlayed": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "scrollX": 0,
+      "document": {
+        "width": 1440,
+        "height": 1074,
+        "horizontalOverflow": false
+      },
+      "focused": "Foldwink · clearedSolved⚡Speed Demon0:04Time1/4Mistakes1StreakCoffee brewing met",
+      "dialogs": 0,
+      "overflowElements": []
+    },
+    {
+      "profile": "desktop",
+      "state": "clear-all-data",
+      "indexedDbCleared": true,
+      "remainingFoldwinkKeys": []
+    },
+    {
+      "profile": "tablet",
+      "state": "mastery",
+      "path": "C:\\AI\\neural-void.com\\foldwink\\reports\\w1-integrity-2026-09-14\\screenshots\\tablet-mastery.png",
+      "focusTrap": {
+        "reverseWrapFocus": "Not now",
+        "forwardWrapFocus": "Start challenge"
+      },
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "scrollX": 0,
+      "document": {
+        "width": 1024,
+        "height": 989,
+        "horizontalOverflow": false
+      },
+      "focused": "Start challenge",
+      "dialogs": 1,
+      "overflowElements": [],
+      "returnFocus": "⚔️ Mastery Challenge"
+    },
+    {
+      "profile": "tablet",
+      "state": "repeat-guess",
+      "path": "C:\\AI\\neural-void.com\\foldwink\\reports\\w1-integrity-2026-09-14\\screenshots\\tablet-repeat-guess.png",
+      "puzzleId": "puzzle-0001",
+      "repeatMessageVisible": true,
+      "statusLabels": [
+        "Mistakes used 1 of 4"
+      ],
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "scrollX": 0,
+      "document": {
+        "width": 1024,
+        "height": 768,
+        "horizontalOverflow": false
+      },
+      "focused": "Submit",
+      "dialogs": 0,
+      "overflowElements": []
+    },
+    {
+      "profile": "tablet",
+      "state": "indexeddb-resume",
+      "path": "C:\\AI\\neural-void.com\\foldwink\\reports\\w1-integrity-2026-09-14\\screenshots\\tablet-indexeddb-resume.png",
+      "selectedCards": 4,
+      "statusLabels": [
+        "Mistakes used 1 of 4"
+      ],
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "scrollX": 0,
+      "document": {
+        "width": 1024,
+        "height": 768,
+        "horizontalOverflow": false
+      },
+      "focused": "Morning RitualEASY · Standard0:02MistakesBuzzerJamBirdsCold BrewButterHoneyChime",
+      "dialogs": 0,
+      "overflowElements": []
+    },
+    {
+      "profile": "tablet",
+      "state": "reward-receipt",
+      "path": "C:\\AI\\neural-void.com\\foldwink\\reports\\w1-integrity-2026-09-14\\screenshots\\tablet-reward-receipt.png",
+      "awardedXp": 80,
+      "rewardKeys": [
+        "unique-solve:en:puzzle-0001"
+      ],
+      "indexedDb": {
+        "xp": 80,
+        "rewardKeys": [
+          "unique-solve:en:puzzle-0001"
+        ],
+        "activeAttemptId": null,
+        "terminalAttemptCount": 1,
+        "statsGamesPlayed": 1
+      },
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "scrollX": 0,
+      "document": {
+        "width": 1024,
+        "height": 1074,
+        "horizontalOverflow": false
+      },
+      "focused": "Foldwink · clearedSolved⚡Speed Demon0:04Time1/4Mistakes1StreakCoffee brewing met",
+      "dialogs": 0,
+      "overflowElements": []
+    },
+    {
+      "profile": "tablet",
+      "state": "clear-all-data",
+      "indexedDbCleared": true,
+      "remainingFoldwinkKeys": []
+    },
+    {
+      "profile": "mobile",
+      "state": "mastery",
+      "path": "C:\\AI\\neural-void.com\\foldwink\\reports\\w1-integrity-2026-09-14\\screenshots\\mobile-mastery.png",
+      "focusTrap": {
+        "reverseWrapFocus": "Not now",
+        "forwardWrapFocus": "Start challenge"
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scrollX": 0,
+      "document": {
+        "width": 390,
+        "height": 947,
+        "horizontalOverflow": false
+      },
+      "focused": "Start challenge",
+      "dialogs": 1,
+      "overflowElements": [],
+      "returnFocus": "⚔️ Mastery Challenge"
+    },
+    {
+      "profile": "mobile",
+      "state": "repeat-guess",
+      "path": "C:\\AI\\neural-void.com\\foldwink\\reports\\w1-integrity-2026-09-14\\screenshots\\mobile-repeat-guess.png",
+      "puzzleId": "puzzle-0001",
+      "repeatMessageVisible": true,
+      "statusLabels": [
+        "Mistakes used 1 of 4"
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scrollX": 0,
+      "document": {
+        "width": 390,
+        "height": 844,
+        "horizontalOverflow": false
+      },
+      "focused": "Submit",
+      "dialogs": 0,
+      "overflowElements": []
+    },
+    {
+      "profile": "mobile",
+      "state": "indexeddb-resume",
+      "path": "C:\\AI\\neural-void.com\\foldwink\\reports\\w1-integrity-2026-09-14\\screenshots\\mobile-indexeddb-resume.png",
+      "selectedCards": 4,
+      "statusLabels": [
+        "Mistakes used 1 of 4"
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scrollX": 0,
+      "document": {
+        "width": 390,
+        "height": 844,
+        "horizontalOverflow": false
+      },
+      "focused": "Morning RitualEASY · Standard0:02MistakesRoosterCold BrewEspressoCroissantPour O",
+      "dialogs": 0,
+      "overflowElements": []
+    },
+    {
+      "profile": "mobile",
+      "state": "reward-receipt",
+      "path": "C:\\AI\\neural-void.com\\foldwink\\reports\\w1-integrity-2026-09-14\\screenshots\\mobile-reward-receipt.png",
+      "awardedXp": 80,
+      "rewardKeys": [
+        "unique-solve:en:puzzle-0001"
+      ],
+      "indexedDb": {
+        "xp": 80,
+        "rewardKeys": [
+          "unique-solve:en:puzzle-0001"
+        ],
+        "activeAttemptId": null,
+        "terminalAttemptCount": 1,
+        "statsGamesPlayed": 1
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scrollX": 0,
+      "document": {
+        "width": 390,
+        "height": 1025,
+        "horizontalOverflow": false
+      },
+      "focused": "Foldwink · clearedSolved⚡Speed Demon0:04Time1/4Mistakes1StreakCoffee brewing met",
+      "dialogs": 0,
+      "overflowElements": []
+    },
+    {
+      "profile": "mobile",
+      "state": "clear-all-data",
+      "indexedDbCleared": true,
+      "remainingFoldwinkKeys": []
+    }
+  ]
+}

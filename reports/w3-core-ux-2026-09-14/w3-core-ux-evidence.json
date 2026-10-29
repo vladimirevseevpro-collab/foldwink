@@ -1,0 +1,429 @@
+{
+  "baseUrl": "http://localhost:4175/",
+  "screenshots": 43,
+  "results": [
+    {
+      "language": "en",
+      "viewport": "1440x900",
+      "path": "home-game-win",
+      "errors": [],
+      "homeMetrics": {
+        "viewportWidth": 1440,
+        "scrollWidth": 1440,
+        "screen": "menu",
+        "dialogs": 0
+      },
+      "gameMetrics": {
+        "viewportWidth": 1440,
+        "scrollWidth": 1440,
+        "screen": "game",
+        "dialogs": 0
+      },
+      "winMetrics": {
+        "viewportWidth": 1440,
+        "scrollWidth": 1440,
+        "screen": "result",
+        "dialogs": 0
+      }
+    },
+    {
+      "language": "en",
+      "viewport": "1440x900",
+      "path": "loss",
+      "errors": [],
+      "lossMetrics": {
+        "viewportWidth": 1440,
+        "scrollWidth": 1440,
+        "screen": "result",
+        "dialogs": 0
+      },
+      "ctaOrder": [
+        "result-next-puzzle",
+        "result-retry-puzzle",
+        null,
+        null
+      ]
+    },
+    {
+      "language": "en",
+      "viewport": "1024x768",
+      "path": "home-game-win",
+      "errors": [],
+      "homeMetrics": {
+        "viewportWidth": 1024,
+        "scrollWidth": 1024,
+        "screen": "menu",
+        "dialogs": 0
+      },
+      "gameMetrics": {
+        "viewportWidth": 1024,
+        "scrollWidth": 1024,
+        "screen": "game",
+        "dialogs": 0
+      },
+      "winMetrics": {
+        "viewportWidth": 1024,
+        "scrollWidth": 1024,
+        "screen": "result",
+        "dialogs": 0
+      }
+    },
+    {
+      "language": "en",
+      "viewport": "1024x768",
+      "path": "loss",
+      "errors": [],
+      "lossMetrics": {
+        "viewportWidth": 1024,
+        "scrollWidth": 1024,
+        "screen": "result",
+        "dialogs": 0
+      },
+      "ctaOrder": [
+        "result-next-puzzle",
+        "result-retry-puzzle",
+        null,
+        null
+      ]
+    },
+    {
+      "language": "en",
+      "viewport": "390x844",
+      "path": "home-game-win",
+      "errors": [],
+      "homeMetrics": {
+        "viewportWidth": 390,
+        "scrollWidth": 390,
+        "screen": "menu",
+        "dialogs": 0
+      },
+      "gameMetrics": {
+        "viewportWidth": 390,
+        "scrollWidth": 390,
+        "screen": "game",
+        "dialogs": 0
+      },
+      "winMetrics": {
+        "viewportWidth": 390,
+        "scrollWidth": 390,
+        "screen": "result",
+        "dialogs": 0
+      }
+    },
+    {
+      "language": "en",
+      "viewport": "390x844",
+      "path": "loss",
+      "errors": [],
+      "lossMetrics": {
+        "viewportWidth": 390,
+        "scrollWidth": 390,
+        "screen": "result",
+        "dialogs": 0
+      },
+      "ctaOrder": [
+        "result-next-puzzle",
+        "result-retry-puzzle",
+        null,
+        null
+      ]
+    },
+    {
+      "language": "ru",
+      "viewport": "1440x900",
+      "path": "home-game-win",
+      "errors": [],
+      "homeMetrics": {
+        "viewportWidth": 1440,
+        "scrollWidth": 1440,
+        "screen": "menu",
+        "dialogs": 0
+      },
+      "gameMetrics": {
+        "viewportWidth": 1440,
+        "scrollWidth": 1440,
+        "screen": "game",
+        "dialogs": 0
+      },
+      "winMetrics": {
+        "viewportWidth": 1440,
+        "scrollWidth": 1440,
+        "screen": "result",
+        "dialogs": 0
+      }
+    },
+    {
+      "language": "ru",
+      "viewport": "1440x900",
+      "path": "loss",
+      "errors": [],
+      "lossMetrics": {
+        "viewportWidth": 1440,
+        "scrollWidth": 1440,
+        "screen": "result",
+        "dialogs": 0
+      },
+      "ctaOrder": [
+        "result-next-puzzle",
+        "result-retry-puzzle",
+        null,
+        null
+      ]
+    },
+    {
+      "language": "ru",
+      "viewport": "1024x768",
+      "path": "home-game-win",
+      "errors": [],
+      "homeMetrics": {
+        "viewportWidth": 1024,
+        "scrollWidth": 1024,
+        "screen": "menu",
+        "dialogs": 0
+      },
+      "gameMetrics": {
+        "viewportWidth": 1024,
+        "scrollWidth": 1024,
+        "screen": "game",
+        "dialogs": 0
+      },
+      "winMetrics": {
+        "viewportWidth": 1024,
+        "scrollWidth": 1024,
+        "screen": "result",
+        "dialogs": 0
+      }
+    },
+    {
+      "language": "ru",
+      "viewport": "1024x768",
+      "path": "loss",
+      "errors": [],
+      "lossMetrics": {
+        "viewportWidth": 1024,
+        "scrollWidth": 1024,
+        "screen": "result",
+        "dialogs": 0
+      },
+      "ctaOrder": [
+        "result-next-puzzle",
+        "result-retry-puzzle",
+        null,
+        null
+      ]
+    },
+    {
+      "language": "ru",
+      "viewport": "390x844",
+      "path": "home-game-win",
+      "errors": [],
+      "homeMetrics": {
+        "viewportWidth": 390,
+        "scrollWidth": 390,
+        "screen": "menu",
+        "dialogs": 0
+      },
+      "gameMetrics": {
+        "viewportWidth": 390,
+        "scrollWidth": 390,
+        "screen": "game",
+        "dialogs": 0
+      },
+      "winMetrics": {
+        "viewportWidth": 390,
+        "scrollWidth": 390,
+        "screen": "result",
+        "dialogs": 0
+      }
+    },
+    {
+      "language": "ru",
+      "viewport": "390x844",
+      "path": "loss",
+      "errors": [],
+      "lossMetrics": {
+        "viewportWidth": 390,
+        "scrollWidth": 390,
+        "screen": "result",
+        "dialogs": 0
+      },
+      "ctaOrder": [
+        "result-next-puzzle",
+        "result-retry-puzzle",
+        null,
+        null
+      ]
+    },
+    {
+      "language": "de",
+      "viewport": "1440x900",
+      "path": "home-game-win",
+      "errors": [],
+      "homeMetrics": {
+        "viewportWidth": 1440,
+        "scrollWidth": 1440,
+        "screen": "menu",
+        "dialogs": 0
+      },
+      "gameMetrics": {
+        "viewportWidth": 1440,
+        "scrollWidth": 1440,
+        "screen": "game",
+        "dialogs": 0
+      },
+      "winMetrics": {
+        "viewportWidth": 1440,
+        "scrollWidth": 1440,
+        "screen": "result",
+        "dialogs": 0
+      }
+    },
+    {
+      "language": "de",
+      "viewport": "1440x900",
+      "path": "loss",
+      "errors": [],
+      "lossMetrics": {
+        "viewportWidth": 1440,
+        "scrollWidth": 1440,
+        "screen": "result",
+        "dialogs": 0
+      },
+      "ctaOrder": [
+        "result-next-puzzle",
+        "result-retry-puzzle",
+        null,
+        null
+      ]
+    },
+    {
+      "language": "de",
+      "viewport": "1024x768",
+      "path": "home-game-win",
+      "errors": [],
+      "homeMetrics": {
+        "viewportWidth": 1024,
+        "scrollWidth": 1024,
+        "screen": "menu",
+        "dialogs": 0
+      },
+      "gameMetrics": {
+        "viewportWidth": 1024,
+        "scrollWidth": 1024,
+        "screen": "game",
+        "dialogs": 0
+      },
+      "winMetrics": {
+        "viewportWidth": 1024,
+        "scrollWidth": 1024,
+        "screen": "result",
+        "dialogs": 0
+      }
+    },
+    {
+      "language": "de",
+      "viewport": "1024x768",
+      "path": "loss",
+      "errors": [],
+      "lossMetrics": {
+        "viewportWidth": 1024,
+        "scrollWidth": 1024,
+        "screen": "result",
+        "dialogs": 0
+      },
+      "ctaOrder": [
+        "result-next-puzzle",
+        "result-retry-puzzle",
+        null,
+        null
+      ]
+    },
+    {
+      "language": "de",
+      "viewport": "390x844",
+      "path": "home-game-win",
+      "errors": [],
+      "homeMetrics": {
+        "viewportWidth": 390,
+        "scrollWidth": 390,
+        "screen": "menu",
+        "dialogs": 0
+      },
+      "gameMetrics": {
+        "viewportWidth": 390,
+        "scrollWidth": 390,
+        "screen": "game",
+        "dialogs": 0
+      },
+      "winMetrics": {
+        "viewportWidth": 390,
+        "scrollWidth": 390,
+        "screen": "result",
+        "dialogs": 0
+      }
+    },
+    {
+      "language": "de",
+      "viewport": "390x844",
+      "path": "loss",
+      "errors": [],
+      "lossMetrics": {
+        "viewportWidth": 390,
+        "scrollWidth": 390,
+        "screen": "result",
+        "dialogs": 0
+      },
+      "ctaOrder": [
+        "result-next-puzzle",
+        "result-retry-puzzle",
+        null,
+        null
+      ]
+    },
+    {
+      "language": "en",
+      "path": "onboarding",
+      "starter": "puzzle-0004"
+    },
+    {
+      "language": "ru",
+      "path": "onboarding",
+      "starter": "ru-0023"
+    },
+    {
+      "language": "de",
+      "path": "onboarding",
+      "starter": "de-0008"
+    },
+    {
+      "viewport": "1440x900",
+      "path": "continue",
+      "selected": 1
+    },
+    {
+      "viewport": "1024x768",
+      "path": "continue",
+      "selected": 1
+    },
+    {
+      "viewport": "390x844",
+      "path": "continue",
+      "selected": 1
+    },
+    {
+      "path": "dialog-keyboard",
+      "initialFocus": "START CHALLENGE",
+      "returnFocus": true
+    },
+    {
+      "path": "200-percent",
+      "metrics": {
+        "viewportWidth": 720,
+        "scrollWidth": 720,
+        "screen": "menu",
+        "dialogs": 0
+      }
+    }
+  ],
+  "failures": []
+}

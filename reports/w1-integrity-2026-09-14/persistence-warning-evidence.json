@@ -1,0 +1,77 @@
+{
+  "generatedAt": "2026-09-14T10:16:55.523Z",
+  "report": [
+    {
+      "profile": "desktop",
+      "state": "unavailable",
+      "path": "C:\\AI\\neural-void.com\\foldwink\\reports\\w1-integrity-2026-09-14\\screenshots\\desktop-storage-unavailable.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "documentWidth": 1440,
+      "horizontalOverflow": false,
+      "alertText": "This session cannot save progress reliably. Keep this tab open."
+    },
+    {
+      "profile": "desktop",
+      "state": "conflict",
+      "path": "C:\\AI\\neural-void.com\\foldwink\\reports\\w1-integrity-2026-09-14\\screenshots\\desktop-storage-conflict.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "documentWidth": 1440,
+      "horizontalOverflow": false,
+      "alertText": "This game changed in another tab. Reload to open the latest saved attempt.Reload"
+    },
+    {
+      "profile": "tablet",
+      "state": "unavailable",
+      "path": "C:\\AI\\neural-void.com\\foldwink\\reports\\w1-integrity-2026-09-14\\screenshots\\tablet-storage-unavailable.png",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "documentWidth": 1024,
+      "horizontalOverflow": false,
+      "alertText": "This session cannot save progress reliably. Keep this tab open."
+    },
+    {
+      "profile": "tablet",
+      "state": "conflict",
+      "path": "C:\\AI\\neural-void.com\\foldwink\\reports\\w1-integrity-2026-09-14\\screenshots\\tablet-storage-conflict.png",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "documentWidth": 1024,
+      "horizontalOverflow": false,
+      "alertText": "This game changed in another tab. Reload to open the latest saved attempt.Reload"
+    },
+    {
+      "profile": "mobile",
+      "state": "unavailable",
+      "path": "C:\\AI\\neural-void.com\\foldwink\\reports\\w1-integrity-2026-09-14\\screenshots\\mobile-storage-unavailable.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "documentWidth": 390,
+      "horizontalOverflow": false,
+      "alertText": "This session cannot save progress reliably. Keep this tab open."
+    },
+    {
+      "profile": "mobile",
+      "state": "conflict",
+      "path": "C:\\AI\\neural-void.com\\foldwink\\reports\\w1-integrity-2026-09-14\\screenshots\\mobile-storage-conflict.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "documentWidth": 390,
+      "horizontalOverflow": false,
+      "alertText": "This game changed in another tab. Reload to open the latest saved attempt.Reload"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-09-14T15:30:36.221Z",
+  "source": "indexeddb:foldwink/game-aggregate/profile",
+  "reason": "IndexedDB aggregate is malformed or uses an unsupported schema.",
+  "rawFingerprint": "[\"object\",0,[[\"profileRevision\",[\"number\",\"-4\"]],[\"schemaVersion\",[\"number\",\"2\"]],[\"stats\",[\"object\",1,[[\"gamesPlayed\",[\"number\",\"NaN\"]]]]]]]",
+  "raw": {
+    "profileRevision": -4,
+    "schemaVersion": 2,
+    "stats": {
+      "gamesPlayed": "NaN"
+    }
+  }
+}

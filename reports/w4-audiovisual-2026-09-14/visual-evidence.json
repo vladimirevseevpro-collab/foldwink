@@ -1,0 +1,96 @@
+{
+  "generatedAt": "2026-09-14T19:15:16.277Z",
+  "baseUrl": "http://localhost:4175/",
+  "results": [
+    {
+      "profile": {
+        "language": "en",
+        "name": "1440x900",
+        "width": 1440,
+        "height": 900,
+        "submit": "Submit"
+      },
+      "home": {
+        "viewport": 1440,
+        "scroll": 1440,
+        "screen": "menu"
+      },
+      "passport": {
+        "viewport": 1440,
+        "scroll": 1440,
+        "screen": "menu"
+      },
+      "game": {
+        "viewport": 1440,
+        "scroll": 1440,
+        "screen": "game"
+      },
+      "result": {
+        "viewport": 1440,
+        "scroll": 1440,
+        "screen": "result"
+      },
+      "errors": []
+    },
+    {
+      "profile": {
+        "language": "ru",
+        "name": "1024x768",
+        "width": 1024,
+        "height": 768,
+        "submit": "Подтвердить"
+      },
+      "home": {
+        "viewport": 1024,
+        "scroll": 1024,
+        "screen": "menu"
+      },
+      "passport": {
+        "viewport": 1024,
+        "scroll": 1024,
+        "screen": "menu"
+      },
+      "game": {
+        "viewport": 1024,
+        "scroll": 1024,
+        "screen": "game"
+      },
+      "result": {
+        "viewport": 1024,
+        "scroll": 1024,
+        "screen": "result"
+      },
+      "errors": []
+    },
+    {
+      "profile": {
+        "language": "de",
+        "name": "390x844",
+        "width": 390,
+        "height": 844,
+        "submit": "Bestätigen"
+      },
+      "home": {
+        "viewport": 390,
+        "scroll": 390,
+        "screen": "menu"
+      },
+      "passport": {
+        "viewport": 390,
+        "scroll": 390,
+        "screen": "menu"
+      },
+      "game": {
+        "viewport": 390,
+        "scroll": 390,
+        "screen": "game"
+      },
+      "result": {
+        "viewport": 390,
+        "scroll": 390,
+        "screen": "result"
+      },
+      "errors": []
+    }
+  ]
+}
