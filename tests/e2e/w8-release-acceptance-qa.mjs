@@ -165,7 +165,8 @@ try {
               platform: process.platform,
               arch: process.arch,
               node: process.version,
-              npm: "fixture",
+              // A conforming rebuild runs the exact pinned npm (engines.npm / packageManager).
+              npm: packageAtCommit.engines?.npm ?? "fixture",
               declaredNode: packageAtCommit.engines?.node ?? null,
               declaredNpm: packageAtCommit.engines?.npm ?? null,
               packageManager: packageAtCommit.packageManager ?? null,

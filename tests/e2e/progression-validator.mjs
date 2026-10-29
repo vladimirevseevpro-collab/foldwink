@@ -27,12 +27,16 @@ function todayLocal() {
   return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
 }
 
-const dailyManifest = JSON.parse(
-  await readFile(resolve("puzzles/manifests/daily.en.2026-09-14.json"), "utf8"),
-);
-const expectedDailyEntry = dailyManifest.entries.find((entry) => entry.date === todayLocal());
+// The app resolves Daily across every published schedule, so search them all.
+const dailyEntries = [];
+for (const file of (await readdir(resolve("puzzles/manifests"))).sort()) {
+  if (!file.startsWith("daily.en.") || !file.endsWith(".json")) continue;
+  const manifest = JSON.parse(await readFile(resolve("puzzles/manifests", file), "utf8"));
+  dailyEntries.push(...manifest.entries);
+}
+const expectedDailyEntry = dailyEntries.find((entry) => entry.date === todayLocal());
 if (!expectedDailyEntry)
-  throw new Error(`reviewed EN Daily calendar has no entry for ${todayLocal()}`);
+  throw new Error(`published EN Daily calendars have no entry for ${todayLocal()}`);
 // File names do not always equal ids (e.g. puzzle-hard-010.json holds hard-010).
 async function readPoolPuzzle(id) {
   for (const file of await readdir(resolve("puzzles/pool"))) {

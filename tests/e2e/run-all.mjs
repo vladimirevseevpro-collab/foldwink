@@ -74,7 +74,11 @@ const previewReady = new Promise((resolve, reject) => {
     10_000,
   );
   preview.stdout.on("data", (chunk) => {
-    if (/Local:/iu.test(String(chunk))) finish(resolve);
+    // Vite styles the label (`\x1b[1mLocal\x1b[22m:`) and picocolors always
+    // colours output on Windows, even when piped, so strip ANSI codes first.
+    // eslint-disable-next-line no-control-regex
+    const text = String(chunk).replace(/\x1b\[[0-9;]*m/gu, "");
+    if (/Local:/iu.test(text)) finish(resolve);
   });
   preview.once("error", (error) => finish(reject, error));
   preview.once("exit", (code) => {
