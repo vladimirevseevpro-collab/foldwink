@@ -25,10 +25,24 @@ const output = path.resolve(
   `docs/reports/assets/FOLDWINK_W7_WEB_PILOT_DEPLOY_V${evidenceToken(manifest.version)}.json`,
 );
 
+// Pages' CDN can answer 5xx for a few seconds right after a deploy; retry
+// those and network errors, never a 4xx or a wrong body.
+async function fetchWithRetry(target) {
+  for (let attempt = 1; ; attempt += 1) {
+    try {
+      const response = await fetch(target, { cache: "no-store" });
+      if (response.status < 500 || attempt === 4) return response;
+    } catch (error) {
+      if (attempt === 4) throw error;
+    }
+    await new Promise((resolveDelay) => setTimeout(resolveDelay, 2_000 * 2 ** (attempt - 1)));
+  }
+}
+
 const entries = [];
 const fetchFailures = [];
 for (const entry of manifest.tree.entries) {
-  const response = await fetch(new URL(entry.path, url), { cache: "no-store" });
+  const response = await fetchWithRetry(new URL(entry.path, url));
   if (!response.ok) {
     fetchFailures.push(`${entry.path} returned ${response.status}`);
     continue;

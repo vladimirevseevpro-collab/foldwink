@@ -1,0 +1,19 @@
+{
+  "schema": "foldwink-web-pilot-deploy-verification-v1",
+  "verifiedAt": "2026-10-29T14:17:38.565Z",
+  "url": "https://vladimirevseevpro-collab.github.io/foldwink/pilot/0.8.5/",
+  "version": "0.8.5",
+  "channel": "pages:pilot-0.8.5",
+  "expected": {
+    "files": 146,
+    "bytes": 5477890,
+    "treeSha256": "d91e97fe42d65532cb9a067bc6f851f2e9f1ef19db0b8810ade61f5850a47567"
+  },
+  "actual": {
+    "files": 146,
+    "bytes": 5477890,
+    "treeSha256": "d91e97fe42d65532cb9a067bc6f851f2e9f1ef19db0b8810ade61f5850a47567"
+  },
+  "mismatches": [],
+  "matches": true
+}

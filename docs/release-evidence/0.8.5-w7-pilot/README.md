@@ -33,9 +33,20 @@ the moving main app.
 - Pilot URL: `https://vladimirevseevpro-collab.github.io/foldwink/pilot/0.8.5/`
 - Invited first-entry URL: the same with `?utm_medium=research_invite`.
 - Channel token in operator records: `pages:pilot-0.8.5`.
-- Deployment: DEPLOY_PENDING.
-- Live file-by-file verification: DEPLOY_VERIFY_PENDING.
-- Browser evidence: STAGING_PENDING.
+- Deployment: Pages run `40889571731` for commit `1497796`, completed 2026-10-29 15:16 Europe/Berlin.
+- Live file-by-file verification (15:17): all 146 files and the tree hash match —
+  `docs/reports/assets/FOLDWINK_W7_WEB_PILOT_DEPLOY_V085.json`. The first
+  in-workflow check hit one transient CDN 503 seconds after the deploy; the
+  verifier now retries 5xx responses.
+- Browser evidence (15:17): EN 1440×900, DE 1024×768 and RU 390×844 each got
+  HTTP 200 for the main app and the pilot, ran under the pilot's own service
+  worker scope, downloaded a research export reporting app `0.8.5` / content
+  `catalog-2026-09-v1`, solved one group of the day's Daily (`puzzle-0018`,
+  `de-0032`, `ru-0107`) and logged zero console/page errors —
+  `docs/reports/assets/FOLDWINK_W7_WEB_PILOT_STAGING_V085.json`, screenshots
+  in `reports/w7-web-pilot-0.8.5/`.
+- `npm run pilot:check-contract`: PASS; `w7-pilot-contract-qa` proves a
+  version drift fails closed.
 
 Every Pages deploy guards this identity (`scripts/stage-web-pilots.mjs`):
 
@@ -74,7 +85,6 @@ app, as the itch pilot shared `html.itch.zone` with the public itch build:
 
 ## Open mandatory gates
 
-- deploy, live verification and three-viewport browser evidence (above);
 - physical iOS Safari/PWA and Android Chrome/PWA smoke on the exact pilot URL;
 - 20–30 real observed first sessions with EN/RU/DE denominators;
 - full D1/D7 local-day windows, closed before 2027-02-10;

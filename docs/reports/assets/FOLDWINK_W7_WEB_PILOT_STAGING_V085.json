@@ -1,0 +1,92 @@
+{
+  "schema": "foldwink-web-pilot-staging-verification-v1",
+  "verifiedAt": "2026-10-29T14:17:49.381Z",
+  "publicUrl": "https://vladimirevseevpro-collab.github.io/foldwink/",
+  "playableUrl": "https://vladimirevseevpro-collab.github.io/foldwink/pilot/0.8.5/",
+  "channel": "pages:pilot-0.8.5",
+  "artifact": {
+    "version": "0.8.5",
+    "treeSha256": "d91e97fe42d65532cb9a067bc6f851f2e9f1ef19db0b8810ade61f5850a47567",
+    "files": 146,
+    "bytes": 5477890
+  },
+  "results": [
+    {
+      "viewport": "1440x900@100%",
+      "language": "en",
+      "publicStatus": 200,
+      "playableStatus": 200,
+      "serviceWorkerScope": "https://vladimirevseevpro-collab.github.io/foldwink/pilot/0.8.5/",
+      "puzzleId": "puzzle-0018",
+      "solvedCategory": "Building Materials",
+      "researchExportVersion": "0.8.5",
+      "menuMetrics": {
+        "viewportWidth": 1440,
+        "viewportHeight": 900,
+        "documentWidth": 1440,
+        "documentHeight": 900
+      },
+      "gameMetrics": {
+        "viewportWidth": 1440,
+        "viewportHeight": 900,
+        "documentWidth": 1440,
+        "documentHeight": 900
+      },
+      "consoleErrors": 0
+    },
+    {
+      "viewport": "1024x768@100%",
+      "language": "de",
+      "publicStatus": 200,
+      "playableStatus": 200,
+      "serviceWorkerScope": "https://vladimirevseevpro-collab.github.io/foldwink/pilot/0.8.5/",
+      "puzzleId": "de-0032",
+      "solvedCategory": "Mediterrane Kräuter",
+      "researchExportVersion": "0.8.5",
+      "menuMetrics": {
+        "viewportWidth": 1024,
+        "viewportHeight": 768,
+        "documentWidth": 1024,
+        "documentHeight": 882
+      },
+      "gameMetrics": {
+        "viewportWidth": 1024,
+        "viewportHeight": 768,
+        "documentWidth": 1024,
+        "documentHeight": 768
+      },
+      "consoleErrors": 0
+    },
+    {
+      "viewport": "390x844@100%",
+      "language": "ru",
+      "publicStatus": 200,
+      "playableStatus": 200,
+      "serviceWorkerScope": "https://vladimirevseevpro-collab.github.io/foldwink/pilot/0.8.5/",
+      "puzzleId": "ru-0107",
+      "solvedCategory": "Медицина",
+      "researchExportVersion": "0.8.5",
+      "menuMetrics": {
+        "viewportWidth": 390,
+        "viewportHeight": 844,
+        "documentWidth": 390,
+        "documentHeight": 895
+      },
+      "gameMetrics": {
+        "viewportWidth": 390,
+        "viewportHeight": 844,
+        "documentWidth": 390,
+        "documentHeight": 877
+      },
+      "consoleErrors": 0
+    }
+  ],
+  "screenshots": [
+    "reports/w7-web-pilot-0.8.5/menu-en-desktop-1440x900.png",
+    "reports/w7-web-pilot-0.8.5/game-correct-en-desktop-1440x900.png",
+    "reports/w7-web-pilot-0.8.5/menu-de-tablet-1024x768.png",
+    "reports/w7-web-pilot-0.8.5/game-correct-de-tablet-1024x768.png",
+    "reports/w7-web-pilot-0.8.5/menu-ru-mobile-390x844.png",
+    "reports/w7-web-pilot-0.8.5/game-correct-ru-mobile-390x844.png"
+  ]
+}
