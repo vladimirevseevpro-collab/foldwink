@@ -1,4 +1,4 @@
-Prepare Cluster Twist MVP for release.
+Prepare Foldwink for release.
 
 Need:
 

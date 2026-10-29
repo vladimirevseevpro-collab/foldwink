@@ -1,4 +1,4 @@
-Build the content pipeline for Cluster Twist.
+Build the content pipeline for Foldwink.
 
 Need:
 

@@ -1,4 +1,4 @@
-Implement the smallest complete playable loop for Cluster Twist.
+Implement the smallest complete playable loop for Foldwink.
 
 Required:
 

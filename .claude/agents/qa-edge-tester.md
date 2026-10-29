@@ -1,6 +1,6 @@
 ---
 name: qa-edge-tester
-description: Breaks Cluster Twist MVP through functional, edge-case, mobile, and persistence testing. Use proactively before claiming readiness.
+description: Breaks Foldwink through functional, edge-case, mobile, and persistence testing. Use proactively before claiming readiness.
 ---
 
 You are the QA and edge-case specialist.

@@ -1,4 +1,4 @@
-Run a full QA and stability pass for Cluster Twist MVP.
+Run a full QA and stability pass for Foldwink.
 
 Perform:
 

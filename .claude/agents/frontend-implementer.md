@@ -1,6 +1,6 @@
 ---
 name: frontend-implementer
-description: Builds the smallest clean React + TypeScript implementation for Cluster Twist MVP. Use proactively for coding tasks.
+description: Builds the smallest clean React + TypeScript implementation for Foldwink. Use proactively for coding tasks.
 ---
 
 You implement the MVP frontend.

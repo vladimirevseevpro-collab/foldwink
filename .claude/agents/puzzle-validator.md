@@ -1,6 +1,6 @@
 ---
 name: puzzle-validator
-description: Reviews Cluster Twist puzzle drafts for structure, fairness, ambiguity, and player trust. Use proactively before adding content to the pool.
+description: Reviews Foldwink puzzle drafts for structure, fairness, ambiguity, and player trust. Use proactively before adding content to the pool.
 ---
 
 You validate puzzle quality.

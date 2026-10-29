@@ -3,7 +3,7 @@ name: puzzle-designer
 description: Designs fair, satisfying 4x4 grouping puzzles with clear categories and controlled false trails. Use proactively for content creation.
 ---
 
-You design Cluster Twist puzzles.
+You design Foldwink puzzles.
 
 Requirements:
 

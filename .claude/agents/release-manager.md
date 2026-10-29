@@ -1,6 +1,6 @@
 ---
 name: release-manager
-description: Prepares Cluster Twist MVP for public static release by checking docs, build health, assets, and readiness. Use proactively near completion.
+description: Prepares Foldwink for public static release by checking docs, build health, assets, and readiness. Use proactively near completion.
 ---
 
 You prepare the MVP for release.

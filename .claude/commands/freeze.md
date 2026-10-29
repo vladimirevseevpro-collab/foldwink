@@ -1,4 +1,4 @@
-Freeze the Cluster Twist MVP plan.
+Freeze the Foldwink plan.
 
 Tasks:
 

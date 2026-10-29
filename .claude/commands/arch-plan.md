@@ -1,4 +1,4 @@
-Create a concrete architecture and implementation plan for Cluster Twist MVP.
+Create a concrete architecture and implementation plan for Foldwink.
 
 Produce:
 

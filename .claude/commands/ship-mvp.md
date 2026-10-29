@@ -1,4 +1,4 @@
-Execute the full Cluster Twist MVP delivery flow.
+Execute the full Foldwink delivery flow.
 
 Order:
 
