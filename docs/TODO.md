@@ -212,7 +212,7 @@
 - [ ] **H12** Real iPhone/Android safe-area, browser-chrome, and native share-sheet check for the R4 daily ritual surfaces
 - [x] **H2** Raster 1200x630 OG image generated from the real product language at `public/og.png`.
 - [x] Designed folded-corner mark and Fold/wink lockup implemented across UI, share card, favicon, and social assets.
-- [ ] Deploy the prepared Cloudflare Pages source to neural-void.com/foldwink after Wrangler re-authentication. The source now serves the current PWA at the canonical route; see docs/reports/FOLDWINK_PUBLIC_ROUTE_CORRECTION.md. As of 2026-10-29 neural-void.com/foldwink still serves a pre-W6 build, while GitHub Pages serves current `main`.
+- [ ] Deploy current `main` to neural-void.com/foldwink. Wrangler is logged in with Pages write access (checked 2026-10-29), so re-authentication is no longer needed. Blocked by the neural-void.com Impressum placeholders (name, address, e-mail; the owner fills `legal/identity.json` in the Allreader repo) and by about 3,700 uncommitted changes in the neural-void.com repository, whose Pages project `neural-void-site` is Git-connected (last production deploy from `68b1286`). The prepared copy holds Foldwink 0.8.2; rebuild the publish artifact per `C:/AI/neural-void.com/docs/PUBLISH.md`. As of 2026-10-29 neural-void.com/foldwink still serves a pre-W6 build, while GitHub Pages serves current `main`.
 
 ### Code-doable if time
 
