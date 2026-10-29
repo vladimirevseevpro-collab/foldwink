@@ -3,8 +3,9 @@
  * build-daily-calendar.mjs
  *
  * Extends the published Daily horizon with one new 60-day schedule per
- * language. The historical 2026-09-14 schedules are immutable inputs and are
- * never rewritten. New manifests follow the checked-in filename convention:
+ * language, starting the day after the last published Daily (or at
+ * --start=YYYY-MM-DD). Published schedules are immutable inputs and are never
+ * rewritten. New manifests follow the checked-in filename convention:
  *
  *   puzzles/manifests/daily.<lang>.<startDate>.json
  *   scheduleVersion: daily-<startDate>-<endDate>-v1
@@ -15,13 +16,15 @@
  *     an earlier board by ascending id (groups are item sets, case-insensitive);
  *   - boards already used by any existing Daily schedule or starter manifest
  *     are never reused;
+ *   - Medium boards need a revealHint on every group (no Tabs label fallback);
  *   - the weekday tier rhythm of the existing schedule is mirrored per
  *     language, so RU/DE never receive a Hard slot they do not own;
- *   - a group label may not repeat inside any 7-day window.
+ *   - a group label may not repeat inside any 7-day window, including the
+ *     last days of the previously published schedule.
  *
  * Usage:
  *   node scripts/build-daily-calendar.mjs --dry-run
- *   node scripts/build-daily-calendar.mjs
+ *   node scripts/build-daily-calendar.mjs [--start=YYYY-MM-DD]
  */
 
 import { readdir, readFile, writeFile } from "node:fs/promises";
@@ -31,11 +34,13 @@ import { fileURLToPath } from "node:url";
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const MANIFEST_DIR = join(ROOT, "puzzles", "manifests");
 const LANGUAGES = ["en", "ru", "de"];
-const START_DATE = "2026-10-14";
 const DAYS = 60;
 const TIERS = ["easy", "medium", "hard"];
 const WEEKDAY_NAMES = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
 const dryRun = process.argv.includes("--dry-run");
+const startArg = process.argv.find((arg) => arg.startsWith("--start="))?.slice("--start=".length);
+/** First Daily date of the new schedule; resolved in main(). */
+let START_DATE;
 
 const readJson = async (file) => JSON.parse(await readFile(file, "utf8"));
 const writeJson = (file, value) => writeFile(file, `${JSON.stringify(value, null, 2)}\n`, "utf8");
@@ -48,6 +53,10 @@ function addDays(iso, days) {
 
 function weekday(iso) {
   return new Date(`${iso}T00:00:00Z`).getUTCDay();
+}
+
+function daysBetween(fromIso, toIso) {
+  return Math.round((Date.parse(`${toIso}T00:00:00Z`) - Date.parse(`${fromIso}T00:00:00Z`)) / 86_400_000);
 }
 
 function poolDirectory(language) {
@@ -110,10 +119,16 @@ function weekdayTierRhythm(historicalEntries, difficultyById) {
   return rhythm;
 }
 
+/** Medium boards need a Foldwink Tab hint on every group, not the full-label fallback. */
+function hasFullTabs(puzzle) {
+  return puzzle.groups.every((group) => typeof group.revealHint === "string" && group.revealHint.trim());
+}
+
 function choosePuzzle({ tier, pool, duplicateIds, usedIds, labelLastUsed, dayIndex }) {
   for (const puzzle of pool) {
     if (puzzle.difficulty !== tier) continue;
     if (duplicateIds.has(puzzle.id) || usedIds.has(puzzle.id)) continue;
+    if (tier === "medium" && !hasFullTabs(puzzle)) continue;
     const labels = puzzle.groups.map(labelKey);
     const collides = labels.some((label) => {
       const last = labelLastUsed.get(label);
@@ -160,6 +175,15 @@ async function buildLanguage(language) {
   const scheduleVersion = `daily-${START_DATE}-${endDate}-v1`;
   const entries = [];
   const labelLastUsed = new Map();
+  // Seed the 7-day label window with the tail of the previous schedule.
+  const poolById = new Map(pool.map((puzzle) => [puzzle.id, puzzle]));
+  for (const entry of historicalEntries) {
+    const dayIndex = daysBetween(START_DATE, entry.date);
+    if (dayIndex < -6) continue;
+    for (const group of poolById.get(entry.puzzleId)?.groups ?? []) {
+      labelLastUsed.set(labelKey(group), dayIndex);
+    }
+  }
   const tiersUsed = { easy: 0, medium: 0, hard: 0 };
   const weekdayCursor = new Map();
 
@@ -233,7 +257,35 @@ function editorialRecord(language, contentVersion, puzzle) {
   };
 }
 
+/** Last published Daily date; every language must end on the same date. */
+async function lastPublishedDate() {
+  const lastDates = new Set();
+  for (const language of LANGUAGES) {
+    let last = "";
+    for (const file of await dailyManifestFiles(language)) {
+      for (const entry of (await readJson(join(MANIFEST_DIR, file))).entries) {
+        if (entry.date > last) last = entry.date;
+      }
+    }
+    lastDates.add(last);
+  }
+  if (lastDates.size !== 1) {
+    throw new Error(`published Daily horizons differ per language: ${[...lastDates].join(", ")}`);
+  }
+  return [...lastDates][0];
+}
+
 async function main() {
+  const lastPublished = await lastPublishedDate();
+  START_DATE = startArg ?? addDays(lastPublished, 1);
+  if (!/^\d{4}-\d{2}-\d{2}$/u.test(START_DATE) || addDays(START_DATE, 0) !== START_DATE) {
+    throw new Error(`invalid --start date: ${START_DATE}`);
+  }
+  // Published schedules are immutable: a new one may not overlap them.
+  if (START_DATE <= lastPublished) {
+    throw new Error(`--start ${START_DATE} overlaps the published Daily horizon ending ${lastPublished}`);
+  }
+
   const plans = [];
   for (const language of LANGUAGES) plans.push(await buildLanguage(language));
 

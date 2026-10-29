@@ -6,7 +6,10 @@
 - [x] Specify 39 implementation tasks in waves W0–W8, requirement/test traceability, migration rules and release acceptance gates. This is planning, not completed application implementation.
 - **Current integration wave: W7 — human balance, comprehension and return testing.** The historical CQ6/R\* entries below are preserved as history, not a concurrent current implementation plan.
 - [x] Confirm the live inventory on 2026-09-14: a full per-language set of JSON files was present on disk. This was a file count, not editorial approval and not a count of distinct boards.
-- [ ] De-duplicate the active pools after the 2026-10-01 audit found that roughly half of the September scale-up consisted of recombined copies of existing boards. Report the genuinely unique active pool size with `npm run validate`; do not quote a fixed catalogue count before quarantine completes.
+- [x] De-duplicate the active pools after the 2026-10-01 audit found that roughly half of the September scale-up consisted of recombined copies of existing boards. Closed by the 2026-10-10 quarantine and rebalance: on 2026-10-29 `npm run validate:uniqueness` reports EN 1,001 / RU 1,000 / DE 1,000 boards, all unique, 0 duplicates (EN 550/351/100, RU and DE 550/350/100 easy/medium/hard).
+- [x] Repository hygiene (2026-10-29): local `main` was 94 commits behind `origin/main` with a stale dirty tree; it now tracks `origin/main`. 449 superseded swarm/Luna/review branches and the `Foldwink-luna` worktree were removed after a verified full backup (`C:/AI/Backups/Foldwink-20261029/foldwink-all-branches-2026-10-29.bundle`, every ref plus the pre-sync working tree). Previously uncommitted TikTok revisions, the Capacitor `ios/` shell, `scripts/check-batch.mjs` and the cited `reports/w*-2026-09-14` evidence are now committed.
+- [x] Daily horizon (2026-10-29): `scripts/build-daily-calendar.mjs` now starts the day after the last published Daily (or `--start=`), seeds the 7-day label window from the previous schedule and admits Medium boards only with a full set of Tabs hints. New schedules `daily.<lang>.2026-12-13.json` extend EN/RU/DE through 2027-02-10; their 180 editorial records are `unreviewed`. Rerun before ~2027-01-27 (14-day minimum).
+- [x] Windows E2E runner (2026-10-29): `tests/e2e/run-all.mjs` strips ANSI codes before matching Vite's `Local:` line; picocolors always colours output on Windows, so the owned preview server was never detected there.
 - [x] Accept `docs/decisions/ADR-001-product-baseline.md` and `docs/decisions/ADR-002-persistence.md`; mark the original mega prompt as historical.
 - [x] Finish W0 regression fixtures and `docs/reports/FOLDWINK_W0_BASELINE_DECISIONS.md`.
 - [x] W1a: add attempt identity/revision/rules, freeze the Daily completion date, make repeated incorrect quartets non-consuming, and add a deterministic 80 XP unique-solve policy.
@@ -207,11 +210,11 @@
 - [ ] **H12** Real iPhone/Android safe-area, browser-chrome, and native share-sheet check for the R4 daily ritual surfaces
 - [x] **H2** Raster 1200x630 OG image generated from the real product language at `public/og.png`.
 - [x] Designed folded-corner mark and Fold/wink lockup implemented across UI, share card, favicon, and social assets.
-- [ ] Deploy the prepared Cloudflare Pages source to neural-void.com/foldwink after Wrangler re-authentication. The source now serves the current PWA at the canonical route; see docs/reports/FOLDWINK_PUBLIC_ROUTE_CORRECTION.md.
+- [ ] Deploy the prepared Cloudflare Pages source to neural-void.com/foldwink after Wrangler re-authentication. The source now serves the current PWA at the canonical route; see docs/reports/FOLDWINK_PUBLIC_ROUTE_CORRECTION.md. As of 2026-10-29 neural-void.com/foldwink still serves a pre-W6 build, while GitHub Pages serves current `main`.
 
 ### Code-doable if time
 
-- [ ] Itch.io draft upload + in-iframe verification
+- [x] Itch.io draft upload + in-iframe verification (superseded by the verified W7 `pilot-2026-09` and `html` channel uploads of 0.8.4)
 - [x] Colour-blind/contrast audit: four light stamp colours retain dark ink plus distinct shape markers.
 - [x] **A11** Local keyboard and semantic game-flow audit: fixed global Enter leaking into focused controls, arrow navigation stalling on solved cards, result-transition focus loss, and dialog return-focus loss; added browser regression coverage. Physical VoiceOver/TalkBack pass remains required.
 - [ ] Screen-reader audit of game flow
@@ -232,7 +235,7 @@
 - [x] batch-12 -> 412 -> 437
 - [x] batch-13+14 -> 437 -> 487
 - [x] batch-15 -> 487 -> 499 (2026-04-18)
-- [ ] More hard puzzles - currently 34, target 50 (post-launch cadence)
+- [x] More hard puzzles - target 50 exceeded: 100 Hard boards per language since the 2026-10-10 batch 96
 - [ ] Editorial report per batch under `docs/reports/` (deferred - fast-track mode)
 
 ### Retention (1.1 candidates)

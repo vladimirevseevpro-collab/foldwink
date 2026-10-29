@@ -50,7 +50,10 @@ describe("runtime content catalog", () => {
     expect(getDailyEntry("en", "2026-12-12")?.scheduleVersion).toBe(
       "daily-2026-10-14-2026-12-12-v1",
     );
-    expect(getDailyEntry("en", "2026-12-13")).toBeUndefined();
+    expect(getDailyEntry("en", "2026-12-13")?.scheduleVersion).toBe(
+      "daily-2026-12-13-2027-02-10-v1",
+    );
+    expect(getDailyEntry("en", "2027-02-11")).toBeUndefined();
   });
 
   it("rejects a payload whose bytes do not match the manifest hash", async () => {
