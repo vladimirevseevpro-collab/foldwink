@@ -13,7 +13,7 @@
 | --- | --- | --- | --- | --- |
 | 1 | 7:30 PM | 01 · Pause and Solve | challenge | Open the account with the lowest-friction hook (imperative). Evening primetime. |
 | 1 | 9:30 PM | 10 · Didn’t Expect to Like | curiosity | Late-evening scroll session. Creator-recommendation tone seeds the profile for first visitors. |
-| 2 | 7:00 PM | 03 · Looks Easy. It Isn’t. | challenge | Mid-length follow-up. Comment-bait CTA (“should I post level 3?”) to kickstart the comment loop. |
+| 2 | 7:00 PM | 03 · Looks Easy. It Isn’t. | challenge | Mid-length follow-up. Direct `Could you get this?` CTA pairs with visible 2-mistake recovery to invite comment replies. |
 | 3 | 8:00 PM | 04 · This Escalated Fast | escalation | Keep escalation narrative alive early — viewers now associate the brand with difficulty curves. |
 | 4 | 7:00 PM | 05 · It Gets Worse Later | escalation | Forward-promise + “Part 2?” CTA. If this clip pops, batch 02 should be ordered around it. |
 | 5 | 12:30 PM | 06 · Tiny Puzzle, Huge Satisfaction | satisfying | Midday slot — ASMR framing drops neatly into lunch-break scroll. No CTA. |
@@ -64,7 +64,6 @@ If Day 3 data shows curiosity clips (10, future siblings) outperform challenge c
 
 Every clip ships with tactile SFX only — no licensed music. This is intentional:
 
-- business accounts on TikTok have limited access to the commercial music library, and licensing risk on new brand content is not worth the upside
-- all 13 clips are **post-ready as-is** — do not add trending sounds on top, it muddies the SFX rhythm that carries the satisfying beats
-
-If a specific clip demands music for a later test, use TikTok’s royalty-free library tags `relaxing` or `clean beats` — never top-40.
+- **Use a Business account for Batch 01.** Verified vs TikTok support April 2026: TikTok no longer offers a separate *Creator* account type (earlier drafts of this doc recommended "Creator" — that type was removed). The two relevant types now are Personal and Business. Business is correct for Batch 01 because (a) it unlocks the clickable link-in-bio immediately, while Personal requires 1,000 followers before the link field is usable; (b) Business is restricted to the Commercial Music Library, but since we ship SFX-only clips without licensed music, that restriction doesn't affect us. For a later batch that wants to layer trending sounds, revisit this choice.
+- All 13 clips are **post-ready as-is** — do not add trending sounds on top, it muddies the SFX rhythm that carries the satisfying beats.
+- If a specific clip demands music for a later test, Business accounts can draw from the Commercial Music Library; never use top-40 licensed tracks that would flag copyright.

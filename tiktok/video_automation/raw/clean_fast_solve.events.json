@@ -2,99 +2,99 @@
   "scenarioId": "clean_fast_solve",
   "events": [
     {
-      "t": 1.061,
+      "t": 1.225,
       "type": "select"
     },
     {
-      "t": 1.302,
+      "t": 1.501,
       "type": "select"
     },
     {
-      "t": 1.566,
+      "t": 1.719,
       "type": "select"
     },
     {
-      "t": 1.766,
+      "t": 1.985,
       "type": "select"
     },
     {
-      "t": 2.22,
+      "t": 2.404,
       "type": "submit"
     },
     {
-      "t": 2.568,
+      "t": 2.757,
       "type": "correct"
     },
     {
-      "t": 3.184,
+      "t": 3.42,
       "type": "select"
     },
     {
-      "t": 3.37,
+      "t": 3.668,
       "type": "select"
     },
     {
-      "t": 3.6,
+      "t": 3.884,
       "type": "select"
     },
     {
-      "t": 3.867,
+      "t": 4.152,
       "type": "select"
     },
     {
-      "t": 4.261,
+      "t": 4.571,
       "type": "submit"
     },
     {
-      "t": 4.605,
+      "t": 4.913,
       "type": "correct"
     },
     {
-      "t": 5.132,
+      "t": 5.499,
       "type": "select"
     },
     {
-      "t": 5.349,
+      "t": 5.753,
       "type": "select"
     },
     {
-      "t": 5.583,
+      "t": 6.017,
       "type": "select"
     },
     {
-      "t": 5.817,
+      "t": 6.251,
       "type": "select"
     },
     {
-      "t": 6.3,
+      "t": 6.668,
       "type": "submit"
     },
     {
-      "t": 6.649,
+      "t": 7.018,
       "type": "correct"
     },
     {
-      "t": 7.233,
+      "t": 7.617,
       "type": "select"
     },
     {
-      "t": 7.482,
+      "t": 7.833,
       "type": "select"
     },
     {
-      "t": 7.667,
+      "t": 8.084,
       "type": "select"
     },
     {
-      "t": 7.852,
+      "t": 8.351,
       "type": "select"
     },
     {
-      "t": 8.373,
+      "t": 8.853,
       "type": "submit"
     },
     {
-      "t": 8.719,
+      "t": 9.202,
       "type": "correct"
     }
   ]

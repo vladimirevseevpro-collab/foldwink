@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foldwink TikTok — Operator Runbook (Batch 01)</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #121a31;
+      --panel-2: #18223f;
+      --text: #eef2ff;
+      --muted: #b6c2e1;
+      --accent: #7aa2ff;
+      --accent-2: #97f0c6;
+      --warn: #ffb98a;
+      --danger: #ff8a9b;
+      --border: rgba(255,255,255,0.10);
+      --code: #0d1428;
+      --shadow: 0 10px 30px rgba(0,0,0,0.28);
+      --max: 1040px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(180deg, #0a0f1d 0%, #0d1326 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .topnav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; gap: 20px;
+      padding: 14px 22px;
+      background: rgba(10,15,29,0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+    .topnav .brand { color: var(--accent-2); text-decoration: none; font-weight: 600; font-size: 15px; }
+    .topnav .nav-links { display: flex; gap: 6px; flex-wrap: wrap; }
+    .topnav .nav-links a {
+      color: var(--muted); text-decoration: none;
+      padding: 6px 12px; border-radius: 10px; font-size: 14px;
+      border: 1px solid transparent;
+    }
+    .topnav .nav-links a:hover { color: var(--text); border-color: var(--border); }
+    .topnav .nav-links a[aria-current="page"] {
+      color: var(--text);
+      background: rgba(122,162,255,0.14);
+      border-color: rgba(122,162,255,0.35);
+    }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 28px 18px 64px; }
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(26px, 3.5vw, 36px);
+      letter-spacing: -0.02em;
+    }
+    .lead { color: var(--muted); font-size: 16px; max-width: 820px; margin: 0 0 20px; }
+    section {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px 24px;
+      margin: 18px 0;
+      box-shadow: var(--shadow);
+    }
+    h2 {
+      margin: 0 0 12px;
+      font-size: clamp(20px, 2.4vw, 26px);
+      letter-spacing: -0.01em;
+    }
+    h3 { margin: 18px 0 8px; font-size: 16px; color: var(--accent-2); }
+    h4 { margin: 12px 0 6px; font-size: 14px; color: var(--accent); text-transform: uppercase; letter-spacing: 0.04em; }
+    p { margin: 10px 0; }
+    ul, ol { margin: 8px 0 0 22px; padding: 0; }
+    li { margin: 4px 0; }
+    table {
+      width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 9px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: rgba(122,162,255,0.12); font-weight: 600; }
+    tbody tr:nth-child(odd) td { background: rgba(255,255,255,0.02); }
+    code, pre {
+      background: var(--code);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: "Fira Code", "Consolas", Menlo, monospace;
+      font-size: 13px;
+      color: #e8eeff;
+    }
+    code { padding: 2px 6px; }
+    pre {
+      padding: 14px 16px;
+      border-radius: 14px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      overflow: auto;
+      line-height: 1.5;
+    }
+    .note {
+      border-left: 4px solid var(--accent);
+      padding: 12px 14px;
+      background: rgba(122,162,255,0.10);
+      border-radius: 0 14px 14px 0;
+      margin: 14px 0 4px;
+    }
+    .note.warn   { border-left-color: var(--warn);   background: rgba(255,185,138,0.10); }
+    .note.danger { border-left-color: var(--danger); background: rgba(255,138,155,0.10); }
+    .muted { color: var(--muted); }
+    .toc {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 10px;
+      margin: 20px 0 24px;
+    }
+    .toc a {
+      color: var(--text); text-decoration: none;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 12px 14px;
+      font-size: 14px;
+      display: block;
+    }
+    .toc a:hover { border-color: rgba(122,162,255,0.45); }
+    .step {
+      background: var(--panel-2);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px 18px;
+      margin: 12px 0;
+    }
+    .step .num {
+      display: inline-block;
+      padding: 2px 9px;
+      margin-right: 10px;
+      border-radius: 999px;
+      background: rgba(122,162,255,0.18);
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 13px;
+    }
+    .step .time {
+      float: right;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .gate {
+      background: var(--panel-2);
+      border-left: 4px solid var(--accent-2);
+      border-radius: 0 14px 14px 0;
+      padding: 14px 16px;
+      margin: 12px 0;
+    }
+    .gate h4 { margin: 0 0 6px; color: var(--accent-2); }
+    @media (max-width: 640px) {
+      .wrap { padding: 20px 12px 52px; }
+      section { padding: 18px; border-radius: 14px; }
+      table { font-size: 13px; }
+      th, td { padding: 7px 9px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="topnav">
+    <a href="../index.html" class="brand">Foldwink TikTok</a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../foldwink_tiktok_launch_page.html">Strategy</a>
+      <a href="channel_setup.html">Channel Setup</a>
+      <a href="operator_runbook.html" aria-current="page">Operator Runbook</a>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <h1>Operator Runbook — Batch 01</h1>
+    <p class="lead">Пошаговый документ для человека-оператора. Печатайте его или держите во втором окне. Весь батч — меньше часа активной работы, распределённой на 8 дней.</p>
+
+    <div class="toc">
+      <a href="#prereq">Prerequisites</a>
+      <a href="#flow">Per-post flow (6 мин)</a>
+      <a href="#daily">Daily monitoring</a>
+      <a href="#gates">Decision gates</a>
+      <a href="#stops">Emergency stops</a>
+      <a href="#files">Файлы, которых касаетесь</a>
+      <a href="#quickref">Quick reference (все слоты)</a>
+    </div>
+
+    <section id="prereq">
+      <h2>Prerequisites</h2>
+      <ul>
+        <li><a href="channel_setup.html">Channel Setup</a> шаги 1–9 выполнены (аккаунт = <strong>Business</strong>)</li>
+        <li>TikTok Studio открыт на <a href="https://www.tiktok.com/tiktokstudio/" target="_blank" rel="noopener">tiktok.com/tiktokstudio</a>, залогинены как Foldwink (desktop, используется для <strong>upload + schedule</strong>)</li>
+        <li><strong>Мобильное приложение TikTok установлено и залогинено как Foldwink на телефоне, который остаётся у оператора</strong> — non-optional. Pin-comment и pin-to-profile <strong>не</strong> работают на desktop TikTok по состоянию на апрель 2026; оба требуют мобильного приложения.</li>
+        <li>Терминал открыт в <code>C:\AI\neural-void.com\foldwink</code></li>
+        <li>File explorer открыт в <code>tiktok\batch_01\exports\</code> и <code>tiktok\batch_01\covers\</code></li>
+      </ul>
+    </section>
+
+    <section id="flow">
+      <h2>Per-post flow (≈6 мин на пост)</h2>
+      <p>Повторяется для каждого <code>id</code> в <code>publish_queue.json</code>. Используйте <strong>scheduled slot</strong> из очереди — не публиковать сразу, если это не в пределах 15 минут от слота.</p>
+
+      <div class="step">
+        <span class="num">1</span><strong>Pre-flight клипа</strong><span class="time">30 с</span>
+        <p>Откройте MP4 в окне размером с телефон и просмотрите один раз. Отклонить и взять резерв, если:</p>
+        <ul>
+          <li>Первая секунда — чёрный экран, логотип, меню</li>
+          <li>Текст overlay обрезан 140 px safe-зоной TikTok UI (сверху/снизу)</li>
+          <li>Аудио сломано или тишина там, где должен быть SFX</li>
+          <li>Cover-кадр нечитаем на телефонной thumb</li>
+        </ul>
+        <p>Если отклонили — берите резерв из <code>publish_queue.json</code> (<code>"reserve": true</code>) и начинайте с шага 1 заново.</p>
+      </div>
+
+      <div class="step">
+        <span class="num">2</span><strong>Copy caption в буфер</strong><span class="time">5 с</span>
+        <pre>npm run tiktok:prep -- &lt;N&gt;</pre>
+        <p><code>&lt;N&gt;</code> = <code>1</code> для <code>post-01</code>, <code>10</code> для <code>post-10</code>, <code>r2</code> для <code>post-r2</code> и т.д. Скрипт печатает caption+hashtags и кладёт их в буфер.</p>
+      </div>
+
+      <div class="step">
+        <span class="num">3</span><strong>Upload в TikTok Studio</strong><span class="time">2 мин</span>
+        <ol>
+          <li>TikTok Studio → <strong>Upload</strong> → выбрать MP4 из <code>tiktok\batch_01\exports\</code>.</li>
+          <li>В поле caption: Ctrl+V. Caption и хэштеги лягут одним блоком.</li>
+          <li>Open "More options" → <strong>Cover</strong> → <strong>Edit cover</strong>.</li>
+          <li>Upload соответствующий JPG из <code>tiktok\batch_01\covers\</code> (тот же stem имени). <strong>Не</strong> давайте TikTok auto-pick.</li>
+          <li>Disclosure: <strong>Disclose video contents</strong> оставить off, если TikTok не требует.</li>
+          <li>Comments / duet / stitch: все три ON. Off на Batch 01 убивает тест.</li>
+          <li>Allow AI-generated label: OFF.</li>
+        </ol>
+      </div>
+
+      <div class="step">
+        <span class="num">4</span><strong>Schedule</strong><span class="time">30 с</span>
+        <ol>
+          <li>Scroll до <strong>Schedule video</strong>, toggle ON.</li>
+          <li>Дата+время: скопируйте <code>scheduled_slot_human</code> из очереди (напр. "Mon 2026-04-27 · 7:30 PM ET").</li>
+          <li>Убедитесь, что таймзона в TikTok Studio совпадает с ET. Если показывает локальную CET — конвертируйте ET в CET (ET + 6 ч в DST) и введите CET.</li>
+          <li>Click <strong>Schedule</strong>. Клип в Scheduled posts.</li>
+        </ol>
+      </div>
+
+      <div class="step">
+        <span class="num">5</span><strong>Подготовить pinned reply к publish time</strong><span class="time">30 с</span>
+        <p>Держите терминал открытым до слота:</p>
+        <pre>npm run tiktok:prep -- &lt;N&gt; --field=pinned</pre>
+        <p>Не запускать сейчас — команда наготове, запустить в точный момент публикации.</p>
+      </div>
+
+      <div class="step">
+        <span class="num">6</span><strong>В слот публикации — опубликовать pinned комментарий</strong><span class="time">1 мин, LIVE, мобильное приложение обязательно</span>
+        <p>TikTok публикует видео автоматически в слот. Pinned author comment — руками, и <strong>обязательно с мобильного приложения TikTok</strong>, не с TikTok Studio / desktop. По состоянию на апрель 2026 закрепление комментариев не доступно на desktop — только в мобильном app.</p>
+        <ol>
+          <li>На desktop: обновите опубликованный пост в аккаунте. Подтвердите, что live.</li>
+          <li>Запустите готовую команду (шаг 5). Pinned reply в буфере desktop.</li>
+          <li>Вставьте pinned reply в окно комментария под постом на desktop и отправьте. (Писать коммент с desktop можно — только pin-операция требует mobile.)</li>
+          <li>На <strong>телефоне</strong>: откройте app Foldwink → тот же пост → значок комментариев → проскрольте к своему только что отправленному комментарию → <strong>долгое нажатие</strong> (~1 сек) → во всплывающем меню тапните <strong>Pin comment</strong>.</li>
+          <li>Всё ещё на телефоне: лайкните свой pinned комментарий (сеет comment-блок как активный).</li>
+        </ol>
+        <div class="note warn"><strong>Лимиты и подводные камни:</strong>
+          <ul>
+            <li>Только <strong>один</strong> pinned комментарий на пост. Новый pin автоматически снимает предыдущий — это документированное поведение и используется как swap-механизм для <code>pinned_comment_alt</code>.</li>
+            <li>Пинить может только создатель видео — делегирования нет.</li>
+            <li>Deadline: в пределах <strong>2 мин</strong> от публикации. Поздний pin теряет большую часть алгоритмического эффекта.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step">
+        <span class="num">7</span><strong>First-hour follow-up</strong><span class="time">5 мин активно за 60 мин</span>
+        <ul>
+          <li>Ответить на 3–5 первых живых комментариев в первые 15 мин (desktop или mobile — что под рукой).</li>
+          <li>Никакого copy-paste. Каждый ответ визуально разный.</li>
+          <li>Если кто-то пишет своё время в "drop your time" — отвечайте своим временем, не просто <code>❤️</code>.</li>
+          <li>Если в 30 мин никто не комментирует — свап на <code>pinned_comment_alt</code>:
+            <ol>
+              <li>На desktop запустить <code>node scripts/tiktok-prep.mjs &lt;N&gt; --no-copy --field=pinned</code> и вручную скопировать значение <code>pinned_comment_alt</code> из <code>publish_queue.json</code> (хелпер сейчас копирует primary — для alt открыть JSON и взять alt-строку).</li>
+              <li>На <strong>телефоне</strong>: опубликовать alt новым комментарием и запинить его. Новый pin автоматически снимет предыдущий.</li>
+            </ol>
+          </li>
+        </ul>
+        <p>Не отвечать троллям. Не прятать. Пусть лежат.</p>
+      </div>
+    </section>
+
+    <section id="daily">
+      <h2>Daily monitoring (5 мин в день)</h2>
+      <p>Каждое утро, TikTok Studio → Analytics, записать для каждого live-поста:</p>
+      <ul>
+        <li><code>watch_time_sec_avg</code></li>
+        <li><code>completion_rate</code></li>
+        <li><code>comments</code></li>
+        <li><code>shares</code></li>
+        <li><code>profile_visits</code></li>
+        <li><code>bio_link_clicks</code> (в post-specific analytics вкладке)</li>
+      </ul>
+      <p>Записать в <code>tiktok/batch_01/reports/day_N_numbers.md</code> или простой xlsx. Не переинженирить — нужно ровно столько данных, чтобы выбрать Batch 02 winners.</p>
+    </section>
+
+    <section id="gates">
+      <h2>Decision gates (сработало одно — действовать)</h2>
+
+      <div class="gate">
+        <h4>Gate A — Day 2 morning: opener health</h4>
+        <p>Проверить post-01 и post-10 (оба были live за ночь). Если <strong>у любого из них</strong>:</p>
+        <ul>
+          <li>completion_rate &lt; 35 %, <strong>и</strong></li>
+          <li>comments &lt; 3,</li>
+        </ul>
+        <p>рассмотреть swap main-слота дня (сейчас <code>post-02</code>) на резерв. Наиболее близкий — <code>post-r3</code> (альт post-02, другой пазл).</p>
+      </div>
+
+      <div class="gate">
+        <h4>Gate B — Day 3: format signal</h4>
+        <p>К концу Day 2 — 4 поста live. Ранжировать по watch-time. Если топ-2 из <strong>одного bucket</strong> (например, оба near-fail), пропустить в следующие 24 ч клипы из других bucket-ов и взять резерв из победившего.</p>
+      </div>
+
+      <div class="gate">
+        <h4>Gate C — Day 5: curiosity-click convert</h4>
+        <p>Проверить post-10: ratio <code>bio_link_clicks / profile_visits</code>. Если &gt;15 % — это north star для Batch 02, масштабировать curiosity-click клипы. Если &lt;5 % — bottleneck в самой bio-ссылке (скорее всего, itch.io mobile load), чиним воронку, а не видео.</p>
+      </div>
+
+      <div class="gate">
+        <h4>Gate D — Day 8 evening: финальный call</h4>
+        <p>После публикации post-09 и 12 ч аналитики:</p>
+        <ol>
+          <li>Выбрать топ-3 клипа по weighted-score: <code>watch_time × 0.4 + completion × 0.3 + (comments/views) × 0.2 + (profile_visits/views) × 0.1</code>.</li>
+          <li>Запинить все три на профиле (см. <a href="channel_setup.html#s7">Channel Setup §7</a>).</li>
+          <li>Написать дебриф на одну страницу: <code>tiktok/batch_01/reports/batch_01_debrief.md</code> с гипотезами победителей и брифом Batch 02.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="stops">
+      <h2>Emergency stops</h2>
+      <p>Остановить публикации и <strong>не</strong> продолжать батч, если сработало любое из:</p>
+      <ul>
+        <li>TikTok пометил пост за community guidelines — пауза, прочитать пометку перед следующим постом.</li>
+        <li>Аккаунт получил "unusual activity" — пауза 48 ч, ничего больше.</li>
+        <li>Клип получил 100K+ views за &lt;2 ч — <strong>не</strong> добавлять новые посты в этот день. Over-posting на горячем клипе — #1 причина self-sabotage вирала. Дайте дышать.</li>
+        <li>itch.io 404 или down — убрать bio-ссылку до следующего поста; host-locally fallback вне scope Batch 01.</li>
+      </ul>
+    </section>
+
+    <section id="files">
+      <h2>Файлы, которых вы касаетесь</h2>
+      <h3>Read-only (не редактировать во время батча)</h3>
+      <ul>
+        <li><code>tiktok/batch_01/exports/*.mp4</code></li>
+        <li><code>tiktok/batch_01/covers/*.jpg</code></li>
+        <li><code>tiktok/batch_01/manifests/tiktok_batch_01_manifest.md</code></li>
+        <li><code>tiktok/batch_01/manifests/publish_queue.json</code> (редактировать только для swap резервов)</li>
+      </ul>
+      <h3>Создавать по ходу</h3>
+      <ul>
+        <li><code>tiktok/batch_01/reports/day_1_numbers.md</code> … <code>day_8_numbers.md</code></li>
+        <li><code>tiktok/batch_01/reports/batch_01_debrief.md</code> (Day 8 вечер)</li>
+      </ul>
+      <h3>Helper</h3>
+      <ul>
+        <li><code>scripts/tiktok-prep.mjs</code> → <code>npm run tiktok:prep -- &lt;id&gt; [--field=…]</code></li>
+      </ul>
+    </section>
+
+    <section id="quickref">
+      <h2>Quick reference — все посты</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Slot (ET)</th>
+            <th>Slot (CET)</th>
+            <th>Clip</th>
+            <th>Bucket</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>post-01</td><td>Mon 04-27 · 7:30 PM</td><td>01:30 Tue</td><td>Pause and Solve</td><td>challenge</td></tr>
+          <tr><td>post-10</td><td>Mon 04-27 · 9:30 PM</td><td>03:30 Tue</td><td>Hidden Gem</td><td>curiosity</td></tr>
+          <tr><td>post-02</td><td>Tue 04-28 · 12:30 PM</td><td>18:30</td><td>Can You Solve This?</td><td>challenge</td></tr>
+          <tr><td>post-03</td><td>Tue 04-28 · 7:00 PM</td><td>01:00 Wed</td><td>Looks Easy. It Isn't.</td><td>challenge</td></tr>
+          <tr><td>post-04</td><td>Wed 04-29 · 8:00 PM</td><td>02:00 Thu</td><td>Escalated Fast</td><td>escalation</td></tr>
+          <tr><td>post-05</td><td>Thu 04-30 · 7:00 PM</td><td>01:00 Fri</td><td>Gets Worse</td><td>escalation</td></tr>
+          <tr><td>post-06</td><td>Fri 05-01 · 12:30 PM</td><td>18:30</td><td>So Clean</td><td>satisfying</td></tr>
+          <tr><td>post-07</td><td>Sat 05-02 · 11:30 AM</td><td>17:30</td><td>Clean</td><td>satisfying</td></tr>
+          <tr><td>post-08</td><td>Sun 05-03 · 9:30 PM</td><td>03:30 Mon</td><td>Almost Ruined It</td><td>near-fail</td></tr>
+          <tr><td>post-09</td><td>Mon 05-04 · 10:00 PM</td><td>04:00 Tue</td><td>Watch the Last Move</td><td>near-fail</td></tr>
+          <tr><td>post-r2</td><td>—</td><td>—</td><td>Looks Easy (Alt) — A/B alt для clip 03</td><td>reserve</td></tr>
+          <tr><td>post-r1</td><td>—</td><td>—</td><td>One Move Left — general reserve</td><td>reserve</td></tr>
+          <tr><td>post-r3</td><td>—</td><td>—</td><td>Can You? (Alt) — A/B alt для clip 02</td><td>reserve</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Когда прекратить использовать этот runbook</h2>
+      <p>После того, как <code>batch_01_debrief.md</code> написан, runbook выходит в отставку. У Batch 02 будет свой runbook.</p>
+    </section>
+  </div>
+</body>
+</html>

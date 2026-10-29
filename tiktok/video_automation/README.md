@@ -33,10 +33,10 @@ FFMPEG_PATH="C:/tools/ffmpeg/bin/ffmpeg.exe" npm run video:compose
 # 1. сбилдить игру
 npm run build
 
-# 2. записать все сценарии (5 webm в reports/video_automation/raw/)
+# 2. записать все сценарии (5 webm в tiktok/video_automation/raw/)
 npm run video:record
 
-# 3. собрать 6 финальных MP4 на английском + ASMR-звук (в reports/video_automation/final/)
+# 3. собрать 6 финальных MP4 на английском + ASMR-звук (в tiktok/video_automation/final/)
 npm run video:compose
 
 # 4. (опционально) упаковать всё в foldwink_video_pack.zip
@@ -61,16 +61,16 @@ npm run video:pack
 
 ```bash
 # только один сценарий (по id из configs/scenarios.json)
-node reports/video_automation/scripts/record.mjs clean_fast_solve
+node tiktok/video_automation/scripts/record.mjs clean_fast_solve
 
 # только один output (подстрока имени файла)
-node reports/video_automation/scripts/compose.mjs satisfying_v1
+node tiktok/video_automation/scripts/compose.mjs satisfying_v1
 
 # переключить overlay на русский
-node reports/video_automation/scripts/compose.mjs --lang=ru
+node tiktok/video_automation/scripts/compose.mjs --lang=ru
 
 # собрать без звука
-node reports/video_automation/scripts/compose.mjs --no-audio
+node tiktok/video_automation/scripts/compose.mjs --no-audio
 ```
 
 ---
@@ -78,7 +78,7 @@ node reports/video_automation/scripts/compose.mjs --no-audio
 ## 4. Структура каталога
 
 ```
-reports/video_automation/
+tiktok/video_automation/
 ├── README.md                     # этот файл
 ├── configs/
 │   ├── scenarios.json            # параметры сценариев геймплея
@@ -148,8 +148,8 @@ reports/video_automation/
 Если устраивают клипы, но хочется другой текст/CTA:
 
 ```bash
-# поправь reports/video_automation/configs/overlay_presets.json
-node reports/video_automation/scripts/compose.mjs
+# поправь tiktok/video_automation/configs/overlay_presets.json
+node tiktok/video_automation/scripts/compose.mjs
 ```
 
 Recorder повторно не нужен — webm уже лежат в `raw/`.

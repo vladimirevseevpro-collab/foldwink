@@ -3,7 +3,7 @@
  *
  * Drives the built app through deterministic scenarios and saves raw webm
  * clips via Playwright recordVideo. Each scenario writes one clip into
- * reports/video_automation/raw/<scenario_id>.webm and a metadata JSON.
+ * tiktok/video_automation/raw/<scenario_id>.webm and a metadata JSON.
  */
 import { chromium } from "playwright";
 import {
@@ -25,10 +25,10 @@ import {
 } from "./lib/solver.mjs";
 
 const ROOT = resolve(process.cwd());
-const OUT_DIR = resolve(ROOT, "reports/video_automation/raw");
-const WORK_DIR = resolve(ROOT, "reports/video_automation/work");
+const OUT_DIR = resolve(ROOT, "tiktok/video_automation/raw");
+const WORK_DIR = resolve(ROOT, "tiktok/video_automation/work");
 const CONFIG = JSON.parse(
-  readFileSync(resolve(ROOT, "reports/video_automation/configs/scenarios.json"), "utf-8"),
+  readFileSync(resolve(ROOT, "tiktok/video_automation/configs/scenarios.json"), "utf-8"),
 );
 const POOL_DIR = resolve(ROOT, "puzzles/pool");
 

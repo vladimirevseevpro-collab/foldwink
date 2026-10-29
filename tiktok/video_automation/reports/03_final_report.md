@@ -44,12 +44,12 @@
 - **devDep** `ffmpeg-static` ^5.2.0 — bundled полный ffmpeg (Windows).
 - **scripts**: `video:record`, `video:compose`, `video:all`, `video:pack`.
 
-Полный быстрый старт — см. `reports/video_automation/README.md`.
+Полный быстрый старт — см. `tiktok/video_automation/README.md`.
 
 ## 5. Созданные скрипты / файлы
 
 ```
-reports/video_automation/
+tiktok/video_automation/
 ├── README.md
 ├── configs/
 │   ├── overlay_presets.json          — hooks (sat + ch) с RU/EN + safe-zones
@@ -78,7 +78,7 @@ reports/video_automation/
     └── 03_final_report.md             — этот файл
 ```
 
-Плюс `foldwink_video_pack.zip` в корне `reports/video_automation/` — forward-slash zip без webm/tmp.
+Плюс `foldwink_video_pack.zip` в корне `tiktok/video_automation/` — forward-slash zip без webm/tmp.
 
 ## 6. Финальные MP4
 
@@ -106,7 +106,7 @@ reports/video_automation/
 
 ## 9. Рекомендации к первым публикациям
 
-См. `reports/video_automation/final/posting_notes.md`. TL;DR:
+См. `tiktok/video_automation/final/posting_notes.md`. TL;DR:
 
 1. **`challenge_v1.mp4`** — «Почему большинство ошибается здесь с первой попытки?» — tension + near-fail + clean finish. Высокий потолок по комментам.
 2. **`satisfying_v2.mp4`** — «Чистый кайф для мозга». Короткий, loop-friendly, низкий бар входа.

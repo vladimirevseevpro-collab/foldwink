@@ -1,5 +1,5 @@
 {
-  "createdAt": "2026-04-17T18:15:12.329Z",
+  "createdAt": "2026-04-23T11:26:18.470Z",
   "ffmpeg": "C:\\AI\\neural-void.com\\foldwink\\node_modules\\ffmpeg-static\\ffmpeg.exe",
   "audio": true,
   "videos": [
@@ -265,8 +265,8 @@
       "bucket": "challenge",
       "hookId": "looks_easy",
       "hookText": "Looks easy. It isn’t.",
-      "ctaId": "post_level_3",
-      "ctaText": "Should I post level 3?",
+      "ctaId": "could_you_get",
+      "ctaText": "Could you get this?",
       "reserve": false,
       "cadence": "medium",
       "plannedMistakes": 2,
@@ -421,7 +421,7 @@
           }
         ]
       },
-      "bytes": 1060976
+      "bytes": 1060858
     },
     {
       "output": "tiktok/batch_01/exports/tiktok_04_escalated_fast.mp4",

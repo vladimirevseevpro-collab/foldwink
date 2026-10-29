@@ -1,7 +1,7 @@
 # 02 — Quality check
 
 **Date:** 2026-04-16 (refreshed after EN-overlay + audio rebuild)
-**Source:** `reports/video_automation/final/*.mp4` — 6 роликов.
+**Source:** `tiktok/video_automation/final/*.mp4` — 6 роликов.
 
 ## Сводка
 

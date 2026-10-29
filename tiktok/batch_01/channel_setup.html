@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foldwink TikTok — Channel Setup (Batch 01)</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #121a31;
+      --panel-2: #18223f;
+      --text: #eef2ff;
+      --muted: #b6c2e1;
+      --accent: #7aa2ff;
+      --accent-2: #97f0c6;
+      --warn: #ffb98a;
+      --danger: #ff8a9b;
+      --border: rgba(255,255,255,0.10);
+      --code: #0d1428;
+      --shadow: 0 10px 30px rgba(0,0,0,0.28);
+      --max: 1040px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(180deg, #0a0f1d 0%, #0d1326 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .topnav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; gap: 20px;
+      padding: 14px 22px;
+      background: rgba(10,15,29,0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+    .topnav .brand { color: var(--accent-2); text-decoration: none; font-weight: 600; font-size: 15px; }
+    .topnav .nav-links { display: flex; gap: 6px; flex-wrap: wrap; }
+    .topnav .nav-links a {
+      color: var(--muted); text-decoration: none;
+      padding: 6px 12px; border-radius: 10px; font-size: 14px;
+      border: 1px solid transparent;
+    }
+    .topnav .nav-links a:hover { color: var(--text); border-color: var(--border); }
+    .topnav .nav-links a[aria-current="page"] {
+      color: var(--text);
+      background: rgba(122,162,255,0.14);
+      border-color: rgba(122,162,255,0.35);
+    }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 28px 18px 64px; }
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(26px, 3.5vw, 36px);
+      letter-spacing: -0.02em;
+    }
+    .lead {
+      color: var(--muted); font-size: 16px; max-width: 800px; margin: 0 0 20px;
+    }
+    section {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px 24px;
+      margin: 18px 0;
+      box-shadow: var(--shadow);
+    }
+    h2 {
+      margin: 0 0 12px;
+      font-size: clamp(20px, 2.4vw, 26px);
+      letter-spacing: -0.01em;
+    }
+    h2 .num {
+      display: inline-block;
+      min-width: 28px;
+      color: var(--accent-2);
+      font-weight: 600;
+      margin-right: 8px;
+    }
+    h3 { margin: 18px 0 8px; font-size: 16px; color: var(--accent-2); }
+    p { margin: 10px 0; }
+    ul, ol { margin: 8px 0 0 22px; padding: 0; }
+    li { margin: 4px 0; }
+    table {
+      width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 9px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: rgba(122,162,255,0.12); font-weight: 600; }
+    tbody tr:nth-child(odd) td { background: rgba(255,255,255,0.02); }
+    code, pre {
+      background: var(--code);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: "Fira Code", "Consolas", Menlo, monospace;
+      font-size: 13px;
+      color: #e8eeff;
+    }
+    code { padding: 2px 6px; }
+    pre {
+      padding: 14px 16px;
+      border-radius: 14px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      overflow: auto;
+      line-height: 1.5;
+    }
+    .note {
+      border-left: 4px solid var(--accent);
+      padding: 12px 14px;
+      background: rgba(122,162,255,0.10);
+      border-radius: 0 14px 14px 0;
+      margin: 14px 0 4px;
+    }
+    .note.warn { border-left-color: var(--warn); background: rgba(255,185,138,0.10); }
+    .muted { color: var(--muted); }
+    .toc {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 10px;
+      margin: 20px 0 24px;
+    }
+    .toc a {
+      color: var(--text); text-decoration: none;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 12px 14px;
+      font-size: 14px;
+      display: block;
+    }
+    .toc a:hover { border-color: rgba(122,162,255,0.45); }
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+    .card {
+      background: var(--panel-2);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+    }
+    .card.accent { border-color: rgba(151,240,198,0.35); }
+    .card.warn   { border-color: rgba(255,185,138,0.35); }
+    ul.checklist {
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
+    ul.checklist li {
+      padding: 4px 0 4px 28px;
+      position: relative;
+    }
+    ul.checklist li::before {
+      content: "☐";
+      position: absolute; left: 4px; color: var(--muted);
+      font-size: 16px;
+    }
+    @media (max-width: 640px) {
+      .wrap { padding: 20px 12px 52px; }
+      section { padding: 18px; border-radius: 14px; }
+      table { font-size: 13px; }
+      th, td { padding: 7px 9px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="topnav">
+    <a href="../index.html" class="brand">Foldwink TikTok</a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../foldwink_tiktok_launch_page.html">Strategy</a>
+      <a href="channel_setup.html" aria-current="page">Channel Setup</a>
+      <a href="operator_runbook.html">Operator Runbook</a>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <h1>Channel Setup — Batch 01</h1>
+    <p class="lead">Короткий, action-oriented handoff. Сделать <strong>до</strong> загрузки любого видео в TikTok Studio. Порядок важен.</p>
+
+    <div class="toc">
+      <a href="#s1">1 · Тип аккаунта</a>
+      <a href="#s2">2 · Handle и display name</a>
+      <a href="#s3">3 · Bio</a>
+      <a href="#s4">4 · Link in bio</a>
+      <a href="#s5">5 · Avatar</a>
+      <a href="#s6">6 · First-9 grid</a>
+      <a href="#s7">7 · Pinned posts</a>
+      <a href="#s8">8 · First-48h hygiene</a>
+      <a href="#s9">9 · Pre-launch checklist</a>
+    </div>
+
+    <section id="s1">
+      <h2><span class="num">1</span>Тип аккаунта</h2>
+      <p><strong>Business</strong>, не Personal.</p>
+      <div class="note warn"><strong>Сверка с TikTok support (апрель 2026):</strong> в TikTok больше нет отдельного Creator-типа. Текущие типы — Personal, Business, Organization. Предыдущая редакция этого документа рекомендовала "Creator" — такой опции больше не существует. Используем Business.</div>
+      <h3>Почему Business, а не Personal для Foldwink</h3>
+      <ol>
+        <li><strong>Clickable link в bio работает сразу.</strong> Personal-аккаунтам нужно 1000 followers до разблокировки поля website. Business обходит порог полностью. Ждать 1000 followers до запуска itch.io-воронки — значит выкинуть весь сигнал Batch 01.</li>
+        <li><strong>Music-ограничение Business нас не бьёт.</strong> Business-аккаунты ограничены Commercial Music Library — нет доступа к общей музыкальной библиотеке. Для Batch 01 это non-issue: каждый клип на тактильных SFX без licensed music (см. audio note в schedule).</li>
+      </ol>
+      <p>Честный tradeoff: если в будущем батче захочется накладывать trending sounds на gameplay, Business это блокирует. Тогда выбор: остаться на Business ради ссылки или перейти на Personal и ждать 1000 followers. Для Batch 01 — Business.</p>
+      <h3>Как переключить (мобильное приложение, не desktop)</h3>
+      <p>Profile → Menu ☰ (верх-справа) → Settings and privacy → Account → <strong>Switch to Business Account</strong> → пройти по шагам.</p>
+      <p>Если аккаунт создан как Personal, путь тот же — в toggle будет написано "Switch to Business Account".</p>
+    </section>
+
+    <section id="s2">
+      <h2><span class="num">2</span>Handle и display name</h2>
+      <table>
+        <thead><tr><th>Поле</th><th>Primary</th><th>Fallbacks</th></tr></thead>
+        <tbody>
+          <tr><td>Handle (username)</td><td><code>@foldwink</code></td><td><code>@playfoldwink</code> → <code>@foldwinkgame</code> → <code>@foldwink.game</code></td></tr>
+          <tr><td>Display name</td><td><code>Foldwink</code></td><td>—</td></tr>
+          <tr><td>Profile category</td><td>Gaming</td><td>—</td></tr>
+        </tbody>
+      </table>
+      <p>Display name — одно слово, чтобы корректно читалось под аватаром. Не ставьте эмодзи в display name — TikTok profile-picker обрезает их.</p>
+    </section>
+
+    <section id="s3">
+      <h2><span class="num">3</span>Bio (одна строка)</h2>
+      <p>Копируйте целиком:</p>
+      <pre>foldwink · small browser puzzle i made. new one every day.</pre>
+      <ul>
+        <li>Одна строка. Видимая часть TikTok bio ≈80 символов — остаёмся под 80.</li>
+        <li>Нативный голос, не ad voice. Никаких "download now", "play free".</li>
+        <li>Ссылка — в отдельном поле, <strong>не</strong> в тексте bio (см. §4). Алгоритм весит их отдельно.</li>
+      </ul>
+    </section>
+
+    <section id="s4">
+      <h2><span class="num">4</span>Link in bio</h2>
+      <p>Вставить в поле Website (Profile → Edit profile):</p>
+      <pre>https://neural-void.itch.io/foldwink?utm_source=tiktok&amp;utm_medium=social&amp;utm_campaign=batch_01</pre>
+      <p>Per-post варианты <code>utm_content</code> лежат в <code>tiktok/batch_01/manifests/publish_queue.json</code>. В bio используем campaign-level URL без <code>utm_content</code> — так itch.io-аналитика отделит generic-bio трафик от per-post (последний появляется из pinned reply постов 10 и, при необходимости, r2).</p>
+      <p>На Business-аккаунте (см. §1) поле link доступно <strong>немедленно</strong> — без 1000-follower gate. Если по какой-то причине вы на Personal и &lt;1000 followers, кликабельное поле не появится; тогда временно поставьте ту же URL последней строкой bio как текстовый fallback, пока не переключитесь на Business или не перейдёте порог.</p>
+    </section>
+
+    <section id="s5">
+      <h2><span class="num">5</span>Avatar</h2>
+      <p>Одна чистая монограмма. <strong>Не</strong> скриншот геймплея — он не читается в 40×40 px.</p>
+      <ol>
+        <li>Foldwink favicon/логотип из <code>public/</code>, если уже существует.</li>
+        <li>1:1 кроп буквы <code>F</code> в стиле solved-category таба (зелёная пилюля).</li>
+        <li>Flat 4×4 силуэт сетки, 16 квадратов, одна группа выделена.</li>
+      </ol>
+      <p>Экспорт: <strong>400×400 px, PNG, прозрачный фон или совпадающий с тёмным</strong>. Везде один и тот же файл.</p>
+    </section>
+
+    <section id="s6">
+      <h2><span class="num">6</span>First-9 grid strategy</h2>
+      <p>TikTok profile grid — 3 колонки, новое сверху. Новые посетители видят 3×3 блок. Cover text на этих 9 плитках решает, будут они листать или уйдут.</p>
+      <p>После Day 7 Batch 01 топ-9 плиток (новое → старое, слева направо) будут:</p>
+      <pre>Row 1 (most recent):  ALMOST RUINED IT   CLEAN             SO CLEAN
+Row 2:                GETS WORSE         ESCALATED FAST    LOOKS EASY
+Row 3:                CAN YOU SOLVE THIS? HIDDEN GEM       PAUSE AND SOLVE</pre>
+      <p>Это намеренно: эмоциональный диапазон (near-fail → satisfying → escalation → challenge → curiosity) в одном взгляде. <strong>Не перепинивайте</strong> клип до Day 8.</p>
+      <p>Readability-чек: откройте <code>tiktok/batch_01/previews/contact_sheet.jpg</code> на телефоне. Если cover text нечитаем на thumb-size — пометьте клип в QA и рассмотрите swap резерва до публикации.</p>
+    </section>
+
+    <section id="s7">
+      <h2><span class="num">7</span>Pinned posts (после закрытия Batch 01)</h2>
+      <p>TikTok позволяет до <strong>3</strong> pinned видео на профиле (сверено с TikTok support, апрель 2026). <strong>Не пинить во время Batch 01.</strong> Пин перераспределяет показы от свежих загрузок и искажает алгоритмическое чтение.</p>
+      <div class="note warn"><strong>Пин видео на профиль — только через мобильное приложение.</strong> TikTok Studio на desktop не даёт контрол pin-to-profile. Действие делается с телефона Foldwink: открыть свой профиль в app → нажать на видео → "···" (три точки) → <strong>Pin</strong>. Повторить для ≤3 видео.</div>
+      <p>После Day 8 (или когда у каждого клипа есть ≥72 ч аналитики), запинить комбинацию:</p>
+      <ol>
+        <li><strong>Клип с наибольшим watch-time</strong> — top-left pin, больше всего глаз</li>
+        <li><strong>Клип с наибольшим comment-rate</strong> — второй pin, сеет comment-культуру</li>
+        <li><strong>Post-10 "Hidden Gem"</strong> — третий pin, curiosity click → bio click</li>
+      </ol>
+      <p>Если два совпадают (например, post-10 = и watch-time лидер, и curiosity), замените наложение следующим в рейтинге.</p>
+    </section>
+
+    <section id="s8">
+      <h2><span class="num">8</span>First-48h hygiene</h2>
+      <div class="grid-2">
+        <div class="card warn">
+          <h3>НЕ делать</h3>
+          <ul>
+            <li>Подписываться на случайные аккаунты (bot-like signal)</li>
+            <li>Делать repost/duet с brand-аккаунта</li>
+            <li>Покупать фолловеров или engagement</li>
+            <li>Кросс-постить идентичные видео на несколько аккаунтов</li>
+            <li>Paid Promote на холодные клипы</li>
+            <li>Менять handle, display name, bio внутри батча</li>
+          </ul>
+        </div>
+        <div class="card accent">
+          <h3>ДА делать</h3>
+          <ul>
+            <li>Отвечать на комментарии в первые 30–60 минут с brand-аккаунта</li>
+            <li>Пинить первый комментарий автора в первые 2 мин публикации</li>
+            <li>Смотреть 5–10 puzzle-смежных TikTok-ов в день с этого аккаунта — чистый сигнал "я смотрю puzzle"</li>
+            <li>Лайкать 2–3 комментария под своими клипами (сеет comment-блок как активный)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="s9">
+      <h2><span class="num">9</span>Pre-launch checklist (90 секунд)</h2>
+      <ul class="checklist">
+        <li>Account switched to <strong>Business</strong> (не Personal)</li>
+        <li>Handle = <code>@foldwink</code> или утверждённый fallback</li>
+        <li>Display name = <code>Foldwink</code></li>
+        <li>Category = Gaming</li>
+        <li>Bio text вставлен, &lt;80 символов</li>
+        <li>Link-in-bio = campaign URL с <code>utm_campaign=batch_01</code>, поле принимает URL (Business = без follower gate)</li>
+        <li>Avatar загружен (400×400, монограмма, не скриншот)</li>
+        <li>TikTok Studio открывается без ошибок в desktop-браузере, с которого будете публиковать</li>
+        <li><strong>Мобильное приложение TikTok установлено и залогинено как Foldwink</strong> на телефоне оператора — обязательно для pinning первых комментариев и, позже, pinning видео на профиль</li>
+        <li><code>tiktok/batch_01/manifests/publish_queue.json</code> открывается и содержит 13 записей</li>
+        <li><code>npm run tiktok:prep -- 1 --field=caption</code> копирует caption post-01 в буфер</li>
+      </ul>
+      <div class="note">Только когда все 11 пунктов зелёные, открывайте <a href="operator_runbook.html">Operator Runbook</a> и начинайте Day 1 publish.</div>
+    </section>
+  </div>
+</body>
+</html>

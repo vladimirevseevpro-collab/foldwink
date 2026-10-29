@@ -1,0 +1,38 @@
+{
+  "createdAt": "2026-04-25T10:51:18.501Z",
+  "ffmpeg": "C:\\AI\\neural-void.com\\foldwink\\node_modules\\ffmpeg-static\\ffmpeg.exe",
+  "pipeline": "batch_02 native portrait",
+  "videos": [],
+  "skipped": [
+    {
+      "id": "batch02_01_60_seconds",
+      "name": "tiktok02_01_60_seconds.mp4",
+      "reason": "raw missing",
+      "raw": "scenario_a_easy_clean.mp4"
+    },
+    {
+      "id": "batch02_02_watch_the_tabs",
+      "name": "tiktok02_02_watch_the_tabs.mp4",
+      "reason": "raw missing",
+      "raw": "scenario_b_medium_tabs.mp4"
+    },
+    {
+      "id": "batch02_03_one_free_hint",
+      "name": "tiktok02_03_one_free_hint.mp4",
+      "reason": "raw missing",
+      "raw": "scenario_c_wink_showcase.mp4"
+    },
+    {
+      "id": "batch02_04_two_left",
+      "name": "tiktok02_04_two_left.mp4",
+      "reason": "raw missing",
+      "raw": "scenario_d_near_fail.mp4"
+    },
+    {
+      "id": "batch02_05_hard_mode",
+      "name": "tiktok02_05_hard_mode.mp4",
+      "reason": "raw missing",
+      "raw": "scenario_e_hard_flex.mp4"
+    }
+  ]
+}

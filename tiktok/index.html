@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foldwink TikTok — Control Center</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #121a31;
+      --panel-2: #18223f;
+      --text: #eef2ff;
+      --muted: #b6c2e1;
+      --accent: #7aa2ff;
+      --accent-2: #97f0c6;
+      --warn: #ffb98a;
+      --danger: #ff8a9b;
+      --border: rgba(255,255,255,0.10);
+      --code: #0d1428;
+      --shadow: 0 10px 30px rgba(0,0,0,0.28);
+      --max: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(180deg, #0a0f1d 0%, #0d1326 100%);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    .topnav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 14px 22px;
+      background: rgba(10,15,29,0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+    .topnav .brand {
+      color: var(--accent-2);
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      font-size: 15px;
+    }
+    .topnav .nav-links {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .topnav .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 10px;
+      font-size: 14px;
+      border: 1px solid transparent;
+    }
+    .topnav .nav-links a:hover {
+      color: var(--text);
+      border-color: var(--border);
+    }
+    .topnav .nav-links a[aria-current="page"] {
+      color: var(--text);
+      background: rgba(122,162,255,0.14);
+      border-color: rgba(122,162,255,0.35);
+    }
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 28px 18px 64px;
+    }
+    .hero {
+      background: linear-gradient(135deg, rgba(122,162,255,0.18), rgba(151,240,198,0.10));
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 17px;
+      margin: 0;
+      max-width: 900px;
+    }
+    .badges {
+      display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px;
+    }
+    .badge {
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid var(--border);
+    }
+    .badge.accent { background: rgba(151,240,198,0.12); border-color: rgba(151,240,198,0.35); color: var(--accent-2); }
+    .badge.warn   { background: rgba(255,185,138,0.12); border-color: rgba(255,185,138,0.35); color: var(--warn); }
+
+    h2 {
+      margin: 30px 0 14px;
+      font-size: clamp(20px, 2.4vw, 26px);
+      letter-spacing: -0.01em;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 14px;
+    }
+    .card-link {
+      display: block;
+      text-decoration: none;
+      color: var(--text);
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 20px;
+      box-shadow: var(--shadow);
+      transition: border-color 0.15s, transform 0.15s;
+    }
+    .card-link:hover {
+      border-color: rgba(122,162,255,0.45);
+      transform: translateY(-1px);
+    }
+    .card-link h3 {
+      margin: 0 0 6px;
+      font-size: 18px;
+      color: var(--accent-2);
+    }
+    .card-link p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .card-link .meta {
+      margin-top: 12px;
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .section-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+      margin-top: 18px;
+    }
+    .section-card h3 {
+      margin: 0 0 10px;
+      color: var(--accent-2);
+      font-size: 17px;
+    }
+    ul, ol { margin: 10px 0 0 20px; padding: 0; }
+    li { color: var(--text); margin: 4px 0; }
+    code.inline {
+      background: var(--code);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2px 6px;
+      font-size: 13px;
+    }
+    .muted { color: var(--muted); }
+    .footer {
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
+    @media (max-width: 640px) {
+      .wrap { padding: 20px 12px 52px; }
+      .hero, .section-card, .card-link { padding: 18px; border-radius: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="topnav">
+    <a href="index.html" class="brand">Foldwink TikTok</a>
+    <div class="nav-links">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="foldwink_tiktok_launch_page.html">Strategy</a>
+      <a href="batch_01/channel_setup.html">Channel Setup</a>
+      <a href="batch_01/operator_runbook.html">Operator Runbook</a>
+      <a href="batch_01/launch_plan.html">Launch Plan</a>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <div class="hero">
+      <h1>Foldwink TikTok — Control Center</h1>
+      <p class="subtitle">Единая точка входа для запуска и ведения TikTok Batch 01 по Foldwink / Neural Void. Здесь находятся стратегия, настройки канала, операторский runbook и прямой доступ к ассетам Batch 01.</p>
+      <div class="badges">
+        <span class="badge accent">Batch 01 · 10 posts + 3 reserves</span>
+        <span class="badge">Primary market · US (EN)</span>
+        <span class="badge">Destination · neural-void.itch.io/foldwink</span>
+        <span class="badge">Account · Business</span>
+        <span class="badge warn">Publish: desktop Studio · Pin: mobile app</span>
+      </div>
+      <p class="muted" style="margin-top:14px;font-size:13px">Документы сверены с актуальной TikTok support (апрель 2026): Creator account type удалён, есть Personal / Business / Organization. Pin-комментариев и pin-to-profile видео — только через мобильное приложение TikTok.</p>
+    </div>
+
+    <h2>Документы</h2>
+    <div class="grid">
+      <a class="card-link" href="foldwink_tiktok_launch_page.html">
+        <h3>1 · Strategy (v2)</h3>
+        <p>Рынок и окна, честная упаковка продукта, production-правила, контент-матрица, мегапромпт в 3 этапа, 10 постов с cover text, success framework.</p>
+        <div class="meta">Планирование</div>
+      </a>
+      <a class="card-link" href="batch_01/channel_setup.html">
+        <h3>2 · Channel Setup</h3>
+        <p>Тип аккаунта (Business, сверено с TikTok April 2026), handle, display name, bio, link-in-bio с UTM, аватар, first-9 grid, пин-политика, hygiene первых 48 часов, pre-launch чек-лист из 11 пунктов.</p>
+        <div class="meta">До первого поста</div>
+      </a>
+      <a class="card-link" href="batch_01/operator_runbook.html">
+        <h3>3 · Operator Runbook</h3>
+        <p>Шаги на каждый пост (6 мин), pinned reply процедура (desktop upload + mobile pin), первый час follow-up, 4 decision gates, emergency stops, quick-ref таблица слотов.</p>
+        <div class="meta">На каждый пост</div>
+      </a>
+      <a class="card-link" href="batch_01/launch_plan.html">
+        <h3>4 · Launch Plan</h3>
+        <p>Пошаговый план запуска от сегодня до Day-8 дебрифа: чекбоксы по дням (сб → пн → ежедневная рутина → дебриф), countdown до первого слота, кликабельные ссылки на все упомянутые файлы и папки. Прогресс сохраняется в браузере.</p>
+        <div class="meta">Action plan</div>
+      </a>
+    </div>
+
+    <h2>Ассеты Batch 01</h2>
+    <div class="grid">
+      <a class="card-link" href="batch_01/exports/">
+        <h3>Exports</h3>
+        <p>13 × MP4 (10 main + 3 reserve). 1080×1920, H.264 + AAC.</p>
+        <div class="meta">Видео</div>
+      </a>
+      <a class="card-link" href="batch_01/covers/">
+        <h3>Covers</h3>
+        <p>13 × JPG cover frames для profile grid.</p>
+        <div class="meta">Обложки</div>
+      </a>
+      <a class="card-link" href="batch_01/previews/contact_sheet.jpg">
+        <h3>Contact sheet</h3>
+        <p>5×3 превью всей серии. Открыть на телефоне и проверить читаемость cover-текстов.</p>
+        <div class="meta">QA preview</div>
+      </a>
+      <a class="card-link" href="batch_01/manifests/">
+        <h3>Manifests</h3>
+        <p>publish_queue.json (authoritative), manifest.md/.csv, schedule.md, captions.md, first_comments.md, qa_report.md.</p>
+        <div class="meta">Данные</div>
+      </a>
+    </div>
+
+    <h2>Быстрые команды</h2>
+    <div class="section-card">
+      <h3>Clipboard helper (<code class="inline">scripts/tiktok-prep.mjs</code>)</h3>
+      <p>Читает <code class="inline">tiktok/batch_01/manifests/publish_queue.json</code> и кладёт нужное поле в буфер обмена.</p>
+      <ul>
+        <li><code class="inline">npm run tiktok:prep -- 1</code> — caption + hashtags для post-01</li>
+        <li><code class="inline">npm run tiktok:prep -- 1 --field=pinned</code> — pinned reply для post-01</li>
+        <li><code class="inline">npm run tiktok:prep -- r2 --field=all</code> — все поля резерва r2, форматированно</li>
+        <li><code class="inline">npm run tiktok:prep -- 3 --field=cover</code> — cover text для post-03</li>
+      </ul>
+      <p class="muted" style="margin-top:10px">Поля: <code class="inline">post</code> (default, caption + hashtags), <code class="inline">caption</code>, <code class="inline">pinned</code>, <code class="inline">cover</code>, <code class="inline">hashtags</code>, <code class="inline">url</code>, <code class="inline">all</code>. Флаг <code class="inline">--no-copy</code> печатает без записи в буфер.</p>
+    </div>
+
+    <h2>Первый пост</h2>
+    <div class="section-card">
+      <h3>Старт Batch 01</h3>
+      <ol>
+        <li>Пройти pre-launch чек-лист из <a href="batch_01/channel_setup.html">Channel Setup §9</a> (10 галочек)</li>
+        <li>Открыть <a href="batch_01/operator_runbook.html">Operator Runbook</a> и следовать per-post flow</li>
+        <li>Первый слот: <strong>Mon 2026-04-27 · 7:30 PM ET</strong> (= 01:30 CET Tue) — post-01 Pause and Solve</li>
+      </ol>
+    </div>
+
+    <div class="footer">Foldwink TikTok Control Center · v2 · Batch 01 — cross-review Claude × GPT</div>
+  </div>
+</body>
+</html>

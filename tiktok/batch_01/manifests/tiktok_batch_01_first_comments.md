@@ -26,7 +26,7 @@ Primary comment = post this immediately. Alt = swap to after 12 h if cold.
 ## 03 · tiktok_03_looks_easy.mp4
 
 - **Primary:** `two mistakes before i got this clean`
-- **Alt:** `should i post the level 3 puzzle? it’s brutal`
+- **Alt:** `the obvious four is almost never the right four`
 
 ## 04 · tiktok_04_escalated_fast.mp4
 
@@ -56,7 +56,7 @@ Primary comment = post this immediately. Alt = swap to after 12 h if cold.
 ## 09 · tiktok_09_watch_last.mp4
 
 - **Primary:** `🫣 comment if you’d have picked the wrong one`
-- **Alt:** `this is the hardest mode. most people don’t get past round 2`
+- **Alt:** `this is the hardest mode. most people don’t get past the second group`
 
 ## 10 · tiktok_10_didnt_expect.mp4
 

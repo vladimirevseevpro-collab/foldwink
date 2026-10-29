@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "createdAt": "2026-04-25",
+  "notes": "Variants table for tiktok/batch_02. Edit freely — each `raw` filename must match a real .mp4 inside tiktok/batch_02/raw/. Audio modes: passthrough (default — keeps native game SFX from the recording), synth (build SFX bed from cadence + mistakes when raw was recorded silent), silent (-an).",
+  "variants": [
+    {
+      "id": "batch02_01_60_seconds",
+      "name": "tiktok02_01_60_seconds.mp4",
+      "raw": "scenario_a_easy_clean.mp4",
+      "bucket": "satisfying",
+      "hookText": "Built this to play in 60s.",
+      "hookPosition": "top",
+      "ctaText": null,
+      "startSec": 0.0,
+      "durSec": 12,
+      "cadence": "fast",
+      "plannedMistakes": 0,
+      "audioMode": "passthrough",
+      "intent": "Real touchscreen solve. Hook lands as the player taps the first card. Goal: surface the 60-second daily-ritual promise without face cam."
+    },
+    {
+      "id": "batch02_02_watch_the_tabs",
+      "name": "tiktok02_02_watch_the_tabs.mp4",
+      "raw": "scenario_b_medium_tabs.mp4",
+      "bucket": "challenge",
+      "hookText": "Watch the tabs.",
+      "hookPosition": "top",
+      "ctaText": "Could you get this?",
+      "startSec": 0.0,
+      "durSec": 17,
+      "cadence": "medium",
+      "plannedMistakes": 1,
+      "audioMode": "passthrough",
+      "intent": "Foldwink Tabs reveal-on-correct mechanic showcased. Each correct solve adds a letter to the unsolved tabs. Unique visual, no other Connections clone has it."
+    },
+    {
+      "id": "batch02_03_one_free_hint",
+      "name": "tiktok02_03_one_free_hint.mp4",
+      "raw": "scenario_c_wink_showcase.mp4",
+      "bucket": "curiosity",
+      "hookText": "One free hint. That’s it.",
+      "hookPosition": "top",
+      "ctaText": "Try the Wink →",
+      "startSec": 0.0,
+      "durSec": 22,
+      "cadence": "medium",
+      "plannedMistakes": 1,
+      "audioMode": "passthrough",
+      "intent": "Wink mechanic showcase — tap a tab to reveal its full category once per puzzle. Sells the one decision the name earns."
+    },
+    {
+      "id": "batch02_04_two_left",
+      "name": "tiktok02_04_two_left.mp4",
+      "raw": "scenario_d_near_fail.mp4",
+      "bucket": "near_fail",
+      "hookText": "Two mistakes left.",
+      "hookPosition": "top",
+      "ctaText": "Comment if you’d have picked wrong.",
+      "startSec": 0.0,
+      "durSec": 20,
+      "cadence": "medium",
+      "plannedMistakes": 2,
+      "audioMode": "passthrough",
+      "intent": "Near-fail recovery arc. Tension → save. Mirrors batch_01 best performer (post-08) but with native touch."
+    },
+    {
+      "id": "batch02_05_hard_mode",
+      "name": "tiktok02_05_hard_mode.mp4",
+      "raw": "scenario_e_hard_flex.mp4",
+      "bucket": "hard_flex",
+      "hookText": "Hard mode. No mistakes.",
+      "hookPosition": "top",
+      "ctaText": null,
+      "startSec": 0.0,
+      "durSec": 13,
+      "cadence": "confident",
+      "plannedMistakes": 0,
+      "audioMode": "passthrough",
+      "intent": "Master Challenge flex — filters for the enthusiast subset most likely to actually install. Hard mode unlock implies depth."
+    }
+  ]
+}

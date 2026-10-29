@@ -87,15 +87,15 @@ Each entry below has the full required metadata. Exports live in `tiktok/batch_0
 - **Hook type:** expectation-subversion
 - **Source scenario:** almost_fail_then_win (medium, 2 mistakes)
 - **On-screen text:** `Looks easy. It isn’t.`
-- **CTA overlay:** `Should I post level 3?`
+- **CTA overlay:** `Could you get this?`
 - **Caption:** `this is meaner than it looks`
 - **Suggested first comment:** `two mistakes before i got this clean`
 - **Hashtags:** `#puzzlegame #braingame #looksimple #harderthanitlooks`
 - **Ending type:** resolved-with-tension
 - **Cover text suggestion:** `LOOKS EASY`
 - **Music/SFX version:** tactile SFX; 2 `wrong` hits land sharp → recovery
-- **What this clip is testing:** whether “looks easy / isn’t” contrast + visible two mistakes + CTA (`should I post level 3?`) drives comments
-- **Why it may work:** mistake visibility builds trust (not a flawless demo) + level-3 CTA is comment-bait, not ad-bait
+- **What this clip is testing:** whether “looks easy / isn’t” contrast + visible two mistakes + a direct `Could you get this?` CTA drives comments
+- **Why it may work:** mistake visibility builds trust (not a flawless demo) + a direct challenge CTA turns the contrast into a solve-it invitation, not an ad
 - **Recommended posting slot:** Day 2 · 7:00 PM local
 - **Reserve or main:** main
 

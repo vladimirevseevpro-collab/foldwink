@@ -1,12 +1,12 @@
 {
-  "createdAt": "2026-04-17T18:07:54.375Z",
+  "createdAt": "2026-07-24T06:47:20.115Z",
   "ffmpeg": "C:\\AI\\neural-void.com\\foldwink\\node_modules\\ffmpeg-static\\ffmpeg.exe",
   "lang": "en",
   "audio": true,
   "videos": [
     {
-      "output": "reports/video_automation/final/satisfying_v1.mp4",
-      "rawSource": "reports\\video_automation\\raw\\clean_fast_solve.webm",
+      "output": "tiktok/video_automation/final/satisfying_v1.mp4",
+      "rawSource": "tiktok\\video_automation\\raw\\clean_fast_solve.webm",
       "template": "blurred_bg",
       "hook": "sat_pov_kill5",
       "cta": "cta_url",
@@ -14,773 +14,110 @@
       "cadence": "fast",
       "plannedMistakes": 0,
       "startSec": 0,
-      "durationSec": 10.92,
+      "durationSec": 11.12,
       "audio": {
         "pad": null,
         "eventsSource": "measured",
         "events": [
           {
-            "t": 1.061,
+            "t": 1.225,
             "type": "select"
           },
           {
-            "t": 1.302,
+            "t": 1.501,
             "type": "select"
           },
           {
-            "t": 1.566,
+            "t": 1.719,
             "type": "select"
           },
           {
-            "t": 1.766,
+            "t": 1.985,
             "type": "select"
           },
           {
-            "t": 2.22,
+            "t": 2.404,
             "type": "submit"
           },
           {
-            "t": 2.568,
+            "t": 2.757,
             "type": "correct"
           },
           {
-            "t": 3.184,
+            "t": 3.42,
             "type": "select"
           },
           {
-            "t": 3.37,
+            "t": 3.668,
             "type": "select"
           },
           {
-            "t": 3.6,
+            "t": 3.884,
             "type": "select"
           },
           {
-            "t": 3.867,
+            "t": 4.152,
             "type": "select"
           },
           {
-            "t": 4.261,
+            "t": 4.571,
             "type": "submit"
           },
           {
-            "t": 4.605,
+            "t": 4.913,
             "type": "correct"
           },
           {
-            "t": 5.132,
+            "t": 5.499,
             "type": "select"
           },
           {
-            "t": 5.349,
+            "t": 5.753,
             "type": "select"
           },
           {
-            "t": 5.583,
+            "t": 6.017,
             "type": "select"
           },
           {
-            "t": 5.817,
+            "t": 6.251,
             "type": "select"
           },
           {
-            "t": 6.3,
+            "t": 6.668,
             "type": "submit"
           },
           {
-            "t": 6.649,
+            "t": 7.018,
             "type": "correct"
           },
           {
-            "t": 7.233,
+            "t": 7.617,
             "type": "select"
           },
           {
-            "t": 7.482,
+            "t": 7.833,
             "type": "select"
           },
           {
-            "t": 7.667,
+            "t": 8.084,
             "type": "select"
           },
           {
-            "t": 7.852,
+            "t": 8.351,
             "type": "select"
           },
           {
-            "t": 8.373,
+            "t": 8.853,
             "type": "submit"
           },
           {
-            "t": 8.719,
-            "type": "correct"
-          }
-        ]
-      },
-      "bytes": 714320
-    },
-    {
-      "output": "reports/video_automation/final/satisfying_v2.mp4",
-      "rawSource": "reports\\video_automation\\raw\\clean_fast_solve.webm",
-      "template": "blurred_bg",
-      "hook": "sat_clean_brain",
-      "cta": "cta_try",
-      "lang": "en",
-      "cadence": "fast",
-      "plannedMistakes": 0,
-      "startSec": 0,
-      "durationSec": 10.92,
-      "audio": {
-        "pad": null,
-        "eventsSource": "measured",
-        "events": [
-          {
-            "t": 1.061,
-            "type": "select"
-          },
-          {
-            "t": 1.302,
-            "type": "select"
-          },
-          {
-            "t": 1.566,
-            "type": "select"
-          },
-          {
-            "t": 1.766,
-            "type": "select"
-          },
-          {
-            "t": 2.22,
-            "type": "submit"
-          },
-          {
-            "t": 2.568,
-            "type": "correct"
-          },
-          {
-            "t": 3.184,
-            "type": "select"
-          },
-          {
-            "t": 3.37,
-            "type": "select"
-          },
-          {
-            "t": 3.6,
-            "type": "select"
-          },
-          {
-            "t": 3.867,
-            "type": "select"
-          },
-          {
-            "t": 4.261,
-            "type": "submit"
-          },
-          {
-            "t": 4.605,
-            "type": "correct"
-          },
-          {
-            "t": 5.132,
-            "type": "select"
-          },
-          {
-            "t": 5.349,
-            "type": "select"
-          },
-          {
-            "t": 5.583,
-            "type": "select"
-          },
-          {
-            "t": 5.817,
-            "type": "select"
-          },
-          {
-            "t": 6.3,
-            "type": "submit"
-          },
-          {
-            "t": 6.649,
-            "type": "correct"
-          },
-          {
-            "t": 7.233,
-            "type": "select"
-          },
-          {
-            "t": 7.482,
-            "type": "select"
-          },
-          {
-            "t": 7.667,
-            "type": "select"
-          },
-          {
-            "t": 7.852,
-            "type": "select"
-          },
-          {
-            "t": 8.373,
-            "type": "submit"
-          },
-          {
-            "t": 8.719,
+            "t": 9.202,
             "type": "correct"
           }
         ]
       },
-      "bytes": 707394
-    },
-    {
-      "output": "reports/video_automation/final/satisfying_v3.mp4",
-      "rawSource": "reports\\video_automation\\raw\\escalating_difficulty.webm",
-      "template": "blurred_bg",
-      "hook": "sat_daily_ritual",
-      "cta": "cta_url",
-      "lang": "en",
-      "cadence": "medium",
-      "plannedMistakes": 1,
-      "startSec": 0.8,
-      "durationSec": 14,
-      "audio": {
-        "pad": null,
-        "eventsSource": "measured",
-        "events": [
-          {
-            "t": 0.175,
-            "type": "select"
-          },
-          {
-            "t": 0.497,
-            "type": "select"
-          },
-          {
-            "t": 0.799,
-            "type": "select"
-          },
-          {
-            "t": 1.063,
-            "type": "select"
-          },
-          {
-            "t": 1.731,
-            "type": "submit"
-          },
-          {
-            "t": 2.079,
-            "type": "wrong"
-          },
-          {
-            "t": 2.898,
-            "type": "select"
-          },
-          {
-            "t": 3.197,
-            "type": "select"
-          },
-          {
-            "t": 3.429,
-            "type": "select"
-          },
-          {
-            "t": 3.748,
-            "type": "select"
-          },
-          {
-            "t": 4.369,
-            "type": "submit"
-          },
-          {
-            "t": 4.718,
-            "type": "correct"
-          },
-          {
-            "t": 5.664,
-            "type": "select"
-          },
-          {
-            "t": 5.913,
-            "type": "select"
-          },
-          {
-            "t": 6.214,
-            "type": "select"
-          },
-          {
-            "t": 6.464,
-            "type": "select"
-          },
-          {
-            "t": 7.06,
-            "type": "submit"
-          },
-          {
-            "t": 7.401,
-            "type": "correct"
-          },
-          {
-            "t": 8.329,
-            "type": "select"
-          },
-          {
-            "t": 8.63,
-            "type": "select"
-          },
-          {
-            "t": 8.913,
-            "type": "select"
-          },
-          {
-            "t": 9.231,
-            "type": "select"
-          },
-          {
-            "t": 9.749,
-            "type": "submit"
-          },
-          {
-            "t": 10.102,
-            "type": "correct"
-          },
-          {
-            "t": 10.931,
-            "type": "select"
-          },
-          {
-            "t": 11.196,
-            "type": "select"
-          },
-          {
-            "t": 11.463,
-            "type": "select"
-          },
-          {
-            "t": 11.78,
-            "type": "select"
-          },
-          {
-            "t": 12.388,
-            "type": "submit"
-          },
-          {
-            "t": 12.732,
-            "type": "correct"
-          }
-        ]
-      },
-      "bytes": 852970
-    },
-    {
-      "output": "reports/video_automation/final/challenge_v1.mp4",
-      "rawSource": "reports\\video_automation\\raw\\almost_fail_then_win.webm",
-      "template": "blurred_bg",
-      "hook": "ch_most_fail",
-      "cta": "cta_try",
-      "lang": "en",
-      "cadence": "medium",
-      "plannedMistakes": 2,
-      "startSec": 0.4,
-      "durationSec": 14,
-      "audio": {
-        "pad": null,
-        "eventsSource": "measured",
-        "events": [
-          {
-            "t": 0.607,
-            "type": "select"
-          },
-          {
-            "t": 0.86,
-            "type": "select"
-          },
-          {
-            "t": 1.113,
-            "type": "select"
-          },
-          {
-            "t": 1.38,
-            "type": "select"
-          },
-          {
-            "t": 1.931,
-            "type": "submit"
-          },
-          {
-            "t": 2.28,
-            "type": "wrong"
-          },
-          {
-            "t": 3.178,
-            "type": "select"
-          },
-          {
-            "t": 3.428,
-            "type": "select"
-          },
-          {
-            "t": 3.678,
-            "type": "select"
-          },
-          {
-            "t": 3.945,
-            "type": "select"
-          },
-          {
-            "t": 4.612,
-            "type": "submit"
-          },
-          {
-            "t": 4.956,
-            "type": "wrong"
-          },
-          {
-            "t": 5.827,
-            "type": "select"
-          },
-          {
-            "t": 6.128,
-            "type": "select"
-          },
-          {
-            "t": 6.393,
-            "type": "select"
-          },
-          {
-            "t": 6.663,
-            "type": "select"
-          },
-          {
-            "t": 7.213,
-            "type": "submit"
-          },
-          {
-            "t": 7.554,
-            "type": "correct"
-          },
-          {
-            "t": 8.411,
-            "type": "select"
-          },
-          {
-            "t": 8.678,
-            "type": "select"
-          },
-          {
-            "t": 8.928,
-            "type": "select"
-          },
-          {
-            "t": 9.245,
-            "type": "select"
-          },
-          {
-            "t": 9.919,
-            "type": "submit"
-          },
-          {
-            "t": 10.264,
-            "type": "correct"
-          },
-          {
-            "t": 11.112,
-            "type": "select"
-          },
-          {
-            "t": 11.361,
-            "type": "select"
-          },
-          {
-            "t": 11.626,
-            "type": "select"
-          },
-          {
-            "t": 11.878,
-            "type": "select"
-          },
-          {
-            "t": 12.529,
-            "type": "submit"
-          },
-          {
-            "t": 12.869,
-            "type": "correct"
-          },
-          {
-            "t": 13.794,
-            "type": "select"
-          }
-        ]
-      },
-      "bytes": 844351
-    },
-    {
-      "output": "reports/video_automation/final/challenge_v2.mp4",
-      "rawSource": "reports\\video_automation\\raw\\almost_fail_then_win.webm",
-      "template": "blurred_bg",
-      "hook": "ch_on_purpose",
-      "cta": "cta_url",
-      "lang": "en",
-      "cadence": "medium",
-      "plannedMistakes": 2,
-      "startSec": 1.6,
-      "durationSec": 12,
-      "audio": {
-        "pad": null,
-        "eventsSource": "measured",
-        "events": [
-          {
-            "t": 0.18,
-            "type": "select"
-          },
-          {
-            "t": 0.731,
-            "type": "submit"
-          },
-          {
-            "t": 1.08,
-            "type": "wrong"
-          },
-          {
-            "t": 1.978,
-            "type": "select"
-          },
-          {
-            "t": 2.228,
-            "type": "select"
-          },
-          {
-            "t": 2.478,
-            "type": "select"
-          },
-          {
-            "t": 2.745,
-            "type": "select"
-          },
-          {
-            "t": 3.412,
-            "type": "submit"
-          },
-          {
-            "t": 3.756,
-            "type": "wrong"
-          },
-          {
-            "t": 4.627,
-            "type": "select"
-          },
-          {
-            "t": 4.928,
-            "type": "select"
-          },
-          {
-            "t": 5.193,
-            "type": "select"
-          },
-          {
-            "t": 5.463,
-            "type": "select"
-          },
-          {
-            "t": 6.013,
-            "type": "submit"
-          },
-          {
-            "t": 6.354,
-            "type": "correct"
-          },
-          {
-            "t": 7.211,
-            "type": "select"
-          },
-          {
-            "t": 7.478,
-            "type": "select"
-          },
-          {
-            "t": 7.728,
-            "type": "select"
-          },
-          {
-            "t": 8.045,
-            "type": "select"
-          },
-          {
-            "t": 8.719,
-            "type": "submit"
-          },
-          {
-            "t": 9.064,
-            "type": "correct"
-          },
-          {
-            "t": 9.912,
-            "type": "select"
-          },
-          {
-            "t": 10.161,
-            "type": "select"
-          },
-          {
-            "t": 10.426,
-            "type": "select"
-          },
-          {
-            "t": 10.678,
-            "type": "select"
-          },
-          {
-            "t": 11.329,
-            "type": "submit"
-          },
-          {
-            "t": 11.669,
-            "type": "correct"
-          }
-        ]
-      },
-      "bytes": 756675
-    },
-    {
-      "output": "reports/video_automation/final/challenge_v3.mp4",
-      "rawSource": "reports\\video_automation\\raw\\challenge_rewatch.webm",
-      "template": "blurred_bg",
-      "hook": "ch_can_you",
-      "cta": "cta_try",
-      "lang": "en",
-      "cadence": "snappy",
-      "plannedMistakes": 1,
-      "startSec": 0.06,
-      "durationSec": 11,
-      "audio": {
-        "pad": null,
-        "eventsSource": "measured",
-        "events": [
-          {
-            "t": 0.844,
-            "type": "select"
-          },
-          {
-            "t": 1.066,
-            "type": "select"
-          },
-          {
-            "t": 1.297,
-            "type": "select"
-          },
-          {
-            "t": 1.533,
-            "type": "select"
-          },
-          {
-            "t": 1.869,
-            "type": "submit"
-          },
-          {
-            "t": 2.21,
-            "type": "wrong"
-          },
-          {
-            "t": 2.649,
-            "type": "select"
-          },
-          {
-            "t": 2.833,
-            "type": "select"
-          },
-          {
-            "t": 3.016,
-            "type": "select"
-          },
-          {
-            "t": 3.197,
-            "type": "select"
-          },
-          {
-            "t": 3.502,
-            "type": "submit"
-          },
-          {
-            "t": 3.856,
-            "type": "correct"
-          },
-          {
-            "t": 4.266,
-            "type": "select"
-          },
-          {
-            "t": 4.465,
-            "type": "select"
-          },
-          {
-            "t": 4.682,
-            "type": "select"
-          },
-          {
-            "t": 4.915,
-            "type": "select"
-          },
-          {
-            "t": 5.242,
-            "type": "submit"
-          },
-          {
-            "t": 5.594,
-            "type": "correct"
-          },
-          {
-            "t": 6.047,
-            "type": "select"
-          },
-          {
-            "t": 6.232,
-            "type": "select"
-          },
-          {
-            "t": 6.415,
-            "type": "select"
-          },
-          {
-            "t": 6.599,
-            "type": "select"
-          },
-          {
-            "t": 6.982,
-            "type": "submit"
-          },
-          {
-            "t": 7.336,
-            "type": "correct"
-          },
-          {
-            "t": 7.784,
-            "type": "select"
-          },
-          {
-            "t": 7.998,
-            "type": "select"
-          },
-          {
-            "t": 8.181,
-            "type": "select"
-          },
-          {
-            "t": 8.398,
-            "type": "select"
-          },
-          {
-            "t": 8.72,
-            "type": "submit"
-          },
-          {
-            "t": 9.061,
-            "type": "correct"
-          }
-        ]
-      },
-      "bytes": 792979
+      "bytes": 862358
     }
   ]
 }

@@ -4,7 +4,7 @@
  * Takes raw scenario webm recordings and produces vertical 1080x1920 MP4s
  * with blurred background, centered gameplay, and a short hook overlay.
  *
- * Output lives in reports/video_automation/final/. A manifest pairs each
+ * Output lives in tiktok/video_automation/final/. A manifest pairs each
  * MP4 with its raw source, template, overlays, and duration.
  */
 import {
@@ -22,10 +22,10 @@ import { resolveFfmpeg, run, winFont } from "./lib/ffmpeg.mjs";
 import { generateSfx, buildEventSchedule } from "./lib/audio.mjs";
 
 const ROOT = resolve(process.cwd());
-const RAW_DIR = resolve(ROOT, "reports/video_automation/raw");
-const WORK_DIR = resolve(ROOT, "reports/video_automation/work");
-const FINAL_DIR = resolve(ROOT, "reports/video_automation/final");
-const CONFIG_DIR = resolve(ROOT, "reports/video_automation/configs");
+const RAW_DIR = resolve(ROOT, "tiktok/video_automation/raw");
+const WORK_DIR = resolve(ROOT, "tiktok/video_automation/work");
+const FINAL_DIR = resolve(ROOT, "tiktok/video_automation/final");
+const CONFIG_DIR = resolve(ROOT, "tiktok/video_automation/configs");
 
 if (!existsSync(FINAL_DIR)) mkdirSync(FINAL_DIR, { recursive: true });
 if (!existsSync(WORK_DIR)) mkdirSync(WORK_DIR, { recursive: true });
@@ -510,7 +510,7 @@ async function main() {
 
       const outSize = statSync(finalPath).size;
       manifest.videos.push({
-        output: `reports/video_automation/final/${v.name}`,
+        output: `tiktok/video_automation/final/${v.name}`,
         rawSource: raw.replace(ROOT + "\\", "").replace(ROOT + "/", ""),
         template: v.template,
         hook: v.hook.id,

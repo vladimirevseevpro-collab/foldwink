@@ -22,7 +22,7 @@ import { resolveFfmpeg, run, winFont } from "./lib/ffmpeg.mjs";
 import { generateSfx, buildEventSchedule } from "./lib/audio.mjs";
 
 const ROOT = resolve(process.cwd());
-const RAW_DIR = resolve(ROOT, "reports/video_automation/raw");
+const RAW_DIR = resolve(ROOT, "tiktok/video_automation/raw");
 const BATCH_DIR = resolve(ROOT, "tiktok/batch_01");
 const EXPORT_DIR = resolve(BATCH_DIR, "exports");
 const WORK_DIR = resolve(BATCH_DIR, "workfiles");
@@ -398,8 +398,8 @@ function variants() {
       raw: "almost_fail_then_win.webm",
       hook: HOOKS.looks_easy,
       hookId: "looks_easy",
-      cta: CTAS.post_level_3,
-      ctaId: "post_level_3",
+      cta: CTAS.could_you_get,
+      ctaId: "could_you_get",
       start: 0,
       dur: 18,
       cadence: "medium",

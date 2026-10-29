@@ -15,7 +15,7 @@ import { resolve, join, relative } from "node:path";
 import { createGzip, deflateRawSync } from "node:zlib";
 
 const ROOT = resolve(process.cwd());
-const BASE = resolve(ROOT, "reports/video_automation");
+const BASE = resolve(ROOT, "tiktok/video_automation");
 const OUT_ZIP = join(BASE, "foldwink_video_pack.zip");
 
 function walk(dir, out = []) {

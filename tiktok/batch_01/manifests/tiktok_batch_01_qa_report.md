@@ -84,7 +84,7 @@ These are documented, not defects. They feed directly into Batch 02.
 **Actual:** clips 05 and 08 run 15.42 s and 16.22 s, not 18+ s.
 **Cause:** the raw source clips top out at 18.08 s (`almost_fail_then_win.webm`), and ffmpeg `-ss` keyframe-seek trims another ~1–2 s.
 **Impact:** the escalation and near-fail narratives are intact — both clips still land as "long" content in the 9/10 clip set. TikTok has no minimum duration gate.
-**Action for Batch 02:** record a dedicated long scenario — `hard_mode_climb`, 5 rounds at confident cadence, planned for ≥ 22 s raw. Add to `reports/video_automation/configs/scenarios.json`.
+**Action for Batch 02:** record a dedicated long scenario — `hard_mode_climb`, 5 rounds at confident cadence, planned for ≥ 22 s raw. Add to `tiktok/video_automation/configs/scenarios.json`.
 
 ### C2 · 8–12 s bucket landed 1–2 s short of target
 
